@@ -1,0 +1,18 @@
+.cartMenu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+i.fas.fa-search {
+    position: relative;
+    left: 150px;
+    bottom: 35px;
+    font-size: 20px;
+    /* border: 1px solid; */
+    padding: 5px;
+}
+@media only screen and (max-width: 992px){
+    .searchBox{
+        display: none;
+    }
+}

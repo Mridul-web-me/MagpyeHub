@@ -1,72 +1,60 @@
-import React from 'react'
-import { Col, Container, ListGroup, Row } from 'react-bootstrap'
-import './Brand.css'
+import React, { useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination"
+
+import "./Brand.css";
+
+
+// import Swiper core and required modules
+import SwiperCore, {
+    Autoplay
+} from 'swiper';
+
+// install Swiper modules
+SwiperCore.use([Autoplay]);
+
+
 
 const Brand = () => {
 
     return (
-        <div>
-            <Container>
-                <Row>
-                    <Col xs={4} sm={4} md={1}>
-                        <ListGroup defaultActiveKey="#link1">
-                            <ListGroup.Item action href="#link1">
-                                <img src="https://i2.wp.com/radiancegroup-bd.com/wp-content/uploads/2016/10/video-bg-1.jpg?fit=980%2C551&ssl=1" className='img-fluid' alt="" />
-                            </ListGroup.Item>
-                        </ListGroup>
-                    </Col>
-                    <Col xs={4} sm={4} md={1}>
-                        <ListGroup defaultActiveKey="#link1">
-                            <ListGroup.Item action href="#link1">
-                                <img src="https://i2.wp.com/radiancegroup-bd.com/wp-content/uploads/2016/10/video-bg-1.jpg?fit=980%2C551&ssl=1" className='img-fluid' alt="" />
-                            </ListGroup.Item>
-                        </ListGroup>
-                    </Col>
-                    <Col xs={4} sm={4} md={1}>
-                        <ListGroup defaultActiveKey="#link1">
-                            <ListGroup.Item action href="#link1">
-                                <img src="https://i2.wp.com/radiancegroup-bd.com/wp-content/uploads/2016/10/video-bg-1.jpg?fit=980%2C551&ssl=1" className='img-fluid' alt="" />
-                            </ListGroup.Item>
-                        </ListGroup>
-                    </Col>
-                    <Col xs={4} sm={4} md={1}>
-                        <ListGroup defaultActiveKey="#link1">
-                            <ListGroup.Item action href="#link1">
-                                <img src="https://i2.wp.com/radiancegroup-bd.com/wp-content/uploads/2016/10/video-bg-1.jpg?fit=980%2C551&ssl=1" className='img-fluid' alt="" />
-                            </ListGroup.Item>
-                        </ListGroup>
-                    </Col>
-                    <Col xs={4} sm={4} md={1}>
-                        <ListGroup defaultActiveKey="#link1">
-                            <ListGroup.Item action href="#link1">
-                                <img src="https://i2.wp.com/radiancegroup-bd.com/wp-content/uploads/2016/10/video-bg-1.jpg?fit=980%2C551&ssl=1" className='img-fluid' alt="" />
-                            </ListGroup.Item>
-                        </ListGroup>
-                    </Col>
-                    <Col xs={4} sm={4} md={1}>
-                        <ListGroup defaultActiveKey="#link1">
-                            <ListGroup.Item action href="#link1">
-                                <img src="https://i2.wp.com/radiancegroup-bd.com/wp-content/uploads/2016/10/video-bg-1.jpg?fit=980%2C551&ssl=1" className='img-fluid' alt="" />
-                            </ListGroup.Item>
-                        </ListGroup>
-                    </Col>
-                    <Col xs={4} sm={4} md={1}>
-                        <ListGroup>
-                            <ListGroup.Item action href="#link1">
-                                <img src="https://i2.wp.com/radiancegroup-bd.com/wp-content/uploads/2016/10/video-bg-1.jpg?fit=980%2C551&ssl=1" className='img-fluid' alt="" />
-                            </ListGroup.Item>
-                        </ListGroup>
-                    </Col>
-                    <Col xs={4} sm={4} md={1}>
-                        <ListGroup defaultActiveKey="#link1">
-                            <ListGroup.Item action href="#link1">
-                                <img src="https://i2.wp.com/radiancegroup-bd.com/wp-content/uploads/2016/10/video-bg-1.jpg?fit=980%2C551&ssl=1" className='img-fluid' alt="" />
-                            </ListGroup.Item>
-                        </ListGroup>
-                    </Col>
-                </Row>
-            </Container>
-        </div>
+        <>
+            <Swiper style={{
+                height: '100px',
+            }} slidesPerView={1} spaceBetween={10}
+                autoplay={{
+                    "delay": 1500,
+                    "disableOnInteraction": false
+                }}
+                breakpoints={{
+                    "640": {
+                        "slidesPerView": 2,
+                        "spaceBetween": 20
+                    },
+                    "768": {
+                        "slidesPerView": 4,
+                        "spaceBetween": 40
+                    },
+                    "1024": {
+                        "slidesPerView": 5,
+                        "spaceBetween": 50
+                    }
+                }} className="mySwiper">
+                <SwiperSlide className="brandSlider">Brands will be added</SwiperSlide>
+                <SwiperSlide className="brandSlider">Brands will be added</SwiperSlide>
+                <SwiperSlide className="brandSlider">Brands will be added</SwiperSlide>
+                <SwiperSlide className="brandSlider">Brands will be added</SwiperSlide>
+                <SwiperSlide className="brandSlider">Brands will be added</SwiperSlide>
+                <SwiperSlide className="brandSlider">Brands will be added</SwiperSlide>
+                <SwiperSlide className="brandSlider">Brands will be added</SwiperSlide>
+                <SwiperSlide className="brandSlider">Brands will be added</SwiperSlide>
+                <SwiperSlide className="brandSlider">Brands will be added</SwiperSlide>
+            </Swiper>
+        </>
     )
 }
 
