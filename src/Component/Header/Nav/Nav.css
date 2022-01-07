@@ -138,6 +138,7 @@ nav .wrapper{
   width: calc(50% - 0px);
   line-height: 45px;
   flex-direction: column;
+  margin: 0 15px;
 }
 
 
@@ -300,7 +301,9 @@ a.desktop-item4
   .nav-links .mobile-item5,
   .nav-links .mobile-item6
   {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: #f2f2f2;
     font-size: 20px;
     font-weight: 500;
@@ -309,7 +312,9 @@ a.desktop-item4
     transition: all 0.3s ease;
     text-align: initial;
   }
-
+i.fas.fa-angle-down {
+    padding: 10px;
+}
   .nav-links .mobile-item1:hover,
   .nav-links .mobile-item2:hover,
   .nav-links .mobile-item3:hover,
