@@ -1,0 +1,17 @@
+i.fas.fa-check {
+    position: relative;
+    left: 100px;
+    bottom: 35px;
+    font-size: 20px;
+    /* border: 1px solid; */
+    padding: 5px;
+}
+.newsletter{
+    background-color: #0091c0;
+}
+.newsletter .container-fluid .row .col-md-6 .newsletter-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f2f2f2;
+}

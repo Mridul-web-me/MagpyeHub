@@ -51,6 +51,7 @@ nav .wrapper{
 }
 .nav-links li a:hover{
   background: #f2f2f2;
+  /* text-decoration: underline; */
 }
 .nav-links .mobile-item1,
 .nav-links .mobile-item2,

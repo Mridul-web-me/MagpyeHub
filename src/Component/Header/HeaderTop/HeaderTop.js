@@ -6,7 +6,7 @@ import './HeaderTop.css'
 const HeaderTop = () => {
     return (
         <div>
-            <Container>
+            <Container fluid>
                 <Row>
                     <Col xs={4} md={4}>
                         <p><i class="fas fa-phone"></i> 0800 1 223 023 | MON-SAT, 9AM - 5PM</p>
