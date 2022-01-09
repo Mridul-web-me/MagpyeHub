@@ -20,14 +20,14 @@ nav .wrapper{
   position: relative;
     /* padding: 0px 30px; */
     height: 50px;
-    /* line-height: 70px; */
+    line-height: 70px;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 99999;
     background-color: #0091c0;
-    /* margin-top: 20px; */
+    margin-top: 20px;
 }
 .wrapper .logo a{
   /* color: #f2f2f2; */
@@ -67,7 +67,7 @@ nav .wrapper{
   position: absolute;
   background: #f2f2f2;
   width: 180px;
-  line-height: 45px;
+  line-height: 30px;
   top: 85px;
   opacity: 0;
   visibility: visible;
@@ -137,7 +137,7 @@ nav .wrapper{
 .mega-box6 .content .row
 {
   width: calc(50% - 0px);
-  line-height: 45px;
+  line-height: 30px;
   flex-direction: column;
   margin: 0 15px;
 }
@@ -165,11 +165,12 @@ nav .wrapper{
   padding: 0px;
   padding: 0 20px;
   /* color: #d9d9d9; */
-  font-size: 17px;
+  font-size: 13px;
   display: block;
 }
 .row .mega-links li a:hover{
   /* color: #f2f2f2; */
+  text-decoration: underline;
 }
 .wrapper .btn{
   color: #fff;

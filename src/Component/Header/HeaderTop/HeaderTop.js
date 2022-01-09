@@ -5,7 +5,7 @@ import logo from '../../../img/logo.jpg'
 import './HeaderTop.css'
 const HeaderTop = () => {
     return (
-        <div>
+        <div className='header-top'>
             <Container fluid>
                 <Row>
                     <Col xs={4} md={4}>

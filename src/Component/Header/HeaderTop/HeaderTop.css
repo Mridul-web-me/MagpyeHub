@@ -1,3 +1,6 @@
+.header-top{
+    margin-top: 20px;
+}
 .cartMenu {
     display: flex;
     justify-content: space-around;

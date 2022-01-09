@@ -37,6 +37,25 @@ import Trousers from './Component/Product/Men/Clothing/Trousers/Trousers';
 import PyjamasNightwear from './Component/Product/Men/NightwearUnderwearSocks/PyjamasNightwear/PyjamasNightwear';
 import MenSocks from './Component/Product/Men/NightwearUnderwearSocks/MenSocks/MenSocks';
 import Underwear from './Component/Product/Men/NightwearUnderwearSocks/Underwear/Underwear';
+import Foundations from './Component/Product/Beauty/Makeup/Foundations/Foundations';
+import Concealers from './Component/Product/Beauty/Makeup/Concealers/Concealers';
+import Eyeshadows from './Component/Product/Beauty/Makeup/Eyeshadows/Eyeshadows';
+import Mascaras from './Component/Product/Beauty/Makeup/Mascaras/Mascaras';
+import Lipsticks from './Component/Product/Beauty/Makeup/Lipsticks/Lipsticks';
+import NailPolish from './Component/Product/Beauty/Makeup/NailPolish/NailPolish';
+import MakeupGiftsSets from './Component/Product/Beauty/Makeup/MakeupGiftSets/MakeupGiftsSets';
+import MakeupBrushes from './Component/Product/Beauty/Makeup/MakeupBrushes/MakeupBrushes';
+import TShirts from './Component/Product/Men/Clothing/TShirts/TShirts';
+import Waistcoats from './Component/Product/Men/Clothing/Waistcoats/Waistcoats';
+import Partywear from './Component/Product/Men/Clothing/Partywear/Partywear';
+import HandNailsets from './Component/Product/Beauty/Makeup/HandNailsets/HandNailsets';
+import MakeupBags from './Component/Product/Beauty/Makeup/MakeupBags/MakeupBags';
+import MakeupAccessories from './Component/Product/Beauty/Makeup/MakeupAccessories/MakeupAccessories';
+import WomensPerfume from './Component/Product/Beauty/Fragrance/WomensPerfume/WomensPerfume';
+import PerfumeGiftSets from './Component/Product/Beauty/Fragrance/PerfumeGiftSets/PerfumeGiftSets';
+import MensAftershave from './Component/Product/Beauty/Fragrance/MensAftershave/MensAftershave';
+import MensPerfume from './Component/Product/Beauty/Fragrance/MensPerfume/MensPerfume';
+import AftershaveGiftSets from './Component/Product/Beauty/Fragrance/AftershaveGiftSets/AftershaveGiftSets';
 
 
 
@@ -82,6 +101,25 @@ function App() {
           <Route path="/PyjamasNightwear" element={<PyjamasNightwear />} />
           <Route path="/MenSocks" element={<MenSocks />} />
           <Route path="/Underwear" element={<Underwear />} />
+          <Route path="/Foundations" element={<Foundations />} />
+          <Route path="/Concealers" element={<Concealers />} />
+          <Route path="/Eyeshadows" element={<Eyeshadows />} />
+          <Route path="/Mascaras" element={<Mascaras />} />
+          <Route path="/Lipsticks" element={<Lipsticks />} />
+          <Route path="/NailPolish" element={<NailPolish />} />
+          <Route path="/MakeupGiftSets" element={<MakeupGiftsSets />} />
+          <Route path="/MakeupBrushes" element={<MakeupBrushes />} />
+          <Route path="/T-Shirts" element={<TShirts />} />
+          <Route path="/Waistcoats" element={<Waistcoats />} />
+          <Route path="/Partywear" element={<Partywear />} />
+          <Route path="/HandNailsets" element={<HandNailsets />} />
+          <Route path="/MakeupBags" element={<MakeupBags />} />
+          <Route path="/MakeupAccessories" element={<MakeupAccessories />} />
+          <Route path="/womensPerfume" element={<WomensPerfume />} />
+          <Route path="/PerfumeGiftSets" element={<PerfumeGiftSets />} />
+          <Route path="/MensAftershave" element={<MensAftershave />} />
+          <Route path="/MensPerfume" element={<MensPerfume />} />
+          <Route path="/AftershaveGiftSets" element={<AftershaveGiftSets />} />
         </Routes>
       </BrowserRouter>
     </div>

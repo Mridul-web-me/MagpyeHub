@@ -101,7 +101,7 @@ const Nav = () => {
                                             <li><Link to="/shirtsTops">Shirts & Tops</Link></li>
                                             <li><Link to="/shorts">Shorts</Link></li>
                                             <li><Link to="/skirts">Skirts</Link></li>
-                                            <li><Link to="/sportsTraining/Gym ">Sports & Training/Gym </Link></li>
+                                            <li><Link to="/sportsTrainingGym ">Sports & Training/Gym </Link></li>
                                             {/* <li><Link to="/Swimwear & Beachwear">Swimwear & Beachwear</Link></li>
                                             <li><Link to="/Trousers & Leggings">Trousers & Leggings</Link></li>
                                             <li><Link to="/Trousers & Leggings">Trousers & Leggings</Link></li>
@@ -201,7 +201,7 @@ const Nav = () => {
                                             <li><Link to="/lipsticks">Lipsticks</Link></li>
                                             <li><Link to="/nailPolish">Nail Polish</Link></li>
                                             <li><Link to="/makeupGiftsets">Makeup Gift sets</Link></li>
-                                            <li><Link to="/MmkeUpBrushes">Make up Brushes</Link></li>
+                                            <li><Link to="/MakeUpBrushes">Make up Brushes</Link></li>
                                             <li><Link to="/handNailsets">Hand & Nail sets</Link></li>
                                             <li><Link to="/makeupBags">Makeup Bags</Link></li>
                                             <li><Link to="/makeupAccessories">Makeup Accessories</Link></li>
