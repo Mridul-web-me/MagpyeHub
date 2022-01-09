@@ -2,7 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './Footer.css'
 
+
 const Footer = () => {
+    let mridul = 'https://mridul-web.netlify.app'
     return (
         <div className='footer'>
             <div className="container-fluid">
@@ -50,8 +52,14 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="footer-bottom">
-                    <p> 2022 magpyehub.com All Rights Reserved.</p>
-                    <p>Created By <Link to="https://mridul-web-1b28ae.netlify.app" target='_blank'>Mridul</Link></p>
+                    <div className="row">
+                        <div className="col-md-6">
+                            <p> <i class="far fa-copyright"></i>2022 magpyehub.com All Rights Reserved.</p>
+                        </div>
+                        <div className="col-md-6">
+                            <p>Created By <a href={mridul} target="_blank">Mridul</a></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

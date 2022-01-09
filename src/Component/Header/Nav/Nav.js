@@ -115,7 +115,7 @@ const Nav = () => {
                                         <hr />
                                         <ul class="mega-links">
                                             <li><Link to="/brasSportsBras">Bras & Sports Bras</Link></li>
-                                            <li><Link to="/knickers">Nightwear</Link></li>
+                                            <li><Link to="/Nightwear">Nightwear</Link></li>
                                             <li><Link to="/socks">Socks</Link></li>
                                             <li><Link to="/tights">Tights</Link></li>
                                         </ul>
@@ -146,11 +146,11 @@ const Nav = () => {
                                         <hr />
                                         <ul class="mega-links">
                                             <li><Link to="/blazers">Blazers</Link></li>
-                                            <li><Link to="/jeans">Jeans</Link></li>
+                                            <li><Link to="/MenJeans">Jeans</Link></li>
                                             <li><Link to="/poloshirts">Polo Shirts</Link></li>
-                                            <li><Link to="/shirts">Shirts</Link></li>
-                                            <li><Link to="/shorts">Shorts</Link></li>
-                                            <li><Link to="/sports Clothes/Gym">Sports Clothes/Gym</Link>
+                                            <li><Link to="/menShirts">Shirts</Link></li>
+                                            <li><Link to="/menShorts">Shorts</Link></li>
+                                            <li><Link to="/MenSportsClothesGym">Sports Clothes/Gym</Link>
                                             </li>
                                             <li><Link to="/suits">Suits</Link></li>
                                             <li><Link to="/swimwear">Swimwear</Link></li>
@@ -164,8 +164,8 @@ const Nav = () => {
                                         <header>Nightwear, Underwear & Socks</header>
                                         <hr />
                                         <ul class="mega-links">
-                                            <li><Link to="/pyjamasNightwear">Pyjamas & Nightwear</Link></li>
-                                            <li><Link to="/socks">Socks</Link></li>
+                                            <li><Link to="/PyjamasNightwear">Pyjamas & Nightwear</Link></li>
+                                            <li><Link to="/MenSocks">Socks</Link></li>
                                             <li><Link to="/underwear">Underwear</Link></li>
                                         </ul>
                                     </div>

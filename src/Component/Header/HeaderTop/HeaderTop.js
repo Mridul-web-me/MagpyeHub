@@ -17,7 +17,7 @@ const HeaderTop = () => {
                     </Col>
                     <Col xs={4} md={4}>
                         <Link to="/home">
-                            <img src={logo} alt="" className='img-fluid' />
+                            <img src={logo} alt="" className='img-fluid' width="200px" height="200px" />
                         </Link>
                     </Col>
                     <Col xs={4} md={4}>

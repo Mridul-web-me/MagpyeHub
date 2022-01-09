@@ -20,14 +20,14 @@ nav .wrapper{
   position: relative;
     /* padding: 0px 30px; */
     height: 50px;
-    line-height: 70px;
+    /* line-height: 70px; */
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 99999;
     background-color: #0091c0;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 .wrapper .logo a{
   /* color: #f2f2f2; */

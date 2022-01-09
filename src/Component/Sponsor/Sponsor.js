@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link as a } from 'react-router-dom'
 import rainbow from '../../img/sponsor/rainbow.jpg'
 import hundred from '../../img/sponsor/100%.jpg'
 import ekomi from '../../img/sponsor/ekomi.jpg'
@@ -11,19 +11,19 @@ const Sponsor = () => {
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-md-4">
-                        <Link to="/">
+                        <a href="/">
                             <img className="img-fluid" src={rainbow} alt="" />
-                        </Link>
+                        </a>
                     </div>
                     <div className="col-md-4">
-                        <Link to="">
+                        <a href="">
                             <img className="img-fluid" src={hundred} alt="" />
-                        </Link>
+                        </a>
                     </div>
                     <div className="col-md-4">
-                        <Link target="_blank" to="https://www.ekomi.co.uk/review-baby-baby-uk-ltd.html">
+                        <a target="_blank" href="https://www.ekomi.co.uk/review-baby-baby-uk-ltd.html">
                             <img className="img-fluid" src={ekomi} alt="" />
-                        </Link>
+                        </a>
                     </div>
                 </div>
             </div>

@@ -1,16 +1,16 @@
 import React from 'react'
 import Footer from '../../../../Footer/Footer'
 import Header from '../../../../Header/Header'
-import Home from '../../../../Home/Home'
 
-const Bedding = () => {
+const BathroomAccessories = () => {
     return (
         <div>
             <Header></Header>
-            <h2>Bedding</h2>
+            <h2>Bathroom Accessories</h2>
+            <p>Content Coming Soon</p>
             <Footer></Footer>
         </div>
     )
 }
 
-export default Bedding
+export default BathroomAccessories
