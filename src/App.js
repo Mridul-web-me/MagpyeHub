@@ -56,6 +56,9 @@ import PerfumeGiftSets from './Component/Product/Beauty/Fragrance/PerfumeGiftSet
 import MensAftershave from './Component/Product/Beauty/Fragrance/MensAftershave/MensAftershave';
 import MensPerfume from './Component/Product/Beauty/Fragrance/MensPerfume/MensPerfume';
 import AftershaveGiftSets from './Component/Product/Beauty/Fragrance/AftershaveGiftSets/AftershaveGiftSets';
+import LoginForm from './Component/LoginForm/LoginForm';
+import ForgotPass from './Component/LoginForm/ForgotPass/ForgotPass';
+import Login from './Component/LoginForm/Login/Login';
 
 
 
@@ -66,6 +69,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/register" element={<LoginForm />} />
+          <Route path="/register/ForgotPass" element={<ForgotPass />} />
+          <Route path="/../register" element={<Login />} />
           <Route path="/bedding" element={<Bedding />} />
           <Route path="/pillows" element={<Pillows />} />
           <Route path="/throwsblanketsandSpreads" element={<ThrowsblanketsandSpreads />} />

@@ -20,7 +20,7 @@ nav .wrapper{
   position: relative;
     /* padding: 0px 30px; */
     height: 50px;
-    line-height: 70px;
+    /* line-height: 70px; */
     margin: auto;
     display: flex;
     align-items: center;
@@ -183,13 +183,17 @@ nav .wrapper{
   right: 30px;
   top: 10px;
 }
-a.desktop-item1, 
+/* a.desktop-item1, 
 a.desktop-item2, 
 a.desktop-item3, 
 a.desktop-item4 
 {
-    margin-right: 100px;
+    margin-right: 50px;
+    margin-left: 50px;
     
+} */
+li.nav-ltem{
+  margin: 0 30px;
 }
 .nav-links .desktop-item1,
 .nav-links .desktop-item2,
@@ -250,6 +254,12 @@ a.desktop-item4
     display: none;
   }
   #close-btn:checked ~ .btn.menu-btn{
+    display: block;
+  }
+  #accordion-down:checked ~ .btn.accordion-down{
+    display: none;
+  }
+  #accordion-up:checked ~ .btn.accordion-up{
     display: block;
   }
   .nav-links li{
@@ -403,6 +413,12 @@ i.fas.fa-angle-down {
 }
 nav input{
   display: none;
+  label.btn.menu-btn {
+    /* display: flex; */
+    /* align-self: start; */
+    left: 20px;
+    position: absolute;
+}
 }
 
 .body-text{

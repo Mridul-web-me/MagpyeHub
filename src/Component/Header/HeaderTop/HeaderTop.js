@@ -23,7 +23,7 @@ const HeaderTop = () => {
                     <Col xs={4} md={4}>
                         <div className='cartMenu'>
                             <div>
-                                <Link to="/login">
+                                <Link to="/register">
                                     <i class="fas fa-user"></i>
                                     <p>Login</p>
                                 </Link>

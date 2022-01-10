@@ -34,15 +34,15 @@ const Brand = () => {
                     }}
                     breakpoints={{
                         "640": {
-                            "slidesPerView": 2,
+                            "slidesPerView": 4,
                             "spaceBetween": 20
                         },
                         "768": {
-                            "slidesPerView": 4,
+                            "slidesPerView": 6,
                             "spaceBetween": 40
                         },
                         "1024": {
-                            "slidesPerView": 5,
+                            "slidesPerView": 8,
                             "spaceBetween": 50
                         }
                     }} className="mySwiper">
