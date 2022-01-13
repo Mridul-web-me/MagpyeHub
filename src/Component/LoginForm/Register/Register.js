@@ -1,49 +1,117 @@
 import React, { useState } from 'react'
-import { Col, Form, Row, ToggleButton } from 'react-bootstrap'
+import { Alert, Button, Col, Form, Row, Spinner } from 'react-bootstrap'
+import useAuth from '../../../hooks/useAuth'
 
 const Register = () => {
-    const [checked, setChecked] = useState(false);
+    const [loginData, setLoginData] = useState({})
+    const [passDidNotMatch, setPassDidNotMatch] = useState('')
+
+    const { registerUser, isLoading, user, authError } = useAuth();
+
+    console.log(loginData);
+
+    const handleOnChange = e => {
+        const field = e.target.name;
+        const value = e.target.value;
+        const newLoginData = { ...loginData };
+        newLoginData[field] = value;
+        setLoginData(newLoginData)
+        // console.log(field, value, newLoginData);
+    }
+    const handleLoginSubmit = e => {
+        e.preventDefault();
+        if (loginData.password1 !== loginData.password2) {
+            setPassDidNotMatch('password did not match');
+            return
+        }
+        else {
+            setPassDidNotMatch('')
+            registerUser(loginData.email, loginData.password1);
+
+        }
+
+    }
     return (
         <div>
             <h5>CREATE AN ACCOUNT</h5>
-            <Form>
-                <Form.Group as={Row} className="mb-3" controlId="formPlaintextName">
-                    <Form.Label column sm="4">
-                        Your Full Name
-                    </Form.Label>
+            {!isLoading && <Form onSubmit={handleLoginSubmit}>
+                <Form.Group as={Row} className="mb-3">
+                    <Form.Label column sm="4">Name</Form.Label>
                     <Col sm="8">
-                        <Form.Control type="name" placeholder="Name" />
+                        <Form.Control
+                            sm="8"
+                            type="name"
+                            name="name"
+                            onChange={handleOnChange}
+                            placeholder="Name" />
                     </Col>
                 </Form.Group>
-                <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail">
-                    <Form.Label column sm="4">
+                <Form.Group as={Row} className="mb-3">
+                    <Form.Label column sm="4" >
                         Email Address
                     </Form.Label>
                     <Col sm="8">
-                        <Form.Control type="email" placeholder="Email" />
+                        <Form.Control
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            onChange={handleOnChange}
+                        />
                     </Col>
                 </Form.Group>
 
-                <Form.Group as={Row} className="mb-3" controlId="formPlaintextPassword">
+                <Form.Group as={Row} className="mb-3">
                     <Form.Label column sm="4">
                         Password
                     </Form.Label>
                     <Col sm="8">
-                        <Form.Control type="password" placeholder="Password" />
+                        <Form.Control
+                            type="password"
+                            name="password1"
+                            placeholder="Password"
+                            onChange={handleOnChange}
+                        />
                     </Col>
                 </Form.Group>
-                <ToggleButton
-                    className="mb-2"
-                    id="toggle-check"
-                    type="checkbox"
-                    variant="outline-primary"
-                    checked={checked}
-                    value="1"
-                    onChange={(e) => setChecked(e.currentTarget.checked)}
-                >
-                    Register
-                </ToggleButton>
-            </Form>
+                <Form.Group as={Row} className="mb-3">
+                    <Form.Label column sm="4">
+                        Re-Type Password
+                    </Form.Label>
+                    <Col sm="8">
+                        <Form.Control
+                            type="password"
+                            name="password2"
+                            placeholder="Password"
+                            onChange={handleOnChange}
+                        />
+                    </Col>
+                </Form.Group>
+                <Button variant="outline-primary" type='submit'>Register</Button>
+            </Form>}
+            {isLoading && <Spinner animation="border" role="status">
+                <span className="visually-hidden">Loading...</span>
+            </Spinner>}
+            {user?.email && [
+                'success'
+            ].map((variant, idx) => (
+                <Alert key={idx} variant={variant}>
+                    Registration Success
+                </Alert>
+            ))}
+            {authError && [
+                'danger'
+            ].map((variant, idx) => (
+                <Alert key={idx} variant={variant}>
+                    {authError}
+                </Alert>
+            ))}
+            {passDidNotMatch && [
+                'danger'
+            ].map((variant, idx) => (
+                <Alert key={idx} variant={variant}>
+                    {passDidNotMatch}
+                </Alert>
+            ))}
         </div>
     )
 }

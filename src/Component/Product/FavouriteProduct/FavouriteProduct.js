@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -20,6 +20,11 @@ import { Container } from 'react-bootstrap';
 SwiperCore.use([Pagination, Navigation]);
 
 
+// eslint-disable-next-line
+import "swiper/css/bundle";
+
+
+
 const FavouriteProduct = () => {
     const [swiperRef, setSwiperRef] = useState(null);
 
@@ -28,28 +33,28 @@ const FavouriteProduct = () => {
 
     // const prepend2 = () => {
     //     swiperRef.prependSlide([
-    //         '<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>',
-    //         '<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>'
+    //         '<div className="swiper-slide">Slide ' + (--prependNumber) + '</div>',
+    //         '<div className="swiper-slide">Slide ' + (--prependNumber) + '</div>'
     //     ]);
     // }
 
     // const prepend = () => {
-    //     swiperRef.prependSlide('<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>');
+    //     swiperRef.prependSlide('<div className="swiper-slide">Slide ' + (--prependNumber) + '</div>');
     // }
 
     // const append = () => {
-    //     swiperRef.appendSlide('<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>');
+    //     swiperRef.appendSlide('<div className="swiper-slide">Slide ' + (++appendNumber) + '</div>');
     // }
 
     // const append2 = () => {
     //     swiperRef.appendSlide([
-    //         '<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>',
-    //         '<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>'
+    //         '<div className="swiper-slide">Slide ' + (++appendNumber) + '</div>',
+    //         '<div className="swiper-slide">Slide ' + (++appendNumber) + '</div>'
     //     ]);
     // }
     return (
         <Container fluid>
-            <h2>Our Favourites <i class="fas fa-heart"></i></h2>
+            <h2>Our Favourites <i className="fas fa-heart"></i></h2>
             <Swiper style={{
                 height: '600px'
             }}
@@ -78,14 +83,14 @@ const FavouriteProduct = () => {
                 } onSwiper={setSwiperRef} slidesPerView={3} loop={true} centeredSlides={true} spaceBetween={30}
                 navigation={true} className="mySwiper">
                 <SwiperSlide>
-                    <div class="card">
-                        <img src="https://images.squarespace-cdn.com/content/v1/5d7dafb4eabf16592a823ca0/1580339598324-G49E5BI5FDO2ISPLJNPE/20-0129_DEMO.png" class="card-img-top" alt="..." />
-                        <div class="card-body">
-                            <h5 class="card-title">BABYSTYLE
+                    <div className="card">
+                        <img src="https://images.squarespace-cdn.com/content/v1/5d7dafb4eabf16592a823ca0/1580339598324-G49E5BI5FDO2ISPLJNPE/20-0129_DEMO.png" className="card-img-top" alt="..." />
+                        <div className="card-body">
+                            <h5 className="card-title">BABYSTYLE
                                 OYSTER ZERO CARRYCOT ADAPTORS</h5>
                             <p>$15 </p>
                         </div>
-                        <div class="card-footer">
+                        <div className="card-footer">
                             <Link to="#">
                                 <button className='btn btn-primary px-4 mx-4'>BUY</button>
 
@@ -96,14 +101,14 @@ const FavouriteProduct = () => {
                         </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide> <div class="card">
-                    <img src="https://images.squarespace-cdn.com/content/v1/5d7dafb4eabf16592a823ca0/1580339598324-G49E5BI5FDO2ISPLJNPE/20-0129_DEMO.png" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">BABYSTYLE
+                <SwiperSlide> <div className="card">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5d7dafb4eabf16592a823ca0/1580339598324-G49E5BI5FDO2ISPLJNPE/20-0129_DEMO.png" className="card-img-top" alt="..." />
+                    <div className="card-body">
+                        <h5 className="card-title">BABYSTYLE
                             OYSTER ZERO CARRYCOT ADAPTORS</h5>
                         <p>$15 </p>
                     </div>
-                    <div class="card-footer">
+                    <div className="card-footer">
                         <Link to="#">
                             <button className='btn btn-primary px-4 mx-4'>BUY</button>
 
@@ -113,14 +118,14 @@ const FavouriteProduct = () => {
                         </Link>
                     </div>
                 </div></SwiperSlide>
-                <SwiperSlide> <div class="card">
-                    <img src="https://images.squarespace-cdn.com/content/v1/5d7dafb4eabf16592a823ca0/1580339598324-G49E5BI5FDO2ISPLJNPE/20-0129_DEMO.png" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">BABYSTYLE
+                <SwiperSlide> <div className="card">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5d7dafb4eabf16592a823ca0/1580339598324-G49E5BI5FDO2ISPLJNPE/20-0129_DEMO.png" className="card-img-top" alt="..." />
+                    <div className="card-body">
+                        <h5 className="card-title">BABYSTYLE
                             OYSTER ZERO CARRYCOT ADAPTORS</h5>
                         <p>$15 </p>
                     </div>
-                    <div class="card-footer">
+                    <div className="card-footer">
                         <Link to="#">
                             <button className='btn btn-primary px-4 mx-4'>BUY</button>
 
@@ -130,14 +135,14 @@ const FavouriteProduct = () => {
                         </Link>
                     </div>
                 </div></SwiperSlide>
-                <SwiperSlide> <div class="card">
-                    <img src="https://images.squarespace-cdn.com/content/v1/5d7dafb4eabf16592a823ca0/1580339598324-G49E5BI5FDO2ISPLJNPE/20-0129_DEMO.png" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">BABYSTYLE
+                <SwiperSlide> <div className="card">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5d7dafb4eabf16592a823ca0/1580339598324-G49E5BI5FDO2ISPLJNPE/20-0129_DEMO.png" className="card-img-top" alt="..." />
+                    <div className="card-body">
+                        <h5 className="card-title">BABYSTYLE
                             OYSTER ZERO CARRYCOT ADAPTORS</h5>
                         <p>$15 </p>
                     </div>
-                    <div class="card-footer">
+                    <div className="card-footer">
                         <Link to="#">
                             <button className='btn btn-primary px-4 mx-4'>BUY</button>
 
@@ -147,14 +152,14 @@ const FavouriteProduct = () => {
                         </Link>
                     </div>
                 </div></SwiperSlide>
-                <SwiperSlide> <div class="card">
-                    <img src="https://images.squarespace-cdn.com/content/v1/5d7dafb4eabf16592a823ca0/1580339598324-G49E5BI5FDO2ISPLJNPE/20-0129_DEMO.png" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">BABYSTYLE
+                <SwiperSlide> <div className="card">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5d7dafb4eabf16592a823ca0/1580339598324-G49E5BI5FDO2ISPLJNPE/20-0129_DEMO.png" className="card-img-top" alt="..." />
+                    <div className="card-body">
+                        <h5 className="card-title">BABYSTYLE
                             OYSTER ZERO CARRYCOT ADAPTORS</h5>
                         <p>$15 </p>
                     </div>
-                    <div class="card-footer">
+                    <div className="card-footer">
                         <Link to="#">
                             <button className='btn btn-primary px-4 mx-4'>BUY</button>
 
@@ -164,14 +169,14 @@ const FavouriteProduct = () => {
                         </Link>
                     </div>
                 </div></SwiperSlide>
-                <SwiperSlide> <div class="card">
-                    <img src="https://images.squarespace-cdn.com/content/v1/5d7dafb4eabf16592a823ca0/1580339598324-G49E5BI5FDO2ISPLJNPE/20-0129_DEMO.png" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">BABYSTYLE
+                <SwiperSlide> <div className="card">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5d7dafb4eabf16592a823ca0/1580339598324-G49E5BI5FDO2ISPLJNPE/20-0129_DEMO.png" className="card-img-top" alt="..." />
+                    <div className="card-body">
+                        <h5 className="card-title">BABYSTYLE
                             OYSTER ZERO CARRYCOT ADAPTORS</h5>
                         <p>$15 </p>
                     </div>
-                    <div class="card-footer">
+                    <div className="card-footer">
                         <Link to="#">
                             <button className='btn btn-primary px-4 mx-4'>BUY</button>
 
@@ -181,14 +186,14 @@ const FavouriteProduct = () => {
                         </Link>
                     </div>
                 </div></SwiperSlide>
-                <SwiperSlide> <div class="card">
-                    <img src="https://images.squarespace-cdn.com/content/v1/5d7dafb4eabf16592a823ca0/1580339598324-G49E5BI5FDO2ISPLJNPE/20-0129_DEMO.png" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">BABYSTYLE
+                <SwiperSlide> <div className="card">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5d7dafb4eabf16592a823ca0/1580339598324-G49E5BI5FDO2ISPLJNPE/20-0129_DEMO.png" className="card-img-top" alt="..." />
+                    <div className="card-body">
+                        <h5 className="card-title">BABYSTYLE
                             OYSTER ZERO CARRYCOT ADAPTORS</h5>
                         <p>$15 </p>
                     </div>
-                    <div class="card-footer">
+                    <div className="card-footer">
                         <Link to="#">
                             <button className='btn btn-primary px-4 mx-4'>BUY</button>
 

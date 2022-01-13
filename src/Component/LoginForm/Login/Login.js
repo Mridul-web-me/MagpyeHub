@@ -1,45 +1,70 @@
 import React, { useState } from 'react'
-import { Col, Container, Form, Row, ToggleButton } from 'react-bootstrap'
+import { Alert, Button, Col, Container, Form, Row, Spinner, } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 
 const Login = () => {
+    const [loginData, setLoginData] = useState({})
+    const { user, loginUser, isLoading, authError } = useAuth();
+    // console.log(loginData);
+    const handleOnChange = e => {
+        const field = e.target.name;
+        const value = e.target.value;
+        const newLoginData = { ...loginData };
+        newLoginData[field] = value;
+        setLoginData(newLoginData)
+        // console.log(field, value, newLoginData);
+    }
+    const handleLoginSubmit = e => {
+        e.preventDefault();
 
-    const [checked, setChecked] = useState(false);
+        loginUser(loginData.email, loginData.password);
+        return
+    }
     return (
+
         <Container fluid>
             <h5>RETURNING CUSTOMER</h5>
-            <Form>
-                <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail">
+            <Form onSubmit={handleLoginSubmit}>
+                <Form.Group as={Row} className="mb-3">
                     <Form.Label column sm="4">
                         Email Address
                     </Form.Label>
                     <Col sm="8">
-                        <Form.Control type="email" placeholder="Email" />
+                        <Form.Control name="email" type="email" placeholder="Email" onChange={handleOnChange} />
                     </Col>
                 </Form.Group>
 
-                <Form.Group as={Row} className="mb-3" controlId="formPlaintextPassword">
+                <Form.Group as={Row} className="mb-3">
                     <Form.Label column sm="4">
                         Password
                     </Form.Label>
                     <Col sm="8">
-                        <Form.Control type="password" placeholder="Password" />
+                        <Form.Control name="password" type="password" placeholder="Password" onChange={handleOnChange} />
                     </Col>
                 </Form.Group>
-                <ToggleButton
-                    className="mb-2"
-                    id="toggle-check"
-                    type="checkbox"
-                    variant="outline-primary"
-                    checked={checked}
-                    value="1"
-                    onChange={(e) => setChecked(e.currentTarget.checked)}
-                >
-                    Login
-                </ToggleButton> <br />
-                <Link to="/register/ForgotPass">Forgotten Password? </Link>
+                <Button variant="outline-primary" type='submit' >Login</Button>
+                <li style={{ listStyle: 'none' }}><Link to="/ForgotPass">Forgotten Password?</Link></li>
             </Form>
-        </Container>
+            {isLoading && <Spinner animation="border" role="status">
+                <span className="visually-hidden">Loading...</span>
+            </Spinner>}
+            {user?.email && [
+                'success'
+            ].map((variant, idx) => (
+                <Alert key={idx} variant={variant}>
+                    Login Success
+                </Alert>
+            ))}
+            {authError && [
+                'danger'
+            ].map((variant, idx) => (
+                <Alert key={idx} variant={variant}>
+                    {authError}
+                </Alert>
+            ))}
+
+        </Container >
     )
 }
 
