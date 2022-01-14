@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import initializeFirebase from "../Component/LoginForm/Firebase/firebase.init";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, onAuthStateChanged, signOut, } from "firebase/auth";
 
 
 //Initialize Firebase App
@@ -13,13 +13,23 @@ const useFirebase = () => {
 
     const auth = getAuth();
 
-    const registerUser = (email, password) => {
+    const registerUser = (email, password, name, history) => {
         // console.log(email, password);
         setIsLoading(true);
         createUserWithEmailAndPassword(auth, email, password)
             .then((result) => {
                 setAuthError('')
-                console.log(result);
+                const newUser = { email, display: name };
+                setUser(newUser)
+                // Send name to firebase after creation
+                updateProfile(auth.currentUser, {
+                    displayName: 'name'
+                }).then(() => {
+
+                }).catch((error) => {
+
+                });
+                history('/')
             })
             .catch((error) => {
                 setAuthError(error.message)
@@ -29,14 +39,15 @@ const useFirebase = () => {
             });
     }
 
-    const loginUser = (email, password) => {
+    const loginUser = (email, password, history) => {
         console.log(email, password);
         setIsLoading(true);
         signInWithEmailAndPassword(auth, email, password)
             .then((result) => {
                 setAuthError('')
-                // console.log(result);
-
+                // const destination = location?.state?.from || '/';
+                // console.log(destination);
+                history('/')
             })
             .catch((error) => {
                 setAuthError(error.message)
@@ -64,10 +75,10 @@ const useFirebase = () => {
     }, [])
 
 
-    const logOut = () => {
+    const logOut = (history) => {
         setIsLoading(true)
         signOut(auth).then(() => {
-            // Sign-out successful.
+            history('/')
         }).catch((error) => {
             // An error happened.
         })

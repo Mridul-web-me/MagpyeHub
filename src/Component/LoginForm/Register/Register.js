@@ -1,16 +1,18 @@
 import React, { useState } from 'react'
 import { Alert, Button, Col, Form, Row, Spinner } from 'react-bootstrap'
+import { useNavigate } from 'react-router-dom'
 import useAuth from '../../../hooks/useAuth'
 
 const Register = () => {
     const [loginData, setLoginData] = useState({})
     const [passDidNotMatch, setPassDidNotMatch] = useState('')
+    const history = useNavigate()
 
     const { registerUser, isLoading, user, authError } = useAuth();
 
-    console.log(loginData);
+    // console.log(loginData);
 
-    const handleOnChange = e => {
+    const handleOnBlur = e => {
         const field = e.target.name;
         const value = e.target.value;
         const newLoginData = { ...loginData };
@@ -26,7 +28,7 @@ const Register = () => {
         }
         else {
             setPassDidNotMatch('')
-            registerUser(loginData.email, loginData.password1);
+            registerUser(loginData.email, loginData.password1, loginData.name, history);
 
         }
 
@@ -42,7 +44,7 @@ const Register = () => {
                             sm="8"
                             type="name"
                             name="name"
-                            onChange={handleOnChange}
+                            onBlur={handleOnBlur}
                             placeholder="Name" />
                     </Col>
                 </Form.Group>
@@ -55,7 +57,7 @@ const Register = () => {
                             type="email"
                             name="email"
                             placeholder="Email"
-                            onChange={handleOnChange}
+                            onBlur={handleOnBlur}
                         />
                     </Col>
                 </Form.Group>
@@ -69,7 +71,7 @@ const Register = () => {
                             type="password"
                             name="password1"
                             placeholder="Password"
-                            onChange={handleOnChange}
+                            onBlur={handleOnBlur}
                         />
                     </Col>
                 </Form.Group>
@@ -82,7 +84,7 @@ const Register = () => {
                             type="password"
                             name="password2"
                             placeholder="Password"
-                            onChange={handleOnChange}
+                            onBlur={handleOnBlur}
                         />
                     </Col>
                 </Form.Group>

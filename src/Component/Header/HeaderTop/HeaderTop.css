@@ -14,8 +14,30 @@ i.fas.fa-search {
     /* border: 1px solid; */
     padding: 5px;
 }
+
+i.fas.fa-user,
+i.fas.fa-comments,
+i.fas.fa-shopping-bag{
+    font-size: 30px;
+    color: #0091c0
+}
+
+.header-top .cartMenu div a{
+   text-decoration: none; 
+}
+.header-top .cartMenu div p{
+    font-size: 0.8125rem;
+display: blockl;
+padding-top: 0.5rem;
+color: #303030;
+}
+span.badge.bg-secondary {
+    position: absolute;
+}                              
 @media only screen and (max-width: 992px){
     .searchBox{
         display: none;
     }
 }
+
+                                           

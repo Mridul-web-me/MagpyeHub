@@ -1,17 +1,58 @@
 i.fas.fa-check {
     position: relative;
-    left: 100px;
-    bottom: 35px;
+    /* bottom: 35px; */
     font-size: 20px;
     /* border: 1px solid; */
     padding: 5px;
+    bottom: 20px;
+    color: #000;
+    left: 120px;
 }
 .newsletter{
     background-color: #0091c0;
 }
 .newsletter .container-fluid .row .col-md-6 .newsletter-content{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     color: #f2f2f2;
+}
+.newsletter .container-fluid .row .col-md-6 .newsletter-content2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 25px 0;
+    color: #f2f2f2;
+}
+.newsletter .container-fluid .row .col-md-6 .newsletter-content .searchBox input.form-control.me-2 {
+    position: relative;
+    top: 12px;
+    width: 300px;
+}
+
+i.fab.fa-facebook-f,
+i.fab.fa-twitter,
+i.fab.fa-instagram,
+i.fab.fa-pinterest-p,
+i.fab.fa-youtube {
+    color: #f2f2f2;
+    font-size: 16px;
+    padding: 16px;
+    border-radius: 50%;
+}
+i.fab.fa-facebook-f:hover{
+    background: #4267b2;
+}
+i.fab.fa-twitter:hover{
+    background: #1da1f2;
+}
+i.fab.fa-instagram:hover{
+    background: #e1306c;
+}
+
+i.fab.fa-pinterest-p:hover{
+    background: #e60023;
+}
+i.fab.fa-youtube:hover{
+    background: #ff0000;
 }

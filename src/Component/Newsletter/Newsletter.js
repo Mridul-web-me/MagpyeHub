@@ -20,7 +20,7 @@ const Newsletter = () => {
                         <p>To see how we process your data view our <Link to="/">Privacy Policy</Link> </p>
                     </div>
                     <div className="col-md-6">
-                        <div className="newsletter-content">
+                        <div className="newsletter-content2">
                             <h5>FOLLOW US</h5>
                             <Link to="/"><i className="fab fa-facebook-f"></i></Link>
                             <Link to="/"><i className="fab fa-twitter"></i></Link>

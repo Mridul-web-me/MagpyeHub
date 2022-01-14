@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import { Alert, Button, Col, Container, Form, Row, Spinner, } from 'react-bootstrap'
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 const Login = () => {
     const [loginData, setLoginData] = useState({})
     const { user, loginUser, isLoading, authError } = useAuth();
+    const history = useNavigate()
+    const location = useLocation()
     // console.log(loginData);
     const handleOnChange = e => {
         const field = e.target.name;
@@ -18,7 +20,7 @@ const Login = () => {
     const handleLoginSubmit = e => {
         e.preventDefault();
 
-        loginUser(loginData.email, loginData.password);
+        loginUser(loginData.email, loginData.password, history, location);
         return
     }
     return (

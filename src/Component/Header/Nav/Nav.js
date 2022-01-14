@@ -12,13 +12,15 @@ const Nav = () => {
                         <label for="close-btn" className="btn close-btn"><i className="fas fa-times"></i></label>
                         <li className='nav-item'>
                             <Link to="/" className="desktop-item6">Search <i className="fas fa-angle-down"></i></Link>
-                            <input type="checkbox" id="showMega6" />
-                            <label for="showMega6" className="mobile-item6">
-                                <div>
-                                    <i className="fas fa-search" type="submit" />
-                                    <p>Search</p>
-                                </div>
-                            </label>
+                            <div className="row">
+                                <input type="checkbox" id="showMega6" />
+                                <label for="showMega6" className="mobile-item6">
+                                    <div>
+                                        <i className="fas fa-search" type="submit" />
+                                        <p>Search</p>
+                                    </div>
+                                </label>
+                            </div>
                             <div className="mega-box6">
                                 <div className="content">
                                     <div className="searchBoxContent">
@@ -40,7 +42,7 @@ const Nav = () => {
                         <li className='nav-item'>
                             <Link to="/" className="desktop-item1">Home & Garden <i className="fas fa-angle-down"></i></Link>
                             <input type="checkbox" id="showMega1" />
-                            <label for="showMega1" className="mobile-item1">Home & Garden <i className="fas fa-angle-down"></i></label>
+                            <label for="showMega1" className="mobile-item1">Home & Garden <i className="fas fa-angle-down"></i> </label>
                             <div className="mega-box1">
                                 <div className="content">
                                     {/* <div className="row">
@@ -316,6 +318,7 @@ const Nav = () => {
                 </div>
             </nav>
         </div>
+
     )
 }
 

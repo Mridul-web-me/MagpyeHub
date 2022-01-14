@@ -1,15 +1,25 @@
 import React from 'react'
-import { Button } from 'react-bootstrap';
+import { Button, Form } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import Header from '../Header';
 
 const YourAccount = () => {
     const { logOut } = useAuth();
+    const history = useNavigate()
+
+    const handleLogOutSubmit = e => {
+        e.preventDefault();
+        logOut(history)
+        return
+    }
 
     return (
         <div>
             <Header></Header>
-            <Button onClick={logOut}>Logout</Button>
+            <Form onSubmit={handleLogOutSubmit}>
+                <Button onClick={logOut} type='submit'>Logout</Button>
+            </Form>
         </div>
     )
 }

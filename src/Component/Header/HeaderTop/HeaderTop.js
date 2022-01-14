@@ -1,5 +1,5 @@
 import React from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
+import { Badge, Button, Col, Container, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import useAuth from '../../../hooks/useAuth'
 import logo from '../../../img/logo.jpg'
@@ -11,7 +11,12 @@ const HeaderTop = () => {
             <Container fluid>
                 <Row>
                     <Col xs={4} md={4}>
-                        <p><i className="fas fa-phone"></i> 0800 1 223 023 | MON-SAT, 9AM - 5PM</p>
+                        <p style={{
+                            textAlign: 'initial',
+                            letterSpacing: "3px",
+                            marginLeft: '10px',
+                            fontSize: "15px"
+                        }}><i className="fas fa-phone"></i> 0800 1 223 023 | MON-SAT, 9AM - 5PM</p>
                         <form className="d-flex" className='searchBox'>
                             <input className="form-control me-2" type="search" placeholder="Search for Product & Brand..." aria-label="Search" />
                             <i className="fas fa-search" type="submit" />
@@ -27,9 +32,9 @@ const HeaderTop = () => {
                             <div>
                                 {
                                     user?.email ?
-                                        <Link to="/profile">
+                                        <Link to="/profile" >
                                             <i className="fas fa-user"></i>
-                                            <p>Your Account</p>
+                                            <p >Your Account</p>
                                         </Link>
                                         :
                                         <Link to="/register">
@@ -46,8 +51,11 @@ const HeaderTop = () => {
                             </div>
                             <div>
                                 <Link to="/basket">
+
                                     <i className="fas fa-shopping-bag"></i>
+                                    <Badge bg="secondary">0</Badge>
                                     <p>My Basket</p>
+
                                 </Link>
 
                             </div>
