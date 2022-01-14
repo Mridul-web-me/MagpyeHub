@@ -11,6 +11,19 @@ i.fas.fa-check {
 .newsletter{
     background-color: #0091c0;
 }
+.newsletter .container-fluid .row .col-md-6 p{
+    color: #303030;
+}
+.newsletter .container-fluid .row .col-md-6 p a{
+    color: #303030;
+}
+
+.newsletter .container-fluid .row .col-md-6 .newsletter-content i.fas.fa-envelope {
+    font-size: 20px;
+}
+.newsletter .container-fluid .row .col-md-6 h4{
+    font-size: 16px;
+}
 .newsletter .container-fluid .row .col-md-6 .newsletter-content{
     display: flex;
     justify-content: space-evenly;
@@ -21,7 +34,7 @@ i.fas.fa-check {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin: 25px 0;
+    margin: 10px 0;
     color: #f2f2f2;
 }
 .newsletter .container-fluid .row .col-md-6 .newsletter-content .searchBox input.form-control.me-2 {

@@ -21,7 +21,7 @@ const Newsletter = () => {
                     </div>
                     <div className="col-md-6">
                         <div className="newsletter-content2">
-                            <h5>FOLLOW US</h5>
+                            <h4>FOLLOW US</h4>
                             <Link to="/"><i className="fab fa-facebook-f"></i></Link>
                             <Link to="/"><i className="fab fa-twitter"></i></Link>
                             <Link to="/"><i className="fab fa-instagram"></i></Link>
