@@ -60,6 +60,7 @@ import Login from './Component/LoginForm/Login/Login';
 import AuthProvider from './context/AuthProvider/AuthProvider';
 import YourAccount from './Component/Header/YourAccount/YourAccount';
 import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
+import AddProduct from './Component/Product/AddProduct/AddProduct';
 
 
 
@@ -73,7 +74,7 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/register" element={<LoginForm />} />
             <Route path="/register" element={<Login />} />
-            <Route path="/bedding" element={<Bedding />} pageTitle="My Company Name" /> />
+            <Route path="/bedding" element={<Bedding />} />
             <Route path="/pillows" element={<Pillows />} />
             <Route path="/throwsblanketsandSpreads" element={<ThrowsblanketsandSpreads />} />
             <Route path="/towels" element={<Towels />} />
@@ -128,6 +129,7 @@ function App() {
             <Route path="/MensPerfume" element={<MensPerfume />} />
             <Route path="/AftershaveGiftSets" element={<AftershaveGiftSets />} />
             <Route path="/profile" element={<YourAccount />} />
+            <Route path="/addProduct" element={<AddProduct />} />
           </Routes>
         </Router>
       </AuthProvider>

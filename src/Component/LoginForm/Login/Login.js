@@ -46,7 +46,7 @@ const Login = () => {
                     </Col>
                 </Form.Group>
                 <Button variant="outline-primary" type='submit' >Login</Button>
-                <li style={{ listStyle: 'none' }}><Link to="/ForgotPass">Forgotten Password?</Link></li>
+                <Link to="/ForgotPass">Forgotten Password?</Link>
             </Form>
             {isLoading && <Spinner animation="border" role="status">
                 <span className="visually-hidden">Loading...</span>

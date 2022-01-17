@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button, Form } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import Header from '../Header';
 
@@ -20,6 +20,7 @@ const YourAccount = () => {
             <Form onSubmit={handleLogOutSubmit}>
                 <Button onClick={logOut} type='submit'>Logout</Button>
             </Form>
+            <Link to="/addProduct">Add Product</Link>
         </div>
     )
 }
