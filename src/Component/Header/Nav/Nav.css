@@ -273,12 +273,13 @@ transform: rotate(180deg);
   #close-btn:checked ~ .btn.menu-btn{
     display: block;
   }
-  #accordion-down:checked ~ .btn.accordion-down{
-    display: none;
+  /* #menu-btn:checked ~ .nav-links .mobile-item1 i.fas.fa-angle-down{
+    transform: rotate(180deg);
   }
-  #accordion-up:checked ~ .btn.accordion-up{
-    display: block;
-  }
+  #close-btn:checked ~ .nav-links .mobile-item1 i.fas.fa-angle-down{
+   transform: rotate(40deg);
+  } */
+
   .nav-links li{
     margin: -15px 0px;
   }
@@ -355,14 +356,14 @@ i.fas.fa-angle-down {
     background: #f2f2f2;
     color: #0091c0;
   }
-.nav-links .mobile-item1:hover i.fas.fa-angle-down,
+/* .nav-links .mobile-item1:hover i.fas.fa-angle-down,
 .nav-links .mobile-item2:hover i.fas.fa-angle-down,
 .nav-links .mobile-item3:hover i.fas.fa-angle-down,
 .nav-links .mobile-item4:hover i.fas.fa-angle-down,
 .nav-links .mobile-item5:hover i.fas.fa-angle-down,
 .nav-links .mobile-item6:hover i.fas.fa-angle-down{
 transform: rotate(180deg);
-}
+} */
   .drop-menu li{
     margin: 0;
   }

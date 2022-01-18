@@ -59,8 +59,8 @@ import LoginForm from './Component/LoginForm/LoginForm';
 import Login from './Component/LoginForm/Login/Login';
 import AuthProvider from './context/AuthProvider/AuthProvider';
 import YourAccount from './Component/Header/YourAccount/YourAccount';
-import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
 import AddProduct from './Component/Product/AddProduct/AddProduct';
+import PlaceOrder from './Component/PlaceOrder/PlaceOrder';
 
 
 
@@ -130,6 +130,7 @@ function App() {
             <Route path="/AftershaveGiftSets" element={<AftershaveGiftSets />} />
             <Route path="/profile" element={<YourAccount />} />
             <Route path="/addProduct" element={<AddProduct />} />
+            <Route path="/placeOrder/:productId" element={<PlaceOrder />} />
           </Routes>
         </Router>
       </AuthProvider>
