@@ -12,20 +12,23 @@ const Bedding = () => {
             .then(res => res.json())
             .then(data => {
                 setProducts(data);
-                setFilters(updatedProduct);
+
                 // setFilters(data);
                 console.log(data);
-                const updatedProduct = products.filter((curElem) => {
-                    return curElem.category === categProduct;
-                });
-                setFilters(updatedProduct);
+
             })
     }, [])
     // const filter = products.map(product => product.category);
     // console.log(filter);
     const filterProduct = (categProduct) => {
-
+        const updatedProduct = products.filter((curElem) => {
+            return curElem.category === categProduct;
+        });
+        setFilters(updatedProduct);
     };
+    const handleAddToCart = (product) => {
+        console.log(product);
+    }
     return (
         <div>
             <Header></Header>
@@ -37,7 +40,8 @@ const Bedding = () => {
                             <AllProduct
                                 key={product._id}
                                 product={product}
-                                category={'Bedding'}
+                                filterProduct={filterProduct}
+                                handleAddToCart={handleAddToCart}
                             ></AllProduct>
                         )
                     }

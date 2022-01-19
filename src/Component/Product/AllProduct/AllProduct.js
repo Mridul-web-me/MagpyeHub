@@ -2,33 +2,15 @@ import React, { useState } from 'react'
 import { Button, Card, Col, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-const AllProduct = ({ product }) => {
-    // const [products, setProducts] = useState({});
-    const [filters, setFilters] = useState("bedding");
-    // useEffect(() => {
-    //     fetch('http://localhost:5000/products')
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             setProducts(data);
-    //             // setFilters(data);
-    //         })
-    // }, [])
-    // const filterProduct = (categProduct) => {
-    //     const updatedProduct = products.filter((curElem) => {
-    //         return curElem.categorey === categProduct;
-    //     });
-    //     setFilters(updatedProduct);
-    // };
+const AllProduct = ({ product, handleAddToCart }) => {
     const { _id, title, img, category, price } = product;
-    // const filterProduct = (categProduct) => {
-    //     const updatedProduct = products.filter((curElem) => {
-    //         return curElem.category === categProduct;
-    //     });
-    //     setFilters(updatedProduct);
-    // };
-    // console.log(filterProduct);
+    console.log(handleAddToCart);
+    // filterProduct.map('bedding')
+
+
     return (
         <>
+
             <Col>
                 <Card>
                     <Card.Img className='img-fluid' variant="top" src={img} />
@@ -40,9 +22,7 @@ const AllProduct = ({ product }) => {
                         <Card.Text>
                             $ {price}
                         </Card.Text>
-                        <Link to={`/placeOrder/${_id}`}>
-                            <Button>Buy</Button>
-                        </Link>
+                        <Button onClick={() => handleAddToCart(product)} type='button' >Buy</Button>
                         <Link to={`/placeOrder/${_id}`}>
                             <Button variant="outline-primary">View</Button>
                         </Link>

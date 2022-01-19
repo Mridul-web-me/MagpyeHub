@@ -10,7 +10,9 @@ const HeaderTop = () => {
         <div className='header-top'>
             <Container fluid>
                 <Row>
-                    <Col xs={4} md={4}>
+                    <Col xs={4} md={4} style={{
+                        margin: '15px 0'
+                    }}>
                         <p style={{
                             textAlign: 'initial',
                             letterSpacing: "3px",
@@ -23,12 +25,16 @@ const HeaderTop = () => {
                         </form>
                     </Col>
                     <Col xs={4} md={4}>
-                        <Link to="/home">
+                        <Link to="/home" style={{
+                            margin: '15px 0'
+                        }}>
                             <img src={logo} alt="" className='img-fluid' width="200px" height="200px" />
                         </Link>
                     </Col>
                     <Col xs={4} md={4}>
-                        <div className='cartMenu'>
+                        <div className='cartMenu' style={{
+                            margin: '15px 0'
+                        }}>
                             <div>
                                 {
                                     user?.email ?

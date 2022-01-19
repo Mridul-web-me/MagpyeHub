@@ -25,7 +25,8 @@ const AddProduct = () => {
                 <input {...register("price")} placeholder="Price" /> <br /> <br />
                 <input {...register("img")} placeholder="Image Link" /> <br /> <br />
                 <input {...register("productCode")} placeholder="Product Code" /> <br /> <br />
-                <input {...register("category")} placeholder="Category" /> <br /> <br />
+                <input autocomplete="off" {...register("category")} placeholder="Category" /> <br /> <br />
+
                 <p>{ }</p>
                 <input type="submit" />
             </form>

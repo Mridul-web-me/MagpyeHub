@@ -27,7 +27,7 @@ nav .wrapper{
     justify-content: center;
     z-index: 99999;
     background-color: #0091c0;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 .wrapper .logo a{
   /* color: #f2f2f2; */
