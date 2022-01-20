@@ -61,6 +61,7 @@ import AuthProvider from './context/AuthProvider/AuthProvider';
 import YourAccount from './Component/Header/YourAccount/YourAccount';
 import AddProduct from './Component/Product/AddProduct/AddProduct';
 import PlaceOrder from './Component/PlaceOrder/PlaceOrder';
+import ProductProvider from './context/ProductProvider/ProductProvider';
 
 
 
@@ -68,6 +69,7 @@ function App() {
   return (
     <div className="App">
       <AuthProvider>
+      <ProductProvider>
         <Router>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -133,6 +135,7 @@ function App() {
             <Route path="/placeOrder/:productId" element={<PlaceOrder />} />
           </Routes>
         </Router>
+      </ProductProvider>
       </AuthProvider>
     </div>
   );

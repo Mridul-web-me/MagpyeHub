@@ -3,8 +3,8 @@ import { Button, Card, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const AllProduct = ({ product, handleAddToCart }) => {
+    
     const { _id, title, img, category, price } = product;
-    console.log(handleAddToCart);
     // filterProduct.map('bedding')
 
 

@@ -72,7 +72,7 @@ const useFirebase = () => {
             setIsLoading(false);
         });
         return () => unSubscribe;
-    }, [])
+    }, [auth])
 
 
     const logOut = (history) => {
@@ -87,13 +87,39 @@ const useFirebase = () => {
             });
     }
 
+    //product
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        fetch('./ProductData.json')
+            .then(res => res.json())
+            .then(data => setProducts(data))
+    }, [])
+    
+    const [filters, setFilters] = useState([]);
+    
+    const filterProduct = (categProduct) => {
+		const updatedProduct = products.filter((curElem) => {
+			return curElem.categorey === categProduct;
+		});
+		setFilters(updatedProduct);
+	};
+    
+    
+    const handleAddToCart = (product) => {
+        console.log(product);
+    }
+
     return {
         user,
         registerUser,
         logOut,
         loginUser,
         isLoading,
-        authError
+        authError,
+        filters,
+        filterProduct,
+        handleAddToCart
     }
 
 }

@@ -1,7 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import useProduct from '../../../hooks/Product/useProduct';
 import './Nav.css'
 const Nav = () => {
+
+    const {filterProduct} = useProduct();
+
     return (
         <div>
             <nav>
@@ -9,12 +13,12 @@ const Nav = () => {
                     <input type="radio" name="slider" id="menu-btn" />
                     <input type="radio" name="slider" id="close-btn" />
                     <ul className="nav-links">
-                        <label for="close-btn" className="btn close-btn"><i className="fas fa-times"></i></label>
+                        <label htmlFor="close-btn" className="btn close-btn"><i className="fas fa-times"></i></label>
                         <li className='nav-item'>
                             <Link to="/" className="desktop-item6">Search <i className="fas fa-angle-down"></i></Link>
                             <div className="row">
                                 <input type="checkbox" id="showMega6" />
-                                <label for="showMega6" className="mobile-item6">
+                                <label htmlFor="showMega6" className="mobile-item6">
                                     <div>
                                         <i className="fas fa-search" type="submit" />
                                         <p>Search</p>
@@ -42,7 +46,7 @@ const Nav = () => {
                         <li className='nav-item'>
                             <Link to="/" className="desktop-item1">Home & Garden <i className="fas fa-angle-down"></i></Link>
                             <input type="checkbox" id="showMega1" />
-                            <label for="showMega1" className="mobile-item1">Home & Garden <i className="fas fa-angle-down"></i> </label>
+                            <label htmlFor="showMega1" className="mobile-item1">Home & Garden <i className="fas fa-angle-down"></i> </label>
                             <div className="mega-box1">
                                 <div className="content">
                                     {/* <div className="row">
@@ -52,9 +56,9 @@ const Nav = () => {
                                         <header>Home Furnishings & Accessories</header>
                                         <hr />
                                         <ul className="mega-links">
-                                            <li><Link to="/bedding">Bedding</Link></li>
-                                            <li><Link to="/pillows">Pillows</Link></li>
-                                            <li><Link to="/throwsBlanketsAndSpreads">Throws, blankets and Spreads</Link></li>
+                                            <li><Link onClick={() => filterProduct("Camera")} to="/bedding">Bedding</Link></li>
+                                            <li><Link onClick={() => filterProduct("Laptop")} to="/pillows">Pillows</Link></li>
+                                            <li><Link onClick={() => filterProduct("Camera")} to="/throwsBlanketsAndSpreads">Throws, blankets and Spreads</Link></li>
                                             <li><Link to="/towels">Towels</Link></li>
                                             <li><Link to="/bathroomAccessories">Bathroom Accessories</Link></li>
                                             <li><Link to="/cushions">Cushions</Link></li>
@@ -88,7 +92,7 @@ const Nav = () => {
                         <li className='nav-item'>
                             <Link to="/" className="desktop-item2">Women <i className="fas fa-angle-down"></i></Link>
                             <input type="checkbox" id="showMega2" />
-                            <label for="showMega2" className="mobile-item2">Women <i className="fas fa-angle-down"></i></label>
+                            <label htmlFor="showMega2" className="mobile-item2">Women <i className="fas fa-angle-down"></i></label>
                             <div className="mega-box2">
                                 <div className="content">
                                     {/* <div className="row">
@@ -137,7 +141,7 @@ const Nav = () => {
                         <li className='nav-item'>
                             <Link to="/" className="desktop-item3">Men <i className="fas fa-angle-down"></i></Link>
                             <input type="checkbox" id="showMega3" />
-                            <label for="showMega3" className="mobile-item3">Men <i className="fas fa-angle-down"></i></label>
+                            <label htmlFor="showMega3" className="mobile-item3">Men <i className="fas fa-angle-down"></i></label>
                             <div className="mega-box3">
                                 <div className="content">
                                     {/* <div className="row">
@@ -186,7 +190,7 @@ const Nav = () => {
                         <li className='nav-item'>
                             <Link to="/" className="desktop-item4">Beauty <i className="fas fa-angle-down"></i></Link>
                             <input type="checkbox" id="showMega4" />
-                            <label for="showMega4" className="mobile-item4">Beauty <i className="fas fa-angle-down"></i></label>
+                            <label htmlFor="showMega4" className="mobile-item4">Beauty <i className="fas fa-angle-down"></i></label>
                             <div className="mega-box4">
                                 <div className="content">
                                     {/* <div className="row">
@@ -256,7 +260,7 @@ const Nav = () => {
                         <li className='nav-item'>
                             <Link to="/" className="desktop-item5">Baby & Child <i className="fas fa-angle-down"></i></Link>
                             <input type="checkbox" id="showMega5" />
-                            <label for="showMega5" className="mobile-item5">Baby & Child <i className="fas fa-angle-down"></i></label>
+                            <label htmlFor="showMega5" className="mobile-item5">Baby & Child <i className="fas fa-angle-down"></i></label>
                             <div className="mega-box5">
                                 <div className="content">
                                     {/* <div className="row">
@@ -314,7 +318,7 @@ const Nav = () => {
                             </div>
                         </li>
                     </ul>
-                    <label for="menu-btn" className="btn menu-btn"><i className="fas fa-bars"></i></label>
+                    <label htmlFor="menu-btn" className="btn menu-btn"><i className="fas fa-bars"></i></label>
                 </div>
             </nav>
         </div>

@@ -54,7 +54,7 @@ const Footer = () => {
                 <div className="footer-bottom">
                     <div className="row">
                         <div className="col-md-6">
-                            <p> <i class="far fa-copyright"></i>2022 magpyehub.com All Rights Reserved.</p>
+                            <p> <i className="far fa-copyright"></i>2022 magpyehub.com All Rights Reserved.</p>
                         </div>
                         <div className="col-md-6">
                             <p>Created By <a href={mridul} target="_blank">Mridul</a></p>
