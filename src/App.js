@@ -61,6 +61,8 @@ import AuthProvider from './context/AuthProvider/AuthProvider';
 import YourAccount from './Component/Header/YourAccount/YourAccount';
 import AddProduct from './Component/Product/AddProduct/AddProduct';
 import PlaceOrder from './Component/PlaceOrder/PlaceOrder';
+import ChangePass from './Component/Header/YourAccount/ChangePass/ChangePass';
+import forgotPass from './Component/LoginForm/forgotPass/forgotPass';
 
 
 
@@ -131,6 +133,8 @@ function App() {
             <Route path="/profile" element={<YourAccount />} />
             <Route path="/addProduct" element={<AddProduct />} />
             <Route path="/placeOrder/:productId" element={<PlaceOrder />} />
+            <Route path="/ChangePass" element={<ChangePass />} />
+            <Route path="/forgotPass" element={<forgotPass />} />
           </Routes>
         </Router>
       </AuthProvider>

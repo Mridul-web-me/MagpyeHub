@@ -43,12 +43,19 @@ const YourAccount = () => {
                         <p>Manage your delivery and billing addresses</p>
                     </Col>
                     <Col xs={6}>
-                        <h4><Link to={''}>CHANGE PASSWORD</Link></h4>
+                        <h4><Link to={'/ChangePass'}>CHANGE PASSWORD</Link></h4>
                         <p>Change the password you use to login</p>
                     </Col>
                     <Col xs={6}>
                         <Form onSubmit={handleLogOutSubmit}>
-                            <Button onClick={logOut} type='submit'>Logout</Button>
+                            <Button style={{
+                                background: 'none',
+                                color: '#000',
+                                border: 'none',
+                                textDecoration: 'underline',
+                                fontSize: '20px',
+                                fontWeight: "500"
+                            }} onClick={logOut} type='submit'>Logout</Button>
                         </Form>
                     </Col>
                 </Row>

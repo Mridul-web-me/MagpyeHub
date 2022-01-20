@@ -40,7 +40,7 @@ const Nav = () => {
                         </li>
 
                         <li className='nav-item'>
-                            <Link to="/" className="desktop-item1">Home & Garden <i className="fas fa-angle-down"></i></Link>
+                            <label className="desktop-item1">Home & Garden <i className="fas fa-angle-down"></i></label>
                             <input type="checkbox" id="showMega1" />
                             <label for="showMega1" className="mobile-item1">Home & Garden <i className="fas fa-angle-down"></i> </label>
                             <div className="mega-box1">
@@ -86,7 +86,7 @@ const Nav = () => {
                             </div>
                         </li>
                         <li className='nav-item'>
-                            <Link to="/" className="desktop-item2">Women <i className="fas fa-angle-down"></i></Link>
+                            <label className="desktop-item2">Women <i className="fas fa-angle-down"></i></label>
                             <input type="checkbox" id="showMega2" />
                             <label for="showMega2" className="mobile-item2">Women <i className="fas fa-angle-down"></i></label>
                             <div className="mega-box2">
@@ -135,7 +135,7 @@ const Nav = () => {
                             </div>
                         </li>
                         <li className='nav-item'>
-                            <Link to="/" className="desktop-item3">Men <i className="fas fa-angle-down"></i></Link>
+                            <label className="desktop-item3">Men <i className="fas fa-angle-down"></i></label>
                             <input type="checkbox" id="showMega3" />
                             <label for="showMega3" className="mobile-item3">Men <i className="fas fa-angle-down"></i></label>
                             <div className="mega-box3">
@@ -184,7 +184,7 @@ const Nav = () => {
                             </div>
                         </li>
                         <li className='nav-item'>
-                            <Link to="/" className="desktop-item4">Beauty <i className="fas fa-angle-down"></i></Link>
+                            <label className="desktop-item4">Beauty <i className="fas fa-angle-down"></i></label>
                             <input type="checkbox" id="showMega4" />
                             <label for="showMega4" className="mobile-item4">Beauty <i className="fas fa-angle-down"></i></label>
                             <div className="mega-box4">
@@ -254,7 +254,7 @@ const Nav = () => {
                             </div>
                         </li>
                         <li className='nav-item'>
-                            <Link to="/" className="desktop-item5">Baby & Child <i className="fas fa-angle-down"></i></Link>
+                            <label className="desktop-item5">Baby & Child <i className="fas fa-angle-down"></i></label>
                             <input type="checkbox" id="showMega5" />
                             <label for="showMega5" className="mobile-item5">Baby & Child <i className="fas fa-angle-down"></i></label>
                             <div className="mega-box5">

@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom'
 import useAuth from '../../../hooks/useAuth'
 import logo from '../../../img/logo.jpg'
 import './HeaderTop.css'
-const HeaderTop = () => {
+const HeaderTop = (props) => {
+    // const cart = prop
+    // console.log(cart.length)
     const { user } = useAuth();
     return (
         <div className='header-top'>
@@ -25,10 +27,10 @@ const HeaderTop = () => {
                         </form>
                     </Col>
                     <Col xs={4} md={4}>
-                        <Link to="/home" style={{
-                            margin: '15px 0'
-                        }}>
-                            <img src={logo} alt="" className='img-fluid' width="200px" height="200px" />
+                        <Link to="/home" >
+                            <img src={logo} style={{
+                                margin: '15px 0'
+                            }} alt="" className='img-fluid' width="200px" height="200px" />
                         </Link>
                     </Col>
                     <Col xs={4} md={4}>
@@ -59,7 +61,7 @@ const HeaderTop = () => {
                                 <Link to="/basket">
 
                                     <i className="fas fa-shopping-bag"></i>
-                                    <Badge bg="secondary">0</Badge>
+                                    {/* <Badge bg="secondary">{props.cart.length}</Badge> */}
                                     <p>My Basket</p>
 
                                 </Link>

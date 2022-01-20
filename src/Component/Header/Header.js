@@ -4,6 +4,8 @@ import Nav from './Nav/Nav'
 import './Header.css'
 
 const Header = () => {
+
+    // console.log(props.cart);
     return (
         <div className="menu sticky-top">
             <HeaderTop></HeaderTop>

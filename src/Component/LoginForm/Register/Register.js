@@ -20,7 +20,7 @@ const Register = () => {
         setLoginData(newLoginData)
         // console.log(field, value, newLoginData);
     }
-    const handleLoginSubmit = e => {
+    const handleRegistrationSubmit = e => {
         e.preventDefault();
         if (loginData.password1 !== loginData.password2) {
             setPassDidNotMatch('password did not match');
@@ -36,7 +36,7 @@ const Register = () => {
     return (
         <div>
             <h5>CREATE AN ACCOUNT</h5>
-            {!isLoading && <Form onSubmit={handleLoginSubmit}>
+            {!isLoading && <Form onSubmit={handleRegistrationSubmit}>
                 <Form.Group as={Row} className="mb-3">
                     <Form.Label column sm="4">Name</Form.Label>
                     <Col sm="8">
