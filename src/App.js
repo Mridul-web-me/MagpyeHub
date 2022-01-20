@@ -62,6 +62,7 @@ import YourAccount from './Component/Header/YourAccount/YourAccount';
 import AddProduct from './Component/Product/AddProduct/AddProduct';
 import PlaceOrder from './Component/PlaceOrder/PlaceOrder';
 import ProductProvider from './context/ProductProvider/ProductProvider';
+import ChangePass from './Component/Header/YourAccount/ChangePass/ChangePass';
 
 
 
