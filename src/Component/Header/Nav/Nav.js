@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import useProduct from '../../../hooks/Product/useProduct';
 import './Nav.css'
 const Nav = () => {
 
-    const {filterProduct} = useProduct();
+    const { filterProduct } = useProduct();
 
     return (
         <div>
@@ -56,7 +56,9 @@ const Nav = () => {
                                         <header>Home Furnishings & Accessories</header>
                                         <hr />
                                         <ul className="mega-links">
-                                            <li><Link onClick={() => filterProduct("Camera")} to="/bedding">Bedding</Link></li>
+                                            <li>
+                                                <Link onClick={() => filterProduct("Bedding")} to="/bedding">Bedding</Link>
+                                            </li>
                                             <li><Link onClick={() => filterProduct("Laptop")} to="/pillows">Pillows</Link></li>
                                             <li><Link onClick={() => filterProduct("Camera")} to="/throwsBlanketsAndSpreads">Throws, blankets and Spreads</Link></li>
                                             <li><Link to="/towels">Towels</Link></li>
