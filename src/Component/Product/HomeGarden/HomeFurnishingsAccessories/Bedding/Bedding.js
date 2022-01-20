@@ -2,6 +2,7 @@ import { Container, Row } from 'react-bootstrap'
 import useProduct from '../../../../../hooks/Product/useProduct'
 import Footer from '../../../../Footer/Footer'
 import Header from '../../../../Header/Header'
+import HeaderTop from '../../../../Header/HeaderTop/HeaderTop'
 import AllProduct from '../../../AllProduct/AllProduct'
 
 const Bedding = () => {

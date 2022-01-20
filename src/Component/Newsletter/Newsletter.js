@@ -1,9 +1,24 @@
 import React from 'react'
 import './Newsletter.css'
 import { Link } from 'react-router-dom'
+import axios from 'axios';
+import { useForm } from 'react-hook-form';
 
 
 const Newsletter = () => {
+    const { register, handleSubmit, reset } = useForm();
+    const onSubmit = data => {
+        // console.log(data);
+        // console.log('clicked');
+        axios.post('http://localhost:5000/newsLater', data)
+            .then(res => {
+                if (res.data.insertedId) {
+                    alert('Email Added Successfully')
+                    reset()
+                }
+
+            })
+    }
     return (
         <div className='newsletter'>
             <div className="container-fluid">
@@ -12,9 +27,14 @@ const Newsletter = () => {
                         <div className="newsletter-content">
                             <i className="fas fa-envelope"></i>
                             <h4>NEWSLETTER</h4>
-                            <form className="d-flex" className='searchBox'>
+                            {/* <form className="d-flex" className='searchBox'>
                                 <input className="form-control me-2" type="search" placeholder="Search for Product & Brand..." aria-label="Search" />
                                 <i className="fas fa-check" type="submit"></i>
+                            </form> */}
+                            <form className='searchBox' onSubmit={handleSubmit((onSubmit))}>
+                                <input className="form-control me-2"  {...register("email")} placeholder="Email Address..." />
+                                <button style={{ display: 'contents' }}> <i className="fas fa-check" ></i></button>
+
                             </form>
                         </div>
                         <p>To see how we process your data view our <Link to="/">Privacy Policy</Link> </p>

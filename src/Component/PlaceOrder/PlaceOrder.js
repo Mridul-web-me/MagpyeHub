@@ -1,5 +1,6 @@
 import { Axios } from 'axios';
 import React, { useEffect, useState } from 'react'
+import { Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import Header from '../Header/Header'
 
@@ -24,30 +25,29 @@ const PlaceOrder = () => {
     //         })
     // };
     return (
-        <div>
+        <>
             <Header></Header>
-            <div className="placeOrder">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-6">
-                            <img src={product.img} alt="" className="img-fluid" />
-                        </div>
-                        <div className="col-md-6">
-                            <h2>{product.title}</h2>
-                            {/* <form onSubmit={handleSubmit(onSubmit)}>
-                                <input {...register("ProductName")} defaultValue={bikes.name} onBlur={handleOnBlur} />
-                                <input {...register("name")} onBlur={handleOnBlur} placeholder="name" />
-                                <input {...register("email")} onBlur={handleOnBlur} value={user.email} />
-                                <input {...register("Phone")} onBlur={handleOnBlur} placeholder="Phone Number" />
-                                <input {...register("price")} onBlur={handleOnBlur} defaultValue={bikes.price} />
-                                <input type="submit" />
-                            </form> */}
-                        </div>
-                    </div>
-                </div>
+            <Container fluid style={{
+                margin: '20px 0'
+            }}>
+                <Row>
+                    <Col xs={6}>
+                        <img src={product.img} alt="" fluid style={{
+                            width: '500px',
+                            height: '500px'
+                        }} />
+                    </Col>
+                    <Col xs={6} style={{
+                        textAlign: 'start'
+                    }}>
+                        <h4>{product.title}</h4>
+                        <h5>Code: {product.productCode}</h5>
+                        <h5>${product.price}</h5>
+                    </Col>
+                </Row>
+            </Container>
+        </>
 
-            </div>
-        </div>
     )
 }
 

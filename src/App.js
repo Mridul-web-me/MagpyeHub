@@ -133,6 +133,8 @@ function App() {
             <Route path="/profile" element={<YourAccount />} />
             <Route path="/addProduct" element={<AddProduct />} />
             <Route path="/placeOrder/:productId" element={<PlaceOrder />} />
+            <Route path="/ChangePass" element={<ChangePass />} />
+            <Route path="/forgotPass" element={<forgotPass />} />
           </Routes>
         </Router>
       </ProductProvider>
