@@ -59,21 +59,22 @@ const useFirebase = () => {
 
     }
 
-    // const passChange = () => {
-    //     setIsLoading(true);
-    //     const user = auth.currentUser;
-    //     const newPassword = getASecureRandomPassword(password);
-    //     setNewPass(user)
+    const passChange = () => {
+        setIsLoading(true);
+        const user = auth.currentUser;
+        const newPassword = 
+        // getASecureRandomPassword(password);
+        setNewPass(user)
 
-    //     updatePassword(user, newPassword,).then(() => {
-    //         // Update successful.
-    //     }).catch((error) => {
-    //         // An error ocurred
-    //         // ...
-    //     }).finally(() => {
-    //         setIsLoading(false);
-    //     });
-    // }
+        updatePassword(user, newPassword,).then(() => {
+            // Update successful.
+        }).catch((error) => {
+            // An error ocurred
+            // ...
+        }).finally(() => {
+            setIsLoading(false);
+        });
+    }
 
     const resetPassword = (email) => {
         sendPasswordResetEmail(auth, email)
@@ -83,8 +84,9 @@ const useFirebase = () => {
             })
             .catch((error) => {
                 const errorCode = error.code;
+                console.log(errorCode);
                 const errorMessage = error.message;
-                // ..
+                console.log(errorMessage);
             });
     }
 
@@ -116,29 +118,6 @@ const useFirebase = () => {
             });
     }
 
-    //product
-    const [products, setProducts] = useState([]);
-
-    useEffect(() => {
-        fetch('./ProductData.json')
-            .then(res => res.json())
-            .then(data => setProducts(data))
-    }, [])
-    
-    const [filters, setFilters] = useState([]);
-    
-    const filterProduct = (categProduct) => {
-		const updatedProduct = products.filter((curElem) => {
-			return curElem.categorey === categProduct;
-		});
-		setFilters(updatedProduct);
-	};
-    
-    
-    const handleAddToCart = (product) => {
-        console.log(product);
-    }
-
     return {
         user,
         registerUser,
@@ -146,9 +125,9 @@ const useFirebase = () => {
         loginUser,
         isLoading,
         authError,
-        filters,
-        filterProduct,
-        handleAddToCart
+        resetPassword,
+        newPass,
+        passChange
     }
 
 }
