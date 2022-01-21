@@ -20,7 +20,8 @@ const useProductFilter = () => {
 
     return {
         products,
-        handleAddToCart
+        handleAddToCart,
+        cart
     }
 };
 

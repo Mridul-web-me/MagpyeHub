@@ -11,7 +11,7 @@ const Pillows = () => {
     const {products, handleAddToCart} = useProduct();
 
     const FilterProduct = products.filter((curElem) => {
-        return (curElem.categorey === 'Camera')
+        return (curElem.category === 'Camera')
     });
 
     return (

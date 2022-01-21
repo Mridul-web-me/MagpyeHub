@@ -9,7 +9,7 @@ const Bedding = () => {
     const {products} = useProduct();
     
     const FilterProduct = products.filter((curElem) => {
-        return (curElem.categorey === 'Laptop')
+        return (curElem.category === 'Laptop')
     });
 
     return (
