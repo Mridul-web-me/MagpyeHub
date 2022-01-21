@@ -1,13 +1,15 @@
 import React from 'react'
 import { Badge, Button, Col, Container, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import useProduct from '../../../hooks/Product/useProduct'
 import useAuth from '../../../hooks/useAuth'
 import logo from '../../../img/logo.jpg'
 import './HeaderTop.css'
-const HeaderTop = (props) => {
-    // const cart = prop
-    // console.log(cart.length)
+const HeaderTop = () => {
     const { user } = useAuth();
+    const { cart } = useProduct();
+    console.log(cart.length)
+
     return (
         <div className='header-top'>
             <Container fluid>
@@ -61,7 +63,7 @@ const HeaderTop = (props) => {
                                 <Link to="/basket">
 
                                     <i className="fas fa-shopping-bag"></i>
-                                    {/* <Badge bg="secondary">{props.cart.length}</Badge> */}
+                                    <Badge bg="secondary">{cart.length}</Badge>
                                     <p>My Basket</p>
 
                                 </Link>
