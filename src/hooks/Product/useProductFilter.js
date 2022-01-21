@@ -10,7 +10,10 @@ const useProductFilter = () => {
             // fetch('http://localhost:5000/products')
             .then(res => res.json())
             .then(data => setProducts(data))
-    }, []);
+    }, [])
+
+
+
 
     const handleAddToCart = (product) => {
         console.log(product);
@@ -18,11 +21,11 @@ const useProductFilter = () => {
         setCart(newCart);
     }
 
-    return {
+    return ({
         products,
         handleAddToCart,
         cart
-    }
+    })
 };
 
 export default useProductFilter;

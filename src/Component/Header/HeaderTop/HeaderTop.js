@@ -8,7 +8,7 @@ import './HeaderTop.css'
 const HeaderTop = () => {
     const { user } = useAuth();
     const { cart } = useProduct();
-    console.log(cart.length)
+    // console.log(cart.length)
 
     return (
         <div className='header-top'>

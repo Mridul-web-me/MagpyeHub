@@ -6,13 +6,13 @@
     justify-content: space-around;
     align-items: center;
 }
-i.fas.fa-search {
+.searchBox i.fas.fa-search {
     position: relative;
-    left: 175px;
-    bottom: 35px;
     font-size: 20px;
     /* border: 1px solid; */
     padding: 5px;
+    right: 40px;
+    margin: 4px 0;
 }
 
 i.fas.fa-user,
