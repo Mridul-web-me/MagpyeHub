@@ -1,5 +1,5 @@
 import React from 'react'
-import { Badge, Button, Col, Container, Row } from 'react-bootstrap'
+import { Badge, Col, Container, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import useProduct from '../../../hooks/Product/useProduct'
 import useAuth from '../../../hooks/useAuth'
@@ -23,7 +23,7 @@ const HeaderTop = () => {
                             marginLeft: '10px',
                             fontSize: "15px"
                         }}><i className="fas fa-phone"></i> 0800 1 223 023 | MON-SAT, 9AM - 5PM</p>
-                        <form className="d-flex" className='searchBox'>
+                        <form className="d-flex searchBox">
                             <input className="form-control me-2" type="search" placeholder="Search for Product & Brand..." aria-label="Search" />
                             <i className="fas fa-search" type="submit" />
                         </form>
