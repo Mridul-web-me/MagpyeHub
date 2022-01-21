@@ -6,7 +6,11 @@ import AllProduct from '../../../AllProduct/AllProduct'
 
 const Bedding = () => {
 
-    const {filters, handleAddToCart} = useProduct();
+    const {products} = useProduct();
+    
+    const FilterProduct = products.filter((curElem) => {
+        return (curElem.categorey === 'Laptop')
+    });
 
     return (
         <div>
@@ -15,12 +19,11 @@ const Bedding = () => {
             <Container fluid>
                 {<Row xs={1} md={3} className="g-4">
                     {
-                        filters.map(product =>
+                        FilterProduct.map(product =>
 
                             <AllProduct
                                 key={product.id}
                                 product={product}
-                                handleAddToCart={handleAddToCart}
                             ></AllProduct>
                         )
                     }

@@ -6,10 +6,13 @@ import Header from '../../../../Header/Header'
 import AllProduct from '../../../AllProduct/AllProduct'
 
 
-
 const Pillows = () => {
+    
+    const {products, handleAddToCart} = useProduct();
 
-    const {filters, handleAddToCart} = useProduct();
+    const FilterProduct = products.filter((curElem) => {
+        return (curElem.categorey === 'Camera')
+    });
 
     return (
         <div>
@@ -18,7 +21,7 @@ const Pillows = () => {
             <Container fluid>
                 {<Row xs={1} md={3} className="g-4">
                     {
-                        filters.map(product =>
+                        FilterProduct.map(product =>
 
                             <AllProduct
                                 key={product.id}
