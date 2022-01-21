@@ -11,7 +11,7 @@ const useProductFilter = () => {
             .then(res => res.json())
             .then(data => setProducts(data))
     }, []);
-    
+
     const handleAddToCart = (product) => {
         console.log(product);
         const newCart = [...cart, product]
@@ -20,7 +20,8 @@ const useProductFilter = () => {
 
     return {
         products,
-        handleAddToCart
+        handleAddToCart,
+        cart
     }
 };
 

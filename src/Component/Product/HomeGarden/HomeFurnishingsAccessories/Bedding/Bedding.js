@@ -6,10 +6,10 @@ import AllProduct from '../../../AllProduct/AllProduct'
 
 const Bedding = () => {
 
-    const {products} = useProduct();
-    
+    const { products, handleAddToCart } = useProduct();
+
     const FilterProduct = products.filter((curElem) => {
-        return (curElem.categorey === 'Laptop')
+        return (curElem.category === 'Laptop')
     });
 
     return (
@@ -24,6 +24,7 @@ const Bedding = () => {
                             <AllProduct
                                 key={product.id}
                                 product={product}
+                                handleAddToCart={handleAddToCart}
                             ></AllProduct>
                         )
                     }
