@@ -62,8 +62,9 @@ import YourAccount from './Component/Header/YourAccount/YourAccount';
 import AddProduct from './Component/Product/AddProduct/AddProduct';
 import PlaceOrder from './Component/PlaceOrder/PlaceOrder';
 import ChangePass from './Component/Header/YourAccount/ChangePass/ChangePass';
-import ForgotPass from './Component/LoginForm/ForgotPass/ForgotPass';
+
 import Cart from './Component/Product/Cart/Cart';
+import ForgotPass from './Component/LoginForm/ForgotPass/ForgotPass';
 
 
 
