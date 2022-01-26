@@ -1,50 +1,58 @@
-// import React, { useState } from 'react';
-// import { Button, Col, Form, Row } from 'react-bootstrap';
-// import useAuth from '../../../hooks/useAuth';
-// import Header from '../../Header/Header';
+import React, { useState } from 'react';
+import { Alert, Button, Col, Form, Row } from 'react-bootstrap';
+import useAuth from '../../../hooks/useAuth';
 
-// const forgotPass = () => {
+import Header from '../../Header/Header';
 
-//     const [loginData, setLoginData] = useState({});
-//     const { resetPassword, isLoading, } = useAuth();
+const ForgotPass = () => {
 
-//     const handleOnBlur = e => {
-//         const field = e.target.name;
-//         const value = e.target.value;
-//         const newLoginData = { ...loginData };
-//         newLoginData[field] = value;
-//         setLoginData(newLoginData)
-//         // console.log(field, value, newLoginData);
-//     }
+    const [loginData, setLoginData] = useState({});
+    const { resetPassword, isLoading, } = useAuth();
 
-//     const handleResetPassword = e => {
-//         e.preventDefault();
-//         resetPassword(loginData.email);
-//         return
-//     }
+    const handleOnBlur = e => {
+        const field = e.target.name;
+        const value = e.target.value;
+        const newLoginData = { ...loginData };
+        newLoginData[field] = value;
+        setLoginData(newLoginData)
+        // console.log(field, value, newLoginData);
+    }
 
-//     return (
-//         <div>
-//             <Header></Header>
-//             <h5>CREATE AN ACCOUNT</h5>
-//             {!isLoading && <Form onSubmit={handleResetPassword}>
-//                 <Form.Group as={Row} className="mb-3">
-//                     <Form.Label column sm="4" >
-//                         Email Address
-//                     </Form.Label>
-//                     <Col sm="8">
-//                         <Form.Control
-//                             type="email"
-//                             name="email"
-//                             placeholder="Email"
-//                             onBlur={handleOnBlur}
-//                         />
-//                     </Col>
-//                 </Form.Group>
-//                 <Button variant="outline-primary" type='submit'>Register</Button>
-//             </Form>}
-//         </div>
-//     )
-// };
+    const handleResetPassword = e => {
+        e.preventDefault();
+        return resetPassword(loginData.email);
+        
+    }
 
-// export default forgotPass;
+    return (
+        <div>
+            <Header></Header>
+            <h5>Forget Password</h5>
+            {!isLoading && <Form onSubmit={handleResetPassword}>
+                <Form.Group as={Row} className="mb-3">
+                    <Form.Label column sm="4" >
+                        Email Address
+                    </Form.Label>
+                    <Col sm="8">
+                        <Form.Control
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            onBlur={handleOnBlur}
+                        />
+                    </Col>
+                </Form.Group>
+                <Button variant="outline-primary"  type='submit'>Submit</Button>
+            </Form>}
+            {isLoading && [
+                'success'
+            ].map((variant, idx) => (
+                <Alert key={idx} variant={variant}>
+                    Check your email
+                </Alert>
+            ))}
+        </div>
+    )
+};
+
+export default ForgotPass;

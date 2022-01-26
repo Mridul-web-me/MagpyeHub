@@ -38,7 +38,7 @@ const ChangePass = () => {
         <div>
             <Header></Header>
             <div>
-                <h5>CREATE AN ACCOUNT</h5>
+                <h5>Change password</h5>
                 {!isLoading && <Form onSubmit={handlePasswordUpdate}>
                     <Form.Group as={Row} className="mb-3">
                         <Form.Label column sm="4">

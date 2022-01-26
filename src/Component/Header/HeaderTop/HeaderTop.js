@@ -6,9 +6,9 @@ import useAuth from '../../../hooks/useAuth'
 import logo from '../../../img/logo.jpg'
 import './HeaderTop.css'
 const HeaderTop = () => {
+
     const { user } = useAuth();
-    const { cart } = useProduct();
-    console.log(cart.length)
+    const {totalQuantity} = useProduct();
 
     return (
         <div className='header-top'>
@@ -60,14 +60,13 @@ const HeaderTop = () => {
                                 </Link>
                             </div>
                             <div>
-                                <Link to="/basket">
+                                <Link to="/cart">
 
                                     <i className="fas fa-shopping-bag"></i>
-                                    <Badge bg="secondary">{cart.length}</Badge>
+                                    <Badge bg="secondary" className='fs-6' >{totalQuantity}</Badge>
                                     <p>My Basket</p>
 
                                 </Link>
-
                             </div>
                         </div>
                     </Col>

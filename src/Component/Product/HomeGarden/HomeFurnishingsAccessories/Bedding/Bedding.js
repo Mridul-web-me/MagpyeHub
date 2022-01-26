@@ -4,13 +4,15 @@ import Footer from '../../../../Footer/Footer'
 import Header from '../../../../Header/Header'
 import AllProduct from '../../../AllProduct/AllProduct'
 
-const Bedding = () => {
 
-    const {products} = useProduct();
+const Bedding = () => {
     
+    const {products, handleAddToCart} = useProduct();
     const FilterProduct = products.filter((curElem) => {
         return (curElem.category === 'Laptop')
     });
+
+    
 
     return (
         <div>
@@ -24,6 +26,7 @@ const Bedding = () => {
                             <AllProduct
                                 key={product.id}
                                 product={product}
+                                handleAddToCart={handleAddToCart}
                             ></AllProduct>
                         )
                     }

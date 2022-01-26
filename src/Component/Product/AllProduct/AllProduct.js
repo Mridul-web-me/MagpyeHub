@@ -2,10 +2,17 @@ import React from 'react'
 import { Button, Card, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-const AllProduct = ({ product, handleAddToCart }) => {
-    
-    const { _id, title, img, category, price } = product;
+const AllProduct = (props) => {
+
+    const { _id, title, img, category, price } = props.product;
+    // const [cart, setCart] = useState([]);
     // filterProduct.map('bedding')
+
+    // const handleAddToCart = (product) => {
+    //     const newCart = [...cart, product]
+    //     setCart(newCart);
+    //     console.log(newCart.length);
+    // }
 
 
     return (
@@ -22,7 +29,7 @@ const AllProduct = ({ product, handleAddToCart }) => {
                         <Card.Text>
                             $ {price}
                         </Card.Text>
-                        <Button onClick={() => handleAddToCart(product)} type='button' >Buy</Button>
+                        <Button  onClick={() => props.handleAddToCart(props.product)} type='button' >Buy</Button>
                         <Link to={`/placeOrder/${_id}`}>
                             <Button variant="outline-primary">View</Button>
                         </Link>

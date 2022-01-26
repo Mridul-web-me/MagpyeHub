@@ -61,8 +61,11 @@ import AuthProvider from './context/AuthProvider/AuthProvider';
 import YourAccount from './Component/Header/YourAccount/YourAccount';
 import AddProduct from './Component/Product/AddProduct/AddProduct';
 import PlaceOrder from './Component/PlaceOrder/PlaceOrder';
-import ProductProvider from './context/ProductProvider/ProductProvider';
 import ChangePass from './Component/Header/YourAccount/ChangePass/ChangePass';
+import ForgotPass from './Component/LoginForm/ForgotPass/ForgotPass';
+import Cart from './Component/Product/Cart/Cart';
+
+
 
 
 
@@ -70,11 +73,11 @@ function App() {
   return (
     <div className="App">
       <AuthProvider>
-      <ProductProvider>
         <Router>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
+            <Route path="/cart" element={<Cart />} />
             <Route path="/register" element={<LoginForm />} />
             <Route path="/register" element={<Login />} />
             <Route path="/bedding" element={<Bedding />} />
@@ -135,10 +138,9 @@ function App() {
             <Route path="/addProduct" element={<AddProduct />} />
             <Route path="/placeOrder/:productId" element={<PlaceOrder />} />
             <Route path="/ChangePass" element={<ChangePass />} />
-            <Route path="/forgotPass" element={<forgotPass />} />
+            <Route path="/forgotPass" element={<ForgotPass />} />
           </Routes>
         </Router>
-      </ProductProvider>
       </AuthProvider>
     </div>
   );
