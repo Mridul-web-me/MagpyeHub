@@ -2,6 +2,7 @@ import { Axios } from 'axios';
 import React, { useEffect, useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
+// import { useParams } from 'react-router-dom';
 import Header from '../Header/Header'
 
 const PlaceOrder = () => {
@@ -11,19 +12,8 @@ const PlaceOrder = () => {
         fetch(`http://localhost:5000/products/${productId}`)
             .then(res => res.json())
             .then(data => setProduct(data));
-        console.log(product);
+        // console.log(product);
     }, [])
-    // const onSubmit = data => {
-    //     console.log(data)
-    //     Axios.post('https://floating-oasis-79529.herokuapp.com/placeOrder', data)
-    //         .then(res => {
-    //             console.log(res);
-    //             if (res.data.insertedId) {
-    //                 alert('Order Place successfully')
-    //                 reset();
-    //             }
-    //         })
-    // };
     return (
         <>
             <Header></Header>

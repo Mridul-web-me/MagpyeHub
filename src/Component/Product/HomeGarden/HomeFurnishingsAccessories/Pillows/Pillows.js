@@ -7,8 +7,8 @@ import AllProduct from '../../../AllProduct/AllProduct'
 
 
 const Pillows = () => {
-    
-    const {products, handleAddToCart} = useProduct();
+
+    const { products, handleAddToCart } = useProduct();
 
     const FilterProduct = products.filter((curElem) => {
         return (curElem.category === 'Camera')

@@ -8,7 +8,7 @@ const YourAccount = () => {
     const { logOut } = useAuth();
     const history = useNavigate()
     const { user } = useAuth();
-    console.log(user);
+    // console.log(user);
 
     const handleLogOutSubmit = e => {
         e.preventDefault();
