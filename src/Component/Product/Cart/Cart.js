@@ -6,12 +6,12 @@ import Header from '../../Header/Header';
 
 const Cart = () => {
 
-    const {totalQuantity, total, shipping, carts} = useProduct({});
-    
+    const { totalQuantity, total, shipping, carts } = useProduct({});
+
     return (
         <>
             <Header></Header>
-            <div className='py-5 bg-light'>
+            {shipping ? <div className='py-5 bg-light'>
                 <table className='mx-auto'>
                     <tr className='border-1'>
                         <th className='border-1 p-2 '>No</th>
@@ -22,21 +22,21 @@ const Cart = () => {
                     </tr>
                     {
                         carts.map((cart) => {
-                            
-                            const {img, category,price} = cart;
 
-                            return(
+                            const { img, title, price } = cart;
+
+                            return (
                                 <>
-                                <tr className='border-1'>
-                                    <td className='border-1 p-2' >{1}</td>
-                                    <td className='border-1 p-2' >
-                                        <img className='' height={50} width={50} src={img} alt="" />
-                                    </td>
-                                    <td className='border-1 p-2' >{category}</td>
-                                    <td className='border-1 p-2'>${price}</td>
-                                    <td className='border-1 p-2'>${shipping}</td>
-                                </tr>   
-                            </>)
+                                    <tr className='border-1'>
+                                        <td className='border-1 p-2' >{1}</td>
+                                        <td className='border-1 p-2' >
+                                            <img className='' height={50} width={50} src={img} alt="" />
+                                        </td>
+                                        <td className='border-1 p-2' >{title}</td>
+                                        <td className='border-1 p-2'>${price}</td>
+                                        <td className='border-1 p-2'>${shipping}</td>
+                                    </tr>
+                                </>)
                         })
                     }
                     <tr className='border-1 p-2'>
@@ -46,7 +46,12 @@ const Cart = () => {
                         <th></th>
                     </tr>
                 </table>
-            </div>
+            </div> :
+                <div>
+                    <h4>You currently have nothing in your Basket</h4>
+                    <p>Why not have a look at some of our best offers we've selected for you below:</p>
+                </div>
+            }
             <Footer></Footer>
         </>
     );

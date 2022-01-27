@@ -64,7 +64,8 @@ import PlaceOrder from './Component/PlaceOrder/PlaceOrder';
 import ChangePass from './Component/Header/YourAccount/ChangePass/ChangePass';
 
 import Cart from './Component/Product/Cart/Cart';
-import ForgotPass from './Component/LoginForm/ForgotPass/ForgotPass';
+import ForgotPass from './Component/LoginForm/forgotPass/forgotPass';
+// import ForgotPass from './Component/LoginForm/ForgotPass/ForgotPass';
 
 
 

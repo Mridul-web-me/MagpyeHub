@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { addToDb } from '../../fakeDB';
 
 const useProductFilter = () => {
 
@@ -7,15 +8,21 @@ const useProductFilter = () => {
 
     useEffect(() => {
         fetch('./ProductData.JSON')
+            // fetch('http://localhost:5000/products')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, []);
 
+
+    // Cart Handler
     const handleAddToCart = (product) => {
         const newCart = [...carts, product];
         setCart(newCart);
+        addToDb(product.id);
     }
 
+
+    // Total Price
     let totalQuantity = 0;
     let total = 0;
     for (const product of carts) {
@@ -29,7 +36,7 @@ const useProductFilter = () => {
     const shipping = total > 0 ? 15 : 0;
     const tax = (total + shipping) * 10;
     const grandTotal = total + shipping + tax;
-    
+
 
     return {
         products,
@@ -37,7 +44,7 @@ const useProductFilter = () => {
         carts,
         grandTotal,
         totalQuantity,
-        total,tax,shipping
+        total, tax, shipping
     }
 };
 

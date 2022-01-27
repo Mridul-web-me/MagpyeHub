@@ -8,7 +8,7 @@ import './HeaderTop.css'
 const HeaderTop = () => {
 
     const { user } = useAuth();
-    const {totalQuantity} = useProduct();
+    const { totalQuantity } = useProduct();
 
     return (
         <div className='header-top'>
@@ -63,7 +63,7 @@ const HeaderTop = () => {
                                 <Link to="/cart">
 
                                     <i className="fas fa-shopping-bag"></i>
-                                    <Badge bg="secondary" className='fs-6' >{totalQuantity}</Badge>
+                                    <Badge bg="secondary" className='fs-8' >{totalQuantity}</Badge>
                                     <p>My Basket</p>
 
                                 </Link>
