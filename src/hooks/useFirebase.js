@@ -63,8 +63,8 @@ const useFirebase = () => {
         setIsLoading(true);
         const user = auth.currentUser;
         const newPassword = setNewPass('');
-  //getASecureRandomPassword();
-        
+        //getASecureRandomPassword();
+
 
         updatePassword(user, newPassword,).then(() => {
             // Update successful.
@@ -72,9 +72,9 @@ const useFirebase = () => {
             // An error ocurred
             // ...
         })
-        .finally(() => {
-            setIsLoading(false);
-        });
+            .finally(() => {
+                setIsLoading(false);
+            });
     }
 
     const resetPassword = (email) => {
@@ -101,7 +101,7 @@ const useFirebase = () => {
             if (user) {
                 const uid = user.uid;
                 setUser(user)
-                console.log(uid);
+                // console.log(uid);
             } else {
                 setUser({})
             }

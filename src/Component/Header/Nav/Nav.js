@@ -4,6 +4,11 @@ import { Link } from 'react-router-dom'
 import './Nav.css'
 const Nav = () => {
 
+    const handleSearchField = e => {
+        const searchText = e.target.value;
+        console.log(searchText);
+    }
+
     return (
         <div>
             <nav>
@@ -27,8 +32,8 @@ const Nav = () => {
                                 <div className="content">
                                     <div className="searchBoxContent">
                                         <div className="col-md-6">
-                                            <form className="d-flex">
-                                                <input className="form-control me-2" type="search" placeholder="Search for Product & Brand..." aria-label="Search" />
+                                            <form className="d-flex" onChange={handleSearchField}>
+                                                <input type="search" name="" id="" />
                                                 <i className="fas fa-search" type="submit" />
                                             </form>
                                         </div>

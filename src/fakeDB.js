@@ -1,10 +1,10 @@
-const addToDb = id => {
+const addToDb = _id => {
     const stored_cart = getStoredCart();
-    if (id in stored_cart) {
-        stored_cart[id] = stored_cart[id] + 1;
+    if (_id in stored_cart) {
+        stored_cart[_id] = stored_cart[_id] + 1;
     }
     else {
-        stored_cart[id] = 1;
+        stored_cart[_id] = 1;
     }
     updateDb(stored_cart);
 }

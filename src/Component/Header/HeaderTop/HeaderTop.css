@@ -7,7 +7,6 @@
     align-items: center;
 }
 .searchBox i.fas.fa-search {
-    position: relative;
     font-size: 20px;
     /* border: 1px solid; */
     padding: 5px;

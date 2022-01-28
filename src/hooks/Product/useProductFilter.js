@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { addToDb } from '../../fakeDB';
+import { addToDb, getStoredCart } from '../../fakeDB';
 
 const useProductFilter = () => {
 
@@ -7,18 +7,36 @@ const useProductFilter = () => {
     const [carts, setCart] = useState([]);
 
     useEffect(() => {
-        fetch('./ProductData.JSON')
-            // fetch('http://localhost:5000/products')
+        // fetch('./ProductData.JSON')
+        fetch('http://localhost:5000/products')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, []);
 
+    // Get Stored Cart
+    useEffect(() => {
+        if (products.length) {
+            const savedCart = getStoredCart();
+            const storedCart = [];
+            for (const _id in savedCart) {
+                console.log(_id);
+                const AddedProduct = products.find(product => product._id === _id);
+                if (AddedProduct) {
+                    const quantity = savedCart[_id];
+                    AddedProduct.quantity = quantity;
+                    console.log(quantity);
+                    storedCart.push(AddedProduct);
+                }
+            }
+            setCart(storedCart);
+        }
+    }, [products])
 
     // Cart Handler
     const handleAddToCart = (product) => {
         const newCart = [...carts, product];
         setCart(newCart);
-        addToDb(product.id);
+        addToDb(product._id);
     }
 
 

@@ -11,7 +11,7 @@ const Bedding = () => {
     const FilterProduct = products.filter((curElem) => {
         return (curElem.category === ('bedding'))
     });
-
+    console.log(FilterProduct);
 
 
     return (

@@ -23,7 +23,7 @@ const Cart = () => {
                     {
                         carts.map((cart) => {
 
-                            const { img, title, price } = cart;
+                            const { img, title, price, quantity } = cart;
 
                             return (
                                 <>
@@ -40,7 +40,7 @@ const Cart = () => {
                         })
                     }
                     <tr className='border-1 p-2'>
-                        <th colspan="2" className='p-2 border-1' >SubTotal</th>
+                        <th colSpan="2" className='p-2 border-1' >SubTotal</th>
                         <th className='p-2' >Total Items {totalQuantity}</th>
                         <th className='border-1 p-2'>${total.toFixed(2)}</th>
                         <th></th>
