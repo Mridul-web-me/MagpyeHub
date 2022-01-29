@@ -1,4 +1,4 @@
-import { Container, Row } from 'react-bootstrap'
+import { Button, Container, Pagination, Row } from 'react-bootstrap'
 import useProduct from '../../../../../hooks/Product/useProduct'
 import Footer from '../../../../Footer/Footer'
 import Header from '../../../../Header/Header'
@@ -7,11 +7,16 @@ import AllProduct from '../../../AllProduct/AllProduct'
 
 const Bedding = () => {
 
-    const { products, handleAddToCart } = useProduct();
-    const FilterProduct = products.filter((curElem) => {
-        return (curElem.category === ('bedding'))
-    });
-    console.log(FilterProduct);
+    const { products, handleAddToCart, pageCount } = useProduct([]);
+    // const FilterProduct = products.filter((curElem) => {
+    //     return (curElem.category === ('Laptop'))
+    // });
+    // console.log(products, pageCount);
+
+    // let active = 2;
+    // let items = [pageCount];
+
+
 
 
     return (
@@ -20,7 +25,7 @@ const Bedding = () => {
             <Container fluid>
                 {<Row xs={1} md={3} className="g-4">
                     {
-                        FilterProduct.map(product =>
+                        products.map(product =>
 
                             <AllProduct
                                 key={product._id}
@@ -30,6 +35,18 @@ const Bedding = () => {
                         )
                     }
                 </Row>}
+
+                {
+                    // [...Array(pageCount).keys()]
+                    //     .map(number => <Button>{number}</Button>)
+                    // <Pagination size="sm">{items}</Pagination>
+                    // [...Array(pageCount).keys()].map(number =>
+                    //     <Pagination.Item >
+                    //         {number}
+                    //     </Pagination.Item>,
+                    // )
+                }
+
             </Container>
             <Footer></Footer>
         </div>

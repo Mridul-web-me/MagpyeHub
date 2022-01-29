@@ -62,10 +62,10 @@ import YourAccount from './Component/Header/YourAccount/YourAccount';
 import AddProduct from './Component/Product/AddProduct/AddProduct';
 import PlaceOrder from './Component/PlaceOrder/PlaceOrder';
 import ChangePass from './Component/Header/YourAccount/ChangePass/ChangePass';
-
 import Cart from './Component/Product/Cart/Cart';
 import ForgotPass from './Component/LoginForm/forgotPass/forgotPass';
-// import ForgotPass from './Component/LoginForm/ForgotPass/ForgotPass';
+import AddressBook from './Component/Header/YourAccount/AddressBook/AddressBook';
+
 
 
 
@@ -141,6 +141,7 @@ function App() {
             <Route path="/placeOrder/:productId" element={<PlaceOrder />} />
             <Route path="/ChangePass" element={<ChangePass />} />
             <Route path="/forgotPass" element={<ForgotPass />} />
+            <Route path="/addressBook" element={<AddressBook />} />
           </Routes>
         </Router>
       </AuthProvider>

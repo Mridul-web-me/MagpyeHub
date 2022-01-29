@@ -5,12 +5,19 @@ const useProductFilter = () => {
 
     const [products, setProducts] = useState([]);
     const [carts, setCart] = useState([]);
+    const [pageCount, setPageCount] = useState(0);
 
     useEffect(() => {
         // fetch('./ProductData.JSON')
         fetch('http://localhost:5000/products')
             .then(res => res.json())
-            .then(data => setProducts(data));
+            .then(data => {
+                setProducts(data)
+                const count = data;
+                const pageNumber = Math.ceil(count / 2);
+                setPageCount(pageNumber)
+                console.log(data);
+            });
     }, []);
 
     // Get Stored Cart
@@ -62,7 +69,8 @@ const useProductFilter = () => {
         carts,
         grandTotal,
         totalQuantity,
-        total, tax, shipping
+        total, tax, shipping,
+        pageCount
     }
 };
 
