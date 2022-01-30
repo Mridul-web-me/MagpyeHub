@@ -6,17 +6,19 @@ const useProductFilter = () => {
     const [products, setProducts] = useState([]);
     const [carts, setCart] = useState([]);
     const [pageCount, setPageCount] = useState(0);
+    const [page, setPage] = useState(0);
+    const size = 5;
 
     useEffect(() => {
-        // fetch('./ProductData.JSON')
-        fetch('http://localhost:5000/products')
+        fetch('./ProductData.JSON')
+        fetch(`http://localhost:5000/products?page=${page}&&size=${size}`)
             .then(res => res.json())
             .then(data => {
-                setProducts(data)
-                const count = data;
-                const pageNumber = Math.ceil(count / 2);
+                setProducts(data.products)
+                const count = data.count;
+                const pageNumber = Math.ceil(count / size);
                 setPageCount(pageNumber)
-                console.log(data);
+                // console.log(pageCount);
             });
     }, []);
 
@@ -70,7 +72,9 @@ const useProductFilter = () => {
         grandTotal,
         totalQuantity,
         total, tax, shipping,
-        pageCount
+        pageCount,
+        page,
+        setPage
     }
 };
 

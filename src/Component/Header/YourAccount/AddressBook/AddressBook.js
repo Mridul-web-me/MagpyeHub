@@ -2,16 +2,10 @@ import React from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import Footer from '../../../Footer/Footer';
 import Header from '../../Header';
-import ReactCountriesInput from 'react-countries-input'
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 
 const AddressBook = (props) => {
-
-    const handleCountryOnChange = country => {
-
-        console.log(country)
-    }
 
 
     const { register, handleSubmit, reset } = useForm();

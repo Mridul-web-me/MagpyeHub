@@ -31,11 +31,11 @@ const YourAccount = () => {
                         <p>Track your recent orders and view details of older orders</p>
                     </Col>
                     <Col xs={6}>
-                        <h4><Link to="/">MY FILES</Link></h4>
+                        <h4><Link to="/myFiles">MY FILES</Link></h4>
                         <p>View a list of files that are linked to your account</p>
                     </Col>
                     <Col xs={6}>
-                        <h4><Link to={'/'}>MY DETAILS</Link></h4>
+                        <h4><Link to={'/myDetails'}>MY DETAILS</Link></h4>
                         <p>Update your account details including your email address and newsletter subscription</p>
                     </Col>
                     <Col xs={6}>

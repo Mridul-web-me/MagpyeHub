@@ -3,49 +3,47 @@ import useProduct from '../../../../../hooks/Product/useProduct'
 import Footer from '../../../../Footer/Footer'
 import Header from '../../../../Header/Header'
 import AllProduct from '../../../AllProduct/AllProduct'
+import './Bedding.css'
 
 
 const Bedding = () => {
 
-    const { products, handleAddToCart, pageCount } = useProduct([]);
-    // const FilterProduct = products.filter((curElem) => {
-    //     return (curElem.category === ('Laptop'))
-    // });
-    // console.log(products, pageCount);
+    const { products, handleAddToCart, pageCount, setPage, page } = useProduct([]);
 
-    // let active = 2;
-    // let items = [pageCount];
-
-
-
+    const FilterProduct = products.filter((curElem) => {
+        return (curElem.category === ('bedding'))
+    });
 
     return (
         <div>
             <Header></Header>
             <Container fluid>
+                <h1>Bedding</h1>
                 {<Row xs={1} md={3} className="g-4">
                     {
-                        products.map(product =>
+                        FilterProduct.map(product =>
 
                             <AllProduct
                                 key={product._id}
                                 product={product}
                                 handleAddToCart={handleAddToCart}
+                                pageCount={pageCount}
                             ></AllProduct>
                         )
                     }
                 </Row>}
 
-                {
-                    // [...Array(pageCount).keys()]
-                    //     .map(number => <Button>{number}</Button>)
-                    // <Pagination size="sm">{items}</Pagination>
-                    // [...Array(pageCount).keys()].map(number =>
-                    //     <Pagination.Item >
-                    //         {number}
-                    //     </Pagination.Item>,
-                    // )
-                }
+                <div className="pagination">
+                    {
+                        [...Array(pageCount).keys()]
+                            .map(number => <Button
+                                className={number === page ? 'selected' : ''}
+                                variant="light"
+                                key={number}
+                                onClick={() => setPage(number)}
+                            >{number + 1}</Button>)
+                    }
+                </div>
 
             </Container>
             <Footer></Footer>

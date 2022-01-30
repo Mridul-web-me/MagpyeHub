@@ -65,6 +65,8 @@ import ChangePass from './Component/Header/YourAccount/ChangePass/ChangePass';
 import Cart from './Component/Product/Cart/Cart';
 import ForgotPass from './Component/LoginForm/forgotPass/forgotPass';
 import AddressBook from './Component/Header/YourAccount/AddressBook/AddressBook';
+import MyDetails from './Component/Header/YourAccount/MyDetails/MyDetails';
+import MyFiles from './Component/Header/YourAccount/MyFiles/MyFiles';
 
 
 
@@ -142,6 +144,8 @@ function App() {
             <Route path="/ChangePass" element={<ChangePass />} />
             <Route path="/forgotPass" element={<ForgotPass />} />
             <Route path="/addressBook" element={<AddressBook />} />
+            <Route path="/myDetails" element={<MyDetails />} />
+            <Route path="/myFiles" element={<MyFiles />} />
           </Routes>
         </Router>
       </AuthProvider>
