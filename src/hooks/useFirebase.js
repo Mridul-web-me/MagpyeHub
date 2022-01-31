@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import initializeFirebase from "../Component/LoginForm/Firebase/firebase.init";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, onAuthStateChanged, signOut, updatePassword, sendPasswordResetEmail } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, onAuthStateChanged, signOut, updatePassword, sendPasswordResetEmail, getIdToken } from "firebase/auth";
 
 
 //Initialize Firebase App
@@ -99,6 +99,8 @@ const useFirebase = () => {
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
+                getIdToken(user)
+                    .then(idToken => localStorage.setItem('idToken', idToken))
                 const uid = user.uid;
                 setUser(user)
                 // console.log(uid);

@@ -14,6 +14,7 @@ import SwiperCore, {
     Autoplay
 } from 'swiper';
 import { Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 // install Swiper modules
 SwiperCore.use([Autoplay]);
@@ -46,15 +47,34 @@ const Brand = () => {
                             "spaceBetween": 50
                         }
                     }} className="mySwiper">
-                    <SwiperSlide className="brandSlider">Brands will be added</SwiperSlide>
-                    <SwiperSlide className="brandSlider">Brands will be added</SwiperSlide>
-                    <SwiperSlide className="brandSlider">Brands will be added</SwiperSlide>
-                    <SwiperSlide className="brandSlider">Brands will be added</SwiperSlide>
-                    <SwiperSlide className="brandSlider">Brands will be added</SwiperSlide>
-                    <SwiperSlide className="brandSlider">Brands will be added</SwiperSlide>
-                    <SwiperSlide className="brandSlider">Brands will be added</SwiperSlide>
-                    <SwiperSlide className="brandSlider">Brands will be added</SwiperSlide>
-                    <SwiperSlide className="brandSlider">Brands will be added</SwiperSlide>
+                    <SwiperSlide className="brandSlider">
+                        <Link to="/">
+                            Brands will be added</Link>
+                    </SwiperSlide>
+                    <SwiperSlide className="brandSlider">
+                        <Link to="/">
+                            Brands will be added</Link>
+                    </SwiperSlide>
+                    <SwiperSlide className="brandSlider">
+                        <Link to="/">
+                            Brands will be added</Link>
+                    </SwiperSlide>
+                    <SwiperSlide className="brandSlider">
+                        <Link to="/">
+                            Brands will be added</Link>
+                    </SwiperSlide>
+                    <SwiperSlide className="brandSlider">
+                        <Link to="/">
+                            Brands will be added</Link>
+                    </SwiperSlide>
+                    <SwiperSlide className="brandSlider">
+                        <Link to="/">
+                            Brands will be added</Link>
+                    </SwiperSlide>
+                    <SwiperSlide className="brandSlider">
+                        <Link to="/">
+                            Brands will be added</Link>
+                    </SwiperSlide>
                 </Swiper>
             </Container>
         </>

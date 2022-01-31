@@ -11,9 +11,9 @@ const FavouriteProduct = () => {
     const { products, handleAddToCart } = useProduct();
 
 
-    const FilterProduct = products.filter((curElem) => {
-        return (curElem.category === ('Laptop'))
-    });
+    // const FilterProduct = products.filter((curElem) => {
+    //     return (curElem.category === ('Laptop'))
+    // });
 
     const settings = {
         infinite: true,
@@ -29,7 +29,7 @@ const FavouriteProduct = () => {
             <div>
                 <h2> Favorite Product </h2>
                 {<Slider {...settings}>
-                    {
+                    {/* {
                         FilterProduct.map(product =>
 
                             <AllFavProduct
@@ -38,7 +38,7 @@ const FavouriteProduct = () => {
                                 handleAddToCart={handleAddToCart}
                             ></AllFavProduct>
                         )
-                    }
+                    } */}
                 </Slider>}
             </div>
         </Container>

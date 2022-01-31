@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import useProduct from '../../../hooks/Product/useProduct';
 import useAuth from '../../../hooks/useAuth';
 import logo from '../../../img/logo.jpg'
+import AllProduct from '../../Product/AllProduct/AllProduct';
 
 
 import './Nav.css'
@@ -18,18 +19,21 @@ const Nav = () => {
 
     const [searchText, setSearchText] = useState('')
     const [products, setProducts] = useState([])
-
     useEffect(() => {
-        const url = `http://localhost:5000/products?s=${searchText}`
+        const url = `http://localhost:5000/products?search=${searchText}`
         fetch(url)
             .then(res => res.json())
             .then(data => setProducts(data.products))
     }, [])
     const handleSearchField = e => {
+        e.preventDefault()
         const searchTextValue = e.target.value;
         setSearchText(searchTextValue)
+        console.log(searchTextValue);
     }
-
+    const handleOnSubmit = e => {
+        e.preventDefault()
+    }
     return (
         <div>
 
@@ -45,9 +49,10 @@ const Nav = () => {
                                 marginLeft: '10px',
                                 fontSize: "15px"
                             }}><i className="fas fa-phone"></i> 0800 1 223 023 | MON-SAT, 9AM - 5PM</p>
-                            <form className="d-flex searchBox" onChange={handleSearchField}>
-                                <input className="form-control me-2" placeholder="Search for Product & Brand..." aria-label="Search" />
-                                <button type="submit"> <i className="fas fa-search" /></button>
+                            <form className="d-flex searchBox" >
+                                <input className="form-control me-2" onChange={handleSearchField} placeholder="Search for Product & Brand..." aria-label="Search" />
+                                {/* <button type="submit"> <i className="fas fa-search" /></button> */}
+                                <input type="submit" />
                             </form>
                             {/* <div>
                                 {
@@ -417,6 +422,34 @@ const Nav = () => {
                     <label htmlFor="menu-btn" className="btn menu-btn"><i className="fas fa-bars"></i></label>
                 </div>
             </nav>
+            {
+                <Container fluid>
+                    {/* {<Row xs={1} md={3} className="g-4">
+                        {
+                            products.map(product =>
+
+                                <AllProduct
+                                    key={product._id}
+                                    product={product}
+                                // handleAddToCart={handleAddToCart}
+                                // pageCount={pageCount}
+                                ></AllProduct>
+                            )
+                        }
+                    </Row>} */}
+                    {/* <div className="pagination">
+                        {
+                            [...Array(pageCount).keys()]
+                                .map(number => <Button
+                                    className={number === page ? 'selected' : ''}
+                                    variant="light"
+                                    key={number}
+                                    onClick={() => setPage(number)}
+                                >{number + 1}</Button>)
+                        }
+                    </div> */}
+                </Container>
+            }
         </div>
 
     )

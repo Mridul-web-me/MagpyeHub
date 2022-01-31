@@ -67,6 +67,7 @@ import ForgotPass from './Component/LoginForm/forgotPass/forgotPass';
 import AddressBook from './Component/Header/YourAccount/AddressBook/AddressBook';
 import MyDetails from './Component/Header/YourAccount/MyDetails/MyDetails';
 import MyFiles from './Component/Header/YourAccount/MyFiles/MyFiles';
+import ProceedToPayment from './Component/Product/Cart/ProceedToPayment/ProceedToPayment';
 
 
 
@@ -146,6 +147,7 @@ function App() {
             <Route path="/addressBook" element={<AddressBook />} />
             <Route path="/myDetails" element={<MyDetails />} />
             <Route path="/myFiles" element={<MyFiles />} />
+            <Route path="/proceedToPayment" element={<ProceedToPayment />} />
           </Routes>
         </Router>
       </AuthProvider>

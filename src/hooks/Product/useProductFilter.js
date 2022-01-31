@@ -7,18 +7,18 @@ const useProductFilter = () => {
     const [carts, setCart] = useState([]);
     const [pageCount, setPageCount] = useState(0);
     const [page, setPage] = useState(0);
-    const size = 5;
-
+    // const size = 5;
+    const category = ''
     useEffect(() => {
         fetch('./ProductData.JSON')
-        fetch(`http://localhost:5000/products?page=${page}&&size=${size}`)
+        fetch(`http://localhost:5000/products?category=${category}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products)
-                const count = data.count;
-                const pageNumber = Math.ceil(count / size);
-                setPageCount(pageNumber)
-                // console.log(pageCount);
+                // const count = data.count;
+                // const pageNumber = Math.ceil(count / size);
+                // setPageCount(pageNumber)
+                console.log(pageCount);
             });
     }, []);
 
