@@ -8,10 +8,9 @@ const useProductFilter = () => {
     const [pageCount, setPageCount] = useState(0);
     const [page, setPage] = useState(0);
     // const size = 5;
-    const category = ''
     useEffect(() => {
         fetch('./ProductData.JSON')
-        fetch(`http://localhost:5000/products?category=${category}`)
+        fetch(`http://localhost:5000/products`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products)
