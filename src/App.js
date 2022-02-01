@@ -68,6 +68,7 @@ import AddressBook from './Component/Header/YourAccount/AddressBook/AddressBook'
 import MyDetails from './Component/Header/YourAccount/MyDetails/MyDetails';
 import MyFiles from './Component/Header/YourAccount/MyFiles/MyFiles';
 import ProceedToPayment from './Component/Product/Cart/ProceedToPayment/ProceedToPayment';
+import SearchResult from './Component/Header/SearchBox/SearchResult/SearchResult';
 
 
 
@@ -148,6 +149,7 @@ function App() {
             <Route path="/myDetails" element={<MyDetails />} />
             <Route path="/myFiles" element={<MyFiles />} />
             <Route path="/proceedToPayment" element={<ProceedToPayment />} />
+            <Route path="/search" element={<SearchResult />} />
           </Routes>
         </Router>
       </AuthProvider>
