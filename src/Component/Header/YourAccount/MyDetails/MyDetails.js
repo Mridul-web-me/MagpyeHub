@@ -7,7 +7,7 @@ import SingleDetails from '../SingleDetails/SingleDetails'
 const MyDetails = () => {
     const [address, setAddress] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/addressBook')
+        fetch('https://immense-spire-59977.herokuapp.com/addressBook')
             .then(res => res.json())
             .then(data => setAddress(data))
     }, [])

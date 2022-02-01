@@ -20,7 +20,7 @@ const Nav = () => {
     const [searchText, setSearchText] = useState('')
     const [products, setProducts] = useState([])
     useEffect(() => {
-        const url = `http://localhost:5000/products?search=${searchText}`
+        const url = `https://immense-spire-59977.herokuapp.com/products?search=${searchText}`
         fetch(url)
             .then(res => res.json())
             .then(data => setProducts(data.products))
@@ -49,10 +49,10 @@ const Nav = () => {
                                 marginLeft: '10px',
                                 fontSize: "15px"
                             }}><i className="fas fa-phone"></i> 0800 1 223 023 | MON-SAT, 9AM - 5PM</p>
-                            <form className="d-flex searchBox" >
-                                <input className="form-control me-2" onChange={handleSearchField} placeholder="Search for Product & Brand..." aria-label="Search" />
-                                {/* <button type="submit"> <i className="fas fa-search" /></button> */}
-                                <input type="submit" />
+                            <form className="d-flex searchBox" onChange={handleSearchField}>
+                                <input className="form-control me-2" placeholder="Search for Product & Brand..." aria-label="Search" />
+                                <button type="submit"> <i className="fas fa-search" /></button>
+                                {/* <input type="submit" /> */}
                             </form>
                             {/* <div>
                                 {

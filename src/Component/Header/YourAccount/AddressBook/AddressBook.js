@@ -11,7 +11,7 @@ const AddressBook = (props) => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        axios.post('http://localhost:5000/addressBook', data)
+        axios.post('https://immense-spire-59977.herokuapp.com//addressBook', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Address Added Successfully')

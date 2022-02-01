@@ -20,7 +20,7 @@ const Pillows = () => {
     const category = 'bedding'
     useEffect(() => {
         // fetch('./ProductData.JSON')
-        fetch(`http://localhost:5000/products?page=${page}&&size=${size}&&category=${category}`)
+        fetch(`https://immense-spire-59977.herokuapp.com/products?category=${category}&&page=${page}&&size=${size}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products)
@@ -31,23 +31,23 @@ const Pillows = () => {
             });
     }, [page]);
 
-    useEffect(() => {
-        if (products.length) {
-            const savedCart = getStoredCart();
-            const storedCart = [];
-            for (const _id in savedCart) {
-                const AddedProduct = products.find(product => product._id === _id);
+    // useEffect(() => {
+    //     if (products.length) {
+    //         const savedCart = getStoredCart();
+    //         const storedCart = [];
+    //         for (const _id in savedCart) {
+    //             const AddedProduct = products.find(product => product._id === _id);
 
-                if (AddedProduct) {
-                    const quantity = savedCart[_id];
-                    AddedProduct.quantity = quantity;
-                }
-                storedCart.push(AddedProduct);
+    //             if (AddedProduct) {
+    //                 const quantity = savedCart[_id];
+    //                 AddedProduct.quantity = quantity;
+    //             }
+    //             storedCart.push(AddedProduct);
 
-            }
-            setCart(storedCart);
-        }
-    }, [products])
+    //         }
+    //         setCart(storedCart);
+    //     }
+    // }, [products])
     // const handleAddToCart = (product) => {
     //     const newCart = [...carts, product];
     //     setCart(newCart);

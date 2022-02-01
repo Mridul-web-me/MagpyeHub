@@ -10,7 +10,7 @@ const useProductFilter = () => {
     // const size = 5;
     useEffect(() => {
         fetch('./ProductData.JSON')
-        fetch(`http://localhost:5000/products`)
+        fetch(`https://immense-spire-59977.herokuapp.com/products`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products)

@@ -26,7 +26,7 @@ const AddProduct = () => {
         formData.append('ProductCode', ProductCode);
         formData.append('Category', Category);
 
-        fetch('http://localhost:5000/products', {
+        fetch('https://immense-spire-59977.herokuapp.com/products', {
             method: 'POST',
             body: formData
         })

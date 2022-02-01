@@ -18,7 +18,7 @@ const Cart = () => {
                 {shipping ? <div className='py-5 bg-light'>
                     <table className='mx-auto'>
                         <tr className='border-1'>
-                            <th className='border-1 p-2 '>No</th>
+                            <th className='border-1 p-2 '>Quantity</th>
                             <th className='border-1 py-2 px-4'>Product Image</th>
                             <th className='border-1 py-2 px-4'>Product Name</th>
                             <th className='border-1 py-2 px-5'>Price</th>
@@ -32,7 +32,7 @@ const Cart = () => {
                                 return (
                                     <>
                                         <tr className='border-1'>
-                                            <td className='border-1 p-2' >{products.length}</td>
+                                            <td className='border-1 p-2' >{quantity}</td>
                                             <td className='border-1 p-2' >
                                                 <img className='' height={50} width={50} src={img} alt="" />
                                             </td>
