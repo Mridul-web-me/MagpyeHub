@@ -8,16 +8,31 @@ const addToDb = _id => {
     }
     updateDb(stored_cart);
 }
+
+const getDb = () => localStorage.getItem('shopping_cart');
+
+const removeFromDb = _id => {
+    const exist = getDb()
+    if (!exist) {
+
+    }
+    else {
+        const shopping_cart = JSON.parse(exist)
+        delete shopping_cart[_id]
+        updateDb(shopping_cart);
+    }
+}
 const updateDb = cart => {
     localStorage.setItem('shopping_cart', JSON.stringify(cart));
 }
 
 const getStoredCart = () => {
-    const exist = localStorage.getItem('shopping_cart');
+    const exist = getDb();
     return exist ? JSON.parse(exist) : {};
 }
 
 export {
     addToDb,
-    getStoredCart
+    getStoredCart,
+    removeFromDb
 }

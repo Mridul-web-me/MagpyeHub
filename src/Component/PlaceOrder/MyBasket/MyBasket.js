@@ -20,7 +20,7 @@ const MyBasket = () => {
                         <Basket
                             key={product.id}
                             cart={cart}
-
+                        // handleRemove={handleRemove}
                         ></Basket>
                     )
                 }

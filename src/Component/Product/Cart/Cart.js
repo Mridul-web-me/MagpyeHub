@@ -8,7 +8,8 @@ import Header from '../../Header/Header';
 
 const Cart = () => {
 
-    const { totalQuantity, total, shipping, carts, products } = useProduct({});
+    const { totalQuantity, total, shipping, carts, handleRemove, } = useProduct({});
+
     return (
         <>
             <Header></Header>
@@ -27,18 +28,20 @@ const Cart = () => {
                         {
                             carts.map((cart) => {
 
-                                const { img, title, price, quantity } = cart;
+                                const { _id, img, title, price, quantity } = cart;
 
                                 return (
                                     <>
                                         <tr className='border-1'>
-                                            <td className='border-1 p-2' >{quantity}</td>
+                                            {/* <td className='border-1 p-2' >{quantity}</td> */}
+                                            <input type="number" name="" id="" value={quantity} />
                                             <td className='border-1 p-2' >
                                                 <img className='' height={50} width={50} src={img} alt="" />
                                             </td>
                                             <td className='border-1 p-2' >{title}</td>
                                             <td className='border-1 p-2'>${price}</td>
                                             <td className='border-1 p-2'>${shipping}</td>
+                                            <Button onClick={() => handleRemove(_id)}>Remove</Button>
                                         </tr>
                                     </>)
                             })

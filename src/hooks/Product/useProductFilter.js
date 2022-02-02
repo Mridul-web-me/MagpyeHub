@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { addToDb, getStoredCart } from '../../fakeDB';
+import { addToDb, getStoredCart, removeFromDb } from '../../fakeDB';
 
 const useProductFilter = () => {
 
@@ -47,6 +47,13 @@ const useProductFilter = () => {
         addToDb(product._id);
     }
 
+    const handleRemove = _id => {
+        const removeCart = carts.filter(product => product._id !== _id)
+        setCart(removeCart)
+        console.log(_id);
+        removeFromDb(_id);
+    }
+
 
     // Total Price
     let totalQuantity = 0;
@@ -73,7 +80,8 @@ const useProductFilter = () => {
         total, tax, shipping,
         pageCount,
         page,
-        setPage
+        setPage,
+        handleRemove
     }
 };
 
