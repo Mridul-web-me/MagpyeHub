@@ -6,7 +6,7 @@ import Header from '../../Header';
 const OrderHistory = () => {
     const [orders, setOrders] = useState([])
     const { user } = useAuth()
-    fetch(`http://localhost:5000/orders?email=${user.email}`)
+    fetch(`https://immense-spire-59977.herokuapp.com/orders?email=${user.email}`)
         .then(res => res.json())
         .then(data => setOrders(data))
     return (

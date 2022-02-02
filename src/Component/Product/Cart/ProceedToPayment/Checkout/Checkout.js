@@ -17,7 +17,7 @@ const Checkout = () => {
         // console.log(data);
         const savedCart = getStoredCart()
         data.order = savedCart
-        fetch('http://localhost:5000/orders', {
+        fetch('https://immense-spire-59977.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

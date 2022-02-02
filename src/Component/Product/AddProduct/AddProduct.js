@@ -56,7 +56,7 @@ const AddProduct = () => {
                 <input
                     {...register("img")}
                     placeholder="Image"
-                    onChange={e => setImage(e.target.files)}
+                    onSubmit={e => setImage(e.target.files)}
                     type="file"
                     name='file'
                     accept='image/*' />
