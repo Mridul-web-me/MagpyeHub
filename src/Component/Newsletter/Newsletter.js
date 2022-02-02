@@ -32,7 +32,7 @@ const Newsletter = () => {
                                 <i className="fas fa-check" type="submit"></i>
                             </form> */}
                             <form className='searchBox' onSubmit={handleSubmit((onSubmit))}>
-                                <input className="form-control me-2"  {...register("email")} placeholder="Email Address..." />
+                                <input className="form-control me-2" required  {...register("email")} placeholder="Email Address..." />
                                 <button style={{ display: 'contents' }}> <i className="fas fa-check" ></i></button>
 
                             </form>

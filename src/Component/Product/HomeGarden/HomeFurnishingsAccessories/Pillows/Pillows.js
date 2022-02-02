@@ -118,7 +118,7 @@ const Pillows = () => {
                                 products.map(product =>
 
                                     <AllProduct
-                                        key={product}
+                                        key={product._id}
                                         product={product}
                                         handleAddToCart={handleAddToCart}
                                     // pageCount={pageCount}

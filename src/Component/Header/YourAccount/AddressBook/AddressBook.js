@@ -55,7 +55,7 @@ const AddressBook = (props) => {
                                     Town/City:
                                 </Form.Label>
                                 <Col sm={8}>
-                                    <Form.Control {...register("town/city")} type="text" placeholder="Town/City" required />
+                                    <Form.Control {...register("townCity")} type="text" placeholder="Town/City" required />
                                 </Col>
                             </Form.Group>
                             <Form.Group as={Row} className="mb-3" controlId="formHorizontalCountry">

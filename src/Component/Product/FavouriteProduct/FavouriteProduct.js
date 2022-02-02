@@ -50,7 +50,7 @@ const FavouriteProduct = () => {
                         products.map(product =>
 
                             <AllFavProduct
-                                key={product.id}
+                                key={product._id}
                                 product={product}
                                 handleAddToCart={handleAddToCart}
                             ></AllFavProduct>

@@ -27,7 +27,7 @@ const YourAccount = () => {
                     textAlign: 'start'
                 }}>
                     <Col xs={6}>
-                        <h4><Link to={'/'}>ORDER HISTORY</Link></h4>
+                        <h4><Link to={'/orderHistory'}>ORDER HISTORY</Link></h4>
                         <p>Track your recent orders and view details of older orders</p>
                     </Col>
                     <Col xs={6}>

@@ -31,8 +31,12 @@ const getStoredCart = () => {
     return exist ? JSON.parse(exist) : {};
 }
 
+const clearTheCart = () => {
+    localStorage.removeItem('shopping_cart');
+}
 export {
     addToDb,
     getStoredCart,
-    removeFromDb
+    removeFromDb,
+    clearTheCart
 }

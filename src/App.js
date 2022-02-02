@@ -69,6 +69,8 @@ import MyDetails from './Component/Header/YourAccount/MyDetails/MyDetails';
 import MyFiles from './Component/Header/YourAccount/MyFiles/MyFiles';
 import ProceedToPayment from './Component/Product/Cart/ProceedToPayment/ProceedToPayment';
 import SearchResult from './Component/Header/SearchBox/SearchResult/SearchResult';
+import Checkout from './Component/Product/Cart/ProceedToPayment/Checkout/Checkout';
+import OrderHistory from './Component/Header/YourAccount/OrderHistory/OrderHistory';
 
 
 
@@ -150,6 +152,8 @@ function App() {
             <Route path="/myFiles" element={<MyFiles />} />
             <Route path="/proceedToPayment" element={<ProceedToPayment />} />
             <Route path="/search" element={<SearchResult />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/orderHistory" element={<OrderHistory />} />
           </Routes>
         </Router>
       </AuthProvider>
