@@ -24,9 +24,10 @@ const HeaderTop = () => {
                                 marginLeft: '10px',
                                 fontSize: "15px"
                             }}><i className="fas fa-phone"></i> 0800 1 223 023 | MON-SAT, 9AM - 5PM</p>
-                            <Routes>
+                            {/* <Routes>
                                 <Route render={({ history }) => <SearchBox history={history} />} />
-                            </Routes>
+                            </Routes> */}
+                            <SearchBox></SearchBox>
                             {/* <div>
                                 {
                                     products.map(product =>

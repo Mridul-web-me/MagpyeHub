@@ -21,6 +21,7 @@
     "react-router-title": "^6.0.1",
     "react-scripts": "5.0.0",
     "react-slick": "^0.28.1",
+    "react-slideshow-image": "^3.7.0",
     "swiper": "^7.4.1",
     "web-vitals": "^2.1.2"
   },

@@ -17,20 +17,22 @@ const useFirebase = () => {
     const registerUser = (email, password, name, history) => {
         // console.log(email, password);
         setIsLoading(true);
-        createUserWithEmailAndPassword(auth, email, password)
+        createUserWithEmailAndPassword(auth, email, password, name,)
             .then((result) => {
                 setAuthError('')
-                const newUser = { email, display: name };
-                setUser(newUser)
+                const newUser = { email, displayName: name, };
+                console.log(newUser);
                 // Send name to firebase after creation
+
                 updateProfile(auth.currentUser, {
-                    displayName: name
+                    displayName: name,
                 }).then(() => {
 
                 }).catch((error) => {
 
                 });
                 history('/')
+                setUser(newUser)
             })
             .catch((error) => {
                 setAuthError(error.message)
@@ -38,6 +40,7 @@ const useFirebase = () => {
             .finally(() => {
                 setIsLoading(false);
             });
+
     }
 
     const loginUser = (email, password, history) => {

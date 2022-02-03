@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Card, Col } from 'react-bootstrap';
+import { Button, Card, Col, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const AllProduct = (props) => {
@@ -29,13 +29,14 @@ const AllProduct = (props) => {
                         <Card.Text>
                             $ {price}
                         </Card.Text>
-                        <Button  onClick={() => props.handleAddToCart(props.product)} type='button' >Buy</Button>
+                        <Button onClick={() => props.handleAddToCart(props.product)} type='button' >Buy</Button>
                         <Link to={`/placeOrder/${_id}`}>
                             <Button variant="outline-primary">View</Button>
                         </Link>
                     </Card.Body>
                 </Card>
             </Col>
+
         </>
     )
 }

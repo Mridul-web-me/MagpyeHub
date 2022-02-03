@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import useAuth from '../../../../hooks/useAuth';
 import Footer from '../../../Footer/Footer';
 import Header from '../../Header';
 import SingleDetails from '../SingleDetails/SingleDetails'
@@ -6,8 +7,10 @@ import SingleDetails from '../SingleDetails/SingleDetails'
 
 const MyDetails = () => {
     const [address, setAddress] = useState([])
+
+    const { user } = useAuth()
     useEffect(() => {
-        fetch('https://immense-spire-59977.herokuapp.com/addressBook')
+        fetch(`https://immense-spire-59977.herokuapp.com/addressBook?email=${user.email}`)
             .then(res => res.json())
             .then(data => setAddress(data))
     }, [])

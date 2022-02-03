@@ -28,7 +28,7 @@ const FavouriteProduct = () => {
                 const count = data.count;
                 const pageNumber = Math.ceil(count / size);
                 setPageCount(pageNumber)
-                console.log(pageCount);
+                // console.log(pageCount);
             });
     }, [page]);
 
@@ -56,6 +56,8 @@ const FavouriteProduct = () => {
                             ></AllFavProduct>
                         )
                     }
+
+
                 </Slider>}
             </div>
         </Container>

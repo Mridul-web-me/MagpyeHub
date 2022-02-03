@@ -1,11 +1,13 @@
 import { Axios } from 'axios';
 import React, { useEffect, useState } from 'react'
-import { Col, Container, Row } from 'react-bootstrap';
+import { Button, Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
+import useProduct from '../../hooks/Product/useProduct';
 // import { useParams } from 'react-router-dom';
 import Header from '../Header/Header'
 
 const PlaceOrder = () => {
+    const { handleAddToCart } = useProduct()
     const { productId } = useParams();
     const [product, setProduct] = useState({});
     useEffect(() => {
@@ -33,7 +35,10 @@ const PlaceOrder = () => {
                         <h4>{product.title}</h4>
                         <h5>Code: {product.productCode}</h5>
                         <h5>${product.price}</h5>
+                        <Button variant="outline-primary" type='button' onClick={() => handleAddToCart(product)}>Add To Basket</Button>
                     </Col>
+
+
                 </Row>
             </Container>
         </>

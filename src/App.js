@@ -151,7 +151,7 @@ function App() {
             <Route path="/myDetails" element={<MyDetails />} />
             <Route path="/myFiles" element={<MyFiles />} />
             <Route path="/proceedToPayment" element={<ProceedToPayment />} />
-            <Route path="/search" element={<SearchResult />} />
+            <Route path="/search/:searchText" element={<SearchResult />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/orderHistory" element={<OrderHistory />} />
           </Routes>

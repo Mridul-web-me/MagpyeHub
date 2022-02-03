@@ -15,22 +15,23 @@ const SearchBox = ({ history }) => {
     // let history = useLocation();
     const handleSearchField = e => {
         e.preventDefault()
-        const searchTextValue = e.target.value;
-        const matchedProducts = products.filter(product => product.title.toLowerCase().includes(searchTextValue.toLowerCase()))
+        const searchText = e.target.value;
+        const matchedProducts = products.filter(product => product.title.toLowerCase().includes(searchText.toLowerCase()))
         // setSearchText(searchTextValue)
         console.log(matchedProducts);
-        if (searchProducts.trim()) {
-            history.push(`/search/${searchProducts}`)
-        } else {
-            history.push('/')
-        }
+        // if (searchProducts.trim()) {
+        //     history.push(`/search/${searchProducts}`)
+        // } else {
+        //     history.push('/')
+        // }
+        return (matchedProducts)
     }
     return (
         <>
             <div>
                 <form className="d-flex searchBox" onSubmit={handleSearchField}>
                     <input className="form-control me-2" placeholder="Search for Product & Brand..." aria-label="Search" onChange={(e) => setSearchProducts(e.target.value)} />
-                    <Link to="/search">
+                    <Link to={`/search?${searchProducts}`}>
                         <button type="submit"> <i className="fas fa-search" /></button>
                     </Link>
                 </form>

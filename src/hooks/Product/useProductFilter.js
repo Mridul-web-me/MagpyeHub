@@ -17,7 +17,7 @@ const useProductFilter = () => {
                 // const count = data.count;
                 // const pageNumber = Math.ceil(count / size);
                 // setPageCount(pageNumber)
-                console.log(pageCount);
+                // console.log(pageCount);
             });
     }, []);
 
@@ -27,12 +27,11 @@ const useProductFilter = () => {
             const savedCart = getStoredCart();
             const storedCart = [];
             for (const _id in savedCart) {
-                console.log(_id);
                 const AddedProduct = products.find(product => product._id === _id);
                 if (AddedProduct) {
                     const quantity = savedCart[_id];
                     AddedProduct.quantity = quantity;
-                    console.log(quantity);
+                    // console.log(quantity);
                     storedCart.push(AddedProduct);
                 }
             }
@@ -41,10 +40,11 @@ const useProductFilter = () => {
     }, [products])
 
     // Cart Handler
-    const handleAddToCart = (product) => {
-        const newCart = [...carts, product];
+    const handleAddToCart = (products) => {
+        const newCart = [...carts, products];
         setCart(newCart);
-        addToDb(product._id);
+        addToDb(products._id);
+        console.log('clicked', products._id);
     }
 
     const handleRemove = _id => {
