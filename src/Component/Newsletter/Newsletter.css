@@ -69,3 +69,10 @@ i.fab.fa-pinterest-p:hover{
 i.fab.fa-youtube:hover{
     background: #ff0000;
 }
+
+@media only screen and (max-width:766px){
+    .newsletter-content{
+        margin-top: 20px;
+    }
+}
+    

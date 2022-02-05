@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap';
 import Slider from 'react-slick';
 import useProduct from '../../../hooks/Product/useProduct';
 import AllFavProduct from './AllFavProduct/AllFavProduct';
-
+import './FavouriteProduct.css'
 
 const FavouriteProduct = () => {
 
@@ -38,14 +38,44 @@ const FavouriteProduct = () => {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 2000,
-        pauseOnHover: true
+        pauseOnHover: true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    initialSlide: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     };
 
     return (
-        <Container fluid>
-            <div>
+        <div style={{
+            overflow: 'hidden'
+        }}>
+            <Container fluid>
+
                 <h2> Favorite Product </h2>
-                {<Slider {...settings}>
+
+                {<Slider className='favouriteProductCard' {...settings}>
                     {
                         products.map(product =>
 
@@ -59,8 +89,8 @@ const FavouriteProduct = () => {
 
 
                 </Slider>}
-            </div>
-        </Container>
+            </Container>
+        </div>
     )
 }
 

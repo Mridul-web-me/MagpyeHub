@@ -18,7 +18,8 @@ const About = () => {
                         </div>
                     </div>
                     <div className="col-md-6">
-                        <ReactPlayer controls url="https://youtu.be/JreV3v1vRd8"></ReactPlayer>
+                        <ReactPlayer width="100%"
+                            height="100%" controls url="https://youtu.be/JreV3v1vRd8"></ReactPlayer>
                     </div>
                 </div>
             </div>

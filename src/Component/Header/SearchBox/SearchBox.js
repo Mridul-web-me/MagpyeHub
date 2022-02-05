@@ -7,7 +7,7 @@ const SearchBox = ({ history }) => {
     const [products, setProducts] = useState([])
     const [searchProducts, setSearchProducts] = useState('')
     useEffect(() => {
-        const url = `https://immense-spire-59977.herokuapp.com/products`
+        const url = `http://localhost:5000/products?search=${searchProducts}`
         fetch(url)
             .then(res => res.json())
             .then(data => setProducts(data.products))
@@ -31,8 +31,15 @@ const SearchBox = ({ history }) => {
             <div>
                 <form className="d-flex searchBox" onSubmit={handleSearchField}>
                     <input className="form-control me-2" placeholder="Search for Product & Brand..." aria-label="Search" onChange={(e) => setSearchProducts(e.target.value)} />
-                    <Link to={`/search?${searchProducts}`}>
-                        <button type="submit"> <i className="fas fa-search" /></button>
+                    <Link to={`/${searchProducts}`}
+                    >
+                        <button type="submit" style={{
+                            border: 'none',
+                            position: 'relative',
+                            right: '135%',
+                            height: '38px',
+                            margin: '2px 0'
+                        }}> <i className="fas fa-search" /></button>
                     </Link>
                 </form>
             </div>

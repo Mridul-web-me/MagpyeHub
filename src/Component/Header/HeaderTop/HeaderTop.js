@@ -72,7 +72,9 @@ const HeaderTop = () => {
                                     <Link to="/cart">
 
                                         <i className="fas fa-shopping-bag"></i>
-                                        <Badge bg="secondary" className='fs-8' >{totalQuantity}</Badge>
+                                        <Badge bg="secondary" className='fs-8' style={{
+                                            borderRadius: '50%'
+                                        }}>{totalQuantity}</Badge>
                                         <p>My Basket</p>
 
                                     </Link>

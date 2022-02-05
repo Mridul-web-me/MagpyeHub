@@ -5,6 +5,7 @@ import './Banner.css'
 import cover1 from '../../../img/slider/Cover1.jpeg'
 import cover2 from '../../../img/slider/Cover2.jpeg'
 import cover3 from '../../../img/slider/Cover3.jpeg'
+import { Container } from 'react-bootstrap';
 
 const Banner = () => {
     const settings = {
@@ -19,8 +20,7 @@ const Banner = () => {
     };
     return (
         <div className='banner'>
-            <div>
-                {/* <h2> Single Item</h2> */}
+            <Container fluid>
                 <Slider {...settings} style={{
                     bottom: '20px',
                 }} >
@@ -40,7 +40,7 @@ const Banner = () => {
                         </Link>
                     </div>
                 </Slider>
-            </div>
+            </Container>
         </div>
     )
 }

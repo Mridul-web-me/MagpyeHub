@@ -1,32 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import { Badge, Col, Container, Row } from 'react-bootstrap';
+import React from 'react'
 import { Link } from 'react-router-dom'
-import useProduct from '../../../hooks/Product/useProduct';
-import useAuth from '../../../hooks/useAuth';
-import AllProduct from '../../Product/AllProduct/AllProduct';
-import SearchBox from '../SearchBox/SearchBox'
+
 
 import './Nav.css'
 const Nav = () => {
 
-    // const handleSearchField = e => {
-    //     const searchText = e.target.value;
-    //     console.log(searchText);
-    // }
-
-    // const [products, setProducts] = useState([])
-    // const [searchProducts, setSearchProducts] = useState([])
-    // useEffect(() => {
-    //     const url = `https://immense-spire-59977.herokuapp.com/products`
-    //     fetch(url)
-    //         .then(res => res.json())
-    //         .then(data => setProducts(data.products))
-    // }, [])
-
-
-    // const handleOnSubmit = e => {
-    //     e.preventDefault()
-    // }
     return (
         <>
             <div>
@@ -68,12 +46,9 @@ const Nav = () => {
                             <li className='nav-item'>
                                 <label className="desktop-item1">Home & Garden <i className="fas fa-angle-down"></i></label>
                                 <input type="checkbox" id="showMega1" />
-                                <label htmlFor="showMega1" className="mobile-item1">Home & Garden <i className="fas fa-angle-down"></i> </label>
+                                <label htmlFor="showMega1" className="mobile-item1">Home & Garden</label>
                                 <div className="mega-box1">
                                     <div className="content">
-                                        {/* <div className="row">
-                                        <img src="img.jpg" alt="" />
-                                    </div> */}
                                         <div className="row">
                                             <header>Home Furnishings & Accessories</header>
                                             <hr />
@@ -99,27 +74,15 @@ const Nav = () => {
                                                 <li><Link to="/foodProcessorsMixersBlendersJuicers">Food Processors, Mixers, Blenders & Juicers</Link></li>
                                             </ul>
                                         </div>
-                                        {/* <div className="row">
-                                        <header>Security services</header>
-                                        <ul className="mega-links">
-                                            <li><Link to="/"></Link></li>
-                                            <li><Link to="/"></Link></li>
-                                            <li><Link to="/"></Link></li>
-                                            <li><Link to="/"></Link></li>
-                                        </ul>
-                                    </div> */}
                                     </div>
                                 </div>
                             </li>
                             <li className='nav-item'>
                                 <label className="desktop-item2">Women <i className="fas fa-angle-down"></i></label>
                                 <input type="checkbox" id="showMega2" />
-                                <label htmlFor="showMega2" className="mobile-item2">Women <i className="fas fa-angle-down"></i></label>
+                                <label htmlFor="showMega2" className="mobile-item2">Women</label>
                                 <div className="mega-box2">
                                     <div className="content">
-                                        {/* <div className="row">
-                                        <img src="img.jpg" alt="" />
-                                    </div> */}
                                         <div className="row">
                                             <header>Clothing</header>
                                             <hr />
@@ -130,12 +93,6 @@ const Nav = () => {
                                                 <li><Link to="/shorts">Shorts</Link></li>
                                                 <li><Link to="/skirts">Skirts</Link></li>
                                                 <li><Link to="/sportsTrainingGym ">Sports & Training/Gym </Link></li>
-                                                {/* <li><Link to="/Swimwear & Beachwear">Swimwear & Beachwear</Link></li>
-                                            <li><Link to="/Trousers & Leggings">Trousers & Leggings</Link></li>
-                                            <li><Link to="/Trousers & Leggings">Trousers & Leggings</Link></li>
-                                            <li><Link to="/Plus Size">Plus Size</Link></li>
-                                            <li><Link to="/Maternity Clothes">Maternity Clothes</Link></li>
-                                            <li><Link to="/Partywear">Partywear</Link></li> */}
                                             </ul>
                                         </div>
                                         <div className="row">
@@ -148,27 +105,15 @@ const Nav = () => {
                                                 <li><Link to="/tights">Tights</Link></li>
                                             </ul>
                                         </div>
-                                        {/* <div className="row">
-                                        <header>Security services</header>
-                                        <ul className="mega-links">
-                                            <li><Link to="/"></Link></li>
-                                            <li><Link to="/"></Link></li>
-                                            <li><Link to="/"></Link></li>
-                                            <li><Link to="/"></Link></li>
-                                        </ul>
-                                    </div> */}
                                     </div>
                                 </div>
                             </li>
                             <li className='nav-item'>
                                 <label className="desktop-item3">Men <i className="fas fa-angle-down"></i></label>
                                 <input type="checkbox" id="showMega3" />
-                                <label htmlFor="showMega3" className="mobile-item3">Men <i className="fas fa-angle-down"></i></label>
+                                <label htmlFor="showMega3" className="mobile-item3">Men</label>
                                 <div className="mega-box3">
                                     <div className="content">
-                                        {/* <div className="row">
-                                        <img src="img.jpg" alt="" />
-                                    </div> */}
                                         <div className="row">
                                             <header>Clothing</header>
                                             <hr />
@@ -197,27 +142,15 @@ const Nav = () => {
                                                 <li><Link to="/underwear">Underwear</Link></li>
                                             </ul>
                                         </div>
-                                        {/* <div className="row">
-                                        <header>Security services</header>
-                                        <ul className="mega-links">
-                                            <li><Link to="/"></Link></li>
-                                            <li><Link to="/"></Link></li>
-                                            <li><Link to="/"></Link></li>
-                                            <li><Link to="/"></Link></li>
-                                        </ul>
-                                    </div> */}
                                     </div>
                                 </div>
                             </li>
                             <li className='nav-item'>
                                 <label className="desktop-item4">Beauty <i className="fas fa-angle-down"></i></label>
                                 <input type="checkbox" id="showMega4" />
-                                <label htmlFor="showMega4" className="mobile-item4">Beauty <i className="fas fa-angle-down"></i></label>
+                                <label htmlFor="showMega4" className="mobile-item4">Beauty</label>
                                 <div className="mega-box4">
                                     <div className="content">
-                                        {/* <div className="row">
-                                        <img src="img.jpg" alt="" />
-                                    </div> */}
                                         <div className="row">
                                             <header>Makeup</header>
                                             <hr />
@@ -282,12 +215,9 @@ const Nav = () => {
                             <li className='nav-item'>
                                 <label className="desktop-item5">Baby & Child <i className="fas fa-angle-down"></i></label>
                                 <input type="checkbox" id="showMega5" />
-                                <label htmlFor="showMega5" className="mobile-item5">Baby & Child <i className="fas fa-angle-down"></i></label>
+                                <label htmlFor="showMega5" className="mobile-item5">Baby & Child</label>
                                 <div className="mega-box5">
                                     <div className="content">
-                                        {/* <div className="row">
-                                        <img src="img.jpg" alt="" />
-                                    </div> */}
                                         <div className="row">
                                             <header>Kids Clothing & Shoes</header>
                                             <hr />
@@ -344,34 +274,6 @@ const Nav = () => {
                     </div>
                 </nav>
             </div>
-            {
-                <Container fluid>
-                    {/* {<Row xs={1} md={3} className="g-4">
-                        {
-                            searchProducts.map(product =>
-
-                                <AllProduct
-                                    key={product._id}
-                                    product={product}
-                                // handleAddToCart={handleAddToCart}
-                                // pageCount={pageCount}
-                                ></AllProduct>
-                            )
-                        }
-                    </Row>} */}
-                    {/* <div className="pagination">
-                        {
-                            [...Array(pageCount).keys()]
-                                .map(number => <Button
-                                    className={number === page ? 'selected' : ''}
-                                    variant="light"
-                                    key={number}
-                                    onClick={() => setPage(number)}
-                                >{number + 1}</Button>)
-                        }
-                    </div> */}
-                </Container>
-            }
         </>
 
     )

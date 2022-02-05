@@ -15,7 +15,8 @@ const Pillows = () => {
     const [products, setProducts] = useState([])
     const [pageCount, setPageCount] = useState(0);
     const [page, setPage] = useState(0);
-    const size = 3;
+    const [price, setPrice] = useState(0);
+    const size = 9;
 
     const category = 'bedding'
     useEffect(() => {
@@ -58,6 +59,11 @@ const Pillows = () => {
     //     return (curElem.category === 'Camera')
     // });
 
+    // Triggered when the value gets updated while scrolling the slider:
+    const handleInput = (e) => {
+        setPrice(e.target.value);
+    }
+
     return (
         <div>
             <Header></Header>
@@ -66,12 +72,13 @@ const Pillows = () => {
                 margin: '40px 0'
             }}>
                 <Row>
-                    <Col xs={2}>
+                    <Col xs={12} md={2}>
                         <Accordion defaultActiveKey="0">
                             <Accordion.Item eventKey="0">
-                                <Accordion.Header>Item 1</Accordion.Header>
+                                <Accordion.Header>Price Range</Accordion.Header>
                                 <Accordion.Body>
-                                    Lorem ipsum dolor sit amet
+                                    <input type="range" onInput={handleInput} />
+                                    <h1>Price: {price}</h1>
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="1">
@@ -112,18 +119,21 @@ const Pillows = () => {
                             </Accordion.Item>
                         </Accordion>
                     </Col>
-                    <Col xs={10}>
+                    <Col xs={12} md={10}>
                         {<Row xs={1} md={3} className="g-4">
                             {
-                                products.map(product =>
+                                products.filter(range => { return range.price > parseInt(price, 10) })
+                                    .map(product =>
+                                        <>
+                                            <AllProduct
+                                                key={product._id}
+                                                product={product}
+                                                handleAddToCart={handleAddToCart}
+                                            // pageCount={pageCount}
+                                            ></AllProduct>
+                                        </>
 
-                                    <AllProduct
-                                        key={product._id}
-                                        product={product}
-                                        handleAddToCart={handleAddToCart}
-                                    // pageCount={pageCount}
-                                    ></AllProduct>
-                                )
+                                    )
                             }
 
                         </Row>

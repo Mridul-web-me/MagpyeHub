@@ -1,5 +1,8 @@
 
-
+.banner{
+    width: 100%;
+    overflow: hidden;
+}
 .banner img.d-block.w-100 {
     z-index: 1;
 }
