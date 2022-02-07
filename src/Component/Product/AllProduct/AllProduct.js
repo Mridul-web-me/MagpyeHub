@@ -5,22 +5,13 @@ import './AllProduct.css'
 const AllProduct = (props) => {
 
     const { _id, title, img, price } = props.product;
-    // const [cart, setCart] = useState([]);
-    // filterProduct.map('bedding')
-
-    // const handleAddToCart = (product) => {
-    //     const newCart = [...cart, product]
-    //     setCart(newCart);
-    //     console.log(newCart.length);
-    // }
-
 
     return (
         <>
 
             <Col className="productCard">
                 <Card>
-                    <Card.Img className='img-fluid' variant="top" src={img} />
+                    <Card.Img className='img-fluid' variant="top" src={`data:image/jpg;base64,${img}`} />
                     <Card.Body>
                         <Card.Title>{title}</Card.Title>
                         <Card.Text>

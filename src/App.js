@@ -71,6 +71,7 @@ import ProceedToPayment from './Component/Product/Cart/ProceedToPayment/ProceedT
 import SearchResult from './Component/Header/SearchBox/SearchResult/SearchResult';
 import Checkout from './Component/Product/Cart/ProceedToPayment/Checkout/Checkout';
 import OrderHistory from './Component/Header/YourAccount/OrderHistory/OrderHistory';
+import UpdateDetails from './Component/Header/YourAccount/MyDetails/UpdateDetails/UpdateDetails';
 
 
 
@@ -154,6 +155,7 @@ function App() {
             <Route path="/:searchText" element={<SearchResult />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/orderHistory" element={<OrderHistory />} />
+            <Route path="/updateDetails" element={<UpdateDetails />} />
           </Routes>
         </Router>
       </AuthProvider>

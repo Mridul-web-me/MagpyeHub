@@ -5,10 +5,10 @@ import Header from '../../Header/Header';
 
 const AddProduct = () => {
     const { register, handleSubmit, reset } = useForm();
-    const [name, setName] = useState('')
-    const [email, setEmail] = useState('')
-    const [ProductCode, setProductCode] = useState('')
-    const [Category, setCategory] = useState('')
+    const [title, setTitle] = useState('')
+    const [price, setPrice] = useState('')
+    const [productCode, setProductCode] = useState('')
+    const [category, setCategory] = useState('')
     const [image, setImage] = useState(null)
 
     const handleOnSubmit = e => {
@@ -20,18 +20,22 @@ const AddProduct = () => {
             reset();
         }
         const formData = new FormData();
-        formData.append('name', name);
-        formData.append('email', email);
+        formData.append('title', title);
+        formData.append('price', price);
         formData.append('image', image);
-        formData.append('ProductCode', ProductCode);
-        formData.append('Category', Category);
+        formData.append('productCode', productCode);
+        formData.append('category', category);
 
-        fetch('https://immense-spire-59977.herokuapp.com/products', {
+        fetch('http://localhost:5000/products', {
             method: 'POST',
             body: formData
         })
             .then(res => res.json())
-            .then(data => console.log('Success', data))
+            .then(data => {
+                if (data.insertedId) {
+                    alert('Product Added Successfully')
+                }
+            })
             .catch(error => {
                 console.error('Error', error);
             })
@@ -46,19 +50,20 @@ const AddProduct = () => {
                 <input
                     {...register("title")}
                     placeholder="Title"
-                    onChange={e => setName(e.target.value)} />
+                    onChange={e => setTitle(e.target.value)} />
                 <br /> <br />
                 <input
                     {...register("price")}
                     placeholder="Price"
-                    onChange={e => setEmail(e.target.value)} />
+                    onChange={e => setPrice(e.target.value)} />
                 <br /> <br />
                 <input
                     {...register("img")}
                     placeholder="Image"
-                    onSubmit={e => setImage(e.target.files)}
+                    onChange={e => setImage(e.target.files[0, 1, 2, 3])}
                     type="file"
                     name='file'
+                    multiple
                     accept='image/*' />
                 <br /> <br />
                 <input

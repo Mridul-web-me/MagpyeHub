@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Card, Col, Row } from 'react-bootstrap';
-import { Link, useParams } from 'react-router-dom';
+import { Row } from 'react-bootstrap';
+import { useParams } from 'react-router-dom';
 import useProduct from '../../../../hooks/Product/useProduct';
 import Footer from '../../../Footer/Footer';
 import AllProduct from '../../../Product/AllProduct/AllProduct';
@@ -16,11 +16,11 @@ const SearchResult = () => {
             .then(res => res.json())
             .then(data => setProduct(data));
         // console.log(product);
-    }, [])
+    }, [product])
 
     return <div>
         <Header></Header>
-        <Row>
+        <Row xs={1} md={3} className="g-4">
             {
                 product.map(product =>
 

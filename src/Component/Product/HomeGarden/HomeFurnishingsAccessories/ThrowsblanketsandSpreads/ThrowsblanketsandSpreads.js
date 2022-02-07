@@ -13,7 +13,7 @@ const ThrowsblanketsandSpreads = () => {
     const [pageCount, setPageCount] = useState(0);
     const [page, setPage] = useState(0);
     const size = 2;
-    const category = 'Bedding'
+    const category = ''
     useEffect(() => {
         // fetch('./ProductData.JSON')
         fetch(`https://immense-spire-59977.herokuapp.com/products?category=${category}&&page=${page}&&size=${size}`)

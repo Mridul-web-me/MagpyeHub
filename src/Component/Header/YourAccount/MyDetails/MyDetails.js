@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { Button, Col, Form, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import useAuth from '../../../../hooks/useAuth';
 import Footer from '../../../Footer/Footer';
 import Header from '../../Header';
-import SingleDetails from '../SingleDetails/SingleDetails'
+import UpdateSingleDetail from './UpdateSingleDetails/UpdateSingleDetails'
 // import singleDetails from '../singleDetails/singleDetails';
 
 const MyDetails = () => {
@@ -17,17 +19,34 @@ const MyDetails = () => {
     return (<div>
         <Header></Header>
         <div>
-            {
-                address.map(details =>
+            <Row style={{
+                margin: '50px 0'
+            }}>
+                <Col xs={6}>
+                    <Form>
+                        <Form.Group as={Row} className="mb-3" controlId="formPlaintextName">
+                            <Form.Label column sm="4">
+                                Your Name
+                            </Form.Label>
+                            <Col sm="8">
+                                <Form.Control type='text' defaultValue={user.displayName} />
+                            </Col>
+                        </Form.Group>
 
-                    <SingleDetails
-                        key={details._id}
-                        details={details}
-                    // handleAddToCart={handleAddToCart}
-                    // pageCount={pageCount}
-                    ></SingleDetails>
-                )
-            }
+                        <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail">
+                            <Form.Label column sm="4">
+                                Email
+                            </Form.Label>
+                            <Col sm="8">
+                                <Form.Control type="text" defaultValue={user.email} />
+                            </Col>
+                        </Form.Group>
+                    </Form>
+                    <Link to='/updateDetails'>
+                        <Button>Update Details</Button>
+                    </Link>
+                </Col>
+            </Row>
         </div>
         <Footer></Footer>
 
