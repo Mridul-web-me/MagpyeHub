@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
@@ -14,7 +14,6 @@ const Checkout = () => {
     const { user } = useAuth()
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        // console.log(data);
         const savedCart = getStoredCart()
         data.order = savedCart
         fetch('https://immense-spire-59977.herokuapp.com/orders', {
@@ -33,6 +32,23 @@ const Checkout = () => {
                 }
             })
     }
+
+    const [profile, setProfile] = useState([])
+    const [loading, setLoading] = useState(true)
+    useEffect(() => {
+        axios.get(`http://localhost:5000/addressBook?email=${user.email}`, {
+            headers: {
+                'authorization': `Bearer ${localStorage.getItem('idToken')}`
+            }
+        })
+            // .then(res => res.json())
+            .then(data => {
+                setProfile(data.data)
+                setLoading(false)
+            });
+    }, [user.email])
+
+
     return (
 
         <div className='checkout'>
@@ -49,55 +65,54 @@ const Checkout = () => {
                                 textAlign: 'start'
                             }} >
                                 <div className="row">
-                                    <div className="col-50">
-                                        <h3>Billing Address</h3>
-                                        {user.name ? <Form.Group className="mb-3" controlId="formHorizontalName">
-                                            <Form.Label><i class="fa fa-user"></i> Full Name</Form.Label>
-                                            <Form.Control required type="name"
-                                                value={user.name}
-                                                {...register("fullName")} />
-                                        </Form.Group> :
+                                    {profile.map(billingAddress => <div
+                                        key={billingAddress._id}
+                                        billingAddress={billingAddress}
+                                    >
+                                        <div className="col-50">
+                                            <h3>Billing Address</h3>
                                             <Form.Group className="mb-3" controlId="formHorizontalName">
                                                 <Form.Label><i class="fa fa-user"></i> Full Name</Form.Label>
                                                 <Form.Control required type="name"
-                                                    placeholder="Enter Your Name"
+                                                    defaultValue={billingAddress.name}
                                                     {...register("fullName")} />
-                                            </Form.Group>}
-                                        <Form.Group className="mb-3" controlId="formHorizontalEmail">
-                                            <Form.Label><i class="fa fa-envelope"></i> Email</Form.Label>
-                                            <Form.Control required type="name" value={user.email} {...register("email")} />
-                                        </Form.Group>
-                                        <Form.Group className="mb-3" controlId="formHorizontalPhone">
-                                            <Form.Label><i class="fas fa-phone"></i> Phone</Form.Label>
-                                            <Form.Control required type="name" placeholder='0123456789' {...register("phone")} />
-                                        </Form.Group>
-                                        <Form.Group className="mb-3" controlId="formHorizontalAddress">
-                                            <Form.Label><i className="fa fa-address-card-o"></i> Address</Form.Label>
-                                            <Form.Control required type="name" placeholder="542 W. 15th Street" {...register("address")} />
-                                        </Form.Group>
+                                            </Form.Group>
+                                            <Form.Group className="mb-3" controlId="formHorizontalEmail">
+                                                <Form.Label><i class="fa fa-envelope"></i> Email</Form.Label>
+                                                {user.email && <Form.Control required type="name" value={user.email} {...register("email")} />}
+                                            </Form.Group>
+                                            <Form.Group className="mb-3" controlId="formHorizontalPhone">
+                                                <Form.Label><i class="fas fa-phone"></i> Phone</Form.Label>
+                                                {billingAddress.phone && <Form.Control required type="name" defaultValue={billingAddress.phone} {...register("phone")} />}
+                                            </Form.Group>
+                                            <Form.Group className="mb-3" controlId="formHorizontalAddress">
+                                                <Form.Label><i className="fa fa-address-card-o"></i> Address</Form.Label>
+                                                <Form.Control required type="name" placeholder="542 W. 15th Street" {...register("address")} />
+                                            </Form.Group>
 
-                                        <Form.Group className="mb-3" controlId="formHorizontalCity">
-                                            <Form.Label><i className="fa fa-institution"></i> City</Form.Label>
-                                            <Form.Control required type="name" placeholder="New York" {...register("city")} />
-                                        </Form.Group>
+                                            <Form.Group className="mb-3" controlId="formHorizontalCity">
+                                                <Form.Label><i className="fa fa-institution"></i> City</Form.Label>
+                                                <Form.Control required type="name" placeholder="New York" {...register("city")} />
+                                            </Form.Group>
 
 
-                                        <div className="row">
-                                            <div className="col-50">
-                                                <Form.Group className="mb-3" controlId="formHorizontalState">
-                                                    <Form.Label> State</Form.Label>
-                                                    <Form.Control required type="name" placeholder="NY"{...register("state")} />
-                                                </Form.Group>
+                                            <div className="row">
+                                                <div className="col-50">
+                                                    <Form.Group className="mb-3" controlId="formHorizontalState">
+                                                        <Form.Label> State</Form.Label>
+                                                        <Form.Control required type="name" placeholder="NY"{...register("state")} />
+                                                    </Form.Group>
 
-                                            </div>
-                                            <div className="col-50">
-                                                <Form.Group className="mb-3" controlId="formHorizontalZip">
-                                                    <Form.Label> Zip</Form.Label>
-                                                    <Form.Control required type="name" placeholder="10001"{...register("Zip")} />
-                                                </Form.Group>
+                                                </div>
+                                                <div className="col-50">
+                                                    <Form.Group className="mb-3" controlId="formHorizontalZip">
+                                                        <Form.Label> Zip</Form.Label>
+                                                        <Form.Control required type="name" placeholder="10001"{...register("Zip")} />
+                                                    </Form.Group>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div>)}
 
                                     <div className="col-50">
                                         <h3>Payment</h3>
@@ -154,19 +169,6 @@ const Checkout = () => {
                                 <input type="submit" value="Continue to checkout" className="btn" />
                             </Form>
                         </div>
-                    </div>
-                    <div className="col-25">
-                        {/* <div className="container">
-                            <h4>Cart <span className="price" style={{
-                                color: 'black'
-                            }}><i className="fa fa-shopping-cart"></i> <b>4</b></span></h4>
-                            <p><a href="#">Product 1</a> <span className="price">$15</span></p>
-                            <p><a href="#">Product 2</a> <span className="price">$5</span></p>
-                            <p><a href="#">Product 3</a> <span className="price">$8</span></p>
-                            <p><a href="#">Product 4</a> <span className="price">$2</span></p>
-                            <hr />
-                            <p>Total <span className="price" style="color:black"><b>$30</b></span></p>
-                        </div> */}
                     </div>
                 </div>
             </Container>

@@ -8,6 +8,7 @@ import Brand from '../Product/Brand/Brand'
 import FavouriteProduct from '../Product/FavouriteProduct/FavouriteProduct'
 import Product from '../Product/Product'
 import Sponsor from '../Sponsor/Sponsor'
+import './Home.css'
 
 const Home = () => {
     return (

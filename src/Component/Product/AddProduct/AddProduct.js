@@ -60,7 +60,7 @@ const AddProduct = () => {
                 <input
                     {...register("img")}
                     placeholder="Image"
-                    onChange={e => setImage(e.target.files[0, 1, 2, 3])}
+                    onChange={e => setImage(e.target.files[0])}
                     type="file"
                     name='file'
                     multiple

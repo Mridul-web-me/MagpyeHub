@@ -7,15 +7,15 @@ import './YourAccount.css'
 
 const YourAccount = () => {
     const { logOut } = useAuth();
-    const history = useNavigate()
+    // const history = useNavigate()
     const { user } = useAuth();
     // console.log(user);
 
-    const handleLogOutSubmit = e => {
-        e.preventDefault();
-        logOut(history)
-        return
-    }
+    // const handleLogOutSubmit = () => {
+    //     e.preventDefault();
+    //     logOut(history)
+    //     return
+    // }
 
     return (
         <div className='yourAccount'>
@@ -74,9 +74,7 @@ const YourAccount = () => {
                         <hr />
                     </Col>
                     <Col xs={6}>
-                        <Form onSubmit={handleLogOutSubmit}>
-                            <input className='logOutButton' onClick={logOut} type="submit" value='Logout' />
-                        </Form>
+                        <h4><Link to="/" onClick={logOut} >Logout</Link></h4>
                         <p>Securely logout of your MagpyeHub.com account</p>
                         <hr />
                     </Col>

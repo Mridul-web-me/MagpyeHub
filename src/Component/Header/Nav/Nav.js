@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import SearchBox from '../SearchBox/SearchBox'
 
 
 import './Nav.css'
@@ -15,34 +16,25 @@ const Nav = () => {
                         <ul className="nav-links">
                             <label htmlFor="close-btn" className="btn close-btn"><i className="fas fa-times"></i></label>
                             <li className='nav-item'>
-                                <Link to="/" className="desktop-item6">Search <i className="fas fa-angle-down"></i></Link>
-                                <div className="row">
-                                    <input type="checkbox" id="showMega6" />
-                                    <label htmlFor="showMega6" className="mobile-item6">
-                                        <div>
-                                            <i className="fas fa-search" type="submit" />
-                                            <p>Search</p>
-                                        </div>
-                                    </label>
+                                {/* <label className="desktop-item">Home & Garden <i className="fas fa-angle-down"></i></label> */}
+                                <input type="checkbox" id="showMega" />
+
+                                <div className="searchBarQuote">
+                                    <div className='searchBar'>
+                                        <label htmlFor="showMega" className="mobile-item">Home & Garden</label>
+                                    </div>
+                                    <div className='mobileQuote'>
+                                        <h2 className='text-center'>QUOTE</h2>
+                                    </div>
                                 </div>
-                                <div className="mega-box6">
+                                <div className="mega-box">
                                     <div className="content">
-                                        <div className="searchBoxContent">
-                                            <div className="col-md-6">
-                                                {/* <form className="d-flex" onChange={handleSearchField}>
-                                                    <input type="search" name="" id="" />
-                                                    <i className="fas fa-search" type="submit" />
-                                                </form> */}
-                                            </div>
-                                            <Link to="/">
-                                                <i className="fas fa-comments"></i>
-                                                <p>Quote</p>
-                                            </Link>
+                                        <div className="row">
+                                            <SearchBox></SearchBox>
                                         </div>
                                     </div>
                                 </div>
                             </li>
-
                             <li className='nav-item'>
                                 <label className="desktop-item1">Home & Garden <i className="fas fa-angle-down"></i></label>
                                 <input type="checkbox" id="showMega1" />

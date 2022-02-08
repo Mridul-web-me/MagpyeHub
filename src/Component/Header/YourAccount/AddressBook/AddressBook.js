@@ -9,15 +9,22 @@ import SingleAddress from './SingleAddress/SingleAddress';
 
 const AddressBook = (props) => {
 
+
     const { user } = useAuth()
     const [profile, setProfile] = useState([])
-
+    const [loading, setLoading] = useState(true)
     useEffect(() => {
-        fetch(`https://immense-spire-59977.herokuapp.com/addressBook?email=${user.email}`)
-            .then(res => res.json())
-            .then(data => setProfile(data))
-    }, [])
-
+        axios.get(`http://localhost:5000/addressBook?email=${user.email}`, {
+            headers: {
+                'authorization': `Bearer ${localStorage.getItem('idToken')}`
+            }
+        })
+            // .then(res => res.json())
+            .then(data => {
+                setProfile(data.data)
+                setLoading(false)
+            });
+    }, [user.email])
 
     return (
         <>
@@ -26,7 +33,7 @@ const AddressBook = (props) => {
             <h4>ADDRESS BOOK</h4>
             <Container>
                 {<Row>
-                    {
+                    {loading ? <div>loading</div> :
                         profile.map(address =>
                             <SingleAddress
                                 key={address._id}

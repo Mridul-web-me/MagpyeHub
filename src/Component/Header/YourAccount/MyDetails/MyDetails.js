@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../../../hooks/useAuth';
 import Footer from '../../../Footer/Footer';
 import Header from '../../Header';
-import UpdateSingleDetail from './UpdateSingleDetails/UpdateSingleDetails'
 // import singleDetails from '../singleDetails/singleDetails';
 
 const MyDetails = () => {
@@ -29,7 +28,7 @@ const MyDetails = () => {
                                 Your Name
                             </Form.Label>
                             <Col sm="8">
-                                <Form.Control type='text' defaultValue={user.displayName} />
+                                <Form.Control type='text' readOnly defaultValue={user.displayName} />
                             </Col>
                         </Form.Group>
 
@@ -38,7 +37,7 @@ const MyDetails = () => {
                                 Email
                             </Form.Label>
                             <Col sm="8">
-                                <Form.Control type="text" defaultValue={user.email} />
+                                <Form.Control type="text" readOnly defaultValue={user.email} />
                             </Col>
                         </Form.Group>
                     </Form>

@@ -18,24 +18,15 @@ const HeaderTop = () => {
                         <Col xs={4} md={4} style={{
                             margin: '15px 0'
                         }}>
-                            <p style={{
-                                textAlign: 'initial',
-                                letterSpacing: "3px",
-                                marginLeft: '10px',
-                                fontSize: "15px"
-                            }}><i className="fas fa-phone"></i> 0800 1 223 023 | MON-SAT, 9AM - 5PM</p>
-                            {/* <Routes>
-                                <Route render={({ history }) => <SearchBox history={history} />} />
-                            </Routes> */}
-                            <SearchBox></SearchBox>
-                            {/* <div>
-                                {
-                                    products.map(product =>
-
-                                        <h2>{product.title}</h2>
-                                    )
-                                }
-                            </div> */}
+                            <div className='searchBox'>
+                                <p style={{
+                                    textAlign: 'initial',
+                                    letterSpacing: "3px",
+                                    marginLeft: '10px',
+                                    fontSize: "15px"
+                                }}><i className="fas fa-phone"></i> 0800 1 223 023 | MON-SAT, 9AM - 5PM</p>
+                                <SearchBox></SearchBox>
+                            </div>
                         </Col>
                         <Col xs={4} md={4}>
                             <Link to="/home" >
@@ -62,7 +53,7 @@ const HeaderTop = () => {
                                             </Link>
                                     }
                                 </div>
-                                <div>
+                                <div className='quote'>
                                     <Link to="/quote">
                                         <i className="fas fa-comments"></i>
                                         <p>Quote</p>

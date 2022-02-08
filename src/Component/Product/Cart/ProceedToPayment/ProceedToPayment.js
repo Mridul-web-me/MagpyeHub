@@ -2,30 +2,34 @@ import React, { useEffect, useState } from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Footer from '../../../Footer/Footer';
-import Header from '../../../Header/Header';
 import Details from './Details';
 import logo from '../../../../img/logo.jpg'
+import axios from 'axios';
+import useAuth from '../../../../hooks/useAuth';
 
 
 
 const ProceedToPayment = () => {
-    const [addresses, setAddresses] = useState([])
+    const { user } = useAuth()
+    const [profile, setProfile] = useState([])
     useEffect(() => {
-        fetch('https://immense-spire-59977.herokuapp.com/addressBook')
-            .then(res => res.json())
-            .then(data => {
-                setAddresses(data)
-                // console.log(address)
+        axios.get(`http://localhost:5000/addressBook?email=${user.email}`, {
+            headers: {
+                'authorization': `Bearer ${localStorage.getItem('idToken')}`
             }
-            )
-    }, [])
+        })
+            // .then(res => res.json())
+            .then(data => {
+                setProfile(data.data)
+            });
+    }, [user.email])
     return <div>
         <Link to="/home" >
             <img src={logo} style={{
                 margin: '15px 0'
             }} alt="" className='img-fluid' width="200px" height="200px" />
         </Link>
-        <Container fluid style={{
+        <Container style={{
             margin: '50px 0'
         }}>
             <Row>
@@ -33,7 +37,7 @@ const ProceedToPayment = () => {
                     <h2>Delivery Address</h2>
 
 
-                    {addresses.map(address => <Details
+                    {profile.map(address => <Details
                         key={address._id}
                         address={address}
                     ></Details>
@@ -42,12 +46,14 @@ const ProceedToPayment = () => {
                 </Col>
                 <Col xs={4}>
                     <h2>Billing Address</h2>
-                    {addresses.map(address => <Details
+                    {profile.map(address => <Details
                         key={address._id}
                         address={address}
                     ></Details>
                     )}
-                    <Button>Update Address</Button>
+                    <Link to='/updateDetails'>
+                        <Button>Update Address</Button>
+                    </Link>
                 </Col>
                 <Link to="/checkout">
                     <Button variant='outline-dark'>Checkout</Button>

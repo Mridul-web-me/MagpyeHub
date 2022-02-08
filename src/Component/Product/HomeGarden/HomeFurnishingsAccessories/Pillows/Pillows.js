@@ -120,7 +120,7 @@ const Pillows = () => {
                         </Accordion>
                     </Col>
                     <Col xs={12} md={10}>
-                        {<Row xs={1} md={3} className="g-4">
+                        {<Row xs={1} md={4} className="g-4">
                             {
                                 products.filter(range => { return range.price > parseInt(price, 10) })
                                     .map(product =>

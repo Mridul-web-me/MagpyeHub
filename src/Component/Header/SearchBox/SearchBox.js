@@ -1,29 +1,23 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
 import SearchResult from './SearchResult/SearchResult';
 
-const SearchBox = ({ history }) => {
+const SearchBox = () => {
     const [products, setProducts] = useState([])
     const [searchProducts, setSearchProducts] = useState('')
     useEffect(() => {
-        const url = `http://localhost:5000/products?search=${searchProducts}`
-        fetch(url)
-            .then(res => res.json())
-            .then(data => setProducts(data.products))
-    }, [])
-    // let history = useLocation();
+        axios.get(`http://localhost:5000/products?search=${searchProducts}`)
+            // .then(res => res.json())
+            .then(data => setProducts(data.data))
+    }, [searchProducts])
+
     const handleSearchField = e => {
         e.preventDefault()
         const searchText = e.target.value;
         const matchedProducts = products.filter(product => product.title.toLowerCase().includes(searchText.toLowerCase()))
-        // setSearchText(searchTextValue)
-        console.log(matchedProducts);
-        // if (searchProducts.trim()) {
-        //     history.push(`/search/${searchProducts}`)
-        // } else {
-        //     history.push('/')
-        // }
+
         return (matchedProducts)
     }
     return (
@@ -40,6 +34,7 @@ const SearchBox = ({ history }) => {
                             height: '38px',
                             margin: '2px 0'
                         }}> <i className="fas fa-search" /></button>
+
                     </Link>
                 </form>
             </div>

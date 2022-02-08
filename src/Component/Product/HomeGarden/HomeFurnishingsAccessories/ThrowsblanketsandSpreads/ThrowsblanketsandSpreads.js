@@ -23,7 +23,7 @@ const ThrowsblanketsandSpreads = () => {
                 const count = data.count;
                 const pageNumber = Math.ceil(count / size);
                 setPageCount(pageNumber)
-                // console.log(pageCount);
+                console.log(data.products);
             });
     }, [page]);
     return (

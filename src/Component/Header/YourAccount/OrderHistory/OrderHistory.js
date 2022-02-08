@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import useAuth from '../../../../hooks/useAuth';
@@ -8,22 +9,26 @@ import Order from './Order';
 const OrderHistory = () => {
     const { user } = useAuth()
     const [orders, setOrders] = useState([])
+    const [loading, setLoading] = useState(true)
     useEffect(() => {
-        fetch(`http://localhost:5000/orders?email=${user.email}`)
-            .then(res => res.json())
-            .then(data => { setOrders(data) });
-    }, [])
-    // {
-    //     headers: {
-    //         'authorization': `Bearer ${localStorage.getItem('idToken')}`
-    //     }
-    // }
+        axios.get(`http://localhost:5000/orders?email=${user.email}`, {
+            headers: {
+                'authorization': `Bearer ${localStorage.getItem('idToken')}`
+            }
+        })
+            // .then(res => res.json())
+            .then(data => {
+                setOrders(data.data)
+                setLoading(false)
+            });
+    }, [user.email])
+
     return (
         <div>
             <Header></Header>
             <h2>You Have Placed {orders.length} order</h2>
             <ul>
-                {
+                {loading ? <div>loading</div> :
                     orders.map(order => <Order
                         key={order._id}
                         order={order}
