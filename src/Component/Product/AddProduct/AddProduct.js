@@ -17,7 +17,7 @@ const AddProduct = () => {
             return;
         }
         else {
-            reset();
+
         }
         const formData = new FormData();
         formData.append('title', title);
@@ -34,6 +34,7 @@ const AddProduct = () => {
             .then(data => {
                 if (data.insertedId) {
                     alert('Product Added Successfully')
+                    reset();
                 }
             })
             .catch(error => {

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { Container } from 'react-bootstrap';
+import { Container, Spinner } from 'react-bootstrap';
 import Slider from 'react-slick';
+// import Slider from 'react-slick';
 import useProduct from '../../../hooks/Product/useProduct';
 import AllFavProduct from './AllFavProduct/AllFavProduct';
 import './FavouriteProduct.css'
@@ -11,7 +12,7 @@ const FavouriteProduct = () => {
     const { handleAddToCart } = useProduct();
 
 
-    const [cart, setCart] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     const [products, setProducts] = useState([])
     const [pageCount, setPageCount] = useState(0);
@@ -29,6 +30,7 @@ const FavouriteProduct = () => {
                 const pageNumber = Math.ceil(count / size);
                 setPageCount(pageNumber)
                 // console.log(pageCount);
+                setLoading(false)
             });
     }, [page]);
 
@@ -75,7 +77,7 @@ const FavouriteProduct = () => {
 
                 <h2> Favorite Product </h2>
 
-                {<Slider className='favouriteProductCard' {...settings}>
+                <Slider className='favouriteProductCard' {...settings}>
                     {
                         products.map(product =>
 
@@ -88,7 +90,7 @@ const FavouriteProduct = () => {
                     }
 
 
-                </Slider>}
+                </Slider>
             </Container>
         </div>
     )

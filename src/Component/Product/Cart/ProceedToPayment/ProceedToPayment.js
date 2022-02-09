@@ -46,14 +46,17 @@ const ProceedToPayment = () => {
                 </Col>
                 <Col xs={4}>
                     <h2>Billing Address</h2>
-                    {profile.map(address => <Details
-                        key={address._id}
-                        address={address}
-                    ></Details>
+                    {profile.map(address => <>
+                        <Details
+                            key={address._id}
+                            address={address}
+                        ></Details>
+                        <Link to={`/updateDetails/${address._id}`}>
+                            <Button>Update Address</Button>
+                        </Link>
+                    </>
                     )}
-                    <Link to='/updateDetails'>
-                        <Button>Update Address</Button>
-                    </Link>
+
                 </Col>
                 <Link to="/checkout">
                     <Button variant='outline-dark'>Checkout</Button>

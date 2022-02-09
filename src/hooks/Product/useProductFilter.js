@@ -7,6 +7,7 @@ const useProductFilter = () => {
     const [carts, setCart] = useState([]);
     const [pageCount, setPageCount] = useState(0);
     const [page, setPage] = useState(0);
+    const [loading, setLoading] = useState(true)
     // const size = 5;
     useEffect(() => {
         fetch('./ProductData.JSON')
@@ -14,10 +15,7 @@ const useProductFilter = () => {
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products)
-                // const count = data.count;
-                // const pageNumber = Math.ceil(count / size);
-                // setPageCount(pageNumber)
-                // console.log(pageCount);
+                setLoading(false)
             });
     }, []);
 
@@ -26,6 +24,7 @@ const useProductFilter = () => {
         if (products.length) {
             const savedCart = getStoredCart();
             const storedCart = [];
+            setLoading(false)
             for (const _id in savedCart) {
                 const AddedProduct = products.find(product => product._id === _id);
                 if (AddedProduct) {
@@ -36,6 +35,7 @@ const useProductFilter = () => {
                 }
             }
             setCart(storedCart);
+            setLoading(false)
         }
     }, [products])
 
@@ -50,8 +50,8 @@ const useProductFilter = () => {
     const handleRemove = _id => {
         const removeCart = carts.filter(product => product._id !== _id)
         setCart(removeCart)
-        console.log(_id);
         removeFromDb(_id);
+
     }
 
 
@@ -81,7 +81,8 @@ const useProductFilter = () => {
         pageCount,
         page,
         setPage,
-        handleRemove
+        handleRemove,
+        loading
     }
 };
 

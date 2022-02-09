@@ -11,7 +11,7 @@ const Bedding = () => {
     const { products, handleAddToCart, pageCount, setPage, page } = useProduct([]);
 
     const FilterProduct = products.filter((curElem) => {
-        return (curElem.category === ('bedding'))
+        return (curElem.category === ('pillows'))
     });
 
     return (

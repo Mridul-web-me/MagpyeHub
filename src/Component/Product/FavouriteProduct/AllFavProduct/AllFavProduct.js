@@ -8,7 +8,7 @@ const AllFavProduct = ({ product, handleAddToCart }) => {
         <>
             <Col className="productCard">
                 <Card>
-                    <Card.Img className='img-fluid' variant="top" src={img} />
+                    <Card.Img className='img-fluid' variant="top" src={`data:image/jpg;base64,${img}`} height="300px" />
                     <Card.Body>
                         <Card.Title>{title}</Card.Title>
                         <Card.Text>

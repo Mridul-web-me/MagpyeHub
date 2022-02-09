@@ -1,21 +1,19 @@
 import React, { useEffect, useState } from 'react'
-import { Accordion, Button, Col, Container, Row } from 'react-bootstrap'
+import { Accordion, Button, Col, Container, Row, Spinner } from 'react-bootstrap'
 import useProduct from '../../../../../hooks/Product/useProduct'
 import Footer from '../../../../Footer/Footer'
 import Header from '../../../../Header/Header'
 import AllProduct from '../../../AllProduct/AllProduct'
 
 const ThrowsblanketsandSpreads = () => {
-
     const { handleAddToCart } = useProduct();
-
     const [products, setProducts] = useState([])
     const [pageCount, setPageCount] = useState(0);
     const [page, setPage] = useState(0);
+    const [loading, setLoading] = useState(true)
     const size = 2;
     const category = ''
     useEffect(() => {
-        // fetch('./ProductData.JSON')
         fetch(`https://immense-spire-59977.herokuapp.com/products?category=${category}&&page=${page}&&size=${size}`)
             .then(res => res.json())
             .then(data => {
@@ -24,6 +22,7 @@ const ThrowsblanketsandSpreads = () => {
                 const pageNumber = Math.ceil(count / size);
                 setPageCount(pageNumber)
                 console.log(data.products);
+                setLoading(false)
             });
     }, [page]);
     return (
@@ -81,7 +80,7 @@ const ThrowsblanketsandSpreads = () => {
                     </Col>
                     <Col xs={10}>
                         {<Row xs={1} md={3} className="g-4">
-                            {
+                            {loading ? <div> <Spinner animation="grow" /></div> :
                                 products.map(product =>
 
                                     <AllProduct

@@ -24,7 +24,7 @@ const PlaceOrder = () => {
             }}>
                 <Row>
                     <Col xs={6}>
-                        <img src={product.img} alt="" fluid style={{
+                        <img src={`data:image/jpg;base64,${product.img}`} alt="" fluid style={{
                             width: '500px',
                             height: '500px'
                         }} />

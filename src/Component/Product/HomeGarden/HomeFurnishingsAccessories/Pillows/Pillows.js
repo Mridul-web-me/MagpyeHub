@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Accordion, Button, Col, Container, Row } from 'react-bootstrap'
+import { Accordion, Button, Col, Container, Row, Spinner } from 'react-bootstrap'
 import { getStoredCart } from '../../../../../fakeDB'
 import useProduct from '../../../../../hooks/Product/useProduct'
 import Footer from '../../../../Footer/Footer'
@@ -10,17 +10,16 @@ import AllProduct from '../../../AllProduct/AllProduct'
 const Pillows = () => {
 
     const { handleAddToCart } = useProduct();
-    const [cart, setCart] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     const [products, setProducts] = useState([])
     const [pageCount, setPageCount] = useState(0);
     const [page, setPage] = useState(0);
     const [price, setPrice] = useState(0);
-    const size = 9;
+    const size = 8;
 
-    const category = 'bedding'
+    const category = 'pillows'
     useEffect(() => {
-        // fetch('./ProductData.JSON')
         fetch(`https://immense-spire-59977.herokuapp.com/products?category=${category}&&page=${page}&&size=${size}`)
             .then(res => res.json())
             .then(data => {
@@ -28,38 +27,11 @@ const Pillows = () => {
                 const count = data.count;
                 const pageNumber = Math.ceil(count / size);
                 setPageCount(pageNumber)
-                console.log(pageCount);
+                console.log(data.products);
+                setLoading(false)
             });
     }, [page]);
 
-    // useEffect(() => {
-    //     if (products.length) {
-    //         const savedCart = getStoredCart();
-    //         const storedCart = [];
-    //         for (const _id in savedCart) {
-    //             const AddedProduct = products.find(product => product._id === _id);
-
-    //             if (AddedProduct) {
-    //                 const quantity = savedCart[_id];
-    //                 AddedProduct.quantity = quantity;
-    //             }
-    //             storedCart.push(AddedProduct);
-
-    //         }
-    //         setCart(storedCart);
-    //     }
-    // }, [products])
-    // const handleAddToCart = (product) => {
-    //     const newCart = [...carts, product];
-    //     setCart(newCart);
-    //     addToDb(product._id);
-    // }
-
-    // const FilterProduct = products.filter((curElem) => {
-    //     return (curElem.category === 'Camera')
-    // });
-
-    // Triggered when the value gets updated while scrolling the slider:
     const handleInput = (e) => {
         setPrice(e.target.value);
     }
@@ -121,19 +93,18 @@ const Pillows = () => {
                     </Col>
                     <Col xs={12} md={10}>
                         {<Row xs={1} md={4} className="g-4">
-                            {
-                                products.filter(range => { return range.price > parseInt(price, 10) })
-                                    .map(product =>
-                                        <>
-                                            <AllProduct
-                                                key={product._id}
-                                                product={product}
-                                                handleAddToCart={handleAddToCart}
-                                            // pageCount={pageCount}
-                                            ></AllProduct>
-                                        </>
+                            {loading ? <div> <Spinner animation="grow" /></div> :
+                                products.filter(range => { return range.price > parseInt(price, 10) }).map(product =>
+                                    <>
+                                        <AllProduct
+                                            key={product._id}
+                                            product={product}
+                                            handleAddToCart={handleAddToCart}
+                                        // pageCount={pageCount}
+                                        ></AllProduct>
+                                    </>
 
-                                    )
+                                )
                             }
 
                         </Row>
@@ -158,3 +129,23 @@ const Pillows = () => {
 }
 
 export default Pillows
+
+
+
+//     <Row xs={1} md={4} className="g-4">
+//     {loading ? <div> <Spinner animation="grow" /></div> :
+//         products.filter(range => { return range.price > parseInt(price, 10) })
+//             .map(product =>
+//                 <>
+//                     <AllProduct
+//                         key={product._id}
+//                         product={product}
+//                         handleAddToCart={handleAddToCart}
+//                     pageCount={pageCount}
+//                     ></AllProduct>
+//                 </>
+
+//             )
+//     }
+
+// </Row>

@@ -15,7 +15,7 @@ const AllProduct = (props) => {
                     <Card.Body>
                         <Card.Title>{title}</Card.Title>
                         <Card.Text>
-                            $ {price}
+                            £ {price}
                         </Card.Text>
                         <div className='groupButton'>
                             <div style={{

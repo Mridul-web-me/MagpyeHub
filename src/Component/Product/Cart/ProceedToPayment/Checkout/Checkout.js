@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { clearTheCart, getStoredCart } from '../../../../../fakeDB';
 import useAuth from '../../../../../hooks/useAuth';
 import logo from '../../../../../img/logo.jpg'
@@ -10,7 +10,7 @@ import './Checkout.css'
 
 
 const Checkout = () => {
-
+    const navigate = useNavigate()
     const { user } = useAuth()
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
@@ -29,6 +29,7 @@ const Checkout = () => {
                     alert('Order Processed Successfully')
                     clearTheCart()
                     reset()
+                    navigate('/')
                 }
             })
     }

@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -11,10 +12,15 @@ const MyDetails = () => {
 
     const { user } = useAuth()
     useEffect(() => {
-        fetch(`https://immense-spire-59977.herokuapp.com/addressBook?email=${user.email}`)
-            .then(res => res.json())
-            .then(data => setAddress(data))
-    }, [])
+        axios.get(`http://localhost:5000/addressBook?email=${user.email}`, {
+            headers: {
+                'authorization': `Bearer ${localStorage.getItem('idToken')}`
+            }
+        })
+            // .then(res => res.json())
+            .then(data => setAddress(data.data))
+        console.log(address.length);
+    }, [user.email])
     return (<div>
         <Header></Header>
         <div>
@@ -41,9 +47,16 @@ const MyDetails = () => {
                             </Col>
                         </Form.Group>
                     </Form>
-                    <Link to='/updateDetails'>
-                        <Button>Update Details</Button>
+                    {!address.length ? <Link to='/addDetails'>
+                        <Button>Add Details</Button>
                     </Link>
+                        :
+                        address.map(update => <Link key={update._id} to={`/updateDetails/${update._id}`}>
+                            <Button>Update Details</Button>
+                        </Link>)
+                    }
+
+
                 </Col>
             </Row>
         </div>
