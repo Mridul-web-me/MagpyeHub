@@ -21,7 +21,7 @@ const Nav = () => {
 
                                 <div className="searchBarQuote">
                                     <div className='searchBar'>
-                                        <label htmlFor="showMega" className="mobile-item">Home & Garden</label>
+                                        <label htmlFor="showMega" className="mobile-item">Search Products</label>
                                     </div>
                                     <div className='mobileQuote'>
                                         <h2 className='text-center'>QUOTE</h2>

@@ -7,15 +7,8 @@ import './YourAccount.css'
 
 const YourAccount = () => {
     const { logOut } = useAuth();
-    // const history = useNavigate()
     const { user } = useAuth();
-    // console.log(user);
 
-    // const handleLogOutSubmit = () => {
-    //     e.preventDefault();
-    //     logOut(history)
-    //     return
-    // }
 
     return (
         <div className='yourAccount'>
@@ -81,6 +74,7 @@ const YourAccount = () => {
                 </Row>
 
                 <Link to="/addProduct">Add Product</Link>
+                <Link to="/manageProducts">Manage Product</Link>
             </Container>
         </div>
     )

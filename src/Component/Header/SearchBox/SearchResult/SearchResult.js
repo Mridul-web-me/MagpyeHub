@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Row } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import useProduct from '../../../../hooks/Product/useProduct';
 import Footer from '../../../Footer/Footer';
@@ -20,19 +20,21 @@ const SearchResult = () => {
 
     return <div>
         <Header></Header>
-        <Row xs={1} md={3} className="g-4">
-            {
-                product.map(product =>
+        <Container>
+            {<Row xs={1} md={4} className="g-4">
+                {
+                    product.map(product =>
 
-                    <AllProduct
-                        key={product._id}
-                        product={product}
-                        handleAddToCart={handleAddToCart}
-                    // pageCount={pageCount}
-                    ></AllProduct>
-                )
-            }
-        </Row>
+                        <AllProduct
+                            key={product._id}
+                            product={product}
+                            handleAddToCart={handleAddToCart}
+                        // pageCount={pageCount}
+                        ></AllProduct>
+                    )
+                }
+            </Row>}
+        </Container>
         <Footer></Footer>
     </div>
 };

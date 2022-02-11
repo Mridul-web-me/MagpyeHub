@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import initializeFirebase from "../Component/LoginForm/Firebase/firebase.init";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, onAuthStateChanged, signOut, updatePassword, sendPasswordResetEmail, getIdToken } from "firebase/auth";
+import { clearTheCart, removeFromDb } from "../fakeDB";
 
 
 //Initialize Firebase App
@@ -118,6 +119,7 @@ const useFirebase = () => {
         setIsLoading(true)
         signOut(auth).then(() => {
             history('/')
+            clearTheCart()
         }).catch((error) => {
             // An error happened.
         })

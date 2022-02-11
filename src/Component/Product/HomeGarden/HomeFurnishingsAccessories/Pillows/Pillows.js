@@ -20,7 +20,7 @@ const Pillows = () => {
 
     const category = 'pillows'
     useEffect(() => {
-        fetch(`https://immense-spire-59977.herokuapp.com/products?category=${category}&&page=${page}&&size=${size}`)
+        fetch(`http://localhost:5000/products?category=${category}&&page=${page}&&size=${size}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products)
@@ -92,9 +92,11 @@ const Pillows = () => {
                         </Accordion>
                     </Col>
                     <Col xs={12} md={10}>
-                        {<Row xs={1} md={4} className="g-4">
-                            {loading ? <div> <Spinner animation="grow" /></div> :
-                                products.filter(range => { return range.price > parseInt(price, 10) }).map(product =>
+                        {loading ? <div className='text-center'> <Spinner animation="grow" variant="info" />
+                            <Spinner animation="grow" variant="info" />
+                        </div> : <Row xs={1} md={4} className="g-4">
+                            {
+                                products.map(product =>
                                     <>
                                         <AllProduct
                                             key={product._id}
@@ -109,7 +111,7 @@ const Pillows = () => {
 
                         </Row>
                         }
-                        <div className="pagination">
+                        {/* <div className="pagination">
                             {
                                 [...Array(pageCount).keys()]
                                     .map(number => <Button
@@ -119,7 +121,7 @@ const Pillows = () => {
                                         onClick={() => setPage(number)}
                                     >{number + 1}</Button>)
                             }
-                        </div>
+                        </div> */}
                     </Col>
                 </Row>
             </Container>

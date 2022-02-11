@@ -1,16 +1,11 @@
 import React from 'react'
 import { Button, Card, Col } from 'react-bootstrap';
-import Carousel from 'react-gallery-carousel';
 import { Link } from 'react-router-dom';
-import './AllProduct.css'
-const AllProduct = (props) => {
 
+const FilterProduct = (props) => {
     const { _id, title, img, img1, img2, img3, price } = props.product;
-
-
     return (
-        <>
-
+        <div>
             {title ? <Col className="productCard">
                 <Card>
                     <Card.Img className='img-fluid' variant="top" src={img1} />
@@ -52,9 +47,8 @@ const AllProduct = (props) => {
                 :
                 <h2 style={{ margin: '50px' }}>No Product Available</h2>
             }
-
-        </>
+        </div>
     )
 }
 
-export default AllProduct
+export default FilterProduct

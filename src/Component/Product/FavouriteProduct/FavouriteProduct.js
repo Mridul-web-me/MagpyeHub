@@ -19,10 +19,10 @@ const FavouriteProduct = () => {
     const [page, setPage] = useState(0);
     const size = 3;
 
-    // const category = 'bedding'
+    const category = 'pillows'
     useEffect(() => {
         // fetch('./ProductData.JSON')
-        fetch(`https://immense-spire-59977.herokuapp.com/products`)
+        fetch(`http://localhost:5000/products?category=${category}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products)
@@ -77,7 +77,10 @@ const FavouriteProduct = () => {
 
                 <h2> Favorite Product </h2>
 
-                <Slider className='favouriteProductCard' {...settings}>
+                {loading ? <div className='text-center'><Spinner animation="grow" variant="info" />
+                    <Spinner animation="grow" variant="info" />
+                    <Spinner animation="grow" variant="info" />
+                </div> : <Slider className='favouriteProductCard' {...settings}>
                     {
                         products.map(product =>
 
@@ -90,7 +93,7 @@ const FavouriteProduct = () => {
                     }
 
 
-                </Slider>
+                </Slider>}
             </Container>
         </div>
     )

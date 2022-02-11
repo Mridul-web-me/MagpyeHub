@@ -3,7 +3,8 @@ import { addToDb, getStoredCart, removeFromDb } from '../../fakeDB';
 
 const useProductFilter = () => {
 
-    const [products, setProducts] = useState([]);
+    const [AllProducts, setAllProducts] = useState([]);
+    const [filters, setFilters] = useState([])
     const [carts, setCart] = useState([]);
     const [pageCount, setPageCount] = useState(0);
     const [page, setPage] = useState(0);
@@ -11,22 +12,31 @@ const useProductFilter = () => {
     // const size = 5;
     useEffect(() => {
         fetch('./ProductData.JSON')
-        fetch(`https://immense-spire-59977.herokuapp.com/products`)
+        fetch(`http://localhost:5000/products`)
             .then(res => res.json())
             .then(data => {
-                setProducts(data.products)
+                setAllProducts(data.products)
                 setLoading(false)
+                setFilters(data.products)
             });
     }, []);
 
+
+    const filterProduct = (categProduct) => {
+        const updatedProduct = AllProducts.filter((curElem) => {
+            return curElem.category === categProduct;
+        });
+        setFilters(updatedProduct);
+    };
+
     // Get Stored Cart
     useEffect(() => {
-        if (products.length) {
+        if (AllProducts.length) {
             const savedCart = getStoredCart();
             const storedCart = [];
             setLoading(false)
             for (const _id in savedCart) {
-                const AddedProduct = products.find(product => product._id === _id);
+                const AddedProduct = AllProducts.find(product => product._id === _id);
                 if (AddedProduct) {
                     const quantity = savedCart[_id];
                     AddedProduct.quantity = quantity;
@@ -37,21 +47,20 @@ const useProductFilter = () => {
             setCart(storedCart);
             setLoading(false)
         }
-    }, [products])
+    }, [AllProducts])
 
     // Cart Handler
     const handleAddToCart = (products) => {
         const newCart = [...carts, products];
         setCart(newCart);
         addToDb(products._id);
-        console.log('clicked', products._id);
+        // console.log('clicked', products._id);
     }
 
     const handleRemove = _id => {
         const removeCart = carts.filter(product => product._id !== _id)
         setCart(removeCart)
         removeFromDb(_id);
-
     }
 
 
@@ -72,7 +81,7 @@ const useProductFilter = () => {
 
 
     return {
-        products,
+        AllProducts,
         handleAddToCart,
         carts,
         grandTotal,
@@ -82,7 +91,11 @@ const useProductFilter = () => {
         page,
         setPage,
         handleRemove,
-        loading
+        loading,
+        setFilters,
+        filters,
+        setCart,
+        filterProduct
     }
 };
 

@@ -10,7 +10,12 @@ const AllFavProduct = ({ product, handleAddToCart }) => {
                 <Card>
                     <Card.Img className='img-fluid' variant="top" src={`data:image/jpg;base64,${img}`} height="300px" />
                     <Card.Body>
-                        <Card.Title>{title}</Card.Title>
+                        <Link to={`/placeOrder/${_id}`} style={{
+                            textDecoration: 'none',
+                            color: '#303030'
+                        }}>
+                            <Card.Title>{title}</Card.Title>
+                        </Link>
                         <Card.Text>
                             {category}
                         </Card.Text>

@@ -12,9 +12,9 @@ const ThrowsblanketsandSpreads = () => {
     const [page, setPage] = useState(0);
     const [loading, setLoading] = useState(true)
     const size = 2;
-    const category = ''
+    const category = 'pillows'
     useEffect(() => {
-        fetch(`https://immense-spire-59977.herokuapp.com/products?category=${category}&&page=${page}&&size=${size}`)
+        fetch(`http://localhost:5000/products?category=${category}&&page=${page}&&size=${size}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products)
@@ -79,8 +79,10 @@ const ThrowsblanketsandSpreads = () => {
                         </Accordion>
                     </Col>
                     <Col xs={10}>
-                        {<Row xs={1} md={3} className="g-4">
-                            {loading ? <div> <Spinner animation="grow" /></div> :
+                        {loading ? <div className='text-center'> <Spinner animation="grow" variant="info" />
+                            <Spinner animation="grow" variant="info" />
+                        </div> : <Row xs={1} md={3} className="g-4">
+                            {
                                 products.map(product =>
 
                                     <AllProduct

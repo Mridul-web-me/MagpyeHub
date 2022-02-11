@@ -73,6 +73,7 @@ import Checkout from './Component/Product/Cart/ProceedToPayment/Checkout/Checkou
 import OrderHistory from './Component/Header/YourAccount/OrderHistory/OrderHistory';
 import UpdateDetails from './Component/Header/YourAccount/MyDetails/UpdateDetails/UpdateDetails';
 import AddDetails from './Component/Header/YourAccount/MyDetails/AddDetails/AddDetails';
+import ManageProducts from './Component/Product/ManageProducts/ManageProducts';
 
 
 
@@ -158,6 +159,7 @@ function App() {
             <Route path="/orderHistory" element={<OrderHistory />} />
             <Route path="/updateDetails/:profileId" element={<UpdateDetails />} />
             <Route path="/addDetails" element={<AddDetails />} />
+            <Route path="/manageProducts" element={<ManageProducts />} />
           </Routes>
         </Router>
       </AuthProvider>

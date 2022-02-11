@@ -331,12 +331,6 @@ transform: rotate(180deg);
   #close-btn:checked ~ .btn.menu-btn{
     display: block;
   }
-  /* #menu-btn:checked ~ .nav-links .mobile-item1 i.fas.fa-angle-down{
-    transform: rotate(180deg);
-  }
-  #close-btn:checked ~ .nav-links .mobile-item1 i.fas.fa-angle-down{
-   transform: rotate(40deg);
-  } */
   .searchBarQuote{
     display: flex;
     justify-content: space-between;
