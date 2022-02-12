@@ -1,0 +1,5 @@
+.increment:hover,
+.decrement:hover{
+    background: #303030;
+    color: white;
+}

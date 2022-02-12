@@ -12,7 +12,7 @@ const ThrowsblanketsandSpreads = () => {
     const [page, setPage] = useState(0);
     const [loading, setLoading] = useState(true)
     const size = 2;
-    const category = 'pillows'
+    const category = 'bedding'
     useEffect(() => {
         fetch(`http://localhost:5000/products?category=${category}&&page=${page}&&size=${size}`)
             .then(res => res.json())
@@ -21,7 +21,6 @@ const ThrowsblanketsandSpreads = () => {
                 const count = data.count;
                 const pageNumber = Math.ceil(count / size);
                 setPageCount(pageNumber)
-                console.log(data.products);
                 setLoading(false)
             });
     }, [page]);

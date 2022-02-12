@@ -1,10 +1,10 @@
 .yourAccount{
-        font-family: lato sans-serif;
+        font-family: lato, sans-serif;
 }
 .yourAccount p{
     font-size: 14px;
     margin-bottom: 10px;
-    font-family: lato sans-serif;
+    font-family: lato, sans-serif;
 }
 .yourAccount .yourAccountContent h4{
     margin: 10px 0;

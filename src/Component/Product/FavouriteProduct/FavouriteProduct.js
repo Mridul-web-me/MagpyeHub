@@ -15,24 +15,17 @@ const FavouriteProduct = () => {
     const [loading, setLoading] = useState(true);
 
     const [products, setProducts] = useState([])
-    const [pageCount, setPageCount] = useState(0);
-    const [page, setPage] = useState(0);
-    const size = 3;
 
-    const category = 'pillows'
+    const category = 'bedding'
     useEffect(() => {
         // fetch('./ProductData.JSON')
         fetch(`http://localhost:5000/products?category=${category}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products)
-                const count = data.count;
-                const pageNumber = Math.ceil(count / size);
-                setPageCount(pageNumber)
-                // console.log(pageCount);
                 setLoading(false)
             });
-    }, [page]);
+    }, []);
 
     const settings = {
         infinite: true,

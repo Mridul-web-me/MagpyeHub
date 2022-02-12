@@ -16,12 +16,12 @@ const SearchResult = () => {
             .then(res => res.json())
             .then(data => setProduct(data));
         // console.log(product);
-    }, [product])
+    }, [searchText])
 
     return <div>
         <Header></Header>
         <Container>
-            {<Row xs={1} md={4} className="g-4">
+            {!product.length ? <div>No Product Found</div> : <Row xs={1} md={4} className="g-4">
                 {
                     product.map(product =>
 

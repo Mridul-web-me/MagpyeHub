@@ -11,7 +11,7 @@ import './PlaceOrder.css'
 
 const PlaceOrder = () => {
     const { productId } = useParams();
-    const [product, setProduct] = useState({});
+    const [product, setProduct] = useState([]);
     useEffect(() => {
         fetch(`http://localhost:5000/products/${productId}`)
             .then(res => res.json())
@@ -96,6 +96,75 @@ const PlaceOrder = () => {
                                     <Button style={{ width: '100%' }} className='addToQuoteButton' type='button' variant='light'> <span><i className="fas fa-comments"></i> </span> Add To Quote</Button>
                                 </Col>
                             </Row>
+                            <div style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                margin: '10px'
+                            }}>
+                                <div style={{ margin: '10px' }}>
+                                    <Link to="/">
+                                        <i class="fas fa-quote-left" style={{
+                                            fontSize: '25px',
+                                            background: '#0091ac',
+                                            padding: '15px',
+                                            borderRadius: '50%', color: '#f2f2f2'
+                                        }} ></i>
+                                    </Link>
+                                </div>
+                                <div className='askQuote'>
+                                    <Link to='/' style={{ color: '#606060', textDecoration: 'none' }} > <span style={{ color: '#303030' }}>WANT A QUOTE?</span> <br />
+                                        Send Your Quote List For A Personalised Quotation</Link>
+                                </div>
+                            </div>
+                            <div style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                margin: '10px'
+                            }}>
+                                <div style={{ margin: '10px' }}>
+                                    <Link to="/">
+                                        <i class="fas fa-house-user" style={{
+                                            fontSize: '25px',
+                                            background: '#0091ac',
+                                            padding: '15px',
+                                            borderRadius: '50%', color: '#f2f2f2'
+                                        }} ></i>
+
+                                    </Link>
+                                </div>
+                                <div className='askQuote'>
+                                    <Link to='/' style={{ color: '#606060', textDecoration: 'none' }} > <span style={{ color: '#303030' }}>COLLECT IN WAREHOUSE (BIRMINGHAM)</span> <br />
+                                        Store Details & Further Information</Link>
+                                </div>
+                            </div>
+                            <div style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                margin: '10px'
+                            }}>
+                                <div style={{ margin: '10px' }}>
+                                    <Link to="/">
+                                        <i class="fas fa-phone" style={{
+                                            fontSize: '25px',
+                                            background: '#0091ac',
+                                            padding: '15px',
+                                            borderRadius: '50%', color: '#f2f2f2'
+                                        }} ></i>
+                                    </Link>
+                                </div>
+                                <div className='askQuote'>
+                                    <Link to='/' style={{ color: '#606060', textDecoration: 'none' }} > <span style={{ color: '#303030' }}>NEED ADVICE OR URGENT ORDER?</span> <br />
+                                        Call 0800 1 223 023 or Request A Callback</Link>
+                                </div>
+                            </div>
+                            <Row>
+                                <Col md={6} xs={12}>
+                                    <Button style={{ width: '100%' }} className='askAQuestion' variant="light" type='button' onClick={() => handleAddToCart(product)}>ASK A QUESTION</Button>
+                                </Col>
+                                <Col md={6} xs={12}>
+                                    <Button style={{ width: '100%' }} className='emailFriend' type='button' variant='light'> EMAIL A FRIEND</Button>
+                                </Col>
+                            </Row>
                         </div>
                     </Col>
                     <div className="placeOrderSocialItem" style={{
@@ -124,7 +193,9 @@ const PlaceOrder = () => {
                         }}
                     >
                         <Tab style={{ color: '#606060', fontSize: '16px', margin: '30px' }} eventKey="productDetails" title="Product Details">
-                            <p style={{ textAlign: 'justify' }}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur delectus, porro cupiditate odit fugiat autem dignissimos nostrum tempora sed est qui esse necessitatibus deserunt, perferendis beatae neque numquam non quos maxime, commodi eos natus? Quae labore repellat id nobis, placeat fugit enim vero! Provident, expedita recusandae! Earum magni facere, voluptas quasi dolorum ex quia ipsa saepe placeat possimus distinctio nihil cum libero sint fugit dolor laborum incidunt neque itaque perspiciatis commodi aperiam officiis. Repudiandae omnis quas pariatur adipisci sed molestiae similique nostrum, nam consequuntur ea neque? Quas eligendi unde voluptates non dolorem! Suscipit, nemo. Alias doloremque molestias similique placeat iste.</p>
+                            <p style={{ textAlign: 'justify' }}> <strong>Product Code: {product._id}</strong> </p>
+                            <p style={{ textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: product.description }}></p>
+
                         </Tab>
                         <Tab style={{ color: '#606060', fontSize: '16px', margin: '30px' }} eventKey="DeliveryReturns" title="Delivery Returns">
                             <p style={{ textAlign: 'justify' }}>
@@ -164,6 +235,10 @@ const PlaceOrder = () => {
                 </Col>
             </Container>
             <Footer></Footer>
+
+            <p>
+
+            </p>
         </>
 
     )

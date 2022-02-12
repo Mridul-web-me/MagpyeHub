@@ -17,7 +17,7 @@ const About = () => {
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In repellat accusamus tempora facere ea aliquid dolor adipisci commodi nihil itaque culpa quas saepe fuga, atque ipsam qui, non placeat ex! Delectus numquam architecto ut repellat, obcaecati expedita perspiciatis tempora. Fugit ullam, non tenetur corrupti doloremque excepturi tempora dignissimos voluptatem temporibus?</p>
                         </div>
                     </div>
-                    <div className="col-md-6">
+                    <div className="col-md-6" style={{ height: '60vh' }}>
                         <ReactPlayer width="100%"
                             height="100%" controls url="https://youtu.be/JreV3v1vRd8"></ReactPlayer>
                     </div>

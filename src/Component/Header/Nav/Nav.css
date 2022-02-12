@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'lato', sans-serif;
 }
 
 /* HEADER TOP */
@@ -505,7 +505,7 @@ transform: rotate(180deg);
   .mega-box6 .content :nth-child(2){
     border-top: 0px;
   }
-  
+
   .content .row .mega-links{
     border-left: 0px;
     padding-left: 15px;

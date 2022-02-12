@@ -1,11 +1,14 @@
 import React from 'react'
+import { useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { addToDb, DecrementToDb, removeFromDb } from '../../../fakeDB';
 import useProduct from '../../../hooks/Product/useProduct';
+import './Carts.css'
 
 const Carts = ({ cart }) => {
     const { handleRemove, setCart } = useProduct({});
+    const [disabled, setDisabled] = useState(true)
 
     const { _id, img, title, price, quantity } = cart;
     const subtotalPrice = quantity * price;
@@ -16,18 +19,17 @@ const Carts = ({ cart }) => {
                 _id === carts._id ? { ...carts, quantity: carts.quantity + (carts.quantity < 10 ? 1 : 0) } : carts
             )
         );
+        setDisabled(false)
         addToDb(_id);
     }
     const handleDecrement = (_id) => {
-
-
         setCart(cart =>
             cart.map((carts) =>
                 _id === carts._id ? { ...carts, quantity: carts.quantity - (carts.quantity > 1 ? 1 : 0) } : carts
             )
         );
+        setDisabled(false)
         DecrementToDb(_id);
-        console.log("clicked", _id, _id)
         updateDb()
     }
     const updateDb = () => {
@@ -44,25 +46,44 @@ const Carts = ({ cart }) => {
                 margin: '10px 0'
             }}>
                 <Col xs={6} md={2}>
-                    <img src={`data:image/jpg;base64,${img}`} alt="" width="100px" height="100px" />
+                    {/* <img src={`data:image/jpg;base64,${img}`} alt="" width="100px" height="100px" /> */}
+                    <img src={img} alt="" width="100px" height="100px" />
                 </Col>
                 <Col xs={6} md={4} style={{
                     textAlign: 'start'
                 }}>
-                    <Link to={`/placeOrder/${_id}`}>
-                        <h5>{title}</h5>
+                    <Link style={{
+                        color: '#303030', fontSize: '16px',
+                        textDecoration: 'none'
+                    }} to={`/placeOrder/${_id}`}>
+                        <h5 style={{ fontSize: '16px' }}>{title}</h5>
                     </Link>
-                    <p>Product Code: {_id}</p>
+                    <p style={{ fontSize: '12px' }}>Product Code: {_id}</p>
                 </Col>
                 <Col xs={6} md={2}>
                     <div style={{
                         display: 'flex',
-                        justifyContent: 'space-between',
+                        justifyContent: 'center',
                         alignItems: 'center'
                     }}>
-                        <button style={{ width: '25px' }} onClick={() => { handleDecrement(_id) }}> - </button>
-                        <input style={{ width: '50px' }} type="text" value={quantity} />
-                        <button style={{ width: '25px' }} onClick={() => { handleIncrement(_id) }}> + </button>
+                        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                            <input style={{ width: '50px', padding: ' 0 15px' }} type="text" value={quantity} />
+                            {/* <p>{quantity}</p> */}
+                            <div style={{
+                                display: 'flex', flexDirection: 'column', fontSize: '26px',
+                                border: '#f3f3f3',
+                                // borderRight: '1px solid #000',
+                                // borderTop: '1px solid #000',
+                                // borderBottom: '1px solid #000'
+                            }}>
+                                <button className='increment' style={{ border: 'none', fontSize: '11px', width: '25px', margin: '0' }} disabled={quantity === 10} onClick={() => { handleIncrement(_id) }}> <i class="fas fa-plus"></i> </button>
+                                <button className='decrement' style={{
+                                    fontSize: '11px',
+                                    border: 'none',
+                                    width: '25px', margin: '0'
+                                }} disabled={quantity === 1} onClick={() => { handleDecrement(_id) }}> <i class="fas fa-minus"></i> </button>
+                            </div>
+                        </div>
                     </div>
                 </Col>
                 <Col xs={6} md={2}>

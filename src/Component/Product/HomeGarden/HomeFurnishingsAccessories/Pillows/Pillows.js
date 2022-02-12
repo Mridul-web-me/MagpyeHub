@@ -9,16 +9,16 @@ import AllProduct from '../../../AllProduct/AllProduct'
 
 const Pillows = () => {
 
-    const { handleAddToCart } = useProduct();
+    const { AllProducts, handleAddToCart } = useProduct([]);
+    const [filter, setFilter] = useState([])
     const [loading, setLoading] = useState(true);
-
     const [products, setProducts] = useState([])
     const [pageCount, setPageCount] = useState(0);
     const [page, setPage] = useState(0);
     const [price, setPrice] = useState(0);
     const size = 8;
 
-    const category = 'pillows'
+    const category = 'bedding'
     useEffect(() => {
         fetch(`http://localhost:5000/products?category=${category}&&page=${page}&&size=${size}`)
             .then(res => res.json())
@@ -32,7 +32,17 @@ const Pillows = () => {
             });
     }, [page]);
 
+
+
+    const filterProduct = (catProduct) => {
+        const updatedProduct = AllProducts.filter((curElem) => {
+            return curElem.category === catProduct;
+        });
+        setFilter(updatedProduct);
+    };
+
     const handleInput = (e) => {
+
         setPrice(e.target.value);
     }
 
@@ -50,13 +60,13 @@ const Pillows = () => {
                                 <Accordion.Header>Price Range</Accordion.Header>
                                 <Accordion.Body>
                                     <input type="range" onInput={handleInput} />
-                                    <h1>Price: {price}</h1>
+                                    <p>Price: {price}</p>
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="1">
                                 <Accordion.Header>Item 1</Accordion.Header>
                                 <Accordion.Body>
-                                    Lorem ipsum dolor sit amet
+                                    <Button onClick={() => { filterProduct('t-shirt') }}>T-shirt</Button>
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="2">
@@ -94,24 +104,42 @@ const Pillows = () => {
                     <Col xs={12} md={10}>
                         {loading ? <div className='text-center'> <Spinner animation="grow" variant="info" />
                             <Spinner animation="grow" variant="info" />
-                        </div> : <Row xs={1} md={4} className="g-4">
-                            {
-                                products.map(product =>
-                                    <>
-                                        <AllProduct
-                                            key={product._id}
-                                            product={product}
-                                            handleAddToCart={handleAddToCart}
-                                        // pageCount={pageCount}
-                                        ></AllProduct>
-                                    </>
+                        </div> : <div>
 
-                                )
-                            }
+                            {products.length ? <Row xs={1} md={4} className="g-4">
+                                {
+                                    products.filter(product => { return product.price > parseInt(price) })
+                                        .map(product =>
+                                            <>
+                                                <AllProduct
+                                                    key={product._id}
+                                                    product={product}
+                                                    handleAddToCart={handleAddToCart}
+                                                // pageCount={pageCount}
+                                                ></AllProduct>
+                                            </>
 
-                        </Row>
+                                        )
+                                }
+                            </Row> :
+                                <Row xs={1} md={4} className="g-4">
+                                    {
+                                        filter.map(product =>
+                                            <>
+                                                <AllProduct
+                                                    key={product._id}
+                                                    product={product}
+                                                    handleAddToCart={handleAddToCart}
+                                                // pageCount={pageCount}
+                                                ></AllProduct>
+                                            </>
+
+                                        )
+                                    }
+                                </Row>}
+                        </div>
                         }
-                        {/* <div className="pagination">
+                        <div className="pagination">
                             {
                                 [...Array(pageCount).keys()]
                                     .map(number => <Button
@@ -121,7 +149,7 @@ const Pillows = () => {
                                         onClick={() => setPage(number)}
                                     >{number + 1}</Button>)
                             }
-                        </div> */}
+                        </div>
                     </Col>
                 </Row>
             </Container>

@@ -14,11 +14,11 @@
 .footer .container-fluid .row .col-md-3 a:hover{
     text-decoration: underline;
 }
-/* .footer-bottom{
+.footer-bottom{
     display: flex;
     justify-content: space-between;
     align-items: center;
-} */
+}
 .footer-bottom .row .col-md-6:nth-child(1){
     text-align: initial;
 }
@@ -35,9 +35,8 @@
 
 }
 @media only screen and (max-width: 768px) {
-.footer-bottom .row .col-md-6:nth-child(1),
-.footer-bottom .row .col-md-6:nth-child(2){
-    text-align: center;
+  .footer-bottom{
+    display: block;
 }
 
 }

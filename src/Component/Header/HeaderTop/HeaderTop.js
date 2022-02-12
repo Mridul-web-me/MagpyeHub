@@ -5,7 +5,7 @@ import useProduct from '../../../hooks/Product/useProduct';
 import useAuth from '../../../hooks/useAuth';
 import SearchBox from '../SearchBox/SearchBox';
 import logo from '../../../img/logo.jpg'
-
+import './HeaderTop.css'
 
 const HeaderTop = () => {
     const { user } = useAuth();

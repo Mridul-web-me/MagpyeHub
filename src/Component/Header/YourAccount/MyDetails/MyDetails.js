@@ -20,6 +20,7 @@ const MyDetails = () => {
             // .then(res => res.json())
             .then(data => setAddress(data.data))
         console.log(address.length);
+        console.log(user.uid);
     }, [user.email])
     return (<div>
         <Header></Header>

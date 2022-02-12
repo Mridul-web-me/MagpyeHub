@@ -1,11 +1,10 @@
 import React from 'react'
 import { Button, Card, Col } from 'react-bootstrap';
-import Carousel from 'react-gallery-carousel';
 import { Link } from 'react-router-dom';
 import './AllProduct.css'
 const AllProduct = (props) => {
 
-    const { _id, title, img, img1, img2, img3, price } = props.product;
+    const { _id, title, img, price } = props.product;
 
 
     return (
@@ -13,7 +12,7 @@ const AllProduct = (props) => {
 
             {title ? <Col className="productCard">
                 <Card>
-                    <Card.Img className='img-fluid' variant="top" src={img1} />
+                    <Card.Img className='img-fluid' variant="top" style={{ height: "200px" }} src={img} />
 
                     <Card.Body>
                         <Link to={`/placeOrder/${_id}`} style={{
