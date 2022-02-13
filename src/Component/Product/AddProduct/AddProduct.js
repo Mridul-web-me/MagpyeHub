@@ -3,8 +3,11 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
+import { Link } from 'react-router-dom';
 import Header from '../../Header/Header';
 import Home from '../../Home/Home';
+import logo from '../../../img/logo.jpg'
+
 
 const AddProduct = () => {
     // const { register, handleSubmit, reset } = useForm();
@@ -60,41 +63,14 @@ const AddProduct = () => {
 
     return (
         <>
-            <Header></Header>
-            {/* <form onSubmit={handleSubmit((handleOnSubmit))}>
-                <Header></Header> <br /> <br /> <br />
-                <input
-                    {...register("title")}
-                    placeholder="Title"
-                    onChange={e => setTitle(e.target.value)} />
-                <br /> <br />
-                <input
-                    {...register("price")}
-                    placeholder="Price"
-                    onChange={e => setPrice(e.target.value)} />
-                <br /> <br />
-                <input
-                    {...register("img")}
-                    placeholder="Image"
-                    onChange={e => setImage(e.target.files[0])}
-                    type="file"
-                    name='file'
-                    multiple
-                    accept='image/*' />
-                <br /> <br />
-                <input
-                    {...register("productCode")}
-                    placeholder="Product Code"
-                    onChange={e => setProductCode(e.target.value)} />
-                <br /> <br />
-                <input
-                    autocomplete="off"
-                    {...register("category")}
-                    placeholder="Category"
-                    onChange={e => setCategory(e.target.value)} />
-                <br /> <br />
-                <input type="submit" />
-            </form> */}
+            <Col xs={4} md={4}>
+                <Link to="/home" >
+                    <img src={logo} style={{
+                        margin: '15px 0'
+                    }} alt="" className='img-fluid' width="200px" height="200px" />
+                </Link>
+            </Col>
+
             <Container>
                 <Row>
                     <Col xs={6}>
@@ -173,6 +149,15 @@ const AddProduct = () => {
 
                                 </Col>
                             </Form.Group>
+                            <Form.Group as={Row} className="mb-3" controlId="formHorizontalCountry">
+                                <Form.Label column sm={4}>
+                                    Product Update
+                                </Form.Label>
+                                <Col sm={8}>
+                                    <Form.Control {...register("ProductUpdate")} placeholder="Product Update" type="text" />
+
+                                </Col>
+                            </Form.Group>
 
 
                             <Button variant="primary" type="submit">
@@ -183,6 +168,9 @@ const AddProduct = () => {
                     </Col>
                 </Row>
             </Container>
+            <p>
+
+            </p>
         </>
 
     )

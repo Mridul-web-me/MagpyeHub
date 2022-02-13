@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { Accordion, Button, Col, Container, Row, Spinner } from 'react-bootstrap'
-import { getStoredCart } from '../../../../../fakeDB'
 import useProduct from '../../../../../hooks/Product/useProduct'
 import Footer from '../../../../Footer/Footer'
 import Header from '../../../../Header/Header'
 import AllProduct from '../../../AllProduct/AllProduct'
+import { Link } from 'react-router-dom'
+import './Pillows.css'
+import Newsletter from '../../../../Newsletter/Newsletter'
+
 
 
 const Pillows = () => {
@@ -18,7 +21,7 @@ const Pillows = () => {
     const [price, setPrice] = useState(0);
     const size = 8;
 
-    const category = 'bedding'
+    const category = 'pillows'
     useEffect(() => {
         fetch(`http://localhost:5000/products?category=${category}&&page=${page}&&size=${size}`)
             .then(res => res.json())
@@ -30,7 +33,7 @@ const Pillows = () => {
                 console.log(data.products);
                 setLoading(false)
             });
-    }, [page]);
+    }, [page, products]);
 
 
 
@@ -39,6 +42,7 @@ const Pillows = () => {
             return curElem.category === catProduct;
         });
         setFilter(updatedProduct);
+
     };
 
     const handleInput = (e) => {
@@ -54,7 +58,13 @@ const Pillows = () => {
                 margin: '40px 0'
             }}>
                 <Row>
-                    <Col xs={12} md={2}>
+                    <h3 style={{
+                        textAlign: 'start',
+                        color: '#303030', fontSize: '26px',
+                        textTransform: 'uppercase',
+                        margin: '20px 0'
+                    }}>Pillows</h3>
+                    <Col xs={12} md={3}>
                         <Accordion defaultActiveKey="0">
                             <Accordion.Item eventKey="0">
                                 <Accordion.Header>Price Range</Accordion.Header>
@@ -64,49 +74,53 @@ const Pillows = () => {
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="1">
-                                <Accordion.Header>Item 1</Accordion.Header>
+                                <Accordion.Header>Home Furnishings & Accessories</Accordion.Header>
                                 <Accordion.Body>
-                                    <Button onClick={() => { filterProduct('t-shirt') }}>T-shirt</Button>
+                                    <div className="filterItem">
+                                        <Link onClick={() => { filterProduct('bedding') }} to="">Bedding</Link> <br />
+                                        <Link onClick={() => { filterProduct('pillows') }} to="">Pillows</Link> <br />
+                                        <Link onClick={() => { filterProduct('throwsBlanketsAndSpreads') }} to="">Throws, blankets and Spreads</Link> <br />
+                                        <Link onClick={() => { filterProduct('towels') }} to="">Towels</Link> <br />
+                                        <Link onClick={() => { filterProduct('bathroomAccessories') }} to="">Bathroom Accessories</Link> <br />
+                                        <Link onClick={() => { filterProduct('cushions') }} to="">Cushions</Link> <br />
+                                        <Link onClick={() => { filterProduct('candlesAndHomeFragrances') }} to="">Candles and Home Fragrances</Link> <br />
+                                    </div>
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="2">
-                                <Accordion.Header>Item 1</Accordion.Header>
+                                <Accordion.Header>Cooking & Dining</Accordion.Header>
                                 <Accordion.Body>
-                                    Lorem ipsum dolor sit amet
+                                    <div className="filterItem">
+                                        <Link onClick={() => { filterProduct('potsPans') }} to="">Pots & Pans</Link><br />
+                                        <Link onClick={() => { filterProduct('picnicware') }} to="">Picnicware</Link><br />
+                                        <Link onClick={() => { filterProduct('tableware') }} to="">Tableware</Link><br />
+                                        <Link onClick={() => { filterProduct('glassesDrinkware') }} to="">Glasses & Drinkware</Link><br />
+                                        <Link onClick={() => { filterProduct('cutlery') }} to="">Cutlery</Link><br />
+                                        <Link onClick={() => { filterProduct('foodProcessorsMixersBlendersJuicers') }} to="">Food Processors, Mixers, Blenders & Juicers</Link><br />
+                                    </div>
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="3">
-                                <Accordion.Header>Item 1</Accordion.Header>
+                                <Accordion.Header>Brand</Accordion.Header>
                                 <Accordion.Body>
-                                    Lorem ipsum dolor sit amet
-                                </Accordion.Body>
-                            </Accordion.Item>
-                            <Accordion.Item eventKey="4">
-                                <Accordion.Header>Item 1</Accordion.Header>
-                                <Accordion.Body>
-                                    Lorem ipsum dolor sit amet
-                                </Accordion.Body>
-                            </Accordion.Item>
-                            <Accordion.Item eventKey="5">
-                                <Accordion.Header>Item 1</Accordion.Header>
-                                <Accordion.Body>
-                                    Lorem ipsum dolor sit amet
-                                </Accordion.Body>
-                            </Accordion.Item>
-                            <Accordion.Item eventKey="6">
-                                <Accordion.Header>Item 1</Accordion.Header>
-                                <Accordion.Body>
-                                    Lorem ipsum dolor sit amet
+                                    <div className="filterItem">
+                                        <Link onClick={() => { filterProduct('potsPans') }} to="">Pots & Pans</Link><br />
+                                        <Link onClick={() => { filterProduct('picnicware') }} to="">Picnicware</Link><br />
+                                        <Link onClick={() => { filterProduct('tableware') }} to="">Tableware</Link><br />
+                                        <Link onClick={() => { filterProduct('glassesDrinkware') }} to="">Glasses & Drinkware</Link><br />
+                                        <Link onClick={() => { filterProduct('cutlery') }} to="">Cutlery</Link><br />
+                                        <Link onClick={() => { filterProduct('foodProcessorsMixersBlendersJuicers') }} to="">Food Processors, Mixers, Blenders & Juicers</Link><br />
+                                    </div>
                                 </Accordion.Body>
                             </Accordion.Item>
                         </Accordion>
                     </Col>
-                    <Col xs={12} md={10}>
+                    <Col xs={12} md={9}>
                         {loading ? <div className='text-center'> <Spinner animation="grow" variant="info" />
                             <Spinner animation="grow" variant="info" />
                         </div> : <div>
 
-                            {products.length ? <Row xs={1} md={4} className="g-4">
+                            {!filter.length ? <Row xs={1} md={4} className="g-4">
                                 {
                                     products.filter(product => { return product.price > parseInt(price) })
                                         .map(product =>
@@ -153,29 +167,10 @@ const Pillows = () => {
                     </Col>
                 </Row>
             </Container>
+            <Newsletter></Newsletter>
             <Footer></Footer>
         </div>
     )
 }
 
 export default Pillows
-
-
-
-//     <Row xs={1} md={4} className="g-4">
-//     {loading ? <div> <Spinner animation="grow" /></div> :
-//         products.filter(range => { return range.price > parseInt(price, 10) })
-//             .map(product =>
-//                 <>
-//                     <AllProduct
-//                         key={product._id}
-//                         product={product}
-//                         handleAddToCart={handleAddToCart}
-//                     pageCount={pageCount}
-//                     ></AllProduct>
-//                 </>
-
-//             )
-//     }
-
-// </Row>

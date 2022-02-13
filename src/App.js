@@ -9,7 +9,6 @@ import BathroomAccessories from './Component/Product/HomeGarden/HomeFurnishingsA
 import Cushions from './Component/Product/HomeGarden/HomeFurnishingsAccessories/Cushions/Cushions';
 import CandlesandHomeFragrances from './Component/Product/HomeGarden/HomeFurnishingsAccessories/CandlesandHomeFragrances/CandlesandHomeFragrances';
 import GlassesDrinkware from './Component/Product/HomeGarden/CookingDining/GlassesDrinkware/GlassesDrinkware';
-import Picnicware from './Component/Product/HomeGarden/CookingDining/Picnicware/Picnicware';
 import PotsPans from './Component/Product/HomeGarden/CookingDining/PotsPans/PotsPans';
 import Tableware from './Component/Product/HomeGarden/CookingDining/Tableware/Tableware';
 import Cutlery from './Component/Product/HomeGarden/CookingDining/Cutlery/Cutlery';
@@ -74,6 +73,7 @@ import OrderHistory from './Component/Header/YourAccount/OrderHistory/OrderHisto
 import UpdateDetails from './Component/Header/YourAccount/MyDetails/UpdateDetails/UpdateDetails';
 import AddDetails from './Component/Header/YourAccount/MyDetails/AddDetails/AddDetails';
 import ManageProducts from './Component/Product/ManageProducts/ManageProducts';
+import PaymentOptionDetails from './Component/PaymentOption/PaymentOptionDetails';
 
 
 
@@ -99,7 +99,6 @@ function App() {
             <Route path="/Cushions" element={<Cushions />} />
             <Route path="/CandlesandHomeFragrances" element={<CandlesandHomeFragrances />} />
             <Route path="/GlassesDrinkware" element={<GlassesDrinkware />} />
-            <Route path="/Picnicware" element={<Picnicware />} />
             <Route path="/PotsPans" element={<PotsPans />} />
             <Route path="/Tableware" element={<Tableware />} />
             <Route path="/Cutlery" element={<Cutlery />} />
@@ -160,6 +159,7 @@ function App() {
             <Route path="/updateDetails/:profileId" element={<UpdateDetails />} />
             <Route path="/addDetails" element={<AddDetails />} />
             <Route path="/manageProducts" element={<ManageProducts />} />
+            <Route path="/payment-option" element={<PaymentOptionDetails />} />
           </Routes>
         </Router>
       </AuthProvider>

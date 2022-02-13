@@ -16,7 +16,7 @@ const Checkout = () => {
     const onSubmit = data => {
         const savedCart = getStoredCart()
         data.order = savedCart
-        fetch('https://immense-spire-59977.herokuapp.com/orders', {
+        fetch('http://localhost:5000/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -66,54 +66,50 @@ const Checkout = () => {
                                 textAlign: 'start'
                             }} >
                                 <div className="row">
-                                    {profile.map(billingAddress => <div
-                                        key={billingAddress._id}
-                                        billingAddress={billingAddress}
-                                    >
-                                        <div className="col-50">
-                                            <h3>Billing Address</h3>
-                                            <Form.Group className="mb-3" controlId="formHorizontalName">
-                                                <Form.Label><i class="fa fa-user"></i> Full Name</Form.Label>
-                                                <Form.Control required type="name"
-                                                    defaultValue={billingAddress.name}
-                                                    {...register("fullName")} />
-                                            </Form.Group>
-                                            <Form.Group className="mb-3" controlId="formHorizontalEmail">
-                                                <Form.Label><i class="fa fa-envelope"></i> Email</Form.Label>
-                                                {user.email && <Form.Control required type="name" value={user.email} {...register("email")} />}
-                                            </Form.Group>
-                                            <Form.Group className="mb-3" controlId="formHorizontalPhone">
-                                                <Form.Label><i class="fas fa-phone"></i> Phone</Form.Label>
-                                                {billingAddress.phone && <Form.Control required type="name" defaultValue={billingAddress.phone} {...register("phone")} />}
-                                            </Form.Group>
-                                            <Form.Group className="mb-3" controlId="formHorizontalAddress">
-                                                <Form.Label><i className="fa fa-address-card-o"></i> Address</Form.Label>
-                                                <Form.Control required type="name" placeholder="542 W. 15th Street" {...register("address")} />
-                                            </Form.Group>
 
-                                            <Form.Group className="mb-3" controlId="formHorizontalCity">
-                                                <Form.Label><i className="fa fa-institution"></i> City</Form.Label>
-                                                <Form.Control required type="name" placeholder="New York" {...register("city")} />
-                                            </Form.Group>
+                                    <div className="col-50">
+                                        <h3>Billing Address</h3>
+                                        <Form.Group className="mb-3" controlId="formHorizontalName">
+                                            <Form.Label><i class="fa fa-user"></i> Full Name</Form.Label>
+                                            <Form.Control required type="name"
+                                                placeholder='Name'
+                                                {...register("fullName")} />
+                                        </Form.Group>
+                                        <Form.Group className="mb-3" controlId="formHorizontalEmail">
+                                            <Form.Label><i class="fa fa-envelope"></i> Email</Form.Label>
+                                            {user.email && <Form.Control required type="name" value={user.email} {...register("email")} />}
+                                        </Form.Group>
+                                        <Form.Group className="mb-3" controlId="formHorizontalPhone">
+                                            <Form.Label><i class="fas fa-phone"></i> Phone</Form.Label>
+                                            {<Form.Control required type="name" placeholder='Phone' {...register("phone")} />}
+                                        </Form.Group>
+                                        <Form.Group className="mb-3" controlId="formHorizontalAddress">
+                                            <Form.Label><i className="fa fa-address-card-o"></i> Address</Form.Label>
+                                            <Form.Control required type="name" placeholder="542 W. 15th Street" {...register("address")} />
+                                        </Form.Group>
+
+                                        <Form.Group className="mb-3" controlId="formHorizontalCity">
+                                            <Form.Label><i className="fa fa-institution"></i> City</Form.Label>
+                                            <Form.Control required type="name" placeholder="New York" {...register("city")} />
+                                        </Form.Group>
 
 
-                                            <div className="row">
-                                                <div className="col-50">
-                                                    <Form.Group className="mb-3" controlId="formHorizontalState">
-                                                        <Form.Label> State</Form.Label>
-                                                        <Form.Control required type="name" placeholder="NY"{...register("state")} />
-                                                    </Form.Group>
+                                        <div className="row">
+                                            <div className="col-50">
+                                                <Form.Group className="mb-3" controlId="formHorizontalState">
+                                                    <Form.Label> State</Form.Label>
+                                                    <Form.Control required type="name" placeholder="NY"{...register("state")} />
+                                                </Form.Group>
 
-                                                </div>
-                                                <div className="col-50">
-                                                    <Form.Group className="mb-3" controlId="formHorizontalZip">
-                                                        <Form.Label> Zip</Form.Label>
-                                                        <Form.Control required type="name" placeholder="10001"{...register("Zip")} />
-                                                    </Form.Group>
-                                                </div>
+                                            </div>
+                                            <div className="col-50">
+                                                <Form.Group className="mb-3" controlId="formHorizontalZip">
+                                                    <Form.Label> Zip</Form.Label>
+                                                    <Form.Control required type="name" placeholder="10001"{...register("Zip")} />
+                                                </Form.Group>
                                             </div>
                                         </div>
-                                    </div>)}
+                                    </div>
 
                                     <div className="col-50">
                                         <h3>Payment</h3>

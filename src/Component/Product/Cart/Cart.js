@@ -21,62 +21,72 @@ const Cart = () => {
             <Container fluid style={{
                 margin: '50px 0'
             }}>
-                {carts.length ? <div className='py-5 bg-light'>
-
-
-                    <div>
-                        <Row style={{
-                            borderTop: '1px solid rgb(159 159 159)',
-                            borderBottom: '1px solid rgb(159 159 159)',
-                            margin: '10px 0'
+                {carts.length ?
+                    <>
+                        <div style={{
+                            textAlign: 'end'
                         }}>
-                            <Col xs={6} md={6}>
-                                <h5 className='text-start'><i class="fas fa-shopping-basket"></i> Your Basket Contains: {totalQuantity} Items</h5>
-                            </Col>
-                            <Col xs={6} md={2}>
-                                <h5>Quantity</h5>
-                            </Col>
-                            <Col xs={6} md={2}>
-                                <h5>Price</h5>
-                            </Col>
-                            <Col xs={6} md={2}>
-                                <h5>Sub Total</h5>
-                            </Col>
-                        </Row>
-
-                        <div>
-                            {
-                                carts.map((cart) => <Carts
-                                    key={cart._id}
-                                    cart={cart}
-                                ></Carts>)
-                            }
+                            <Link to='/proceedToPayment'>
+                                <Button variant='success'>Proceed To Payment </Button>
+                            </Link>
                         </div>
+                        <div className='py-5 bg-light'>
 
-                        <Row>
-                            <Col xs={6} md={6}>
 
-                            </Col>
-                            <Col xs={6} md={2}>
+                            <div>
+                                <Row style={{
+                                    borderTop: '1px solid rgb(159 159 159)',
+                                    borderBottom: '1px solid rgb(159 159 159)',
+                                    margin: '10px 0'
+                                }}>
+                                    <Col xs={6} md={6}>
+                                        <h5 className='text-start'><i class="fas fa-shopping-basket"></i> Your Basket Contains: {totalQuantity} Items</h5>
+                                    </Col>
+                                    <Col xs={6} md={2}>
+                                        <h5>Quantity</h5>
+                                    </Col>
+                                    <Col xs={6} md={2}>
+                                        <h5>Price</h5>
+                                    </Col>
+                                    <Col xs={6} md={2}>
+                                        <h5>Sub Total</h5>
+                                    </Col>
+                                </Row>
 
-                            </Col>
-                            <Col xs={6} md={2}>
-                                <p>SubTotal</p>
-                            </Col>
-                            <Col xs={6} md={2}>
-                                <p> {total.toFixed(2)}</p>
-                            </Col>
-                        </Row>
-                    </div>
+                                <div>
+                                    {
+                                        carts.map((cart) => <Carts
+                                            key={cart._id}
+                                            cart={cart}
+                                        ></Carts>)
+                                    }
+                                </div>
 
-                    <div style={{
-                        textAlign: 'end'
-                    }}>
-                        <Link to='/proceedToPayment'>
-                            <Button variant='success'>Proceed To Payment </Button>
-                        </Link>
-                    </div>
-                </div>
+                                <Row>
+                                    <Col xs={6} md={6}>
+
+                                    </Col>
+                                    <Col xs={6} md={2}>
+
+                                    </Col>
+                                    <Col xs={6} md={2}>
+                                        <p>SubTotal</p>
+                                    </Col>
+                                    <Col xs={6} md={2}>
+                                        <p> {total.toFixed(2)}</p>
+                                    </Col>
+                                </Row>
+                            </div>
+
+                            <div style={{
+                                textAlign: 'end'
+                            }}>
+                                <Link to='/proceedToPayment'>
+                                    <Button variant='success'>Proceed To Payment </Button>
+                                </Link>
+                            </div>
+                        </div>
+                    </>
                     :
 
                     <div>

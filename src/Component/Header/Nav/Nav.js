@@ -59,7 +59,6 @@ const Nav = () => {
                                             <hr />
                                             <ul className="mega-links">
                                                 <li><Link to="/potsPans">Pots & Pans</Link></li>
-                                                <li><Link to="/picnicware">Picnicware</Link></li>
                                                 <li><Link to="/tableware">Tableware</Link></li>
                                                 <li><Link to="/glassesDrinkware">Glasses & Drinkware</Link></li>
                                                 <li><Link to="/cutlery">Cutlery</Link></li>

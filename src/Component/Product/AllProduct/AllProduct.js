@@ -10,7 +10,7 @@ const AllProduct = (props) => {
     return (
         <>
 
-            {title ? <Col className="productCard">
+            <Col className="productCard">
                 <Card>
                     <Card.Img className='img-fluid' variant="top" style={{ height: "200px" }} src={img} />
 
@@ -31,13 +31,13 @@ const AllProduct = (props) => {
                                 alignItems: 'center',
                             }}>
                                 <Button onClick={() => props.handleAddToCart(props.product)} type='button' style={{
-                                    width: '100px',
+                                    width: '70px',
                                     background: '#0091c0',
                                     border: '1px solid #0091c0'
                                 }}>Buy</Button>
                                 <Link to={`/placeOrder/${_id}`}>
                                     <Button style={{
-                                        width: '100px',
+                                        width: '70px',
                                         background: '#fff',
                                         border: '1px solid #0091c0',
                                         color: '#0091c0'
@@ -48,9 +48,6 @@ const AllProduct = (props) => {
                     </Card.Body>
                 </Card>
             </Col>
-                :
-                <h2 style={{ margin: '50px' }}>No Product Available</h2>
-            }
 
         </>
     )

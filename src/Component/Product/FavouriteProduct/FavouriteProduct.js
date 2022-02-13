@@ -5,6 +5,7 @@ import Slider from 'react-slick';
 import useProduct from '../../../hooks/Product/useProduct';
 import AllFavProduct from './AllFavProduct/AllFavProduct';
 import './FavouriteProduct.css'
+import img from '../../../img/favorit.jpg'
 
 const FavouriteProduct = () => {
 
@@ -36,27 +37,35 @@ const FavouriteProduct = () => {
         pauseOnHover: true,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1200,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 4,
                     slidesToScroll: 3,
                     infinite: true,
-                    dots: true
                 }
             },
             {
-                breakpoint: 600,
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 2,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 768,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
-                    initialSlide: 2
+                    infinite: true,
                 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 576,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    initialSlide: 2
                 }
             }
         ]
@@ -66,9 +75,10 @@ const FavouriteProduct = () => {
         <div style={{
             overflow: 'hidden'
         }}>
+            <img src={img} alt="" />
             <Container fluid>
 
-                <h2> Favorite Product </h2>
+
 
                 {loading ? <div className='text-center'><Spinner animation="grow" variant="info" />
                     <Spinner animation="grow" variant="info" />

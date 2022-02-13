@@ -33,6 +33,7 @@ const ManageProducts = () => {
       <Header></Header>
       <Container>
         <Row>
+          <h2>{products.length}</h2>
           {
             products.map(product => <div key={product._id}
               product={product}>
