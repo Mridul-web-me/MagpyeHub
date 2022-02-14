@@ -74,6 +74,17 @@ import UpdateDetails from './Component/Header/YourAccount/MyDetails/UpdateDetail
 import AddDetails from './Component/Header/YourAccount/MyDetails/AddDetails/AddDetails';
 import ManageProducts from './Component/Product/ManageProducts/ManageProducts';
 import PaymentOptionDetails from './Component/PaymentOption/PaymentOptionDetails';
+import Aptamil from './Component/Product/Brand/Aptamil/Aptamil';
+import BabyClub from './Component/Product/Brand/Baby-Club/BabyClub';
+import Britax from './Component/Product/Brand/Britax/Britax';
+import FitFlop from './Component/Product/Brand/Fitflop/FitFlop';
+import Gucci from './Component/Product/Brand/Gucci/Gucci';
+import Hipp from './Component/Product/Brand/Hipp/Hipp';
+import Jole from './Component/Product/Brand/Jole/Jole';
+import Levis from './Component/Product/Brand/Levis/Levis';
+import MaxiCosi from './Component/Product/Brand/Maxi-Cosi/MaxiCosi';
+import PhaseEight from './Component/Product/Brand/Phase-Eight/PhaseEight';
+import TedBaker from './Component/Product/Brand/TedBaker/TedBaker';
 
 
 
@@ -91,59 +102,59 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/register" element={<LoginForm />} />
             <Route path="/register" element={<Login />} />
-            <Route path="/bedding" element={<Bedding />} />
-            <Route path="/pillows" element={<Pillows />} />
-            <Route path="/throwsblanketsandSpreads" element={<ThrowsblanketsandSpreads />} />
-            <Route path="/towels" element={<Towels />} />
-            <Route path="/BathroomAccessories" element={<BathroomAccessories />} />
-            <Route path="/Cushions" element={<Cushions />} />
-            <Route path="/CandlesandHomeFragrances" element={<CandlesandHomeFragrances />} />
-            <Route path="/GlassesDrinkware" element={<GlassesDrinkware />} />
-            <Route path="/PotsPans" element={<PotsPans />} />
-            <Route path="/Tableware" element={<Tableware />} />
-            <Route path="/Cutlery" element={<Cutlery />} />
-            <Route path="/FoodProcessorsMixersBlendersJuicers" element={<FoodProcessorsMixersBlendersJuicers />} />
-            <Route path="/Dresses" element={<Dresses />} />
-            <Route path="/Jeans" element={<Jeans />} />
-            <Route path="/ShirtsTops" element={<ShirtsTops />} />
-            <Route path="/Shorts" element={<Shorts />} />
-            <Route path="/Skirts" element={<Skirts />} />
-            <Route path="/SportsTrainingGym" element={<SportsTrainingGym />} />
-            <Route path="/BrasSportsBras" element={<BrasSportsBras />} />
-            <Route path="/Nightwear" element={<Nightwear />} />
-            <Route path="/Socks" element={<Socks />} />
-            <Route path="/Tights" element={<Tights />} />
-            <Route path="/Blazers" element={<Blazers />} />
-            <Route path="/MenJeans" element={<MenJeans />} />
-            <Route path="/PoloShirts" element={<PoloShirts />} />
-            <Route path="/MenShirts" element={<MenShirts />} />
-            <Route path="/MenShorts" element={<MenShorts />} />
-            <Route path="/MenSportsClothesGym" element={<MenSportsClothesGym />} />
-            <Route path="/Suits" element={<Suits />} />
-            <Route path="/Swimwear" element={<Swimwear />} />
-            <Route path="/Trousers" element={<Trousers />} />
-            <Route path="/PyjamasNightwear" element={<PyjamasNightwear />} />
-            <Route path="/MenSocks" element={<MenSocks />} />
-            <Route path="/Underwear" element={<Underwear />} />
-            <Route path="/Foundations" element={<Foundations />} />
-            <Route path="/Concealers" element={<Concealers />} />
-            <Route path="/Eyeshadows" element={<Eyeshadows />} />
-            <Route path="/Mascaras" element={<Mascaras />} />
-            <Route path="/Lipsticks" element={<Lipsticks />} />
-            <Route path="/NailPolish" element={<NailPolish />} />
-            <Route path="/MakeupGiftSets" element={<MakeupGiftsSets />} />
-            <Route path="/MakeupBrushes" element={<MakeupBrushes />} />
-            <Route path="/T-Shirts" element={<TShirts />} />
-            <Route path="/Waistcoats" element={<Waistcoats />} />
-            <Route path="/Partywear" element={<Partywear />} />
-            <Route path="/HandNailsets" element={<HandNailsets />} />
-            <Route path="/MakeupBags" element={<MakeupBags />} />
-            <Route path="/MakeupAccessories" element={<MakeupAccessories />} />
-            <Route path="/womensPerfume" element={<WomensPerfume />} />
-            <Route path="/PerfumeGiftSets" element={<PerfumeGiftSets />} />
-            <Route path="/MensAftershave" element={<MensAftershave />} />
-            <Route path="/MensPerfume" element={<MensPerfume />} />
-            <Route path="/AftershaveGiftSets" element={<AftershaveGiftSets />} />
+            <Route path="/product/bedding" element={<Bedding />} />
+            <Route path="/product/pillows" element={<Pillows />} />
+            <Route path="/product/throwsblanketsandSpreads" element={<ThrowsblanketsandSpreads />} />
+            <Route path="/product/towels" element={<Towels />} />
+            <Route path="/product/BathroomAccessories" element={<BathroomAccessories />} />
+            <Route path="/product/Cushions" element={<Cushions />} />
+            <Route path="/product/CandlesandHomeFragrances" element={<CandlesandHomeFragrances />} />
+            <Route path="/product/GlassesDrinkware" element={<GlassesDrinkware />} />
+            <Route path="/product/PotsPans" element={<PotsPans />} />
+            <Route path="/product/Tableware" element={<Tableware />} />
+            <Route path="/product/Cutlery" element={<Cutlery />} />
+            <Route path="/product/FoodProcessorsMixersBlendersJuicers" element={<FoodProcessorsMixersBlendersJuicers />} />
+            <Route path="/product/Dresses" element={<Dresses />} />
+            <Route path="/product/Jeans" element={<Jeans />} />
+            <Route path="/product/ShirtsTops" element={<ShirtsTops />} />
+            <Route path="/product/Shorts" element={<Shorts />} />
+            <Route path="/product/Skirts" element={<Skirts />} />
+            <Route path="/product/SportsTrainingGym" element={<SportsTrainingGym />} />
+            <Route path="/product/BrasSportsBras" element={<BrasSportsBras />} />
+            <Route path="/product/Nightwear" element={<Nightwear />} />
+            <Route path="/product/Socks" element={<Socks />} />
+            <Route path="/product/Tights" element={<Tights />} />
+            <Route path="/product/Blazers" element={<Blazers />} />
+            <Route path="/product/MenJeans" element={<MenJeans />} />
+            <Route path="/product/PoloShirts" element={<PoloShirts />} />
+            <Route path="/product/MenShirts" element={<MenShirts />} />
+            <Route path="/product/MenShorts" element={<MenShorts />} />
+            <Route path="/product/MenSportsClothesGym" element={<MenSportsClothesGym />} />
+            <Route path="/product/Suits" element={<Suits />} />
+            <Route path="/product/Swimwear" element={<Swimwear />} />
+            <Route path="/product/Trousers" element={<Trousers />} />
+            <Route path="/product/PyjamasNightwear" element={<PyjamasNightwear />} />
+            <Route path="/product/MenSocks" element={<MenSocks />} />
+            <Route path="/product/Underwear" element={<Underwear />} />
+            <Route path="/product/Foundations" element={<Foundations />} />
+            <Route path="/product/Concealers" element={<Concealers />} />
+            <Route path="/product/Eyeshadows" element={<Eyeshadows />} />
+            <Route path="/product/Mascaras" element={<Mascaras />} />
+            <Route path="/product/Lipsticks" element={<Lipsticks />} />
+            <Route path="/product/NailPolish" element={<NailPolish />} />
+            <Route path="/product/MakeupGiftSets" element={<MakeupGiftsSets />} />
+            <Route path="/product/MakeupBrushes" element={<MakeupBrushes />} />
+            <Route path="/product/T-Shirts" element={<TShirts />} />
+            <Route path="/product/Waistcoats" element={<Waistcoats />} />
+            <Route path="/product/Partywear" element={<Partywear />} />
+            <Route path="/product/HandNailsets" element={<HandNailsets />} />
+            <Route path="/product/MakeupBags" element={<MakeupBags />} />
+            <Route path="/product/MakeupAccessories" element={<MakeupAccessories />} />
+            <Route path="/product/womensPerfume" element={<WomensPerfume />} />
+            <Route path="/product/PerfumeGiftSets" element={<PerfumeGiftSets />} />
+            <Route path="/product/MensAftershave" element={<MensAftershave />} />
+            <Route path="/product/MensPerfume" element={<MensPerfume />} />
+            <Route path="/product/AftershaveGiftSets" element={<AftershaveGiftSets />} />
             <Route path="/profile" element={<YourAccount />} />
             <Route path="/addProduct" element={<AddProduct />} />
             <Route path="/placeOrder/:productId" element={<PlaceOrder />} />
@@ -160,6 +171,17 @@ function App() {
             <Route path="/addDetails" element={<AddDetails />} />
             <Route path="/manageProducts" element={<ManageProducts />} />
             <Route path="/payment-option" element={<PaymentOptionDetails />} />
+            <Route path="/brand/aptamil" element={<Aptamil />} />
+            <Route path="/brand/baby-club" element={<BabyClub />} />
+            <Route path="/brand/britax" element={<Britax />} />
+            <Route path="/brand/fitflop" element={<FitFlop />} />
+            <Route path="/brand/gucci" element={<Gucci />} />
+            <Route path="/brand/hipp" element={<Hipp />} />
+            <Route path="/brand/jole" element={<Jole />} />
+            <Route path="/brand/levis" element={<Levis />} />
+            <Route path="/brand/maxi-cosi" element={<MaxiCosi />} />
+            <Route path="/brand/phase-eight" element={<PhaseEight />} />
+            <Route path="/brand/ted-baker" element={<TedBaker />} />
           </Routes>
         </Router>
       </AuthProvider>

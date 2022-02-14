@@ -1,7 +1,6 @@
 const addToDb = _id => {
     const stored_cart = getStoredCart();
     if (_id in stored_cart) {
-        stored_cart.max = 10;
         stored_cart[_id] += 1;
 
     }
@@ -12,7 +11,6 @@ const addToDb = _id => {
 }
 const DecrementToDb = _id => {
     const stored_cart = getStoredCart();
-    stored_cart.min = 1
     if (_id in stored_cart) {
         stored_cart[_id] -= 1;
     }

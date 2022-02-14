@@ -14,8 +14,10 @@ const HeaderTop = () => {
         <div>
             <div className='header-top'>
                 <Container fluid>
-                    <Row>
-                        <Col xs={4} md={4} style={{
+                    <Row style={{
+                        justifyContent: 'space-between'
+                    }}>
+                        <Col className='searchBoxCol' xs={4} md={4} style={{
                             margin: '15px 0'
                         }} >
                             <div className='searchBox'>

@@ -347,7 +347,7 @@ transform: rotate(180deg);
 .mobileQuote{
   display: block;
 }
-.searchBox,
+.searchBoxCol,
 .quote{
   display: none;
 }

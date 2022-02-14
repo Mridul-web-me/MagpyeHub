@@ -39,6 +39,7 @@ const Brand = () => {
             <Container fluid>
                 <Swiper style={{
                     height: '30%',
+                    margin: '20px 0'
                 }} slidesPerView={1} spaceBetween={10}
                     autoplay={{
                         "delay": 1500,
@@ -59,58 +60,58 @@ const Brand = () => {
                         }
                     }} className="mySwiper">
                     <SwiperSlide className="brandSlider">
-                        <Link to="/">
+                        <Link to="/brand/maxi-cosi">
                             <img src={brand1} alt="" />
                         </Link>
                     </SwiperSlide>
                     <SwiperSlide className="brandSlider">
-                        <Link to="/">
+                        <Link to="/brand/britax">
                             <img src={brand2} alt="" />
                         </Link>
                     </SwiperSlide>
                     <SwiperSlide className="brandSlider">
-                        <Link to="/">
+                        <Link to="/brand/levis">
                             <img src={brand3} alt="" />
                         </Link>
                     </SwiperSlide>
                     <SwiperSlide className="brandSlider">
-                        <Link to="/">
+                        <Link to="/brand/aptamil">
                             <img src={brand4} alt="" />
                         </Link>
                     </SwiperSlide>
                     <SwiperSlide className="brandSlider">
-                        <Link to="/">
+                        <Link to="/brand/baby-club">
                             <img src={brand5} alt="" />
                         </Link>
                     </SwiperSlide>
                     <SwiperSlide className="brandSlider">
-                        <Link to="/">
+                        <Link to="/brand/phase-eight">
                             <img src={brand6} alt="" />
                         </Link>
                     </SwiperSlide>
                     <SwiperSlide className="brandSlider">
-                        <Link to="/">
+                        <Link to="/brand/jole">
                             <img src={brand7} alt="" />
                         </Link>
                     </SwiperSlide>
                     <SwiperSlide className="brandSlider">
-                        <Link to="/">
+                        <Link to="/brand/fitflop">
                             <img src={brand8} alt="" />
                         </Link>
                     </SwiperSlide>
                     <SwiperSlide className="brandSlider">
-                        <Link to="/">
+                        <Link to="/brand/hipp">
                             <img src={brand9} alt="" />
                         </Link>
                     </SwiperSlide>
                     <SwiperSlide className="brandSlider">
-                        <Link to="/">
+                        <Link to="/brand/gucci">
                             <img src={brand10} alt="" />
                         </Link>
                     </SwiperSlide>
                     <SwiperSlide className="brandSlider">
-                        <Link to="/">
-                            <img src={brand10} alt="" />
+                        <Link to="/brand/ted-baker">
+                            <img src={brand11} alt="" />
                         </Link>
                     </SwiperSlide>
                 </Swiper>
