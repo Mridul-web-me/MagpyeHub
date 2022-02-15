@@ -212,48 +212,48 @@ const Nav = () => {
                                             <header>Kids Clothing & Shoes</header>
                                             <hr />
                                             <ul className="mega-links">
-                                                <li><Link to="/product/shirtsTops">Shirts & Tops</Link></li>
-                                                <li><Link to="/product/dresses">Dresses</Link></li>
-                                                <li><Link to="/product/pyjamasNightwear">Pyjamas & Nightwear</Link></li>
-                                                <li><Link to="/product/trousersLeggings">Trousers & Leggings</Link></li>
-                                                <li><Link to="/product/jeans">Jeans</Link></li>
-                                                <li><Link to="/product/partyWear">Party Wear</Link></li>
-                                                <li><Link to="/product/girlsBriefs">Girls Briefs</Link></li>
-                                                <li><Link to="/product/socks">Socks</Link></li>
+                                                <li><Link to="/product/kids-shirtsTops">Shirts & Tops</Link></li>
+                                                <li><Link to="/product/kids-dresses">Dresses</Link></li>
+                                                <li><Link to="/product/kids-pyjamasNightwear">Pyjamas & Nightwear</Link></li>
+                                                <li><Link to="/product/kids-trousersLeggings">Trousers & Leggings</Link></li>
+                                                <li><Link to="/product/kids-jeans">Jeans</Link></li>
+                                                <li><Link to="/product/kids-partyWear">Party Wear</Link></li>
+                                                <li><Link to="/product/kids-girlsBriefs">Girls Briefs</Link></li>
+                                                <li><Link to="/product/kids-socks">Socks</Link></li>
                                             </ul>
                                         </div>
                                         <div className="row">
                                             <header>Girls Shoes</header>
                                             <hr />
                                             <ul className="mega-links">
-                                                <li><Link to="/product/trainers">Trainers</Link></li>
-                                                <li><Link to="/product/smartShoes">Smart Shoes</Link></li>
-                                                <li><Link to="/product/sandals">Sandals</Link></li>
-                                                <li><Link to="/product/flipflopsWellingtonBoots">Flipflops Wellington Boots</Link></li>
+                                                <li><Link to="/product/girls-trainers">Trainers</Link></li>
+                                                <li><Link to="/product/girls-smartShoes">Smart Shoes</Link></li>
+                                                <li><Link to="/product/girls-sandals">Sandals</Link></li>
+                                                <li><Link to="/product/girls-flipflopsWellingtonBoots">Flipflops Wellington Boots</Link></li>
                                             </ul>
                                         </div>
                                         <div className="row">
                                             <header>Boys Clothes</header>
                                             <hr />
                                             <ul className="mega-links">
-                                                <li><Link to="/product/shortsTrousers">Shorts & Trousers</Link></li>
-                                                <li><Link to="/product/shirtsTops">Shirts & Tops</Link></li>
-                                                <li><Link to="/product/pyjamasNightwear">Pyjamas & Nightwear</Link></li>
-                                                <li><Link to="/product/partywear">Party wear</Link></li>
-                                                <li><Link to="/product/pants">Pants</Link></li>
-                                                <li><Link to="/product/socks">Socks</Link></li>
-                                                <li><Link to="/product/hats">Hats</Link></li>
+                                                <li><Link to="/product/boys-shortsTrousers">Shorts & Trousers</Link></li>
+                                                <li><Link to="/product/boys-shirtsTops">Shirts & Tops</Link></li>
+                                                <li><Link to="/product/boys-pyjamasNightwear">Pyjamas & Nightwear</Link></li>
+                                                <li><Link to="/product/boys-partywear">Party wear</Link></li>
+                                                <li><Link to="/product/boys-pants">Pants</Link></li>
+                                                <li><Link to="/product/boys-socks">Socks</Link></li>
+                                                <li><Link to="/product/boys-hats">Hats</Link></li>
                                             </ul>
                                         </div>
                                         <div className="row">
                                             <header>Boys Shoes</header>
                                             <hr />
                                             <ul className="mega-links">
-                                                <li><Link to="/product/trainers">Trainers</Link></li>
-                                                <li><Link to="/product/smartShoes">Smart Shoes</Link></li>
-                                                <li><Link to="/product/sandals">Sandals</Link></li>
-                                                <li><Link to="/product/wellingtonBoots">Wellington Boots</Link></li>
-                                                <li><Link to="/product/flipflops">Flipflops</Link></li>
+                                                <li><Link to="/product/boys-trainers">Trainers</Link></li>
+                                                <li><Link to="/product/boys-smartShoes">Smart Shoes</Link></li>
+                                                <li><Link to="/product/boys-sandals">Sandals</Link></li>
+                                                <li><Link to="/product/boys-wellingtonBoots">Wellington Boots</Link></li>
+                                                <li><Link to="/product/boys-flipflops">Flipflops</Link></li>
                                             </ul>
                                         </div>
                                     </div>

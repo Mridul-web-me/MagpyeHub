@@ -31,11 +31,11 @@ const HeaderTop = () => {
                             </div>
                         </Col>
                         <Col xs={4} md={4}>
-                            <Link to="/home" >
+                            <a href="/home" >
                                 <img src={logo} style={{
                                     margin: '15px 0'
                                 }} alt="" className='img-fluid' width="200px" height="200px" />
-                            </Link>
+                            </a>
                         </Col>
                         <Col xs={4} md={4}>
                             <div className='cartMenu' style={{
@@ -62,7 +62,7 @@ const HeaderTop = () => {
                                     </Link>
                                 </div>
                                 <div>
-                                    <Link to="/cart">
+                                    <a href="/cart">
 
                                         <i class="fas fa-shopping-basket"></i>
                                         <Badge bg="secondary" className='fs-8' style={{
@@ -70,7 +70,7 @@ const HeaderTop = () => {
                                         }}>{totalQuantity}</Badge>
                                         <p>My Basket</p>
 
-                                    </Link>
+                                    </a>
                                 </div>
                             </div>
                         </Col>
