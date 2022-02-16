@@ -20,17 +20,13 @@ const Newsletter = () => {
             })
     }
     return (
-        <div className='newsletter'>
+        <div className='newsletter' style={{ marginTop: '50px' }}>
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-md-6">
                         <div className="newsletter-content">
                             <i className="fas fa-envelope"></i>
                             <h4>NEWSLETTER</h4>
-                            {/* <form className="d-flex" className='searchBox'>
-                                <input className="form-control me-2" type="search" placeholder="Search for Product & Brand..." aria-label="Search" />
-                                <i className="fas fa-check" type="submit"></i>
-                            </form> */}
                             <form className='searchBox' onSubmit={handleSubmit((onSubmit))}>
                                 <input className="form-control me-2" required  {...register("email")} placeholder="Email Address..." />
                                 <button style={{ display: 'contents' }}> <i className="fas fa-check" ></i></button>

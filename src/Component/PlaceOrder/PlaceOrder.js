@@ -13,7 +13,7 @@ const PlaceOrder = () => {
     const { productId } = useParams();
     const [product, setProduct] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${productId}`)
+        fetch(`https://desolate-spire-57096.herokuapp.com/products/${productId}`)
             .then(res => res.json())
             .then(data => setProduct(data));
         console.log(product);
@@ -192,12 +192,12 @@ const PlaceOrder = () => {
                             justifyContent: 'space-between'
                         }}
                     >
-                        <Tab style={{ color: '#606060', fontSize: '16px', margin: '30px' }} eventKey="productDetails" title="Product Details">
+                        <Tab style={{ color: '#606060', fontSize: '16px', margin: '30px' }} eventKey="productDetails" title="PRODUCT DETAILS">
                             <p style={{ textAlign: 'justify' }}> <strong>Product Code: {product._id}</strong> </p>
                             <p style={{ textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: product.description }}></p>
 
                         </Tab>
-                        <Tab style={{ color: '#606060', fontSize: '16px', margin: '30px' }} eventKey="DeliveryReturns" title="Delivery Returns">
+                        <Tab style={{ color: '#606060', fontSize: '16px', margin: '30px' }} eventKey="DeliveryReturns" title="DELIVERY RETURNS">
                             <p style={{ textAlign: 'justify' }}>
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis ratione quis sed eveniet, alias consectetur rem maiores unde fugit magni non, voluptatem cum incidunt eius. Aspernatur, deleniti ab quisquam nihil odio alias exercitationem quo repellendus esse sint facere dignissimos unde nulla magni, quam pariatur porro? Voluptatibus nisi voluptatum, beatae deleniti iusto dolores nostrum praesentium, unde similique molestias quia excepturi obcaecati sint enim ab accusantium ipsum consequuntur perferendis possimus itaque. Reiciendis maiores eos, alias earum soluta sunt rem distinctio obcaecati quaerat dolorem eum odio possimus eveniet voluptas? Reprehenderit dolores labore eaque repudiandae, perspiciatis officia esse, inventore porro incidunt dolore sit accusantium?
                             </p>

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button, Col, Container, Row } from 'react-bootstrap';
+import { useState } from 'react';
+import { Button, Col, Container, Row, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useProduct from '../../../hooks/Product/useProduct';
 import Footer from '../../Footer/Footer';
@@ -10,8 +11,7 @@ import Carts from './Carts';
 const Cart = () => {
 
 
-
-    const { totalQuantity, total, carts, } = useProduct({});
+    const { totalQuantity, total, carts, loading } = useProduct({});
 
     // const subtotal = quantity * price;
 
@@ -21,7 +21,10 @@ const Cart = () => {
             <Container fluid style={{
                 margin: '50px 0'
             }}>
-                {carts.length ?
+                {loading ? <div>
+                    <Spinner animation="grow" variant="info" />
+                    <Spinner animation="grow" variant="info" />
+                </div> : carts.length ?
                     <>
                         <div style={{
                             textAlign: 'end'

@@ -9,24 +9,18 @@ import img from '../../../img/favorit.jpg'
 
 const FavouriteProduct = () => {
 
-
     const { handleAddToCart } = useProduct();
-
-
     const [loading, setLoading] = useState(true);
-
     const [products, setProducts] = useState([])
-
     const category = 'bedding'
     useEffect(() => {
-        // fetch('./ProductData.JSON')
-        fetch(`http://localhost:5000/products?category=${category}`)
+        fetch(`https://desolate-spire-57096.herokuapp.com/products?category=${category}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products)
                 setLoading(false)
             });
-    }, []);
+    }, [category]);
 
     const settings = {
         infinite: true,
@@ -78,15 +72,12 @@ const FavouriteProduct = () => {
             <img src={img} alt="" />
             <Container fluid>
 
-
-
                 {loading ? <div className='text-center'><Spinner animation="grow" variant="info" />
                     <Spinner animation="grow" variant="info" />
                     <Spinner animation="grow" variant="info" />
                 </div> : <Slider className='favouriteProductCard' {...settings}>
                     {
                         products.map(product =>
-
                             <AllFavProduct
                                 key={product._id}
                                 product={product}
@@ -94,8 +85,6 @@ const FavouriteProduct = () => {
                             ></AllFavProduct>
                         )
                     }
-
-
                 </Slider>}
             </Container>
         </div>

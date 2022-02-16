@@ -12,7 +12,7 @@ const useProductFilter = () => {
     // const size = 5;
     useEffect(() => {
         fetch('./ProductData.JSON')
-        fetch(`http://localhost:5000/products`)
+        fetch(`https://desolate-spire-57096.herokuapp.com/products`)
             .then(res => res.json())
             .then(data => {
                 setAllProducts(data.products)
@@ -95,7 +95,7 @@ const useProductFilter = () => {
         setFilters,
         filters,
         setCart,
-        filterProduct
+        filterProduct,
     }
 };
 

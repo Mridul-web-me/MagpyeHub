@@ -8,7 +8,7 @@ const Register = () => {
     const [passDidNotMatch, setPassDidNotMatch] = useState('')
     const history = useNavigate()
 
-    const { registerUser, isLoading, user, authError } = useAuth();
+    const { registerUser, isLoading1, user, authError } = useAuth();
 
     // console.log(loginData);
 
@@ -35,8 +35,11 @@ const Register = () => {
     }
     return (
         <div>
-            <h5>CREATE AN ACCOUNT</h5>
-            {!isLoading && <Form onSubmit={handleRegistrationSubmit}>
+            <h5 style={{ margin: '50px' }}>CREATE AN ACCOUNT</h5>
+            {isLoading1 ? <div>
+                <Spinner animation="grow" variant="info" />
+                <Spinner animation="grow" variant="info" />
+            </div> : <Form onSubmit={handleRegistrationSubmit}>
                 <Form.Group as={Row} className="mb-3">
                     <Form.Label column sm="4">Name</Form.Label>
                     <Col sm="8">
@@ -90,9 +93,7 @@ const Register = () => {
                 </Form.Group>
                 <Button variant="outline-primary" type='submit'>Register</Button>
             </Form>}
-            {isLoading && <Spinner animation="border" role="status">
-                <span className="visually-hidden">Loading...</span>
-            </Spinner>}
+
             {user?.email && [
                 'success'
             ].map((variant, idx) => (

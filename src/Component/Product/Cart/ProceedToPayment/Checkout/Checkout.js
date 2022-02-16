@@ -4,6 +4,7 @@ import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import { clearTheCart, getStoredCart } from '../../../../../fakeDB';
+import useProduct from '../../../../../hooks/Product/useProduct';
 import useAuth from '../../../../../hooks/useAuth';
 import logo from '../../../../../img/logo.jpg'
 import './Checkout.css'
@@ -12,11 +13,14 @@ import './Checkout.css'
 const Checkout = () => {
     const navigate = useNavigate()
     const { user } = useAuth()
+    const { totalQuantity, total, carts, } = useProduct({});
+    // console.log(totalQuantity, total, carts);
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         const savedCart = getStoredCart()
-        data.order = savedCart
-        fetch('http://localhost:5000/orders', {
+        const savedProduct = carts;
+        data.order = { savedCart, savedProduct };
+        fetch('https://desolate-spire-57096.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -37,7 +41,7 @@ const Checkout = () => {
     const [profile, setProfile] = useState([])
     const [loading, setLoading] = useState(true)
     useEffect(() => {
-        axios.get(`http://localhost:5000/addressBook?email=${user.email}`, {
+        axios.get(`https://desolate-spire-57096.herokuapp.com/addressBook?email=${user.email}`, {
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('idToken')}`
             }
@@ -156,6 +160,26 @@ const Checkout = () => {
                                                     <Form.Control required type="name" placeholder="352"{...register("CVV")} />
                                                 </Form.Group>
                                             </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-25">
+                                        <div class="container">
+                                            <h4>Cart
+                                                <span class="price" tyle={{
+                                                    color: 'black'
+                                                }}>
+                                                    <i class="fa fa-shopping-cart"></i>
+                                                    <b>4</b>
+                                                </span>
+                                            </h4>
+                                            <p><a href="#">Product 1</a> <span class="price">$15</span></p>
+                                            <p><a href="#">Product 2</a> <span class="price">$5</span></p>
+                                            <p><a href="#">Product 3</a> <span class="price">$8</span></p>
+                                            <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+                                            <hr />
+                                            <p>Total <span class="price" style={{
+                                                color: 'black'
+                                            }}><b>$30</b></span></p>
                                         </div>
                                     </div>
 

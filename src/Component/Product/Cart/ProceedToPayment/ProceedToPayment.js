@@ -13,7 +13,7 @@ const ProceedToPayment = () => {
     const { user } = useAuth()
     const [profile, setProfile] = useState([])
     useEffect(() => {
-        axios.get(`http://localhost:5000/addressBook?email=${user.email}`, {
+        axios.get(`https://desolate-spire-57096.herokuapp.com/addressBook?email=${user.email}`, {
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('idToken')}`
             }

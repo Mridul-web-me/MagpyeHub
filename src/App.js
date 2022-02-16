@@ -126,6 +126,7 @@ import BoysSmartShoes from './Component/Product/Baby&child/BoysShoes/BoysSmartSh
 import BoysSandals from './Component/Product/Baby&child/BoysShoes/BoysSandals/BoysSandals';
 import BoysWellingtonBoots from './Component/Product/Baby&child/BoysShoes/BoysWellingtonBoots/BoysWellingtonBoots';
 import BoysFlipflops from './Component/Product/Baby&child/BoysShoes/BoysFlipflops/BoysFlipflops';
+import MakeAdmin from './Component/Header/YourAccount/MakeAdmin/MakeAdmin';
 
 
 
@@ -143,6 +144,7 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/register" element={<LoginForm />} />
             <Route path="/register" element={<Login />} />
+            <Route path="/makeAdmin" element={<MakeAdmin />} />
             <Route path="/product/bedding" element={<Bedding />} />
             <Route path="/product/pillows" element={<Pillows />} />
             <Route path="/product/throwsblanketsandSpreads" element={<ThrowsblanketsandSpreads />} />

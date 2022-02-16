@@ -8,7 +8,7 @@ const SearchBox = () => {
     const [products, setProducts] = useState([])
     const [searchProducts, setSearchProducts] = useState('')
     useEffect(() => {
-        axios.get(`http://localhost:5000/products?search=${searchProducts}`)
+        axios.get(`https://desolate-spire-57096.herokuapp.com/products?search=${searchProducts}`)
             // .then(res => res.json())
             .then(data => setProducts(data.data))
     }, [searchProducts])

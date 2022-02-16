@@ -10,17 +10,19 @@ initializeFirebase()
 const useFirebase = () => {
     const [user, setUser] = useState({})
     const [newPass, setNewPass] = useState({})
-    const [isLoading, setIsLoading] = useState(true);
-    const [authError, setAuthError] = useState('');
+    const [isLoading1, setIsLoading1] = useState(true);
+    const [isLoading2, setIsLoading2] = useState(true);
+    const [authRegError, setRegAuthError] = useState('');
+    const [authLoginError, setLoginAuthError] = useState('');
 
     const auth = getAuth();
 
     const registerUser = (email, password, name, history) => {
         // console.log(email, password);
-        setIsLoading(true);
+        setIsLoading1(true);
         createUserWithEmailAndPassword(auth, email, password, name,)
             .then((result) => {
-                setAuthError('')
+                setRegAuthError('')
                 const newUser = { email, displayName: name, };
                 console.log(newUser);
                 // Send name to firebase after creation
@@ -36,35 +38,35 @@ const useFirebase = () => {
                 setUser(newUser)
             })
             .catch((error) => {
-                setAuthError(error.message)
+                setRegAuthError(error.message)
             })
             .finally(() => {
-                setIsLoading(false);
+                setIsLoading1(false);
             });
 
     }
 
     const loginUser = (email, password, history) => {
         console.log(email, password);
-        setIsLoading(true);
+        setIsLoading2(true);
         signInWithEmailAndPassword(auth, email, password)
             .then((result) => {
-                setAuthError('')
+                setLoginAuthError('')
                 // const destination = location?.state?.from || '/';
                 // console.log(destination);
                 history('/')
             })
             .catch((error) => {
-                setAuthError(error.message)
+                setLoginAuthError(error.message)
             })
             .finally(() => {
-                setIsLoading(false);
+                setIsLoading2(false);
             });
 
     }
 
     const passChange = (password) => {
-        setIsLoading(true);
+        setIsLoading1(true);
         const user = auth.currentUser;
         const newPassword = setNewPass('');
         //getASecureRandomPassword();
@@ -77,12 +79,12 @@ const useFirebase = () => {
             // ...
         })
             .finally(() => {
-                setIsLoading(false);
+                setIsLoading1(false);
             });
     }
 
     const resetPassword = (email) => {
-        setIsLoading(true);
+        setIsLoading1(true);
         sendPasswordResetEmail(auth, email)
             .then(() => {
                 // Password reset email sent!
@@ -95,7 +97,7 @@ const useFirebase = () => {
                 console.log(errorMessage);
             })
             .finally(() => {
-                setIsLoading(false);
+                setIsLoading1(false);
             });
     }
 
@@ -109,14 +111,14 @@ const useFirebase = () => {
             } else {
                 setUser({})
             }
-            setIsLoading(false);
+            setIsLoading2(false);
         });
         return () => unSubscribe;
     }, [auth])
 
 
     const logOut = (history) => {
-        setIsLoading(true)
+        setIsLoading2(true)
         signOut(auth).then(() => {
             history('/')
             clearTheCart()
@@ -124,7 +126,7 @@ const useFirebase = () => {
             // An error happened.
         })
             .finally(() => {
-                setIsLoading(false);
+                setIsLoading2(false);
             });
     }
 
@@ -133,8 +135,10 @@ const useFirebase = () => {
         registerUser,
         logOut,
         loginUser,
-        isLoading,
-        authError,
+        isLoading1,
+        isLoading2,
+        authRegError,
+        authLoginError,
         resetPassword,
         newPass,
         passChange

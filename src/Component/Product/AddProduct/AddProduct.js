@@ -32,7 +32,7 @@ const AddProduct = () => {
     //     formData.append('productCode', productCode);
     //     formData.append('category', category);
 
-    //     fetch('http://localhost:5000/products', {
+    //     fetch('https://desolate-spire-57096.herokuapp.com/products', {
     //         method: 'POST',
     //         body: formData
     //     })
@@ -51,7 +51,7 @@ const AddProduct = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        axios.post('http://localhost:5000/products', data)
+        axios.post('https://desolate-spire-57096.herokuapp.com/products', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Product Added Successfully')

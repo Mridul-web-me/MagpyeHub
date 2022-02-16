@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useEffect } from 'react';
+import { getStoredCart } from '../../../../fakeDB';
 import useAuth from '../../../../hooks/useAuth';
 import Footer from '../../../Footer/Footer';
 import Header from '../../Header';
@@ -11,7 +12,7 @@ const OrderHistory = () => {
     const [orders, setOrders] = useState([])
     const [loading, setLoading] = useState(true)
     useEffect(() => {
-        axios.get(`http://localhost:5000/orders?email=${user.email}`, {
+        axios.get(`https://desolate-spire-57096.herokuapp.com/orders?email=${user.email}`, {
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('idToken')}`
             }
@@ -20,7 +21,10 @@ const OrderHistory = () => {
             .then(data => {
                 setOrders(data.data)
                 setLoading(false)
+                // console.log(data.data.order.savedProduct)
             });
+        // console.log(orders.name);
+
     }, [user.email])
 
     return (
@@ -29,9 +33,10 @@ const OrderHistory = () => {
             <h2>You Have Placed {orders.length} order</h2>
             <ul>
                 {loading ? <div>loading</div> :
-                    orders.map(order => <Order
-                        key={order._id}
-                        order={order}
+                    orders.map(orders => <Order
+                        key={orders._id}
+                        orders={orders}
+                        savedProduct={orders.order.savedProduct}
                     ></Order>
 
                     )

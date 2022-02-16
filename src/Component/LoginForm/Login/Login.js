@@ -5,7 +5,7 @@ import useAuth from '../../../hooks/useAuth';
 
 const Login = () => {
     const [loginData, setLoginData] = useState({})
-    const { user, loginUser, isLoading, authError } = useAuth();
+    const { user, loginUser, isLoading2, authLoginError } = useAuth();
     const history = useNavigate()
     const location = useLocation()
     // console.log(loginData);
@@ -26,8 +26,11 @@ const Login = () => {
     return (
 
         <Container fluid>
-            <h5>RETURNING CUSTOMER</h5>
-            <Form onSubmit={handleLoginSubmit}>
+            <h5 style={{ margin: '50px' }}>RETURNING CUSTOMER</h5>
+            {isLoading2 ? <div>
+                <Spinner animation="grow" variant="info" />
+                <Spinner animation="grow" variant="info" />
+            </div> : <Form onSubmit={handleLoginSubmit}>
                 <Form.Group as={Row} className="mb-3">
                     <Form.Label column sm="4">
                         Email Address
@@ -45,12 +48,11 @@ const Login = () => {
                         <Form.Control name="password" type="password" placeholder="Password" onChange={handleOnChange} />
                     </Col>
                 </Form.Group>
-                <Button variant="outline-primary" type='submit' >Login</Button>
-                <Link to="/ForgotPass">Forgotten Password?</Link>
-            </Form>
-            {isLoading && <Spinner animation="border" role="status">
-                <span className="visually-hidden">Loading...</span>
-            </Spinner>}
+                <Button variant="outline-primary" type='submit' >Login</Button> <br />
+                <Link to="/ForgotPass" style={{
+                    color: '#303030'
+                }}>Forgotten Password?</Link>
+            </Form>}
             {user?.email && [
                 'success'
             ].map((variant, idx) => (
@@ -58,11 +60,11 @@ const Login = () => {
                     Login Success
                 </Alert>
             ))}
-            {authError && [
+            {authLoginError && [
                 'danger'
             ].map((variant, idx) => (
                 <Alert key={idx} variant={variant}>
-                    {authError}
+                    {authLoginError}
                 </Alert>
             ))}
 

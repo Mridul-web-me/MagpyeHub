@@ -73,8 +73,8 @@ const YourAccount = () => {
                     </Col>
                 </Row>
 
-                <Link to="/addProduct">Add Product</Link>
-                <Link to="/manageProducts">Manage Product</Link>
+                {/* <Link to="/addProduct">Add Product</Link>
+                <Link to="/manageProducts">Manage Product</Link> */}
             </Container>
         </div>
     )
