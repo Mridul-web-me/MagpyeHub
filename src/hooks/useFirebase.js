@@ -10,7 +10,7 @@ initializeFirebase()
 const useFirebase = () => {
     const [user, setUser] = useState({})
     const [newPass, setNewPass] = useState({})
-    const [isLoading1, setIsLoading1] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
     const [isLoading2, setIsLoading2] = useState(true);
     const [authRegError, setRegAuthError] = useState('');
     const [authLoginError, setLoginAuthError] = useState('');
@@ -19,7 +19,7 @@ const useFirebase = () => {
 
     const registerUser = (email, password, name, history) => {
         // console.log(email, password);
-        setIsLoading1(true);
+        setIsLoading(true);
         createUserWithEmailAndPassword(auth, email, password, name,)
             .then((result) => {
                 setRegAuthError('')
@@ -41,13 +41,13 @@ const useFirebase = () => {
                 setRegAuthError(error.message)
             })
             .finally(() => {
-                setIsLoading1(false);
+                setIsLoading(false);
             });
 
     }
 
     const loginUser = (email, password, history) => {
-        console.log(email, password);
+        // console.log(email, password);
         setIsLoading2(true);
         signInWithEmailAndPassword(auth, email, password)
             .then((result) => {
@@ -66,7 +66,7 @@ const useFirebase = () => {
     }
 
     const passChange = (password) => {
-        setIsLoading1(true);
+        setIsLoading(true);
         const user = auth.currentUser;
         const newPassword = setNewPass('');
         //getASecureRandomPassword();
@@ -79,12 +79,12 @@ const useFirebase = () => {
             // ...
         })
             .finally(() => {
-                setIsLoading1(false);
+                setIsLoading(false);
             });
     }
 
     const resetPassword = (email) => {
-        setIsLoading1(true);
+        setIsLoading(true);
         sendPasswordResetEmail(auth, email)
             .then(() => {
                 // Password reset email sent!
@@ -97,7 +97,7 @@ const useFirebase = () => {
                 console.log(errorMessage);
             })
             .finally(() => {
-                setIsLoading1(false);
+                setIsLoading(false);
             });
     }
 
@@ -135,7 +135,7 @@ const useFirebase = () => {
         registerUser,
         logOut,
         loginUser,
-        isLoading1,
+        isLoading,
         isLoading2,
         authRegError,
         authLoginError,
