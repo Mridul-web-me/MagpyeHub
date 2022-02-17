@@ -17,9 +17,9 @@ const Checkout = () => {
     // console.log(totalQuantity, total, carts);
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        const savedCart = getStoredCart()
+        // const savedCart = getStoredCart()
         const savedProduct = carts;
-        data.order = { savedCart, savedProduct };
+        data.order = { savedProduct };
         fetch('https://desolate-spire-57096.herokuapp.com/orders', {
             method: 'POST',
             headers: {
@@ -57,11 +57,11 @@ const Checkout = () => {
     return (
 
         <div className='checkout'>
-            <Link to="/home" >
+            <a href="/home" >
                 <img src={logo} style={{
                     margin: '15px 0'
                 }} alt="" className='img-fluid' width="200px" height="200px" />
-            </Link>
+            </a>
             <Container>
                 <div className="row">
                     <div className="col-75">
@@ -169,17 +169,18 @@ const Checkout = () => {
                                                     color: 'black'
                                                 }}>
                                                     <i class="fa fa-shopping-cart"></i>
-                                                    <b>4</b>
+                                                    <b>{totalQuantity}</b>
                                                 </span>
                                             </h4>
-                                            <p><a href="#">Product 1</a> <span class="price">$15</span></p>
-                                            <p><a href="#">Product 2</a> <span class="price">$5</span></p>
-                                            <p><a href="#">Product 3</a> <span class="price">$8</span></p>
-                                            <p><a href="#">Product 4</a> <span class="price">$2</span></p>
-                                            <hr />
+                                            {
+                                                carts.map(cart => <div>
+                                                    <p><a href="#">{cart.title}</a> <span class="price">{cart.price}</span></p>
+                                                    <hr />
+                                                </div>)
+                                            }
                                             <p>Total <span class="price" style={{
                                                 color: 'black'
-                                            }}><b>$30</b></span></p>
+                                            }}><b>{total}</b></span></p>
                                         </div>
                                     </div>
 

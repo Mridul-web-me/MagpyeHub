@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import useProduct from '../../../hooks/Product/useProduct';
 import Footer from '../../Footer/Footer';
 import Header from '../../Header/Header';
+import Newsletter from '../../Newsletter/Newsletter';
+import PromoUnit from '../../PromoUnit/PromoUnit';
 import Carts from './Carts';
 
 
@@ -18,6 +20,7 @@ const Cart = () => {
     return (
         <>
             <Header></Header>
+            <PromoUnit></PromoUnit>
             <Container fluid style={{
                 margin: '50px 0'
             }}>
@@ -98,6 +101,7 @@ const Cart = () => {
                     </div>
                 }
             </Container>
+            <Newsletter></Newsletter>
             <Footer></Footer>
         </>
     );

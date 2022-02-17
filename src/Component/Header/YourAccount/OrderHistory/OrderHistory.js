@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useEffect } from 'react';
+import { Spinner } from 'react-bootstrap';
 import { getStoredCart } from '../../../../fakeDB';
 import useAuth from '../../../../hooks/useAuth';
 import Footer from '../../../Footer/Footer';
@@ -21,18 +22,18 @@ const OrderHistory = () => {
             .then(data => {
                 setOrders(data.data)
                 setLoading(false)
-                // console.log(data.data.order.savedProduct)
             });
-        // console.log(orders.name);
-
     }, [user.email])
+
+
 
     return (
         <div>
             <Header></Header>
             <h2>You Have Placed {orders.length} order</h2>
             <ul>
-                {loading ? <div>loading</div> :
+                {loading ? <div><Spinner animation="grow" variant="info" />
+                    <Spinner animation="grow" variant="info" /></div> :
                     orders.map(orders => <Order
                         key={orders._id}
                         orders={orders}
@@ -41,6 +42,7 @@ const OrderHistory = () => {
 
                     )
                 }
+
             </ul>
             <Footer></Footer>
         </div>
