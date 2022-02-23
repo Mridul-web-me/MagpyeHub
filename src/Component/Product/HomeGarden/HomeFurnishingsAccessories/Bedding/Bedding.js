@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Accordion, Button, Col, Container, Row, Spinner } from 'react-bootstrap'
+import { Helmet } from 'react-helmet'
 import { Link } from 'react-router-dom'
 import useProduct from '../../../../../hooks/Product/useProduct'
 import Footer from '../../../../Footer/Footer'
@@ -21,7 +22,7 @@ const Bedding = (props) => {
     const size = 8;
     const category = 'bedding'
     useEffect(() => {
-        fetch(`https://desolate-spire-57096.herokuapp.com/products?category=${category}&&page=${page}&&size=${size}`)
+        fetch(`http://localhost:5000/products?category=${category}&&page=${page}&&size=${size}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products)
@@ -49,6 +50,10 @@ const Bedding = (props) => {
 
     return (
         <div>
+            <Helmet>
+                <title>Bedding</title>
+                <meta name="description" content="This is Magpyehub Online Shop" />
+            </Helmet>
             <Header></Header>
             <PromoUnit></PromoUnit>
 
@@ -115,7 +120,7 @@ const Bedding = (props) => {
                             </Accordion.Item>
                         </Accordion>
                     </Col>
-                    <Col md={9} xs={12}>
+                    <Col md={9} xs={12} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                         {loading ? <div className='text-center'> <Spinner animation="grow" variant="info" />
                             <Spinner animation="grow" variant="info" />
                         </div> : <div>

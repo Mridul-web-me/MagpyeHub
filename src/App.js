@@ -127,6 +127,9 @@ import BoysSandals from './Component/Product/Baby&child/BoysShoes/BoysSandals/Bo
 import BoysWellingtonBoots from './Component/Product/Baby&child/BoysShoes/BoysWellingtonBoots/BoysWellingtonBoots';
 import BoysFlipflops from './Component/Product/Baby&child/BoysShoes/BoysFlipflops/BoysFlipflops';
 import MakeAdmin from './Component/Header/YourAccount/MakeAdmin/MakeAdmin';
+import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
+import { Fragment } from 'react';
+import AdminRoute from './Component/AdminRoute/AdminRoute';
 
 
 
@@ -247,7 +250,7 @@ function App() {
             <Route path="/addressBook" element={<AddressBook />} />
             <Route path="/myDetails" element={<MyDetails />} />
             <Route path="/myFiles" element={<MyFiles />} />
-            <Route path="/proceedToPayment" element={<ProceedToPayment />} />
+            <Route path="/proceedToPayment" element={<PrivateRoute><ProceedToPayment /></PrivateRoute>} />
             <Route path="/:searchText" element={<SearchResult />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/orderHistory" element={<OrderHistory />} />

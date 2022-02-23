@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom'
 import './Pillows.css'
 import Newsletter from '../../../../Newsletter/Newsletter'
 import PromoUnit from '../../../../PromoUnit/PromoUnit'
+import { Helmet } from 'react-helmet'
 
 
 
@@ -24,7 +25,7 @@ const Pillows = () => {
 
     const category = 'pillows'
     useEffect(() => {
-        fetch(`https://desolate-spire-57096.herokuapp.com/products?category=${category}&&page=${page}&&size=${size}`)
+        fetch(`http://localhost:5000/products?category=${category}&&page=${page}&&size=${size}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products)
@@ -53,6 +54,10 @@ const Pillows = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Pillows</title>
+                <meta name="description" content="This is Magpyehub Online Shop" />
+            </Helmet>
             <Header></Header>
             <PromoUnit></PromoUnit>
 

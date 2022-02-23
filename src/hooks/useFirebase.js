@@ -9,6 +9,7 @@ initializeFirebase()
 
 const useFirebase = () => {
     const [user, setUser] = useState({})
+    const [admin, setAdmin] = useState(false)
     const [newPass, setNewPass] = useState({})
     const [isLoading, setIsLoading] = useState(false);
     const [isLoading2, setIsLoading2] = useState(true);
@@ -17,13 +18,13 @@ const useFirebase = () => {
 
     const auth = getAuth();
 
-    const registerUser = (email, password, name, history) => {
+    const registerUser = (email, password, name, phone, address1, address2, townCity, country, postcode, telephone, history, location) => {
         // console.log(email, password);
         setIsLoading(true);
-        createUserWithEmailAndPassword(auth, email, password, name,)
+        createUserWithEmailAndPassword(auth, email, password, name, phone, address1, address2, country, townCity, postcode, telephone)
             .then((result) => {
                 setRegAuthError('')
-                const newUser = { email, displayName: name, };
+                const newUser = { email, displayName: name, phone: phone, address1: address1, address2: address2, townCity: townCity, country: country, postcode: postcode, telephone: telephone };
                 console.log(newUser);
                 // Send name to firebase after creation
 
@@ -34,8 +35,10 @@ const useFirebase = () => {
                 }).catch((error) => {
 
                 });
-                history('/')
                 setUser(newUser)
+                saveUser(email, name, phone, address1, address2, townCity, country, postcode, telephone, 'POST');
+                alert('User added')
+                history('/')
             })
             .catch((error) => {
                 setRegAuthError(error.message)
@@ -46,15 +49,15 @@ const useFirebase = () => {
 
     }
 
-    const loginUser = (email, password, history) => {
+    const loginUser = (email, password, history, location) => {
         // console.log(email, password);
         setIsLoading2(true);
         signInWithEmailAndPassword(auth, email, password)
             .then((result) => {
                 setLoginAuthError('')
-                // const destination = location?.state?.from || '/';
-                // console.log(destination);
-                history('/')
+                const destination = location?.state?.from || '/';
+                console.log(destination);
+                history(destination)
             })
             .catch((error) => {
                 setLoginAuthError(error.message)
@@ -130,6 +133,25 @@ const useFirebase = () => {
             });
     }
 
+    useEffect(() => {
+        fetch(`http://localhost:5000/users/${user.email}`)
+            .then(res => res.json())
+            .then(data => setAdmin(data.admin))
+    }, [user.email])
+
+    const saveUser = (email, displayName, phone, address1, address2, townCity, country, postcode, telephone, method) => {
+        const user = { email, displayName, phone, address1, address2, townCity, country, postcode, telephone };
+        fetch('http://localhost:5000/users', {
+            method: method,
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then(res => res.json())
+            .then(data => console.log(data))
+    }
+
     return {
         user,
         registerUser,
@@ -141,7 +163,8 @@ const useFirebase = () => {
         authLoginError,
         resetPassword,
         newPass,
-        passChange
+        passChange,
+
     }
 
 }

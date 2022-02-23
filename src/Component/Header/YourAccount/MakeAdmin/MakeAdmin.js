@@ -12,17 +12,18 @@ const MakeAdmin = () => {
     }
     const handleAdminSubmit = e => {
         e.preventDefault()
-        const email = { admin }
-        fetch('https://desolate-spire-57096.herokuapp.com/addressBook', {
+        const user = { admin }
+        fetch('http://localhost:5000/users/admin', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(email)
+            body: JSON.stringify(user)
         })
             .then(res => res.json())
             .then(data => {
                 console.log(data)
+                setAdmin('')
             })
 
     }

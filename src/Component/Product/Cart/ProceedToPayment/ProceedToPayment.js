@@ -1,19 +1,25 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Col, Container, Row } from 'react-bootstrap';
+import { Button, Col, Container, Modal, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Footer from '../../../Footer/Footer';
 import Details from './Details';
 import logo from '../../../../img/logo.jpg'
 import axios from 'axios';
 import useAuth from '../../../../hooks/useAuth';
+import { Elements } from '@stripe/react-stripe-js';
+import Payment from './Payment/Payment';
+import { loadStripe } from '@stripe/stripe-js';
+import useProduct from '../../../../hooks/Product/useProduct';
 
 
-
+const stripePromise = loadStripe('pk_test_51KUuQEJYFu4RGWvKjw2LK5rIC9EAnyTQHbmzGNgGnb0XcOvh36utplRWpUtsK2EJAJEw0YExvwQxLNSv7hY3qdPh00BNUN9m3S');
 const ProceedToPayment = () => {
+    const [modalShow, setModalShow] = React.useState(false);
     const { user } = useAuth()
+    const { totalQuantity, total, carts, } = useProduct({});
     const [profile, setProfile] = useState([])
     useEffect(() => {
-        axios.get(`https://desolate-spire-57096.herokuapp.com/addressBook?email=${user.email}`, {
+        axios.get(`http://localhost:5000/addressBook?email=${user.email}`, {
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('idToken')}`
             }
@@ -58,10 +64,37 @@ const ProceedToPayment = () => {
                     )}
 
                 </Col>
-                <Link to="/checkout">
+
+                {/* <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Launch demo modal
+                </button> */}
+
+                {/* <Link to="/checkout">
                     <Button variant='outline-dark'>Checkout</Button>
-                </Link>
+                </Link> */}
             </Row>
+            <br />
+            <Button variant='outline-dark' data-bs-toggle="modal" data-bs-target="#exampleModal">Checkout</Button>
+
+            <div className="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal-dialog">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h5 className="modal-title" id="exampleModalLabel">Payment</h5>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div className="modal-body">
+                            {total && <Elements stripe={stripePromise}>
+                                <Payment />
+                            </Elements>}
+                        </div>
+                        <div className="modal-footer">
+                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" className="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </Container>
         <Footer></Footer>
     </div>

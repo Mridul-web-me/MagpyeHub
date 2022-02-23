@@ -20,7 +20,7 @@ const TrousersLeggings = () => {
     const size = 8;
     const category = 'kids-trousersLeggings'
     useEffect(() => {
-        fetch(`https://desolate-spire-57096.herokuapp.com/products?category=${category}&&page=${page}&&size=${size}`)
+        fetch(`http://localhost:5000/products?category=${category}&&page=${page}&&size=${size}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products)
@@ -138,7 +138,7 @@ const TrousersLeggings = () => {
                             </Accordion.Item>
                         </Accordion>
                     </Col>
-                    <Col md={9} xs={12}>
+                    <Col md={9} xs={12} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                         {loading ? <div className='text-center'> <Spinner animation="grow" variant="info" />
                             <Spinner animation="grow" variant="info" />
                         </div> : <div>

@@ -17,9 +17,9 @@ const Shorts = () => {
     const [page, setPage] = useState(0);
     const [loading, setLoading] = useState(true)
     const size = 8;
-    const category = 'dresses'
+    const category = 'shorts'
     useEffect(() => {
-        fetch(`https://desolate-spire-57096.herokuapp.com/products?category=${category}&&page=${page}&&size=${size}`)
+        fetch(`http://localhost:5000/products?category=${category}&&page=${page}&&size=${size}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products)
@@ -54,7 +54,7 @@ const Shorts = () => {
                         color: '#303030', fontSize: '26px',
                         textTransform: 'uppercase',
                         marginBottom: '20px'
-                    }}>Bedding</h3>
+                    }}>Shorts</h3>
                     <Col md={3} xs={12}>
                         <Accordion defaultActiveKey="0">
                             <Accordion.Item eventKey="0">
@@ -108,7 +108,7 @@ const Shorts = () => {
                             </Accordion.Item>
                         </Accordion>
                     </Col>
-                    <Col md={9} xs={12}>
+                    <Col md={9} xs={12} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                         {loading ? <div className='text-center'> <Spinner animation="grow" variant="info" />
                             <Spinner animation="grow" variant="info" />
                         </div> : <div>

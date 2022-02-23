@@ -13,7 +13,7 @@ const AddDetails = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        axios.post('https://desolate-spire-57096.herokuapp.com/addressBook', data)
+        axios.post('http://localhost:5000/addressBook', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Address Added Successfully')

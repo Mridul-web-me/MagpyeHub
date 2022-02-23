@@ -1,13 +1,18 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+import { loadStripe } from '@stripe/stripe-js';
+import { Elements } from '@stripe/react-stripe-js'
+import { Container, Form } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
-import { Link, useNavigate } from 'react-router-dom';
-import { clearTheCart, getStoredCart } from '../../../../../fakeDB';
+import { useNavigate } from 'react-router-dom';
+import { clearTheCart } from '../../../../../fakeDB';
 import useProduct from '../../../../../hooks/Product/useProduct';
 import useAuth from '../../../../../hooks/useAuth';
 import logo from '../../../../../img/logo.jpg'
 import './Checkout.css'
+import Payment from '../Payment/Payment';
+
+
 
 
 const Checkout = () => {
@@ -16,11 +21,18 @@ const Checkout = () => {
     const { totalQuantity, total, carts, } = useProduct({});
     // console.log(totalQuantity, total, carts);
     const { register, handleSubmit, reset } = useForm();
+    const [profile, setProfile] = useState([])
+    const [loading, setLoading] = useState(true)
+
+
+
+
     const onSubmit = data => {
+        // data.preventDefault()
         // const savedCart = getStoredCart()
         const savedProduct = carts;
         data.order = { savedProduct };
-        fetch('https://desolate-spire-57096.herokuapp.com/orders', {
+        fetch('http://localhost:5000/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -38,10 +50,9 @@ const Checkout = () => {
             })
     }
 
-    const [profile, setProfile] = useState([])
-    const [loading, setLoading] = useState(true)
+
     useEffect(() => {
-        axios.get(`https://desolate-spire-57096.herokuapp.com/addressBook?email=${user.email}`, {
+        axios.get(`https://localhost:5000/addressBook?email=${user.email}`, {
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('idToken')}`
             }
@@ -52,6 +63,7 @@ const Checkout = () => {
                 setLoading(false)
             });
     }, [user.email])
+
 
 
     return (
@@ -114,82 +126,13 @@ const Checkout = () => {
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div className="col-50">
-                                        <h3>Payment</h3>
-                                        <label for="fname">Accepted Cards</label>
-                                        <div className="icon-container">
-                                            <i className="fa fa-cc-visa" style={{
-                                                color: 'navy'
-                                            }}></i>
-                                            <i className="fa fa-cc-amex" style={{
-                                                color: 'blue'
-                                            }}></i>
-                                            <i className="fa fa-cc-mastercard" style={{
-                                                color: 'red'
-                                            }}></i>
-                                            <i className="fa fa-cc-discover" style={{
-                                                color: 'orange'
-                                            }}></i>
-                                        </div>
-                                        <Form.Group className="mb-3" controlId="formHorizontalCardName">
-                                            <Form.Label> Name on Card</Form.Label>
-                                            <Form.Control required type="name" placeholder="John More Doe"{...register("cardName")} />
-                                        </Form.Group>
-
-                                        <Form.Group className="mb-3" controlId="formHorizontalCardNumber">
-                                            <Form.Label> Credit card number</Form.Label>
-                                            <Form.Control required type="name" placeholder="1111-2222-3333-4444"{...register("carNumber")} />
-                                        </Form.Group>
-
-                                        <Form.Group className="mb-3" controlId="formHorizontalExpMont">
-                                            <Form.Label>Exp Month</Form.Label>
-                                            <Form.Control required type="name" placeholder="September"{...register("expMonth")} />
-                                        </Form.Group>
-
-                                        <div className="row">
-                                            <div className="col-50">
-                                                <Form.Group className="mb-3" controlId="formHorizontalExpYear">
-                                                    <Form.Label> Exp Year</Form.Label>
-                                                    <Form.Control required type="name" placeholder="2024"{...register("expYear")} />
-                                                </Form.Group>
-                                            </div>
-                                            <div className="col-50">
-                                                <Form.Group className="mb-3" controlId="formHorizontalCVV">
-                                                    <Form.Label> 352</Form.Label>
-                                                    <Form.Control required type="name" placeholder="352"{...register("CVV")} />
-                                                </Form.Group>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-25">
-                                        <div class="container">
-                                            <h4>Cart
-                                                <span class="price" tyle={{
-                                                    color: 'black'
-                                                }}>
-                                                    <i class="fa fa-shopping-cart"></i>
-                                                    <b>{totalQuantity}</b>
-                                                </span>
-                                            </h4>
-                                            {
-                                                carts.map(cart => <div>
-                                                    <p><a href="#">{cart.title}</a> <span class="price">{cart.price}</span></p>
-                                                    <hr />
-                                                </div>)
-                                            }
-                                            <p>Total <span class="price" style={{
-                                                color: 'black'
-                                            }}><b>{total}</b></span></p>
-                                        </div>
-                                    </div>
-
                                 </div>
                                 <label>
                                     <input type="checkbox" checked="checked" name="sameadr" /> Shipping address same as billing
                                 </label>
                                 <input type="submit" value="Continue to checkout" className="btn" />
                             </Form>
+
                         </div>
                     </div>
                 </div>
