@@ -24,7 +24,7 @@ const Nav = () => {
                                         <label htmlFor="showMega" className="mobile-item">Search Products</label>
                                     </div>
                                     <div className='mobileQuote'>
-                                        <h2 className='text-center'>QUOTE</h2>
+                                        <h2 className='text-center' style={{ fontSize: '16px', color: '#fff' }}>QUOTE</h2>
                                     </div>
                                 </div>
                                 <div className="mega-box">
@@ -36,13 +36,13 @@ const Nav = () => {
                                 </div>
                             </li>
                             <li className='nav-item'>
-                                <label className="desktop-item1">Home & Garden <i className="fas fa-angle-down"></i></label>
+                                <label className="desktop-item1">Home & Garden</label>
                                 <input type="checkbox" id="showMega1" />
                                 <label htmlFor="showMega1" className="mobile-item1">Home & Garden</label>
                                 <div className="mega-box1">
                                     <div className="content">
                                         <div className="row">
-                                            <header>Home Furnishings & Accessories</header>
+                                            <h5>Home Furnishings & Accessories</h5>
                                             <hr />
                                             <ul className="mega-links">
                                                 <li><Link to="/product/bedding">Bedding</Link></li>
@@ -55,7 +55,7 @@ const Nav = () => {
                                             </ul>
                                         </div>
                                         <div className="row">
-                                            <header>Cooking & Dining</header>
+                                            <h5>Cooking & Dining</h5>
                                             <hr />
                                             <ul className="mega-links">
                                                 <li><Link to="/product/potsPans">Pots & Pans</Link></li>
@@ -69,13 +69,13 @@ const Nav = () => {
                                 </div>
                             </li>
                             <li className='nav-item'>
-                                <label className="desktop-item2">Women <i className="fas fa-angle-down"></i></label>
+                                <label className="desktop-item2">Women</label>
                                 <input type="checkbox" id="showMega2" />
                                 <label htmlFor="showMega2" className="mobile-item2">Women</label>
                                 <div className="mega-box2">
                                     <div className="content">
                                         <div className="row">
-                                            <header>Clothing</header>
+                                            <h5>Clothing</h5>
                                             <hr />
                                             <ul className="mega-links">
                                                 <li><Link to="/product/dresses">Dresses</Link></li>
@@ -87,7 +87,7 @@ const Nav = () => {
                                             </ul>
                                         </div>
                                         <div className="row">
-                                            <header>Lingerie, Nightwear & Hosiery</header>
+                                            <h5>Lingerie, Nightwear & Hosiery</h5>
                                             <hr />
                                             <ul className="mega-links">
                                                 <li><Link to="/product/brasSportsBras">Bras & Sports Bras</Link></li>
@@ -100,13 +100,13 @@ const Nav = () => {
                                 </div>
                             </li>
                             <li className='nav-item'>
-                                <label className="desktop-item3">Men <i className="fas fa-angle-down"></i></label>
+                                <label className="desktop-item3">Men</label>
                                 <input type="checkbox" id="showMega3" />
                                 <label htmlFor="showMega3" className="mobile-item3">Men</label>
                                 <div className="mega-box3">
                                     <div className="content">
                                         <div className="row">
-                                            <header>Clothing</header>
+                                            <h5>Clothing</h5>
                                             <hr />
                                             <ul className="mega-links">
                                                 <li><Link to="/product/blazers">Blazers</Link></li>
@@ -120,11 +120,10 @@ const Nav = () => {
                                                 <li><Link to="/product/trousers">Trousers</Link></li>
                                                 <li><Link to="/product/t-shirts">T-Shirts</Link></li>
                                                 <li><Link to="/product/waistcoats">Waistcoats</Link></li>
-                                                <li><Link to="/product/partyWear">Partywear</Link></li>
                                             </ul>
                                         </div>
                                         <div className="row">
-                                            <header>Nightwear, Underwear & Socks</header>
+                                            <h5>Nightwear, Underwear & Socks</h5>
                                             <hr />
                                             <ul className="mega-links">
                                                 <li><Link to="/product/PyjamasNightwear">Pyjamas & Nightwear</Link></li>
@@ -136,13 +135,13 @@ const Nav = () => {
                                 </div>
                             </li>
                             <li className='nav-item'>
-                                <label className="desktop-item4">Beauty <i className="fas fa-angle-down"></i></label>
+                                <label className="desktop-item4">Beauty</label>
                                 <input type="checkbox" id="showMega4" />
                                 <label htmlFor="showMega4" className="mobile-item4">Beauty</label>
                                 <div className="mega-box4">
                                     <div className="content">
                                         <div className="row">
-                                            <header>Makeup</header>
+                                            <h5>Makeup</h5>
                                             <hr />
                                             <ul className="mega-links">
                                                 <li><Link to="/product/foundations">Foundations</Link></li>
@@ -151,26 +150,20 @@ const Nav = () => {
                                                 <li><Link to="/product/mascaras">Mascaras</Link></li>
                                                 <li><Link to="/product/lipsticks">Lipsticks</Link></li>
                                                 <li><Link to="/product/nailPolish">Nail Polish</Link></li>
-                                                <li><Link to="/product/makeupGiftsets">Makeup Gift sets</Link></li>
-                                                <li><Link to="/product/MakeUpBrushes">Make up Brushes</Link></li>
-                                                <li><Link to="/product/handNailsets">Hand & Nail sets</Link></li>
-                                                <li><Link to="/product/makeupBags">Makeup Bags</Link></li>
-                                                <li><Link to="/product/makeupAccessories">Makeup Accessories</Link></li>
                                             </ul>
                                         </div>
                                         <div className="row">
-                                            <header>Fragrance</header>
+                                            <h5>Fragrance</h5>
                                             <hr />
                                             <ul className="mega-links">
                                                 <li><Link to="/product/womensPerfume">Women's Perfume</Link></li>
                                                 <li><Link to="/product/perfumeGiftSets">Perfume Gift Sets</Link></li>
                                                 <li><Link to="/product/mensAftershave">Men's Aftershave</Link></li>
-                                                <li><Link to="/product/mensPerfume">Men's Perfume</Link></li>
                                                 <li><Link to="/product/aftershaveGiftSets">Aftershave Gift Sets</Link></li>
                                             </ul>
                                         </div>
                                         <div className="row">
-                                            <header>Skin & Body Care</header>
+                                            <h5>Skin & Body Care</h5>
                                             <hr />
                                             <ul className="mega-links">
                                                 <li><Link to="/product/cleansers">Cleansers</Link></li>
@@ -179,15 +172,10 @@ const Nav = () => {
                                                 <li><Link to="/product/bodyCare">Body Care</Link></li>
                                                 <li><Link to="/product/lipBalmCare">Lip Balm & Care</Link></li>
                                                 <li><Link to="/product/handFootCare">Hand & Foot Care</Link></li>
-                                                <li><Link to="/product/beautyToolsTechnology">Beauty Tools & Technology</Link></li>
-                                                <li><Link to="/product/skinBodyGiftSets">Skin & Body Gift Sets</Link></li>
-                                                <li><Link to="/product/mensGroomingShaving">Men's Grooming, Shaving</Link></li>
-                                                <li><Link to="/product/mensBathBody">Mens Bath & Body</Link></li>
-                                                <li><Link to="/product/mensWashBags">Mens Wash Bags</Link></li>
                                             </ul>
                                         </div>
                                         <div className="row">
-                                            <header>Hair Care & Styling</header>
+                                            <h5>Hair Care & Styling</h5>
                                             <hr />
                                             <ul className="mega-links">
                                                 <li><Link to="/product/hairCare">Hair Care</Link></li>
@@ -203,13 +191,13 @@ const Nav = () => {
                                 </div>
                             </li>
                             <li className='nav-item'>
-                                <label className="desktop-item5">Baby & Child <i className="fas fa-angle-down"></i></label>
+                                <label className="desktop-item5">Baby & Child</label>
                                 <input type="checkbox" id="showMega5" />
                                 <label htmlFor="showMega5" className="mobile-item5">Baby & Child</label>
                                 <div className="mega-box5">
                                     <div className="content">
                                         <div className="row">
-                                            <header>Kids Clothing & Shoes</header>
+                                            <h5>Kids Clothing & Shoes</h5>
                                             <hr />
                                             <ul className="mega-links">
                                                 <li><Link to="/product/kids-shirtsTops">Shirts & Tops</Link></li>
@@ -223,7 +211,7 @@ const Nav = () => {
                                             </ul>
                                         </div>
                                         <div className="row">
-                                            <header>Girls Shoes</header>
+                                            <h5>Girls Shoes</h5>
                                             <hr />
                                             <ul className="mega-links">
                                                 <li><Link to="/product/girls-trainers">Trainers</Link></li>
@@ -233,7 +221,7 @@ const Nav = () => {
                                             </ul>
                                         </div>
                                         <div className="row">
-                                            <header>Boys Clothes</header>
+                                            <h5>Boys Clothes</h5>
                                             <hr />
                                             <ul className="mega-links">
                                                 <li><Link to="/product/boys-shortsTrousers">Shorts & Trousers</Link></li>
@@ -246,7 +234,7 @@ const Nav = () => {
                                             </ul>
                                         </div>
                                         <div className="row">
-                                            <header>Boys Shoes</header>
+                                            <h5>Boys Shoes</h5>
                                             <hr />
                                             <ul className="mega-links">
                                                 <li><Link to="/product/boys-trainers">Trainers</Link></li>
@@ -254,6 +242,226 @@ const Nav = () => {
                                                 <li><Link to="/product/boys-sandals">Sandals</Link></li>
                                                 <li><Link to="/product/boys-wellingtonBoots">Wellington Boots</Link></li>
                                                 <li><Link to="/product/boys-flipflops">Flipflops</Link></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li className='nav-item'>
+                                <label className="desktop-item6">Furniture & Lighting</label>
+                                <input type="checkbox" id="showMega6" />
+                                <label htmlFor="showMega6" className="mobile-item6">Furniture & Lighting</label>
+                                <div className="mega-box6">
+                                    <div className="content">
+                                        <div className="row">
+                                            <h5>Living Room Furniture</h5>
+                                            <hr />
+                                            <ul className="mega-links">
+                                                <li><Link to="/product/sofasArmchairs">Sofas & Armchairs</Link></li>
+                                                <li><Link to="/product/tVStands">TV Stands</Link></li>
+                                                <li><Link to="/product/coffeeTables">Coffee Tables</Link></li>
+                                                <li><Link to="/product/bookcasesShelving">Bookcases & Shelving</Link></li>
+                                                <li><Link to="/product/cabinetsSideboards">Cabinets & Sideboards</Link></li>
+                                            </ul>
+                                        </div>
+                                        <div className="row">
+                                            <h5>Bedroom Furniture</h5>
+                                            <hr />
+                                            <ul className="mega-links">
+                                                <li><Link to="/product/beds">Beds</Link></li>
+                                                <li><Link to="/product/mattresses">Mattresses</Link></li>
+                                                <li><Link to="/product/bedsideTables">Bedside Tables</Link></li>
+                                                <li><Link to="/product/chestsDrawers">Chests of Drawers</Link></li>
+                                                <li><Link to="/product/dressingTables">Dressing Tables</Link></li>
+                                                <li><Link to="/product/wardrobes">Wardrobes</Link></li>
+                                                <li><Link to="/product/childrenBedroom">Children's Bedroom</Link></li>
+                                            </ul>
+                                        </div>
+                                        <div className="row">
+                                            <h5>Dining Room Furniture</h5>
+                                            <hr />
+                                            <ul className="mega-links">
+                                                <li><Link to="/product/DiningTables">Dining Tables</Link></li>
+                                                <li><Link to="/product/DiningChairs">Dining Chairs </Link></li>
+                                                <li><Link to="/product/BarChairsStools">Bar Chairs & Stools</Link></li>
+                                            </ul>
+                                        </div>
+                                        <div className="row">
+                                            <h5>Home Office & Storage</h5>
+                                            <hr />
+                                            <ul className="mega-links">
+                                                <li><Link to="/product/OfficeDesks">Office Desks</Link></li>
+                                                <li><Link to="/product/OfficeChairs">Office Chairs</Link></li>
+                                                <li><Link to="/product/HomeStorage">Home Storage</Link></li>
+                                            </ul>
+                                        </div>
+                                        <div className="row">
+                                            <h5>Lighting</h5>
+                                            <hr />
+                                            <ul className="mega-links">
+                                                <li><Link to="/product/CeilingLights">Ceiling Lights</Link></li>
+                                                <li><Link to="/product/DeskTableLamps">Desk & Table lamps</Link></li>
+                                                <li><Link to="/product/FloorLamps">Floor Lamps</Link></li>
+                                                <li><Link to="/product/WallLighting">Wall Lighting</Link></li>
+                                                <li><Link to="/product/GardenOutdoorlights">Garden & Outdoor lights</Link></li>
+                                                <li><Link to="/product/LightBulbs">Light Bulbs</Link></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li className='nav-item'>
+                                <label className="desktop-item7">Electricals</label>
+                                <input type="checkbox" id="showMega7" />
+                                <label htmlFor="showMega7" className="mobile-item7">Electricals</label>
+                                <div className="mega-box7">
+                                    <div className="content">
+                                        <div className="row">
+                                            <h5>Television & Audio</h5>
+                                            <hr />
+                                            <ul className="mega-links">
+                                                <li><Link to="/product/Television">Television</Link></li>
+                                                <li><Link to="/product/SoundbarsHomeCinema">Soundbars & Home Cinema</Link></li>
+                                                <li><Link to="/product/TVStandsWallMounts">TV Stands & Wall Mounts</Link></li>
+                                                <li><Link to="/product/TVStreamingDevices">TV Streaming Devices</Link></li>
+                                                <li><Link to="/product/SpeakersSoundSystems">Speakers & Sound Systems</Link></li>
+                                                <li><Link to="/product/Headphones">Headphones</Link></li>
+                                            </ul>
+                                        </div>
+                                        <div className="row">
+                                            <h5>Computing & Gaming</h5>
+                                            <hr />
+                                            <ul className="mega-links">
+                                                <li><Link to="/product/IpadsTablets">Ipads & Tablets</Link></li>
+                                                <li><Link to="/product/LaptopsMacBooks">Laptops & MacBooks </Link></li>
+                                                <li><Link to="/product/PCsDesktopComputers">PCs & Desktop Computers</Link></li>
+                                                <li><Link to="/product/MonitorsProjectors">Monitors & Projectors</Link></li>
+                                                <li><Link to="/product/PrintersAccessories">Printers & Accessories</Link></li>
+                                                <li><Link to="/product/Gaming">Gaming</Link></li>
+                                            </ul>
+                                        </div>
+                                        <div className="row">
+                                            <h5>Home Appliances</h5>
+                                            <hr />
+                                            <ul className="mega-links">
+                                                <li><Link to="/product/WashingMachines">Washing Machines</Link></li>
+                                                <li><Link to="/product/FridgeFreezers">Fridge Freezers</Link></li>
+                                                <li><Link to="/product/Dishwashers">Dishwashers</Link></li>
+                                                <li><Link to="/product/CookersOvens">Cookers & Ovens</Link></li>
+                                                <li><Link to="/product/Microwaves">Microwaves</Link></li>
+                                            </ul>
+                                        </div>
+                                        <div className="row">
+                                            <h5>Kitchen Appliances & Vacuums</h5>
+                                            <hr />
+                                            <ul className="mega-links">
+                                                <li><Link to="/product/CoffeeMachines">Coffee Machines</Link></li>
+                                                <li><Link to="/product/Kettles">Kettles</Link></li>
+                                                <li><Link to="/product/Toasters">Toasters</Link></li>
+                                                <li><Link to="/product/VacuumCleaners">Vacuum Cleaners</Link></li>
+                                                <li><Link to="/product/FansCoolingPurifiers">Fans, Cooling & Purifiers</Link></li>
+                                                <li><Link to="/product/Ironing">Ironing</Link></li>
+                                            </ul>
+                                        </div>
+                                        <div className="row">
+                                            <h5>Mobile, Cameras & Smart Tech</h5>
+                                            <hr />
+                                            <ul className="mega-links">
+                                                <li><Link to="/product/MobilePhonesAccessories">Mobile Phones & Accessories</Link></li>
+                                                <li><Link to="/product/CamerasCamcorders">Cameras & Camcorders</Link></li>
+                                                <li><Link to="/product/SmartFitnessWatches">Smart & Fitness Watches</Link></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li className='nav-item'>
+                                <label className="desktop-item8">Fitness & Travel</label>
+                                <input type="checkbox" id="showMega8" />
+                                <label htmlFor="showMega8" className="mobile-item8">Fitness & Travel</label>
+                                <div className="mega-box8">
+                                    <div className="content">
+                                        <div className="row">
+                                            <h5>Travel & Luggage</h5>
+                                            <hr />
+                                            <ul className="mega-links">
+                                                <li><Link to="/product/Television">Television</Link></li>
+                                                <li><Link to="/product/Hand Luggage">Hand Luggage</Link></li>
+                                                <li><Link to="/product/Suitcases">Suitcases</Link></li>
+                                                <li><Link to="/product/HoldallsWeekendBags">Holdalls & Weekend  Bags</Link></li>
+                                                <li><Link to="/product/Camping">Camping</Link></li>
+                                            </ul>
+                                        </div>
+                                        <div className="row">
+                                            <h5>Sewing & Crafts</h5>
+                                            <hr />
+                                            <ul className="mega-links">
+                                                <li><Link to="/product/SewingMachines">Sewing Machines</Link></li>
+                                                <li><Link to="/product/GamesPuzzles">Games & Puzzles</Link></li>
+                                                <li><Link to="/product/WoolYarn">Wool & Yarn</Link></li>
+                                                <li><Link to="/product/Stattonery">Stattonery</Link></li>
+                                            </ul>
+                                        </div>
+                                        <div className="row">
+                                            <h5>Fitness</h5>
+                                            <hr />
+                                            <ul className="mega-links">
+                                                <li><Link to="/product/Treadmills">Treadmills</Link></li>
+                                                <li><Link to="/product/Exercise Bikes">Exercise Bikes</Link></li>
+                                                <li><Link to="/product/Weights">Weights</Link></li>
+                                                <li><Link to="/product/FitnessMachinesTechonology ">Fitness Machines & Techonology </Link></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li className='nav-item'>
+                                <label className="desktop-item9">Gifts</label>
+                                <input type="checkbox" id="showMega9" />
+                                <label htmlFor="showMega9" className="mobile-item9">Gifts</label>
+                                <div className="mega-box9">
+                                    <div className="content">
+                                        <div className="row">
+                                            <h5>Gifts By Recipient</h5>
+                                            <hr />
+                                            <ul className="mega-links">
+                                                <li><Link to="/product/giftsForHer">Gifts for Her</Link></li>
+                                                <li><Link to="/product/giftsForHim">Gifts for Him</Link></li>
+                                                <li><Link to="/product/giftsForKids">Gifts for Kids</Link></li>
+                                                <li><Link to="/product/giftsForCouples">Gifts for Couples</Link></li>
+                                                <li><Link to="/product/giftsForBabies">Gifts for Babies</Link></li>
+                                                <li><Link to="/product/giftsForTeenagers">Gifts for Teenagers</Link></li>
+                                            </ul>
+                                        </div>
+                                        <div className="row">
+                                            <h5>Food & Drink Gifts</h5>
+                                            <hr />
+                                            <ul className="mega-links">
+                                                <li><Link to="/product/Hampers">Hampers</Link></li>
+                                                <li><Link to="/product/Chocolate">Chocolate</Link></li>
+                                                <li><Link to="/product/Alcohol">Alcohol</Link></li>
+                                            </ul>
+                                        </div>
+                                        <div className="row">
+                                            <h5>Popular Gifts</h5>
+                                            <hr />
+                                            <ul className="mega-links">
+                                                <li><Link to="/product/BeautyFragranceGifts">Beauty & Fragrance Gifts</Link></li>
+                                                <li><Link to="/product/GamesAndPuzzles">Games and Puzzles</Link></li>
+                                                <li><Link to="/product/CandlesHomeFragrance">Candles & Home Fragrance</Link></li>
+                                                <li><Link to="/product/CookingBaking">Cooking & Baking </Link></li>
+                                                <li><Link to="/product/Gardening">Gardening </Link></li>
+                                                <li><Link to="/product/GiftWrapPartyShop">Gift Wrap & Party Shop</Link></li>
+                                            </ul>
+                                        </div>
+                                        <div className="row">
+                                            <h5>Gift Inspiration</h5>
+                                            <hr />
+                                            <ul className="mega-links">
+                                                <li><Link to="/product/LuxuryGifts">Luxury Gifts</Link></li>
+                                                <li><Link to="/product/Techies">Techies</Link></li>
                                             </ul>
                                         </div>
                                     </div>

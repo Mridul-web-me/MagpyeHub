@@ -8,6 +8,7 @@ import Footer from '../../../Footer/Footer';
 import Newsletter from '../../../Newsletter/Newsletter';
 import PromoUnit from '../../../PromoUnit/PromoUnit';
 import Header from '../../Header';
+import OrderedProduct from '../Admin/AllOrderHistory/OrderedProduct/OrderedProduct';
 
 const OrderHistory = () => {
     const { user } = useAuth()
@@ -48,14 +49,17 @@ const OrderHistory = () => {
                         <Col xs={6} md={6}>
                             <h5 className='text-start'><i class="fas fa-shopping-basket"></i> Your Order Items</h5>
                         </Col>
-                        <Col xs={6} md={2}>
+                        <Col xs={6} md={1}>
                             <h5>Quantity</h5>
                         </Col>
-                        <Col xs={6} md={2}>
+                        <Col xs={6} md={1}>
                             <h5>Price</h5>
                         </Col>
                         <Col xs={6} md={2}>
                             <h5>Sub Total</h5>
+                        </Col>
+                        <Col xs={6} md={2}>
+                            <h5>Status</h5>
                         </Col>
                     </Row>
                     {orders.map(orders =>
@@ -66,55 +70,13 @@ const OrderHistory = () => {
                                 savedProduct={orders.order.savedProduct}
                             >
                                 {
-                                    orders.order.savedProduct.map(product => <div>
-
-                                        <Row style={{
-                                            borderBottom: '1px solid rgb(159 159 159)',
-                                            margin: '10px 0'
-                                        }}>
-                                            <Col xs={6} md={2}>
-                                                {/* <img src={`data:image/jpg;base64,${img}`} alt="" width="100px" height="100px" /> */}
-                                                <img src={product.img} alt="" width="100px" height="100px" />
-                                            </Col>
-                                            <Col xs={6} md={4} style={{
-                                                textAlign: 'start'
-                                            }}>
-                                                <Link style={{
-                                                    color: '#303030', fontSize: '16px',
-                                                    textDecoration: 'none'
-                                                }} to={`/placeOrder/${product._id}`}>
-                                                    <h5 style={{ fontSize: '16px' }}>{product.title}</h5>
-                                                </Link>
-                                                <p style={{ fontSize: '12px' }}>Product Code: {product._id}</p>
-                                            </Col>
-                                            <Col xs={6} md={2}>
-                                                <div style={{
-                                                    display: 'flex',
-                                                    justifyContent: 'center',
-                                                    alignItems: 'center'
-                                                }}>
-                                                    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                                                        <input style={{ width: '50px', padding: ' 0 15px' }} type="text" value={product.quantity} />
-                                                        {/* <p>{quantity}</p> */}
-                                                        <div style={{
-                                                            display: 'flex', flexDirection: 'column', fontSize: '26px',
-                                                            border: '#f3f3f3',
-                                                        }}>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </Col>
-                                            <Col xs={6} md={2}>
-                                                <p>£{product.price}</p>
-                                            </Col>
-                                            <Col xs={6} md={2}>
-                                                <p>
-                                                    £{product.quantity * product.price}
-                                                </p>
-                                            </Col>
-                                        </Row>
-                                    </div>)
+                                    orders.order.savedProduct.map(product =>
+                                        <OrderedProduct
+                                            key={product._id}
+                                            product={product}
+                                            orders={orders}
+                                        ></OrderedProduct>
+                                    )
                                 }
                             </div>
                             <div>

@@ -1,11 +1,13 @@
 import React from 'react';
-import { Button, Card, Col } from 'react-bootstrap';
+import { Button, Card, Col, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { SwiperSlide } from 'swiper/react';
 
 const AllFavProduct = ({ product, handleAddToCart }) => {
     const { _id, title, img, category, price } = product;
     return (
         <>
+
             <Col className="productCard">
                 <Card>
                     <Card.Img className='img-fluid' variant="top" style={{ height: '200px' }} src={img} height="300px" />

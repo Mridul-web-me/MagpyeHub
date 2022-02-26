@@ -126,7 +126,8 @@ const Pillows = () => {
                         </Accordion>
                     </Col>
                     <Col xs={12} md={9}>
-                        {loading ? <div className='text-center'> <Spinner animation="grow" variant="info" />
+                        {loading ? <div className='text-center' style={{ height: '40vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}> <Spinner animation="grow" variant="info" />
+                            <Spinner animation="grow" variant="info" />
                             <Spinner animation="grow" variant="info" />
                         </div> : <div>
 

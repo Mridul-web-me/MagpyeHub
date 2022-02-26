@@ -11,6 +11,7 @@ const useFirebase = () => {
     const [user, setUser] = useState({})
     const [admin, setAdmin] = useState(false)
     const [newPass, setNewPass] = useState({})
+    const [token, setToken] = useState('')
     const [isLoading, setIsLoading] = useState(false);
     const [isLoading2, setIsLoading2] = useState(true);
     const [authRegError, setRegAuthError] = useState('');
@@ -104,12 +105,15 @@ const useFirebase = () => {
             });
     }
 
+
     // Observe User State
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
                 getIdToken(user)
-                    .then(idToken => localStorage.setItem('idToken', idToken))
+                    .then(idToken => {
+                        setToken(idToken)
+                    })
                 setUser(user)
             } else {
                 setUser({})
@@ -117,7 +121,7 @@ const useFirebase = () => {
             setIsLoading2(false);
         });
         return () => unSubscribe;
-    }, [auth])
+    }, [])
 
 
     const logOut = (history) => {
@@ -136,7 +140,9 @@ const useFirebase = () => {
     useEffect(() => {
         fetch(`http://localhost:5000/users/${user.email}`)
             .then(res => res.json())
-            .then(data => setAdmin(data.admin))
+            .then(data => {
+                setAdmin(data.admin)
+            })
     }, [user.email])
 
     const saveUser = (email, displayName, phone, address1, address2, townCity, country, postcode, telephone, method) => {
@@ -164,6 +170,8 @@ const useFirebase = () => {
         resetPassword,
         newPass,
         passChange,
+        token,
+        admin
 
     }
 

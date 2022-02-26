@@ -54,7 +54,7 @@ const BrasSportsBras = () => {
                         color: '#303030', fontSize: '26px',
                         textTransform: 'uppercase',
                         marginBottom: '20px'
-                    }}>Bedding</h3>
+                    }}>Bras, Sports & Bras</h3>
                     <Col md={3} xs={12}>
                         <Accordion defaultActiveKey="0">
                             <Accordion.Item eventKey="0">
@@ -108,8 +108,9 @@ const BrasSportsBras = () => {
                             </Accordion.Item>
                         </Accordion>
                     </Col>
-                    <Col md={9} xs={12} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                        {loading ? <div className='text-center'> <Spinner animation="grow" variant="info" />
+                    <Col md={9} xs={12}>
+                        {loading ? <div className='text-center' style={{ height: '40vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}> <Spinner animation="grow" variant="info" />
+                            <Spinner animation="grow" variant="info" />
                             <Spinner animation="grow" variant="info" />
                         </div> : <div>
 

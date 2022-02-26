@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { Container, Spinner } from 'react-bootstrap';
+import { Container, Spinner, Row } from 'react-bootstrap';
 import Slider from 'react-slick';
-// import Slider from 'react-slick';
 import useProduct from '../../../hooks/Product/useProduct';
 import AllFavProduct from './AllFavProduct/AllFavProduct';
-import './FavouriteProduct.css'
+import './FavouriteProduct.css';
+import "swiper/css/bundle";
 import img from '../../../img/favorit.jpg'
 
 const FavouriteProduct = () => {
@@ -20,7 +20,7 @@ const FavouriteProduct = () => {
                 setProducts(data.products)
                 setLoading(false)
             });
-    }, [products, category]);
+    }, [category, products]);
 
     const settings = {
         infinite: true,
@@ -86,12 +86,10 @@ const FavouriteProduct = () => {
                         )
                     }
                 </Slider>}
+
             </Container>
         </div>
     )
 }
 
 export default FavouriteProduct
-
-
-//    

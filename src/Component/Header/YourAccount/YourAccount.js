@@ -6,8 +6,7 @@ import Header from '../Header';
 import './YourAccount.css'
 
 const YourAccount = () => {
-    const { logOut } = useAuth();
-    const { user } = useAuth();
+    const { logOut, user, admin } = useAuth();
 
 
     return (
@@ -25,7 +24,7 @@ const YourAccount = () => {
                 <Row style={{
                     textAlign: 'start'
                 }}>
-                    <Col xs={6}>
+                    {!admin && <Col xs={6}>
                         <div>
                             <h4 style={{
 
@@ -37,44 +36,59 @@ const YourAccount = () => {
                         </div>
 
                         <hr />
-                    </Col>
-                    <Col xs={6}>
+                    </Col>}
+                    {!admin && <Col xs={6}>
                         <div>
                             <h4><Link to="/myFiles">MY FILES</Link></h4>
                             <p>View a list of files that are linked to your account</p>
                         </div>
                         <hr />
-                    </Col>
-                    <Col xs={6}>
+                    </Col>}
+                    {!admin && <Col xs={6}>
                         <div>
                             <h4><Link to={'/myDetails'}>MY DETAILS</Link></h4>
                             <p>Update your account details including your email address and newsletter subscription</p>
                         </div>
                         <hr />
-                    </Col>
-                    <Col xs={6}>
+                    </Col>}
+                    {!admin && <Col xs={6}>
                         <div >
                             <h4><Link to={'/addressBook'}>ADDRESS BOOK</Link></h4>
                             <p>Manage your delivery and billing addresses</p>
                         </div>
                         <hr />
-                    </Col>
-                    <Col xs={6}>
+                    </Col>}
+                    {!admin && <Col xs={6}>
                         <div>
                             <h4><Link to={'/ChangePass'}>CHANGE PASSWORD</Link></h4>
                             <p>Change the password you use to login</p>
                         </div>
                         <hr />
-                    </Col>
+                    </Col>}
                     <Col xs={6}>
                         <h4><Link to="/" onClick={logOut} >Logout</Link></h4>
                         <p>Securely logout of your MagpyeHub.com account</p>
                         <hr />
                     </Col>
+                    {admin && <Col xs={6}>
+                        <h4><Link to="/AllOrderHistory" >All Order</Link></h4>
+                        <p>Securely logout of your MagpyeHub.com account</p>
+                        <hr />
+                    </Col>}
+                    {admin && <Col xs={6}>
+                        <h4><Link to="/addProduct">Add Product</Link></h4>
+                        <p>Securely logout of your MagpyeHub.com account</p>
+                        <hr />
+                    </Col>}
+                    {admin && <Col xs={6}>
+                        <h4><Link to="/manageProducts">Manage Product</Link></h4>
+                        <p>Securely logout of your MagpyeHub.com account</p>
+                        <hr />
+                    </Col>}
                 </Row>
 
-                {/* <Link to="/addProduct">Add Product</Link>
-                <Link to="/manageProducts">Manage Product</Link> */}
+
+
             </Container>
         </div>
     )

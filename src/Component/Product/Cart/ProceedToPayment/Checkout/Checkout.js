@@ -124,12 +124,14 @@ const Checkout = () => {
                                                     <Form.Control required type="name" placeholder="10001"{...register("Zip")} />
                                                 </Form.Group>
                                             </div>
+                                            <Form.Group className="mb-3 d-none" controlId="formHorizontalZip">
+                                                <Form.Label> Status</Form.Label>
+                                                <Form.Control required type="n
+                                                ame" defaultValue="Pending"{...register("status")} />
+                                            </Form.Group>
                                         </div>
                                     </div>
                                 </div>
-                                <label>
-                                    <input type="checkbox" checked="checked" name="sameadr" /> Shipping address same as billing
-                                </label>
                                 <input type="submit" value="Continue to checkout" className="btn" />
                             </Form>
 

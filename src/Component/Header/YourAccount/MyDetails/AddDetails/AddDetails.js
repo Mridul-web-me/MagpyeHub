@@ -13,7 +13,7 @@ const AddDetails = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        axios.post('http://localhost:5000/addressBook', data)
+        axios.post('http://localhost:5000/users', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Address Added Successfully')
@@ -36,7 +36,7 @@ const AddDetails = () => {
                                 Your Full Name
                             </Form.Label>
                             <Col sm={8}>
-                                {user.displayName && <Form.Control {...register("name")} type="name" defaultValue={user.displayName} required />}
+                                {user.displayName && <Form.Control {...register("displayName")} type="name" defaultValue={user.displayName} required />}
                             </Col>
                         </Form.Group>
 

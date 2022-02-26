@@ -3,10 +3,11 @@ import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { Spinner } from 'react-bootstrap';
+import { Button, Spinner } from 'react-bootstrap';
 import { useLocation, useNavigate } from 'react-router-dom';
 import useProduct from '../../../../../hooks/Product/useProduct';
 import useAuth from '../../../../../hooks/useAuth';
+import CartPaymentProduct from '../CartPaymentProduct/CartPaymentProduct';
 
 const Payment = () => {
     const stripe = useStripe();
@@ -81,7 +82,7 @@ const Payment = () => {
             setSuccess('Your Payment Processed Successfully')
             console.log(paymentIntent)
             setProcessing(false)
-            // history('/checkout')
+            history('/checkout')
         }
     };
 
@@ -98,10 +99,12 @@ const Payment = () => {
                         </span>
                     </h4>
                     {
-                        carts.map(cart => <div>
-                            <p><a href="#">{cart.title}</a> <span class="price">{cart.price}</span></p>
-                            <hr />
-                        </div>)
+                        carts.map(cart => <CartPaymentProduct
+                            key={cart._id}
+                            cart={cart}
+                        >
+
+                        </CartPaymentProduct>)
                     }
                     <p>Total <span class="price" style={{
                         color: 'black'
@@ -125,9 +128,9 @@ const Payment = () => {
                         },
                     }}
                 />
-                {processing ? <Spinner animation="grow" variant="info" /> : <button type="submit" disabled={!stripe}>
+                {processing ? <Spinner animation="grow" variant="info" /> : <Button variant="outline-primary" type="submit" disabled={!stripe}>
                     Pay {total}
-                </button>}
+                </Button>}
             </form>
             {
                 error && <p style={{ color: 'red' }}>{error}</p>
@@ -135,6 +138,9 @@ const Payment = () => {
             {
                 success && <p style={{ color: 'Green' }}>{success}</p>
             }
+            <p>
+
+            </p>
         </div>
     )
 }

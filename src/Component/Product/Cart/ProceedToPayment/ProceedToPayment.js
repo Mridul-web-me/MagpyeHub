@@ -19,7 +19,7 @@ const ProceedToPayment = () => {
     const { totalQuantity, total, carts, } = useProduct({});
     const [profile, setProfile] = useState([])
     useEffect(() => {
-        axios.get(`http://localhost:5000/addressBook?email=${user.email}`, {
+        axios.get(`http://localhost:5000/users?email=${user.email}`, {
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('idToken')}`
             }
@@ -74,7 +74,10 @@ const ProceedToPayment = () => {
                 </Link> */}
             </Row>
             <br />
-            <Button variant='outline-dark' data-bs-toggle="modal" data-bs-target="#exampleModal">Checkout</Button>
+            {/* <Button variant='outline-dark' data-bs-toggle="modal" data-bs-target="#exampleModal">Checkout</Button> */}
+            <Link to="/payment">
+                <Button variant='outline-success'>Payment</Button>
+            </Link>
 
             <div className="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog">
@@ -89,8 +92,9 @@ const ProceedToPayment = () => {
                             </Elements>}
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" className="btn btn-primary">Save changes</button>
+                            <Link to="/checkout">
+                                <button type="button" className="btn btn-primary">Next</button>
+                            </Link>
                         </div>
                     </div>
                 </div>

@@ -112,7 +112,7 @@ const TedBaker = () => {
               </Accordion.Item>
             </Accordion>
           </Col>
-          <Col md={9} xs={12} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <Col md={9} xs={12}>
             {loading ? <div className='text-center'> <Spinner animation="grow" variant="info" />
               <Spinner animation="grow" variant="info" />
             </div> : <div>

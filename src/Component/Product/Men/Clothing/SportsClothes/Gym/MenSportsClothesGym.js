@@ -23,7 +23,7 @@ const MenSportsClothesGym = () => {
     const [page, setPage] = useState(0);
     const [loading, setLoading] = useState(true)
     const size = 8;
-    const category = 'blazers'
+    const category = 'MenSportsClothesGym'
     useEffect(() => {
         fetch(`http://localhost:5000/products?category=${category}&&page=${page}&&size=${size}`)
             .then(res => res.json())
@@ -120,8 +120,9 @@ const MenSportsClothesGym = () => {
                             </Accordion.Item>
                         </Accordion>
                     </Col>
-                    <Col md={9} xs={12} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                        {loading ? <div className='text-center'> <Spinner animation="grow" variant="info" />
+                    <Col md={9} xs={12}>
+                        {loading ? <div className='text-center' style={{ height: '40vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}> <Spinner animation="grow" variant="info" />
+                            <Spinner animation="grow" variant="info" />
                             <Spinner animation="grow" variant="info" />
                         </div> : <div>
 

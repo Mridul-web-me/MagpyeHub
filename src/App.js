@@ -41,24 +41,17 @@ import Eyeshadows from './Component/Product/Beauty/Makeup/Eyeshadows/Eyeshadows'
 import Mascaras from './Component/Product/Beauty/Makeup/Mascaras/Mascaras';
 import Lipsticks from './Component/Product/Beauty/Makeup/Lipsticks/Lipsticks';
 import NailPolish from './Component/Product/Beauty/Makeup/NailPolish/NailPolish';
-import MakeupGiftsSets from './Component/Product/Beauty/Makeup/MakeupGiftSets/MakeupGiftsSets';
-import MakeupBrushes from './Component/Product/Beauty/Makeup/MakeupBrushes/MakeupBrushes';
 import TShirts from './Component/Product/Men/Clothing/TShirts/TShirts';
 import Waistcoats from './Component/Product/Men/Clothing/Waistcoats/Waistcoats';
-import Partywear from './Component/Product/Men/Clothing/Partywear/Partywear';
-import HandNailsets from './Component/Product/Beauty/Makeup/HandNailsets/HandNailsets';
-import MakeupBags from './Component/Product/Beauty/Makeup/MakeupBags/MakeupBags';
-import MakeupAccessories from './Component/Product/Beauty/Makeup/MakeupAccessories/MakeupAccessories';
 import WomensPerfume from './Component/Product/Beauty/Fragrance/WomensPerfume/WomensPerfume';
 import PerfumeGiftSets from './Component/Product/Beauty/Fragrance/PerfumeGiftSets/PerfumeGiftSets';
 import MensAftershave from './Component/Product/Beauty/Fragrance/MensAftershave/MensAftershave';
-import MensPerfume from './Component/Product/Beauty/Fragrance/MensPerfume/MensPerfume';
 import AftershaveGiftSets from './Component/Product/Beauty/Fragrance/AftershaveGiftSets/AftershaveGiftSets';
 import LoginForm from './Component/LoginForm/LoginForm';
 import Login from './Component/LoginForm/Login/Login';
 import AuthProvider from './context/AuthProvider/AuthProvider';
 import YourAccount from './Component/Header/YourAccount/YourAccount';
-import AddProduct from './Component/Product/AddProduct/AddProduct';
+import AddProduct from './Component/Header/YourAccount/Admin/AddProduct/AddProduct';
 import PlaceOrder from './Component/PlaceOrder/PlaceOrder';
 import ChangePass from './Component/Header/YourAccount/ChangePass/ChangePass';
 import Cart from './Component/Product/Cart/Cart';
@@ -91,11 +84,6 @@ import Moisturisers from './Component/Product/Beauty/SkinBodyCare/Moisturisers/M
 import BodyCare from './Component/Product/Beauty/SkinBodyCare/BodyCare/BodyCare';
 import LipBalmCare from './Component/Product/Beauty/SkinBodyCare/LipBalmCare/LipBalmCare';
 import HandFootCare from './Component/Product/Beauty/SkinBodyCare/HandFootCare/HandFootCare';
-import BeautyToolsTechnology from './Component/Product/Beauty/SkinBodyCare/BeautyToolsTechnology/BeautyToolsTechnology';
-import SkinBodyGiftSets from './Component/Product/Beauty/SkinBodyCare/SkinBodyGiftSets/SkinBodyGiftSets';
-import MensGroomingShaving from './Component/Product/Beauty/SkinBodyCare/MensGroomingShaving/MensGroomingShaving';
-import MensBathBody from './Component/Product/Beauty/SkinBodyCare/MensBathBody/MensBathBody';
-import MensWashBags from './Component/Product/Beauty/SkinBodyCare/MensWashBags/MensWashBags';
 import HairCare from './Component/Product/Beauty/HairCare&Styling/HairCare/HairCare';
 import Shampoo from './Component/Product/Beauty/HairCare&Styling/Shampoo/Shampoo';
 import Conditioner from './Component/Product/Beauty/HairCare&Styling/Conditioner/Conditioner';
@@ -113,7 +101,6 @@ import KidsSocks from './Component/Product/Baby&child/KidsClothing&Shoes/KidsSoc
 import GirlsTrainers from './Component/Product/Baby&child/Girls Shoes/GirlsTrainers/GirlsTrainers';
 import GirlsSmartShoes from './Component/Product/Baby&child/Girls Shoes/GirlsSmartShoes/GirlsSmartShoes';
 import GirlsSandals from './Component/Product/Baby&child/Girls Shoes/GirlsSandals/GirlsSandals';
-import GirlsFlipflopsWellingtonBoots from './Component/Product/Baby&child/Girls Shoes/GirlsFlipflopsWellingtonBoots/GirlsFlipflopsWellingtonBoots';
 import BoysShortsTrousers from './Component/Product/Baby&child/BoysClothes/BoysShortsTrousers/BoysShortsTrousers';
 import BoysShirtsTops from './Component/Product/Baby&child/BoysClothes/BoysShirtsTops/BoysShirtsTops';
 import BoysPyjamasNightwear from './Component/Product/Baby&child/BoysClothes/BoysPyjamasNightwear/BoysPyjamasNightwear';
@@ -126,10 +113,23 @@ import BoysSmartShoes from './Component/Product/Baby&child/BoysShoes/BoysSmartSh
 import BoysSandals from './Component/Product/Baby&child/BoysShoes/BoysSandals/BoysSandals';
 import BoysWellingtonBoots from './Component/Product/Baby&child/BoysShoes/BoysWellingtonBoots/BoysWellingtonBoots';
 import BoysFlipflops from './Component/Product/Baby&child/BoysShoes/BoysFlipflops/BoysFlipflops';
-import MakeAdmin from './Component/Header/YourAccount/MakeAdmin/MakeAdmin';
+import MakeAdmin from './Component/Header/YourAccount/Admin/MakeAdmin/MakeAdmin';
 import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
-import { Fragment } from 'react';
 import AdminRoute from './Component/AdminRoute/AdminRoute';
+import ConfirmPayment from './Component/Product/Cart/ProceedToPayment/ConfirmPayment/ConfirmPayment';
+import AllOrderHistory from './Component/Header/YourAccount/Admin/AllOrderHistory/AllOrderHistory';
+import Beds from './Component/Product/FurnitureLighting/BedroomFurniture/Beds/Beds';
+import ChildrenBedroom from './Component/Product/FurnitureLighting/BedroomFurniture/ChildrenBedroom/ChildrenBedroom';
+import Wardrobes from './Component/Product/FurnitureLighting/BedroomFurniture/Wardrobes/Wardrobes';
+import DressingTables from './Component/Product/FurnitureLighting/BedroomFurniture/DressingTables/DressingTables';
+import ChestsDrawers from './Component/Product/FurnitureLighting/BedroomFurniture/ChestsDrawers/ChestsDrawers';
+import BedsideTables from './Component/Product/FurnitureLighting/BedroomFurniture/BedsideTables/BedsideTables';
+import Mattresses from './Component/Product/FurnitureLighting/BedroomFurniture/Mattresses/Mattresses';
+import SofasArmchairs from './Component/Product/FurnitureLighting/LivingRoomFurniture/SofasArmchairs/SofasArmchairs';
+import TVStands from './Component/Product/FurnitureLighting/LivingRoomFurniture/TVStands/TVStands';
+import CoffeeTables from './Component/Product/FurnitureLighting/LivingRoomFurniture/CoffeeTables/CoffeeTables';
+import BookcasesShelving from './Component/Product/FurnitureLighting/LivingRoomFurniture/BookcasesShelving/BookcasesShelving';
+import CabinetsSideboards from './Component/Product/FurnitureLighting/LivingRoomFurniture/CabinetsSideboards/CabinetsSideboards';
 
 
 
@@ -188,18 +188,11 @@ function App() {
             <Route path="/product/Mascaras" element={<Mascaras />} />
             <Route path="/product/Lipsticks" element={<Lipsticks />} />
             <Route path="/product/NailPolish" element={<NailPolish />} />
-            <Route path="/product/MakeupGiftSets" element={<MakeupGiftsSets />} />
-            <Route path="/product/MakeupBrushes" element={<MakeupBrushes />} />
             <Route path="/product/T-Shirts" element={<TShirts />} />
             <Route path="/product/Waistcoats" element={<Waistcoats />} />
-            <Route path="/product/Partywear" element={<Partywear />} />
-            <Route path="/product/HandNailsets" element={<HandNailsets />} />
-            <Route path="/product/MakeupBags" element={<MakeupBags />} />
-            <Route path="/product/MakeupAccessories" element={<MakeupAccessories />} />
             <Route path="/product/womensPerfume" element={<WomensPerfume />} />
             <Route path="/product/PerfumeGiftSets" element={<PerfumeGiftSets />} />
             <Route path="/product/MensAftershave" element={<MensAftershave />} />
-            <Route path="/product/MensPerfume" element={<MensPerfume />} />
             <Route path="/product/AftershaveGiftSets" element={<AftershaveGiftSets />} />
             <Route path="/product/bathsShower" element={<BathsShower />} />
             <Route path="/product/cleansers" element={<Cleansers />} />
@@ -207,11 +200,6 @@ function App() {
             <Route path="/product/bodyCare" element={<BodyCare />} />
             <Route path="/product/lipBalmCare" element={<LipBalmCare />} />
             <Route path="/product/handFootCare" element={<HandFootCare />} />
-            <Route path="/product/beautyToolsTechnology" element={<BeautyToolsTechnology />} />
-            <Route path="/product/skinBodyGiftSets" element={<SkinBodyGiftSets />} />
-            <Route path="/product/mensGroomingShaving" element={<MensGroomingShaving />} />
-            <Route path="/product/mensBathBody" element={<MensBathBody />} />
-            <Route path="/product/mensWashBags" element={<MensWashBags />} />
             <Route path="/product/hairCare" element={<HairCare />} />
             <Route path="/product/shampoo" element={<Shampoo />} />
             <Route path="/product/conditioner" element={<Conditioner />} />
@@ -242,8 +230,39 @@ function App() {
             <Route path="/product/boys-sandals" element={<BoysSandals />} />
             <Route path="/product/boys-wellingtonBoots" element={<BoysWellingtonBoots />} />
             <Route path="/product/boys-flipflops" element={<BoysFlipflops />} />
+            <Route path="/product/beds" element={<Beds />} />
+            <Route path="/product/mattresses" element={<Mattresses />} />
+            <Route path="/product/bedsideTables" element={<BedsideTables />} />
+            <Route path="/product/chestsDrawers" element={<ChestsDrawers />} />
+            <Route path="/product/dressingTables" element={<DressingTables />} />
+            <Route path="/product/wardrobes" element={<Wardrobes />} />
+            <Route path="/product/childrenBedroom" element={<ChildrenBedroom />} />
+            <Route path="/product/sofasArmchairs" element={<SofasArmchairs />} />
+            <Route path="/product/tVStands" element={<TVStands />} />
+            <Route path="/product/coffeeTables" element={<CoffeeTables />} />
+            <Route path="/product/bookcasesShelving" element={<BookcasesShelving />} />
+            <Route path="/product/cabinetsSideboards" element={<CabinetsSideboards />} />
+            {/* <Route path="/product/DiningTables" element={<DiningTables />} />
+            <Route path="/product/DiningChairs" element={<DiningChairs />} />
+            <Route path="/product/BarChairsStools" element={<BarChairsStools />} /> */}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <Route path="/profile" element={<YourAccount />} />
-            <Route path="/addProduct" element={<AddProduct />} />
+            <Route path="/addProduct" element={<AdminRoute><AddProduct /></AdminRoute>} />
             <Route path="/placeOrder/:productId" element={<PlaceOrder />} />
             <Route path="/ChangePass" element={<ChangePass />} />
             <Route path="/forgotPass" element={<ForgotPass />} />
@@ -252,11 +271,12 @@ function App() {
             <Route path="/myFiles" element={<MyFiles />} />
             <Route path="/proceedToPayment" element={<PrivateRoute><ProceedToPayment /></PrivateRoute>} />
             <Route path="/:searchText" element={<SearchResult />} />
-            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/checkout" element={<PrivateRoute><Checkout /></PrivateRoute>} />
             <Route path="/orderHistory" element={<OrderHistory />} />
+            <Route path="/allOrderHistory" element={<AdminRoute><AllOrderHistory /></AdminRoute>} />
             <Route path="/updateDetails/:profileId" element={<UpdateDetails />} />
             <Route path="/addDetails" element={<AddDetails />} />
-            <Route path="/manageProducts" element={<ManageProducts />} />
+            <Route path="/manageProducts" element={<AdminRoute><ManageProducts /></AdminRoute>} />
             <Route path="/payment-option" element={<PaymentOptionDetails />} />
             <Route path="/brand/aptamil" element={<Aptamil />} />
             <Route path="/brand/baby-club" element={<BabyClub />} />
@@ -269,6 +289,7 @@ function App() {
             <Route path="/brand/maxi-cosi" element={<MaxiCosi />} />
             <Route path="/brand/phase-eight" element={<PhaseEight />} />
             <Route path="/brand/ted-baker" element={<TedBaker />} />
+            <Route path="/payment" element={<PrivateRoute><ConfirmPayment /></PrivateRoute>} />
           </Routes>
         </Router>
       </AuthProvider>
