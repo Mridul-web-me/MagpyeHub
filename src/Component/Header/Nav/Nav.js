@@ -200,48 +200,42 @@ const Nav = () => {
                                             <h5>Kids Clothing & Shoes</h5>
                                             <hr />
                                             <ul className="mega-links">
-                                                <li><Link to="/product/kids-shirtsTops">Shirts & Tops</Link></li>
-                                                <li><Link to="/product/kids-dresses">Dresses</Link></li>
-                                                <li><Link to="/product/kids-pyjamasNightwear">Pyjamas & Nightwear</Link></li>
-                                                <li><Link to="/product/kids-trousersLeggings">Trousers & Leggings</Link></li>
-                                                <li><Link to="/product/kids-jeans">Jeans</Link></li>
-                                                <li><Link to="/product/kids-partyWear">Party Wear</Link></li>
-                                                <li><Link to="/product/kids-girlsBriefs">Girls Briefs</Link></li>
-                                                <li><Link to="/product/kids-socks">Socks</Link></li>
+                                                <li><Link to="/product/kidsshirtsTops">Shirts & Tops</Link></li>
+                                                <li><Link to="/product/kidsdresses">Dresses</Link></li>
+                                                <li><Link to="/product/kidspyjamasNightwear">Pyjamas & Nightwear</Link></li>
+                                                <li><Link to="/product/kidstrousersLeggings">Trousers & Leggings</Link></li>
+                                                <li><Link to="/product/kidsjeans">Jeans</Link></li>
+                                                <li><Link to="/product/kidspartyWear">Party Wear</Link></li>
                                             </ul>
                                         </div>
                                         <div className="row">
-                                            <h5>Girls Shoes</h5>
+                                            <h5>Baby Food & Milk</h5>
                                             <hr />
                                             <ul className="mega-links">
-                                                <li><Link to="/product/girls-trainers">Trainers</Link></li>
-                                                <li><Link to="/product/girls-smartShoes">Smart Shoes</Link></li>
-                                                <li><Link to="/product/girls-sandals">Sandals</Link></li>
-                                                <li><Link to="/product/girls-flipflopsWellingtonBoots">Flipflops Wellington Boots</Link></li>
+                                                <li><Link to="/product/BabyToddlerFood">Baby & Toddler Food</Link></li>
+                                                <li><Link to="/product/BabyToddlerMilk">Baby & Toddler Milk</Link></li>
                                             </ul>
                                         </div>
                                         <div className="row">
                                             <h5>Boys Clothes</h5>
                                             <hr />
                                             <ul className="mega-links">
-                                                <li><Link to="/product/boys-shortsTrousers">Shorts & Trousers</Link></li>
-                                                <li><Link to="/product/boys-shirtsTops">Shirts & Tops</Link></li>
-                                                <li><Link to="/product/boys-pyjamasNightwear">Pyjamas & Nightwear</Link></li>
-                                                <li><Link to="/product/boys-partywear">Party wear</Link></li>
-                                                <li><Link to="/product/boys-pants">Pants</Link></li>
-                                                <li><Link to="/product/boys-socks">Socks</Link></li>
-                                                <li><Link to="/product/boys-hats">Hats</Link></li>
+                                                <li><Link to="/product/boysshortsTrousers">Shorts & Trousers</Link></li>
+                                                <li><Link to="/product/boysshirtsTops">Shirts & Tops</Link></li>
+                                                <li><Link to="/product/boyspyjamasNightwear">Pyjamas & Nightwear</Link></li>
+                                                <li><Link to="/product/boyspartywear">Party wear</Link></li>
+                                                <li><Link to="/product/boyspants">Pants</Link></li>
+                                                <li><Link to="/product/boyssocks">Socks</Link></li>
+                                                <li><Link to="/product/boyshats">Hats</Link></li>
                                             </ul>
                                         </div>
                                         <div className="row">
-                                            <h5>Boys Shoes</h5>
+                                            <h5>Kids Travel</h5>
                                             <hr />
                                             <ul className="mega-links">
-                                                <li><Link to="/product/boys-trainers">Trainers</Link></li>
-                                                <li><Link to="/product/boys-smartShoes">Smart Shoes</Link></li>
-                                                <li><Link to="/product/boys-sandals">Sandals</Link></li>
-                                                <li><Link to="/product/boys-wellingtonBoots">Wellington Boots</Link></li>
-                                                <li><Link to="/product/boys-flipflops">Flipflops</Link></li>
+                                                <li><Link to="/product/CarSeats">Car Seats</Link></li>
+                                                <li><Link to="/product/BabyCarriers">Baby Carriers</Link></li>
+                                                <li><Link to="/product/Strollers">Strollers</Link></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -387,8 +381,8 @@ const Nav = () => {
                                             <h5>Travel & Luggage</h5>
                                             <hr />
                                             <ul className="mega-links">
-                                                <li><Link to="/product/Television">Television</Link></li>
-                                                <li><Link to="/product/Hand Luggage">Hand Luggage</Link></li>
+                                                <li><Link to="/product/BackPacks">Back Packs</Link></li>
+                                                <li><Link to="/product/HandLuggage">Hand Luggage</Link></li>
                                                 <li><Link to="/product/Suitcases">Suitcases</Link></li>
                                                 <li><Link to="/product/HoldallsWeekendBags">Holdalls & Weekend  Bags</Link></li>
                                                 <li><Link to="/product/Camping">Camping</Link></li>
@@ -409,7 +403,7 @@ const Nav = () => {
                                             <hr />
                                             <ul className="mega-links">
                                                 <li><Link to="/product/Treadmills">Treadmills</Link></li>
-                                                <li><Link to="/product/Exercise Bikes">Exercise Bikes</Link></li>
+                                                <li><Link to="/product/ExerciseBikes">Exercise Bikes</Link></li>
                                                 <li><Link to="/product/Weights">Weights</Link></li>
                                                 <li><Link to="/product/FitnessMachinesTechonology ">Fitness Machines & Techonology </Link></li>
                                             </ul>
@@ -427,12 +421,12 @@ const Nav = () => {
                                             <h5>Gifts By Recipient</h5>
                                             <hr />
                                             <ul className="mega-links">
-                                                <li><Link to="/product/giftsForHer">Gifts for Her</Link></li>
-                                                <li><Link to="/product/giftsForHim">Gifts for Him</Link></li>
-                                                <li><Link to="/product/giftsForKids">Gifts for Kids</Link></li>
-                                                <li><Link to="/product/giftsForCouples">Gifts for Couples</Link></li>
-                                                <li><Link to="/product/giftsForBabies">Gifts for Babies</Link></li>
-                                                <li><Link to="/product/giftsForTeenagers">Gifts for Teenagers</Link></li>
+                                                <li><Link to="/product/GiftsForHer">Gifts for Her</Link></li>
+                                                <li><Link to="/product/GiftsForHim">Gifts for Him</Link></li>
+                                                <li><Link to="/product/GiftsForKids">Gifts for Kids</Link></li>
+                                                <li><Link to="/product/GiftsForCouples">Gifts for Couples</Link></li>
+                                                <li><Link to="/product/GiftsForBabies">Gifts for Babies</Link></li>
+                                                <li><Link to="/product/GiftsForTeenagers">Gifts for Teenagers</Link></li>
                                             </ul>
                                         </div>
                                         <div className="row">

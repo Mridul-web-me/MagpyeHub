@@ -1,13 +1,11 @@
 import React, { useState } from 'react'
 import { Alert, Button, Col, Form, Row, Spinner } from 'react-bootstrap'
-import { CountryDropdown } from 'react-country-region-selector'
 import { useLocation, useNavigate } from 'react-router-dom'
 import useAuth from '../../../hooks/useAuth'
 
 const Register = () => {
     const [loginData, setLoginData] = useState({})
     const [passDidNotMatch, setPassDidNotMatch] = useState('')
-    const [country1, setCountry] = useState('')
     const history = useNavigate()
     const location = useLocation()
 
@@ -38,11 +36,6 @@ const Register = () => {
 
     }
 
-
-    const selectCountry = (val) => {
-        setCountry({ country: val });
-    }
-    const { country } = country1;
     return (
 
         <div>

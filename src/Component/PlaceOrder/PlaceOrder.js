@@ -7,6 +7,8 @@ import Header from '../Header/Header'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Footer from '../Footer/Footer';
 import './PlaceOrder.css'
+import PromoUnit from '../PromoUnit/PromoUnit';
+import Newsletter from '../Newsletter/Newsletter';
 
 
 const PlaceOrder = () => {
@@ -50,6 +52,7 @@ const PlaceOrder = () => {
     return (
         <>
             <Header></Header>
+            <PromoUnit></PromoUnit>
             <Container>
                 <Row>
                     <Col md={6} xs={12} >
@@ -234,6 +237,7 @@ const PlaceOrder = () => {
                     </Tabs>
                 </Col>
             </Container>
+            <Newsletter></Newsletter>
             <Footer></Footer>
 
             <p>

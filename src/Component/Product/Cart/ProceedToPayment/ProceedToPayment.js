@@ -64,14 +64,6 @@ const ProceedToPayment = () => {
                     )}
 
                 </Col>
-
-                {/* <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Launch demo modal
-                </button> */}
-
-                {/* <Link to="/checkout">
-                    <Button variant='outline-dark'>Checkout</Button>
-                </Link> */}
             </Row>
             <br />
             {/* <Button variant='outline-dark' data-bs-toggle="modal" data-bs-target="#exampleModal">Checkout</Button> */}
@@ -87,6 +79,7 @@ const ProceedToPayment = () => {
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div className="modal-body">
+
                             {total && <Elements stripe={stripePromise}>
                                 <Payment />
                             </Elements>}

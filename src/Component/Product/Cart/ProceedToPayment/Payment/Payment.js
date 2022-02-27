@@ -1,15 +1,22 @@
 
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
+import axios from 'axios';
 import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { Button, Spinner } from 'react-bootstrap';
 import { useLocation, useNavigate } from 'react-router-dom';
+import StripeCheckout from 'react-stripe-checkout';
+import { toast } from 'react-toastify';
 import useProduct from '../../../../../hooks/Product/useProduct';
 import useAuth from '../../../../../hooks/useAuth';
+import MultiStepForm from '../../../../Header/YourAccount/Admin/MultiStepForm/MultiStepForm';
 import CartPaymentProduct from '../CartPaymentProduct/CartPaymentProduct';
 
 const Payment = () => {
+    const { totalQuantity, total, carts, } = useProduct({});
+
     const stripe = useStripe();
     const elements = useElements();
     const [error, setError] = useState('')
@@ -18,129 +25,77 @@ const Payment = () => {
     const [processing, setProcessing] = useState(false)
     const { user } = useAuth()
     const history = useNavigate()
-    const { totalQuantity, total, carts, } = useProduct({});
     const [checkout, setCheckout] = useState(false)
 
-
-    useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json',
-            },
-            body: JSON.stringify({ total })
-        })
-            .then(res => res.json())
-            .then(data => setClientSecret(data.clientSecret))
-    }, [total])
-    const handleSubmit = async (e) => {
-
-        e.preventDefault();
-
-        if (!stripe || !elements) {
-            return;
-        }
-
-        const card = elements.getElement(CardElement);
-
-        if (card === null) {
-            return;
-        }
-        setProcessing(true)
-        const { error, paymentMethod } = await stripe.createPaymentMethod({
-            type: 'card',
-            card
-        });
-
-        if (error) {
-            setError(error.message);
-            setSuccess('')
-        } else {
-            setError('');
-            console.log(paymentMethod);
-
-        }
-        // Payment intent
-        const { paymentIntent, error: intentError } = await stripe.confirmCardPayment(
-            clientSecret,
-            {
-                payment_method: {
-                    card: card,
-                    billing_details: {
-                        name: user.displayName,
-                        email: user.email
-                    },
-                },
-            },
+    async function handleToken(token, addresses) {
+        const response = await axios.post(
+            "http://localhost:5000/create-payment-intent",
+            { token, carts }
         );
-        if (intentError) {
-            setError(intentError.message)
-            setSuccess('')
+        const { status } = response.data;
+        console.log("Response:", response.data);
+        if (status === "success") {
+            toast("Success! Check email for details", { type: "success" });
+        } else {
+            toast("Something went wrong", { type: "error" });
         }
-        else {
-            setError('')
-            setSuccess('Your Payment Processed Successfully')
-            console.log(paymentIntent)
-            setProcessing(false)
-            history('/checkout')
-        }
-    };
+    }
+
+    // useEffect(() => {
+    //     fetch('http://localhost:5000/create-payment-intent', {
+    //         method: 'POST',
+    //         headers: {
+    //             'content-type': 'application/json',
+    //         },
+    //         body: JSON.stringify({ total })
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => setClientSecret(data.clientSecret))
+    // }, [total])
+    // const handleSubmit = async (e) => {
+
+    //     e.preventDefault();
+
+    //     if (!stripe || !elements) {
+    //         return;
+    //     }
+
+    //     const card = elements.getElement(CardElement);
+
+    //     if (card === null) {
+    //         return;
+    //     }
+    //     setProcessing(true)
+    //     const { error, paymentMethod } = await stripe.createPaymentMethod({
+    //         type: 'card',
+    //         card
+    //     });
+
+    //     if (error) {
+    //         setError(error.message);
+    //         setSuccess('')
+    //     } else {
+    //         setError('');
+    //         console.log(paymentMethod);
+
+    //     }
 
     return (
         <div>
-            <div class="col-25">
-                <div class="container">
-                    <h4>Cart
-                        <span class="price" tyle={{
-                            color: 'black'
-                        }}>
-                            <i class="fa fa-shopping-cart"></i>
-                            <b>{totalQuantity}</b>
-                        </span>
-                    </h4>
-                    {
-                        carts.map(cart => <CartPaymentProduct
-                            key={cart._id}
-                            cart={cart}
-                        >
-
-                        </CartPaymentProduct>)
-                    }
-                    <p>Total <span class="price" style={{
-                        color: 'black'
-                    }}><b>{total}</b></span></p>
+            <div className="container">
+                <div className="product">
+                    <h1>{ }</h1>
+                    <h3>On Sale · £{total}</h3>
                 </div>
-            </div>
-            <form onSubmit={handleSubmit}>
-                <CardElement
-                    options={{
-                        style: {
-                            base: {
-                                fontSize: '16px',
-                                color: '#424770',
-                                '::placeholder': {
-                                    color: '#aab7c4',
-                                },
-                            },
-                            invalid: {
-                                color: '#9e2146',
-                            },
-                        },
-                    }}
+                <StripeCheckout
+                    stripeKey="pk_test_51KUuQEJYFu4RGWvKjw2LK5rIC9EAnyTQHbmzGNgGnb0XcOvh36utplRWpUtsK2EJAJEw0YExvwQxLNSv7hY3qdPh00BNUN9m3S"
+                    amount={total * 100}
+                    token={handleToken}
+                    billingAddress
+                    onSubmit={handleToken}
+                    shippingAddress
                 />
-                {processing ? <Spinner animation="grow" variant="info" /> : <Button variant="outline-primary" type="submit" disabled={!stripe}>
-                    Pay {total}
-                </Button>}
-            </form>
-            {
-                error && <p style={{ color: 'red' }}>{error}</p>
-            }
-            {
-                success && <p style={{ color: 'Green' }}>{success}</p>
-            }
-            <p>
-
-            </p>
+            </div>
         </div>
     )
 }
