@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import initializeFirebase from "../Component/LoginForm/Firebase/firebase.init";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, onAuthStateChanged, signOut, updatePassword, sendPasswordResetEmail, getIdToken } from "firebase/auth";
 import { clearTheCart, removeFromDb } from "../fakeDB";
+import axios from "axios";
 
 
 //Initialize Firebase App
@@ -38,7 +39,6 @@ const useFirebase = () => {
                 });
                 setUser(newUser)
                 saveUser(email, name, phone, address1, address2, townCity, country, postcode, telephone, 'POST');
-                alert('User added')
                 history('/')
             })
             .catch((error) => {
@@ -154,8 +154,7 @@ const useFirebase = () => {
             },
             body: JSON.stringify(user)
         })
-            .then(res => res.json())
-            .then(data => console.log(data))
+            .then()
     }
 
     return {

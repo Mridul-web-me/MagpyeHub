@@ -7,9 +7,33 @@ import { Link } from 'react-router-dom';
 import Header from '../../../Header';
 import Home from '../../../../Home/Home';
 import logo from '../../../../../img/logo.jpg'
+import toast from 'react-hot-toast';
+import useAuth from '../../../../../hooks/useAuth';
 
 
 const AddProduct = () => {
+
+    const { user } = useAuth()
+
+
+    // let imageURL = [];
+    // if (data.img) {
+    //     const imageData = new FormData();
+    //     imageData.set('key', 'acb2d4c7a68ef1bf06d396d73adb600a')
+    //     // imageData.append('image', data.img[0]);
+    //     for (let i = 0; i < data.img.length; i++) {
+    //         imageData.append(image, data.img[i])
+
+    //         try {
+    //             const res = await axios.post("https://api.imgbb.com/1/upload", imageData);
+    //             console.log(res)
+    //             imageURL = [...imageURL, res.data.data.display_url];
+    //             toast.dismiss(loading);
+    //         } catch (error) {
+    //             toast.dismiss(loading);
+    //             return toast.error('Failed to upload the image!');
+    //         }
+    //     }
     // const { register, handleSubmit, reset } = useForm();
     // const [title, setTitle] = useState('')
     // const [price, setPrice] = useState('')
@@ -48,18 +72,86 @@ const AddProduct = () => {
     //         })
 
     // }
-    const { register, handleSubmit, reset } = useForm();
-    const onSubmit = data => {
-        console.log(data);
-        axios.post('http://localhost:5000/products', data)
-            .then(res => {
-                if (res.data.insertedId) {
-                    alert('Product Added Successfully')
-                    reset()
 
+
+
+    const onSubmit = async data => {
+        console.log('img', data);
+        if (!data.img) {
+            return toast.error('Please upload an image!');
+        }
+        const loading = toast.loading('Uploading...Please wait!')
+        // let imageURL1 = "";
+        console.log(data);
+        let imageURL = [];
+        if (data.img) {
+            const imageData = new FormData();
+            imageData.set('key', '9c07b6c871adb28ca7da16c40d393954')
+            // imageData.append('image', data.img[0]);
+            for (let i = 0; i < data.img.length; i++) {
+                imageData.append('image', data.img[i])
+
+                try {
+                    const res = await axios.post("https://api.imgbb.com/1/upload", imageData);
+                    console.log(res)
+                    imageURL = [...imageURL, res.data.data.display_url];
+                    toast.dismiss(loading);
+                } catch (error) {
+                    toast.dismiss(loading);
+                    return toast.error('Failed to upload the image!');
                 }
-            })
+            }
+            const blogInfo = {
+                title: data.title,
+                description: data.description,
+                category: data.category,
+                price: data.price,
+                img: imageURL[0],
+                img1: imageURL[1],
+                img2: imageURL[2],
+                img3: imageURL[3],
+
+                // img1: imageURL1,
+
+                ProductUpdate: data.ProductUpdate,
+                author: data.author,
+                publishDate: new Date().toLocaleDateString(),
+                status: "Pending",
+                authorEmail: user.email,
+                expense: data.expense
+            }
+
+
+            console.log("Blogdata", blogInfo)
+            axios.post('http://localhost:5000/products', blogInfo)
+                .then(res => {
+                    if (res.data.insertedId) {
+                        alert('Product Added Successfully')
+                        reset()
+
+                    }
+                })
+            console.log(data);
+
+            reset();
+        }
+
+
+
     }
+
+
+    const { register, handleSubmit, reset } = useForm();
+    // const onSubmit = (data) => {
+    //     axios.post('http://localhost:5000/products', data)
+    //         .then(res => {
+    //             if (res.data.insertedId) {
+    //                 alert('Product Added Successfully')
+    //                 reset()
+
+    //             }
+    //         })
+    // }
 
     return (
         <>
@@ -115,37 +207,7 @@ const AddProduct = () => {
                                     img
                                 </Form.Label>
                                 <Col sm={8}>
-                                    <Form.Control {...register("img")} placeholder="img " type="text" />
-
-                                </Col>
-                            </Form.Group>
-
-                            <Form.Group as={Row} className="mb-3" controlId="formHorizontalCountry">
-                                <Form.Label column sm={4}>
-                                    img1
-                                </Form.Label>
-                                <Col sm={8}>
-                                    <Form.Control {...register("img1")} placeholder="img1" type="text" />
-
-                                </Col>
-                            </Form.Group>
-
-                            <Form.Group as={Row} className="mb-3" controlId="formHorizontalCountry">
-                                <Form.Label column sm={4}>
-                                    img2
-                                </Form.Label>
-                                <Col sm={8}>
-                                    <Form.Control {...register("img2")} placeholder="img2" type="text" />
-
-                                </Col>
-                            </Form.Group>
-
-                            <Form.Group as={Row} className="mb-3" controlId="formHorizontalCountry">
-                                <Form.Label column sm={4}>
-                                    img3
-                                </Form.Label>
-                                <Col sm={8}>
-                                    <Form.Control {...register("img3")} placeholder="img3" type="text" />
+                                    <Form.Control {...register("img")} placeholder="img " multiple type="file" />
 
                                 </Col>
                             </Form.Group>

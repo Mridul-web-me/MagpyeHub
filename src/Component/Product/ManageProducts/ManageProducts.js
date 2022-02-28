@@ -14,13 +14,14 @@ const ManageProducts = () => {
   }, [])
 
   const handleDelete = id => {
+    console.log('clicked');
     const url = `http://localhost:5000/products/${id}`;
     fetch(url, {
       method: "DELETE"
     })
       .then(res => res.json())
       .then(data => {
-        // console.log(data);
+
         if (data.deletedCount) {
           alert('Successfully Deleted')
           const remaining = products.filter(product => product._id !== id);

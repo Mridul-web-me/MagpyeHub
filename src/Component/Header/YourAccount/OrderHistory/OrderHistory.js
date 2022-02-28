@@ -91,7 +91,7 @@ const OrderHistory = () => {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center'
-                }}><h2 style={{ color: '#606060' }}>No Product found</h2></div>}
+                }}><h2 style={{ color: '#606060' }}>There is no product in your order</h2></div>}
             <Newsletter></Newsletter>
             <Footer></Footer>
         </div>

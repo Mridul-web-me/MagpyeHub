@@ -44,15 +44,15 @@ const HeaderTop = () => {
                                 <div>
                                     {
                                         user?.email ?
-                                            <Link to="/profile" >
+                                            <a href="/profile" >
                                                 <i className="fas fa-user"></i>
                                                 <p >Your Account</p>
-                                            </Link>
+                                            </a>
                                             :
-                                            <Link to="/register">
+                                            <a href="/register">
                                                 <i className="fas fa-user"></i>
                                                 <p>Login</p>
-                                            </Link>
+                                            </a>
                                     }
                                 </div>
                                 <div className='quote'>

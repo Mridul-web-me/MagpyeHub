@@ -9,15 +9,21 @@ import Footer from '../Footer/Footer';
 import './PlaceOrder.css'
 import PromoUnit from '../PromoUnit/PromoUnit';
 import Newsletter from '../Newsletter/Newsletter';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css/bundle";
+import { FreeMode, Navigation, Thumbs } from "swiper";
 
 
 const PlaceOrder = () => {
     const { productId } = useParams();
-    const [product, setProduct] = useState([]);
+    const [product, setProduct] = useState({});
     useEffect(() => {
         fetch(`http://localhost:5000/products/${productId}`)
             .then(res => res.json())
-            .then(data => setProduct(data));
+            .then(data => {
+                setProduct(data)
+                console.log(data.img)
+            });
         console.log(product);
     }, [productId])
 
@@ -47,38 +53,63 @@ const PlaceOrder = () => {
     const onSwipeMoveEvent = () => {
         console.log('onSwipeMove Event Triggered');
     }
-
+    const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
     return (
-        <>
+        <div className='placeOrder'>
             <Header></Header>
             <PromoUnit></PromoUnit>
             <Container>
                 <Row>
                     <Col md={6} xs={12} >
-                        <Carousel autoPlay interval="5000" infiniteLoop transitionTime="1000"
-
-                            onChange={onChangeEvent}
-                            onClickItem={onClickItemEvent}
-                            onClickThumb={onClickThumbEvent}
-                            onSwipeStart={onSwipeStartEvent}
-                            onSwipeEnd={onSwipeEndEvent}
-                            onSwipeMove={onSwipeMoveEvent}
-
+                        <Swiper
+                            style={{
+                                "--swiper-navigation-color": "#fff",
+                                "--swiper-pagination-color": "#fff",
+                            }}
+                            spaceBetween={10}
+                            navigation={true}
+                            loop={true}
+                            thumbs={{ swiper: thumbsSwiper }}
+                            modules={[FreeMode, Navigation, Thumbs]}
+                            className="mySwiper2"
                         >
-                            <div style={{ height: '400px' }}>
-                                <img src={product.img} alt='' />
-                            </div>
-                            <div style={{ height: '400px' }}>
-                                <img src={product.img1} alt='' />
-                            </div>
-                            <div style={{ height: '400px' }}>
-                                <img src={product.img2} alt='' />
-                            </div>
-                            <div style={{ height: '400px' }}>
-                                <img src={product.img3} alt='' />
-                            </div>
-                        </Carousel>
+                            <SwiperSlide>
+                                <img src={product.img} alt="" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <img src={product.img1} alt="" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <img src={product.img2} alt="" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <img src={product.img3} alt="" />
+                            </SwiperSlide>
+                        </Swiper>
+                        <Swiper
+                            onSwiper={setThumbsSwiper}
+                            spaceBetween={10}
+                            slidesPerView={4}
+                            freeMode={true}
+
+                            watchSlidesProgress={true}
+                            modules={[FreeMode, Navigation, Thumbs]}
+                            className="mySwiper"
+                        >
+                            <SwiperSlide>
+                                <img src={product.img} alt="" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <img src={product.img1} alt="" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <img src={product.img2} alt="" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <img src={product.img3} alt="" />
+                            </SwiperSlide>
+                        </Swiper>
                     </Col>
                     <Col xs={12} md={6} style={{
                         textAlign: 'start',
@@ -243,7 +274,7 @@ const PlaceOrder = () => {
             <p>
 
             </p>
-        </>
+        </div>
 
     )
 }
