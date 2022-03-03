@@ -27,8 +27,6 @@ const OrderHistory = () => {
             });
     }, [user.email])
 
-
-
     return (
         <div>
             <Header></Header>
@@ -67,10 +65,9 @@ const OrderHistory = () => {
                             <div
                                 key={orders._id}
                                 orders={orders}
-                                savedProduct={orders.order.savedProduct}
                             >
                                 {
-                                    orders.order.savedProduct.map(product =>
+                                    orders.order.map(product =>
                                         <OrderedProduct
                                             key={product._id}
                                             product={product}

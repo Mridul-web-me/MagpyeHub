@@ -28,8 +28,6 @@ const Checkout = () => {
 
 
     const onSubmit = data => {
-        // data.preventDefault()
-        // const savedCart = getStoredCart()
         const savedProduct = carts;
         data.order = { savedProduct };
         fetch('http://localhost:5000/orders', {

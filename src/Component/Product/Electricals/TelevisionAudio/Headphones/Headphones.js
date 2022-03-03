@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Accordion, Button, Col, Container, Row, Spinner } from 'react-bootstrap'
+import { Accordion, Button, Col, Container, Row, Spinner, Table } from 'react-bootstrap'
 import { Helmet } from 'react-helmet'
 import { Link } from 'react-router-dom'
 import useProduct from '../../../../../hooks/Product/useProduct'
@@ -20,7 +20,7 @@ const Headphones = (props) => {
     const [page, setPage] = useState(0);
     const [loading, setLoading] = useState(true)
     const size = 8;
-    const category = 'headphones'
+    const category = 'Headphones'
     useEffect(() => {
         fetch(`http://localhost:5000/products?category=${category}&&page=${page}&&size=${size}`)
             .then(res => res.json())
@@ -56,7 +56,6 @@ const Headphones = (props) => {
             </Helmet>
             <Header></Header>
             <PromoUnit></PromoUnit>
-
             <Container fluid>
                 <Row>
                     <h3 style={{

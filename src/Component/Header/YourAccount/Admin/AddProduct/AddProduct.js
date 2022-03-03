@@ -1,80 +1,21 @@
 // import axios from 'axios';
 import axios from 'axios';
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
-import Header from '../../../Header';
-import Home from '../../../../Home/Home';
 import logo from '../../../../../img/logo.jpg'
 import toast from 'react-hot-toast';
 import useAuth from '../../../../../hooks/useAuth';
 
+// import { Editor, EditorState } from 'draft-js';
+// import 'draft-js/dist/Draft.css';
+// import { Editor } from "react-draft-wysiwyg";
+// import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 
 const AddProduct = () => {
-
+    const { register, handleSubmit, reset } = useForm();
     const { user } = useAuth()
-
-
-    // let imageURL = [];
-    // if (data.img) {
-    //     const imageData = new FormData();
-    //     imageData.set('key', 'acb2d4c7a68ef1bf06d396d73adb600a')
-    //     // imageData.append('image', data.img[0]);
-    //     for (let i = 0; i < data.img.length; i++) {
-    //         imageData.append(image, data.img[i])
-
-    //         try {
-    //             const res = await axios.post("https://api.imgbb.com/1/upload", imageData);
-    //             console.log(res)
-    //             imageURL = [...imageURL, res.data.data.display_url];
-    //             toast.dismiss(loading);
-    //         } catch (error) {
-    //             toast.dismiss(loading);
-    //             return toast.error('Failed to upload the image!');
-    //         }
-    //     }
-    // const { register, handleSubmit, reset } = useForm();
-    // const [title, setTitle] = useState('')
-    // const [price, setPrice] = useState('')
-    // const [productCode, setProductCode] = useState('')
-    // const [category, setCategory] = useState('')
-    // const [image, setImage] = useState(null)
-
-    // const handleOnSubmit = e => {
-    //     e.preventDefault();
-    //     if (!image) {
-    //         return;
-    //     }
-    //     else {
-
-    //     }
-    //     const formData = new FormData();
-    //     formData.append('title', title);
-    //     formData.append('price', price);
-    //     formData.append('image', image);
-    //     formData.append('productCode', productCode);
-    //     formData.append('category', category);
-
-    //     fetch('http://localhost:5000/products', {
-    //         method: 'POST',
-    //         body: formData
-    //     })
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             if (data.insertedId) {
-    //                 alert('Product Added Successfully')
-    //                 reset();
-    //             }
-    //         })
-    //         .catch(error => {
-    //             console.error('Error', error);
-    //         })
-
-    // }
-
-
-
     const onSubmit = async data => {
         console.log('img', data);
         if (!data.img) {
@@ -141,17 +82,6 @@ const AddProduct = () => {
     }
 
 
-    const { register, handleSubmit, reset } = useForm();
-    // const onSubmit = (data) => {
-    //     axios.post('http://localhost:5000/products', data)
-    //         .then(res => {
-    //             if (res.data.insertedId) {
-    //                 alert('Product Added Successfully')
-    //                 reset()
-
-    //             }
-    //         })
-    // }
 
     return (
         <>

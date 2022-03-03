@@ -15,6 +15,7 @@ const useFirebase = () => {
     const [token, setToken] = useState('')
     const [isLoading, setIsLoading] = useState(false);
     const [isLoading2, setIsLoading2] = useState(true);
+    const [isLoading3, setIsLoading3] = useState(true);
     const [authRegError, setRegAuthError] = useState('');
     const [authLoginError, setLoginAuthError] = useState('');
 
@@ -53,6 +54,7 @@ const useFirebase = () => {
     const loginUser = (email, password, history, location) => {
         // console.log(email, password);
         setIsLoading2(true);
+        setIsLoading3(true);
         signInWithEmailAndPassword(auth, email, password)
             .then((result) => {
                 setLoginAuthError('')
@@ -65,6 +67,7 @@ const useFirebase = () => {
             })
             .finally(() => {
                 setIsLoading2(false);
+                setIsLoading3(false);
             });
 
     }
@@ -119,6 +122,7 @@ const useFirebase = () => {
                 setUser({})
             }
             setIsLoading2(false);
+            setIsLoading3(false);
         });
         return () => unSubscribe;
     }, [])
@@ -141,6 +145,7 @@ const useFirebase = () => {
         fetch(`http://localhost:5000/users/${user.email}`)
             .then(res => res.json())
             .then(data => {
+
                 setAdmin(data.admin)
             })
     }, [user.email])
@@ -164,6 +169,7 @@ const useFirebase = () => {
         loginUser,
         isLoading,
         isLoading2,
+        isLoading3,
         authRegError,
         authLoginError,
         resetPassword,

@@ -4,9 +4,9 @@ import { Route, Navigate, useLocation } from 'react-router-dom'
 import useAuth from '../../../../../hooks/useAuth';
 
 const AdminRoute = ({ children, ...rest }) => {
-    const { user, admin, isLoading2 } = useAuth();
+    const { user, admin, isLoading3 } = useAuth();
     let location = useLocation()
-    if (isLoading2) {
+    if (isLoading3) {
         return (
             <div className="spinner-border" role="status">
                 <span className="visually-hidden">Loading...</span>

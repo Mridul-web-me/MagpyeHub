@@ -13,6 +13,7 @@ import useProduct from '../../../../hooks/Product/useProduct';
 
 
 const stripePromise = loadStripe('pk_test_51KUuQEJYFu4RGWvKjw2LK5rIC9EAnyTQHbmzGNgGnb0XcOvh36utplRWpUtsK2EJAJEw0YExvwQxLNSv7hY3qdPh00BNUN9m3S');
+
 const ProceedToPayment = () => {
     const [modalShow, setModalShow] = React.useState(false);
     const { user } = useAuth()
@@ -29,6 +30,7 @@ const ProceedToPayment = () => {
                 setProfile(data.data)
             });
     }, [user.email])
+    console.log('client profile', profile)
     return <div>
         <Link to="/home" >
             <img src={logo} style={{
@@ -66,10 +68,10 @@ const ProceedToPayment = () => {
                 </Col>
             </Row>
             <br />
-            {/* <Button variant='outline-dark' data-bs-toggle="modal" data-bs-target="#exampleModal">Checkout</Button> */}
-            <Link to="/payment">
+            <Button variant='outline-dark' data-bs-toggle="modal" data-bs-target="#exampleModal">Checkout</Button>
+            {/* <Link to="/payment">
                 <Button variant='outline-success'>Payment</Button>
-            </Link>
+            </Link> */}
 
             <div className="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog">
@@ -80,18 +82,33 @@ const ProceedToPayment = () => {
                         </div>
                         <div className="modal-body">
 
-                            {total && <Elements stripe={stripePromise}>
-                                <Payment />
-                            </Elements>}
+                            {profile.map(clientAddress =>
+                                <>
+                                    <h2>Name: {clientAddress.displayName}</h2>
+                                    {total && <Elements
+                                        clientAddress={clientAddress}
+                                        stripe={stripePromise}>
+
+                                        <Payment address={clientAddress} />
+
+                                    </Elements>}
+                                </>
+
+                            )
+                            }
                         </div>
-                        <div className="modal-footer">
+                        {/* <div className="modal-footer">
                             <Link to="/checkout">
                                 <button type="button" className="btn btn-primary">Next</button>
                             </Link>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
+
             </div>
+            {/* {total && <Elements stripe={stripePromise}>
+                <Payment />
+            </Elements>} */}
         </Container>
         <Footer></Footer>
     </div>

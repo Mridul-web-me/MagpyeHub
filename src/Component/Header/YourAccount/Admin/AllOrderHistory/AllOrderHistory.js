@@ -66,7 +66,7 @@ const AllOrderHistory = () => {
 
                             </History>
                             {
-                                orders.order.savedProduct.map(product =>
+                                orders.order.map(product =>
                                     <OrderedProduct
                                         key={product._id}
                                         product={product}
