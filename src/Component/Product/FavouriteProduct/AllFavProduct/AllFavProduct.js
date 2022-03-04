@@ -1,10 +1,9 @@
 import React from 'react';
-import { Button, Card, Col, Row } from 'react-bootstrap';
+import { Button, Card, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { SwiperSlide } from 'swiper/react';
 
 const AllFavProduct = ({ product, handleAddToCart }) => {
-    const { _id, title, img, category, price } = product;
+    const { _id, title, img, price } = product;
     return (
         <>
 
@@ -12,18 +11,15 @@ const AllFavProduct = ({ product, handleAddToCart }) => {
                 <Card>
                     <Card.Img className='img-fluid' variant="top" style={{ height: '200px' }} src={img} height="300px" />
                     <Card.Body>
-                        <Link to={`/placeOrder/${_id}`} style={{
+                        <Link to={`/details/${_id}`} style={{
                             textDecoration: 'none',
                             color: '#303030'
                         }}>
                             <Card.Title>{title}</Card.Title>
                         </Link>
-                        <Card.Text>
-                            {category}
-                        </Card.Text>
-                        <Card.Text>
+                        <Card.Title>
                             $ {price}
-                        </Card.Text>
+                        </Card.Title>
                         <div className='groupButton'>
                             <div style={{
                                 display: 'flex',
@@ -35,7 +31,7 @@ const AllFavProduct = ({ product, handleAddToCart }) => {
                                     background: '#0091c0',
                                     border: '1px solid #0091c0'
                                 }} >Buy</Button>
-                                <Link to={`/placeOrder/${_id}`}>
+                                <Link to={`/details/${_id}`}>
                                     <Button variant="outline-primary" style={{
                                         width: '100px',
                                         background: '#fff',

@@ -25,7 +25,7 @@ const CartPaymentProduct = ({ cart }) => {
                     <Link style={{
                         color: '#303030', fontSize: '16px',
                         textDecoration: 'none'
-                    }} to={`/placeOrder/${_id}`}>
+                    }} to={`/details/${_id}`}>
                         <h5 style={{ fontSize: '16px' }}>{title}</h5>
                     </Link>
                     <p style={{ fontSize: '12px' }}>Product Code: {_id}</p>

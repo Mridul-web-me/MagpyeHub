@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+import { Helmet } from 'react-helmet';
 import { Link, useNavigate } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import Header from '../Header';
@@ -11,6 +12,12 @@ const YourAccount = () => {
 
     return (
         <div className='yourAccount'>
+            <Helmet>
+                <title>
+                    MagpyehubOnline | Account
+                </title>
+                <meta name="description" content="This is Magpyehub Online Shop" />
+            </Helmet>
             <Header></Header>
             <Container fluid style={{
                 margin: '50px 0'

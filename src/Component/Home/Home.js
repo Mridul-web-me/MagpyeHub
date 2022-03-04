@@ -11,10 +11,17 @@ import Product from '../Product/Product'
 import Sponsor from '../Sponsor/Sponsor'
 import './Home.css'
 import PromoUnit from '../PromoUnit/PromoUnit'
+import { Helmet } from 'react-helmet'
 
 const Home = () => {
     return (
         <div>
+            <Helmet>
+                <title>
+                    MagpyehubOnline | Home
+                </title>
+                <meta name="description" content="This is Magpyehub Online Shop" />
+            </Helmet>
             <Header></Header>
             <PromoUnit></PromoUnit>
             <Banner></Banner>

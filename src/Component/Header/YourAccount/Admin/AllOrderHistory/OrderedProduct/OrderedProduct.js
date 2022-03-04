@@ -20,7 +20,7 @@ const OrderedProduct = ({ product, orders }) => {
                     <Link style={{
                         color: '#303030', fontSize: '16px',
                         textDecoration: 'none'
-                    }} to={`/placeOrder/${product._id}`}>
+                    }} to={`/details/${product._id}`}>
                         <h5 style={{ fontSize: '16px' }}>{product.title}</h5>
                     </Link>
                     <p style={{ fontSize: '12px' }}>Product Code: {product._id}</p>

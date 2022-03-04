@@ -12,7 +12,7 @@ import { Container } from 'react-bootstrap';
 
 const stripePromise = loadStripe('pk_test_51KUuQEJYFu4RGWvKjw2LK5rIC9EAnyTQHbmzGNgGnb0XcOvh36utplRWpUtsK2EJAJEw0YExvwQxLNSv7hY3qdPh00BNUN9m3S');
 const ConfirmPayment = () => {
-    const { totalQuantity, total, carts, } = useProduct({});
+    const { total, } = useProduct({});
 
     return (
         <div>

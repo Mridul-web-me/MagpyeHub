@@ -7,6 +7,7 @@ import Header from '../../../../Header/Header'
 import AllProduct from '../../../AllProduct/AllProduct'
 import Newsletter from '../../../../Newsletter/Newsletter'
 import PromoUnit from '../../../../PromoUnit/PromoUnit'
+import { Helmet } from 'react-helmet'
 
 const BathroomAccessories = () => {
     const [price, setPrice] = useState(0)
@@ -45,6 +46,10 @@ const BathroomAccessories = () => {
     }
     return (
         <div>
+            <Helmet>
+                <title>Bathroom Accessories</title>
+                <meta name="description" content="This is Magpyehub Online Shop" />
+            </Helmet>
             <Header></Header>
             <PromoUnit></PromoUnit>
 

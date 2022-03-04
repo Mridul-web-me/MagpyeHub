@@ -8,8 +8,6 @@ const History = ({ orders }) => {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
-
     const [order, setOrder] = useState({});
 
     const handleStatusChange = e => {
@@ -38,6 +36,22 @@ const History = ({ orders }) => {
         e.preventDefault();
     }
 
+    const handleDelete = _id => {
+        const url = `http://localhost:5000/orders/${_id}`;
+        fetch(url, {
+            method: "DELETE"
+        })
+            .then(res => res.json())
+            .then(data => {
+
+                if (data.deletedCount) {
+                    alert('Successfully Deleted')
+                    const remaining = order.filter(orders => orders._id !== _id);
+                    setOrder(remaining);
+                }
+            })
+    }
+
 
     return (
         <div>
@@ -48,7 +62,9 @@ const History = ({ orders }) => {
             }}>
                 <h4>Name: {fullName}</h4>
                 <h4>Email: {email}</h4>
-                <Button onClick={handleShow}>Update Order Status</Button>
+                <div>
+                    <Button onClick={() => handleDelete(orders._id)} variant='danger'>Delete Order</Button>
+                    <Button onClick={handleShow}>Update Order Status</Button></div>
             </div>
             <Modal
                 show={show} onHide={handleClose}

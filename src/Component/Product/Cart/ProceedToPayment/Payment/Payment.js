@@ -1,21 +1,17 @@
 
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
-import { loadStripe } from '@stripe/stripe-js';
-import axios from 'axios';
 import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { Form, Button, Spinner } from 'react-bootstrap';
+import { Button, Spinner } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
 import { clearTheCart } from '../../../../../fakeDB';
 import useProduct from '../../../../../hooks/Product/useProduct';
 import useAuth from '../../../../../hooks/useAuth';
 
 
 const Payment = ({ address: clientAddress }) => {
-    const { totalQuantity, total, carts, } = useProduct({});
-    const [profile, setProfile] = useState([])
+    const { total, carts, } = useProduct({});
     const stripe = useStripe();
     const elements = useElements();
     const [error, setError] = useState('')
@@ -23,10 +19,9 @@ const Payment = ({ address: clientAddress }) => {
     const [success, setSuccess] = useState('')
     const [processing, setProcessing] = useState(false)
     const { user } = useAuth()
-    const navigate = useNavigate()
-    const { register, reset } = useForm();
+    const { reset } = useForm();
     const { displayName, email, zip, state, city, phone, address, address1 } = clientAddress
-    // console.log(displayName)
+    // console.log(carts)
 
     useEffect(() => {
         fetch('http://localhost:5000/create-payment-intent', {
@@ -130,68 +125,40 @@ const Payment = ({ address: clientAddress }) => {
         <div>
             <div className="container">
                 <div className="product">
-                    <h3>On Sale · £{total}</h3>
-                </div>
-                {/* <StripeCheckout
-                    stripeKey="pk_test_51KUuQEJYFu4RGWvKjw2LK5rIC9EAnyTQHbmzGNgGnb0XcOvh36utplRWpUtsK2EJAJEw0YExvwQxLNSv7hY3qdPh00BNUN9m3S"
-                    amount={total * 100}
-                    token={handleToken}
-                    billingAddress
-                    onSubmit={handleToken}
-                    shippingAddress
-                /> */}
-                <form onSubmit={handleSubmit}>
-                    {/* <div className="row">
-
-                        <div className="col-50">
-                            <h3>Billing Address</h3>
-                            <Form.Group className="mb-3" controlId="formHorizontalName">
-                                <Form.Label><i class="fa fa-user"></i> Full Name</Form.Label>
-                                <Form.Control required type="name"
-                                    placeholder='Name'
-                                    {...register("fullName")} />
-                            </Form.Group>
-                            <Form.Group className="mb-3" controlId="formHorizontalEmail">
-                                <Form.Label><i class="fa fa-envelope"></i> Email</Form.Label>
-                                {user.email && <Form.Control required type="name" value={user.email} {...register("email")} />}
-                            </Form.Group>
-                            <Form.Group className="mb-3" controlId="formHorizontalPhone">
-                                <Form.Label><i class="fas fa-phone"></i> Phone</Form.Label>
-                                {<Form.Control required type="name" placeholder='Phone' {...register("phone")} />}
-                            </Form.Group>
-                            <Form.Group className="mb-3" controlId="formHorizontalAddress">
-                                <Form.Label><i className="fa fa-address-card-o"></i> Address</Form.Label>
-                                <Form.Control required type="name" placeholder="542 W. 15th Street" {...register("address")} />
-                            </Form.Group>
-
-                            <Form.Group className="mb-3" controlId="formHorizontalCity">
-                                <Form.Label><i className="fa fa-institution"></i> City</Form.Label>
-                                <Form.Control required type="name" placeholder="New York" {...register("city")} />
-                            </Form.Group>
-
-
-                            <div className="row">
-                                <div className="col-50">
-                                    <Form.Group className="mb-3" controlId="formHorizontalState">
-                                        <Form.Label> State</Form.Label>
-                                        <Form.Control required type="name" placeholder="NY"{...register("state")} />
-                                    </Form.Group>
-
+                    <h4>Your Order</h4>
+                    <div>
+                        {
+                            carts.map(product => <div key={product._id}>
+                                <div style={{
+                                    display: 'flex',
+                                    justifyContent: 'space-between',
+                                    alignItem: 'center'
+                                }}>
+                                    <p style={{ margin: '0 20px' }}>{product.title}</p>
+                                    <p>£{product.price}</p>
                                 </div>
-                                <div className="col-50">
-                                    <Form.Group className="mb-3" controlId="formHorizontalZip">
-                                        <Form.Label> Zip</Form.Label>
-                                        <Form.Control required type="name" placeholder="10001"{...register("Zip")} />
-                                    </Form.Group>
-                                </div>
-                                <Form.Group className="mb-3 d-none" controlId="formHorizontalZip">
-                                    <Form.Label> Status</Form.Label>
-                                    <Form.Control required type="n
-                                                ame" defaultValue="Pending"{...register("status")} />
-                                </Form.Group>
-                            </div>
+                            </div>)
+                        }
+                        <div style={{
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                            alignItem: 'center'
+                        }}>
+                            <h5>Total Purchases</h5>
+                            <h5>£ {total}</h5>
                         </div>
-                    </div> */}
+                        <div style={{
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                            alignItem: 'center'
+                        }}>
+                            <h2>Total</h2>
+                            <h4>£ {total}</h4>
+                        </div>
+                    </div>
+                </div>
+                <form onSubmit={handleSubmit}>
+
                     <CardElement
                         options={{
                             style: {
@@ -210,7 +177,7 @@ const Payment = ({ address: clientAddress }) => {
                     />
                     {processing ? <div><Spinner animation="grow" variant="info" />
                         <Spinner animation="grow" variant="info" /></div> : <Button variant='outline-success' type="submit" disabled={!stripe || success}>
-                        Pay ${total}
+                        Pay & Place Order £{total}
                     </Button>}
                 </form>
                 {

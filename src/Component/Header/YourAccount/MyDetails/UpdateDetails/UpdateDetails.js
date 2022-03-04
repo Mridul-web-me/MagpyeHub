@@ -118,7 +118,7 @@ const UpdateDetails = () => {
                                             <Form.Control type="text" placeholder="Phone " required />
                                         </Col>
                                     </Form.Group>
-                                    <Button variant="primary" type="submit">
+                                    <Button variant="primary" type="submit" disabled>
                                         Update
                                     </Button>
                                 </Form>

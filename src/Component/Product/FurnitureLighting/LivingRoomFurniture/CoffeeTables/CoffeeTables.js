@@ -51,7 +51,7 @@ const CoffeeTables = (props) => {
     return (
         <div>
             <Helmet>
-                <title>Bedding</title>
+                <title>Coffee Tables</title>
                 <meta name="description" content="This is Magpyehub Online Shop" />
             </Helmet>
             <Header></Header>
@@ -64,7 +64,7 @@ const CoffeeTables = (props) => {
                         color: '#303030', fontSize: '26px',
                         textTransform: 'uppercase',
                         marginBottom: '20px'
-                    }}>Bedding</h3>
+                    }}>Coffee Tables</h3>
                     <Col md={3} xs={12}>
                         <Accordion defaultActiveKey="0">
                             <Accordion.Item eventKey="0">

@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { Col, Row, Spinner } from 'react-bootstrap';
+import { Helmet } from 'react-helmet';
 import useAuth from '../../../../../hooks/useAuth';
 import Footer from '../../../../Footer/Footer';
 import Newsletter from '../../../../Newsletter/Newsletter';
@@ -25,6 +26,12 @@ const AllOrderHistory = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>
+                    Magpyehub | All Order
+                </title>
+                <meta name="description" content="This is Magpyehub Online Shop" />
+            </Helmet>
             <Header></Header>
             <PromoUnit></PromoUnit>
             {loading ? <div><Spinner animation="grow" variant="info" />
@@ -83,7 +90,7 @@ const AllOrderHistory = () => {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center'
-                }}><h2 style={{ color: '#606060' }}>No Product found</h2></div>}
+                }}><h2 style={{ color: '#606060' }}>No Orders found</h2></div>}
             <Newsletter></Newsletter>
             <Footer></Footer>
         </div>

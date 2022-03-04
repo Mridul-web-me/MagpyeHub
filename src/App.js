@@ -61,11 +61,10 @@ import MyDetails from './Component/Header/YourAccount/MyDetails/MyDetails';
 import MyFiles from './Component/Header/YourAccount/MyFiles/MyFiles';
 import ProceedToPayment from './Component/Product/Cart/ProceedToPayment/ProceedToPayment';
 import SearchResult from './Component/Header/SearchBox/SearchResult/SearchResult';
-import Checkout from './Component/Product/Cart/ProceedToPayment/Checkout/Checkout';
 import OrderHistory from './Component/Header/YourAccount/OrderHistory/OrderHistory';
 import UpdateDetails from './Component/Header/YourAccount/MyDetails/UpdateDetails/UpdateDetails';
 import AddDetails from './Component/Header/YourAccount/MyDetails/AddDetails/AddDetails';
-import ManageProducts from './Component/Product/ManageProducts/ManageProducts';
+// import ManageProducts from './Component/Product/ManageProducts/ManageProducts';
 import PaymentOptionDetails from './Component/PaymentOption/PaymentOptionDetails';
 import Aptamil from './Component/Product/Brand/Aptamil/Aptamil';
 import BabyClub from './Component/Product/Brand/Baby-Club/BabyClub';
@@ -197,6 +196,7 @@ import Strollers from './Component/Product/Baby&child/KidsTravel/Strollers/Strol
 import BabyCarriers from './Component/Product/Baby&child/KidsTravel/BabyCarriers/BabyCarriers';
 import CarSeats from './Component/Product/Baby&child/KidsTravel/CarSeats/CarSeats';
 import BabyToddlerFood from './Component/Product/Baby&child/BabyFoodMilk/BabyFoodFood/BabyFoodFood';
+import ManageProducts from './Component/Header/YourAccount/Admin/ManageProducts/ManageProducts';
 
 
 
@@ -377,7 +377,7 @@ function App() {
 
             <Route path="/profile" element={<YourAccount />} />
             <Route path="/addProduct" element={<AdminRoute><AddProduct /></AdminRoute>} />
-            <Route path="/placeOrder/:productId" element={<PlaceOrder />} />
+            <Route path="/details/:productId" element={<PlaceOrder />} />
             <Route path="/ChangePass" element={<ChangePass />} />
             <Route path="/forgotPass" element={<ForgotPass />} />
             <Route path="/addressBook" element={<AddressBook />} />
@@ -385,7 +385,6 @@ function App() {
             <Route path="/myFiles" element={<MyFiles />} />
             <Route path="/proceedToPayment" element={<PrivateRoute><ProceedToPayment /></PrivateRoute>} />
             <Route path="/:searchText" element={<SearchResult />} />
-            <Route path="/checkout" element={<PrivateRoute><Checkout /></PrivateRoute>} />
             <Route path="/orderHistory" element={<OrderHistory />} />
             <Route path="/allOrderHistory" element={<AdminRoute><AllOrderHistory /></AdminRoute>} />
             <Route path="/updateDetails/:profileId" element={<UpdateDetails />} />

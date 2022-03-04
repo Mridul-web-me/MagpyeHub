@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { Col, Row, Spinner } from 'react-bootstrap';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../../hooks/useAuth';
 import Footer from '../../../Footer/Footer';
@@ -29,6 +30,12 @@ const OrderHistory = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>
+                    Order History
+                </title>
+                <meta name="description" content="This is Magpyehub Online Shop" />
+            </Helmet>
             <Header></Header>
             <PromoUnit></PromoUnit>
             {loading ? <div><Spinner animation="grow" variant="info" />

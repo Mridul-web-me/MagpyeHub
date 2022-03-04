@@ -6,6 +6,7 @@ import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import useAuth from '../../../../hooks/useAuth';
 import SingleAddress from './SingleAddress/SingleAddress';
+import { Helmet } from 'react-helmet';
 
 const AddressBook = (props) => {
 
@@ -28,6 +29,12 @@ const AddressBook = (props) => {
 
     return (
         <>
+            <Helmet>
+                <title>
+                    Address Book
+                </title>
+                <meta name="description" content="This is Magpyehub Online Shop" />
+            </Helmet>
             <Header></Header>
 
             <h4>ADDRESS BOOK</h4>

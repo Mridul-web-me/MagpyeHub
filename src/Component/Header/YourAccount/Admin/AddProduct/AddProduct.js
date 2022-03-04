@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import logo from '../../../../../img/logo.jpg'
 import toast from 'react-hot-toast';
 import useAuth from '../../../../../hooks/useAuth';
+import { Helmet } from 'react-helmet';
 
 // import { Editor, EditorState } from 'draft-js';
 // import 'draft-js/dist/Draft.css';
@@ -27,7 +28,7 @@ const AddProduct = () => {
         let imageURL = [];
         if (data.img) {
             const imageData = new FormData();
-            imageData.set('key', '9c07b6c871adb28ca7da16c40d393954')
+            imageData.set('key', '510646b8b5fc9aed91f42f6150aeb22c')
             // imageData.append('image', data.img[0]);
             for (let i = 0; i < data.img.length; i++) {
                 imageData.append('image', data.img[i])
@@ -85,6 +86,12 @@ const AddProduct = () => {
 
     return (
         <>
+            <Helmet>
+                <title>
+                    Add Product
+                </title>
+                <meta name="description" content="This is Magpyehub Online Shop" />
+            </Helmet>
             <Col xs={4} md={4}>
                 <Link to="/home" >
                     <img src={logo} style={{

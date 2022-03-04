@@ -11,7 +11,7 @@ const FilterProduct = (props) => {
                     <Card.Img className='img-fluid' variant="top" src={img1} />
 
                     <Card.Body>
-                        <Link to={`/placeOrder/${_id}`} style={{
+                        <Link to={`/details/${_id}`} style={{
                             textDecoration: 'none',
                             color: '#303030'
                         }}>
@@ -31,7 +31,7 @@ const FilterProduct = (props) => {
                                     background: '#0091c0',
                                     border: '1px solid #0091c0'
                                 }}>Buy</Button>
-                                <Link to={`/placeOrder/${_id}`}>
+                                <Link to={`/details/${_id}`}>
                                     <Button style={{
                                         width: '100px',
                                         background: '#fff',

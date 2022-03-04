@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link as a } from 'react-router-dom'
 import rainbow from '../../img/sponsor/rainbow.jpg'
 import hundred from '../../img/sponsor/100%.jpg'
 import ekomi from '../../img/sponsor/ekomi.jpg'
@@ -10,8 +9,8 @@ const Sponsor = () => {
         <div className='sponsor'>
             <div className="container-fluid">
                 <div className="row">
-                    <div className="col-md-4">
-                        <a href="/">
+                    <div className="col-md-4" style={{ justifyContent: 'center', alignItems: 'center' }}>
+                        <a href="">
                             <img className="img-fluid" src={rainbow} alt="" />
                         </a>
                     </div>

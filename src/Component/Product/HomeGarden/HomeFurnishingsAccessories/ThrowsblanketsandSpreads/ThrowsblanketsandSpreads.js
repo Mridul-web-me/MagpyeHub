@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Accordion, Button, Col, Container, Row, Spinner } from 'react-bootstrap'
+import { Helmet } from 'react-helmet'
 import { Link } from 'react-router-dom'
 import useProduct from '../../../../../hooks/Product/useProduct'
 import Footer from '../../../../Footer/Footer'
@@ -42,6 +43,12 @@ const ThrowsblanketsandSpreads = () => {
     }
     return (
         <div>
+            <Helmet>
+                <title>
+                    Throws, blankets and Spreads
+                </title>
+                <meta name="description" content="This is Magpyehub Online Shop" />
+            </Helmet>
             <Header></Header>
             <PromoUnit></PromoUnit>
 

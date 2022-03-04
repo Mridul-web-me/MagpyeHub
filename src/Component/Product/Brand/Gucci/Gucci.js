@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Accordion, Button, Col, Container, Row, Spinner } from 'react-bootstrap'
+import { Helmet } from 'react-helmet'
 import { Link } from 'react-router-dom'
 import useProduct from '../../../../hooks/Product/useProduct'
 import Footer from '../../../Footer/Footer'
@@ -45,6 +46,10 @@ const Gucci = () => {
     }
     return (
         <div>
+            <Helmet>
+                <title>Gucci</title>
+                <meta name="description" content="This is Magpyehub Online Shop" />
+            </Helmet>
             <Header></Header>
             <PromoUnit></PromoUnit>
             <Container fluid style={{
@@ -56,7 +61,7 @@ const Gucci = () => {
                         color: '#303030', fontSize: '26px',
                         textTransform: 'uppercase',
                         margin: '20px 0'
-                    }}>Bedding</h3>
+                    }}>Gucci</h3>
                     <Col md={3} xs={12}>
                         <Accordion defaultActiveKey="0">
                             <Accordion.Item eventKey="0">

@@ -15,15 +15,15 @@ const AllProduct = (props) => {
                     <Card.Img className='img-fluid' variant="top" style={{ height: "200px" }} src={img} />
 
                     <Card.Body>
-                        <Link to={`/placeOrder/${_id}`} style={{
+                        <Link to={`/details/${_id}`} style={{
                             textDecoration: 'none',
                             color: '#303030'
                         }}>
                             <Card.Title>{title}</Card.Title>
                         </Link>
-                        <Card.Text>
+                        <Card.Title >
                             £ {price}
-                        </Card.Text>
+                        </Card.Title>
                         <div className='groupButton'>
                             <div style={{
                                 display: 'flex',
@@ -35,7 +35,7 @@ const AllProduct = (props) => {
                                     background: '#0091c0',
                                     border: '1px solid #0091c0'
                                 }}>Buy</Button>
-                                <Link to={`/placeOrder/${_id}`}>
+                                <Link to={`/details/${_id}`}>
                                     <Button style={{
                                         width: '70px',
                                         background: '#fff',

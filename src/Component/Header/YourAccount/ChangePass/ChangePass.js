@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Alert, Button, Col, Form, Row, Spinner } from 'react-bootstrap'
+import { Helmet } from 'react-helmet'
 import useAuth from '../../../../hooks/useAuth'
 import Header from '../../Header'
 
@@ -36,6 +37,12 @@ const ChangePass = () => {
     }
     return (
         <div>
+            <Helmet>
+                <title>
+                    Change Password
+                </title>
+                <meta name="description" content="This is Magpyehub Online Shop" />
+            </Helmet>
             <Header></Header>
             <div>
                 <h5>Change password</h5>

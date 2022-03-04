@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { Accordion, Col, Container, Row } from 'react-bootstrap';
+import { Accordion, Col, Container, Row, Spinner } from 'react-bootstrap';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
-import Footer from '../../Footer/Footer';
-import Header from '../../Header/Header';
+import Footer from '../../../../Footer/Footer';
+import Header from '../../../Header';
 
 const ManageProducts = () => {
   const [filter, setFilter] = useState([])
-
+  const [loading, setLoading] = useState(true)
   const [products, setProducts] = useState([])
   useEffect(() => {
     fetch(`http://localhost:5000/products`)
       .then(res => res.json())
       .then(data => {
         setProducts(data.products)
-
+        setLoading(false)
       });
   }, [products]);
 
@@ -43,6 +44,12 @@ const ManageProducts = () => {
   }
   return (
     <div>
+      <Helmet>
+        <title>
+          Manage Products
+        </title>
+        <meta name="description" content="This is Magpyehub Online Shop" />
+      </Helmet>
       <Header></Header>
       <Container>
         <Row>
@@ -454,7 +461,10 @@ const ManageProducts = () => {
           </Col>
           <Col md={8}>
             <h2>Total Product: {products.length}</h2>
-            {
+            {loading ? <div className='text-center' style={{ height: '40vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}> <Spinner animation="grow" variant="info" />
+              <Spinner animation="grow" variant="info" />
+              <Spinner animation="grow" variant="info" />
+            </div> :
               filter.map(product => <div key={product._id}
                 product={product}>
                 <Container>
@@ -470,7 +480,7 @@ const ManageProducts = () => {
                     <Col xs={6} md={4} style={{
                       textAlign: 'start'
                     }}>
-                      <Link to={`/placeOrder/${product._id}`}>
+                      <Link to={`/details/${product._id}`}>
                         <h5>{product.title}</h5>
                       </Link>
                       <p>Product Code: {product._id}</p>
