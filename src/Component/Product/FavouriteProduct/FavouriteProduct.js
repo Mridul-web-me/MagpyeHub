@@ -14,7 +14,7 @@ const FavouriteProduct = () => {
     const [products, setProducts] = useState([])
     const category = 'bedding'
     useEffect(() => {
-        fetch(`http://localhost:5000/products?category=${category}`)
+        fetch(`http://desolate-spire-57096.herokuapp.com/products?category=${category}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products)

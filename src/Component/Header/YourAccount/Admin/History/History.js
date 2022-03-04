@@ -8,7 +8,7 @@ const History = ({ orders }) => {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    const [order, setOrder] = useState({});
+    const [order, setOrder] = useState([]);
 
     const handleStatusChange = e => {
         const updateStatus = e.target.value;
@@ -16,7 +16,7 @@ const History = ({ orders }) => {
         setOrder(updatedStatus)
     }
     const handleUpdateStatus = e => {
-        const url = `http://localhost:5000/orders/${_id}`
+        const url = `http://desolate-spire-57096.herokuapp.com/orders/${_id}`
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -37,7 +37,7 @@ const History = ({ orders }) => {
     }
 
     const handleDelete = _id => {
-        const url = `http://localhost:5000/orders/${_id}`;
+        const url = `http://desolate-spire-57096.herokuapp.com/orders/${_id}`;
         fetch(url, {
             method: "DELETE"
         })

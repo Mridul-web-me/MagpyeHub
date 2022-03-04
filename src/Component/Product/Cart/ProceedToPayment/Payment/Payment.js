@@ -24,7 +24,7 @@ const Payment = ({ address: clientAddress }) => {
     // console.log(carts)
 
     useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
+        fetch('http://desolate-spire-57096.herokuapp.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -95,13 +95,16 @@ const Payment = ({ address: clientAddress }) => {
             zip: zip,
             state: state,
             order: carts,
+            amount: paymentIntent.amount,
+            created: paymentIntent.created,
+            transaction: paymentIntent.client_secret.slice('_secret')[0],
             ProductUpdate: data.ProductUpdate,
             author: data.author,
             publishDate: new Date().toLocaleDateString(),
             status: "Pending",
             expense: data.expense
         }
-        fetch('http://localhost:5000/orders', {
+        fetch('http://desolate-spire-57096.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
