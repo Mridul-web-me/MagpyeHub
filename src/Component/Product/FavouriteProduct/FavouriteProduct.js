@@ -1,15 +1,12 @@
-import React from 'react'
+import React from 'react';
 import { Container } from 'react-bootstrap';
 import Slider from 'react-slick';
 import useProduct from '../../../hooks/Product/useProduct';
 import AllFavProduct from './AllFavProduct/AllFavProduct';
 
-
 const FavouriteProduct = () => {
 
-
     const { products, handleAddToCart } = useProduct();
-
 
     const FilterProduct = products.filter((curElem) => {
         return (curElem.category === ('Laptop'))
@@ -42,10 +39,7 @@ const FavouriteProduct = () => {
                 </Slider>}
             </div>
         </Container>
-    )
-}
+    );
+};
 
-export default FavouriteProduct
-
-
-//    
+export default FavouriteProduct;

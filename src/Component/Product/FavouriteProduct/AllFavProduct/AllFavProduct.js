@@ -3,7 +3,9 @@ import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const AllFavProduct = ({ product, handleAddToCart }) => {
-    const { _id, title, img, category, price } = product;
+
+    const { _id, title, img, price } = product;
+
     return (
         <div className="card">
             <img src={img} className="card-img-top" fluid alt="..." />
