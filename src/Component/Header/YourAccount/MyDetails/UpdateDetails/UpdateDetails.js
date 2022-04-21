@@ -16,7 +16,7 @@ const UpdateDetails = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get(`http://desolate-spire-57096.herokuapp.com/users?email=${user.email}`, {
+        axios.get(`http://localhost:5000/users?email=${user.email}`, {
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('idToken')}`
             }
@@ -35,7 +35,7 @@ const UpdateDetails = () => {
     }
 
     const handleUpdateDetails = e => {
-        const url = `http://desolate-spire-57096.herokuapp.com/users/${profileId}`
+        const url = `http://localhost:5000/users/${profileId}`
         fetch(url, {
             method: 'PUT',
             headers: {

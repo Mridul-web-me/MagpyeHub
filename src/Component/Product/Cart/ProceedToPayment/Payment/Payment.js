@@ -2,6 +2,7 @@
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import React from 'react'
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom'
 import { useState } from 'react';
 import { Button, Spinner } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
@@ -24,7 +25,7 @@ const Payment = ({ address: clientAddress }) => {
     // console.log(carts)
 
     useEffect(() => {
-        fetch('http://desolate-spire-57096.herokuapp.com/create-payment-intent', {
+        fetch('http://localhost:5000/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -104,7 +105,7 @@ const Payment = ({ address: clientAddress }) => {
             status: "Pending",
             expense: data.expense
         }
-        fetch('http://desolate-spire-57096.herokuapp.com/orders', {
+        fetch('http://localhost:5000/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -187,7 +188,9 @@ const Payment = ({ address: clientAddress }) => {
                     error && <p style={{ color: 'red' }}>{error}</p>
                 }
                 {
-                    success && <p style={{ color: 'green' }}>{success}</p>
+                    success && <>
+                        <p style={{ color: 'green' }}>{success}</p>
+                    </>
                 }
             </div>
         </div>

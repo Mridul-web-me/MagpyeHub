@@ -6,13 +6,14 @@ const useProductFilter = () => {
     const [AllProducts, setAllProducts] = useState([]);
     const [filters, setFilters] = useState([])
     const [carts, setCart] = useState([]);
+    const [wishList, setWishList] = useState([]);
     const [pageCount, setPageCount] = useState(0);
     const [page, setPage] = useState(0);
     const [loading, setLoading] = useState(true)
     // const size = 5;
     useEffect(() => {
         fetch('./ProductData.JSON')
-        fetch(`http://desolate-spire-57096.herokuapp.com/products`)
+        fetch(`http://localhost:5000/products`)
             .then(res => res.json())
             .then(data => {
                 setAllProducts(data.products)
@@ -22,9 +23,9 @@ const useProductFilter = () => {
     }, []);
 
 
-    const filterProduct = (categProduct) => {
+    const filterProduct = (catProduct) => {
         const updatedProduct = AllProducts.filter((curElem) => {
-            return curElem.category === categProduct;
+            return curElem.category === catProduct;
         });
         setFilters(updatedProduct);
     };
@@ -45,6 +46,25 @@ const useProductFilter = () => {
                 }
             }
             setCart(storedCart);
+            setLoading(false)
+        }
+    }, [AllProducts])
+
+    useEffect(() => {
+        if (AllProducts.length) {
+            const savedWishList = getStoredCart();
+            const storedWishList = [];
+            setLoading(false)
+            for (const _id in savedWishList) {
+                const AddedProduct = AllProducts.find(product => product._id === _id);
+                if (AddedProduct) {
+                    const quantity = savedWishList[_id];
+                    AddedProduct.quantity = quantity;
+                    // console.log(quantity);
+                    storedWishList.push(AddedProduct);
+                }
+            }
+            setWishList(storedWishList);
             setLoading(false)
         }
     }, [AllProducts])
@@ -96,6 +116,7 @@ const useProductFilter = () => {
         filters,
         setCart,
         filterProduct,
+        wishList
     }
 };
 

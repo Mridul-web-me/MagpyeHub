@@ -65,7 +65,7 @@ const AddProduct = () => {
 
 
             console.log("Blogdata", blogInfo)
-            axios.post('http://desolate-spire-57096.herokuapp.com/products', blogInfo)
+            axios.post('http://localhost:5000/products', blogInfo)
                 .then(res => {
                     if (res.data.insertedId) {
                         alert('Product Added Successfully')

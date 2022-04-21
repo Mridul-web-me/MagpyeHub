@@ -20,7 +20,7 @@ const MenJeans = () => {
     const size = 8;
     const category = 'MenJeans'
     useEffect(() => {
-        fetch(`http://desolate-spire-57096.herokuapp.com/products?category=${category}&&page=${page}&&size=${size}`)
+        fetch(`http://localhost:5000/products?category=${category}&&page=${page}&&size=${size}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products)

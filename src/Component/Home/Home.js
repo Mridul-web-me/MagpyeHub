@@ -18,19 +18,19 @@ const Home = () => {
         <div>
             <Helmet>
                 <title>
-                    MagpyehubOnline | Home
+                    Magpyehub Online | Home
                 </title>
                 <meta name="description" content="This is Magpyehub Online Shop" />
             </Helmet>
             <Header></Header>
             <PromoUnit></PromoUnit>
             <Banner></Banner>
-            <PaymentOption></PaymentOption>
+            {/* <PaymentOption></PaymentOption> */}
             <Product></Product>
             <Brand></Brand>
             <FavouriteProduct></FavouriteProduct>
             <About></About>
-            <Sponsor></Sponsor>
+            {/* <Sponsor></Sponsor> */}
             <Newsletter></Newsletter>
             <Footer></Footer>
         </div>

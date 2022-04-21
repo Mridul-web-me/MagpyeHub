@@ -22,7 +22,7 @@ const WashingMachines = () => {
     const size = 8;
     const category = 'WashingMachines'
     useEffect(() => {
-        fetch(`http://desolate-spire-57096.herokuapp.com/products?category=${category}&&page=${page}&&size=${size}`)
+        fetch(`http://localhost:5000/products?category=${category}&&page=${page}&&size=${size}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products)
