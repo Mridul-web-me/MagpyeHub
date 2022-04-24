@@ -274,31 +274,31 @@ a.desktop-item4
 li.nav-item{
   margin: 0 30px;
 }
-.nav-links .desktop-item1,
-.nav-links .desktop-item2,
-.nav-links .desktop-item3,
-.nav-links .desktop-item4,
-.nav-links .desktop-item5,
-.nav-links .desktop-item6,
-.nav-links .desktop-item7,
-.nav-links .desktop-item8,
-.nav-links .desktop-item9,
-.nav-links .desktop-item10
+.nav-links .desktop-item1 a,
+.nav-links .desktop-item2 a,
+.nav-links .desktop-item3 a,
+.nav-links .desktop-item4 a,
+.nav-links .desktop-item5 a,
+.nav-links .desktop-item6 a,
+.nav-links .desktop-item7 a,
+.nav-links .desktop-item8 a,
+.nav-links .desktop-item9 a,
+.nav-links .desktop-item10 a
 {
     color: #f2f2f2;
-    padding: 16px 7px;
+    padding: 17px 7px;
     font-size: 13px;
     cursor: pointer;
   }
-.nav-links .desktop-item1:hover,
-.nav-links .desktop-item2:hover,
-.nav-links .desktop-item3:hover,
-.nav-links .desktop-item4:hover,
-.nav-links .desktop-item5:hover,
-.nav-links .desktop-item6:hover,
-.nav-links .desktop-item7:hover,
-.nav-links .desktop-item8:hover,
-.nav-links .desktop-item9:hover
+.nav-links .desktop-item1 a:hover,
+.nav-links .desktop-item2 a:hover,
+.nav-links .desktop-item3 a:hover,
+.nav-links .desktop-item4 a:hover,
+.nav-links .desktop-item5 a:hover,
+.nav-links .desktop-item6 a:hover,
+.nav-links .desktop-item7 a:hover,
+.nav-links .desktop-item8 a:hover,
+.nav-links .desktop-item9 a:hover
   {
     color: #0091c0;
     background: #f2f2f2;

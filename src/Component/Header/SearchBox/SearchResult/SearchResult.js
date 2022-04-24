@@ -31,6 +31,7 @@ const SearchResult = () => {
             {loading ? <div>
                 <Spinner animation="grow" variant="info" />
                 <Spinner animation="grow" variant="info" />
+                <Spinner animation="grow" variant="info" />
             </div> : !product.length ? <div style={{ margin: '100px' }}> <h2 style={{ color: '#606060', fontWeight: '700' }}>No Product Found</h2> </div> : <Row xs={1} md={4} className="g-4">
                 {
                     product.map(product =>

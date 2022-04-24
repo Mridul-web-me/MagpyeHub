@@ -14,27 +14,27 @@ const Product = () => {
         <div>
             <Container fluid>
                 <Row>
-                    <Col xs={12} sm={6} md={3}>
-                        <Link to="#"><img src={group1} className='img-fluid' alt="" /></Link>
+                    <Col xs={12} sm={6} md={4}>
+                        <Link to="#"><img src={group1} width="500px" className='img-fluid' alt="" /></Link>
                     </Col>
-                    <Col xs={12} sm={6} md={3}>
-                        <Link to="#"><img src={group2} className='img-fluid' alt="" /></Link>
+                    <Col xs={12} sm={6} md={4}>
+                        <Link to="#"><img src={group2} width="500px" className='img-fluid' alt="" /></Link>
                     </Col>
-                    <Col xs={12} sm={6} md={3}>
-                        <Link to="#"><img src={group3} className='img-fluid' alt="" /></Link>
-                    </Col>
-                    <Col xs={12} sm={6} md={3}>
-                        <Link to="#"><img src={group4} className='img-fluid' alt="" /></Link>
+                    <Col xs={12} sm={6} md={4}>
+                        <Link to="#"><img src={group3} width="500px" className='img-fluid' alt="" /></Link>
                     </Col>
                 </Row>
 
                 {/* Columns are always 50% wide, on mobile and desktop */}
                 <Row>
-                    <Col xs={12} sm={6}>
-                        <Link to="#"><img src={group5} className='img-fluid' alt="" /></Link>
+                    <Col xs={12} sm={6} md={4}>
+                        <Link to="#"><img src={group4} width="500px" className='img-fluid' alt="" /></Link>
                     </Col>
-                    <Col xs={12} sm={6}>
-                        <Link to="#"><img src={group6} className='img-fluid' alt="" /></Link>
+                    <Col xs={12} sm={6} md={4}>
+                        <Link to="#"><img src={group1} width="500px" className='img-fluid' alt="" /></Link>
+                    </Col>
+                    <Col xs={12} sm={6} md={4}>
+                        <Link to="#"><img src={group2} width="500px" className='img-fluid' alt="" /></Link>
                     </Col>
                 </Row>
             </Container>

@@ -78,6 +78,15 @@ const Bedding = (props) => {
                                 <Accordion.Header>Home Furnishings & Accessories</Accordion.Header>
                                 <Accordion.Body>
                                     <div className="filterItem">
+                                        <input type="checkbox" onChange={() => { filterProduct('bedding') }} value="Bedding" />
+                                        <label for="Bedding"> Bedding</label>
+
+                                        <input type="checkbox" onChange={() => { filterProduct('pillows') }} value="pillows" />
+                                        <label for="pillows"> pillows</label> <br />
+
+                                        <input type="checkbox" onChange={() => { filterProduct('throwsBlanketsAndSpreads') }} value="throwsBlanketsAndSpreads" />
+                                        <label for="throwsBlanketsAndSpreads"> Throws, blankets and Spreads</label> <br />
+
                                         <Link onClick={() => { filterProduct('bedding') }} to="">Bedding</Link> <br />
                                         <Link onClick={() => { filterProduct('pillows') }} to="">Pillows</Link> <br />
                                         <Link onClick={() => { filterProduct('throwsBlanketsAndSpreads') }} to="">Throws, blankets and Spreads</Link> <br />

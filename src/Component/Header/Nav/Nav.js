@@ -36,42 +36,82 @@ const Nav = () => {
                                 </div>
                             </li>
                             <li className='nav-item'>
-                                <label className="desktop-item1">Home & Garden</label>
+                                <label className="desktop-item1">
+                                    <Link to="/HomeAndGarden">Home & Garden</Link>
+                                </label>
                                 <input type="checkbox" id="showMega1" />
-                                <label htmlFor="showMega1" className="mobile-item1">Home & Garden</label>
+                                <label htmlFor="showMega1" className="mobile-item1">
+                                    Home & Garden
+                                </label>
                                 <div className="mega-box1">
                                     <div className="content">
                                         <div className="row">
-                                            <h5>Home Furnishings & Accessories</h5>
+                                            <h5>Bedding</h5>
                                             <hr />
                                             <ul className="mega-links">
-                                                <li><Link to="/product/bedding">Bedding</Link></li>
-                                                <li><Link to="/product/pillows">Pillows</Link></li>
-                                                <li><Link to="/product/throwsBlanketsAndSpreads">Throws, blankets and Spreads</Link></li>
-                                                <li><Link to="/product/towels">Towels</Link></li>
-                                                <li><Link to="/product/bathroomAccessories">Bathroom Accessories</Link></li>
-                                                <li><Link to="/product/cushions">Cushions</Link></li>
-                                                <li><Link to="/product/candlesAndHomeFragrances">Candles and Home Fragrances</Link></li>
+                                                <li><Link to="/product/BedSheets">Bed Sheets</Link></li>
+                                                <li><Link to="/product/Pillows">Pillows</Link></li>
+                                                <li><Link to="/product/PillowCases">Pillow Cases</Link></li>
+                                                <li><Link to="/product/ThrowsBlankets">Throws & Blankets</Link></li>
+                                                <li><Link to="/product/Children'sBedding">Children's Bedding</Link></li>
                                             </ul>
                                         </div>
                                         <div className="row">
                                             <h5>Cooking & Dining</h5>
                                             <hr />
                                             <ul className="mega-links">
-                                                <li><Link to="/product/potsPans">Pots & Pans</Link></li>
-                                                <li><Link to="/product/tableware">Tableware</Link></li>
-                                                <li><Link to="/product/glassesDrinkware">Glasses & Drinkware</Link></li>
-                                                <li><Link to="/product/cutlery">Cutlery</Link></li>
-                                                <li><Link to="/product/foodProcessorsMixersBlendersJuicers">Food Processors, Mixers, Blenders & Juicers</Link></li>
+                                                <li><Link to="/product/TablewareCutlery">Tableware & Cutlery</Link></li>
+                                                <li><Link to="/product/GlassesDrinkware">Glasses & Drinkware</Link></li>
+                                                <li><Link to="/product/PotsPans">Pots & Pans</Link></li>
+                                                <li><Link to="/product/FoodProcessorsMixers">Food Processors & Mixers</Link></li>
+                                                <li><Link to="/product/BlendersJuicers">Blenders & Juicers</Link></li>
+                                            </ul>
+                                        </div>
+                                        <div className="row">
+                                            <h5>Home Décor & Accessories</h5>
+                                            <hr />
+                                            <ul className="mega-links">
+                                                <li><Link to="/product/CushionsBeanBags">Cushions & Bean Bags</Link></li>
+                                                <li><Link to="/product/CandlesHomeFragrance">Candles & Home Fragrance</Link></li>
+                                                <li><Link to="/product/Towels">Towels</Link></li>
+                                                <li><Link to="/product/Mirrors"> Mirrors</Link></li>
+                                                <li><Link to="/product/Rugs">Rugs</Link></li>
+                                                <li><Link to="/product/Wallpapers"> Wallpapers</Link></li>
+                                                <li><Link to="/product/Storage"> Storage</Link></li>
+                                            </ul>
+                                        </div>
+                                        <div className="row">
+                                            <h5>Curtains, Blinds & Floors</h5>
+                                            <hr />
+                                            <ul className="mega-links">
+                                                <li><Link to="/product/Curtains">Curtains</Link></li>
+                                                <li><Link to="/product/MadeToMeasureCurtains">Made to Measure curtains</Link></li>
+                                                <li><Link to="/product/Blinds">Blinds</Link></li>
+                                                <li><Link to="/product/CarpetsFlooring"> Carpets & Flooring</Link></li>
+                                            </ul>
+                                        </div>
+                                        <div className="row">
+                                            <h5>Garden</h5>
+                                            <hr />
+                                            <ul className="mega-links">
+                                                <li><Link to="/product/Garden Furniture Sets">Garden Furniture Sets</Link></li>
+                                                <li><Link to="/product/Garden Seating">Garden Seating</Link></li>
+                                                <li><Link to="/product/Outdoor lights">Outdoor lights</Link></li>
+                                                <li><Link to="/product/BBQ Stands"> BBQ Stands</Link></li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                             </li>
+
                             <li className='nav-item'>
-                                <label className="desktop-item2">Women</label>
+                                <label className="desktop-item2">
+                                    <Link to="/women">Women</Link>
+                                </label>
                                 <input type="checkbox" id="showMega2" />
-                                <label htmlFor="showMega2" className="mobile-item2">Women</label>
+                                <label htmlFor="showMega2" className="mobile-item2">
+                                    Women
+                                </label>
                                 <div className="mega-box2">
                                     <div className="content">
                                         <div className="row">
@@ -100,9 +140,13 @@ const Nav = () => {
                                 </div>
                             </li>
                             <li className='nav-item'>
-                                <label className="desktop-item3">Men</label>
+                                <label className="desktop-item3">
+                                    <Link to="/men">Men</Link>
+                                </label>
                                 <input type="checkbox" id="showMega3" />
-                                <label htmlFor="showMega3" className="mobile-item3">Men</label>
+                                <label htmlFor="showMega3" className="mobile-item3">
+                                    Men
+                                </label>
                                 <div className="mega-box3">
                                     <div className="content">
                                         <div className="row">
@@ -135,9 +179,13 @@ const Nav = () => {
                                 </div>
                             </li>
                             <li className='nav-item'>
-                                <label className="desktop-item4">Beauty</label>
+                                <label className="desktop-item4">
+                                    <Link to="/beauty">Beauty</Link>
+                                </label>
                                 <input type="checkbox" id="showMega4" />
-                                <label htmlFor="showMega4" className="mobile-item4">Beauty</label>
+                                <label htmlFor="showMega4" className="mobile-item4">
+                                    Beauty
+                                </label>
                                 <div className="mega-box4">
                                     <div className="content">
                                         <div className="row">
@@ -191,9 +239,13 @@ const Nav = () => {
                                 </div>
                             </li>
                             <li className='nav-item'>
-                                <label className="desktop-item5">Baby & Child</label>
+                                <label className="desktop-item5">
+                                    <Link to="/BabyAndChild">Baby & Child</Link>
+                                </label>
                                 <input type="checkbox" id="showMega5" />
-                                <label htmlFor="showMega5" className="mobile-item5">Baby & Child</label>
+                                <label htmlFor="showMega5" className="mobile-item5">
+                                    Baby & Child
+                                </label>
                                 <div className="mega-box5">
                                     <div className="content">
                                         <div className="row">
@@ -242,7 +294,9 @@ const Nav = () => {
                                 </div>
                             </li>
                             <li className='nav-item'>
-                                <label className="desktop-item6">Furniture & Lighting</label>
+                                <label className="desktop-item6">
+                                    <Link to="FurnitureAndLighting">Furniture & Lighting</Link>
+                                </label>
                                 <input type="checkbox" id="showMega6" />
                                 <label htmlFor="showMega6" className="mobile-item6">Furniture & Lighting</label>
                                 <div className="mega-box6">
@@ -306,7 +360,9 @@ const Nav = () => {
                             </li>
 
                             <li className='nav-item'>
-                                <label className="desktop-item7">Electricals</label>
+                                <label className="desktop-item7">
+                                    <Link to="/Electricals">Electricals</Link>
+                                </label>
                                 <input type="checkbox" id="showMega7" />
                                 <label htmlFor="showMega7" className="mobile-item7">Electricals</label>
                                 <div className="mega-box7">
@@ -372,7 +428,9 @@ const Nav = () => {
                             </li>
 
                             <li className='nav-item'>
-                                <label className="desktop-item8">Fitness & Travel</label>
+                                <label className="desktop-item8">
+                                    <Link to="/FitnessAndTravel">Fitness & Travel</Link>
+                                </label>
                                 <input type="checkbox" id="showMega8" />
                                 <label htmlFor="showMega8" className="mobile-item8">Fitness & Travel</label>
                                 <div className="mega-box8">
@@ -412,7 +470,9 @@ const Nav = () => {
                                 </div>
                             </li>
                             <li className='nav-item'>
-                                <label className="desktop-item9">Gifts</label>
+                                <label className="desktop-item9">
+                                    <Link to="/Gifts">Gifts</Link>
+                                </label>
                                 <input type="checkbox" id="showMega9" />
                                 <label htmlFor="showMega9" className="mobile-item9">Gifts</label>
                                 <div className="mega-box9">

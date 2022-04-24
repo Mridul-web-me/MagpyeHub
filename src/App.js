@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './Component/Home/Home';
-import Bedding from './Component/Product/HomeGarden/HomeFurnishingsAccessories/Bedding/Bedding';
+import Bedding from './Component/Product/HomeGarden/HomeFurnishingsAccessories/BedSheets/Bedding';
 import Pillows from './Component/Product/HomeGarden/HomeFurnishingsAccessories/Pillows/Pillows';
 import ThrowsblanketsandSpreads from './Component/Product/HomeGarden/HomeFurnishingsAccessories/ThrowsblanketsandSpreads/ThrowsblanketsandSpreads';
 import Towels from './Component/Product/HomeGarden/HomeFurnishingsAccessories/Towels/Towels';
@@ -52,7 +52,7 @@ import Login from './Component/LoginForm/Login/Login';
 import AuthProvider from './context/AuthProvider/AuthProvider';
 import YourAccount from './Component/Header/YourAccount/YourAccount';
 import AddProduct from './Component/Header/YourAccount/Admin/AddProduct/AddProduct';
-import PlaceOrder from './Component/PlaceOrder/PlaceOrder';
+import PlaceOrder from './Component/Header/HeaderTop/PlaceOrder/PlaceOrder';
 import ChangePass from './Component/Header/YourAccount/ChangePass/ChangePass';
 import Cart from './Component/Product/Cart/Cart';
 import ForgotPass from './Component/LoginForm/forgotPass/forgotPass';
@@ -197,6 +197,15 @@ import BabyCarriers from './Component/Product/Baby&child/KidsTravel/BabyCarriers
 import CarSeats from './Component/Product/Baby&child/KidsTravel/CarSeats/CarSeats';
 import BabyToddlerFood from './Component/Product/Baby&child/BabyFoodMilk/BabyFoodFood/BabyFoodFood';
 import ManageProducts from './Component/Header/YourAccount/Admin/ManageProducts/ManageProducts';
+import HomeAndGarden from './Component/Product/HomeGarden/HomeAndGarden';
+import Women from './Component/Product/Women/Women';
+import Men from './Component/Product/Men/Men';
+import Beauty from './Component/Product/Beauty/Beauty';
+import BabyAndChild from './Component/Product/Baby&child/BabyAndChild';
+import FurnitureAndLighting from './Component/Product/FurnitureLighting/FurnitureAndLighting';
+import Electricals from './Component/Product/Electricals/Electricals';
+import FitnessAndTravel from './Component/Product/FitnessTravel/FitnessAndTravel';
+import Gifts from './Component/Product/Gifts/Gifts';
 
 
 
@@ -373,6 +382,15 @@ function App() {
             <Route path="/product/Strollers" element={<Strollers />} />
             <Route path="/product/BabyToddlerFood" element={<BabyToddlerFood />} />
             <Route path="/product/BabyToddlerMilk" element={<BabyToddlerMilk />} />
+            <Route path="/HomeAndGarden" element={<HomeAndGarden />} />
+            <Route path="/women" element={<Women />} />
+            <Route path="/men" element={<Men />} />
+            <Route path="/beauty" element={<Beauty />} />
+            <Route path="/BabyAndChild" element={<BabyAndChild />} />
+            <Route path="/FurnitureAndLighting" element={<FurnitureAndLighting />} />
+            <Route path="/Electricals" element={<Electricals />} />
+            <Route path="/FitnessAndTravel" element={<FitnessAndTravel />} />
+            <Route path="/Gifts" element={<Gifts />} />
 
 
             <Route path="/profile" element={<YourAccount />} />

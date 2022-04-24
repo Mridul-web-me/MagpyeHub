@@ -18,7 +18,7 @@ const AllFavProduct = ({ product, handleAddToCart }) => {
                             <Card.Title>{title}</Card.Title>
                         </Link>
                         <Card.Title>
-                            $ {price}
+                            £ {price}
                         </Card.Title>
                         <div className='groupButton'>
                             <div style={{

@@ -8,7 +8,7 @@ const SearchBox = () => {
     const [products, setProducts] = useState([])
     const [searchProducts, setSearchProducts] = useState('')
     useEffect(() => {
-        axios.get(`http://localhost:5000/products/search?search=${searchProducts}`)
+        axios.get(`http://localhost:5000/products`)
             // .then(res => res.json())
             .then(data => setProducts(data.data))
     }, [searchProducts])
@@ -17,13 +17,12 @@ const SearchBox = () => {
         e.preventDefault()
         const searchText = e.target.value;
         const matchedProducts = products.filter(product => product.title.toLowerCase().includes(searchText.toLowerCase()))
-
         return (matchedProducts)
     }
     return (
         <>
             <div>
-                <form className="d-flex searchBox" onSubmit={handleSearchField}>
+                <form className="d-flex searchBox" onSubmit={handleSearchField} required>
                     <input className="form-control me-2" placeholder="Search for Product & Brand..." aria-label="Search" onChange={(e) => setSearchProducts(e.target.value)} />
                     <Link to={`/${searchProducts}`}
                     >

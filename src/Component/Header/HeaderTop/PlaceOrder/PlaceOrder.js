@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react'
 import { Button, Col, Container, Row, Tab, Tabs } from 'react-bootstrap';
 import { Carousel } from 'react-responsive-carousel';
 import { Link, useParams } from 'react-router-dom';
-import useProduct from '../../hooks/Product/useProduct';
-import Header from '../Header/Header'
+import useProduct from '../../../../hooks/Product/useProduct';
+import Header from '../../Header'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Footer from '../Footer/Footer';
+import Footer from '../../../Footer/Footer';
 import './PlaceOrder.css'
-import PromoUnit from '../PromoUnit/PromoUnit';
-import Newsletter from '../Newsletter/Newsletter';
+import PromoUnit from '../../../PromoUnit/PromoUnit';
+import Newsletter from '../../../Newsletter/Newsletter';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
 import { FreeMode, Navigation, Thumbs } from "swiper";
