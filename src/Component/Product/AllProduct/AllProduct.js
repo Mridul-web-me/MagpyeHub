@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './AllProduct.css'
 const AllProduct = (props) => {
 
-    const { _id, title, img, price } = props.product;
+    const { _id, title, img, price, category } = props.product;
 
 
     return (
@@ -23,6 +23,9 @@ const AllProduct = (props) => {
                         </Link>
                         <Card.Title >
                             £ {price}
+                        </Card.Title>
+                        <Card.Title >
+                            {category}
                         </Card.Title>
                         <div className='groupButton'>
                             <div style={{

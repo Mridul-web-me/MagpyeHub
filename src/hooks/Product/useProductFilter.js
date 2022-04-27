@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
-import { addToDb, getStoredCart, removeFromDb } from '../../fakeDB';
+import { addToDb, getStoredCart, removeFromDb, getStoredWishList, addToWishList, removeWishListFromDb } from '../../fakeDB';
 
 const useProductFilter = () => {
 
     const [AllProducts, setAllProducts] = useState([]);
     const [filters, setFilters] = useState([])
     const [carts, setCart] = useState([]);
-    const [wishList, setWishList] = useState([]);
+    const [wishLists, setWishLists] = useState([]);
     const [pageCount, setPageCount] = useState(0);
     const [page, setPage] = useState(0);
     const [loading, setLoading] = useState(true)
@@ -52,7 +52,7 @@ const useProductFilter = () => {
 
     useEffect(() => {
         if (AllProducts.length) {
-            const savedWishList = getStoredCart();
+            const savedWishList = getStoredWishList();
             const storedWishList = [];
             setLoading(false)
             for (const _id in savedWishList) {
@@ -64,7 +64,7 @@ const useProductFilter = () => {
                     storedWishList.push(AddedProduct);
                 }
             }
-            setWishList(storedWishList);
+            setWishLists(storedWishList);
             setLoading(false)
         }
     }, [AllProducts])
@@ -74,13 +74,23 @@ const useProductFilter = () => {
         const newCart = [...carts, products];
         setCart(newCart);
         addToDb(products._id);
-        // console.log('clicked', products._id);
+    }
+
+    const handleAddToWishList = (products) => {
+        const newWishList = [...wishLists, products];
+        setWishLists(newWishList);
+        addToWishList(products._id);
     }
 
     const handleRemove = _id => {
         const removeCart = carts.filter(product => product._id !== _id)
         setCart(removeCart)
         removeFromDb(_id);
+    }
+    const handleWishListRemove = _id => {
+        const removeWishList = wishLists.filter(product => product._id !== _id)
+        setWishLists(removeWishList)
+        removeWishListFromDb(_id);
     }
 
 
@@ -103,6 +113,8 @@ const useProductFilter = () => {
     return {
         AllProducts,
         handleAddToCart,
+        handleAddToWishList,
+        handleWishListRemove,
         carts,
         grandTotal,
         totalQuantity,
@@ -116,7 +128,7 @@ const useProductFilter = () => {
         filters,
         setCart,
         filterProduct,
-        wishList
+        wishLists
     }
 };
 

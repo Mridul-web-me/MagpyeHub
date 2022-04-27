@@ -12,7 +12,7 @@ const FavouriteProduct = () => {
     const { handleAddToCart } = useProduct();
     const [loading, setLoading] = useState(true);
     const [products, setProducts] = useState([])
-    const category = 'bedding'
+    const category = 'cushions'
     useEffect(() => {
         fetch(`http://localhost:5000/products?category=${category}`)
             .then(res => res.json())
@@ -69,7 +69,7 @@ const FavouriteProduct = () => {
         <div style={{
             overflow: 'hidden'
         }}>
-            <img src={img} alt="" />
+            <h4 style={{ margin: '20px' }}>RECOMMENDED FOR YOU</h4>
             <Container fluid>
 
                 {loading ? <div className='text-center'><Spinner animation="grow" variant="info" />

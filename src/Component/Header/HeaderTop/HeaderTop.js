@@ -55,10 +55,10 @@ const HeaderTop = () => {
                                             </a>
                                     }
                                 </div>
-                                <div className='quote'>
-                                    <Link to="/quote">
-                                        <i className="fas fa-comments"></i>
-                                        <p>Quote</p>
+                                <div className='wishList'>
+                                    <Link to="/wish-list">
+                                        <i class="fas fa-heart"></i>
+                                        <p>Wish List</p>
                                     </Link>
                                 </div>
                                 <div>

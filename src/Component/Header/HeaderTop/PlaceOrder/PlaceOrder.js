@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Button, Col, Container, Row, Tab, Tabs } from 'react-bootstrap';
-import { Carousel } from 'react-responsive-carousel';
 import { Link, useParams } from 'react-router-dom';
 import useProduct from '../../../../hooks/Product/useProduct';
 import Header from '../../Header'
@@ -24,35 +23,34 @@ const PlaceOrder = () => {
                 setProduct(data)
                 console.log(data.img)
             });
-        console.log(product);
     }, [productId])
 
 
-    const { handleAddToCart } = useProduct()
+    const { handleAddToCart, handleAddToWishList, wishLists } = useProduct()
 
-    const onChangeEvent = () => {
-        console.log('onChange Event Triggered');
-    }
+    // const onChangeEvent = () => {
+    //     console.log('onChange Event Triggered');
+    // }
 
-    const onClickItemEvent = () => {
-        console.log('onClickItem Event Triggered');
-    }
+    // const onClickItemEvent = () => {
+    //     console.log('onClickItem Event Triggered');
+    // }
 
-    const onClickThumbEvent = () => {
-        console.log('onClickThumb Event Triggered');
-    }
+    // const onClickThumbEvent = () => {
+    //     console.log('onClickThumb Event Triggered');
+    // }
 
-    const onSwipeStartEvent = () => {
-        console.log('onSwipeStart Event Triggered');
-    }
+    // const onSwipeStartEvent = () => {
+    //     console.log('onSwipeStart Event Triggered');
+    // }
 
-    const onSwipeEndEvent = () => {
-        console.log('onSwipeEnd Event Triggered');
-    }
+    // const onSwipeEndEvent = () => {
+    //     console.log('onSwipeEnd Event Triggered');
+    // }
 
-    const onSwipeMoveEvent = () => {
-        console.log('onSwipeMove Event Triggered');
-    }
+    // const onSwipeMoveEvent = () => {
+    //     console.log('onSwipeMove Event Triggered');
+    // }
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
     return (
@@ -113,8 +111,6 @@ const PlaceOrder = () => {
                     </Col>
                     <Col xs={12} md={6} style={{
                         textAlign: 'start',
-                        display: 'flex',
-                        justifyContent: 'center',
                         alignItems: 'center',
                         marging: '0 20px'
                     }}>
@@ -127,7 +123,7 @@ const PlaceOrder = () => {
                                     <Button style={{ width: '100%' }} className='addToCartButton' variant="light" type='button' onClick={() => handleAddToCart(product)}>Add To Basket</Button>
                                 </Col>
                                 <Col md={6} xs={12}>
-                                    <Button style={{ width: '100%' }} className='addToQuoteButton' type='button' variant='light'> <span><i className="fas fa-comments"></i> </span> Add To Quote</Button>
+                                    {<Button style={{ width: '100%' }} className='addToWishListButton' type='button' variant='light' onClick={() => handleAddToWishList(product)}> <span><i className="fas fa-heart"></i> </span> Add To Wish List</Button>}
                                 </Col>
                             </Row>
                             <div style={{

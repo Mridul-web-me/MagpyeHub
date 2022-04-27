@@ -115,7 +115,9 @@ const Brand = () => {
                         </Link>
                     </SwiperSlide>
                 </Swiper>
+                <hr />
             </Container>
+            <hr />
         </>
     )
 }

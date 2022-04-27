@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactPlayer from 'react-player'
 import './About.css'
+import logo from '../../img/logo.jpg'
 
 const About = () => {
     return (
@@ -12,15 +13,21 @@ const About = () => {
                         justifyContent: 'center',
                         alignItems: 'center'
                     }}>
+                        <img src={logo} alt="" className='img-fluid' width="500px" />
+                    </div>
+                    <div className="col-md-6" style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center'
+                    }}>
                         <div>
-                            <h2>Welcome to Magpie Hub Online</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In repellat accusamus tempora facere ea aliquid dolor adipisci commodi nihil itaque culpa quas saepe fuga, atque ipsam qui, non placeat ex! Delectus numquam architecto ut repellat, obcaecati expedita perspiciatis tempora. Fugit ullam, non tenetur corrupti doloremque excepturi tempora dignissimos voluptatem temporibus?</p>
+                            <h2>Welcome to Magpyehub Online</h2>
+                            <p style={{
+                                textAlign: 'justify'
+                            }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. In repellat accusamus tempora facere ea aliquid dolor adipisci commodi nihil itaque culpa quas saepe fuga, atque ipsam qui, non placeat ex! Delectus numquam architecto ut repellat, obcaecati expedita perspiciatis tempora. Fugit ullam, non tenetur corrupti doloremque excepturi tempora dignissimos voluptatem temporibus?</p>
                         </div>
                     </div>
-                    <div className="col-md-6" style={{ height: '60vh' }}>
-                        <ReactPlayer width="100%"
-                            height="100%" controls url="https://youtu.be/JreV3v1vRd8"></ReactPlayer>
-                    </div>
+
                 </div>
             </div>
         </div>

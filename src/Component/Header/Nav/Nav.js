@@ -49,55 +49,71 @@ const Nav = () => {
                                             <h5>Bedding</h5>
                                             <hr />
                                             <ul className="mega-links">
-                                                <li><Link to="/product/BedSheets">Bed Sheets</Link></li>
-                                                <li><Link to="/product/Pillows">Pillows</Link></li>
-                                                <li><Link to="/product/PillowCases">Pillow Cases</Link></li>
-                                                <li><Link to="/product/ThrowsBlankets">Throws & Blankets</Link></li>
-                                                <li><Link to="/product/Children'sBedding">Children's Bedding</Link></li>
+                                                <li><Link to="/product/duvetCovers">Duvet Covers</Link></li>
+                                                <li><Link to="/product/bedding">Bed Sheets</Link></li>
+                                                <li><Link to="/product/pillowCases">Pillow Cases</Link></li>
+                                                <li><Link to="/product/duvets">Duvets</Link></li>
+                                                <li><Link to="/product/pillows">Pillows</Link></li>
+                                                <li><Link to="/product/throwsBlanketsAndSpreads">Throws & Blankets</Link></li>
+                                                <li><Link to="/product/ChildrensBedding">Children's Bedding</Link></li>
+                                                <li><Link to="/product/shopBedding">Shop Bedding</Link></li>
                                             </ul>
                                         </div>
                                         <div className="row">
                                             <h5>Cooking & Dining</h5>
                                             <hr />
                                             <ul className="mega-links">
-                                                <li><Link to="/product/TablewareCutlery">Tableware & Cutlery</Link></li>
-                                                <li><Link to="/product/GlassesDrinkware">Glasses & Drinkware</Link></li>
+                                                <li><Link to="/product/cookwareBakeware">Cookware & Bakeware</Link></li>
+                                                <li><Link to="/product/cutlery">Tableware & Cutlery</Link></li>
+                                                <li><Link to="/product/glassesDrinkware">Glasses & Drinkware</Link></li>
                                                 <li><Link to="/product/PotsPans">Pots & Pans</Link></li>
-                                                <li><Link to="/product/FoodProcessorsMixers">Food Processors & Mixers</Link></li>
-                                                <li><Link to="/product/BlendersJuicers">Blenders & Juicers</Link></li>
+                                                <li><Link to="/product/foodPreparation">Food Preparation</Link></li>
+                                                <li><Link to="/product/picnicware">Picnicware</Link></li>
+                                                <li><Link to="/product/kitchenUtensilsGadgets">Kitchen Utensils & Gadgets</Link></li>
+                                                <li><Link to="/product/kitchenBins">Kitchen Bins</Link></li>
                                             </ul>
                                         </div>
                                         <div className="row">
-                                            <h5>Home Décor & Accessories</h5>
+                                            <h5>Décor & Accessories</h5>
                                             <hr />
                                             <ul className="mega-links">
-                                                <li><Link to="/product/CushionsBeanBags">Cushions & Bean Bags</Link></li>
-                                                <li><Link to="/product/CandlesHomeFragrance">Candles & Home Fragrance</Link></li>
-                                                <li><Link to="/product/Towels">Towels</Link></li>
-                                                <li><Link to="/product/Mirrors"> Mirrors</Link></li>
-                                                <li><Link to="/product/Rugs">Rugs</Link></li>
-                                                <li><Link to="/product/Wallpapers"> Wallpapers</Link></li>
-                                                <li><Link to="/product/Storage"> Storage</Link></li>
+                                                <li><Link to="/product/homeAccessories">Home Accessories</Link></li>
+                                                <li><Link to="/product/cushions">Cushions & Bean Bags</Link></li>
+                                                <li><Link to="/product/candlesHomeFragrance">Candles & Home Fragrance</Link></li>
+                                                <li><Link to="/product/towels"> Towels</Link></li>
+                                                <li><Link to="/product/picturesArtFrames">Pictures, Art & Frames</Link></li>
+                                                <li><Link to="/product/mirrors"> Mirrors</Link></li>
+                                                <li><Link to="/product/rugs"> Rugs</Link></li>
+                                                <li><Link to="/product/storage"> Storage</Link></li>
+                                                <li><Link to="/product/wallpaperPaintDIY"> Wallpaper, Paint & DIY</Link></li>
                                             </ul>
                                         </div>
                                         <div className="row">
                                             <h5>Curtains, Blinds & Floors</h5>
                                             <hr />
                                             <ul className="mega-links">
-                                                <li><Link to="/product/Curtains">Curtains</Link></li>
-                                                <li><Link to="/product/MadeToMeasureCurtains">Made to Measure curtains</Link></li>
-                                                <li><Link to="/product/Blinds">Blinds</Link></li>
-                                                <li><Link to="/product/CarpetsFlooring"> Carpets & Flooring</Link></li>
+                                                <li><Link to="/product/curtains">Curtains</Link></li>
+                                                <li><Link to="/product/madeToMeasureCurtains">Made to Measure Curtains</Link></li>
+                                                <li><Link to="/product/curtainPolesAccessories">Curtain Poles & Accessories</Link></li>
+                                                <li><Link to="/product/blinds"> Blinds</Link></li>
+                                                <li><Link to="/product/fabrics"> Fabrics</Link></li>
+                                                <li><Link to="/product/carpetsFlooring"> Carpets & Flooring</Link></li>
                                             </ul>
                                         </div>
                                         <div className="row">
                                             <h5>Garden</h5>
                                             <hr />
                                             <ul className="mega-links">
-                                                <li><Link to="/product/Garden Furniture Sets">Garden Furniture Sets</Link></li>
-                                                <li><Link to="/product/Garden Seating">Garden Seating</Link></li>
-                                                <li><Link to="/product/Outdoor lights">Outdoor lights</Link></li>
-                                                <li><Link to="/product/BBQ Stands"> BBQ Stands</Link></li>
+
+                                                <li><Link to="/product/gardenFurnitureSets">Garden Furniture Sets</Link></li>
+                                                <li><Link to="/product/gardenSeating">Garden Seating</Link></li>
+                                                <li><Link to="/product/gasBBQs">Gas BBQs</Link></li>
+                                                <li><Link to="/product/charcoalBBQs">Charcoal BBQs</Link></li>
+                                                <li><Link to="/product/pizzaOvens">Pizza Ovens</Link></li>
+                                                <li><Link to="/product/decorativeGardenAccessories"> Decorative Garden Accessories</Link></li>
+                                                <li><Link to="/product/outdoorlights"> Outdoor Lighting</Link></li>
+                                                <li><Link to="/product/parasolsAccessories"> Parasols & Accessories</Link></li>
+                                                <li><Link to="/product/shopGarden"> Shop Garden</Link></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -114,16 +130,56 @@ const Nav = () => {
                                 </label>
                                 <div className="mega-box2">
                                     <div className="content">
-                                        <div className="row">
+
+                                        <div className="row" style={{
+
+                                            marginRight: '0px'
+                                        }}>
                                             <h5>Clothing</h5>
                                             <hr />
                                             <ul className="mega-links">
-                                                <li><Link to="/product/dresses">Dresses</Link></li>
-                                                <li><Link to="/product/jeans">Jeans</Link></li>
-                                                <li><Link to="/product/shirtsTops">Shirts & Tops</Link></li>
-                                                <li><Link to="/product/shorts">Shorts</Link></li>
-                                                <li><Link to="/product/skirts">Skirts</Link></li>
-                                                <li><Link to="/product/sportsTrainingGym ">Sports & Training/Gym </Link></li>
+                                                <li><Link to="/product/women/dresses">Dresses</Link></li>
+                                                <li><Link to="/product/women/jeans">Jeans</Link></li>
+                                                <li><Link to="/product/women/shirtsTops">Shirts & Tops</Link></li>
+                                                <li><Link to="/product/women/shorts">Shorts</Link></li>
+                                                <li><Link to="/product/women/skirts">Skirts</Link></li>
+                                                <li><Link to="/product/women/sportsClothes ">Sports & Clothes  </Link></li>
+                                                <li><Link to="/product/women/swimwearBeachwear ">Swimwear Beachwear  </Link></li>
+                                                <li><Link to="/product/women/women-Trousers">Trousers</Link></li>
+                                                <li><Link to="/product/women/leggings">Leggings</Link></li>
+                                                <li><Link to="/product/women/plusSize">Plus Size</Link></li>
+
+                                            </ul>
+                                        </div>
+                                        <div style={{
+                                            marginTop: '24px',
+                                            marginLeft: '0px'
+                                        }} className="row">
+                                            <hr />
+                                            <ul className="mega-links">
+                                                <li><Link to="/product/women/maternityClothes ">Maternity Clothes</Link></li>
+                                                <li><Link to="/product/women/cashmere">Cashmere</Link></li>
+                                                <li><Link to="/product/women/coatsJackets ">Coats & Jackets</Link></li>
+                                                <li><Link to="/product/women/jumpersKnitwear ">Jumpers & Knitwear</Link></li>
+                                                <li><Link to="/product/women/jumpsuits ">Jumpsuits</Link></li>
+                                                <li><Link to="/product/women/linen">Linen</Link></li>
+                                                <li><Link to="/product/women/loungewear ">Loungewear</Link></li>
+                                                <li><Link to="/product/women/petite ">Petite</Link></li>
+                                                <li><Link to="/product/women/occasionwear ">Occasionwear</Link></li>
+                                                <li><Link to="/product/women/weddingBoutique ">Wedding</Link></li>
+                                            </ul>
+                                        </div>
+                                        <div className="row">
+                                            <h5>Footwear</h5>
+                                            <hr />
+                                            <ul className="mega-links">
+                                                <li><Link to="/product/women-shoes">Shoes</Link></li>
+                                                <li><Link to="/product/women-sandals">Sandals</Link></li>
+                                                <li><Link to="/product/women-slippers">Slippers</Link></li>
+                                                <li><Link to="/product/women-trainersAndPlimsoles">Trainers & Plimsoles</Link></li>
+                                                <li><Link to="/product/women-courtShoes">Court Shoes</Link></li>
+                                                <li><Link to="/product/women-boots">Boots</Link></li>
+                                                <li><Link to="/product/women-pumps">Court Pumps</Link></li>
                                             </ul>
                                         </div>
                                         <div className="row">
@@ -133,7 +189,40 @@ const Nav = () => {
                                                 <li><Link to="/product/brasSportsBras">Bras & Sports Bras</Link></li>
                                                 <li><Link to="/product/Nightwear">Nightwear</Link></li>
                                                 <li><Link to="/product/socks">Socks</Link></li>
+                                                <li><Link to="/product/Knickers">Knickers</Link></li>
                                                 <li><Link to="/product/tights">Tights</Link></li>
+                                            </ul>
+                                        </div>
+                                        <div className="row" style={{
+                                            marginRight: '0px'
+                                        }}>
+                                            <h5 >Accessories</h5>
+                                            <hr />
+                                            <ul className="mega-links">
+                                                <li><Link to="/product/women-handbags">Handbags</Link></li>
+                                                <li><Link to="/product/women-purses">Purses</Link></li>
+                                                <li><Link to="/product/women-belts">Belts</Link></li>
+                                                <li><Link to="/product/women-sunglasses">Sunglasses</Link></li>
+                                                <li><Link to="/product/women-jewellery">Jewellery</Link></li>
+                                                <li><Link to="/product/women-hats">Hats</Link></li>
+                                                <li><Link to="/product/women-watches">Watches</Link></li>
+                                                <li><Link to="/product/women-hairAccessories">Hair Accessories</Link></li>
+                                                <li><Link to="/product/women-hatsGlovesScarves">Hats, Gloves & Scarves</Link></li>
+
+                                            </ul>
+                                        </div>
+                                        <div className="row" style={{
+                                            marginTop: '24px',
+                                            marginLeft: '0px'
+                                        }}>
+                                            <hr />
+                                            <ul className="mega-links">
+                                                <li><Link to="/product/women-occasionHatsFascinators">Occasion Hats & Fascinators</Link></li>
+                                                <li><Link to="/product/women-faceCoverings">Face Coverings</Link></li>
+                                                <li><Link to="/product/women-readingGlassesGlassesCases">Reading Glasses & Glasses Cases</Link></li>
+                                                <li><Link to="/product/women-keyrings">Keyrings</Link></li>
+                                                <li><Link to="/product/women-umbrellas">Umbrellas</Link></li>
+                                                <li><Link to="/product/women-suitcases">Suitcases</Link></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -149,7 +238,9 @@ const Nav = () => {
                                 </label>
                                 <div className="mega-box3">
                                     <div className="content">
-                                        <div className="row">
+                                        <div className="row" style={{
+                                            marginRight: '0px'
+                                        }}>
                                             <h5>Clothing</h5>
                                             <hr />
                                             <ul className="mega-links">
@@ -163,7 +254,23 @@ const Nav = () => {
                                                 <li><Link to="/product/swimwear">Swimwear</Link></li>
                                                 <li><Link to="/product/trousers">Trousers</Link></li>
                                                 <li><Link to="/product/t-shirts">T-Shirts</Link></li>
+                                            </ul>
+                                        </div>
+                                        <div className="row" style={{
+                                            marginTop: '24px',
+                                            marginLeft: '0px'
+                                        }}>
+                                            <hr />
+                                            <ul className="mega-links">
                                                 <li><Link to="/product/waistcoats">Waistcoats</Link></li>
+                                                <li><Link to="/product/men-cashmere">Cashmere</Link></li>
+                                                <li><Link to="/product/men-coatsJackets">Coats & Jackets</Link></li>
+                                                <li><Link to="/product/men-sweatshirtsHoodies">Sweatshirts & Hoodies</Link></li>
+                                                <li><Link to="/product/men-jumpersCardigans">Jumpers & Cardigans</Link></li>
+                                                <li><Link to="/product/men-linen">Linen</Link></li>
+                                                <li><Link to="/product/men-loungewear">Loungewear</Link></li>
+                                                <li><Link to="/product/men-weddingShop">Wedding Shop</Link></li>
+                                                <li><Link to="/product/men-holidaySummerShop">Holiday & Summer Shop</Link></li>
                                             </ul>
                                         </div>
                                         <div className="row">
@@ -171,8 +278,37 @@ const Nav = () => {
                                             <hr />
                                             <ul className="mega-links">
                                                 <li><Link to="/product/PyjamasNightwear">Pyjamas & Nightwear</Link></li>
+                                                <li><Link to="/product/RobesAndDressingGowns">Robes & Dressing Gowns</Link></li>
                                                 <li><Link to="/product/MenSocks">Socks</Link></li>
                                                 <li><Link to="/product/underwear">Underwear</Link></li>
+                                            </ul>
+                                        </div>
+                                        <div className="row">
+                                            <h5>Footwear</h5>
+                                            <hr />
+                                            <ul className="mega-links">
+                                                <li><Link to="/product/men-Boots">Boots</Link></li>
+                                                <li><Link to="/product/men-Shoes">Shoes</Link></li>
+                                                <li><Link to="/product/men-Sandals">Sandals</Link></li>
+                                                <li><Link to="/product/men-Slippers">Slippers</Link></li>
+                                                <li><Link to="/product/men-TrainersAndPlimsoles">Trainers</Link></li>
+                                                <li><Link to="/product/men-WalkingBootsShoes">Walking Boots & Shoes</Link></li>
+
+                                            </ul>
+                                        </div>
+                                        <div className="row">
+                                            <h5>Accessories</h5>
+                                            <hr />
+                                            <ul className="mega-links">
+                                                <li><Link to="/product/men-mensBags">Men's Bags</Link></li>
+                                                <li><Link to="/product/men-belts">Belts</Link></li>
+                                                <li><Link to="/product/men-hats">Hats</Link></li>
+                                                <li><Link to="/product/men-wallets">Wallets</Link></li>
+                                                <li><Link to="/product/men-sunglasses">Sunglasses</Link></li>
+                                                <li><Link to="/product/men-watches">Watches</Link></li>
+                                                <li><Link to="/product/men-jewellery">Jewellery</Link></li>
+                                                <li><Link to="/product/men-suitcases">Suitcases</Link></li>
+
                                             </ul>
                                         </div>
                                     </div>
@@ -198,6 +334,11 @@ const Nav = () => {
                                                 <li><Link to="/product/mascaras">Mascaras</Link></li>
                                                 <li><Link to="/product/lipsticks">Lipsticks</Link></li>
                                                 <li><Link to="/product/nailPolish">Nail Polish</Link></li>
+                                                <li><Link to="/product/makeupAccessories">Makeup Accessories</Link></li>
+                                                <li><Link to="/product/handNailSets">Hand & Nail Sets</Link></li>
+                                                <li><Link to="/product/makeupBrushes">Makeup Brushes</Link></li>
+                                                <li><Link to="/product/makeupBags">Makeup Bags</Link></li>
+                                                <li><Link to="/product/tintedMoisturisers">Tinted Moisturisers</Link></li>
                                             </ul>
                                         </div>
                                         <div className="row">
@@ -220,6 +361,10 @@ const Nav = () => {
                                                 <li><Link to="/product/bodyCare">Body Care</Link></li>
                                                 <li><Link to="/product/lipBalmCare">Lip Balm & Care</Link></li>
                                                 <li><Link to="/product/handFootCare">Hand & Foot Care</Link></li>
+                                                <li><Link to="/product/skinCareTreatments">Skin Care & Treatments</Link></li>
+                                                <li><Link to="/product/sunCreamAfterSun">Sun Cream & After Sun</Link></li>
+                                                <li><Link to="/product/beautyToolsTechnology">Beauty Tools & Technology</Link></li>
+                                                <li><Link to="/product/menGrooming">Men's Grooming</Link></li>
                                             </ul>
                                         </div>
                                         <div className="row">
@@ -295,7 +440,7 @@ const Nav = () => {
                             </li>
                             <li className='nav-item'>
                                 <label className="desktop-item6">
-                                    <Link to="FurnitureAndLighting">Furniture & Lighting</Link>
+                                    <Link to="/FurnitureAndLighting">Furniture & Lighting</Link>
                                 </label>
                                 <input type="checkbox" id="showMega6" />
                                 <label htmlFor="showMega6" className="mobile-item6">Furniture & Lighting</label>
