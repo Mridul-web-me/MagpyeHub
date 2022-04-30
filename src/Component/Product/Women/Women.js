@@ -6,7 +6,16 @@ import Footer from '../../Footer/Footer'
 import Header from '../../Header/Header'
 import Newsletter from '../../Newsletter/Newsletter'
 import PromoUnit from '../../PromoUnit/PromoUnit'
-
+import img1 from '../../../img/Women/1.webp'
+import img2 from '../../../img/Women/2.webp'
+import img3 from '../../../img/Women/3.webp'
+import img4 from '../../../img/Women/4.webp'
+import img5 from '../../../img/Women/5.webp'
+import img6 from '../../../img/Women/6.webp'
+import img7 from '../../../img/Women/7.webp'
+import img8 from '../../../img/Women/8.webp'
+import img9 from '../../../img/Women/9.jpg'
+import img10 from '../../../img/Women/10.webp'
 const Women = () => {
     return (
         <>
@@ -110,51 +119,101 @@ const Women = () => {
 
                     <Col md={10} xs={12}>
                         <Row md={12}>
-                            {/* <Col md={2}>
+                            <Col md={2}>
                                 <Link to="/product/rugs" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
                                     <img src={img1} alt="" width='130px' fluid />
-                                    <h5>RUGS</h5>
+                                    <h5 style={{
+                                        fontSize: '18px'
+                                    }}> DRESSES</h5>
                                 </Link>
 
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/cushions">
+                                <Link to="/product/cushions" style={{
+                                    textDecoration: 'none',
+                                    color: '#000'
+                                }}>
                                     <img src={img2} alt="" width='130px' fluid />
-                                    <h5>CUSHIONS</h5>
+                                    <h5 style={{
+                                        fontSize: '18px'
+                                    }}> TOPS</h5>
                                 </Link>
 
                             </Col>
                             <Col md={2}>
-                                <Link to="//product/">
+                                <Link to="/product/duvetCovers" style={{
+                                    textDecoration: 'none',
+                                    color: '#000'
+                                }}>
                                     <img src={img3} alt="" width='130px' fluid />
-                                    <h5>DUVET COVERS</h5>
+                                    <h5 style={{
+                                        fontSize: '18px'
+                                    }}> NEW IN</h5>
                                 </Link>
 
                             </Col>
                             <Col md={2}>
-                                <Link to="/">
+                                <Link to="/product/towels" style={{
+                                    textDecoration: 'none',
+                                    color: '#000'
+                                }}>
                                     <img src={img4} alt="" width='130px' fluid />
-                                    <h5></h5>
+                                    <h5 style={{
+                                        fontSize: '18px'
+                                    }}> COATS</h5>
                                 </Link>
 
                             </Col>
                             <Col md={2}>
 
-                                <Link to="/">
+                                <Link to="/product/pillows" style={{
+                                    textDecoration: 'none',
+                                    color: '#000'
+                                }}>
                                     <img src={img5} alt="" width='130px' fluid />
-                                    <h5></h5>
+                                    <h5 style={{
+                                        fontSize: '18px'
+                                    }}> KNITWEAR</h5>
                                 </Link>
                             </Col>
                             <Col md={2}>
-                                <Link to="/">
+                                <Link to="/product/wallpaperPaintDIY" style={{
+                                    textDecoration: 'none',
+                                    color: '#000'
+                                }}>
                                     <img src={img6} alt="" width='130px' fluid />
-                                    <h5></h5>
+                                    <h5 style={{
+                                        fontSize: '18px'
+                                    }}>HANDBAGS</h5>
                                 </Link>
 
-                            </Col> */}
+                            </Col>
+
+                        </Row>
+                        <Row>
+                            <hr />
+                            <br />
+                            <h4>GETAWAYS & HOLIDAYS</h4>
+                            <br />
+                            <Col md={3} xs={12}>
+                                <img src={img7} alt="" className='img-fluid' />
+                                <h5>Shop Swimwear</h5>
+                            </Col>
+                            <Col md={3} xs={12}>
+                                <img src={img8} alt="" className='img-fluid' />
+                                <h5>Shop Summer Dresses</h5>
+                            </Col>
+                            <Col md={3} xs={12}>
+                                <img src={img9} alt="" className='img-fluid' />
+                                <h5>Shop Sandals</h5>
+                            </Col>
+                            <Col md={3} xs={12}>
+                                <img src={img10} alt="" className='img-fluid' />
+                                <h5>Shop Suitcases</h5>
+                            </Col>
                         </Row>
                     </Col>
                 </Row>

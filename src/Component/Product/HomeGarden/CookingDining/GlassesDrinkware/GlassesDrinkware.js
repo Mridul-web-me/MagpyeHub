@@ -21,7 +21,7 @@ const GlassesDrinkware = () => {
     const size = 8;
     const category = 'glassesDrinkware'
     useEffect(() => {
-        fetch(`http://localhost:5000/products?category=${category}&&page=${page}&&size=${size}`)
+        fetch(`https://blooming-mountain-96721.herokuapp.com/products?category=${category}&&page=${page}&&size=${size}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products)
@@ -31,7 +31,7 @@ const GlassesDrinkware = () => {
                 console.log(data.products);
                 setLoading(false)
             });
-    }, [category, products, page]);
+    }, [category, page]);
 
 
     const filterProduct = (catProduct) => {

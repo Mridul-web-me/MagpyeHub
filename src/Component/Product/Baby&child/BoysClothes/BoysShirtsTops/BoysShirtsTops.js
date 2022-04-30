@@ -22,7 +22,7 @@ const BoysShirtsTops = () => {
     const size = 8;
     const category = 'boyssocks'
     useEffect(() => {
-        fetch(`http://localhost:5000/products?category=${category}&&page=${page}&&size=${size}`)
+        fetch(`https://blooming-mountain-96721.herokuapp.com/products?category=${category}&&page=${page}&&size=${size}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products)
@@ -32,7 +32,7 @@ const BoysShirtsTops = () => {
                 console.log(data.products);
                 setLoading(false)
             });
-    }, [category, products, page]);
+    }, [category, page]);
 
 
     const filterProduct = (catProduct) => {

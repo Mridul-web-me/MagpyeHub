@@ -97,55 +97,97 @@ const Electricals = () => {
                         </div>
                     </Col>
 
-                    <Col md={10} xs={12}>
+                    {/* <Col md={10} xs={12}>
                         <Row md={12}>
-                            {/* <Col md={2}>
+                            <Col md={2}>
                                 <Link to="/product/rugs" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
                                     <img src={img1} alt="" width='130px' fluid />
-                                    <h5>RUGS</h5>
+                                    <h5 style={{
+                                        fontSize: '18px'
+                                    }}></h5>
                                 </Link>
 
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/cushions">
+                                <Link to="/product/cushions" style={{
+                                    textDecoration: 'none',
+                                    color: '#000'
+                                }}>
                                     <img src={img2} alt="" width='130px' fluid />
-                                    <h5>CUSHIONS</h5>
+                                    <h5 style={{
+                                        fontSize: '18px'
+                                    }}></h5>
                                 </Link>
 
                             </Col>
                             <Col md={2}>
-                                <Link to="//product/">
+                                <Link to="/product/duvetCovers" style={{
+                                    textDecoration: 'none',
+                                    color: '#000'
+                                }}>
                                     <img src={img3} alt="" width='130px' fluid />
-                                    <h5>DUVET COVERS</h5>
+                                    <h5 style={{
+                                        fontSize: '18px'
+                                    }}></h5>
                                 </Link>
 
                             </Col>
                             <Col md={2}>
-                                <Link to="/">
+                                <Link to="/product/towels" style={{
+                                    textDecoration: 'none',
+                                    color: '#000'
+                                }}>
                                     <img src={img4} alt="" width='130px' fluid />
-                                    <h5></h5>
+                                    <h5 style={{
+                                        fontSize: '18px'
+                                    }}></h5>
                                 </Link>
 
                             </Col>
                             <Col md={2}>
 
-                                <Link to="/">
+                                <Link to="/product/pillows" style={{
+                                    textDecoration: 'none',
+                                    color: '#000'
+                                }}>
                                     <img src={img5} alt="" width='130px' fluid />
-                                    <h5></h5>
+                                    <h5 style={{
+                                        fontSize: '18px'
+                                    }}></h5>
                                 </Link>
                             </Col>
                             <Col md={2}>
-                                <Link to="/">
+                                <Link to="/product/wallpaperPaintDIY" style={{
+                                    textDecoration: 'none',
+                                    color: '#000'
+                                }}>
                                     <img src={img6} alt="" width='130px' fluid />
-                                    <h5></h5>
+                                    <h5 style={{
+                                        fontSize: '18px'
+                                    }}></h5>
                                 </Link>
 
-                            </Col> */}
+                            </Col>
+                            <img src={img7} alt="" style={{ margin: ' 50px 0' }} />
                         </Row>
-                    </Col>
+                        <Row>
+                            <Col md={4} xs={12}>
+                                <img src={img8} alt="" className='img-fluid' />
+                                <h5></h5>
+                            </Col>
+                            <Col md={4} xs={12}>
+                                <img src={img9} alt="" className='img-fluid' />
+                                <h5></h5>
+                            </Col>
+                            <Col md={4} xs={12}>
+                                <img src={img10} alt="" className='img-fluid' />
+                                <h5></h5>
+                            </Col>
+                        </Row>
+                    </Col> */}
                 </Row>
             </Container>
             <Newsletter></Newsletter>

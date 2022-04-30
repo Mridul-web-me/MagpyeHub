@@ -57,14 +57,14 @@ const HeaderTop = () => {
                                 </div>
                                 <div className='wishList'>
                                     <Link to="/wish-list">
-                                        <i class="fas fa-heart"></i>
+                                        <i className="fas fa-heart"></i>
                                         <p>Wish List</p>
                                     </Link>
                                 </div>
                                 <div>
                                     <a href="/cart">
 
-                                        <i class="fas fa-shopping-basket"></i>
+                                        <i className="fas fa-shopping-basket"></i>
                                         <Badge bg="secondary" className='fs-8' style={{
                                             borderRadius: '50%'
                                         }}>{totalQuantity}</Badge>

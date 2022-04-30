@@ -6,6 +6,17 @@ import Footer from '../../Footer/Footer'
 import Header from '../../Header/Header'
 import Newsletter from '../../Newsletter/Newsletter'
 import PromoUnit from '../../PromoUnit/PromoUnit'
+import img1 from '../../../img/FurnitureAndlights/1.webp'
+import img2 from '../../../img/FurnitureAndlights/2.webp'
+import img3 from '../../../img/FurnitureAndlights/3.webp'
+import img4 from '../../../img/FurnitureAndlights/4.webp'
+import img5 from '../../../img/FurnitureAndlights/5.webp'
+import img6 from '../../../img/FurnitureAndlights/6.webp'
+import img7 from '../../../img/FurnitureAndlights/7.webp'
+import img8 from '../../../img/FurnitureAndlights/8.webp'
+import img9 from '../../../img/FurnitureAndlights/9.webp'
+import img10 from '../../../img/FurnitureAndlights/10.webp'
+
 
 const FurnitureAndLighting = () => {
     return (
@@ -97,51 +108,98 @@ const FurnitureAndLighting = () => {
 
                     <Col md={10} xs={12}>
                         <Row md={12}>
-                            {/* <Col md={2}>
-                                <Link to="/product/rugs" style={{
+                            <Col md={2}>
+                                <Link to="/product/bedsideTables" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
                                     <img src={img1} alt="" width='130px' fluid />
-                                    <h5>RUGS</h5>
+                                    <h5 style={{
+                                        fontSize: '18px',
+                                        margin: '10px'
+                                    }}>NEW IN</h5>
                                 </Link>
 
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/cushions">
+                                <Link to="/product/beds" style={{
+                                    textDecoration: 'none',
+                                    color: '#000'
+                                }}>
                                     <img src={img2} alt="" width='130px' fluid />
-                                    <h5>CUSHIONS</h5>
+                                    <h5 style={{
+                                        fontSize: '18px',
+                                        margin: '10px'
+                                    }}>BEDROOM</h5>
                                 </Link>
 
                             </Col>
                             <Col md={2}>
-                                <Link to="//product/">
+                                <Link to="/product/GardenOutdoorlights" style={{
+                                    textDecoration: 'none',
+                                    color: '#000'
+                                }}>
                                     <img src={img3} alt="" width='130px' fluid />
-                                    <h5>DUVET COVERS</h5>
+                                    <h5 style={{
+                                        fontSize: '18px',
+                                        margin: '10px'
+                                    }}>GARDEN</h5>
                                 </Link>
 
                             </Col>
                             <Col md={2}>
-                                <Link to="/">
+                                <Link to="/" style={{
+                                    textDecoration: 'none',
+                                    color: '#000'
+                                }}>
                                     <img src={img4} alt="" width='130px' fluid />
-                                    <h5></h5>
+                                    <h5 style={{
+                                        fontSize: '18px',
+                                        margin: '10px'
+                                    }}>KITCHEN</h5>
                                 </Link>
 
                             </Col>
                             <Col md={2}>
 
-                                <Link to="/">
+                                <Link to="/product/cabinetsSideboards" style={{
+                                    textDecoration: 'none',
+                                    color: '#000'
+                                }}>
                                     <img src={img5} alt="" width='130px' fluid />
-                                    <h5></h5>
+                                    <h5 style={{
+                                        fontSize: '18px',
+                                        margin: '10px'
+                                    }}>LIVING ROOM</h5>
                                 </Link>
                             </Col>
                             <Col md={2}>
-                                <Link to="/">
+                                <Link to="/product/DiningTables" style={{
+                                    textDecoration: 'none',
+                                    color: '#000'
+                                }}>
                                     <img src={img6} alt="" width='130px' fluid />
-                                    <h5></h5>
+                                    <h5 style={{
+                                        fontSize: '18px',
+                                        margin: '10px'
+                                    }}>DINING ROOM</h5>
                                 </Link>
-
-                            </Col> */}
+                            </Col>
+                            <img src={img7} alt="" style={{ margin: ' 50px 0' }} />
+                        </Row>
+                        <Row>
+                            <Col md={4} xs={12}>
+                                <img src={img8} alt="" className='img-fluid' />
+                                <h5>Sofas</h5>
+                            </Col>
+                            <Col md={4} xs={12}>
+                                <img src={img9} alt="" className='img-fluid' />
+                                <h5>Bedroom</h5>
+                            </Col>
+                            <Col md={4} xs={12}>
+                                <img src={img10} alt="" className='img-fluid' />
+                                <h5>Lighting</h5>
+                            </Col>
                         </Row>
                     </Col>
                 </Row>

@@ -16,7 +16,7 @@ const OrderHistory = () => {
     const [orders, setOrders] = useState([])
     const [loading, setLoading] = useState(true)
     useEffect(() => {
-        axios.get(`http://localhost:5000/orders?email=${user.email}`, {
+        axios.get(`https://blooming-mountain-96721.herokuapp.com/orders?email=${user.email}`, {
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('idToken')}`
             }
@@ -52,7 +52,7 @@ const OrderHistory = () => {
                         margin: '10px 0'
                     }}>
                         <Col xs={6} md={6}>
-                            <h5 className='text-start'><i class="fas fa-shopping-basket"></i> Your Order Items</h5>
+                            <h5 className='text-start'><i className="fas fa-shopping-basket"></i> Your Order Items</h5>
                         </Col>
                         <Col xs={6} md={1}>
                             <h5>Quantity</h5>

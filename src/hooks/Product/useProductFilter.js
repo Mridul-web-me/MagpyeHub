@@ -12,8 +12,8 @@ const useProductFilter = () => {
     const [loading, setLoading] = useState(true)
     // const size = 5;
     useEffect(() => {
-        fetch('./ProductData.JSON')
-        fetch(`http://localhost:5000/products`)
+        // fetch('./ProductData.JSON')
+        fetch(`https://blooming-mountain-96721.herokuapp.com/products`)
             .then(res => res.json())
             .then(data => {
                 setAllProducts(data.products)

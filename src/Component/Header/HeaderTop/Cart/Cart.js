@@ -48,7 +48,7 @@ const Cart = () => {
                                     margin: '10px 0'
                                 }}>
                                     <Col xs={6} md={6}>
-                                        <h5 className='text-start'><i class="fas fa-shopping-basket"></i> Your Basket Contains: {totalQuantity} Items</h5>
+                                        <h5 className='text-start'><i className="fas fa-shopping-basket"></i> Your Basket Contains: {totalQuantity} Items</h5>
                                     </Col>
                                     <Col xs={6} md={2}>
                                         <h5>Quantity</h5>

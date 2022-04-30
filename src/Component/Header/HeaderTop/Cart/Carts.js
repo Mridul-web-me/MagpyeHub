@@ -77,12 +77,12 @@ const Carts = ({ cart }) => {
                                 display: 'flex', flexDirection: 'column', fontSize: '26px',
                                 border: '#f3f3f3',
                             }}>
-                                <button className='increment' style={{ border: 'none', fontSize: '11px', width: '25px', margin: '0' }} onClick={() => { handleIncrement(_id) }}> <i class="fas fa-plus"></i> </button>
+                                <button className='increment' style={{ border: 'none', fontSize: '11px', width: '25px', margin: '0' }} onClick={() => { handleIncrement(_id) }}> <i className="fas fa-plus"></i> </button>
                                 <button className='decrement' style={{
                                     fontSize: '11px',
                                     border: 'none',
                                     width: '25px', margin: '0'
-                                }} disabled={quantity === 1} onClick={() => { handleDecrement(_id) }}> <i class="fas fa-minus"></i> </button>
+                                }} disabled={quantity === 1} onClick={() => { handleDecrement(_id) }}> <i className="fas fa-minus"></i> </button>
                             </div>
                         </div>
                     </div>
@@ -92,7 +92,7 @@ const Carts = ({ cart }) => {
                 </Col>
                 <Col xs={6} md={2}>
 
-                    <i class="fa-solid fa-xmark"></i>
+                    <i className="fa-solid fa-xmark"></i>
                     <p> £{subtotalPrice}
 
 

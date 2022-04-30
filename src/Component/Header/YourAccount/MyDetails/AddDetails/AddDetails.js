@@ -13,7 +13,7 @@ const AddDetails = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        axios.post('http://localhost:5000/users', data)
+        axios.post('https://blooming-mountain-96721.herokuapp.com/users', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Address Added Successfully')

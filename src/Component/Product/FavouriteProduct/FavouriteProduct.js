@@ -14,13 +14,13 @@ const FavouriteProduct = () => {
     const [products, setProducts] = useState([])
     const category = 'cushions'
     useEffect(() => {
-        fetch(`http://localhost:5000/products?category=${category}`)
+        fetch(`https://blooming-mountain-96721.herokuapp.com/products?category=${category}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products)
                 setLoading(false)
             });
-    }, [category, products]);
+    }, [products, category]);
 
     const settings = {
         infinite: true,

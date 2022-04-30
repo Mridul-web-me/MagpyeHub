@@ -14,6 +14,9 @@ import img4 from '../../../img/HomeAndGarden/4.webp'
 import img5 from '../../../img/HomeAndGarden/5.webp'
 import img6 from '../../../img/HomeAndGarden/6.webp'
 import img7 from '../../../img/HomeAndGarden/7.webp'
+import img8 from '../../../img/HomeAndGarden/8.webp'
+import img9 from '../../../img/HomeAndGarden/9.webp'
+import img10 from '../../../img/HomeAndGarden/10.webp'
 
 const HomeAndGarden = () => {
     return (
@@ -181,6 +184,20 @@ const HomeAndGarden = () => {
 
                             </Col>
                             <img src={img7} alt="" style={{ margin: ' 50px 0' }} />
+                        </Row>
+                        <Row>
+                            <Col md={4} xs={12}>
+                                <img src={img8} alt="" className='img-fluid' />
+                                <h5>Bedding</h5>
+                            </Col>
+                            <Col md={4} xs={12}>
+                                <img src={img9} alt="" className='img-fluid' />
+                                <h5>Dining Room</h5>
+                            </Col>
+                            <Col md={4} xs={12}>
+                                <img src={img10} alt="" className='img-fluid' />
+                                <h5>Accessories</h5>
+                            </Col>
                         </Row>
                     </Col>
                 </Row>

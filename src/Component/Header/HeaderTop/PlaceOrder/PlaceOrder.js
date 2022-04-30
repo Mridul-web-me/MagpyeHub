@@ -11,19 +11,33 @@ import Newsletter from '../../../Newsletter/Newsletter';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
 import { FreeMode, Navigation, Thumbs } from "swiper";
+import { Zoom } from 'react-toastify';
 
 
 const PlaceOrder = () => {
     const { productId } = useParams();
     const [product, setProduct] = useState({});
+    const [position, setPosition] = useState()
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${productId}`)
+        fetch(`https://blooming-mountain-96721.herokuapp.com/products/${productId}`)
             .then(res => res.json())
             .then(data => {
                 setProduct(data)
                 console.log(data.img)
             });
     }, [productId])
+
+    // const img1 = {
+    //     backgroundImage: `url${product.img}`,
+    //     backgroundPosition: '0% 0%'
+    // }
+
+    // const handleMouseMove = e => {
+    //     const { left, top, width, height } = e.target.getBoundingClientRect()
+    //     const x = (e.pageX - left) / width * 100
+    //     const y = (e.pageY - top) / height * 100
+    //     this.setState({ backgroundPosition: `${x}% ${y}%` })
+    // }
 
 
     const { handleAddToCart, handleAddToWishList, wishLists } = useProduct()
@@ -53,6 +67,8 @@ const PlaceOrder = () => {
     // }
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
+    const img = { width: 400, height: 250, zoomWidth: 500, img: `${product.img}` };
+
     return (
         <div className='placeOrder'>
             <Header></Header>
@@ -73,7 +89,18 @@ const PlaceOrder = () => {
                             className="mySwiper2"
                         >
                             <SwiperSlide>
-                                <img src={product.img} alt="" />
+                                <figure onMouseMove={handleMouseMove}>
+                                    <img src={product.img} alt="" />
+                                </figure>
+                                {/* <Zoom
+                                    img={img1}
+                                    zoomScale={3}
+                                    width={600}
+                                    height={600}
+                                /> */}
+                                {/* <Zoom onMouseMove={handleMouseMove} style={{ img1 }}>
+                                    <img src={product.img} alt="" />
+                                </Zoom> */}
                             </SwiperSlide>
                             <SwiperSlide>
                                 <img src={product.img1} alt="" />
@@ -133,7 +160,7 @@ const PlaceOrder = () => {
                             }}>
                                 <div style={{ margin: '10px' }}>
                                     <Link to="/">
-                                        <i class="fas fa-quote-left" style={{
+                                        <i className="fas fa-quote-left" style={{
                                             fontSize: '25px',
                                             background: '#0091ac',
                                             padding: '15px',
@@ -153,7 +180,7 @@ const PlaceOrder = () => {
                             }}>
                                 <div style={{ margin: '10px' }}>
                                     <Link to="/">
-                                        <i class="fas fa-house-user" style={{
+                                        <i className="fas fa-house-user" style={{
                                             fontSize: '25px',
                                             background: '#0091ac',
                                             padding: '15px',
@@ -174,7 +201,7 @@ const PlaceOrder = () => {
                             }}>
                                 <div style={{ margin: '10px' }}>
                                     <Link to="/">
-                                        <i class="fas fa-phone" style={{
+                                        <i className="fas fa-phone" style={{
                                             fontSize: '25px',
                                             background: '#0091ac',
                                             padding: '15px',

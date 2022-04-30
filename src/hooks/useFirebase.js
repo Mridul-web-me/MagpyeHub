@@ -142,7 +142,7 @@ const useFirebase = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/users/${user.email}`)
+        fetch(`https://blooming-mountain-96721.herokuapp.com/users/${user.email}`)
             .then(res => res.json())
             .then(data => {
 
@@ -152,7 +152,7 @@ const useFirebase = () => {
 
     const saveUser = (email, displayName, phone, address1, address2, townCity, country, postcode, telephone, method) => {
         const user = { email, displayName, phone, address1, address2, townCity, country, postcode, telephone };
-        fetch('http://localhost:5000/users', {
+        fetch('https://blooming-mountain-96721.herokuapp.com/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'
