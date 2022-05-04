@@ -7,6 +7,13 @@ import Header from '../../Header/Header'
 import Newsletter from '../../Newsletter/Newsletter'
 import PromoUnit from '../../PromoUnit/PromoUnit'
 
+import img1 from '../../../img/Gift/1.webp'
+import img2 from '../../../img/Gift/2.webp'
+import img3 from '../../../img/Gift/3.webp'
+import img4 from '../../../img/Gift/4.webp'
+import img5 from '../../../img/Gift/5.webp'
+import img6 from '../../../img/Gift/6.webp'
+
 const Gifts = () => {
     return (
         <>
@@ -84,41 +91,41 @@ const Gifts = () => {
                         </div>
                     </Col>
 
-                    {/* <Col md={10} xs={12}>
+                    <Col md={10} xs={12}>
                         <Row md={12}>
-                            <Col md={2}>
-                                <Link to="/product/rugs" style={{
+                            <Col md={3}>
+                                <Link to="/product/Chocolate" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
                                     <img src={img1} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
-                                    }}></h5>
+                                    }}>GIFT FOOD</h5>
                                 </Link>
 
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/cushions" style={{
+                                <Link to="/product/LuxuryGifts" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
                                     <img src={img2} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
-                                    }}></h5>
+                                    }}>LUXURY GIFT</h5>
                                 </Link>
 
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/duvetCovers" style={{
+                                <Link to="/product/GiftsForCouples" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
                                     <img src={img3} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
-                                    }}></h5>
+                                    }}>WEDDING GIFT</h5>
                                 </Link>
 
                             </Col>
@@ -158,9 +165,9 @@ const Gifts = () => {
                                 </Link>
 
                             </Col>
-                            <img src={img7} alt="" style={{ margin: ' 50px 0' }} />
+                            {/* <img src={img7} alt="" style={{ margin: ' 50px 0' }} /> */}
                         </Row>
-                        <Row>
+                        {/* <Row>
                             <Col md={4} xs={12}>
                                 <img src={img8} alt="" className='img-fluid' />
                                 <h5></h5>
@@ -173,8 +180,8 @@ const Gifts = () => {
                                 <img src={img10} alt="" className='img-fluid' />
                                 <h5></h5>
                             </Col>
-                        </Row>
-                    </Col> */}
+                        </Row> */}
+                    </Col>
                 </Row>
             </Container>
             <Newsletter></Newsletter>

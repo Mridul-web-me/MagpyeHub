@@ -11,13 +11,12 @@ import Newsletter from '../../../Newsletter/Newsletter';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
 import { FreeMode, Navigation, Thumbs } from "swiper";
-import { Zoom } from 'react-toastify';
-
+import 'react-inner-image-zoom/lib/InnerImageZoom/styles.min.css';
+import ReactImageZoom from 'react-image-zoom';
 
 const PlaceOrder = () => {
     const { productId } = useParams();
     const [product, setProduct] = useState({});
-    const [position, setPosition] = useState()
     useEffect(() => {
         fetch(`https://blooming-mountain-96721.herokuapp.com/products/${productId}`)
             .then(res => res.json())
@@ -27,47 +26,26 @@ const PlaceOrder = () => {
             });
     }, [productId])
 
-    // const img1 = {
-    //     backgroundImage: `url${product.img}`,
-    //     backgroundPosition: '0% 0%'
-    // }
-
-    // const handleMouseMove = e => {
-    //     const { left, top, width, height } = e.target.getBoundingClientRect()
-    //     const x = (e.pageX - left) / width * 100
-    //     const y = (e.pageY - top) / height * 100
-    //     this.setState({ backgroundPosition: `${x}% ${y}%` })
-    // }
-
-
     const { handleAddToCart, handleAddToWishList, wishLists } = useProduct()
 
-    // const onChangeEvent = () => {
-    //     console.log('onChange Event Triggered');
-    // }
-
-    // const onClickItemEvent = () => {
-    //     console.log('onClickItem Event Triggered');
-    // }
-
-    // const onClickThumbEvent = () => {
-    //     console.log('onClickThumb Event Triggered');
-    // }
-
-    // const onSwipeStartEvent = () => {
-    //     console.log('onSwipeStart Event Triggered');
-    // }
-
-    // const onSwipeEndEvent = () => {
-    //     console.log('onSwipeEnd Event Triggered');
-    // }
-
-    // const onSwipeMoveEvent = () => {
-    //     console.log('onSwipeMove Event Triggered');
-    // }
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
-    const img = { width: 400, height: 250, zoomWidth: 500, img: `${product.img}` };
+    const img = {
+        width: 400, height: 500, zoomPosition:
+            'original', zoomWidth: 500, img: `${product.img}`
+    };
+    const img1 = {
+        width: 400, height: 500, zoomPosition:
+            'original', zoomWidth: 500, img: `${product.img1}`
+    };
+    const img2 = {
+        width: 400, height: 500, zoomPosition:
+            'original', zoomWidth: 500, img: `${product.img2}`
+    };
+    const img3 = {
+        width: 500, height: 500, zoomPosition:
+            'original', zoomWidth: 500, img: `${product.img3}`
+    };
 
     return (
         <div className='placeOrder'>
@@ -89,27 +67,17 @@ const PlaceOrder = () => {
                             className="mySwiper2"
                         >
                             <SwiperSlide>
-                                <figure onMouseMove={handleMouseMove}>
-                                    <img src={product.img} alt="" />
-                                </figure>
-                                {/* <Zoom
-                                    img={img1}
-                                    zoomScale={3}
-                                    width={600}
-                                    height={600}
-                                /> */}
-                                {/* <Zoom onMouseMove={handleMouseMove} style={{ img1 }}>
-                                    <img src={product.img} alt="" />
-                                </Zoom> */}
+
+                                <ReactImageZoom {...img} />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img src={product.img1} alt="" />
+                                <ReactImageZoom {...img1} />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img src={product.img2} alt="" />
+                                <ReactImageZoom {...img2} />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img src={product.img3} alt="" />
+                                <ReactImageZoom {...img3} />
                             </SwiperSlide>
                         </Swiper>
                         <Swiper

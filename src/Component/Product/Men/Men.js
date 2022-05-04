@@ -6,6 +6,17 @@ import Footer from '../../Footer/Footer'
 import Header from '../../Header/Header'
 import Newsletter from '../../Newsletter/Newsletter'
 import PromoUnit from '../../PromoUnit/PromoUnit'
+import img1 from '../../../img/Men/1.webp'
+import img2 from '../../../img/Men/2.webp'
+import img3 from '../../../img/Men/3.webp'
+import img4 from '../../../img/Men/4.webp'
+import img5 from '../../../img/Men/5.webp'
+import img6 from '../../../img/Men/6.webp'
+import img7 from '../../../img/Men/7.webp'
+import img8 from '../../../img/Men/8.webp'
+import img9 from '../../../img/Men/9.webp'
+import img10 from '../../../img/Men/10.webp'
+import img11 from '../../../img/Men/11.webp'
 
 const Men = () => {
     return (
@@ -104,97 +115,108 @@ const Men = () => {
                         </div>
                     </Col>
 
-                    {/* <Col md={10} xs={12}>
+                    <Col md={10} xs={12}>
                         <Row md={12}>
                             <Col md={2}>
-                                <Link to="/product/rugs" style={{
+                                <Link to="/product/t-shirts" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
                                     <img src={img1} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
-                                    }}></h5>
+                                    }}>T-SHIRTS</h5>
                                 </Link>
 
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/cushions" style={{
+                                <Link to="/product/menShirts" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
                                     <img src={img2} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
-                                    }}></h5>
+                                    }}>SHIRTS</h5>
                                 </Link>
 
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/duvetCovers" style={{
+                                <Link to="/product/men-jumpersCardigans" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
                                     <img src={img3} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
-                                    }}></h5>
+                                    }}>JUMPERS</h5>
                                 </Link>
 
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/towels" style={{
+                                <Link to="/product/men-coatsJackets" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
                                     <img src={img4} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
-                                    }}></h5>
+                                    }}>COATS</h5>
                                 </Link>
 
                             </Col>
                             <Col md={2}>
 
-                                <Link to="/product/pillows" style={{
+                                <Link to="/product/men-Shoes" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
                                     <img src={img5} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
-                                    }}></h5>
+                                    }}>SHOES</h5>
                                 </Link>
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/wallpaperPaintDIY" style={{
+                                <Link to="/product/waistcoats" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
                                     <img src={img6} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
-                                    }}></h5>
+                                    }}>NEW IN</h5>
                                 </Link>
 
                             </Col>
-                            <img src={img7} alt="" style={{ margin: ' 50px 0' }} />
+
                         </Row>
-                        <Row>
-                            <Col md={4} xs={12}>
-                                <img src={img8} alt="" className='img-fluid' />
-                                <h5></h5>
-                            </Col>
-                            <Col md={4} xs={12}>
-                                <img src={img9} alt="" className='img-fluid' />
-                                <h5></h5>
-                            </Col>
-                            <Col md={4} xs={12}>
-                                <img src={img10} alt="" className='img-fluid' />
-                                <h5></h5>
-                            </Col>
-                        </Row>
-                    </Col> */}
+                        <Container fluid>
+                            <Row md={6}>
+                                <Col md={6} xs={12}>
+                                    <img src={img7} alt="" style={{ margin: ' 50px 0' }} className='img-fluid' />
+                                </Col>
+                                <Col md={6} style={{ marginTop: '70px' }}>
+                                    <Row style={{ marginBottom: '20px' }}>
+                                        <Col md={6}>
+                                            <img src={img8} alt="" className='img-fluid' />
+                                        </Col>
+                                        <Col md={6}>
+                                            <img src={img9} alt="" className='img-fluid' />
+                                        </Col>
+                                    </Row>
+                                    <Row style={{ marginTop: '20px' }}>
+                                        <Col md={6}>
+                                            <img src={img10} alt="" className='img-fluid' />
+                                        </Col>
+                                        <Col md={6}>
+                                            <img src={img11} alt="" className='img-fluid' />
+                                        </Col>
+                                    </Row>
+                                </Col>
+                            </Row>
+                        </Container>
+                    </Col>
                 </Row>
             </Container>
             <Newsletter></Newsletter>

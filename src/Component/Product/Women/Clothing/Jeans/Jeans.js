@@ -151,7 +151,8 @@ const Jeans = () => {
 
                                         )
                                     }
-                                </Row>}
+                                </Row>
+                            }
                         </div>
                         }
                         <div className="pagination">

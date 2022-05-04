@@ -6,6 +6,16 @@ import Footer from '../../Footer/Footer'
 import Header from '../../Header/Header'
 import Newsletter from '../../Newsletter/Newsletter'
 import PromoUnit from '../../PromoUnit/PromoUnit'
+import img1 from '../../../img/BabyAndChild/1.webp'
+import img2 from '../../../img/BabyAndChild/2.webp'
+import img3 from '../../../img/BabyAndChild/3.webp'
+import img4 from '../../../img/BabyAndChild/4.webp'
+import img5 from '../../../img/BabyAndChild/5.webp'
+import img6 from '../../../img/BabyAndChild/6.webp'
+import img7 from '../../../img/BabyAndChild/7.webp'
+import img8 from '../../../img/BabyAndChild/8.webp'
+import img9 from '../../../img/BabyAndChild/9.webp'
+import img10 from '../../../img/BabyAndChild/10.webp'
 
 const BabyAndChild = () => {
     return (
@@ -85,97 +95,101 @@ const BabyAndChild = () => {
                         </div>
                     </Col>
 
-                    {/* <Col md={10} xs={12}>
+                    <Col md={10} xs={12}>
                         <Row md={12}>
                             <Col md={2}>
-                                <Link to="/product/rugs" style={{
+                                <Link to="/product/AllGirlsclothes" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
                                     <img src={img1} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
-                                    }}></h5>
+                                    }}>GIRLS CLOTHES</h5>
                                 </Link>
 
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/cushions" style={{
+                                <Link to="/product/AllBoysClothes" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
                                     <img src={img2} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
-                                    }}></h5>
+                                    }}>BOYS CLOTHES</h5>
                                 </Link>
 
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/duvetCovers" style={{
+                                <Link to="/product/babyBoyClothes" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
                                     <img src={img3} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
-                                    }}></h5>
+                                    }}>BABY CLOTHES</h5>
                                 </Link>
 
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/towels" style={{
+                                <Link to="/product/nurseryFunitureFurnishings" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
                                     <img src={img4} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
-                                    }}></h5>
+                                    }}>NURSERY & TRAVEL</h5>
                                 </Link>
 
                             </Col>
                             <Col md={2}>
 
-                                <Link to="/product/pillows" style={{
+                                <Link to="/product/Toys" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
                                     <img src={img5} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
-                                    }}></h5>
+                                    }}>TOYS</h5>
                                 </Link>
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/wallpaperPaintDIY" style={{
+                                <Link to="/product/BabyToddlerFood" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
                                     <img src={img6} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
-                                    }}></h5>
+                                    }}>BUYING GUIDES</h5>
                                 </Link>
 
                             </Col>
-                            <img src={img7} alt="" style={{ margin: ' 50px 0' }} />
+
                         </Row>
-                        <Row>
-                            <Col md={4} xs={12}>
+                        <Row style={{ margin: ' 50px 0' }}>
+                            <Col md={6} xs={12}>
+                                <img src={img7} alt="" className='img-fluid' />
+                                <h5></h5>
+                            </Col>
+                            <Col md={6} xs={12}>
                                 <img src={img8} alt="" className='img-fluid' />
                                 <h5></h5>
                             </Col>
-                            <Col md={4} xs={12}>
+                            <Col md={6} xs={12}>
                                 <img src={img9} alt="" className='img-fluid' />
                                 <h5></h5>
                             </Col>
-                            <Col md={4} xs={12}>
+                            <Col md={6} xs={12}>
                                 <img src={img10} alt="" className='img-fluid' />
                                 <h5></h5>
                             </Col>
                         </Row>
-                    </Col> */}
+                    </Col>
                 </Row>
             </Container>
             <Newsletter></Newsletter>

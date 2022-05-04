@@ -7,6 +7,16 @@ import Header from '../../Header/Header'
 import Newsletter from '../../Newsletter/Newsletter'
 import PromoUnit from '../../PromoUnit/PromoUnit'
 
+import img1 from '../../../img/Electricals/1.webp'
+import img2 from '../../../img/Electricals/2.webp'
+import img3 from '../../../img/Electricals/3.webp'
+import img4 from '../../../img/Electricals/4.webp'
+import img5 from '../../../img/Electricals/5.webp'
+import img6 from '../../../img/Electricals/6.webp'
+import img7 from '../../../img/Electricals/7.webp'
+import img8 from '../../../img/Electricals/8.webp'
+import img9 from '../../../img/Electricals/9.webp'
+
 const Electricals = () => {
     return (
         <>
@@ -97,97 +107,93 @@ const Electricals = () => {
                         </div>
                     </Col>
 
-                    {/* <Col md={10} xs={12}>
+                    <Col md={10} xs={12}>
                         <Row md={12}>
                             <Col md={2}>
-                                <Link to="/product/rugs" style={{
+                                <Link to="/product/Television" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
                                     <img src={img1} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
-                                    }}></h5>
+                                    }}>TELEVISIONS</h5>
                                 </Link>
 
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/cushions" style={{
+                                <Link to="/product/LaptopsMacBooks" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
                                     <img src={img2} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
-                                    }}></h5>
+                                    }}>LAPTOPS & MACBOOKS</h5>
                                 </Link>
 
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/duvetCovers" style={{
+                                <Link to="/product/IpadsTablets" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
                                     <img src={img3} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
-                                    }}></h5>
+                                    }}>IPADS & TABLETS</h5>
                                 </Link>
 
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/towels" style={{
+                                <Link to="/product/WashingMachines" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
                                     <img src={img4} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
-                                    }}></h5>
+                                    }}>WASHING MACHINES</h5>
                                 </Link>
 
                             </Col>
                             <Col md={2}>
 
-                                <Link to="/product/pillows" style={{
+                                <Link to="/product/FridgeFreezers" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
                                     <img src={img5} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
-                                    }}></h5>
+                                    }}>FRIDGE FREEZERS</h5>
                                 </Link>
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/wallpaperPaintDIY" style={{
+                                <Link to="/product/MobilePhonesAccessories" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
                                     <img src={img6} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
-                                    }}></h5>
+                                    }}>MOBILE PHONES</h5>
                                 </Link>
 
                             </Col>
                             <img src={img7} alt="" style={{ margin: ' 50px 0' }} />
                         </Row>
                         <Row>
-                            <Col md={4} xs={12}>
+                            <Col md={6} xs={12}>
                                 <img src={img8} alt="" className='img-fluid' />
                                 <h5></h5>
                             </Col>
-                            <Col md={4} xs={12}>
+                            <Col md={6} xs={12}>
                                 <img src={img9} alt="" className='img-fluid' />
                                 <h5></h5>
                             </Col>
-                            <Col md={4} xs={12}>
-                                <img src={img10} alt="" className='img-fluid' />
-                                <h5></h5>
-                            </Col>
                         </Row>
-                    </Col> */}
+                    </Col>
                 </Row>
             </Container>
             <Newsletter></Newsletter>
