@@ -44,40 +44,59 @@ const BabyAndChild = () => {
                             <Link to="/BabyAndChild"> Baby & Child </Link>
                             <hr />
                         </div>
-                        <h6 style={{ textAlign: 'start' }}>Kids Clothing & Shoes</h6>
-                        <div className="filterItem">
-                            <Link to="/product/kidsshirtsTops">Shirts & Tops</Link><br />
-                            <Link to="/product/kidsdresses">Dresses</Link><br />
-                            <Link to="/product/kidspyjamasNightwear">Pyjamas & Nightwear</Link><br />
-                            <Link to="/product/kidstrousersLeggings">Trousers & Leggings</Link><br />
-                            <Link to="/product/kidsjeans">Jeans</Link><br />
-                            <Link to="/product/kidspartyWear">Party Wear</Link><br />
-                        </div>
-                        <hr />
                         <h6 style={{ textAlign: 'start' }}>Baby Food & Milk</h6>
                         <div className="filterItem">
-                            <Link to="/product/BabyToddlerFood">Baby & Toddler Food</Link><br />
-                            <Link to="/product/BabyToddlerMilk">Baby & Toddler Milk</Link><br />
+                            <Link to="/babyAndChild/BabyToddlerFood">Baby & Toddler Food</Link><br />
+                            <Link to="/babyAndChild/BabyToddlerMilk">Baby & Toddler Milk</Link><br />
                         </div>
                         <hr />
-                        <h6 style={{ textAlign: 'start' }}>Boys Clothes</h6>
+                        <h6 style={{ textAlign: 'start' }}>Baby Home & Nursery</h6>
                         <div className="filterItem">
-                            <Link to="/product/boysshortsTrousers">Shorts & Trousers</Link><br />
-                            <Link to="/product/boysshirtsTops">Shirts & Tops</Link><br />
-                            <Link to="/product/boyspyjamasNightwear">Pyjamas & Nightwear</Link><br />
-                            <Link to="/product/boyspartywear">Party wear</Link><br />
-                            <Link to="/product/boyspants">Pants</Link><br />
-                            <Link to="/product/boyssocks">Socks</Link><br />
-                            <Link to="/product/boyshats">Hats</Link><br />
+                            <Link to="/babyAndChild/sleeping">Sleeping</Link><br />
+                            <Link to="/babyAndChild/bathingChanging">Bathing & Changing</Link><br />
+                            <Link to="/babyAndChild/feedingWeaning">Feeding & Weaning</Link><br />
+                            <Link to="/babyAndChild/nurseryFunitureFurnishings">Nursery Funiture & Furnishings</Link><br />
+                            <Link to="/babyAndChild/safetyHealthcare">Safety & Healthcare</Link><br />
+                            <Link to="/babyAndChild/babyChecklist">Baby Checklist</Link><br />
+                        </div>
+                        <hr />
+                        <h6 style={{ textAlign: 'start' }}>Baby Clothes (0-4 years)</h6>
+                        <div className="filterItem">
+                            <Link to="/babyAndChild/babyToddlerclothes">Baby & Toddler clothes</Link><br />
+                            <Link to="/babyAndChild/babyBoyClothes">Baby Boy Clothes</Link><br />
+                            <Link to="/babyAndChild/babyGirlClothes">Baby Girl Clothes</Link><br />
+                            <Link to="/babyAndChild/sleepsuitsBodysuits">Sleepsuits & Bodysuits</Link><br />
+                        </div>
+                        <hr />
+                        <h6 style={{ textAlign: 'start' }}>Kids Clothing & Shoes</h6>
+                        <div className="filterItem">
+                            <Link to="/babyAndChild/AllGirlsclothes">All Girls clothes</Link><br />
+                            <Link to="/babyAndChild/GirlsDresses">Girls Dresses</Link><br />
+                            <Link to="/babyAndChild/GirlsShoes">Girls Shoes</Link><br />
+                            <Link to="/babyAndChild/GirlsPyjamas">Girls Pyjamas</Link><br />
+                            <Link to="/babyAndChild/AllBoysClothes">All Boys Clothes</Link><br />
+                            <Link to="/babyAndChild/BoysPyjamas ">Boys Pyjamas </Link><br />
+                            <Link to="/babyAndChild/BoysShoes">Boys Shoes</Link><br />
+                            <Link to="/babyAndChild/BackToSchoolShop">Back to School Shop</Link><br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Kids Travel</h6>
                         <div className="filterItem">
-                            <Link to="/product/CarSeats">Car Seats</Link><br />
-                            <Link to="/product/BabyCarriers">Baby Carriers</Link><br />
-                            <Link to="/product/Strollers">Strollers</Link><br />
+                            <Link to="/babyAndChild/carSeats">Car Seats</Link><br />
+                            <Link to="/babyAndChild/babyCarriers">Baby Carriers</Link><br />
+                            <Link to="/babyAndChild/strollers">Strollers</Link><br />
                         </div>
                         <hr />
+                        <h6 style={{ textAlign: 'start' }}>Kids Toys & Gifts</h6>
+                        <div className="filterItem">
+                            <Link to="/babyAndChild/Toys">Toys</Link><br />
+                            <Link to="/babyAndChild/BabyPreschoolToys">Baby & preschool Toys</Link><br />
+                            <Link to="/babyAndChild/KidsGamesPuzzles">Games & Puzzles</Link><br />
+                            <Link to="/babyAndChild/LEGO">LEGO</Link><br />
+                            <Link to="/babyAndChild/GiftsForBabiesKids">Gifts for Babies & Kids</Link><br />
+                        </div>
+                        <hr />
+
                         <h6 style={{ textAlign: 'start' }}>Brand</h6>
 
                         <div className="filterItem">

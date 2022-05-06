@@ -7,6 +7,18 @@ import Header from '../../Header/Header'
 import Newsletter from '../../Newsletter/Newsletter'
 import PromoUnit from '../../PromoUnit/PromoUnit'
 
+import img1 from '../../../img/Beauty/1.webp'
+import img2 from '../../../img/Beauty/2.webp'
+import img3 from '../../../img/Beauty/3.jpg'
+import img4 from '../../../img/Beauty/4.jpg'
+import img5 from '../../../img/Beauty/5.webp'
+import img6 from '../../../img/Beauty/6.webp'
+import img7 from '../../../img/Beauty/7.webp'
+import img8 from '../../../img/Beauty/8.webp'
+import img9 from '../../../img/Beauty/9.jpg'
+import img10 from '../../../img/Beauty/10.webp'
+import img11 from '../../../img/Beauty/11.webp'
+
 const Beauty = () => {
     return (
         <>
@@ -34,52 +46,72 @@ const Beauty = () => {
                             <Link to="/beauty"> Beauty </Link>
                             <hr />
                         </div>
+                        <h6 style={{ textAlign: 'start' }}>Top Brands</h6>
+                        <div className="filterItem">
+                            <Link to="/beauty/theOrdinary">The Ordinary</Link><br />
+                            <Link to="/beauty/CHANEL">CHANEL</Link><br />
+                            <Link to="/beauty/CharlotteTilbury">Charlotte Tilbury</Link><br />
+                            <Link to="/beauty/Clarins">Clarins</Link><br />
+                            <Link to="/beauty/Clinique">Clinique</Link><br />
+                            <Link to="/beauty/DIOR">DIOR</Link><br />
+                            <Link to="/beauty/EstéeLauder">Estée Lauder</Link><br />
+                            <Link to="/beauty/BeautyGucci">Gucci</Link><br />
+                            <Link to="/beauty/JoMaloneLondon">Jo Malone London</Link><br />
+                            <Link to="/beauty/AToZBrands">A-Z Brands</Link><br />
+                        </div>
+                        <hr />
                         <h6 style={{ textAlign: 'start' }}>Makeup</h6>
                         <div className="filterItem">
-                            <Link to="/product/foundations">Foundations</Link><br />
-                            <Link to="/product/concealers">Concealers</Link><br />
-                            <Link to="/product/eyeshadows">Eyeshadows</Link><br />
-                            <Link to="/product/mascaras">Mascaras</Link><br />
-                            <Link to="/product/lipsticks">Lipsticks</Link><br />
-                            <Link to="/product/nailPolish">Nail Polish</Link><br />
-                            <Link to="/product/makeupAccessories">Makeup Accessories</Link><br />
-                            <Link to="/product/handNailSets">Hand & Nail Sets</Link><br />
-                            <Link to="/product/makeupBrushes">Makeup Brushes</Link><br />
-                            <Link to="/product/makeupBags">Makeup Bags</Link><br />
-                            <Link to="/product/tintedMoisturisers">Tinted Moisturisers</Link><br />
+                            <Link to="/beauty/viewallMakeup">View all Makeup</Link><br />
+                            <Link to="/beauty/foundations">Foundations</Link><br />
+                            <Link to="/beauty/concealers">Concealers</Link><br />
+                            <Link to="/beauty/eyeshadows">Eyeshadows</Link><br />
+                            <Link to="/beauty/mascaras">Mascaras</Link><br />
+                            <Link to="/beauty/lipsticks">Lipsticks</Link><br />
+                            <Link to="/beauty/nailPolish">Nail Polish</Link><br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Fragrance</h6>
                         <div className="filterItem">
-                            <Link to="/product/womensPerfume">Women's Perfume</Link><br />
-                            <Link to="/product/perfumeGiftSets">Perfume Gift Sets</Link><br />
-                            <Link to="/product/mensAftershave">Men's Aftershave</Link><br />
-                            <Link to="/product/aftershaveGiftSets">Aftershave Gift Sets</Link><br />
+                            <Link to="/beauty/womensPerfume">Women's Perfume</Link><br />
+                            <Link to="/beauty/perfumeGiftSets">Perfume Gift Sets</Link><br />
+                            <Link to="/beauty/mensAftershave">Men's Aftershave</Link><br />
+                            <Link to="/beauty/aftershaveGiftSets">Aftershave Gift Sets</Link><br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Skin & Body Care</h6>
                         <div className="filterItem">
-                            <Link to="/product/cleansers">Cleansers</Link><br />
-                            <Link to="/product/moisturisers">Moisturisers</Link><br />
-                            <Link to="/product/bathsShower">Baths & Shower</Link><br />
-                            <Link to="/product/bodyCare">Body Care</Link><br />
-                            <Link to="/product/lipBalmCare">Lip Balm & Care</Link><br />
-                            <Link to="/product/handFootCare">Hand & Foot Care</Link><br />
-                            <Link to="/product/skinCareTreatments">Skin Care & Treatments</Link><br />
-                            <Link to="/product/sunCreamAfterSun">Sun Cream & After Sun</Link><br />
-                            <Link to="/product/beautyToolsTechnology">Beauty Tools & Technology</Link><br />
-                            <Link to="/product/menGrooming">Men's Grooming</Link><br />
+                            <Link to="/beauty/cleansers">Cleansers</Link><br />
+                            <Link to="/beauty/moisturisers">Moisturisers</Link><br />
+                            <Link to="/beauty/bathsShower">Baths & Shower</Link><br />
+                            <Link to="/beauty/bodyCare">Body Care</Link><br />
+                            <Link to="/beauty/lipBalmCare">Lip Balm & Care</Link><br />
+                            <Link to="/beauty/handFootCare">Hand & Foot Care</Link><br />
+                            <Link to="/beauty/skinCareTreatments">Skin Care & Treatments</Link><br />
+                            <Link to="/beauty/sunCreamAfterSun">Sun Cream & After Sun</Link><br />
+                            <Link to="/beauty/beautyToolsTechnology">Beauty Tools & Technology</Link><br />
+                            <Link to="/beauty/menGrooming">Men's Grooming</Link><br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Hair Care & Styling</h6>
                         <div className="filterItem">
-                            <Link to="/product/hairCare">Hair Care</Link><br />
-                            <Link to="/product/shampoo">Shampoo</Link><br />
-                            <Link to="/product/conditioner">Conditioner</Link><br />
-                            <Link to="/product/hairTreatments">Hair Treatments</Link><br />
-                            <Link to="/product/hairStylingProducts">Hair Styling Products</Link><br />
-                            <Link to="/product/hairBrushes">Hair Brushes</Link><br />
-                            <Link to="/product/electricalHairBeauty">Electrical Hair & Beauty</Link><br />
+                            <Link to="/beauty/hairCare">Hair Care</Link><br />
+                            <Link to="/beauty/shampoo">Shampoo</Link><br />
+                            <Link to="/beauty/conditioner">Conditioner</Link><br />
+                            <Link to="/beauty/hairTreatments">Hair Treatments</Link><br />
+                            <Link to="/beauty/hairStylingProducts">Hair Styling Products</Link><br />
+                            <Link to="/beauty/hairBrushes">Hair Brushes</Link><br />
+                            <Link to="/beauty/electricalHairBeauty">Electrical Hair & Beauty</Link><br />
+                        </div>
+                        <hr />
+                        <h6 style={{ textAlign: 'start' }}>Inspire Me</h6>
+                        <div className="filterItem">
+                            <Link to="/beauty/Offers">Offers</Link><br />
+                            <Link to="/beauty/NewArrivals">New Arrivals</Link><br />
+                            <Link to="/beauty/VeganBeauty">Vegan Beauty</Link><br />
+                            <Link to="/beauty/Wellness">Wellness</Link><br />
+                            <Link to="/beauty/GiftSets">Gift Sets</Link><br />
+                            <Link to="/beauty/NewAndExclusiveClarinsExtraordinaire">New & Exclusive: Clarins Eau Extraordinaire</Link><br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Brand</h6>
@@ -99,7 +131,7 @@ const Beauty = () => {
                         </div>
                     </Col>
 
-                    {/* <Col md={10} xs={12}>
+                    <Col md={10} xs={12}>
                         <Row md={12}>
                             <Col md={2}>
                                 <Link to="/product/rugs" style={{
@@ -109,7 +141,7 @@ const Beauty = () => {
                                     <img src={img1} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
-                                    }}></h5>
+                                    }}>UOMA</h5>
                                 </Link>
 
                             </Col>
@@ -121,7 +153,7 @@ const Beauty = () => {
                                     <img src={img2} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
-                                    }}></h5>
+                                    }}>MAKE UP</h5>
                                 </Link>
 
                             </Col>
@@ -133,7 +165,7 @@ const Beauty = () => {
                                     <img src={img3} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
-                                    }}></h5>
+                                    }}>SKINCARE</h5>
                                 </Link>
 
                             </Col>
@@ -145,7 +177,7 @@ const Beauty = () => {
                                     <img src={img4} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
-                                    }}></h5>
+                                    }}>WOMEN'S PERFUME</h5>
                                 </Link>
 
                             </Col>
@@ -158,7 +190,7 @@ const Beauty = () => {
                                     <img src={img5} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
-                                    }}></h5>
+                                    }}>MEN'S AFTERSHAVE</h5>
                                 </Link>
                             </Col>
                             <Col md={2}>
@@ -169,17 +201,21 @@ const Beauty = () => {
                                     <img src={img6} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
-                                    }}></h5>
+                                    }}>NEW IN</h5>
                                 </Link>
 
                             </Col>
-                            <img src={img7} alt="" style={{ margin: ' 50px 0' }} />
+
                         </Row>
                         <Row>
-                            <Col md={4} xs={12}>
-                                <img src={img8} alt="" className='img-fluid' />
-                                <h5></h5>
+                            <Col md={6} xs={12}>
+                                <img src={img7} alt="" className='img-fluid' style={{ margin: ' 50px 0' }} />
                             </Col>
+                            <Col md={6} xs={12}>
+                                <img src={img8} alt="" className='img-fluid' style={{ margin: ' 50px 0' }} />
+                            </Col>
+                        </Row>
+                        <Row>
                             <Col md={4} xs={12}>
                                 <img src={img9} alt="" className='img-fluid' />
                                 <h5></h5>
@@ -188,8 +224,12 @@ const Beauty = () => {
                                 <img src={img10} alt="" className='img-fluid' />
                                 <h5></h5>
                             </Col>
+                            <Col md={4} xs={12}>
+                                <img src={img11} alt="" className='img-fluid' />
+                                <h5></h5>
+                            </Col>
                         </Row>
-                    </Col> */}
+                    </Col>
                 </Row>
             </Container>
             <Newsletter></Newsletter>

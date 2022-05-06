@@ -16,7 +16,7 @@ const AllOrderHistory = () => {
     const [orders, setOrders] = useState([])
     const [loading, setLoading] = useState(true)
     useEffect(() => {
-        fetch('https://blooming-mountain-96721.herokuapp.com/orders')
+        fetch('http://localhost:5000/orders')
             .then(res => res.json())
             .then(data => {
                 setOrders(data)

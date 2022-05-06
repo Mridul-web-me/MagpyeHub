@@ -8,6 +8,8 @@ import logo from '../../../../../img/logo.jpg'
 import toast from 'react-hot-toast';
 import useAuth from '../../../../../hooks/useAuth';
 import { Helmet } from 'react-helmet';
+import { Editor, EditorState } from "draft-js";
+import "draft-js/dist/Draft.css";
 
 // import { Editor, EditorState } from 'draft-js';
 // import 'draft-js/dist/Draft.css';
@@ -65,7 +67,7 @@ const AddProduct = () => {
 
 
             console.log("Blogdata", blogInfo)
-            axios.post('https://blooming-mountain-96721.herokuapp.com/products', blogInfo)
+            axios.post('http://localhost:5000/products', blogInfo)
                 .then(res => {
                     if (res.data.insertedId) {
                         alert('Product Added Successfully')
@@ -81,6 +83,13 @@ const AddProduct = () => {
 
 
     }
+
+    const [editorState, setEditorState] = useState(() =>
+        EditorState.createEmpty()
+    );
+
+
+
 
 
 
@@ -127,8 +136,15 @@ const AddProduct = () => {
                                 <Form.Label column sm={4}>
                                     Description
                                 </Form.Label>
-                                <Col sm={8}>
-                                    <Form.Control {...register("description")} type="text" placeholder='Description' required />
+                                <Col sm={8} style={{ border: "1px solid black", minHeight: "6em", cursor: "text" }}
+                                >
+                                    <Editor
+
+                                        editorState={editorState}
+                                        onChange={setEditorState}
+                                        placeholder="Write something!"
+                                    />
+                                    {/* <Form.Control {...register("description")} type="text" placeholder='Description' required /> */}
                                 </Col>
                             </Form.Group>
                             <Form.Group as={Row} className="mb-3" controlId="formHorizontalTownCity">
@@ -166,6 +182,13 @@ const AddProduct = () => {
                         </Form>
                     </Col>
                 </Row>
+
+                <Editor
+
+                    editorState={editorState}
+                    onChange={setEditorState}
+                    placeholder="Write something!"
+                />
             </Container>
             <p>
 

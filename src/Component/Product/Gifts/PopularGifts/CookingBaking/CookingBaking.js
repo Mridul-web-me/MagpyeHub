@@ -22,7 +22,7 @@ const CookingBaking = (props) => {
     const size = 8;
     const category = 'CookingBaking'
     useEffect(() => {
-        fetch(`https://blooming-mountain-96721.herokuapp.com/products?category=${category}&&page=${page}&&size=${size}`)
+        fetch(`http://localhost:5000/products?category=${category}&&page=${page}&&size=${size}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products)

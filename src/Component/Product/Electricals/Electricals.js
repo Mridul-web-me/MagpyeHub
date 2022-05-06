@@ -46,48 +46,48 @@ const Electricals = () => {
                         </div>
                         <h6 style={{ textAlign: 'start' }}>Television & Audio</h6>
                         <div className="filterItem">
-                            <Link to="/product/Television">Television</Link><br />
-                            <Link to="/product/SoundbarsHomeCinema">Soundbars & Home Cinema</Link><br />
-                            <Link to="/product/TVStandsWallMounts">TV Stands & Wall Mounts</Link><br />
-                            <Link to="/product/TVStreamingDevices">TV Streaming Devices</Link><br />
-                            <Link to="/product/SpeakersSoundSystems">Speakers & Sound Systems</Link><br />
-                            <Link to="/product/Headphones">Headphones</Link><br />
+                            <Link to="/electricals/Television">Television</Link><br />
+                            <Link to="/electricals/SoundbarsHomeCinema">Soundbars & Home Cinema</Link><br />
+                            <Link to="/electricals/TVStandsWallMounts">TV Stands & Wall Mounts</Link><br />
+                            <Link to="/electricals/TVStreamingDevices">TV Streaming Devices</Link><br />
+                            <Link to="/electricals/SpeakersSoundSystems">Speakers & Sound Systems</Link><br />
+                            <Link to="/electricals/Headphones">Headphones</Link><br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Computing & Gaming</h6>
                         <div className="filterItem">
-                            <Link to="/product/IpadsTablets">Ipads & Tablets</Link><br />
-                            <Link to="/product/LaptopsMacBooks">Laptops & MacBooks </Link><br />
-                            <Link to="/product/PCsDesktopComputers">PCs & Desktop Computers</Link><br />
-                            <Link to="/product/MonitorsProjectors">Monitors & Projectors</Link><br />
-                            <Link to="/product/PrintersAccessories">Printers & Accessories</Link><br />
-                            <Link to="/product/Gaming">Gaming</Link><br />
+                            <Link to="/electricals/IpadsTablets">Ipads & Tablets</Link><br />
+                            <Link to="/electricals/LaptopsMacBooks">Laptops & MacBooks </Link><br />
+                            <Link to="/electricals/PCsDesktopComputers">PCs & Desktop Computers</Link><br />
+                            <Link to="/electricals/MonitorsProjectors">Monitors & Projectors</Link><br />
+                            <Link to="/electricals/PrintersAccessories">Printers & Accessories</Link><br />
+                            <Link to="/electricals/Gaming">Gaming</Link><br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Home Appliances</h6>
                         <div className="filterItem">
-                            <Link to="/product/WashingMachines">Washing Machines</Link><br />
-                            <Link to="/product/FridgeFreezers">Fridge Freezers</Link><br />
-                            <Link to="/product/Dishwashers">Dishwashers</Link><br />
-                            <Link to="/product/CookersOvens">Cookers & Ovens</Link><br />
-                            <Link to="/product/Microwaves">Microwaves</Link><br />
+                            <Link to="/electricals/WashingMachines">Washing Machines</Link><br />
+                            <Link to="/electricals/FridgeFreezers">Fridge Freezers</Link><br />
+                            <Link to="/electricals/Dishwashers">Dishwashers</Link><br />
+                            <Link to="/electricals/CookersOvens">Cookers & Ovens</Link><br />
+                            <Link to="/electricals/Microwaves">Microwaves</Link><br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Kitchen Appliances & Vacuums</h6>
                         <div className="filterItem">
-                            <Link to="/product/CoffeeMachines">Coffee Machines</Link><br />
-                            <Link to="/product/Kettles">Kettles</Link><br />
-                            <Link to="/product/Toasters">Toasters</Link><br />
-                            <Link to="/product/VacuumCleaners">Vacuum Cleaners</Link><br />
-                            <Link to="/product/FansCoolingPurifiers">Fans, Cooling & Purifiers</Link><br />
-                            <Link to="/product/Ironing">Ironing</Link><br />
+                            <Link to="/electricals/CoffeeMachines">Coffee Machines</Link><br />
+                            <Link to="/electricals/Kettles">Kettles</Link><br />
+                            <Link to="/electricals/Toasters">Toasters</Link><br />
+                            <Link to="/electricals/VacuumCleaners">Vacuum Cleaners</Link><br />
+                            <Link to="/electricals/FansCoolingPurifiers">Fans, Cooling & Purifiers</Link><br />
+                            <Link to="/electricals/Ironing">Ironing</Link><br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Mobile, Cameras & Smart Tech</h6>
                         <div className="filterItem">
-                            <Link to="/product/MobilePhonesAccessories">Mobile Phones & Accessories</Link><br />
-                            <Link to="/product/CamerasCamcorders">Cameras & Camcorders</Link><br />
-                            <Link to="/product/SmartFitnessWatches">Smart & Fitness Watches</Link><br />
+                            <Link to="/electrocals/MobilePhonesAccessories">Mobile Phones & Accessories</Link><br />
+                            <Link to="/electrocals/CamerasCamcorders">Cameras & Camcorders</Link><br />
+                            <Link to="/electrocals/SmartFitnessWatches">Smart & Fitness Watches</Link><br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Brand</h6>

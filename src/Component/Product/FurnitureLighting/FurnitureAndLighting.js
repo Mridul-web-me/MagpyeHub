@@ -47,46 +47,62 @@ const FurnitureAndLighting = () => {
                         </div>
                         <h6 style={{ textAlign: 'start' }}>Living Room Furniture</h6>
                         <div className="filterItem">
-                            <Link to="/product/sofasArmchairs">Sofas & Armchairs</Link><br />
-                            <Link to="/product/tVStands">TV Stands</Link><br />
-                            <Link to="/product/coffeeTables">Coffee Tables</Link><br />
-                            <Link to="/product/bookcasesShelving">Bookcases & Shelving</Link><br />
-                            <Link to="/product/cabinetsSideboards">Cabinets & Sideboards</Link><br />
+                            <Link to="/furnitureAndLighting/sofasArmchairs">Sofas & Armchairs</Link><br />
+                            <Link to="/furnitureAndLighting/tVStands">TV Stands</Link><br />
+                            <Link to="/furnitureAndLighting/coffeeTables">Coffee Tables</Link><br />
+                            <Link to="/furnitureAndLighting/bookcasesShelving">Bookcases & Shelving</Link><br />
+                            <Link to="/furnitureAndLighting/cabinetsSideboards">Cabinets & Sideboards</Link><br />
+                            <Link to="/furnitureAndLighting/consoleTables">Console Tables</Link><br />
+                            <Link to="/furnitureAndLighting/sideTables">Side Tables</Link><br />
+                            <Link to="/furnitureAndLighting/shopLivingRoom">Shop Living Room</Link><br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Bedroom Furniture</h6>
                         <div className="filterItem">
-                            <Link to="/product/beds">Beds</Link><br />
-                            <Link to="/product/mattresses">Mattresses</Link><br />
-                            <Link to="/product/bedsideTables">Bedside Tables</Link><br />
-                            <Link to="/product/chestsDrawers">Chests of Drawers</Link><br />
-                            <Link to="/product/dressingTables">Dressing Tables</Link><br />
-                            <Link to="/product/wardrobes">Wardrobes</Link><br />
-                            <Link to="/product/childrenBedroom">Children's Bedroom</Link><br />
+                            <Link to="/furnitureAndLighting/beds">Beds</Link><br />
+                            <Link to="/furnitureAndLighting/mattresses">Mattresses</Link><br />
+                            <Link to="/furnitureAndLighting/bedsideTables">Bedside Tables</Link><br />
+                            <Link to="/furnitureAndLighting/chestsDrawers">Chests of Drawers</Link><br />
+                            <Link to="/furnitureAndLighting/dressingTables">Dressing Tables</Link><br />
+                            <Link to="/furnitureAndLighting/wardrobes">Wardrobes</Link><br />
+                            <Link to="/furnitureAndLighting/childrenBedroom">Children's Bedroom</Link><br />
+                            <Link to="/furnitureAndLighting/shopBedroom">Shop Bedroom</Link><br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Dining Room Furniture</h6>
                         <div className="filterItem">
-                            <Link to="/product/DiningTables">Dining Tables</Link><br />
-                            <Link to="/product/DiningChairs">Dining Chairs </Link><br />
-                            <Link to="/product/BarChairsStools">Bar Chairs & Stools</Link><br />
+                            <Link to="/furnitureAndLighting/diningTables">Dining Tables</Link><br />
+                            <Link to="/furnitureAndLighting/diningChairs">Dining Chairs </Link><br />
+                            <Link to="/furnitureAndLighting/barChairsStools">Bar Chairs & Stools</Link><br />
+                            <Link to="/furnitureAndLighting/diningBenches">Dining Benches</Link><br />
+                            <Link to="/furnitureAndLighting/shopDiningRoom">Shop Dining Room</Link><br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Home Office & Storage</h6>
                         <div className="filterItem">
-                            <Link to="/product/OfficeDesks">Office Desks</Link><br />
-                            <Link to="/product/OfficeChairs">Office Chairs</Link><br />
-                            <Link to="/product/HomeStorage">Home Storage</Link><br />
+                            <Link to="/furnitureAndLighting/officeDesks">Office Desks</Link><br />
+                            <Link to="/furnitureAndLighting/officeChairs">Office Chairs</Link><br />
+                            <Link to="/furnitureAndLighting/homeStorage">Home Storage</Link><br />
+                            <Link to="/furnitureAndLighting/shopHomeOffice">Shop Home Office</Link><br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Lighting</h6>
                         <div className="filterItem">
-                            <Link to="/product/CeilingLights">Ceiling Lights</Link><br />
-                            <Link to="/product/DeskTableLamps">Desk & Table lamps</Link><br />
-                            <Link to="/product/FloorLamps">Floor Lamps</Link><br />
-                            <Link to="/product/WallLighting">Wall Lighting</Link><br />
-                            <Link to="/product/GardenOutdoorlights">Garden & Outdoor lights</Link><br />
-                            <Link to="/product/LightBulbs">Light Bulbs</Link><br />
+                            <Link to="/furnitureAndLighting/ceilingLights">Ceiling Lights</Link><br />
+                            <Link to="/furnitureAndLighting/deskTableLamps">Desk & Table lamps</Link><br />
+                            <Link to="/furnitureAndLighting/floorLamps">Floor Lamps</Link><br />
+                            <Link to="/furnitureAndLighting/wallLighting">Wall Lighting</Link><br />
+                            <Link to="/furnitureAndLighting/gardenOutdoorlights">Garden & Outdoor lights</Link><br />
+                            <Link to="/furnitureAndLighting/lightBulbs">Light Bulbs</Link><br />
+                            <Link to="/furnitureAndLighting/lampShades">Lamp Shades</Link><br />
+                            <Link to="/furnitureAndLighting/shopLighting">Shop Lighting</Link><br />
+                        </div>
+                        <hr />
+                        <h6 style={{ textAlign: 'start' }}>Inspire Me</h6>
+                        <div className="filterItem">
+                            <Link to="/furnitureAndLighting/gardenDiningSets">Garden Dining Sets</Link><br />
+                            <Link to="/furnitureAndLighting/gardenLoungeSets">Garden Lounge Sets</Link><br />
+                            <Link to="/furnitureAndLighting/newInLighting">New in: Lighting</Link><br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Brand</h6>

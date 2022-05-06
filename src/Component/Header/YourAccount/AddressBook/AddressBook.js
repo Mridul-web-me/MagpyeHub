@@ -15,7 +15,7 @@ const AddressBook = (props) => {
     const [profile, setProfile] = useState([])
     const [loading, setLoading] = useState(true)
     useEffect(() => {
-        axios.get(`https://blooming-mountain-96721.herokuapp.com/users?email=${user.email}`, {
+        axios.get(`http://localhost:5000/users?email=${user.email}`, {
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('idToken')}`
             }

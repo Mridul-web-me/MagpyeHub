@@ -34,31 +34,68 @@ const FitnessAndTravel = () => {
                             <Link to="/FitnessAndTravel"> Fitness & Travel </Link>
                             <hr />
                         </div>
-                        <h6 style={{ textAlign: 'start' }}>Travel & Luggage</h6>
+                        <h6 style={{ textAlign: 'start' }}>Sportswear</h6>
                         <div className="filterItem">
-                            <Link to="/product/BackPacks">Back Packs</Link><br />
-                            <Link to="/product/HandLuggage">Hand Luggage</Link><br />
-                            <Link to="/product/Suitcases">Suitcases</Link><br />
-                            <Link to="/product/HoldallsWeekendBags">Holdalls & Weekend  Bags</Link><br />
-                            <Link to="/product/Camping">Camping</Link><br />
-                        </div>
-                        <hr />
-                        <h6 style={{ textAlign: 'start' }}>Sewing & Crafts</h6>
-                        <div className="filterItem">
-                            <Link to="/product/SewingMachines">Sewing Machines</Link><br />
-                            <Link to="/product/GamesPuzzles">Games & Puzzles</Link><br />
-                            <Link to="/product/WoolYarn">Wool & Yarn</Link><br />
-                            <Link to="/product/Stattonery">Stattonery</Link><br />
+                            <Link to="/sportAndLeisure/WomensClothing">Women's Clothing</Link><br />
+                            <Link to="/sportAndLeisure/WomenSportsTrainers">Women's Sports Trainers</Link><br />
+                            <Link to="/sportAndLeisure/MenClothing">Men's Clothing</Link><br />
+                            <Link to="/sportAndLeisure/MenSportsTrainers">Men's Sports Trainers</Link><br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Fitness</h6>
                         <div className="filterItem">
-                            <Link to="/product/Treadmills">Treadmills</Link><br />
-                            <Link to="/product/ExerciseBikes">Exercise Bikes</Link><br />
-                            <Link to="/product/Weights">Weights</Link><br />
-                            <Link to="/product/FitnessMachinesTechonology ">Fitness Machines & Techonology </Link><br />
+                            <Link to="/sportAndLeisure/FitnessMachinesTechnology">Fitness Machines & Technology</Link><br />
+                            <Link to="/sportAndLeisure/SportsEquipment">Sports Equipment</Link><br />
+                            <Link to="/sportAndLeisure/Treadmills">Treadmills</Link><br />
+                            <Link to="/sportAndLeisure/ExerciseBikes">Exercise Bikes</Link><br />
+                            <Link to="/sportAndLeisure/CrossTrainers">Cross Trainers</Link><br />
+                            <Link to="/sportAndLeisure/Weights">Weights</Link><br />
+                            <Link to="/sportAndLeisure/Smartwatches">Smartwatches</Link><br />
                         </div>
                         <hr />
+                        <h6 style={{ textAlign: 'start' }}>Equipment by Sport</h6>
+                        <div className="filterItem">
+                            <Link to="/sportAndLeisure/Cycling">Cycling </Link><br />
+                            <Link to="/sportAndLeisure/GymTrainingFitness ">Gym, Training & Fitness </Link><br />
+                            <Link to="/sportAndLeisure/Running">Running </Link><br />
+                            <Link to="/sportAndLeisure/Swimming">Swimming </Link><br />
+                            <Link to="/sportAndLeisure/Yoga">Yoga </Link><br />
+                        </div>
+                        <hr />
+                        <h6 style={{ textAlign: 'start' }}>Sports Brands</h6>
+                        <div className="filterItem">
+                            <Link to="/sportAndLeisure/ExploreOurBrands">Explore our Brands</Link><br />
+                            <Link to="/sportAndLeisure/Adidas">Adidas</Link><br />
+                            <Link to="/sportAndLeisure/SweatyBetty">Sweaty Betty</Link><br />
+                            <Link to="/sportAndLeisure/TheNorthFace">The North Face</Link><br />
+                            <Link to="/sportAndLeisure/Therabody">Therabody</Link><br />
+                            <Link to="/sportAndLeisure/UnderArmour">Under Armour</Link><br />
+                        </div>
+                        <hr />
+                        <h6 style={{ textAlign: 'start' }}>Hobbies & Crafts</h6>
+                        <div className="filterItem">
+                            <Link to="/sportAndLeisure/Haberdashery">Haberdashery</Link><br />
+                            <Link to="/sportAndLeisure/GamesPuzzles">Games & Puzzles</Link><br />
+                            <Link to="/sportAndLeisure/Crafts">Crafts</Link><br />
+                            <Link to="/sportAndLeisure/Stationery">Stationery</Link><br />
+                            <Link to="/sportAndLeisure/Books">Books</Link><br />
+                            <Link to="/sportAndLeisure/SewingMachines">Sewing Machines</Link><br />
+                            <Link to="/sportAndLeisure/WoolYarn">Wool & Yarn</Link><br />
+                        </div>
+                        <hr />
+                        <h6 style={{ textAlign: 'start' }}>Travel & Luggage</h6>
+                        <div className="filterItem">
+                            <Link to="/sportAndLeisure/ViewAllLuggage">View All Luggage</Link><br />
+                            <Link to="/sportAndLeisure/Backpacks">Backpacks</Link><br />
+                            <Link to="/sportAndLeisure/CabinCases">Cabin Cases</Link><br />
+                            <Link to="/sportAndLeisure/Suitcases">Suitcases</Link><br />
+                            <Link to="/sportAndLeisure/HoldallsWeekendBags">Holdalls & Weekend Bags</Link><br />
+                            <Link to="/sportAndLeisure/Camping">Camping</Link><br />
+                            <Link to="/sportAndLeisure/HolidaySummerShop">Holiday & Summer Shop</Link><br />
+                        </div>
+                        <hr />
+
+
                         <h6 style={{ textAlign: 'start' }}>Brand</h6>
 
                         <div className="filterItem">

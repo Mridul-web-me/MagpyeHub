@@ -47,55 +47,55 @@ const Men = () => {
                         </div>
                         <h6 style={{ textAlign: 'start' }}>Clothing</h6>
                         <div className="filterItem">
-                            <Link to="/product/blazers">Blazers</Link><br />
-                            <Link to="/product/MenJeans">Jeans</Link><br />
-                            <Link to="/product/poloshirts">Polo Shirts</Link><br />
-                            <Link to="/product/menShirts">Shirts</Link><br />
-                            <Link to="/product/menShorts">Shorts</Link><br />
-                            <Link to="/product/MenSportsClothesGym">Sports Clothes/Gym</Link><br />
-                            <Link to="/product/suits">Suits</Link><br />
-                            <Link to="/product/swimwear">Swimwear</Link><br />
-                            <Link to="/product/trousers">Trousers</Link><br />
-                            <Link to="/product/t-shirts">T-Shirts</Link><br />
-                            <Link to="/product/waistcoats">Waistcoats</Link><br />
-                            <Link to="/product/men-cashmere">Cashmere</Link><br />
-                            <Link to="/product/men-coatsJackets">Coats & Jackets</Link><br />
-                            <Link to="/product/men-sweatshirtsHoodies">Sweatshirts & Hoodies</Link><br />
-                            <Link to="/product/men-jumpersCardigans">Jumpers & Cardigans</Link><br />
-                            <Link to="/product/men-linen">Linen</Link><br />
-                            <Link to="/product/men-loungewear">Loungewear</Link><br />
-                            <Link to="/product/men-weddingShop">Wedding Shop</Link><br />
-                            <Link to="/product/men-holidaySummerShop">Holiday & Summer Shop</Link><br />
+                            <Link to="/men/blazers">Blazers</Link><br />
+                            <Link to="/men/MenJeans">Jeans</Link><br />
+                            <Link to="/men/poloshirts">Polo Shirts</Link><br />
+                            <Link to="/men/menShirts">Shirts</Link><br />
+                            <Link to="/men/menShorts">Shorts</Link><br />
+                            <Link to="/men/menSportsClothesGym">Sports Clothes/Gym</Link><br />
+                            <Link to="/men/suits">Suits</Link><br />
+                            <Link to="/men/swimwear">Swimwear</Link><br />
+                            <Link to="/men/trousers">Trousers</Link><br />
+                            <Link to="/men/t-shirts">T-Shirts</Link><br />
+                            <Link to="/men/waistcoats">Waistcoats</Link><br />
+                            <Link to="/men/menCashmere">Cashmere</Link><br />
+                            <Link to="/men/menCoatsJackets">Coats & Jackets</Link><br />
+                            <Link to="/men/menSweatshirtsHoodies">Sweatshirts & Hoodies</Link><br />
+                            <Link to="/men/menJumpersCardigans">Jumpers & Cardigans</Link><br />
+                            <Link to="/men/menLinen">Linen</Link><br />
+                            <Link to="/men/menLoungewear">Loungewear</Link><br />
+                            <Link to="/men/menWeddingShop">Wedding Shop</Link><br />
+                            <Link to="/men/menHolidaySummerShop">Holiday & Summer Shop</Link><br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Nightwear, Underwear & Socks</h6>
                         <div className="filterItem">
-                            <Link to="/product/PyjamasNightwear">Pyjamas & Nightwear</Link><br />
-                            <Link to="/product/RobesAndDressingGowns">Robes & Dressing Gowns</Link><br />
-                            <Link to="/product/MenSocks">Socks</Link><br />
-                            <Link to="/product/underwear">Underwear</Link><br />
+                            <Link to="/men/pyjamasNightwear">Pyjamas & Nightwear</Link><br />
+                            <Link to="/men/robesAndDressingGowns">Robes & Dressing Gowns</Link><br />
+                            <Link to="/men/menSocks">Socks</Link><br />
+                            <Link to="/men/underwear">Underwear</Link><br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Footwear</h6>
                         <div className="filterItem">
-                            <Link to="/product/men-Boots">Boots</Link><br />
-                            <Link to="/product/men-Shoes">Shoes</Link><br />
-                            <Link to="/product/men-Sandals">Sandals</Link><br />
-                            <Link to="/product/men-Slippers">Slippers</Link><br />
-                            <Link to="/product/men-TrainersAndPlimsoles">Trainers</Link><br />
-                            <Link to="/product/men-WalkingBootsShoes">Walking Boots & Shoes</Link><br />
+                            <Link to="/men/menBoots">Boots</Link><br />
+                            <Link to="/men/menShoes">Shoes</Link><br />
+                            <Link to="/men/menSandals">Sandals</Link><br />
+                            <Link to="/men/menSlippers">Slippers</Link><br />
+                            <Link to="/men/menTrainersAndPlimsoles">Trainers</Link><br />
+                            <Link to="/men/menWalkingBootsShoes">Walking Boots & Shoes</Link><br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Accessories</h6>
                         <div className="filterItem">
-                            <Link to="/product/men-mensBags">Men's Bags</Link><br />
-                            <Link to="/product/men-belts">Belts</Link><br />
-                            <Link to="/product/men-hats">Hats</Link><br />
-                            <Link to="/product/men-wallets">Wallets</Link><br />
-                            <Link to="/product/men-sunglasses">Sunglasses</Link><br />
-                            <Link to="/product/men-watches">Watches</Link><br />
-                            <Link to="/product/men-jewellery">Jewellery</Link><br />
-                            <Link to="/product/men-suitcases">Suitcases</Link><br />
+                            <Link to="/men/menMensBags">Men's Bags</Link><br />
+                            <Link to="/men/menBelts">Belts</Link><br />
+                            <Link to="/men/menHats">Hats</Link><br />
+                            <Link to="/men/menWallets">Wallets</Link><br />
+                            <Link to="/men/menSunglasses">Sunglasses</Link><br />
+                            <Link to="/men/menWatches">Watches</Link><br />
+                            <Link to="/men/menJewellery">Jewellery</Link><br />
+                            <Link to="/men/menSuitcases">Suitcases</Link><br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Brand</h6>

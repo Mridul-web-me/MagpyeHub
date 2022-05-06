@@ -14,7 +14,7 @@ const FavouriteProduct = () => {
     const [products, setProducts] = useState([])
     const category = 'cushions'
     useEffect(() => {
-        fetch(`https://blooming-mountain-96721.herokuapp.com/products?category=${category}`)
+        fetch(`http://localhost:5000/products?category=${category}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products)

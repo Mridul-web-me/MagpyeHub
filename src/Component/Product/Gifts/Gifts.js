@@ -43,35 +43,52 @@ const Gifts = () => {
                         </div>
                         <h6 style={{ textAlign: 'start' }}>Gifts By Recipient</h6>
                         <div className="filterItem">
-                            <Link to="/product/GiftsForHer">Gifts for Her</Link><br />
-                            <Link to="/product/GiftsForHim">Gifts for Him</Link><br />
-                            <Link to="/product/GiftsForKids">Gifts for Kids</Link><br />
-                            <Link to="/product/GiftsForCouples">Gifts for Couples</Link><br />
-                            <Link to="/product/GiftsForBabies">Gifts for Babies</Link><br />
-                            <Link to="/product/GiftsForTeenagers">Gifts for Teenagers</Link><br />
+                            <Link to="/gifts/GiftsForHer">Gifts for Her</Link><br />
+                            <Link to="/gifts/GiftsForHim">Gifts for Him</Link><br />
+                            <Link to="/gifts/GiftsForKids">Gifts for Kids</Link><br />
+                            <Link to="/gifts/GiftsForCouples">Gifts for Couples</Link><br />
+                            <Link to="/gifts/GiftsForBabies">Gifts for Babies</Link><br />
+                            <Link to="/gifts/GiftsForTeenagers">Gifts for Teenagers</Link><br />
+                            <Link to="/gifts/GiftsForPets">Gifts for Pets</Link><br />
+                            <Link to="/gifts/GiftsForGrandparents">Gifts for Grandparents</Link><br />
+                        </div>
+                        <hr />
+                        <h6 style={{ textAlign: 'start' }}>Gifts by Price</h6>
+                        <div className="filterItem">
+                            <Link to="/gifts/GiftsUnder20">Gifts under £20</Link><br />
+                            <Link to="/gifts/GiftsUnder50">Gifts under £50</Link><br />
+                            <Link to="/gifts/GiftsUnder100">Gifts under £100</Link><br />
+                            <Link to="/gifts/GiftCardsEGiftCards">Gift Cards & E-Gift Cards</Link><br />
+                        </div>
+                        <hr />
+                        <h6 style={{ textAlign: 'start' }}>Shop by Occasion</h6>
+                        <div className="filterItem">
+                            <Link to="/gifts/Birthday">Birthday</Link><br />
+                            <Link to="/gifts/Wedding">Wedding</Link><br />
+                            <Link to="/gifts/NewHome">New Home</Link><br />
+                            <Link to="/gifts/Anniversary">Anniversary</Link><br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Food & Drink Gifts</h6>
                         <div className="filterItem">
-                            <Link to="/product/Hampers">Hampers</Link><br />
-                            <Link to="/product/Chocolate">Chocolate</Link><br />
-                            <Link to="/product/Alcohol">Alcohol</Link><br />
+                            <Link to="/gifts/ViewAllGiftFoodDrink">View All Gift Food & Drink</Link><br />
+                            <Link to="/gifts/GiftsForGinLovers">Gifts for Gin Lovers</Link><br />
+                            <Link to="/gifts/CakesBiscuits">Cakes & Biscuits</Link><br />
+                            <Link to="/gifts/SweetsFudge">Sweets & Fudge</Link><br />
+                            <Link to="/gifts/Hampers">Hampers</Link><br />
+                            <Link to="/gifts/Chocolate">Chocolate</Link><br />
+                            <Link to="/gifts/Alcohol">Alcohol</Link><br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Popular Gifts</h6>
                         <div className="filterItem">
-                            <Link to="/product/BeautyFragranceGifts">Beauty & Fragrance Gifts</Link><br />
-                            <Link to="/product/GamesAndPuzzles">Games and Puzzles</Link><br />
-                            <Link to="/product/CandlesHomeFragrance">Candles & Home Fragrance</Link><br />
-                            <Link to="/product/CookingBaking">Cooking & Baking </Link><br />
-                            <Link to="/product/Gardening">Gardening </Link><br />
-                            <Link to="/product/GiftWrapPartyShop">Gift Wrap & Party Shop</Link><br />
-                        </div>
-                        <hr />
-                        <h6 style={{ textAlign: 'start' }}>Gift Inspiration</h6>
-                        <div className="filterItem">
-                            <Link to="/product/LuxuryGifts">Luxury Gifts</Link><br />
-                            <Link to="/product/Techies">Techies</Link><br />
+                            <Link to="/gifts/BeautyFragranceGifts">Beauty & Fragrance Gifts</Link><br />
+                            <Link to="/gifts/GamesAndPuzzles">Games and Puzzles</Link><br />
+                            <Link to="/gifts/CandlesHomeFragrance">Candles & Home Fragrance</Link><br />
+                            <Link to="/gifts/CookingBaking">Cooking & Baking </Link><br />
+                            <Link to="/gifts/Gardening">Gardening </Link><br />
+                            <Link to="/gifts/GiftWrapPartyShop">Gift Wrap & Party Shop</Link><br />
+                            <Link to="/gifts/GiftStationery">Stationery</Link><br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Brand</h6>

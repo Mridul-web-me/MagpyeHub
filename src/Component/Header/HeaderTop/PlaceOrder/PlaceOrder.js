@@ -18,13 +18,13 @@ const PlaceOrder = () => {
     const { productId } = useParams();
     const [product, setProduct] = useState({});
     useEffect(() => {
-        fetch(`https://blooming-mountain-96721.herokuapp.com/products/${productId}`)
+        fetch(`http://localhost:5000/products/${productId}`)
             .then(res => res.json())
             .then(data => {
                 setProduct(data)
                 console.log(data.img)
             });
-    }, [productId])
+    }, [])
 
     const { handleAddToCart, handleAddToWishList, wishLists } = useProduct()
 

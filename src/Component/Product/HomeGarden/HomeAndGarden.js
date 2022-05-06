@@ -45,50 +45,65 @@ const HomeAndGarden = () => {
                             <Link to="/HomeAndGarden"> Home & Garden </Link>
                             <hr />
                         </div>
-                        <h6 style={{ textAlign: 'start' }}>Home Furnishings & Accessories</h6>
+                        <h6 style={{ textAlign: 'start' }}>Bedding</h6>
                         <div className="filterItem">
-                            <Link to="/product/bedding">Bed Sheets</Link> <br />
-                            <Link to="/product/pillows">Pillows</Link> <br />
-                            <Link to="/product/pillowCases">Pillow Cases</Link> <br />
-                            <Link to="/product/throwsBlanketsAndSpreads">Throws, blankets and Spreads</Link> <br />
-                            <Link to="/product/childrensBedding">Children's Bedding</Link> <br />
+                            <Link to="/homeAndGarden/duvetCovers">Duvet Covers</Link><br />
+                            <Link to="/homeAndGarden/bedding">Bed Sheets</Link><br />
+                            <Link to="/homeAndGarden/pillowCases">Pillow Cases</Link><br />
+                            <Link to="/homeAndGarden/duvets">Duvets</Link><br />
+                            <Link to="/homeAndGarden/pillows">Pillows</Link><br />
+                            <Link to="/homeAndGarden/throwsBlanketsAndSpreads">Throws & Blankets</Link><br />
+                            <Link to="/homeAndGarden/childrensBedding">Children's Bedding</Link><br />
+                            <Link to="/homeAndGarden/shopBedding">Shop Bedding</Link><br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Cooking & Dining</h6>
                         <div className="filterItem">
-                            <Link to="/product/cutlery">Tableware & Cutlery</Link> <br />
-                            <Link to="/product/glassesDrinkware">Glasses & Drinkware</Link> <br />
-                            <Link to="/product/potsPans">Pots & Pans</Link> <br />
-                            <Link to="/product/foodProcessorsMixersBlendersJuicers">Food Processors & Mixers</Link> <br />
-                            <Link to="/product/blendersJuicers">Blenders & Juicers</Link> <br />
+                            <Link to="/homeAndGarden/cookwareBakeware">Cookware & Bakeware</Link><br />
+                            <Link to="/homeAndGarden/cutlery">Tableware & Cutlery</Link><br />
+                            <Link to="/homeAndGarden/glassesDrinkware">Glasses & Drinkware</Link><br />
+                            <Link to="/homeAndGarden/potsPans">Pots & Pans</Link><br />
+                            <Link to="/homeAndGarden/foodPreparation">Food Preparation</Link><br />
+                            <Link to="/homeAndGarden/picnicware">Picnicware</Link><br />
+                            <Link to="/homeAndGarden/kitchenUtensilsGadgets">Kitchen Utensils & Gadgets</Link><br />
+                            <Link to="/homeAndGarden/kitchenBins">Kitchen Bins</Link><br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Home Décor & Accessories</h6>
                         <div className="filterItem">
-                            <Link to="/product/cushions">Cushions & Bean Bags</Link> <br />
-                            <Link to="/product/candlesHomeFragrance">Candles & Home Fragrance</Link> <br />
-                            <Link to="/product/towels">Towels</Link> <br />
-                            <Link to="/product/mirrors"> Mirrors</Link> <br />
-                            <Link to="/product/rugs">Rugs</Link> <br />
-                            <Link to="/product/wallpapers"> Wallpapers</Link> <br />
-                            <Link to="/product/storage"> Storage</Link> <br />
+                            <Link to="/homeAndGarden/homeAccessories">Home Accessories</Link><br />
+                            <Link to="/homeAndGarden/cushions">Cushions & Bean Bags</Link><br />
+                            <Link to="/homeAndGarden/candlesHomeFragrance">Candles & Home Fragrance</Link><br />
+                            <Link to="/homeAndGarden/towels"> Towels</Link><br />
+                            <Link to="/homeAndGarden/picturesArtFrames">Pictures, Art & Frames</Link><br />
+                            <Link to="/homeAndGarden/mirrors"> Mirrors</Link><br />
+                            <Link to="/homeAndGarden/rugs"> Rugs</Link><br />
+                            <Link to="/homeAndGarden/storage"> Storage</Link><br />
+                            <Link to="/homeAndGarden/wallpaperPaintDIY"> Wallpaper, Paint & DIY</Link><br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Curtains, Blinds & Floors</h6>
                         <div className="filterItem">
-                            <Link to="/product/curtains">Curtains</Link> <br />
-                            <Link to="/product/madeToMeasureCurtains">Made to Measure curtains</Link> <br />
-                            <Link to="/product/blinds">Blinds</Link> <br />
-                            <Link to="/product/carpetsFlooring"> Carpets & Flooring</Link> <br />
+                            <Link to="/homeAndGarden/curtains">Curtains</Link><br />
+                            <Link to="/homeAndGarden/madeToMeasureCurtains">Made to Measure Curtains</Link><br />
+                            <Link to="/homeAndGarden/curtainPolesAccessories">Curtain Poles & Accessories</Link><br />
+                            <Link to="/homeAndGarden/blinds"> Blinds</Link><br />
+                            <Link to="/homeAndGarden/fabrics"> Fabrics</Link><br />
+                            <Link to="/homeAndGarden/carpetsAndFlooring"> Carpets & Flooring</Link><br />
                         </div>
                         <hr />
 
                         <h6 style={{ textAlign: 'start' }}>Garden</h6>
                         <div className="filterItem">
-                            <Link to="/product/gardenFurnitureSets">Garden Furniture Sets</Link> <br />
-                            <Link to="/product/gardenSeating">Garden Seating</Link> <br />
-                            <Link to="/product/outdoorlights">Outdoor lights</Link> <br />
-                            <Link to="/product/bBQStands"> BBQ Stands</Link> <br />
+                            <Link to="/homeAndGarden/gardenFurnitureSets">Garden Furniture Sets</Link><br />
+                            <Link to="/homeAndGarden/gardenSeating">Garden Seating</Link><br />
+                            <Link to="/homeAndGarden/gasBBQs">Gas BBQs</Link><br />
+                            <Link to="/homeAndGarden/charcoalBBQs">Charcoal BBQs</Link><br />
+                            <Link to="/homeAndGarden/pizzaOvens">Pizza Ovens</Link><br />
+                            <Link to="/homeAndGarden/decorativeGardenAccessories"> Decorative Garden Accessories</Link><br />
+                            <Link to="/homeAndGarden/ardenOutdoorlights"> Outdoor Lighting</Link><br />
+                            <Link to="/homeAndGarden/parasolsAccessories"> Parasols & Accessories</Link><br />
+                            <Link to="/homeAndGarden/shopGarden"> Shop Garden</Link><br />
                         </div>
                         <hr />
 

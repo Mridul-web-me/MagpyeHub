@@ -45,59 +45,65 @@ const Women = () => {
                         </div>
                         <h6 style={{ textAlign: 'start' }}>Clothing</h6>
                         <div className="filterItem">
-                            <Link to="/product/women/dresses">Dresses</Link><br />
-                            <Link to="/product/women/jeans">Jeans</Link><br />
-                            <Link to="/product/women/shirtsTops">Shirts & Tops</Link><br />
-                            <Link to="/product/women/shorts">Shorts</Link><br />
-                            <Link to="/product/women/skirts">Skirts</Link><br />
-                            <Link to="/product/women/sportsClothes ">Sports & Clothes  </Link><br />
-                            <Link to="/product/women/swimwearBeachwear ">Swimwear Beachwear  </Link><br />
-                            <Link to="/product/women/women-Trousers">Trousers</Link><br />
-                            <Link to="/product/women/leggings">Leggings</Link><br />
-                            <Link to="/product/women/plusSize">Plus Size</Link><br />
-                            <Link to="/product/women/maternityClothes ">Maternity Clothes</Link><br />
-                            <Link to="/product/women/cashmere">Cashmere</Link><br />
-                            <Link to="/product/women/coatsJackets ">Coats & Jackets</Link><br />
-                            <Link to="/product/women/jumpersKnitwear ">Jumpers & Knitwear</Link><br />
-                            <Link to="/product/women/jumpsuits ">Jumpsuits</Link><br />
-                            <Link to="/product/women/linen">Linen</Link><br />
-                            <Link to="/product/women/loungewear ">Loungewear</Link><br />
-                            <Link to="/product/women/petite ">Petite</Link><br />
-                            <Link to="/product/women/occasionwear ">Occasionwear</Link><br />
-                            <Link to="/product/women/weddingBoutique ">Wedding</Link><br />
+                            <Link to="/women/dresses">Dresses</Link><br />
+                            <Link to="/women/jeans">Jeans</Link><br />
+                            <Link to="/women/shirtsTops">Shirts & Tops</Link><br />
+                            <Link to="/women/shorts">Shorts</Link><br />
+                            <Link to="/women/skirts">Skirts</Link><br />
+                            <Link to="/women/sportsClothes ">Sports & Clothes  </Link><br />
+                            <Link to="/women/swimwearBeachwear ">Swimwear Beachwear  </Link><br />
+                            <Link to="/women/women-Trousers">Trousers</Link><br />
+                            <Link to="/women/leggings">Leggings</Link><br />
+                            <Link to="/women/plusSize">Plus Size</Link><br />
+                            <Link to="/women/maternityClothes ">Maternity Clothes</Link><br />
+                            <Link to="/women/cashmere">Cashmere</Link><br />
+                            <Link to="/women/coatsJackets ">Coats & Jackets</Link><br />
+                            <Link to="/women/jumpersKnitwear ">Jumpers & Knitwear</Link><br />
+                            <Link to="/women/jumpsuits ">Jumpsuits</Link><br />
+                            <Link to="/women/linen">Linen</Link><br />
+                            <Link to="/women/loungewear ">Loungewear</Link><br />
+                            <Link to="/women/petite ">Petite</Link><br />
+                            <Link to="/women/occasionwear ">Occasionwear</Link><br />
+                            <Link to="/women/weddingBoutique ">Wedding</Link><br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Footwear</h6>
                         <div className="filterItem">
-                            <Link to="/product/women-shoes">Shoes</Link><br />
-                            <Link to="/product/women-sandals">Sandals</Link><br />
-                            <Link to="/product/women-slippers">Slippers</Link><br />
-                            <Link to="/product/women-trainersAndPlimsoles">Trainers & Plimsoles</Link><br />
-                            <Link to="/product/women-courtShoes">Court Shoes</Link><br />
-                            <Link to="/product/women-boots">Boots</Link><br />
-                            <Link to="/product/women-pumps">Court Pumps</Link><br />
+                            <Link to="/women/womenShoes">Shoes</Link><br />
+                            <Link to="/women/womenSandals">Sandals</Link><br />
+                            <Link to="/women/womenSlippers">Slippers</Link><br />
+                            <Link to="/women/womenTrainersAndPlimsoles">Trainers & Plimsoles</Link><br />
+                            <Link to="/women/womenCourtShoes">Court Shoes</Link><br />
+                            <Link to="/women/womenBoots">Boots</Link><br />
+                            <Link to="/women/womenPumps">Court Pumps</Link><br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Lingerie, Nightwear & Hosiery</h6>
                         <div className="filterItem">
-                            <Link to="/product/brasSportsBras">Bras & Sports Bras</Link><br />
-                            <Link to="/product/Nightwear">Nightwear</Link><br />
-                            <Link to="/product/socks">Socks</Link><br />
-                            <Link to="/product/Knickers">Knickers</Link><br />
-                            <Link to="/product/tights">Tights</Link><br />
+                            <Link to="/women/brasSportsBras">Bras & Sports Bras</Link><br />
+                            <Link to="/women/Nightwear">Nightwear</Link><br />
+                            <Link to="/women/socks">Socks</Link><br />
+                            <Link to="/women/Knickers">Knickers</Link><br />
+                            <Link to="/women/tights">Tights</Link><br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Accessories</h6>
                         <div className="filterItem">
-                            <Link to="/product/women-handbags">Handbags</Link><br />
-                            <Link to="/product/women-purses">Purses</Link><br />
-                            <Link to="/product/women-belts">Belts</Link><br />
-                            <Link to="/product/women-sunglasses">Sunglasses</Link><br />
-                            <Link to="/product/women-jewellery">Jewellery</Link><br />
-                            <Link to="/product/women-hats">Hats</Link><br />
-                            <Link to="/product/women-watches">Watches</Link><br />
-                            <Link to="/product/women-hairAccessories">Hair Accessories</Link><br />
-                            <Link to="/product/women-hatsGlovesScarves">Hats, Gloves & Scarves</Link><br />
+                            <Link to="/women/womenHandbags">Handbags</Link><br />
+                            <Link to="/women/womenPurses">Purses</Link><br />
+                            <Link to="/women/womenBelts">Belts</Link><br />
+                            <Link to="/women/womenSunglasses">Sunglasses</Link><br />
+                            <Link to="/women/womenJewellery">Jewellery</Link><br />
+                            <Link to="/women/womenHats">Hats</Link><br />
+                            <Link to="/women/womenWatches">Watches</Link><br />
+                            <Link to="/women/womenHairAccessories">Hair Accessories</Link><br />
+                            <Link to="/women/womenHatsGlovesScarves">Hats, Gloves & Scarves</Link><br />
+                            <Link to="/women/womenOccasionHatsFascinators">Occasion Hats & Fascinators</Link><br />
+                            <Link to="/women/womenFaceCoverings">Face Coverings</Link><br />
+                            <Link to="/women/womenReadingGlassesGlassesCases">Reading Glasses & Glasses Cases</Link><br />
+                            <Link to="/women/womenKeyrings">Keyrings</Link><br />
+                            <Link to="/women/womenUmbrellas">Umbrellas</Link><br />
+                            <Link to="/women/womenSuitcases">Suitcases</Link><br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Brand</h6>

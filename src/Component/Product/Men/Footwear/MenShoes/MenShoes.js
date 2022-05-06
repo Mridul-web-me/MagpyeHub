@@ -1,8 +1,18 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
+import Header from '../../../../Header/Header'
+import PromoUnit from '../../../../PromoUnit/PromoUnit'
 
 const MenShoes = () => {
     return (
-        <div>MenShoes</div>
+        <>
+            <Helmet>
+                <title>Shoes</title>
+                <meta name="description" content="This is Magpyehub Online Shop" />
+            </Helmet>
+            <Header></Header>
+            <PromoUnit></PromoUnit>
+        </>
     )
 }
 

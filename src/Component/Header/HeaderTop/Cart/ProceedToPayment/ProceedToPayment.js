@@ -21,7 +21,7 @@ const ProceedToPayment = () => {
     const { total, } = useProduct({});
     const [profile, setProfile] = useState([])
     useEffect(() => {
-        axios.get(`https://blooming-mountain-96721.herokuapp.com/users?email=${user.email}`, {
+        axios.get(`http://localhost:5000/users?email=${user.email}`, {
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('idToken')}`
             }
