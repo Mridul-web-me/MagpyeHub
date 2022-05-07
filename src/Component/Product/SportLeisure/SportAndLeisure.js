@@ -6,12 +6,23 @@ import Footer from '../../Footer/Footer'
 import Header from '../../Header/Header'
 import Newsletter from '../../Newsletter/Newsletter'
 import PromoUnit from '../../PromoUnit/PromoUnit'
-
-const FitnessAndTravel = () => {
+import img1 from '../../../img/SportsAndLeisure/1.webp'
+import img2 from '../../../img/SportsAndLeisure/2.webp'
+import img3 from '../../../img/SportsAndLeisure/3.webp'
+import img4 from '../../../img/SportsAndLeisure/4.webp'
+import img5 from '../../../img/SportsAndLeisure/5.webp'
+import img6 from '../../../img/SportsAndLeisure/6.webp'
+import img7 from '../../../img/SportsAndLeisure/7.webp'
+import img8 from '../../../img/SportsAndLeisure/8.webp'
+import img9 from '../../../img/SportsAndLeisure/9.webp'
+import img10 from '../../../img/SportsAndLeisure/10.webp'
+import img11 from '../../../img/SportsAndLeisure/11.webp'
+import img12 from '../../../img/SportsAndLeisure/12.webp'
+const SportAndLeisure = () => {
     return (
         <>
             <Helmet>
-                <title>Fitness & Travel</title>
+                <title>SPORT & LEISURE</title>
                 <meta name="description" content="This is Magpyehub Online Shop" />
             </Helmet>
             <Header></Header>
@@ -23,7 +34,7 @@ const FitnessAndTravel = () => {
                         color: '#606060', fontSize: '20px',
                         textTransform: 'uppercase',
                         marginBottom: '20px'
-                    }}>Fitness & Travel</h3>
+                    }}>SPORT & LEISURE</h3>
                     <hr />
                     <Col md={2} xs={12}>
                         <div className='mainRoute' style={{
@@ -31,7 +42,7 @@ const FitnessAndTravel = () => {
                             padding: '10px 0'
                         }} >
                             <Link to="/home"> Homepage </Link> /
-                            <Link to="/FitnessAndTravel"> Fitness & Travel </Link>
+                            <Link to="/sportAndLeisure"> SPORT & LEISURE </Link>
                             <hr />
                         </div>
                         <h6 style={{ textAlign: 'start' }}>Sportswear</h6>
@@ -113,97 +124,110 @@ const FitnessAndTravel = () => {
                         </div>
                     </Col>
 
-                    {/* <Col md={10} xs={12}>
+                    <Col md={10} xs={12}>
                         <Row md={12}>
                             <Col md={2}>
-                                <Link to="/product/rugs" style={{
+                                <Link to="/sportAndLeisure/WomenSportsTrainers" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
                                     <img src={img1} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
-                                    }}></h5>
+                                    }}>WOMEN'S SPORTS CLOTHING</h5>
                                 </Link>
 
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/cushions" style={{
+                                <Link to="/sportAndLeisure/MenSportsTrainers" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
                                     <img src={img2} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
-                                    }}></h5>
+                                    }}>MEN'S SPORTS CLOTHING</h5>
                                 </Link>
 
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/duvetCovers" style={{
+                                <Link to="/sportAndLeisure/FitnessMachinesTechnology" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
                                     <img src={img3} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
-                                    }}></h5>
+                                    }}>FITNESS MACHINES</h5>
                                 </Link>
 
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/towels" style={{
+                                <Link to="/sportAndLeisure/SportsEquipment" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
                                     <img src={img4} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
-                                    }}></h5>
+                                    }}>SPORTS EQUIPMENT</h5>
                                 </Link>
 
                             </Col>
                             <Col md={2}>
 
-                                <Link to="/product/pillows" style={{
+                                <Link to="/sportAndLeisure/ViewAllLuggage" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
                                     <img src={img5} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
-                                    }}></h5>
+                                    }}>LUGGAGE</h5>
                                 </Link>
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/wallpaperPaintDIY" style={{
+                                <Link to="/sportAndLeisure/Haberdashery" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
                                     <img src={img6} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
-                                    }}></h5>
+                                    }}>HABERDASHERY</h5>
                                 </Link>
 
                             </Col>
-                            <img src={img7} alt="" style={{ margin: ' 50px 0' }} />
                         </Row>
-                        <Row>
+                        <Row style={{ marginTop: '50px' }}>
+                            <Col md={4} xs={12}>
+                                <img src={img7} alt="" className='img-fluid' />
+                                <h5>WOMEN'S TRAINERS</h5>
+                            </Col>
                             <Col md={4} xs={12}>
                                 <img src={img8} alt="" className='img-fluid' />
-                                <h5></h5>
+                                <h5>MEN'S TRAINERS</h5>
                             </Col>
                             <Col md={4} xs={12}>
                                 <img src={img9} alt="" className='img-fluid' />
-                                <h5></h5>
-                            </Col>
-                            <Col md={4} xs={12}>
-                                <img src={img10} alt="" className='img-fluid' />
-                                <h5></h5>
+                                <h5>WEIGHTS</h5>
                             </Col>
                         </Row>
-                    </Col> */}
+                        <Row style={{ margin: '30px 0' }}>
+                            <Col md={4} xs={12}>
+                                <img src={img10} alt="" className='img-fluid' />
+                                <h5>GYM, TRAINING & FITNESS EQUIPMENT</h5>
+                            </Col>
+                            <Col md={4} xs={12}>
+                                <img src={img11} alt="" className='img-fluid' />
+                                <h5>YOGA EQUIPMENT</h5>
+                            </Col>
+                            <Col md={4} xs={12}>
+                                <img src={img12} alt="" className='img-fluid' />
+                                <h5>EXERCISE BIKES</h5>
+                            </Col>
+                        </Row>
+                    </Col>
                 </Row>
             </Container>
             <Newsletter></Newsletter>
@@ -212,4 +236,4 @@ const FitnessAndTravel = () => {
     )
 }
 
-export default FitnessAndTravel
+export default SportAndLeisure

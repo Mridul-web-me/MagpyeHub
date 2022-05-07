@@ -8,11 +8,12 @@ import Footer from '../../../Footer/Footer';
 import './PlaceOrder.css'
 import PromoUnit from '../../../PromoUnit/PromoUnit';
 import Newsletter from '../../../Newsletter/Newsletter';
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
-import { FreeMode, Navigation, Thumbs } from "swiper";
 import 'react-inner-image-zoom/lib/InnerImageZoom/styles.min.css';
-import ReactImageZoom from 'react-image-zoom';
+import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css'
+import InnerImageZoom from 'react-inner-image-zoom';
+import { Carousel } from 'react-responsive-carousel';
+
 
 const PlaceOrder = () => {
     const { productId } = useParams();
@@ -26,26 +27,49 @@ const PlaceOrder = () => {
             });
     }, [])
 
-    const { handleAddToCart, handleAddToWishList, wishLists } = useProduct()
+    const { handleAddToCart, handleAddToWishList } = useProduct()
 
-    const [thumbsSwiper, setThumbsSwiper] = useState(null);
+    // const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
-    const img = {
-        width: 400, height: 500, zoomPosition:
-            'original', zoomWidth: 500, img: `${product.img}`
-    };
-    const img1 = {
-        width: 400, height: 500, zoomPosition:
-            'original', zoomWidth: 500, img: `${product.img1}`
-    };
-    const img2 = {
-        width: 400, height: 500, zoomPosition:
-            'original', zoomWidth: 500, img: `${product.img2}`
-    };
-    const img3 = {
-        width: 500, height: 500, zoomPosition:
-            'original', zoomWidth: 500, img: `${product.img3}`
-    };
+    // const image = product.img
+    // const img = {
+    //     width: 400,
+    //     height: 500,
+    //     zoomPosition: 'original',
+    //     zoomWidth: 500,
+    //     img: product.img
+    // };
+    // const img1 = {
+    //     width: 400, height: 500, zoomPosition:
+    //         'original', zoomWidth: 500, img: product.img1
+    // };
+    // const img2 = {
+    //     width: 400, height: 500, zoomPosition:
+    //         'original', zoomWidth: 500, img: product.img2
+    // };
+    // const img3 = {
+    //     width: 500, height: 500, zoomPosition:
+    //         'original', zoomWidth: 500, img: product.img3
+    // };
+    // document.getElementById("img").removeChild(img);
+
+
+    // const settings = {
+    //     customPaging: function (i) {
+    //         return (
+    //             <a>
+    //                 <img src={`${baseUrl} ${product.img + 1}`} />
+    //             </a>
+    //         );
+    //     },
+    //     dots: true,
+    //     dotsClass: "slick-dots slick-thumb",
+    //     infinite: true,
+    //     speed: 500,
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1
+    // };
+
 
     return (
         <div className='placeOrder'>
@@ -54,143 +78,138 @@ const PlaceOrder = () => {
             <Container>
                 <Row>
                     <Col md={6} xs={12} >
-                        <Swiper
-                            style={{
-                                "--swiper-navigation-color": "#fff",
-                                "--swiper-pagination-color": "#fff",
-                            }}
-                            spaceBetween={10}
-                            navigation={true}
-                            loop={true}
-                            thumbs={{ swiper: thumbsSwiper }}
-                            modules={[FreeMode, Navigation, Thumbs]}
-                            className="mySwiper2"
-                        >
-                            <SwiperSlide>
 
-                                <ReactImageZoom {...img} />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <ReactImageZoom {...img1} />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <ReactImageZoom {...img2} />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <ReactImageZoom {...img3} />
-                            </SwiperSlide>
-                        </Swiper>
-                        <Swiper
-                            onSwiper={setThumbsSwiper}
-                            spaceBetween={10}
-                            slidesPerView={4}
-                            freeMode={true}
-
-                            watchSlidesProgress={true}
-                            modules={[FreeMode, Navigation, Thumbs]}
-                            className="mySwiper"
-                        >
-                            <SwiperSlide>
-                                <img src={product.img} alt="" />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <img src={product.img1} alt="" />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <img src={product.img2} alt="" />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <img src={product.img3} alt="" />
-                            </SwiperSlide>
-                        </Swiper>
+                        <Carousel showArrows={true}>
+                            <div>
+                                <div>
+                                    <InnerImageZoom zoomScale={2}
+                                        width={750}
+                                        height={500}
+                                        zoomType='hover'
+                                        zoomPreload={true}
+                                        fullscreenOnMobile={true}
+                                        src={product.img}>
+                                        <img src={product.img} alt="" />
+                                    </InnerImageZoom>
+                                </div>
+                            </div>
+                            <div>
+                                <InnerImageZoom zoomScale={2}
+                                    width={750}
+                                    height={500}
+                                    zoomType='hover'
+                                    zoomPreload={true}
+                                    fullscreenOnMobile={true}
+                                    src={product.img1} />
+                            </div>
+                            <div>
+                                <InnerImageZoom zoomScale={2}
+                                    width={750}
+                                    height={500}
+                                    zoomType='hover'
+                                    zoomPreload={true}
+                                    fullscreenOnMobile={true}
+                                    src={product.img2} />
+                            </div>
+                            <div>
+                                <InnerImageZoom zoomScale={2}
+                                    width={750}
+                                    height={500}
+                                    zoomType='hover'
+                                    zoomPreload={true}
+                                    fullscreenOnMobile={true}
+                                    src={product.img3} />
+                            </div>
+                        </Carousel>
                     </Col>
+
                     <Col xs={12} md={6} style={{
                         textAlign: 'start',
                         alignItems: 'center',
-                        marging: '0 20px'
+                        // margin: '0 20px'
                     }}>
-                        <div>
-                            <h4 style={{ color: '#606060' }}>{product.title}</h4>
-                            <h5 style={{ fontSize: '15px', color: '#606060' }}>Code: {product._id}</h5>
-                            <h5 style={{ fontSize: '36px', color: '#0091c0' }}> £{product.price}</h5>
-                            <Row>
-                                <Col md={6} xs={12}>
-                                    <Button style={{ width: '100%' }} className='addToCartButton' variant="light" type='button' onClick={() => handleAddToCart(product)}>Add To Basket</Button>
-                                </Col>
-                                <Col md={6} xs={12}>
-                                    {<Button style={{ width: '100%' }} className='addToWishListButton' type='button' variant='light' onClick={() => handleAddToWishList(product)}> <span><i className="fas fa-heart"></i> </span> Add To Wish List</Button>}
-                                </Col>
-                            </Row>
-                            <div style={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                margin: '10px'
-                            }}>
-                                <div style={{ margin: '10px' }}>
-                                    <Link to="/">
-                                        <i className="fas fa-quote-left" style={{
-                                            fontSize: '25px',
-                                            background: '#0091ac',
-                                            padding: '15px',
-                                            borderRadius: '50%', color: '#f2f2f2'
-                                        }} ></i>
-                                    </Link>
-                                </div>
-                                <div className='askQuote'>
-                                    <Link to='/' style={{ color: '#606060', textDecoration: 'none' }} > <span style={{ color: '#303030' }}>WANT A QUOTE?</span> <br />
-                                        Send Your Quote List For A Personalised Quotation</Link>
-                                </div>
-                            </div>
-                            <div style={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                margin: '10px'
-                            }}>
-                                <div style={{ margin: '10px' }}>
-                                    <Link to="/">
-                                        <i className="fas fa-house-user" style={{
-                                            fontSize: '25px',
-                                            background: '#0091ac',
-                                            padding: '15px',
-                                            borderRadius: '50%', color: '#f2f2f2'
-                                        }} ></i>
 
-                                    </Link>
-                                </div>
-                                <div className='askQuote'>
-                                    <Link to='/' style={{ color: '#606060', textDecoration: 'none' }} > <span style={{ color: '#303030' }}>COLLECT IN WAREHOUSE (BIRMINGHAM)</span> <br />
-                                        Store Details & Further Information</Link>
-                                </div>
+                        <h4 style={{ color: '#606060' }}>{product.title}</h4>
+                        <h5 style={{ fontSize: '15px', color: '#606060' }}>Code: {product._id}</h5>
+                        <h5 style={{ fontSize: '36px', color: '#0091c0' }}> £{product.price}</h5>
+                        <Row>
+                            <Col md={6} xs={12}>
+                                <Button style={{ width: '100%' }} className='addToCartButton' variant="light" type='button' onClick={() => handleAddToCart(product)}>Add To Basket</Button>
+                            </Col>
+                            <Col md={6} xs={12}>
+                                {<Button style={{ width: '100%' }} className='addToWishListButton' type='button' variant='light' onClick={() => handleAddToWishList(product)}> <span><i className="fas fa-heart"></i> </span> Add To Wish List</Button>}
+                            </Col>
+                        </Row>
+                        <div style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            margin: '10px'
+                        }}>
+                            <div style={{ margin: '10px' }}>
+                                <Link to="/">
+                                    <i className="fas fa-quote-left" style={{
+                                        fontSize: '25px',
+                                        background: '#0091ac',
+                                        padding: '15px',
+                                        borderRadius: '50%', color: '#f2f2f2'
+                                    }} ></i>
+                                </Link>
                             </div>
-                            <div style={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                margin: '10px'
-                            }}>
-                                <div style={{ margin: '10px' }}>
-                                    <Link to="/">
-                                        <i className="fas fa-phone" style={{
-                                            fontSize: '25px',
-                                            background: '#0091ac',
-                                            padding: '15px',
-                                            borderRadius: '50%', color: '#f2f2f2'
-                                        }} ></i>
-                                    </Link>
-                                </div>
-                                <div className='askQuote'>
-                                    <Link to='/' style={{ color: '#606060', textDecoration: 'none' }} > <span style={{ color: '#303030' }}>NEED ADVICE OR URGENT ORDER?</span> <br />
-                                        Call 0800 1 223 023 or Request A Callback</Link>
-                                </div>
+                            <div className='askQuote'>
+                                <Link to='/' style={{ color: '#606060', textDecoration: 'none' }} > <span style={{ color: '#303030' }}>WANT A QUOTE?</span> <br />
+                                    Send Your Quote List For A Personalised Quotation</Link>
                             </div>
-                            <Row>
-                                <Col md={6} xs={12}>
-                                    <Button style={{ width: '100%' }} className='askAQuestion' variant="light" type='button' onClick={() => handleAddToCart(product)}>ASK A QUESTION</Button>
-                                </Col>
-                                <Col md={6} xs={12}>
-                                    <Button style={{ width: '100%' }} className='emailFriend' type='button' variant='light'> EMAIL A FRIEND</Button>
-                                </Col>
-                            </Row>
                         </div>
+                        <div style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            margin: '10px'
+                        }}>
+                            <div style={{ margin: '10px' }}>
+                                <Link to="/">
+                                    <i className="fas fa-house-user" style={{
+                                        fontSize: '25px',
+                                        background: '#0091ac',
+                                        padding: '15px',
+                                        borderRadius: '50%', color: '#f2f2f2'
+                                    }} ></i>
+
+                                </Link>
+                            </div>
+                            <div className='askQuote'>
+                                <Link to='/' style={{ color: '#606060', textDecoration: 'none' }} > <span style={{ color: '#303030' }}>COLLECT IN WAREHOUSE (BIRMINGHAM)</span> <br />
+                                    Store Details & Further Information</Link>
+                            </div>
+                        </div>
+                        <div style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            margin: '10px'
+                        }}>
+                            <div style={{ margin: '10px' }}>
+                                <Link to="/">
+                                    <i className="fas fa-phone" style={{
+                                        fontSize: '25px',
+                                        background: '#0091ac',
+                                        padding: '15px',
+                                        borderRadius: '50%', color: '#f2f2f2'
+                                    }} ></i>
+                                </Link>
+                            </div>
+                            <div className='askQuote'>
+                                <Link to='/' style={{ color: '#606060', textDecoration: 'none' }} > <span style={{ color: '#303030' }}>NEED ADVICE OR URGENT ORDER?</span> <br />
+                                    Call 0800 1 223 023 or Request A Callback</Link>
+                            </div>
+                        </div>
+                        <Row>
+                            <Col md={6} xs={12}>
+                                <Button style={{ width: '100%' }} className='askAQuestion' variant="light" type='button' onClick={() => handleAddToCart(product)}>ASK A QUESTION</Button>
+                            </Col>
+                            <Col md={6} xs={12}>
+                                <Button style={{ width: '100%' }} className='emailFriend' type='button' variant='light'> EMAIL A FRIEND</Button>
+                            </Col>
+                        </Row>
+
                     </Col>
                     <div className="placeOrderSocialItem" style={{
                         display: 'flex',
@@ -205,9 +224,35 @@ const PlaceOrder = () => {
                             <Link to="/"><i className="fab fa-pinterest-p"></i></Link>
                             <Link to="/"><i className="fab fa-youtube"></i></Link>
                         </div>
+
                     </div>
                 </Row>
             </Container>
+            {/* <div style={{ width: '500px' }}>
+                <ReactImageMagnify {...{
+
+                    smallImage: {
+                        alt: "Wristwatch by Ted Baker London",
+                        isFluidWidth: true,
+                        src: `${product.img}wristwatch_1033.jpg`,
+                        // srcSet: this.srcSet,
+                        sizes:
+                            "(min-width: 800px) 33.5vw, (min-width: 415px) 50vw, 100vw"
+                    },
+                    largeImage: {
+                        alt: "",
+                        src: `${product.img}wristwatch_1200.jpg`,
+                        width: 1200,
+                        height: 1800
+
+                    },
+                    isHintEnabled: true,
+                    hintTextMouse: "Click to Enlarge",
+                    hintTextTouch: "Tap to Enlarge",
+                    shouldHideHintAfterFirstActivation: false
+                }} />
+                <ImageZoom src={product.img} alt="A image to apply the ImageZoom plugin" zoom="200" />
+            </div> */}
             <Container fluid>
                 <Col>
                     <Tabs

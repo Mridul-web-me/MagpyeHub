@@ -11,7 +11,6 @@ import Cushions from './Component/Product/HomeGarden/HomeDecorAccessories/Cushio
 import CandlesandHomeFragrances from './Component/Product/HomeGarden/HomeDecorAccessories/CandlesandHomeFragrances/CandlesandHomeFragrances';
 import GlassesDrinkware from './Component/Product/HomeGarden/CookingDining/GlassesDrinkware/GlassesDrinkware';
 import PotsPans from './Component/Product/HomeGarden/CookingDining/PotsPans/PotsPans';
-import Cutlery from './Component/Product/HomeGarden/CookingDining/Cutlery/Cutlery';
 import Dresses from './Component/Product/Women/Clothing/Dresses/Dresses';
 import Jeans from './Component/Product/Women/Clothing/Jeans/Jeans';
 import ShirtsTops from './Component/Product/Women/Clothing/ShirtsTops/ShirtsTops';
@@ -330,7 +329,7 @@ import Suitcases from './Component/Product/SportLeisure/TravelLuggage/Suitcases/
 import HoldallsWeekendBags from './Component/Product/SportLeisure/TravelLuggage/HoldallsWeekendBags/HoldallsWeekendBags';
 import Camping from './Component/Product/SportLeisure/TravelLuggage/Camping/Camping';
 import HolidaySummerShop from './Component/Product/SportLeisure/TravelLuggage/HolidaySummerShop/HolidaySummerShop';
-import FitnessAndTravel from './Component/Product/SportLeisure/FitnessAndTravel';
+import SportAndLeisure from './Component/Product/SportLeisure/SportAndLeisure';
 import MensBags from './Component/Product/Men/Accessories/MensBags/MensBags';
 
 
@@ -393,6 +392,8 @@ import ShopBedroom from './Component/Product/FurnitureLighting/BedroomFurniture/
 import ConsoleTables from './Component/Product/FurnitureLighting/LivingRoomFurniture/ConsoleTables/ConsoleTables';
 import SideTables from './Component/Product/FurnitureLighting/LivingRoomFurniture/SideTables/SideTables';
 import ShopLivingRoom from './Component/Product/FurnitureLighting/LivingRoomFurniture/ShopLivingRoom/ShopLivingRoom';
+import TablewareAndcutlery from './Component/Product/HomeGarden/CookingDining/TablewareAndcutlery/TablewareAndcutlery';
+import OutdoorLighting from './Component/Product/HomeGarden/Garden/OutdoorLighting/OutdoorLighting';
 
 
 
@@ -430,7 +431,7 @@ function App() {
 
             <Route path="/homeAndGarden/childrensBedding" element={<ChildrensBedding />} />
             <Route path="/homeAndGarden/cookwareBakeware" element={<CookwareBakeware />} />
-            <Route path="/homeAndGarden/cutlery" element={<Cutlery />} />
+            <Route path="/homeAndGarden/tablewareAndcutlery" element={<TablewareAndcutlery />} />
             <Route path="/homeAndGarden/glassesDrinkware" element={<GlassesDrinkware />} />
             <Route path="/homeAndGarden/potsPans" element={<PotsPans />} />
             <Route path="/homeAndGarden/foodPreparation" element={<FoodPreparation />} />
@@ -467,6 +468,7 @@ function App() {
             <Route path="/homeAndGarden/gasBBQs" element={<GasBBQs />} />
             <Route path="/homeAndGarden/charcoalBBQs" element={<CharcoalBBQs />} />
             <Route path="/homeAndGarden/pizzaOvens" element={<PizzaOvens />} />
+            <Route path="/homeAndGarden/outdoorlights" element={<OutdoorLighting />} />
             <Route path="/homeAndGarden/decorativeGardenAccessories" element={<DecorativeGardenAccessories />} />
             <Route path="/homeAndGarden/parasolsAccessories" element={<ParasolsAccessories />} />
             <Route path="/homeAndGarden/shopGarden" element={<ShopGarden />} />
@@ -570,7 +572,7 @@ function App() {
             <Route path="/men/menWalkingBootsShoes" element={<MenWalkingBootsShoes />} />
 
             {/* Accessories */}
-            <Route path="/men/menMensBags" element={<MensBags />} />
+            <Route path="/men/menBags" element={<MensBags />} />
             <Route path="/men/menBelts" element={<MenBelts />} />
             <Route path="/men/menHats" element={<MenHats />} />
             <Route path="/men/menWallets" element={<MenWallets />} />
@@ -901,7 +903,7 @@ function App() {
             <Route path="/beauty" element={<Beauty />} />
             <Route path="/FurnitureAndLighting" element={<FurnitureAndLighting />} />
             <Route path="/Electricals" element={<Electricals />} />
-            <Route path="/FitnessAndTravel" element={<FitnessAndTravel />} />
+            <Route path="/sportAndLeisure" element={<SportAndLeisure />} />
             <Route path="/Gifts" element={<Gifts />} />
 
             {/* YOUR ACCOUNT */}
@@ -922,16 +924,16 @@ function App() {
             <Route path="/manageProducts" element={<AdminRoute><ManageProducts /></AdminRoute>} />
             <Route path="/payment-option" element={<PaymentOptionDetails />} />
             <Route path="/brand/aptamil" element={<Aptamil />} />
-            <Route path="/brand/baby-club" element={<BabyClub />} />
+            <Route path="/brand/babyClub" element={<BabyClub />} />
             <Route path="/brand/britax" element={<Britax />} />
             <Route path="/brand/fitflop" element={<FitFlop />} />
             <Route path="/brand/gucci" element={<Gucci />} />
             <Route path="/brand/hipp" element={<Hipp />} />
             <Route path="/brand/jole" element={<Jole />} />
             <Route path="/brand/levis" element={<Levis />} />
-            <Route path="/brand/maxi-cosi" element={<MaxiCosi />} />
-            <Route path="/brand/phase-eight" element={<PhaseEight />} />
-            <Route path="/brand/ted-baker" element={<TedBaker />} />
+            <Route path="/brand/maxiCosi" element={<MaxiCosi />} />
+            <Route path="/brand/phaseEight" element={<PhaseEight />} />
+            <Route path="/brand/tedBaker" element={<TedBaker />} />
           </Routes>
         </Router>
       </AuthProvider>

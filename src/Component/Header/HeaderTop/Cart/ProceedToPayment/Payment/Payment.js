@@ -24,7 +24,7 @@ const Payment = ({ address: clientAddress }) => {
     // console.log(carts)
 
     useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
+        fetch('https://localhost:5000/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

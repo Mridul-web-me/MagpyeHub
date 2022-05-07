@@ -12,7 +12,7 @@ const FavouriteProduct = () => {
     const { handleAddToCart } = useProduct();
     const [loading, setLoading] = useState(true);
     const [products, setProducts] = useState([])
-    const category = 'cushions'
+    const category = 'DeskTableLamps'
     useEffect(() => {
         fetch(`http://localhost:5000/products?category=${category}`)
             .then(res => res.json())

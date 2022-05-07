@@ -134,7 +134,7 @@ const Beauty = () => {
                     <Col md={10} xs={12}>
                         <Row md={12}>
                             <Col md={2}>
-                                <Link to="/product/rugs" style={{
+                                <Link to="/beauty/AToZBrands" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
@@ -146,7 +146,7 @@ const Beauty = () => {
 
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/cushions" style={{
+                                <Link to="/beauty/viewallMakeup" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
@@ -158,7 +158,7 @@ const Beauty = () => {
 
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/duvetCovers" style={{
+                                <Link to="/beauty/skinCareTreatments" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
@@ -170,7 +170,7 @@ const Beauty = () => {
 
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/towels" style={{
+                                <Link to="/beauty/womensPerfume" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
@@ -183,7 +183,7 @@ const Beauty = () => {
                             </Col>
                             <Col md={2}>
 
-                                <Link to="/product/pillows" style={{
+                                <Link to="/beauty/mensAftershave" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
@@ -194,7 +194,7 @@ const Beauty = () => {
                                 </Link>
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/wallpaperPaintDIY" style={{
+                                <Link to="/beauty/NewAndExclusiveClarinsExtraordinaire" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
@@ -207,26 +207,33 @@ const Beauty = () => {
                             </Col>
 
                         </Row>
-                        <Row>
+                        <Row style={{ margin: '50px 0' }}>
                             <Col md={6} xs={12}>
                                 <img src={img7} alt="" className='img-fluid' style={{ margin: ' 50px 0' }} />
+
+                                <h5> YVES SAINT LAURENT</h5>
+                                <p>Let’s face it. Beauty looks different, and your skin is your signature. Step into the spotlight. Bare your truth proudly. Stay NU. Discover Bare Look Skin Tint</p>
                             </Col>
                             <Col md={6} xs={12}>
                                 <img src={img8} alt="" className='img-fluid' style={{ margin: ' 50px 0' }} />
+                                <h5>INTRODUCING UOMA BEAUTY</h5>
+                                <p> Meet the rebellious, innovative & inclusive new beauty brand created for all. Beauty comes in every colour and all are welcome to the beautiful Uoma tribe</p>
                             </Col>
+                            <hr />
                         </Row>
+
                         <Row>
                             <Col md={4} xs={12}>
                                 <img src={img9} alt="" className='img-fluid' />
-                                <h5></h5>
+
                             </Col>
                             <Col md={4} xs={12}>
                                 <img src={img10} alt="" className='img-fluid' />
-                                <h5></h5>
+
                             </Col>
                             <Col md={4} xs={12}>
                                 <img src={img11} alt="" className='img-fluid' />
-                                <h5></h5>
+
                             </Col>
                         </Row>
                     </Col>

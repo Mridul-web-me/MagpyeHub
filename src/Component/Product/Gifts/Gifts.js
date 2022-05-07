@@ -109,95 +109,96 @@ const Gifts = () => {
                     </Col>
 
                     <Col md={10} xs={12}>
-                        <Row md={12}>
-                            <Col md={3}>
-                                <Link to="/product/Chocolate" style={{
+                        <Row>
+                            <Col md={6}>
+
+                                <Link to="/gifts/GiftsForHer" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
-                                    <img src={img1} alt="" width='130px' fluid />
+                                    <img src={img5} alt="" className='img-fluid' />
+                                    <h5 style={{
+                                        fontSize: '18px'
+                                    }}>Discover inspiring, thoughtful gifts for all occasions</h5>
+                                    <p><u>Top Gifts for Her</u></p>
+                                </Link>
+                            </Col>
+                            <Col md={6}>
+                                <Link to="/gifts/GiftsForHim" style={{
+                                    textDecoration: 'none',
+                                    color: '#000'
+                                }}>
+                                    <img src={img6} alt="" className='img-fluid' />
+                                    <h5 style={{
+                                        fontSize: '18px'
+                                    }}>From fashion to tech, spoil him with the perfect present</h5>
+                                    <p><u>Top Gifts for Him</u></p>
+                                </Link>
+                            </Col>
+
+                        </Row>
+                        <hr />
+                        <Row md={12} style={{
+                            margin: '50px',
+
+                        }}>
+                            <h2 style={{
+                                marginBottom: '50px',
+                                color: '#696969',
+                                fontWeight: '700',
+                                fontSize: '24px',
+                                letterSpacing: '2px'
+                            }}>GIVE THEM SOMETHING THEY’LL LOVE</h2>
+                            <Col md={3}>
+                                <Link to="/gifts/ViewAllGiftFoodDrink" style={{
+                                    textDecoration: 'none',
+                                    color: '#000'
+                                }}>
+                                    <img src={img1} alt="" className="img-fluid" />
                                     <h5 style={{
                                         fontSize: '18px'
                                     }}>GIFT FOOD</h5>
                                 </Link>
 
                             </Col>
-                            <Col md={2}>
-                                <Link to="/product/LuxuryGifts" style={{
+                            <Col md={3}>
+                                <Link to="/gifts/GiftsUnder100" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
-                                    <img src={img2} alt="" width='130px' fluid />
+                                    <img src={img2} alt="" className="img-fluid" />
                                     <h5 style={{
                                         fontSize: '18px'
                                     }}>LUXURY GIFT</h5>
                                 </Link>
 
                             </Col>
-                            <Col md={2}>
-                                <Link to="/product/GiftsForCouples" style={{
+                            <Col md={3}>
+                                <Link to="/gifts/Wedding" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
-                                    <img src={img3} alt="" width='130px' fluid />
+                                    <img src={img3} alt="" className="img-fluid" />
                                     <h5 style={{
                                         fontSize: '18px'
                                     }}>WEDDING GIFT</h5>
                                 </Link>
 
                             </Col>
-                            <Col md={2}>
-                                <Link to="/product/towels" style={{
+                            <Col md={3}>
+                                <Link to="/gifts/SweetsFudge" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
-                                    <img src={img4} alt="" width='130px' fluid />
+                                    <img src={img4} alt="" className="img-fluid" />
                                     <h5 style={{
                                         fontSize: '18px'
-                                    }}></h5>
+                                    }}>
+                                        PERSONALISED GIFTS</h5>
                                 </Link>
 
                             </Col>
-                            <Col md={2}>
-
-                                <Link to="/product/pillows" style={{
-                                    textDecoration: 'none',
-                                    color: '#000'
-                                }}>
-                                    <img src={img5} alt="" width='130px' fluid />
-                                    <h5 style={{
-                                        fontSize: '18px'
-                                    }}></h5>
-                                </Link>
-                            </Col>
-                            <Col md={2}>
-                                <Link to="/product/wallpaperPaintDIY" style={{
-                                    textDecoration: 'none',
-                                    color: '#000'
-                                }}>
-                                    <img src={img6} alt="" width='130px' fluid />
-                                    <h5 style={{
-                                        fontSize: '18px'
-                                    }}></h5>
-                                </Link>
-
-                            </Col>
-                            {/* <img src={img7} alt="" style={{ margin: ' 50px 0' }} /> */}
                         </Row>
-                        {/* <Row>
-                            <Col md={4} xs={12}>
-                                <img src={img8} alt="" className='img-fluid' />
-                                <h5></h5>
-                            </Col>
-                            <Col md={4} xs={12}>
-                                <img src={img9} alt="" className='img-fluid' />
-                                <h5></h5>
-                            </Col>
-                            <Col md={4} xs={12}>
-                                <img src={img10} alt="" className='img-fluid' />
-                                <h5></h5>
-                            </Col>
-                        </Row> */}
                     </Col>
                 </Row>
             </Container>

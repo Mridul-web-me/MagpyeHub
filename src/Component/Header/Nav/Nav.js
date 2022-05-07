@@ -64,7 +64,7 @@ const Nav = () => {
                                             <hr />
                                             <ul className="mega-links">
                                                 <li><Link to="/homeAndGarden/cookwareBakeware">Cookware & Bakeware</Link></li>
-                                                <li><Link to="/homeAndGarden/cutlery">Tableware & Cutlery</Link></li>
+                                                <li><Link to="/homeAndGarden/tablewareAndcutlery">Tableware & Cutlery</Link></li>
                                                 <li><Link to="/homeAndGarden/glassesDrinkware">Glasses & Drinkware</Link></li>
                                                 <li><Link to="/homeAndGarden/potsPans">Pots & Pans</Link></li>
                                                 <li><Link to="/homeAndGarden/foodPreparation">Food Preparation</Link></li>
@@ -79,7 +79,7 @@ const Nav = () => {
                                             <ul className="mega-links">
                                                 <li><Link to="/homeAndGarden/homeAccessories">Home Accessories</Link></li>
                                                 <li><Link to="/homeAndGarden/cushions">Cushions & Bean Bags</Link></li>
-                                                <li><Link to="/homeAndGarden/candlesHomeFragrance">Candles & Home Fragrance</Link></li>
+                                                <li><Link to="/homeAndGarden/candlesAndHomeFragrances">Candles & Home Fragrance</Link></li>
                                                 <li><Link to="/homeAndGarden/towels"> Towels</Link></li>
                                                 <li><Link to="/homeAndGarden/picturesArtFrames">Pictures, Art & Frames</Link></li>
                                                 <li><Link to="/homeAndGarden/mirrors"> Mirrors</Link></li>
@@ -104,14 +104,13 @@ const Nav = () => {
                                             <h5>Garden</h5>
                                             <hr />
                                             <ul className="mega-links">
-
                                                 <li><Link to="/homeAndGarden/gardenFurnitureSets">Garden Furniture Sets</Link></li>
                                                 <li><Link to="/homeAndGarden/gardenSeating">Garden Seating</Link></li>
                                                 <li><Link to="/homeAndGarden/gasBBQs">Gas BBQs</Link></li>
                                                 <li><Link to="/homeAndGarden/charcoalBBQs">Charcoal BBQs</Link></li>
                                                 <li><Link to="/homeAndGarden/pizzaOvens">Pizza Ovens</Link></li>
                                                 <li><Link to="/homeAndGarden/decorativeGardenAccessories"> Decorative Garden Accessories</Link></li>
-                                                <li><Link to="/homeAndGarden/ardenOutdoorlights"> Outdoor Lighting</Link></li>
+                                                <li><Link to="/homeAndGarden/outdoorlights"> Outdoor Lighting</Link></li>
                                                 <li><Link to="/homeAndGarden/parasolsAccessories"> Parasols & Accessories</Link></li>
                                                 <li><Link to="/homeAndGarden/shopGarden"> Shop Garden</Link></li>
                                             </ul>
@@ -299,7 +298,7 @@ const Nav = () => {
                                             <h5>Accessories</h5>
                                             <hr />
                                             <ul className="mega-links">
-                                                <li><Link to="/men/menMensBags">Men's Bags</Link></li>
+                                                <li><Link to="/men/menBags">Men's Bags</Link></li>
                                                 <li><Link to="/men/menBelts">Belts</Link></li>
                                                 <li><Link to="/men/menHats">Hats</Link></li>
                                                 <li><Link to="/men/menWallets">Wallets</Link></li>
@@ -637,7 +636,7 @@ const Nav = () => {
 
                             <li className='nav-item'>
                                 <label className="desktop-item8">
-                                    <Link to="/FitnessAndTravel">Sport & Leisure</Link>
+                                    <Link to="/sportAndLeisure">Sport & Leisure</Link>
                                 </label>
                                 <input type="checkbox" id="showMega8" />
                                 <label htmlFor="showMega8" className="mobile-item8">Sport & Leisure</label>

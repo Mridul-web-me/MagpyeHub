@@ -99,7 +99,7 @@ const ManageProducts = () => {
                 <Accordion.Body>
                   <div className="filterItem">
                     <Link onClick={() => { filterProduct('brasSportsBras') }} to="">Bras & Sports Bras</Link><br />
-                    <Link onClick={() => { filterProduct('Nightwear') }} to="">Nightwear</Link><br />
+                    <Link onClick={() => { filterProduct('nightwear') }} to="">Nightwear</Link><br />
                     <Link onClick={() => { filterProduct('socks') }} to="">Socks</Link><br />
                     <Link onClick={() => { filterProduct('tights') }} to="">Tights</Link><br />
                   </div>
@@ -484,6 +484,7 @@ const ManageProducts = () => {
                         <h5>{product.title}</h5>
                       </Link>
                       <p>Product Code: {product._id}</p>
+                      <p>Category: {product.category}</p>
                     </Col>
                     <Col xs={6} md={2}>
                       <div style={{

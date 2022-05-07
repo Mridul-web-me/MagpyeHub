@@ -18,7 +18,7 @@ const TedBaker = () => {
   const [page, setPage] = useState(0);
   const [loading, setLoading] = useState(true)
   const size = 8;
-  const category = 'ted-baker'
+  const category = 'tedBaker'
   useEffect(() => {
     fetch(`http://localhost:5000/products?category=${category}&&page=${page}&&size=${size}`)
       .then(res => res.json())

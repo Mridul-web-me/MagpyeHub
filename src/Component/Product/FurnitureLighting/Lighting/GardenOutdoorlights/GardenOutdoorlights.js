@@ -20,7 +20,7 @@ const GardenOutdoorlights = (props) => {
     const [page, setPage] = useState(0);
     const [loading, setLoading] = useState(true)
     const size = 8;
-    const category = 'GardenOutdoorlights'
+    const category = 'gardenOutdoorlights'
     useEffect(() => {
         fetch(`http://localhost:5000/products?category=${category}&&page=${page}&&size=${size}`)
             .then(res => res.json())

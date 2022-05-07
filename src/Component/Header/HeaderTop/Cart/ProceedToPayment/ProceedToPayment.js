@@ -6,11 +6,11 @@ import logo from '../../../../../img/logo.jpg'
 import axios from 'axios';
 import { Elements } from '@stripe/react-stripe-js';
 import Payment from './Payment/Payment';
-import { loadStripe } from '@stripe/stripe-js';
 import { Helmet } from 'react-helmet';
 import useProduct from '../../../../../hooks/Product/useProduct';
 import useAuth from '../../../../../hooks/useAuth';
 import Footer from '../../../../Footer/Footer';
+import { loadStripe } from '@stripe/stripe-js';
 
 
 const stripePromise = loadStripe('pk_test_51KUuQEJYFu4RGWvKjw2LK5rIC9EAnyTQHbmzGNgGnb0XcOvh36utplRWpUtsK2EJAJEw0YExvwQxLNSv7hY3qdPh00BNUN9m3S');

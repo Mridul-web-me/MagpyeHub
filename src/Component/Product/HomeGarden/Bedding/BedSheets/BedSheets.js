@@ -77,20 +77,14 @@ const BedSheets = (props) => {
                                 <Accordion.Header>Home Furnishings & Accessories</Accordion.Header>
                                 <Accordion.Body>
                                     <div className="filterItem">
-                                        <input type="checkbox" onChange={() => { filterProduct('bedding') }} value="Bedding" />
-                                        <label for="Bedding"> Bedding</label>
-
-                                        <input type="checkbox" onChange={() => { filterProduct('pillows') }} value="pillows" />
-                                        <label for="pillows"> pillows</label> <br />
-
-                                        <input type="checkbox" onChange={() => { filterProduct('throwsBlanketsAndSpreads') }} value="throwsBlanketsAndSpreads" />
-                                        <label for="throwsBlanketsAndSpreads"> Throws, blankets and Spreads</label> <br />
-
+                                        <Link onClick={() => { filterProduct('duvetCovers') }} to="">Duvet Covers</Link> <br />
                                         <Link onClick={() => { filterProduct('bedding') }} to="">Bed Sheets</Link> <br />
-                                        <Link onClick={() => { filterProduct('pillows') }} to="">Pillows</Link> <br />
                                         <Link onClick={() => { filterProduct('pillowCases') }} to="">Pillow Cases</Link> <br />
-                                        <Link onClick={() => { filterProduct('throwsBlanketsAndSpreads') }} to="">Throws, blankets and Spreads</Link> <br />
+                                        <Link onClick={() => { filterProduct('duvets') }} to="">Duvets</Link> <br />
+                                        <Link onClick={() => { filterProduct('pillows') }} to="">Pillows</Link> <br />
+                                        <Link onClick={() => { filterProduct('throwsBlanketsAndSpreads') }} to="">Throws & Blankets</Link> <br />
                                         <Link onClick={() => { filterProduct('childrensBedding') }} to="">Children's Bedding</Link> <br />
+                                        <Link onClick={() => { filterProduct('shopBedding') }} to="">Shop Bedding</Link> <br />
                                     </div>
                                 </Accordion.Body>
                             </Accordion.Item>
@@ -98,11 +92,14 @@ const BedSheets = (props) => {
                                 <Accordion.Header>Cooking & Dining</Accordion.Header>
                                 <Accordion.Body>
                                     <div className="filterItem">
-                                        <Link onClick={() => { filterProduct('cutlery') }} to="">Tableware & Cutlery</Link> <br />
+                                        <Link onClick={() => { filterProduct('cookwareBakeware') }} to="">Cookware & Bakeware</Link> <br />
+                                        <Link onClick={() => { filterProduct('tablewareAndcutlery') }} to="">Tableware & Cutlery</Link> <br />
                                         <Link onClick={() => { filterProduct('glassesDrinkware') }} to="">Glasses & Drinkware</Link> <br />
                                         <Link onClick={() => { filterProduct('potsPans') }} to="">Pots & Pans</Link> <br />
-                                        <Link onClick={() => { filterProduct('foodProcessorsMixersBlendersJuicers') }} to="">Food Processors & Mixers</Link> <br />
-                                        <Link onClick={() => { filterProduct('blendersJuicers') }} to="">Blenders & Juicers</Link> <br />
+                                        <Link onClick={() => { filterProduct('foodPreparation') }} to="">Food Preparation</Link> <br />
+                                        <Link onClick={() => { filterProduct('picnicware') }} to="">Picnicware</Link> <br />
+                                        <Link onClick={() => { filterProduct('kitchenUtensilsGadgets') }} to="">Kitchen Utensils & Gadgets</Link> <br />
+                                        <Link onClick={() => { filterProduct('kitchenBins') }} to="">Kitchen Bins</Link> <br />
                                     </div>
                                 </Accordion.Body>
                             </Accordion.Item>
@@ -110,13 +107,15 @@ const BedSheets = (props) => {
                                 <Accordion.Header>Home Décor & Accessories</Accordion.Header>
                                 <Accordion.Body>
                                     <div className="filterItem">
+                                        <Link onClick={() => { filterProduct('homeAccessories') }} to="">Home Accessories</Link> <br />
                                         <Link onClick={() => { filterProduct('cushions') }} to="">Cushions & Bean Bags</Link> <br />
-                                        <Link onClick={() => { filterProduct('candlesHomeFragrance') }} to="">Candles & Home Fragrance</Link> <br />
-                                        <Link onClick={() => { filterProduct('towels') }} to="">Towels</Link> <br />
+                                        <Link onClick={() => { filterProduct('candlesAndHomeFragrances') }} to="">Candles & Home Fragrance</Link> <br />
+                                        <Link onClick={() => { filterProduct('towels') }} to=""> Towels</Link> <br />
+                                        <Link onClick={() => { filterProduct('picturesArtFrames') }} to="">Pictures, Art & Frames</Link> <br />
                                         <Link onClick={() => { filterProduct('mirrors') }} to=""> Mirrors</Link> <br />
-                                        <Link onClick={() => { filterProduct('rugs') }} to="">Rugs</Link> <br />
-                                        <Link onClick={() => { filterProduct('wallpapers') }} to=""> Wallpapers</Link> <br />
+                                        <Link onClick={() => { filterProduct('rugs') }} to=""> Rugs</Link> <br />
                                         <Link onClick={() => { filterProduct('storage') }} to=""> Storage</Link> <br />
+                                        <Link onClick={() => { filterProduct('wallpaperPaintDIY') }} to=""> Wallpaper, Paint & DIY</Link> <br />
                                     </div>
                                 </Accordion.Body>
                             </Accordion.Item>
@@ -125,9 +124,11 @@ const BedSheets = (props) => {
                                 <Accordion.Body>
                                     <div className="filterItem">
                                         <Link onClick={() => { filterProduct('curtains') }} to="">Curtains</Link> <br />
-                                        <Link onClick={() => { filterProduct('madeToMeasureCurtains') }} to="">Made to Measure curtains</Link> <br />
-                                        <Link onClick={() => { filterProduct('blinds') }} to="">Blinds</Link> <br />
-                                        <Link onClick={() => { filterProduct('carpetsFlooring') }} to=""> Carpets & Flooring</Link> <br />
+                                        <Link onClick={() => { filterProduct('madeToMeasureCurtains') }} to="">Made to Measure Curtains</Link> <br />
+                                        <Link onClick={() => { filterProduct('curtainPolesAccessories') }} to="">Curtain Poles & Accessories</Link> <br />
+                                        <Link onClick={() => { filterProduct('blinds') }} to=""> Blinds</Link> <br />
+                                        <Link onClick={() => { filterProduct('fabrics') }} to=""> Fabrics</Link> <br />
+                                        <Link onClick={() => { filterProduct('carpetsAndFlooring') }} to=""> Carpets & Flooring</Link> <br />
                                     </div>
                                 </Accordion.Body>
                             </Accordion.Item>
@@ -137,8 +138,13 @@ const BedSheets = (props) => {
                                     <div className="filterItem">
                                         <Link onClick={() => { filterProduct('gardenFurnitureSets') }} to="">Garden Furniture Sets</Link> <br />
                                         <Link onClick={() => { filterProduct('gardenSeating') }} to="">Garden Seating</Link> <br />
-                                        <Link onClick={() => { filterProduct('outdoorlights') }} to="">Outdoor lights</Link> <br />
-                                        <Link onClick={() => { filterProduct('bBQStands') }} to=""> BBQ Stands</Link> <br />
+                                        <Link onClick={() => { filterProduct('gasBBQs') }} to="">Gas BBQs</Link> <br />
+                                        <Link onClick={() => { filterProduct('charcoalBBQs') }} to="">Charcoal BBQs</Link> <br />
+                                        <Link onClick={() => { filterProduct('pizzaOvens') }} to="">Pizza Ovens</Link> <br />
+                                        <Link onClick={() => { filterProduct('decorativeGardenAccessories') }} to=""> Decorative Garden Accessories</Link> <br />
+                                        <Link onClick={() => { filterProduct('ardenOutdoorlights') }} to=""> Outdoor Lighting</Link> <br />
+                                        <Link onClick={() => { filterProduct('parasolsAccessories') }} to=""> Parasols & Accessories</Link> <br />
+                                        <Link onClick={() => { filterProduct('shopGarden') }} to=""> Shop Garden</Link> <br />
                                     </div>
                                 </Accordion.Body>
                             </Accordion.Item>
@@ -147,16 +153,16 @@ const BedSheets = (props) => {
                                 <Accordion.Body>
                                     <div className="filterItem">
                                         <Link onClick={() => { filterProduct('aptamil') }} to="">Aptamil</Link><br />
-                                        <Link onClick={() => { filterProduct('baby-club') }} to="">Baby Club</Link><br />
+                                        <Link onClick={() => { filterProduct('babyClub') }} to="">Baby Club</Link><br />
                                         <Link onClick={() => { filterProduct('britax') }} to="">Britax</Link><br />
-                                        <Link onClick={() => { filterProduct('fit-flop') }} to="">Fit Flop</Link><br />
+                                        <Link onClick={() => { filterProduct('fitFlop') }} to="">Fit Flop</Link><br />
                                         <Link onClick={() => { filterProduct('gucci') }} to="">Gucci</Link><br />
                                         <Link onClick={() => { filterProduct('hipp') }} to="">Hipp</Link><br />
                                         <Link onClick={() => { filterProduct('jole') }} to="">Jole</Link><br />
                                         <Link onClick={() => { filterProduct('levis') }} to="">Levis</Link><br />
-                                        <Link onClick={() => { filterProduct('maxi-cosi') }} to="">Maxi Cosi</Link><br />
-                                        <Link onClick={() => { filterProduct('phase-eight') }} to="">Phase Eight</Link><br />
-                                        <Link onClick={() => { filterProduct('ted-baker') }} to="">Ted Baker</Link><br />
+                                        <Link onClick={() => { filterProduct('maxiCosi') }} to="">Maxi Cosi</Link><br />
+                                        <Link onClick={() => { filterProduct('phaseEight') }} to="">Phase Eight</Link><br />
+                                        <Link onClick={() => { filterProduct('tedBaker') }} to="">Ted Baker</Link><br />
                                     </div>
                                 </Accordion.Body>
                             </Accordion.Item>
@@ -201,6 +207,7 @@ const BedSheets = (props) => {
                                 </Row>}
                         </div>
                         }
+
                         <div className="pagination">
                             {
                                 [...Array(pageCount).keys()]
