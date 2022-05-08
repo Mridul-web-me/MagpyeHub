@@ -20,7 +20,7 @@ const TShirts = () => {
     const size = 8;
     const category = 't-shirts'
     useEffect(() => {
-        fetch(`http://localhost:5000/products?category=${category}&&page=${page}&&size=${size}`)
+        fetch(`https://blooming-mountain-96721.herokuapp.com/products?category=${category}&&page=${page}&&size=${size}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products)
@@ -63,7 +63,7 @@ const TShirts = () => {
                         color: '#303030', fontSize: '26px',
                         textTransform: 'uppercase',
                         marginBottom: '20px'
-                    }}>Blazers</h3>
+                    }}>T-Shirts</h3>
                     <Col md={3} xs={12}>
                         <Accordion defaultActiveKey="0">
                             <Accordion.Item eventKey="0">

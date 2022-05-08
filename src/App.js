@@ -394,6 +394,8 @@ import SideTables from './Component/Product/FurnitureLighting/LivingRoomFurnitur
 import ShopLivingRoom from './Component/Product/FurnitureLighting/LivingRoomFurniture/ShopLivingRoom/ShopLivingRoom';
 import TablewareAndcutlery from './Component/Product/HomeGarden/CookingDining/TablewareAndcutlery/TablewareAndcutlery';
 import OutdoorLighting from './Component/Product/HomeGarden/Garden/OutdoorLighting/OutdoorLighting';
+import LuxuryGifts from './Component/Product/Gifts/GiftInspiration/LuxuryGifts/LuxuryGifts';
+import Techies from './Component/Product/Gifts/GiftInspiration/Techies/Techies';
 
 
 
@@ -644,7 +646,7 @@ function App() {
             <Route path="/beauty/VeganBeauty" element={<VeganBeauty />} />
             <Route path="/beauty/Wellness" element={<Wellness />} />
             <Route path="/beauty/GiftSets" element={<GiftSets />} />
-            <Route path="/beauty/NewAndExclusiveClarinsExtraordinaire" element={<NewAndExclusiveClarinsExtraordinaire />} />
+            <Route path="/beauty/NewAndExclusive" element={<NewAndExclusiveClarinsExtraordinaire />} />
 
             {/* BABY AND CHILD */}
 
@@ -890,6 +892,10 @@ function App() {
             <Route path="/gifts/Gardening" element={<Gardening />} />
             <Route path="/gifts/GiftWrapPartyShop" element={<GiftWrapPartyShop />} />
             <Route path="/gifts/GiftStationery" element={<GiftStationery />} />
+
+            {/* GIFT INSPIRATION */}
+            <Route path="/gifts/LuxuryGifts" element={<LuxuryGifts />} />
+            <Route path="/gifts/Techies" element={<Techies />} />
 
 
 

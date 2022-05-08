@@ -19,9 +19,9 @@ const Strollers = () => {
     const [page, setPage] = useState(0);
     const [loading, setLoading] = useState(true)
     const size = 8;
-    const category = 'Strollers'
+    const category = 'strollers'
     useEffect(() => {
-        fetch(`http://localhost:5000/products?category=${category}&&page=${page}&&size=${size}`)
+        fetch(`https://blooming-mountain-96721.herokuapp.com/products?category=${category}&&page=${page}&&size=${size}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products)
@@ -61,7 +61,7 @@ const Strollers = () => {
                         color: '#303030', fontSize: '26px',
                         textTransform: 'uppercase',
                         marginBottom: '20px'
-                    }}>Baby & Toddler Milk</h3>
+                    }}>Strollers</h3>
                     <Col md={3} xs={12}>
                         <Accordion defaultActiveKey="0">
                             <Accordion.Item eventKey="0">
@@ -72,20 +72,7 @@ const Strollers = () => {
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="1">
-                                <Accordion.Header>Kids Clothing & Shoes</Accordion.Header>
-                                <Accordion.Body>
-                                    <div className="filterItem">
-                                        <Link onClick={() => { filterProduct('kidsshirtsTops') }} to="">Shirts & Tops</Link><br />
-                                        <Link onClick={() => { filterProduct('kidsdresses') }} to="">Dresses</Link><br />
-                                        <Link onClick={() => { filterProduct('kidspyjamasNightwear') }} to="">Pyjamas & Nightwear</Link><br />
-                                        <Link onClick={() => { filterProduct('kidstrousersLeggings') }} to="">Trousers & Leggings</Link><br />
-                                        <Link onClick={() => { filterProduct('kidsjeans') }} to="">Jeans</Link><br />
-                                        <Link onClick={() => { filterProduct('kidspartyWear') }} to="">Party Wear</Link><br />
-                                    </div>
-                                </Accordion.Body>
-                            </Accordion.Item>
-                            <Accordion.Item eventKey="2">
-                                <Accordion.Header>Baby & Toddler Milk</Accordion.Header>
+                                <Accordion.Header>Baby Food & Milk</Accordion.Header>
                                 <Accordion.Body>
                                     <div className="filterItem">
                                         <Link onClick={() => { filterProduct('BabyToddlerFood') }} to="">Baby & Toddler Food</Link><br />
@@ -93,45 +80,82 @@ const Strollers = () => {
                                     </div>
                                 </Accordion.Body>
                             </Accordion.Item>
-                            <Accordion.Item eventKey="3">
-                                <Accordion.Header>Boys Clothes</Accordion.Header>
+                            <Accordion.Item eventKey="2">
+                                <Accordion.Header>Baby Home & Nursery</Accordion.Header>
                                 <Accordion.Body>
                                     <div className="filterItem">
-                                        <Link onClick={() => { filterProduct('kidsshortsTrousers') }} to="">Shorts & Trousers</Link><br />
-                                        <Link onClick={() => { filterProduct('kidsshirtsTops') }} to="">Shirts & Tops</Link><br />
-                                        <Link onClick={() => { filterProduct('kidspyjamasNightwear') }} to="">Pyjamas & Nightwear</Link><br />
-                                        <Link onClick={() => { filterProduct('kidspartywear') }} to="">Party wear</Link><br />
-                                        <Link onClick={() => { filterProduct('kidspants') }} to="">Pants</Link><br />
-                                        <Link onClick={() => { filterProduct('kidssocks') }} to="">Socks</Link><br />
-                                        <Link onClick={() => { filterProduct('kidshats') }} to="">Hats</Link><br />
+                                        <Link onClick={() => { filterProduct('sleeping') }} to="">Sleeping</Link><br />
+                                        <Link onClick={() => { filterProduct('bathingChanging') }} to="">Bathing & Changing</Link><br />
+                                        <Link onClick={() => { filterProduct('feedingWeaning') }} to="">Feeding & Weaning</Link><br />
+                                        <Link onClick={() => { filterProduct('nurseryFunitureFurnishings') }} to="">Nursery Funiture & Furnishings</Link><br />
+                                        <Link onClick={() => { filterProduct('safetyHealthcare') }} to="">Safety & Healthcare</Link><br />
+                                        <Link onClick={() => { filterProduct('babyChecklist') }} to="">Baby Checklist</Link><br />
+                                    </div>
+                                </Accordion.Body>
+                            </Accordion.Item>
+                            <Accordion.Item eventKey="3">
+                                <Accordion.Header>Baby Clothes (0-4 years)</Accordion.Header>
+                                <Accordion.Body>
+                                    <div className="filterItem">
+                                        <Link onClick={() => { filterProduct('babyToddlerclothes') }} to="">Baby & Toddler clothes</Link><br />
+                                        <Link onClick={() => { filterProduct('babyBoyClothes') }} to="">Baby Boy Clothes</Link><br />
+                                        <Link onClick={() => { filterProduct('babyGirlClothes') }} to="">Baby Girl Clothes</Link><br />
+                                        <Link onClick={() => { filterProduct('sleepsuitsBodysuits') }} to="">Sleepsuits & Bodysuits</Link><br />
                                     </div>
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="4">
-                                <Accordion.Header>Kids Travel</Accordion.Header>
+                                <Accordion.Header>Kids Clothing & Shoes</Accordion.Header>
                                 <Accordion.Body>
                                     <div className="filterItem">
-                                        <Link onClick={() => { filterProduct('CarSeats') }} to="">Car Seats</Link><br />
-                                        <Link onClick={() => { filterProduct('BabyCarriers') }} to="">Baby Carriers</Link><br />
-                                        <Link onClick={() => { filterProduct('Strollers') }} to="">Strollers</Link><br />
+                                        <Link onClick={() => { filterProduct('AllGirlsclothes') }} to="">All Girls clothes</Link><br />
+                                        <Link onClick={() => { filterProduct('GirlsDresses') }} to="">Girls Dresses</Link><br />
+                                        <Link onClick={() => { filterProduct('GirlsShoes') }} to="">Girls Shoes</Link><br />
+                                        <Link onClick={() => { filterProduct('GirlsPyjamas') }} to="">Girls Pyjamas</Link><br />
+                                        <Link onClick={() => { filterProduct('AllBoysClothes') }} to="">All Boys Clothes</Link><br />
+                                        <Link onClick={() => { filterProduct('BoysPyjamas') }} to=" ">Boys Pyjamas </Link><br />
+                                        <Link onClick={() => { filterProduct('BoysShoes') }} to="">Boys Shoes</Link><br />
+                                        <Link onClick={() => { filterProduct('BackToSchoolShop') }} to="">Back to School Shop</Link><br />
                                     </div>
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="5">
+                                <Accordion.Header>Kids Travel</Accordion.Header>
+                                <Accordion.Body>
+                                    <div className="filterItem">
+                                        <Link onClick={() => { filterProduct('carSeats') }} to="">Car Seats</Link><br />
+                                        <Link onClick={() => { filterProduct('babyCarriers') }} to="">Baby Carriers</Link><br />
+                                        <Link onClick={() => { filterProduct('strollers') }} to="">Strollers</Link><br />
+                                    </div>
+                                </Accordion.Body>
+                            </Accordion.Item>
+                            <Accordion.Item eventKey="6">
+                                <Accordion.Header>Kids Toys & Gifts</Accordion.Header>
+                                <Accordion.Body>
+                                    <div className="filterItem">
+                                        <Link onClick={() => { filterProduct('Toys') }} to="">Toys</Link><br />
+                                        <Link onClick={() => { filterProduct('BabyPreschoolToys') }} to="">Baby & preschool Toys</Link><br />
+                                        <Link onClick={() => { filterProduct('KidsGamesPuzzles') }} to="">Games & Puzzles</Link><br />
+                                        <Link onClick={() => { filterProduct('LEGO') }} to="">LEGO</Link><br />
+                                        <Link onClick={() => { filterProduct('GiftsForBabiesKids') }} to="">Gifts for Babies & Kids</Link><br />
+                                    </div>
+                                </Accordion.Body>
+                            </Accordion.Item>
+                            <Accordion.Item eventKey="7">
                                 <Accordion.Header>Brand</Accordion.Header>
                                 <Accordion.Body>
                                     <div className="filterItem">
                                         <Link onClick={() => { filterProduct('aptamil') }} to="">Aptamil</Link><br /><br />
-                                        <Link onClick={() => { filterProduct('baby-club') }} to="">Baby Club</Link><br /><br />
+                                        <Link onClick={() => { filterProduct('babyClub') }} to="">Baby Club</Link><br /><br />
                                         <Link onClick={() => { filterProduct('britax') }} to="">Britax</Link><br /><br />
-                                        <Link onClick={() => { filterProduct('fit-flop') }} to="">Fit Flop</Link><br /><br />
+                                        <Link onClick={() => { filterProduct('fitFlop') }} to="">Fit Flop</Link><br /><br />
                                         <Link onClick={() => { filterProduct('gucci') }} to="">Gucci</Link><br /><br />
                                         <Link onClick={() => { filterProduct('hipp') }} to="">Hipp</Link><br /><br />
                                         <Link onClick={() => { filterProduct('jole') }} to="">Jole</Link><br /><br />
                                         <Link onClick={() => { filterProduct('levis') }} to="">Levis</Link><br /><br />
-                                        <Link onClick={() => { filterProduct('maxi-cosi') }} to="">Maxi Cosi</Link><br /><br />
-                                        <Link onClick={() => { filterProduct('phase-eight') }} to="">Phase Eight</Link><br /><br />
-                                        <Link onClick={() => { filterProduct('ted-baker') }} to="">Ted Baker</Link><br /><br />
+                                        <Link onClick={() => { filterProduct('maxiCosi') }} to="">Maxi Cosi</Link><br /><br />
+                                        <Link onClick={() => { filterProduct('phaseEight') }} to="">Phase Eight</Link><br /><br />
+                                        <Link onClick={() => { filterProduct('tedBaker') }} to="">Ted Baker</Link><br /><br />
                                     </div>
                                 </Accordion.Body>
                             </Accordion.Item>

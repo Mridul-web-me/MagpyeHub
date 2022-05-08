@@ -19,7 +19,7 @@ const FitFlop = () => {
     const size = 8;
     const category = 'fitflop'
     useEffect(() => {
-        fetch(`http://localhost:5000/products?category=${category}&&page=${page}&&size=${size}`)
+        fetch(`https://blooming-mountain-96721.herokuapp.com/products?category=${category}&&page=${page}&&size=${size}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products)
@@ -70,47 +70,21 @@ const FitFlop = () => {
                                     <p>Price: {price}</p>
                                 </Accordion.Body>
                             </Accordion.Item>
-                            <Accordion.Item eventKey="1">
-                                <Accordion.Header>Home Furnishings & Accessories</Accordion.Header>
-                                <Accordion.Body>
-                                    <div className="filterItem">
-                                        <Link onClick={() => { filterProduct('bedding') }} to="">Bedding</Link> <br />
-                                        <Link onClick={() => { filterProduct('pillows') }} to="">Pillows</Link> <br />
-                                        <Link onClick={() => { filterProduct('throwsBlanketsAndSpreads') }} to="">Throws, blankets and Spreads</Link> <br />
-                                        <Link onClick={() => { filterProduct('towels') }} to="">Towels</Link> <br />
-                                        <Link onClick={() => { filterProduct('bathroomAccessories') }} to="">Bathroom Accessories</Link> <br />
-                                        <Link onClick={() => { filterProduct('cushions') }} to="">Cushions</Link> <br />
-                                        <Link onClick={() => { filterProduct('candlesAndHomeFragrances') }} to="">Candles and Home Fragrances</Link> <br />
-                                    </div>
-                                </Accordion.Body>
-                            </Accordion.Item>
-                            <Accordion.Item eventKey="2">
-                                <Accordion.Header>Cooking & Dining</Accordion.Header>
-                                <Accordion.Body>
-                                    <div className="filterItem">
-                                        <Link onClick={() => { filterProduct('potsPans') }} to="">Pots & Pans</Link><br />
-                                        <Link onClick={() => { filterProduct('tableware') }} to="">Tableware</Link><br />
-                                        <Link onClick={() => { filterProduct('glassesDrinkware') }} to="">Glasses & Drinkware</Link><br />
-                                        <Link onClick={() => { filterProduct('cutlery') }} to="">Cutlery</Link><br />
-                                        <Link onClick={() => { filterProduct('foodProcessorsMixersBlendersJuicers') }} to="">Food Processors, Mixers, Blenders & Juicers</Link><br />
-                                    </div>
-                                </Accordion.Body>
-                            </Accordion.Item>
                             <Accordion.Item eventKey="3">
                                 <Accordion.Header>Brand</Accordion.Header>
                                 <Accordion.Body>
                                     <div className="filterItem">
                                         <Link onClick={() => { filterProduct('aptamil') }} to="">Aptamil</Link><br />
-                                        <Link onClick={() => { filterProduct('baby-club') }} to="">Baby Club</Link><br />
+                                        <Link onClick={() => { filterProduct('babyClub') }} to="">Baby Club</Link><br />
                                         <Link onClick={() => { filterProduct('britax') }} to="">Britax</Link><br />
-                                        <Link onClick={() => { filterProduct('fit-flop') }} to="">Fit Flop</Link><br />
+                                        <Link onClick={() => { filterProduct('fitFlop') }} to="">Fit Flop</Link><br />
                                         <Link onClick={() => { filterProduct('gucci') }} to="">Gucci</Link><br />
                                         <Link onClick={() => { filterProduct('hipp') }} to="">Hipp</Link><br />
                                         <Link onClick={() => { filterProduct('jole') }} to="">Jole</Link><br />
                                         <Link onClick={() => { filterProduct('levis') }} to="">Levis</Link><br />
-                                        <Link onClick={() => { filterProduct('maxi-cosi') }} to="">Maxi Cosi</Link><br />
-                                        <Link onClick={() => { filterProduct('phase-eight') }} to="">Phase Eight</Link><br />
-                                        <Link onClick={() => { filterProduct('ted-baker') }} to="">Ted Baker</Link><br />
+                                        <Link onClick={() => { filterProduct('maxiCosi') }} to="">Maxi Cosi</Link><br />
+                                        <Link onClick={() => { filterProduct('phaseEight') }} to="">Phase Eight</Link><br />
+                                        <Link onClick={() => { filterProduct('tedBaker') }} to="">Ted Baker</Link><br />
                                     </div>
                                 </Accordion.Body>
                             </Accordion.Item>

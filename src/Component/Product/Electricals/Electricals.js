@@ -85,32 +85,32 @@ const Electricals = () => {
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Mobile, Cameras & Smart Tech</h6>
                         <div className="filterItem">
-                            <Link to="/electrocals/MobilePhonesAccessories">Mobile Phones & Accessories</Link><br />
-                            <Link to="/electrocals/CamerasCamcorders">Cameras & Camcorders</Link><br />
-                            <Link to="/electrocals/SmartFitnessWatches">Smart & Fitness Watches</Link><br />
+                            <Link to="/electricals/MobilePhonesAccessories">Mobile Phones & Accessories</Link><br />
+                            <Link to="/electricals/CamerasCamcorders">Cameras & Camcorders</Link><br />
+                            <Link to="/electricals/SmartFitnessWatches">Smart & Fitness Watches</Link><br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Brand</h6>
 
                         <div className="filterItem">
                             <Link to='/brand/aptamil'>Aptamil</Link><br />
-                            <Link to='/brand/baby-club'>Baby Club</Link><br />
+                            <Link to='/brand/babyClub'>Baby Club</Link><br />
                             <Link to='/brand/britax'>Britax</Link><br />
-                            <Link to='/brand/fit-flop'>Fit Flop</Link><br />
+                            <Link to='/brand/fitFlop'>Fit Flop</Link><br />
                             <Link to='/brand/gucci' >Gucci</Link><br />
                             <Link to='/brand/hipp' >Hipp</Link><br />
                             <Link to='/brand/jole' >Jole</Link><br />
                             <Link to='/brand/levis'>Levis</Link><br />
-                            <Link to='/brand/maxi-cosi'>Maxi Cosi</Link><br />
-                            <Link to='/brand/phase-eight'>Phase Eight</Link><br />
-                            <Link to='/brand/ted-baker'>Ted Baker</Link><br />
+                            <Link to='/brand/maxiCosi'>Maxi Cosi</Link><br />
+                            <Link to='/brand/phaseEight'>Phase Eight</Link><br />
+                            <Link to='/brand/tedBaker'>Ted Baker</Link><br />
                         </div>
                     </Col>
 
                     <Col md={10} xs={12}>
                         <Row md={12}>
                             <Col md={2}>
-                                <Link to="/product/Television" style={{
+                                <Link to="/electricals/Television" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
@@ -122,7 +122,7 @@ const Electricals = () => {
 
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/LaptopsMacBooks" style={{
+                                <Link to="/electricals/LaptopsMacBooks" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
@@ -134,7 +134,7 @@ const Electricals = () => {
 
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/IpadsTablets" style={{
+                                <Link to="/electricals/IpadsTablets" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
@@ -146,7 +146,7 @@ const Electricals = () => {
 
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/WashingMachines" style={{
+                                <Link to="/electricals/WashingMachines" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
@@ -159,7 +159,7 @@ const Electricals = () => {
                             </Col>
                             <Col md={2}>
 
-                                <Link to="/product/FridgeFreezers" style={{
+                                <Link to="/electricals/FridgeFreezers" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
@@ -170,7 +170,7 @@ const Electricals = () => {
                                 </Link>
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/MobilePhonesAccessories" style={{
+                                <Link to="/electricals/MobilePhonesAccessories" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>

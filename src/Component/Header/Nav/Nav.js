@@ -398,7 +398,7 @@ const Nav = () => {
                                                 <li><Link to="/beauty/VeganBeauty">Vegan Beauty</Link></li>
                                                 <li><Link to="/beauty/Wellness">Wellness</Link></li>
                                                 <li><Link to="/beauty/GiftSets">Gift Sets</Link></li>
-                                                <li><Link to="/beauty/NewAndExclusiveClarinsExtraordinaire">New & Exclusive: Clarins Eau Extraordinaire</Link></li>
+                                                <li><Link to="/beauty/NewAndExclusive">New & Exclusive: Clarins Eau Extraordinaire</Link></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -522,35 +522,35 @@ const Nav = () => {
                                             <h5>Dining Room Furniture</h5>
                                             <hr />
                                             <ul className="mega-links">
-                                                <li><Link to="/furnitureAndLighting/diningTables">Dining Tables</Link></li>
-                                                <li><Link to="/furnitureAndLighting/diningChairs">Dining Chairs </Link></li>
-                                                <li><Link to="/furnitureAndLighting/barChairsStools">Bar Chairs & Stools</Link></li>
-                                                <li><Link to="/furnitureAndLighting/diningBenches">Dining Benches</Link></li>
-                                                <li><Link to="/furnitureAndLighting/shopDiningRoom">Shop Dining Room</Link></li>
+                                                <li><Link to="/furnitureAndLighting/DiningTables">Dining Tables</Link></li>
+                                                <li><Link to="/furnitureAndLighting/DiningChairs">Dining Chairs </Link></li>
+                                                <li><Link to="/furnitureAndLighting/BarChairsStools">Bar Chairs & Stools</Link></li>
+                                                <li><Link to="/furnitureAndLighting/DiningBenches">Dining Benches</Link></li>
+                                                <li><Link to="/furnitureAndLighting/ShopDiningRoom">Shop Dining Room</Link></li>
                                             </ul>
                                         </div>
                                         <div className="row">
                                             <h5>Home Office & Storage</h5>
                                             <hr />
                                             <ul className="mega-links">
-                                                <li><Link to="/furnitureAndLighting/officeDesks">Office Desks</Link></li>
-                                                <li><Link to="/furnitureAndLighting/officeChairs">Office Chairs</Link></li>
-                                                <li><Link to="/furnitureAndLighting/homeStorage">Home Storage</Link></li>
-                                                <li><Link to="/furnitureAndLighting/shopHomeOffice">Shop Home Office</Link></li>
+                                                <li><Link to="/furnitureAndLighting/OfficeDesks">Office Desks</Link></li>
+                                                <li><Link to="/furnitureAndLighting/OfficeChairs">Office Chairs</Link></li>
+                                                <li><Link to="/furnitureAndLighting/HomeStorage">Home Storage</Link></li>
+                                                <li><Link to="/furnitureAndLighting/ShopHomeOffice">Shop Home Office</Link></li>
                                             </ul>
                                         </div>
                                         <div className="row">
                                             <h5>Lighting</h5>
                                             <hr />
                                             <ul className="mega-links">
-                                                <li><Link to="/furnitureAndLighting/ceilingLights">Ceiling Lights</Link></li>
-                                                <li><Link to="/furnitureAndLighting/deskTableLamps">Desk & Table lamps</Link></li>
-                                                <li><Link to="/furnitureAndLighting/floorLamps">Floor Lamps</Link></li>
-                                                <li><Link to="/furnitureAndLighting/wallLighting">Wall Lighting</Link></li>
-                                                <li><Link to="/furnitureAndLighting/gardenOutdoorlights">Garden & Outdoor lights</Link></li>
-                                                <li><Link to="/furnitureAndLighting/lightBulbs">Light Bulbs</Link></li>
-                                                <li><Link to="/furnitureAndLighting/lampShades">Lamp Shades</Link></li>
-                                                <li><Link to="/furnitureAndLighting/shopLighting">Shop Lighting</Link></li>
+                                                <li><Link to="/furnitureAndLighting/CeilingLights">Ceiling Lights</Link></li>
+                                                <li><Link to="/furnitureAndLighting/DeskTableLamps">Desk & Table lamps</Link></li>
+                                                <li><Link to="/furnitureAndLighting/FloorLamps">Floor Lamps</Link></li>
+                                                <li><Link to="/furnitureAndLighting/WallLighting">Wall Lighting</Link></li>
+                                                <li><Link to="/furnitureAndLighting/GardenOutdoorlights">Garden & Outdoor lights</Link></li>
+                                                <li><Link to="/furnitureAndLighting/LightBulbs">Light Bulbs</Link></li>
+                                                <li><Link to="/furnitureAndLighting/LampShades">Lamp Shades</Link></li>
+                                                <li><Link to="/furnitureAndLighting/ShopLighting">Shop Lighting</Link></li>
                                             </ul>
                                         </div>
                                         <div className="row">
@@ -625,9 +625,9 @@ const Nav = () => {
                                             <h5>Mobile, Cameras & Smart Tech</h5>
                                             <hr />
                                             <ul className="mega-links">
-                                                <li><Link to="/electrocals/MobilePhonesAccessories">Mobile Phones & Accessories</Link></li>
-                                                <li><Link to="/electrocals/CamerasCamcorders">Cameras & Camcorders</Link></li>
-                                                <li><Link to="/electrocals/SmartFitnessWatches">Smart & Fitness Watches</Link></li>
+                                                <li><Link to="/electricals/MobilePhonesAccessories">Mobile Phones & Accessories</Link></li>
+                                                <li><Link to="/electricals/CamerasCamcorders">Cameras & Camcorders</Link></li>
+                                                <li><Link to="/electricals/SmartFitnessWatches">Smart & Fitness Watches</Link></li>
                                             </ul>
                                         </div>
                                     </div>

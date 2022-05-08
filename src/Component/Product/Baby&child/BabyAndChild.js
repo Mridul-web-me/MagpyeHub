@@ -101,23 +101,23 @@ const BabyAndChild = () => {
 
                         <div className="filterItem">
                             <Link to='/brand/aptamil'>Aptamil</Link><br />
-                            <Link to='/brand/baby-club'>Baby Club</Link><br />
+                            <Link to='/brand/babyClub'>Baby Club</Link><br />
                             <Link to='/brand/britax'>Britax</Link><br />
-                            <Link to='/brand/fit-flop'>Fit Flop</Link><br />
+                            <Link to='/brand/fitFlop'>Fit Flop</Link><br />
                             <Link to='/brand/gucci' >Gucci</Link><br />
                             <Link to='/brand/hipp' >Hipp</Link><br />
                             <Link to='/brand/jole' >Jole</Link><br />
                             <Link to='/brand/levis'>Levis</Link><br />
-                            <Link to='/brand/maxi-cosi'>Maxi Cosi</Link><br />
-                            <Link to='/brand/phase-eight'>Phase Eight</Link><br />
-                            <Link to='/brand/ted-baker'>Ted Baker</Link><br />
+                            <Link to='/brand/maxiCosi'>Maxi Cosi</Link><br />
+                            <Link to='/brand/phaseEight'>Phase Eight</Link><br />
+                            <Link to='/brand/tedBaker'>Ted Baker</Link><br />
                         </div>
                     </Col>
 
                     <Col md={10} xs={12}>
                         <Row md={12}>
                             <Col md={2}>
-                                <Link to="/product/AllGirlsclothes" style={{
+                                <Link to="/babyAndChild/AllGirlsclothes" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
@@ -129,7 +129,7 @@ const BabyAndChild = () => {
 
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/AllBoysClothes" style={{
+                                <Link to="/babyAndChild/AllBoysClothes" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
@@ -141,7 +141,7 @@ const BabyAndChild = () => {
 
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/babyBoyClothes" style={{
+                                <Link to="/babyAndChild/babyBoyClothes" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
@@ -153,7 +153,7 @@ const BabyAndChild = () => {
 
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/nurseryFunitureFurnishings" style={{
+                                <Link to="/babyAndChild/nurseryFunitureFurnishings" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
@@ -166,7 +166,7 @@ const BabyAndChild = () => {
                             </Col>
                             <Col md={2}>
 
-                                <Link to="/product/Toys" style={{
+                                <Link to="/babyAndChild/Toys" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
@@ -177,7 +177,7 @@ const BabyAndChild = () => {
                                 </Link>
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/BabyToddlerFood" style={{
+                                <Link to="/babyAndChild/BabyToddlerFood" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>

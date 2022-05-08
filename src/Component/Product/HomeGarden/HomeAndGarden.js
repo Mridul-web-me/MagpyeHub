@@ -101,7 +101,7 @@ const HomeAndGarden = () => {
                             <Link to="/homeAndGarden/charcoalBBQs">Charcoal BBQs</Link><br />
                             <Link to="/homeAndGarden/pizzaOvens">Pizza Ovens</Link><br />
                             <Link to="/homeAndGarden/decorativeGardenAccessories"> Decorative Garden Accessories</Link><br />
-                            <Link to="/homeAndGarden/ardenOutdoorlights"> Outdoor Lighting</Link><br />
+                            <Link to="/homeAndGarden/outdoorlights"> Outdoor Lighting</Link><br />
                             <Link to="/homeAndGarden/parasolsAccessories"> Parasols & Accessories</Link><br />
                             <Link to="/homeAndGarden/shopGarden"> Shop Garden</Link><br />
                         </div>
@@ -111,23 +111,23 @@ const HomeAndGarden = () => {
 
                         <div className="filterItem">
                             <Link to='/brand/aptamil'>Aptamil</Link><br />
-                            <Link to='/brand/baby-club'>Baby Club</Link><br />
+                            <Link to='/brand/babyClub'>Baby Club</Link><br />
                             <Link to='/brand/britax'>Britax</Link><br />
-                            <Link to='/brand/fit-flop'>Fit Flop</Link><br />
+                            <Link to='/brand/fitFlop'>Fit Flop</Link><br />
                             <Link to='/brand/gucci' >Gucci</Link><br />
                             <Link to='/brand/hipp' >Hipp</Link><br />
                             <Link to='/brand/jole' >Jole</Link><br />
                             <Link to='/brand/levis'>Levis</Link><br />
-                            <Link to='/brand/maxi-cosi'>Maxi Cosi</Link><br />
-                            <Link to='/brand/phase-eight'>Phase Eight</Link><br />
-                            <Link to='/brand/ted-baker'>Ted Baker</Link><br />
+                            <Link to='/brand/maxiCosi'>Maxi Cosi</Link><br />
+                            <Link to='/brand/phaseEight'>Phase Eight</Link><br />
+                            <Link to='/brand/tedBaker'>Ted Baker</Link><br />
                         </div>
                     </Col>
 
                     <Col md={10} xs={12}>
                         <Row md={12}>
                             <Col md={2}>
-                                <Link to="/product/rugs" style={{
+                                <Link to="/homeAndGarden/rugs" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
@@ -139,7 +139,7 @@ const HomeAndGarden = () => {
 
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/cushions" style={{
+                                <Link to="/homeAndGarden/cushions" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
@@ -151,7 +151,7 @@ const HomeAndGarden = () => {
 
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/duvetCovers" style={{
+                                <Link to="/homeAndGarden/duvetCovers" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
@@ -163,7 +163,7 @@ const HomeAndGarden = () => {
 
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/towels" style={{
+                                <Link to="/homeAndGarden/towels" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
@@ -176,7 +176,7 @@ const HomeAndGarden = () => {
                             </Col>
                             <Col md={2}>
 
-                                <Link to="/product/pillows" style={{
+                                <Link to="/homeAndGarden/pillows" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
@@ -187,7 +187,7 @@ const HomeAndGarden = () => {
                                 </Link>
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/wallpaperPaintDIY" style={{
+                                <Link to="/homeAndGarden/wallpaperPaintDIY" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
@@ -202,16 +202,31 @@ const HomeAndGarden = () => {
                         </Row>
                         <Row>
                             <Col md={4} xs={12}>
-                                <img src={img8} alt="" className='img-fluid' />
-                                <h5>Bedding</h5>
+                                <Link to="/homeAndGarden/shopBedding" style={{
+                                    textDecoration: 'none',
+                                    color: '#000'
+                                }}>
+                                    <img src={img8} alt="" className='img-fluid' />
+                                    <h5>Bedding</h5>
+                                </Link>
                             </Col>
                             <Col md={4} xs={12}>
-                                <img src={img9} alt="" className='img-fluid' />
-                                <h5>Dining Room</h5>
+                                <Link to="/furnitureAndLighting/ShopDiningRoom" style={{
+                                    textDecoration: 'none',
+                                    color: '#000'
+                                }}>
+                                    <img src={img9} alt="" className='img-fluid' />
+                                    <h5>Dining Room</h5>
+                                </Link>
                             </Col>
                             <Col md={4} xs={12}>
-                                <img src={img10} alt="" className='img-fluid' />
-                                <h5>Accessories</h5>
+                                <Link to="/homeAndGarden/homeAccessories" style={{
+                                    textDecoration: 'none',
+                                    color: '#000'
+                                }}>
+                                    <img src={img10} alt="" className='img-fluid' />
+                                    <h5>Accessories</h5>
+                                </Link>
                             </Col>
                         </Row>
                     </Col>

@@ -104,7 +104,7 @@ const Payment = ({ address: clientAddress }) => {
             status: "Pending",
             expense: data.expense
         }
-        fetch('http://localhost:5000/orders', {
+        fetch('https://blooming-mountain-96721.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

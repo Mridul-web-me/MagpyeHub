@@ -93,7 +93,7 @@ const Carts = ({ cart }) => {
                 <Col xs={6} md={2}>
 
                     <i className="fa-solid fa-xmark"></i>
-                    <p> £{subtotalPrice}
+                    <p> £{subtotalPrice.toFixed(2)}
 
 
                         <Button variant="light" onClick={handleShow}>

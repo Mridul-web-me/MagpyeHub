@@ -3,7 +3,7 @@ import { Button, Card, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const FilterProduct = (props) => {
-    const { _id, title, img, img1, img2, img3, price } = props.product;
+    const { _id, title, img1, price } = props.product;
     return (
         <div>
             {title ? <Col className="productCard">

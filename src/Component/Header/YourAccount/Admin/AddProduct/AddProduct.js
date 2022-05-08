@@ -67,7 +67,7 @@ const AddProduct = () => {
 
 
             console.log("Blogdata", blogInfo)
-            axios.post('http://localhost:5000/products', blogInfo)
+            axios.post('https://blooming-mountain-96721.herokuapp.com/products', blogInfo)
                 .then(res => {
                     if (res.data.insertedId) {
                         alert('Product Added Successfully')

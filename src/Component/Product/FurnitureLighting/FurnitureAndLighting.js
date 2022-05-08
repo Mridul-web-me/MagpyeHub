@@ -109,23 +109,23 @@ const FurnitureAndLighting = () => {
 
                         <div className="filterItem">
                             <Link to='/brand/aptamil'>Aptamil</Link><br />
-                            <Link to='/brand/baby-club'>Baby Club</Link><br />
+                            <Link to='/brand/babyClub'>Baby Club</Link><br />
                             <Link to='/brand/britax'>Britax</Link><br />
-                            <Link to='/brand/fit-flop'>Fit Flop</Link><br />
+                            <Link to='/brand/fitFlop'>Fit Flop</Link><br />
                             <Link to='/brand/gucci' >Gucci</Link><br />
                             <Link to='/brand/hipp' >Hipp</Link><br />
                             <Link to='/brand/jole' >Jole</Link><br />
                             <Link to='/brand/levis'>Levis</Link><br />
-                            <Link to='/brand/maxi-cosi'>Maxi Cosi</Link><br />
-                            <Link to='/brand/phase-eight'>Phase Eight</Link><br />
-                            <Link to='/brand/ted-baker'>Ted Baker</Link><br />
+                            <Link to='/brand/maxiCosi'>Maxi Cosi</Link><br />
+                            <Link to='/brand/phaseEight'>Phase Eight</Link><br />
+                            <Link to='/brand/tedBaker'>Ted Baker</Link><br />
                         </div>
                     </Col>
 
                     <Col md={10} xs={12}>
                         <Row md={12}>
                             <Col md={2}>
-                                <Link to="/product/bedsideTables" style={{
+                                <Link to="/furnitureAndLighting/bedsideTables" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
@@ -138,7 +138,7 @@ const FurnitureAndLighting = () => {
 
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/beds" style={{
+                                <Link to="/furnitureAndLighting/beds" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
@@ -151,7 +151,7 @@ const FurnitureAndLighting = () => {
 
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/GardenOutdoorlights" style={{
+                                <Link to="/furnitureAndLighting/GardenOutdoorlights" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
@@ -164,7 +164,7 @@ const FurnitureAndLighting = () => {
 
                             </Col>
                             <Col md={2}>
-                                <Link to="/" style={{
+                                <Link to="/furnitureAndLighting/gardenDiningSets" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
@@ -178,7 +178,7 @@ const FurnitureAndLighting = () => {
                             </Col>
                             <Col md={2}>
 
-                                <Link to="/product/cabinetsSideboards" style={{
+                                <Link to="/furnitureAndLighting/cabinetsSideboards" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
@@ -190,7 +190,7 @@ const FurnitureAndLighting = () => {
                                 </Link>
                             </Col>
                             <Col md={2}>
-                                <Link to="/product/DiningTables" style={{
+                                <Link to="/furnitureAndLighting/DiningTables" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
@@ -205,16 +205,31 @@ const FurnitureAndLighting = () => {
                         </Row>
                         <Row>
                             <Col md={4} xs={12}>
-                                <img src={img8} alt="" className='img-fluid' />
-                                <h5>Sofas</h5>
+                                <Link to="/furnitureAndLighting/sofasArmchairs" style={{
+                                    textDecoration: 'none',
+                                    color: '#000'
+                                }}>
+                                    <img src={img8} alt="" className='img-fluid' />
+                                    <h5>Sofas</h5>
+                                </Link>
                             </Col>
                             <Col md={4} xs={12}>
-                                <img src={img9} alt="" className='img-fluid' />
-                                <h5>Bedroom</h5>
+                                <Link to="/furnitureAndLighting/shopBedroom" style={{
+                                    textDecoration: 'none',
+                                    color: '#000'
+                                }}>
+                                    <img src={img9} alt="" className='img-fluid' />
+                                    <h5>Bedroom</h5>
+                                </Link>
                             </Col>
                             <Col md={4} xs={12}>
-                                <img src={img10} alt="" className='img-fluid' />
-                                <h5>Lighting</h5>
+                                <Link to="/furnitureAndLighting/ShopLighting" style={{
+                                    textDecoration: 'none',
+                                    color: '#000'
+                                }}>
+                                    <img src={img10} alt="" className='img-fluid' />
+                                    <h5>Lighting</h5>
+                                </Link>
                             </Col>
                         </Row>
                     </Col>

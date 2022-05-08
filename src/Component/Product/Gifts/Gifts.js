@@ -95,16 +95,16 @@ const Gifts = () => {
 
                         <div className="filterItem">
                             <Link to='/brand/aptamil'>Aptamil</Link><br />
-                            <Link to='/brand/baby-club'>Baby Club</Link><br />
+                            <Link to='/brand/babyClub'>Baby Club</Link><br />
                             <Link to='/brand/britax'>Britax</Link><br />
-                            <Link to='/brand/fit-flop'>Fit Flop</Link><br />
+                            <Link to='/brand/fitFlop'>Fit Flop</Link><br />
                             <Link to='/brand/gucci' >Gucci</Link><br />
                             <Link to='/brand/hipp' >Hipp</Link><br />
                             <Link to='/brand/jole' >Jole</Link><br />
                             <Link to='/brand/levis'>Levis</Link><br />
-                            <Link to='/brand/maxi-cosi'>Maxi Cosi</Link><br />
-                            <Link to='/brand/phase-eight'>Phase Eight</Link><br />
-                            <Link to='/brand/ted-baker'>Ted Baker</Link><br />
+                            <Link to='/brand/maxiCosi'>Maxi Cosi</Link><br />
+                            <Link to='/brand/phaseEight'>Phase Eight</Link><br />
+                            <Link to='/brand/tedBaker'>Ted Baker</Link><br />
                         </div>
                     </Col>
 
@@ -162,7 +162,7 @@ const Gifts = () => {
 
                             </Col>
                             <Col md={3}>
-                                <Link to="/gifts/GiftsUnder100" style={{
+                                <Link to="/gifts/LuxuryGifts" style={{
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
