@@ -23,9 +23,6 @@ const Nav = () => {
                                     <div className='searchBar'>
                                         <label htmlFor="showMega" className="mobile-item">Search Products</label>
                                     </div>
-                                    <div className='mobileQuote'>
-                                        <h2 className='text-center' style={{ fontSize: '16px', color: '#fff' }}>QUOTE</h2>
-                                    </div>
                                 </div>
                                 <div className="mega-box">
                                     <div className="content">

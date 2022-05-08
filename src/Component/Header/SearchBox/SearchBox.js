@@ -23,13 +23,13 @@ const SearchBox = () => {
         <>
             <div>
                 <form className="d-flex searchBox" onSubmit={handleSearchField} required>
-                    <input className="form-control me-2" placeholder="Search for Product & Brand..." aria-label="Search" onChange={(e) => setSearchProducts(e.target.value)} />
+                    <input className="form-control" placeholder="Search for Product & Brand..." aria-label="Search" onChange={(e) => setSearchProducts(e.target.value)} />
                     <Link to={`/${searchProducts}`}
                     >
                         <button type="submit" style={{
                             border: 'none',
                             position: 'relative',
-                            right: '135%',
+                            right: '165%',
                             height: '38px',
                             margin: '2px 0'
                         }}> <i className="fas fa-search" /></button>
