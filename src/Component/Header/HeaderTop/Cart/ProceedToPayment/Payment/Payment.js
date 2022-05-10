@@ -8,10 +8,13 @@ import { useForm } from 'react-hook-form';
 import useProduct from '../../../../../../hooks/Product/useProduct';
 import useAuth from '../../../../../../hooks/useAuth';
 import { clearTheCart } from '../../../../../../fakeDB';
+import { Link } from 'react-router-dom';
 
 
 const Payment = ({ address: clientAddress }) => {
-    const { total, carts, } = useProduct({});
+    const { total, carts, totalCartQuantity } = useProduct({});
+    const handleClose = () => setShow(false);
+    const [show, setShow] = useState(false);
     const stripe = useStripe();
     const elements = useElements();
     const [error, setError] = useState('')
@@ -24,7 +27,7 @@ const Payment = ({ address: clientAddress }) => {
     // console.log(carts)
 
     useEffect(() => {
-        fetch('https://localhost:5000/create-payment-intent', {
+        fetch('http://localhost:5000/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -104,7 +107,7 @@ const Payment = ({ address: clientAddress }) => {
             status: "Pending",
             expense: data.expense
         }
-        fetch('https://blooming-mountain-96721.herokuapp.com/orders', {
+        fetch('http://localhost:5000/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -128,7 +131,7 @@ const Payment = ({ address: clientAddress }) => {
         <div>
             <div className="container">
                 <div className="product">
-                    <h4>Your Order</h4>
+                    <h4>Your Order {totalCartQuantity}</h4>
                     <div>
                         {
                             carts.map(product => <div key={product._id}>
@@ -137,7 +140,7 @@ const Payment = ({ address: clientAddress }) => {
                                     justifyContent: 'space-between',
                                     alignItem: 'center'
                                 }}>
-                                    <p style={{ margin: '0 20px' }}>{product.title}</p>
+                                    <p style={{ margin: '0 20px' }}>Product </p>
                                     <p>£{product.price}</p>
                                 </div>
                             </div>)

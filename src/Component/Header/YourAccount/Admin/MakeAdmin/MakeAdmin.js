@@ -12,13 +12,13 @@ const MakeAdmin = () => {
     const [success, setSuccess] = useState(false)
 
 
-    const handleOnBlur = e => {
+    const handleOnChange = e => {
         setEmail(e.target.value)
     }
     const handleAdminSubmit = e => {
         e.preventDefault()
         const user = { email }
-        fetch('https://blooming-mountain-96721.herokuapp.com/users/admin', {
+        fetch('http://localhost:5000/users/admin', {
             method: 'PUT',
             headers: {
                 // 'authorization': `Bearer ${token}`,
@@ -28,9 +28,11 @@ const MakeAdmin = () => {
         })
             .then(res => res.json())
             .then(data => {
-                if (data.modifiedCount) {
+                if (data.modifiedCount > 0) {
                     console.log(data);
                     setSuccess(true);
+                    // setEmail()
+                    alert('Admin Added Success')
                 }
             })
 
@@ -49,7 +51,7 @@ const MakeAdmin = () => {
             <PromoUnit></PromoUnit>
             <Container>
                 <form onSubmit={handleAdminSubmit}>
-                    <input className="form-control me-2" required placeholder="Search for Product & Brand..." aria-label="Search" onBlur={handleOnBlur} />
+                    <input className="form-control me-2" required placeholder="Enter Admin Email Address" aria-label="Search" onChange={handleOnChange} />
                     <Button type='submit'>Make Admin</Button>
                 </form>
             </Container>

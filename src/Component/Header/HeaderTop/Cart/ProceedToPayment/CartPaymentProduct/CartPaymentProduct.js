@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import useProduct from '../../../../../hooks/Product/useProduct';
 
 const CartPaymentProduct = ({ cart }) => {
-    // const { totalQuantity, total, carts, } = useProduct({});
+    // const { totalCartQuantity, total, carts, } = useProduct({});
     const { _id, img, title, price, quantity } = cart;
 
 

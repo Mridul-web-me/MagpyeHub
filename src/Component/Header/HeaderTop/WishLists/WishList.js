@@ -1,5 +1,5 @@
-import React from 'react'
-import { Button, Card, Col } from 'react-bootstrap'
+import React, { useState } from 'react'
+import { Button, Card, Col, Modal } from 'react-bootstrap'
 import useProduct from '../../../../hooks/Product/useProduct';
 import { removeWishListFromDb } from '../../../../fakeDB'
 
@@ -19,7 +19,6 @@ const WishList = ({ wishList }) => {
 
     const updateCart = () => {
         handleAddToCart(wishList)
-        handleWishListRemove(_id)
     }
 
     const updateWishListDb = () => {
@@ -30,10 +29,33 @@ const WishList = ({ wishList }) => {
 
     }
 
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     return (
         <div>
             <Col>
-                <Button variant="light" onClick={() => { handleWishListRemove(_id) }}>
+                <Modal
+                    show={show}
+                    onHide={handleClose}
+                    backdrop="static"
+                    keyboard={false}
+                >
+                    <Modal.Header closeButton>
+                    </Modal.Header>
+                    <Modal.Body>
+                        Are you sure want to remove this product from the Wish List?
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={handleClose}>
+                            No
+                        </Button>
+                        <Button variant="primary" onClick={() => { handleWishListRemove(_id) }}>Yes</Button>
+                    </Modal.Footer>
+                </Modal>
+                <Button variant="light" onClick={() => { handleShow() }}>
                     <svg style={{
                         color: 'red',
                         cursor: 'pointer',

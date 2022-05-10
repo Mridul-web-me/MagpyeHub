@@ -13,7 +13,7 @@ const useProductFilter = () => {
     // const size = 5;
     useEffect(() => {
         // fetch('./ProductData.JSON')
-        fetch(`https://blooming-mountain-96721.herokuapp.com/products`)
+        fetch(`http://localhost:5000/products`)
             .then(res => res.json())
             .then(data => {
                 setAllProducts(data.products)
@@ -37,12 +37,12 @@ const useProductFilter = () => {
             const storedCart = [];
             setLoading(false)
             for (const _id in savedCart) {
-                const AddedProduct = AllProducts.find(product => product._id === _id);
-                if (AddedProduct) {
+                const AddedCartProduct = AllProducts.find(cartProduct => cartProduct._id === _id);
+                if (AddedCartProduct) {
                     const quantity = savedCart[_id];
-                    AddedProduct.quantity = quantity;
+                    AddedCartProduct.quantity = quantity;
                     // console.log(quantity);
-                    storedCart.push(AddedProduct);
+                    storedCart.push(AddedCartProduct);
                 }
             }
             setCart(storedCart);
@@ -56,12 +56,12 @@ const useProductFilter = () => {
             const storedWishList = [];
             setLoading(false)
             for (const _id in savedWishList) {
-                const AddedProduct = AllProducts.find(product => product._id === _id);
-                if (AddedProduct) {
+                const AddedWishListProduct = AllProducts.find(wishListProduct => wishListProduct._id === _id);
+                if (AddedWishListProduct) {
                     const quantity = savedWishList[_id];
-                    AddedProduct.quantity = quantity;
+                    AddedWishListProduct.quantity = quantity;
                     // console.log(quantity);
-                    storedWishList.push(AddedProduct);
+                    storedWishList.push(AddedWishListProduct);
                 }
             }
             setWishLists(storedWishList);
@@ -95,14 +95,25 @@ const useProductFilter = () => {
 
 
     // Total Price
-    let totalQuantity = 0;
+    let totalCartQuantity = 0;
     let total = 0;
-    for (const product of carts) {
-        if (!product.quantity) {
-            product.quantity = 1;
+    for (const cartProduct of carts) {
+        if (!cartProduct.quantity) {
+            cartProduct.quantity = 1;
         }
-        total = total + product.price * product.quantity;
-        totalQuantity = totalQuantity + product.quantity;
+        total = total + cartProduct.price * cartProduct.quantity;
+        totalCartQuantity = totalCartQuantity + cartProduct.quantity;
+    }
+
+    // Total Price
+    let totalWishListQuantity = 0;
+    let wishListTotal = 0;
+    for (const wishListProduct of wishLists) {
+        if (!wishListProduct.quantity) {
+            wishListProduct.quantity = 1;
+        }
+        wishListTotal = wishListTotal + wishListProduct.price * wishListProduct.quantity;
+        totalWishListQuantity = totalWishListQuantity + wishListProduct.quantity;
     }
 
     const shipping = total > 0 ? 15 : 0;
@@ -117,7 +128,8 @@ const useProductFilter = () => {
         handleWishListRemove,
         carts,
         grandTotal,
-        totalQuantity,
+        totalCartQuantity,
+        totalWishListQuantity,
         total, tax, shipping,
         pageCount,
         page,

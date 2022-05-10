@@ -272,9 +272,9 @@ const Nav = () => {
                                             <h5>Nightwear, Underwear & Socks</h5>
                                             <hr />
                                             <ul className="mega-links">
-                                                <li><Link to="/men/pyjamasNightwear">Pyjamas & Nightwear</Link></li>
+                                                <li><Link to="/men/PyjamasNightwear">Pyjamas & Nightwear</Link></li>
                                                 <li><Link to="/men/robesAndDressingGowns">Robes & Dressing Gowns</Link></li>
-                                                <li><Link to="/men/menSocks">Socks</Link></li>
+                                                <li><Link to="/men/MenSocks">Socks</Link></li>
                                                 <li><Link to="/men/underwear">Underwear</Link></li>
                                             </ul>
                                         </div>

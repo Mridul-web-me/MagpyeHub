@@ -19,7 +19,7 @@ const WomenBelts = () => {
     const size = 8;
     const category = 'womenBelts'
     useEffect(() => {
-        fetch(`https://blooming-mountain-96721.herokuapp.com/products?category=${category}&&page=${page}&&size=${size}`)
+        fetch(`http://localhost:5000/products?category=${category}&&page=${page}&&size=${size}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products)
@@ -79,21 +79,21 @@ const WomenBelts = () => {
                                         <Link onClick={() => { filterProduct('shirtsTops') }} to="">Shirts & Tops</Link> <br />
                                         <Link onClick={() => { filterProduct('shorts') }} to="">Shorts</Link> <br />
                                         <Link onClick={() => { filterProduct('skirts') }} to="">Skirts</Link> <br />
-                                        <Link onClick={() => { filterProduct('sportsClothes') }} to=" ">Sports & Clothes  </Link> <br />
-                                        <Link onClick={() => { filterProduct('swimwearBeachwear') }} to=" ">Swimwear Beachwear  </Link> <br />
-                                        <Link onClick={() => { filterProduct('women') }} to="-Trousers">Trousers</Link> <br />
+                                        <Link onClick={() => { filterProduct('sportsClothes') }} to="">Sports & Clothes  </Link> <br />
+                                        <Link onClick={() => { filterProduct('swimwearBeachwear') }} to="">Swimwear Beachwear  </Link> <br />
+                                        <Link onClick={() => { filterProduct('womenTrousers') }} to="">Trousers</Link> <br />
                                         <Link onClick={() => { filterProduct('leggings') }} to="">Leggings</Link> <br />
                                         <Link onClick={() => { filterProduct('plusSize') }} to="">Plus Size</Link> <br />
-                                        <Link onClick={() => { filterProduct('maternityClothes') }} to=" ">Maternity Clothes</Link> <br />
+                                        <Link onClick={() => { filterProduct('maternityClothes') }} to="">Maternity Clothes</Link> <br />
                                         <Link onClick={() => { filterProduct('cashmere') }} to="">Cashmere</Link> <br />
-                                        <Link onClick={() => { filterProduct('coatsJackets') }} to=" ">Coats & Jackets</Link> <br />
-                                        <Link onClick={() => { filterProduct('jumpersKnitwear') }} to=" ">Jumpers & Knitwear</Link> <br />
-                                        <Link onClick={() => { filterProduct('jumpsuits') }} to=" ">Jumpsuits</Link> <br />
+                                        <Link onClick={() => { filterProduct('coatsJackets') }} to="">Coats & Jackets</Link> <br />
+                                        <Link onClick={() => { filterProduct('jumpersKnitwear') }} to="">Jumpers & Knitwear</Link> <br />
+                                        <Link onClick={() => { filterProduct('jumpsuits') }} to="">Jumpsuits</Link> <br />
                                         <Link onClick={() => { filterProduct('linen') }} to="">Linen</Link> <br />
-                                        <Link onClick={() => { filterProduct('loungewear') }} to=" ">Loungewear</Link> <br />
-                                        <Link onClick={() => { filterProduct('petite') }} to=" ">Petite</Link> <br />
-                                        <Link onClick={() => { filterProduct('occasionwear') }} to=" ">Occasionwear</Link> <br />
-                                        <Link onClick={() => { filterProduct('weddingBoutique') }} to=" ">Wedding</Link> <br />
+                                        <Link onClick={() => { filterProduct('loungewear') }} to="">Loungewear</Link> <br />
+                                        <Link onClick={() => { filterProduct('petite') }} to="">Petite</Link> <br />
+                                        <Link onClick={() => { filterProduct('occasionwear') }} to="">Occasionwear</Link> <br />
+                                        <Link onClick={() => { filterProduct('weddingBoutique') }} to="">Wedding</Link> <br />
                                     </div>
                                 </Accordion.Body>
                             </Accordion.Item>

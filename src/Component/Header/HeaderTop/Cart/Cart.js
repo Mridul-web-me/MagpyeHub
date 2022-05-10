@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import useProduct from '../../../../hooks/Product/useProduct';
 import Footer from '../../../Footer/Footer';
 import Newsletter from '../../../Newsletter/Newsletter';
+import FavouriteProduct from '../../../Product/FavouriteProduct/FavouriteProduct';
 import PromoUnit from '../../../PromoUnit/PromoUnit';
 import Header from '../../Header';
 import Carts from './Carts';
@@ -13,7 +14,7 @@ import Paypal from './ProceedToPayment/Paypal/Paypal';
 
 
 const Cart = () => {
-    const { totalQuantity, total, carts, loading } = useProduct({});
+    const { totalCartQuantity, total, carts, loading } = useProduct({});
 
     return (
         <>
@@ -48,7 +49,7 @@ const Cart = () => {
                                     margin: '10px 0'
                                 }}>
                                     <Col xs={6} md={6}>
-                                        <h5 className='text-start'><i className="fas fa-shopping-basket"></i> Your Basket Contains: {totalQuantity} Items</h5>
+                                        <h5 className='text-start'><i className="fas fa-shopping-basket"></i> Your Basket Contains: {totalCartQuantity} Items</h5>
                                     </Col>
                                     <Col xs={6} md={2}>
                                         <h5>Quantity</h5>
@@ -115,10 +116,20 @@ const Cart = () => {
                     </>
                     :
 
-                    <div>
-                        <h4>You currently have nothing in your Basket</h4>
-                        <p>Why not have a look at some of our best offers we've selected for you below:</p>
-                    </div>
+                    <>
+                        <div style={{
+                            height: '50vh',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center'
+                        }}>
+                            <div>
+                                <h4>You currently have nothing in your Basket</h4>
+                                <p>Why not have a look at some of our best offers we've selected for you below:</p>
+                            </div>
+                        </div>
+                        <FavouriteProduct></FavouriteProduct>
+                    </>
                 }
             </Container>
             <Newsletter></Newsletter>

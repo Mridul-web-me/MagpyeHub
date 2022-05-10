@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import useProduct from '../../../../hooks/Product/useProduct';
 import Footer from '../../../Footer/Footer';
 import Newsletter from '../../../Newsletter/Newsletter';
+import FavouriteProduct from '../../../Product/FavouriteProduct/FavouriteProduct';
 import PromoUnit from '../../../PromoUnit/PromoUnit';
 import Header from '../../Header';
 import WishList from './WishList';
@@ -18,7 +19,7 @@ const WishLists = () => {
             </Helmet>
             <Header></Header>
             <PromoUnit></PromoUnit>
-            <Container>
+            <Container fluid>
                 {loading ? <div>
                     <Spinner animation="grow" variant="info" />
                     <Spinner animation="grow" variant="info" />
@@ -30,7 +31,7 @@ const WishLists = () => {
                         </div>
                         <div className='py-5 bg-light'>
                             <div>
-                                <Row xs={3} md={3} className="g-2">
+                                <Row xs={12} md={3} className="g-2">
                                     {
                                         wishLists.map((wishList) => <WishList
                                             key={wishList._id}
@@ -42,10 +43,21 @@ const WishLists = () => {
                         </div>
                     </>
                     :
-                    <div>
-                        <h4>You currently have nothing in your Wish List</h4>
-                        <p>Why not have a look at some of our best offers we've selected for you below:</p>
-                    </div>}
+                    <>
+                        <div style={{
+                            height: '50vh',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center'
+                        }}>
+                            <div>
+                                <h4>You currently have nothing in your Wish List</h4>
+                                <p>Why not have a look at some of our best offers we've selected for you below:</p>
+                            </div>
+                        </div>
+                        <FavouriteProduct></FavouriteProduct>
+                    </>
+                }
             </Container>
             <Newsletter></Newsletter>
             <Footer></Footer>

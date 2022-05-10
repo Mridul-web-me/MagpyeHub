@@ -445,8 +445,10 @@ li.nav-item {
   #showDrop:checked~.drop-menu,
   #showMega6:checked~.mega-box6,
   #showDrop:checked~.drop-menu,
-  #showMega7:checked~.mega-box7 #showDrop:checked~.drop-menu,
-  #showMega8:checked~.mega-box8 #showDrop:checked~.drop-menu,
+  #showMega7:checked~.mega-box7,
+  #showDrop:checked~.drop-menu,
+  #showMega8:checked~.mega-box8,
+  #showDrop:checked~.drop-menu,
   #showMega9:checked~.mega-box9 {
     max-height: 100%;
   }

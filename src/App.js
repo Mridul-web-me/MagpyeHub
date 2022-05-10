@@ -417,7 +417,7 @@ function App() {
             <Route path="/payment" element={<PrivateRoute><ConfirmPayment /></PrivateRoute>} />
             <Route path="/register" element={<LoginForm />} />
             <Route path="/register" element={<Login />} />
-            <Route path="/makeAdmin" element={<MakeAdmin />} />
+            <Route path="/makeAdmin" element={<AdminRoute><MakeAdmin /></AdminRoute>} />
 
             {/* BEDDING */}
 
@@ -559,9 +559,9 @@ function App() {
 
             {/* Nightwear, Underwear & Socks */}
 
-            <Route path="/men/pyjamasNightwear" element={<PyjamasNightwear />} />
+            <Route path="/men/PyjamasNightwear" element={<PyjamasNightwear />} />
             <Route path="/men/robesAndDressingGowns" element={<RobesAndDressingGowns />} />
-            <Route path="/men/menSocks" element={<MenSocks />} />
+            <Route path="/men/MenSocks" element={<MenSocks />} />
             <Route path="/men/underwear" element={<Underwear />} />
 
             {/* Footwear */}

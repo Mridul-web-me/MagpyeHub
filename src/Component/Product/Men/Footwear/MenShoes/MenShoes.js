@@ -19,7 +19,7 @@ const MenShoes = () => {
     const size = 8;
     const category = 'menShoes'
     useEffect(() => {
-        fetch(`https://blooming-mountain-96721.herokuapp.com/products?category=${category}&&page=${page}&&size=${size}`)
+        fetch(`http://localhost:5000/products?category=${category}&&page=${page}&&size=${size}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products)
@@ -102,9 +102,9 @@ const MenShoes = () => {
                                 <Accordion.Header>Nightwear, Underwear & Socks</Accordion.Header>
                                 <Accordion.Body>
                                     <div className="filterItem">
-                                        <Link onClick={() => { filterProduct('pyjamasNightwear') }} to="">Pyjamas & Nightwear</Link> <br />
+                                        <Link onClick={() => { filterProduct('PyjamasNightwear') }} to="">Pyjamas & Nightwear</Link> <br />
                                         <Link onClick={() => { filterProduct('robesAndDressingGowns') }} to="">Robes & Dressing Gowns</Link> <br />
-                                        <Link onClick={() => { filterProduct('menSocks') }} to="">Socks</Link> <br />
+                                        <Link onClick={() => { filterProduct('MenSocks') }} to="">Socks</Link> <br />
                                         <Link onClick={() => { filterProduct('underwear') }} to="">Underwear</Link> <br />
                                     </div>
                                 </Accordion.Body>

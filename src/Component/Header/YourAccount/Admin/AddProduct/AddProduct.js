@@ -8,8 +8,12 @@ import logo from '../../../../../img/logo.jpg'
 import toast from 'react-hot-toast';
 import useAuth from '../../../../../hooks/useAuth';
 import { Helmet } from 'react-helmet';
+import TextEditor from './TextEditor';
 import { Editor, EditorState } from "draft-js";
 import "draft-js/dist/Draft.css";
+// import EditorText from './Editor';
+import MyEditor from './Editor';
+import JoditReact from './JoditReact';
 
 // import { Editor, EditorState } from 'draft-js';
 // import 'draft-js/dist/Draft.css';
@@ -47,14 +51,13 @@ const AddProduct = () => {
             }
             const blogInfo = {
                 title: data.title,
-                description: data.description,
                 category: data.category,
                 price: data.price,
                 img: imageURL[0],
                 img1: imageURL[1],
                 img2: imageURL[2],
                 img3: imageURL[3],
-
+                description: data.description,
                 // img1: imageURL1,
 
                 ProductUpdate: data.ProductUpdate,
@@ -67,7 +70,7 @@ const AddProduct = () => {
 
 
             console.log("Blogdata", blogInfo)
-            axios.post('https://blooming-mountain-96721.herokuapp.com/products', blogInfo)
+            axios.post('http://localhost:5000/products', blogInfo)
                 .then(res => {
                     if (res.data.insertedId) {
                         alert('Product Added Successfully')
@@ -80,7 +83,7 @@ const AddProduct = () => {
             reset();
         }
 
-
+        data.preventDefault()
 
     }
 
@@ -132,21 +135,6 @@ const AddProduct = () => {
                                     <Form.Control {...register("price")} type="text" placeholder='price' required />
                                 </Col>
                             </Form.Group>
-                            <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
-                                <Form.Label column sm={4}>
-                                    Description
-                                </Form.Label>
-                                <Col sm={8} style={{ border: "1px solid black", minHeight: "6em", cursor: "text" }}
-                                >
-                                    <Editor
-
-                                        editorState={editorState}
-                                        onChange={setEditorState}
-                                        placeholder="Write something!"
-                                    />
-                                    {/* <Form.Control {...register("description")} type="text" placeholder='Description' required /> */}
-                                </Col>
-                            </Form.Group>
                             <Form.Group as={Row} className="mb-3" controlId="formHorizontalTownCity">
                                 <Form.Label column sm={4}>
                                     category
@@ -164,7 +152,7 @@ const AddProduct = () => {
 
                                 </Col>
                             </Form.Group>
-                            <Form.Group as={Row} className="mb-3" controlId="formHorizontalCountry">
+                            {/* <Form.Group as={Row} className="mb-3" controlId="formHorizontalCountry">
                                 <Form.Label column sm={4}>
                                     Product Update
                                 </Form.Label>
@@ -172,9 +160,26 @@ const AddProduct = () => {
                                     <Form.Control {...register("ProductUpdate")} placeholder="Product Update" type="text" />
 
                                 </Col>
+                            </Form.Group> */}
+
+                            <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
+                                <Form.Label column sm={4}>
+                                    Description
+                                </Form.Label>
+                                <Col sm={8}
+                                >
+                                    {/* <TextEditor>
+                                        <Form.Control {...register("description")} type="text" placeholder='Description' required />
+                                    </TextEditor> */}
+
+                                    {/* <MyEditor></MyEditor> */}
+                                    <JoditReact
+                                        name={'description'}
+                                        {...register("description")}
+                                    ></JoditReact>
+                                    {/* <Form.Control {...register("description")} type="text" placeholder='Description' required /> */}
+                                </Col>
                             </Form.Group>
-
-
                             <Button variant="primary" type="submit">
                                 Submit
                             </Button>
@@ -182,13 +187,6 @@ const AddProduct = () => {
                         </Form>
                     </Col>
                 </Row>
-
-                <Editor
-
-                    editorState={editorState}
-                    onChange={setEditorState}
-                    placeholder="Write something!"
-                />
             </Container>
             <p>
 

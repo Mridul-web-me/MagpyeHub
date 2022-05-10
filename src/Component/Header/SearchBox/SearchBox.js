@@ -8,7 +8,7 @@ const SearchBox = () => {
     const [products, setProducts] = useState([])
     const [searchProducts, setSearchProducts] = useState('')
     useEffect(() => {
-        axios.get(`https://blooming-mountain-96721.herokuapp.com/products`)
+        axios.get(`http://localhost:5000/products`)
             // .then(res => res.json())
             .then(data => setProducts(data.data))
     }, [searchProducts])

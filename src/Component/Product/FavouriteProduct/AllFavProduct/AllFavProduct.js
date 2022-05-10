@@ -9,7 +9,7 @@ const AllFavProduct = ({ product, handleAddToCart }) => {
 
             <Col className="productCard">
                 <Card>
-                    <Card.Img className='img-fluid' variant="top" style={{ height: '200px' }} src={img} height="300px" />
+                    <Card.Img className='img-fluid' variant="top" style={{ height: '270px' }} src={img} height="300px" />
                     <Card.Body>
                         <Link to={`/details/${_id}`} style={{
                             textDecoration: 'none',

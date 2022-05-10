@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Button, Modal } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
 
 const History = ({ orders }) => {
     const { _id, fullName, email } = orders
@@ -16,7 +15,7 @@ const History = ({ orders }) => {
         setOrder(updatedStatus)
     }
     const handleUpdateStatus = e => {
-        const url = `https://blooming-mountain-96721.herokuapp.com/orders/${_id}`
+        const url = `http://localhost:5000/orders/${_id}`
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -37,7 +36,7 @@ const History = ({ orders }) => {
     }
 
     const handleDelete = _id => {
-        const url = `https://blooming-mountain-96721.herokuapp.com/orders/${_id}`;
+        const url = `http://localhost:5000/orders/${_id}`;
         fetch(url, {
             method: "DELETE"
         })

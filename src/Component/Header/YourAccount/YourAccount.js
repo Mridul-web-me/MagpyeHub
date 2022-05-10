@@ -92,6 +92,11 @@ const YourAccount = () => {
                         <p>Securely logout of your MagpyeHub.com account</p>
                         <hr />
                     </Col>}
+                    {admin && <Col xs={6}>
+                        <h4><Link to="/makeAdmin">Make Admin</Link></h4>
+                        <p>Securely logout of your MagpyeHub.com account</p>
+                        <hr />
+                    </Col>}
                 </Row>
 
 

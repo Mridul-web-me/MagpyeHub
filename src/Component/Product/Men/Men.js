@@ -70,9 +70,9 @@ const Men = () => {
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Nightwear, Underwear & Socks</h6>
                         <div className="filterItem">
-                            <Link to="/men/pyjamasNightwear">Pyjamas & Nightwear</Link><br />
+                            <Link to="/men/PyjamasNightwear">Pyjamas & Nightwear</Link><br />
                             <Link to="/men/robesAndDressingGowns">Robes & Dressing Gowns</Link><br />
-                            <Link to="/men/menSocks">Socks</Link><br />
+                            <Link to="/men/MenSocks">Socks</Link><br />
                             <Link to="/men/underwear">Underwear</Link><br />
                         </div>
                         <hr />

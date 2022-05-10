@@ -115,6 +115,8 @@ const useFirebase = () => {
             if (user) {
                 getIdToken(user)
                     .then(idToken => {
+                        // console.log(idToken)
+                        localStorage.setItem('idToken', idToken)
                         setToken(idToken)
                     })
                 setUser(user)
@@ -142,7 +144,7 @@ const useFirebase = () => {
     }
 
     useEffect(() => {
-        fetch(`https://blooming-mountain-96721.herokuapp.com/users/${user.email}`)
+        fetch(`http://localhost:5000/users/${user.email}`)
             .then(res => res.json())
             .then(data => {
 
@@ -152,7 +154,7 @@ const useFirebase = () => {
 
     const saveUser = (email, displayName, phone, address1, address2, townCity, country, postcode, telephone, method) => {
         const user = { email, displayName, phone, address1, address2, townCity, country, postcode, telephone };
-        fetch('https://blooming-mountain-96721.herokuapp.com/users', {
+        fetch('http://localhost:5000/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'

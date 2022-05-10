@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { Accordion, Col, Container, Row, Spinner } from 'react-bootstrap';
+import { Accordion, Button, Col, Container, Modal, Row, Spinner } from 'react-bootstrap';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import Footer from '../../../../Footer/Footer';
 import Header from '../../../Header';
+import UpdatePrice from './UpdatePrice';
+import UpdateTitle from './UpdateTitle';
 
 const ManageProducts = () => {
   const [filter, setFilter] = useState([])
   const [loading, setLoading] = useState(true)
   const [products, setProducts] = useState([])
   useEffect(() => {
-    fetch(`https://blooming-mountain-96721.herokuapp.com/products`)
+    fetch(`http://localhost:5000/products`)
       .then(res => res.json())
       .then(data => {
         setProducts(data.products)
@@ -28,7 +30,7 @@ const ManageProducts = () => {
   };
 
   const handleDelete = id => {
-    const url = `https://blooming-mountain-96721.herokuapp.com/products/${id}`;
+    const url = `http://localhost:5000/products/${id}`;
     fetch(url, {
       method: "DELETE"
     })
@@ -42,6 +44,7 @@ const ManageProducts = () => {
         }
       })
   }
+
   return (
     <div>
       <Helmet>
@@ -202,7 +205,7 @@ const ManageProducts = () => {
                   <div className="filterItem">
                     <Link onClick={() => { filterProduct('kidsshirtsTops') }} to="">Shirts & Tops</Link><br />
                     <Link onClick={() => { filterProduct('kidsdresses') }} to="">Dresses</Link><br />
-                    <Link onClick={() => { filterProduct('kidspyjamasNightwear') }} to="">Pyjamas & Nightwear</Link><br />
+                    <Link onClick={() => { filterProduct('kidsPyjamasNightwear') }} to="">Pyjamas & Nightwear</Link><br />
                     <Link onClick={() => { filterProduct('kidstrousersLeggings') }} to="">Trousers & Leggings</Link><br />
                     <Link onClick={() => { filterProduct('kidsjeans') }} to="">Jeans</Link><br />
                     <Link onClick={() => { filterProduct('kidspartyWear') }} to="">Party Wear</Link><br />
@@ -224,7 +227,7 @@ const ManageProducts = () => {
                   <div className="filterItem">
                     <Link onClick={() => { filterProduct('kidsshortsTrousers') }} to="">Shorts & Trousers</Link><br />
                     <Link onClick={() => { filterProduct('kidsshirtsTops') }} to="">Shirts & Tops</Link><br />
-                    <Link onClick={() => { filterProduct('kidspyjamasNightwear') }} to="">Pyjamas & Nightwear</Link><br />
+                    <Link onClick={() => { filterProduct('kidsPyjamasNightwear') }} to="">Pyjamas & Nightwear</Link><br />
                     <Link onClick={() => { filterProduct('kidspartywear') }} to="">Party wear</Link><br />
                     <Link onClick={() => { filterProduct('kidspants') }} to="">Pants</Link><br />
                     <Link onClick={() => { filterProduct('kidssocks') }} to="">Socks</Link><br />
@@ -484,6 +487,7 @@ const ManageProducts = () => {
                         <h5>{product.title}</h5>
                       </Link>
                       <p>Product Code: {product._id}</p>
+                      <p>Product Price: {product.price}</p>
                       <p>Category: {product.category}</p>
                     </Col>
                     <Col xs={6} md={2}>
@@ -506,6 +510,12 @@ const ManageProducts = () => {
                           cursor: 'pointer'
                         }} onClick={() => handleDelete(product._id)} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" height="30px"><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z" /></svg>
                       </p>
+                      <UpdatePrice
+                        product={product}
+                      ></UpdatePrice>
+                      <UpdateTitle
+                        product={product}
+                      ></UpdateTitle>
                     </Col>
                   </Row>
                 </Container>

@@ -20,7 +20,7 @@ const Shorts = () => {
     const size = 8;
     const category = 'shorts'
     useEffect(() => {
-        fetch(`https://blooming-mountain-96721.herokuapp.com/products?category=${category}&&page=${page}&&size=${size}`)
+        fetch(`http://localhost:5000/products?category=${category}&&page=${page}&&size=${size}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products)
@@ -82,7 +82,7 @@ const Shorts = () => {
                                         <Link onClick={() => { filterProduct('skirts') }} to="">Skirts</Link> <br />
                                         <Link onClick={() => { filterProduct('sportsClothes') }} to=" ">Sports & Clothes  </Link> <br />
                                         <Link onClick={() => { filterProduct('swimwearBeachwear') }} to=" ">Swimwear Beachwear  </Link> <br />
-                                        <Link onClick={() => { filterProduct('women') }} to="-Trousers">Trousers</Link> <br />
+                                        <Link onClick={() => { filterProduct('womenTrousers') }} to="">Trousers</Link> <br />
                                         <Link onClick={() => { filterProduct('leggings') }} to="">Leggings</Link> <br />
                                         <Link onClick={() => { filterProduct('plusSize') }} to="">Plus Size</Link> <br />
                                         <Link onClick={() => { filterProduct('maternityClothes') }} to=" ">Maternity Clothes</Link> <br />

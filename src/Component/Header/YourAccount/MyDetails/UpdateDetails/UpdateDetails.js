@@ -6,6 +6,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import useAuth from '../../../../../hooks/useAuth';
 import Footer from '../../../../Footer/Footer';
 import Header from '../../../Header';
+import UpdatePhone from './UpdatePhone';
 
 
 const UpdateDetails = () => {
@@ -16,7 +17,7 @@ const UpdateDetails = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get(`https://blooming-mountain-96721.herokuapp.com/users?email=${user.email}`, {
+        axios.get(`http://localhost:5000/users?email=${user.email}`, {
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('idToken')}`
             }
@@ -28,24 +29,13 @@ const UpdateDetails = () => {
             })
     }, [user.email])
 
-    const handleNameUpdate = e => {
-        const updatedName = e.target.value
-        const updatedAddressBook = [{ name: updatedName, email: user.email }];
-        setProfile(updatedAddressBook);
-    }
+    // const handleNameUpdate = e => {
+    //     const updatedName = e.target.value
+    //     const updatedAddressBook = [{ name: updatedName, email: user.email }];
+    //     setProfile(updatedAddressBook);
+    // }
 
     const handleUpdateDetails = e => {
-        const url = `https://blooming-mountain-96721.herokuapp.com/users/${profileId}`
-        fetch(url, {
-            method: 'PUT',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(profile)
-        })
-            .then(res => res.json())
-            .then(data => console.log(data))
-
 
         e.preventDefault()
     }
@@ -66,7 +56,7 @@ const UpdateDetails = () => {
                                             Your Full Name
                                         </Form.Label>
                                         <Col sm={8}>
-                                            {user.displayName && <Form.Control onChange={handleNameUpdate} type="name" defaultValue={user.displayName} required />}
+                                            {user.displayName && <Form.Control type="name" defaultValue={user.displayName} required />}
                                         </Col>
                                     </Form.Group>
 
@@ -111,11 +101,16 @@ const UpdateDetails = () => {
                                         </Col>
                                     </Form.Group>
                                     <Form.Group as={Row} className="mb-3" controlId="formHorizontalMobile">
-                                        <Form.Label column sm={4}>
+                                        <Form.Label column sm={3}>
                                             Mobile:
                                         </Form.Label>
-                                        <Col sm={8}>
+                                        <Col sm={7}>
                                             <Form.Control type="text" placeholder="Phone " required />
+                                        </Col>
+                                        <Col sm={2}>
+                                            <UpdatePhone
+                                                update={update}
+                                            ></UpdatePhone>
                                         </Col>
                                     </Form.Group>
                                     <Button variant="primary" type="submit" disabled>

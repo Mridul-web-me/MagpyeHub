@@ -9,7 +9,7 @@ import './HeaderTop.css'
 
 const HeaderTop = () => {
     const { user } = useAuth();
-    const { totalQuantity } = useProduct();
+    const { totalCartQuantity, totalWishListQuantity } = useProduct();
     return (
         <div>
             <div className='header-top'>
@@ -58,6 +58,9 @@ const HeaderTop = () => {
                                 <div className='wishList'>
                                     <Link to="/wish-list">
                                         <i className="fas fa-heart"></i>
+                                        <Badge bg="secondary" className='fs-8' style={{
+                                            borderRadius: '50%'
+                                        }}>{totalWishListQuantity}</Badge>
                                         <p>Wish List</p>
                                     </Link>
                                 </div>
@@ -67,7 +70,7 @@ const HeaderTop = () => {
                                         <i className="fas fa-shopping-basket"></i>
                                         <Badge bg="secondary" className='fs-8' style={{
                                             borderRadius: '50%'
-                                        }}>{totalQuantity}</Badge>
+                                        }}>{totalCartQuantity}</Badge>
                                         <p>My Basket</p>
 
                                     </a>
