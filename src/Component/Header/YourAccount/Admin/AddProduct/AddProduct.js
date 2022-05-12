@@ -9,18 +9,25 @@ import toast from 'react-hot-toast';
 import useAuth from '../../../../../hooks/useAuth';
 import { Helmet } from 'react-helmet';
 import TextEditor from './TextEditor';
-import { Editor, EditorState } from "draft-js";
+// import { Editor, EditorState } from "draft-js";
 import "draft-js/dist/Draft.css";
 // import EditorText from './Editor';
 import MyEditor from './Editor';
 import JoditReact from './JoditReact';
+import { Editor } from '@tinymce/tinymce-react';
 
 // import { Editor, EditorState } from 'draft-js';
 // import 'draft-js/dist/Draft.css';
 // import { Editor } from "react-draft-wysiwyg";
 // import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
-
+// import { EditorState } from "draft-js";
+// import { Editor } from "react-draft-wysiwyg";
+import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+import './Draft.css'
 const AddProduct = () => {
+    const editorRef = useRef(null);
+    // const [editorState, seteditorState] = useState(EditorState.createEmpty());
+    const [description, setDescription] = useState('');
     const { register, handleSubmit, reset } = useForm();
     const { user } = useAuth()
     const onSubmit = async data => {
@@ -48,7 +55,18 @@ const AddProduct = () => {
                     toast.dismiss(loading);
                     return toast.error('Failed to upload the image!');
                 }
+
             }
+
+
+            setDescription(editorRef.current.value);
+            // setContent(e);
+            console.log(editorRef.current.value);
+            const content = {
+                description: editorRef.current.value
+            }
+            console.log(content);
+
             const blogInfo = {
                 title: data.title,
                 category: data.category,
@@ -70,7 +88,7 @@ const AddProduct = () => {
 
 
             console.log("Blogdata", blogInfo)
-            axios.post('http://localhost:5000/products', blogInfo)
+            axios.post('https://arcane-temple-26692.herokuapp.com/products', blogInfo)
                 .then(res => {
                     if (res.data.insertedId) {
                         alert('Product Added Successfully')
@@ -85,15 +103,19 @@ const AddProduct = () => {
 
         data.preventDefault()
 
+
     }
 
-    const [editorState, setEditorState] = useState(() =>
-        EditorState.createEmpty()
-    );
+    // const [editorState, setEditorState] = useState(() =>
+    //     EditorState.createEmpty()
+    // );
 
 
 
 
+    // const onEditorStateChange = (editorState) => {
+    //     seteditorState(editorState);
+    // };
 
 
     return (
@@ -173,10 +195,45 @@ const AddProduct = () => {
                                     </TextEditor> */}
 
                                     {/* <MyEditor></MyEditor> */}
-                                    <JoditReact
+                                    {/* <JoditReact
                                         name={'description'}
                                         {...register("description")}
-                                    ></JoditReact>
+                                    ></JoditReact> */}
+                                    {/* <Editor
+                                        editorState={editorState}
+                                        className="border"
+                                        toolbarClassName="toolbarClassName"
+                                        wrapperClassName="wrapperClassName"
+                                        editorClassName="editorClassName"
+                                        onEditorStateChange={onEditorStateChange}
+                                        {...register("description")}
+                                        type="text"
+                                        placeholder="description"
+                                        required
+                                        readonly={false}
+                                    /> */}
+                                    <Editor
+                                        {...register('description')}
+                                        type="text"
+                                        placeholder="description"
+                                        required
+                                        onSubmit={(evt, editor) => editorRef.current = editor}
+                                        // value={description}
+                                        init={{
+                                            height: 500,
+                                            menubar: false,
+                                            plugins: [
+                                                'advlist', 'autolink', 'lists', 'link', 'image', 'charmap',
+                                                'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
+                                                'insertdatetime', 'media', 'table', 'preview', 'help', 'wordcount'
+                                            ],
+                                            toolbar: 'undo redo | blocks | ' +
+                                                'bold italic forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | bullist numlist outdent indent | ' +
+                                                'removeformat | help',
+                                            content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+                                        }}
+                                    />
                                     {/* <Form.Control {...register("description")} type="text" placeholder='Description' required /> */}
                                 </Col>
                             </Form.Group>

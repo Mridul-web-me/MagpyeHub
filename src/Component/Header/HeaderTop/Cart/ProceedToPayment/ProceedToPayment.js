@@ -21,7 +21,7 @@ const ProceedToPayment = () => {
     const { total, } = useProduct({});
     const [profile, setProfile] = useState([])
     useEffect(() => {
-        axios.get(`http://localhost:5000/users?email=${user.email}`, {
+        axios.get(`https://arcane-temple-26692.herokuapp.com/users?email=${user.email}`, {
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('idToken')}`
             }
@@ -33,7 +33,7 @@ const ProceedToPayment = () => {
                 setLoading(false)
             });
     }, [user.email])
-    console.log('client profile', profile)
+    // console.log('client profile', profile)
     return <div>
 
         <Helmet>

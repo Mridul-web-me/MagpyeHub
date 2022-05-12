@@ -1,6 +1,6 @@
 
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
-import React from 'react'
+import React, { useRef } from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { Button, Spinner } from 'react-bootstrap';
@@ -9,7 +9,8 @@ import useProduct from '../../../../../../hooks/Product/useProduct';
 import useAuth from '../../../../../../hooks/useAuth';
 import { clearTheCart } from '../../../../../../fakeDB';
 import { Link } from 'react-router-dom';
-
+import { PayPalButton } from 'react-paypal-button-v2'
+import Paypal from '../Paypal/Paypal';
 
 const Payment = ({ address: clientAddress }) => {
     const { total, carts, totalCartQuantity } = useProduct({});
@@ -17,6 +18,7 @@ const Payment = ({ address: clientAddress }) => {
     const [show, setShow] = useState(false);
     const stripe = useStripe();
     const elements = useElements();
+    const [orderID, setOrderID] = useState(false);
     const [error, setError] = useState('')
     const [clientSecret, setClientSecret] = useState('')
     const [success, setSuccess] = useState('')
@@ -27,7 +29,7 @@ const Payment = ({ address: clientAddress }) => {
     // console.log(carts)
 
     useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
+        fetch('https://arcane-temple-26692.herokuapp.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -37,6 +39,76 @@ const Payment = ({ address: clientAddress }) => {
             .then(res => res.json())
             .then(data => setClientSecret(data.clientSecret));
     }, [total]);
+
+    const paypal = useRef()
+
+    useEffect(() => {
+        window.paypal
+            .Buttons({
+                createOrder: (data, actions, err) => {
+                    actions.order.create({
+                        intent: 'CAPTURE',
+                        purchase_units: [
+                            {
+                                description: 'Coll Looking Table',
+                                amount: {
+                                    currency_code: 'GBP',
+                                    value: total
+                                },
+                            },
+                        ],
+                    });
+                },
+                onApprove: async (data, actions) => {
+                    const order = await actions.order.capture()
+                    console.log(order)
+                },
+                onError: (err) => {
+                    console.log(err)
+                },
+
+            })
+
+        const blogInfo = {
+            fullName: displayName,
+            email: email,
+            address: address,
+            address1: address1,
+            phone: phone,
+            city: city,
+            zip: zip,
+            state: state,
+            order: carts,
+            amount: total,
+            // created: actions.created,
+            // transaction: actions.order.client_secret.slice('_secret')[0],
+            // ProductUpdate: data.ProductUpdate,
+            // author: data.author,
+            publishDate: new Date().toLocaleDateString(),
+            status: "Pending",
+            // expense: data.expense
+        }
+        fetch('https://arcane-temple-26692.herokuapp.com/orders', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(blogInfo)
+        })
+            .then(res => res.json())
+            .then(data => {
+
+                if (orderID) {
+                    alert('Order Processed Successfully')
+                    clearTheCart()
+                    reset()
+                }
+
+            })
+
+
+            .render(paypal.current)
+    }, [])
 
 
     const handleSubmit = async (data) => {
@@ -107,7 +179,7 @@ const Payment = ({ address: clientAddress }) => {
             status: "Pending",
             expense: data.expense
         }
-        fetch('http://localhost:5000/orders', {
+        fetch('https://arcane-temple-26692.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -126,6 +198,85 @@ const Payment = ({ address: clientAddress }) => {
                 }
             })
     }
+    // const handlePaypalSubmit = async (data) => {
+    //     data.preventDefault();
+    //     const paypal = elements.getElement();
+    //     if (paypal === null) {
+    //         return;
+    //     }
+    //     setProcessing(true);
+    //     if (error) {
+    //         setError(error.message);
+    //         setSuccess('');
+    //     }
+    //     else {
+    //         setError('');
+    //         console.log();
+    //     }
+
+    //     // Payment intent
+    //     const { paymentIntent, error: intentError } = await paypal(
+    //         clientSecret,
+    //         {
+    //             payment_method: {
+    //                 paypal,
+    //                 billing_details: {
+    //                     name: user.displayName,
+    //                     email: useAuth.email
+    //                 },
+    //             },
+    //         },
+    //     );
+
+    //     if (intentError) {
+    //         setError(intentError.message)
+    //         setSuccess('')
+    //         setProcessing(false)
+    //     }
+    //     else {
+    //         setError('')
+    //         console.log(paymentIntent)
+    //         setSuccess('Your Payment Processed Successfully')
+    //         setProcessing(false)
+    //     }
+    //     const blogInfo = {
+    //         fullName: displayName,
+    //         email: email,
+    //         address: address,
+    //         address1: address1,
+    //         phone: phone,
+    //         city: city,
+    //         zip: zip,
+    //         state: state,
+    //         order: carts,
+    //         amount: paymentIntent.amount,
+    //         created: paymentIntent.created,
+    //         transaction: paymentIntent.client_secret.slice('_secret')[0],
+    //         ProductUpdate: data.ProductUpdate,
+    //         author: data.author,
+    //         publishDate: new Date().toLocaleDateString(),
+    //         status: "Pending",
+    //         expense: data.expense
+    //     }
+    //     fetch('https://arcane-temple-26692.herokuapp.com/orders', {
+    //         method: 'POST',
+    //         headers: {
+    //             'content-type': 'application/json'
+    //         },
+    //         body: JSON.stringify(blogInfo)
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             if (!clientSecret || intentError) {
+    //                 return;
+    //             }
+    //             else {
+    //                 alert('Order Processed Successfully')
+    //                 clearTheCart()
+    //                 reset()
+    //             }
+    //         })
+    // }
 
     return (
         <div>
@@ -195,6 +346,27 @@ const Payment = ({ address: clientAddress }) => {
                     </>
                 }
             </div>
+
+            {/* <form onSubmit={handlePaypalSubmit}>
+                <PayPalButton
+                    amount={total}
+                    // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
+                    onSuccess={(paymentIntent, data) => {
+                        alert("Transaction completed by " + paymentIntent.user.displayName);
+
+                        // OPTIONAL: Call your server to save the transaction
+
+                    }}
+                    options={{
+                        clientId: process.env.PAYPAL_CLIENT_ID,
+                        secretId: process.env.PAYPAL_SECRET_ID
+                    }}
+                />
+            </form> */}
+            <div>
+                <div ref={paypal}></div>
+            </div>
+
         </div>
     )
 }

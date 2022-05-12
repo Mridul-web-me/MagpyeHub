@@ -15,7 +15,7 @@ const SearchResult = () => {
     const [product, setProduct] = useState([]);
     const [loading, setLoading] = useState(true)
     useEffect(() => {
-        fetch(`http://localhost:5000/products/search?search=${searchText}`)
+        fetch(`https://arcane-temple-26692.herokuapp.com/products/search?search=${searchText}`)
             .then(res => res.json())
             .then(data => {
                 setProduct(data)

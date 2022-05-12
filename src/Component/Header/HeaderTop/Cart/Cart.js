@@ -93,7 +93,7 @@ const Cart = () => {
                                 <Link to='/proceedToPayment'>
                                     <Button variant='success'>Proceed To Payment </Button>
                                 </Link>
-                                <PayPalButton
+                                {/* <PayPalButton
                                     amount="0.01"
                                     // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
                                     onSuccess={(details, data) => {
@@ -110,7 +110,8 @@ const Cart = () => {
                                     options={{
                                         clientId: "ARXoNpMQajaHN0iOWEBXWeAA07PFlSHhKyCrMhW812is6kcns9LxLiUQU7_LT3kPJDVBxdfynWupHUOPPAYPAL_CLIENT_ID"
                                     }}
-                                />
+                                /> */}
+                                <Paypal></Paypal>
                             </div>
                         </div>
                     </>

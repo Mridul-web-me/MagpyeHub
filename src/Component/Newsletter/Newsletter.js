@@ -10,7 +10,7 @@ const Newsletter = () => {
     const onSubmit = data => {
         // console.log(data);
         // console.log('clicked');
-        axios.post('http://localhost:5000/newsLater', data)
+        axios.post('https://arcane-temple-26692.herokuapp.com/newsLater', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Email Added Successfully')

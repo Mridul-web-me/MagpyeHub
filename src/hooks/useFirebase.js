@@ -115,8 +115,9 @@ const useFirebase = () => {
             if (user) {
                 getIdToken(user)
                     .then(idToken => {
+                        const newLocal = localStorage.setItem;
                         // console.log(idToken)
-                        localStorage.setItem('idToken', idToken)
+                        newLocal('idToken', idToken)
                         setToken(idToken)
                     })
                 setUser(user)
@@ -144,7 +145,7 @@ const useFirebase = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/users/${user.email}`)
+        fetch(`https://arcane-temple-26692.herokuapp.com/users/${user.email}`)
             .then(res => res.json())
             .then(data => {
 
@@ -154,7 +155,7 @@ const useFirebase = () => {
 
     const saveUser = (email, displayName, phone, address1, address2, townCity, country, postcode, telephone, method) => {
         const user = { email, displayName, phone, address1, address2, townCity, country, postcode, telephone };
-        fetch('http://localhost:5000/users', {
+        fetch('https://arcane-temple-26692.herokuapp.com/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'

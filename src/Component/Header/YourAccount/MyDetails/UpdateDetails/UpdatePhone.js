@@ -24,7 +24,7 @@ const UpdatePhone = ({ update }) => {
         setUsers(updatedCountry)
     }
     const handleUpdatePrice = e => {
-        const url = `http://localhost:5000/users/${_id}`
+        const url = `https://arcane-temple-26692.herokuapp.com/users/${_id}`
         fetch(url, {
             method: 'PUT',
             headers: {

@@ -16,7 +16,7 @@ const UpdatePrice = ({ product }) => {
         setOrder(updatedPrice)
     }
     const handleUpdatePrice = e => {
-        const url = `http://localhost:5000/products/${_id}`
+        const url = `https://arcane-temple-26692.herokuapp.com/products/${_id}`
         fetch(url, {
             method: 'PUT',
             headers: {
