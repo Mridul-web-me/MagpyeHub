@@ -115,10 +115,8 @@ const useFirebase = () => {
             if (user) {
                 getIdToken(user)
                     .then(idToken => {
-                        const newLocal = localStorage.setItem;
-                        // console.log(idToken)
-                        newLocal('idToken', idToken)
-                        setToken(idToken)
+                        const newLocal = localStorage.setItem('idToken', idToken);
+                        setToken(newLocal)
                     })
                 setUser(user)
             } else {

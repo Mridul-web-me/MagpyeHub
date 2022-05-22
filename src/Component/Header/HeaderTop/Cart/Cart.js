@@ -1,9 +1,10 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import { Button, Col, Container, Row, Spinner } from 'react-bootstrap';
 import { Helmet } from 'react-helmet';
-import { PayPalButton } from 'react-paypal-button-v2';
 import { Link } from 'react-router-dom';
 import useProduct from '../../../../hooks/Product/useProduct';
+import useAuth from '../../../../hooks/useAuth';
 import Footer from '../../../Footer/Footer';
 import Newsletter from '../../../Newsletter/Newsletter';
 import FavouriteProduct from '../../../Product/FavouriteProduct/FavouriteProduct';
@@ -15,6 +16,21 @@ import Paypal from './ProceedToPayment/Paypal/Paypal';
 
 const Cart = () => {
     const { totalCartQuantity, total, carts, loading } = useProduct({});
+    const { user } = useAuth()
+    const [profile, setProfile] = useState([])
+
+    useEffect(() => {
+        axios.get(`https://arcane-temple-26692.herokuapp.com/users?email=${user.email}`, {
+            headers: {
+                'authorization': `Bearer ${localStorage.getItem('idToken')}`
+            }
+        })
+            // .then(res => res.json())
+            .then(data => {
+
+                setProfile(data.data)
+            });
+    }, [user.email])
 
     return (
         <>
@@ -93,25 +109,14 @@ const Cart = () => {
                                 <Link to='/proceedToPayment'>
                                     <Button variant='success'>Proceed To Payment </Button>
                                 </Link>
-                                {/* <PayPalButton
-                                    amount="0.01"
-                                    // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
-                                    onSuccess={(details, data) => {
-                                        alert("Transaction completed by " + details.payer.name.given_name);
+                                {profile.map(clientAddress =>
+                                    <>
 
-                                        // OPTIONAL: Call your server to save the transaction
-                                        return fetch("/my-api/create-payment", {
-                                            method: "post",
-                                            body: JSON.stringify({
-                                                orderId: data.orderID
-                                            })
-                                        });
-                                    }}
-                                    options={{
-                                        clientId: "ARXoNpMQajaHN0iOWEBXWeAA07PFlSHhKyCrMhW812is6kcns9LxLiUQU7_LT3kPJDVBxdfynWupHUOPPAYPAL_CLIENT_ID"
-                                    }}
-                                /> */}
-                                <Paypal></Paypal>
+                                        <Paypal clientAddress={clientAddress} />
+                                    </>
+
+                                )
+                                }
                             </div>
                         </div>
                     </>

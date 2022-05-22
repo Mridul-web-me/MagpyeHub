@@ -1,36 +1,23 @@
 // import axios from 'axios';
 import axios from 'axios';
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import logo from '../../../../../img/logo.jpg'
 import toast from 'react-hot-toast';
-import useAuth from '../../../../../hooks/useAuth';
 import { Helmet } from 'react-helmet';
-import TextEditor from './TextEditor';
-// import { Editor, EditorState } from "draft-js";
 import "draft-js/dist/Draft.css";
-// import EditorText from './Editor';
-import MyEditor from './Editor';
-import JoditReact from './JoditReact';
-import { Editor } from '@tinymce/tinymce-react';
-
-// import { Editor, EditorState } from 'draft-js';
-// import 'draft-js/dist/Draft.css';
-// import { Editor } from "react-draft-wysiwyg";
-// import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
-// import { EditorState } from "draft-js";
-// import { Editor } from "react-draft-wysiwyg";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import './Draft.css'
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 const AddProduct = () => {
-    const editorRef = useRef(null);
-    // const [editorState, seteditorState] = useState(EditorState.createEmpty());
-    const [description, setDescription] = useState('');
     const { register, handleSubmit, reset } = useForm();
-    const { user } = useAuth()
+    const [value, setValue] = useState('')
+
     const onSubmit = async data => {
+
         console.log('img', data);
         if (!data.img) {
             return toast.error('Please upload an image!');
@@ -59,14 +46,6 @@ const AddProduct = () => {
             }
 
 
-            setDescription(editorRef.current.value);
-            // setContent(e);
-            console.log(editorRef.current.value);
-            const content = {
-                description: editorRef.current.value
-            }
-            console.log(content);
-
             const blogInfo = {
                 title: data.title,
                 category: data.category,
@@ -75,15 +54,9 @@ const AddProduct = () => {
                 img1: imageURL[1],
                 img2: imageURL[2],
                 img3: imageURL[3],
-                description: data.description,
+                description: value,
                 // img1: imageURL1,
-
                 ProductUpdate: data.ProductUpdate,
-                author: data.author,
-                publishDate: new Date().toLocaleDateString(),
-                status: "Pending",
-                authorEmail: user.email,
-                expense: data.expense
             }
 
 
@@ -100,23 +73,12 @@ const AddProduct = () => {
 
             reset();
         }
-
-        data.preventDefault()
-
-
+    }
+    const handleEditorSubmit = () => {
+        reset()
     }
 
-    // const [editorState, setEditorState] = useState(() =>
-    //     EditorState.createEmpty()
-    // );
-
-
-
-
-    // const onEditorStateChange = (editorState) => {
-    //     seteditorState(editorState);
-    // };
-
+    console.log(value)
 
     return (
         <>
@@ -190,51 +152,11 @@ const AddProduct = () => {
                                 </Form.Label>
                                 <Col sm={8}
                                 >
-                                    {/* <TextEditor>
-                                        <Form.Control {...register("description")} type="text" placeholder='Description' required />
-                                    </TextEditor> */}
-
-                                    {/* <MyEditor></MyEditor> */}
-                                    {/* <JoditReact
-                                        name={'description'}
-                                        {...register("description")}
-                                    ></JoditReact> */}
-                                    {/* <Editor
-                                        editorState={editorState}
-                                        className="border"
-                                        toolbarClassName="toolbarClassName"
-                                        wrapperClassName="wrapperClassName"
-                                        editorClassName="editorClassName"
-                                        onEditorStateChange={onEditorStateChange}
-                                        {...register("description")}
-                                        type="text"
-                                        placeholder="description"
-                                        required
-                                        readonly={false}
-                                    /> */}
-                                    <Editor
+                                    <ReactQuill
                                         {...register('description')}
-                                        type="text"
-                                        placeholder="description"
-                                        required
-                                        onSubmit={(evt, editor) => editorRef.current = editor}
-                                        // value={description}
-                                        init={{
-                                            height: 500,
-                                            menubar: false,
-                                            plugins: [
-                                                'advlist', 'autolink', 'lists', 'link', 'image', 'charmap',
-                                                'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
-                                                'insertdatetime', 'media', 'table', 'preview', 'help', 'wordcount'
-                                            ],
-                                            toolbar: 'undo redo | blocks | ' +
-                                                'bold italic forecolor | alignleft aligncenter ' +
-                                                'alignright alignjustify | bullist numlist outdent indent | ' +
-                                                'removeformat | help',
-                                            content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
-                                        }}
+                                        onChange={setValue}
+                                        onSubmit={handleEditorSubmit}
                                     />
-                                    {/* <Form.Control {...register("description")} type="text" placeholder='Description' required /> */}
                                 </Col>
                             </Form.Group>
                             <Button variant="primary" type="submit">
