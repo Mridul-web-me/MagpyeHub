@@ -12,7 +12,7 @@ const AllProduct = (props) => {
 
             <Col className="productCard">
                 <Card>
-                    <Card.Img className='img-fluid' variant="top" style={{ height: "270px" }} src={img} />
+                    <Card.Img className='img-fluid' variant="top" style={{ height: "270px", }} src={img} />
                     <Card.Body>
                         <Link to={`/details/${_id}`} style={{
                             textDecoration: 'none',
@@ -22,9 +22,6 @@ const AllProduct = (props) => {
                         </Link>
                         <Card.Title >
                             £ {price}
-                        </Card.Title>
-                        <Card.Title >
-                            {category}
                         </Card.Title>
                         <div className='groupButton'>
                             <div style={{

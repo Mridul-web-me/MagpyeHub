@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { Button, Modal } from 'react-bootstrap';
+import { Button, Col, Modal, Row } from 'react-bootstrap';
+import './History.css'
 
 const History = ({ orders }) => {
     const { _id, fullName, email } = orders
@@ -54,17 +55,20 @@ const History = ({ orders }) => {
 
     return (
         <div>
-            <div style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center'
-            }}>
-                <h4>Name: {fullName}</h4>
-                <h4>Email: {email}</h4>
-                <div>
-                    <Button onClick={() => handleDelete(orders._id)} variant='danger'>Delete Order</Button>
-                    <Button onClick={handleShow}>Update Order Status</Button></div>
-            </div>
+            <Row className="history">
+                <Col md={4} xs={12}>
+                    <h4>Name: {fullName}</h4>
+                </Col>
+                <Col md={4} xs={12}>
+                    <h4>Email: {email}</h4>
+                </Col>
+                <Col md={4} xs={12}>
+                    <div>
+                        <Button onClick={() => handleDelete(orders._id)} variant='danger'>Delete Order</Button>
+                        <Button onClick={handleShow}>Update Order Status</Button></div>
+
+                </Col>
+            </Row>
             <Modal
                 show={show} onHide={handleClose}
                 size="lg"

@@ -131,7 +131,10 @@ const SportAndLeisure = () => {
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
-                                    <img src={img1} alt="" width='130px' fluid />
+                                    <img style={{
+                                        borderRadius: '50%',
+                                        margin: '10px '
+                                    }} src={img1} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
                                     }}>WOMEN'S SPORTS CLOTHING</h5>
@@ -143,7 +146,10 @@ const SportAndLeisure = () => {
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
-                                    <img src={img2} alt="" width='130px' fluid />
+                                    <img style={{
+                                        borderRadius: '50%',
+                                        margin: '10px '
+                                    }} src={img2} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
                                     }}>MEN'S SPORTS CLOTHING</h5>
@@ -155,7 +161,10 @@ const SportAndLeisure = () => {
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
-                                    <img src={img3} alt="" width='130px' fluid />
+                                    <img style={{
+                                        borderRadius: '50%',
+                                        margin: '10px '
+                                    }} src={img3} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
                                     }}>FITNESS MACHINES</h5>
@@ -167,7 +176,10 @@ const SportAndLeisure = () => {
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
-                                    <img src={img4} alt="" width='130px' fluid />
+                                    <img style={{
+                                        borderRadius: '50%',
+                                        margin: '10px '
+                                    }} src={img4} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
                                     }}>SPORTS EQUIPMENT</h5>
@@ -180,7 +192,10 @@ const SportAndLeisure = () => {
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
-                                    <img src={img5} alt="" width='130px' fluid />
+                                    <img style={{
+                                        borderRadius: '50%',
+                                        margin: '10px '
+                                    }} src={img5} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
                                     }}>LUGGAGE</h5>
@@ -191,7 +206,10 @@ const SportAndLeisure = () => {
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
-                                    <img src={img6} alt="" width='130px' fluid />
+                                    <img style={{
+                                        borderRadius: '50%',
+                                        margin: '10px '
+                                    }} src={img6} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
                                     }}>HABERDASHERY</h5>

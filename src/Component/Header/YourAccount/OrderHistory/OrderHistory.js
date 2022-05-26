@@ -24,6 +24,7 @@ const OrderHistory = () => {
             // .then(res => res.json())
             .then(data => {
                 setOrders(data.data)
+                console.log(data.data)
                 setLoading(false)
             });
     }, [user.email])
@@ -54,14 +55,11 @@ const OrderHistory = () => {
                         <Col xs={6} md={6}>
                             <h5 className='text-start'><i className="fas fa-shopping-basket"></i> Your Order Items</h5>
                         </Col>
-                        <Col xs={6} md={1}>
+                        <Col xs={6} md={2}>
                             <h5>Quantity</h5>
                         </Col>
-                        <Col xs={6} md={1}>
-                            <h5>Price</h5>
-                        </Col>
                         <Col xs={6} md={2}>
-                            <h5>Sub Total</h5>
+                            <h5>Price</h5>
                         </Col>
                         <Col xs={6} md={2}>
                             <h5>Status</h5>

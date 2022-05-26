@@ -25,7 +25,7 @@ const YourAccount = () => {
                 <h4 className='text-start' style={{
                     color: '#303030',
                     fontWeight: '300'
-                }} >Hello {user.displayName}, Welcome to your MagpyeHub.com Account</h4>
+                }} >Hello <span style={{ textTransform: 'uppercase', fontWeight: '500' }}>{user.displayName}</span>, Welcome to your MagpyeHub.com Account</h4>
             </Container>
             <Container className='yourAccountContent'>
                 <Row style={{

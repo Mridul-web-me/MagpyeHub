@@ -29,7 +29,7 @@ const SearchBox = () => {
                         <button type="submit" style={{
                             border: 'none',
                             position: 'relative',
-                            right: '165%',
+                            right: '105%',
                             height: '38px',
                             margin: '2px 0'
                         }}> <i className="fas fa-search" /></button>

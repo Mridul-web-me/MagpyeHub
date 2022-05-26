@@ -138,7 +138,9 @@ const Beauty = () => {
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
-                                    <img src={img1} alt="" width='130px' fluid />
+                                    <img style={{
+                                        borderRadius: '50%'
+                                    }} src={img1} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
                                     }}>UOMA</h5>
@@ -150,7 +152,9 @@ const Beauty = () => {
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
-                                    <img src={img2} alt="" width='130px' fluid />
+                                    <img style={{
+                                        borderRadius: '50%'
+                                    }} src={img2} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
                                     }}>MAKE UP</h5>
@@ -162,7 +166,9 @@ const Beauty = () => {
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
-                                    <img src={img3} alt="" width='130px' fluid />
+                                    <img style={{
+                                        borderRadius: '50%'
+                                    }} src={img3} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
                                     }}>SKINCARE</h5>
@@ -174,7 +180,9 @@ const Beauty = () => {
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
-                                    <img src={img4} alt="" width='130px' fluid />
+                                    <img style={{
+                                        borderRadius: '50%'
+                                    }} src={img4} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
                                     }}>WOMEN'S PERFUME</h5>
@@ -187,7 +195,9 @@ const Beauty = () => {
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
-                                    <img src={img5} alt="" width='130px' fluid />
+                                    <img style={{
+                                        borderRadius: '50%'
+                                    }} src={img5} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
                                     }}>MEN'S AFTERSHAVE</h5>
@@ -198,7 +208,9 @@ const Beauty = () => {
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
-                                    <img src={img6} alt="" width='130px' fluid />
+                                    <img style={{
+                                        borderRadius: '50%'
+                                    }} src={img6} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
                                     }}>NEW IN</h5>

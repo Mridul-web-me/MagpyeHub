@@ -121,7 +121,9 @@ const BabyAndChild = () => {
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
-                                    <img src={img1} alt="" width='130px' fluid />
+                                    <img style={{
+                                        borderRadius: '50%'
+                                    }} src={img1} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
                                     }}>GIRLS CLOTHES</h5>
@@ -133,7 +135,9 @@ const BabyAndChild = () => {
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
-                                    <img src={img2} alt="" width='130px' fluid />
+                                    <img style={{
+                                        borderRadius: '50%'
+                                    }} src={img2} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
                                     }}>BOYS CLOTHES</h5>
@@ -145,7 +149,9 @@ const BabyAndChild = () => {
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
-                                    <img src={img3} alt="" width='130px' fluid />
+                                    <img style={{
+                                        borderRadius: '50%'
+                                    }} src={img3} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
                                     }}>BABY CLOTHES</h5>
@@ -157,7 +163,9 @@ const BabyAndChild = () => {
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
-                                    <img src={img4} alt="" width='130px' fluid />
+                                    <img style={{
+                                        borderRadius: '50%'
+                                    }} src={img4} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
                                     }}>NURSERY & TRAVEL</h5>
@@ -170,7 +178,9 @@ const BabyAndChild = () => {
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
-                                    <img src={img5} alt="" width='130px' fluid />
+                                    <img style={{
+                                        borderRadius: '50%'
+                                    }} src={img5} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
                                     }}>TOYS</h5>
@@ -181,7 +191,9 @@ const BabyAndChild = () => {
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
-                                    <img src={img6} alt="" width='130px' fluid />
+                                    <img style={{
+                                        borderRadius: '50%'
+                                    }} src={img6} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
                                     }}>BUYING GUIDES</h5>

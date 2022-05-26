@@ -67,13 +67,13 @@ const Cart = () => {
                                     <Col xs={6} md={6}>
                                         <h5 className='text-start'><i className="fas fa-shopping-basket"></i> Your Basket Contains: {totalCartQuantity} Items</h5>
                                     </Col>
-                                    <Col xs={6} md={2}>
+                                    <Col xs={6} md={2} className="quantity">
                                         <h5>Quantity</h5>
                                     </Col>
-                                    <Col xs={6} md={2}>
+                                    <Col xs={6} md={2} className="price">
                                         <h5>Price</h5>
                                     </Col>
-                                    <Col xs={6} md={2}>
+                                    <Col xs={6} md={2} className="subTotal">
                                         <h5>Sub Total</h5>
                                     </Col>
                                 </Row>
@@ -102,21 +102,24 @@ const Cart = () => {
                                     </Col>
                                 </Row>
                             </div>
-
-                            <div style={{
-                                textAlign: 'end'
-                            }}>
+                        </div>
+                        <div style={{
+                            display: 'flex',
+                            alignItem: 'end',
+                            justifyContent: 'end'
+                        }}>
+                            {/* <div>
+                                {profile.map(clientAddress =>
+                                    <>
+                                        <Paypal clientAddress={clientAddress} />
+                                    </>
+                                )
+                                }
+                            </div> */}
+                            <div>
                                 <Link to='/proceedToPayment'>
                                     <Button variant='success'>Proceed To Payment </Button>
                                 </Link>
-                                {profile.map(clientAddress =>
-                                    <>
-
-                                        <Paypal clientAddress={clientAddress} />
-                                    </>
-
-                                )
-                                }
                             </div>
                         </div>
                     </>

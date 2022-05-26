@@ -96,6 +96,9 @@ const Register = () => {
                     </Form.Label>
                     <Col sm="8" >
                         {user && registerUser && <Form.Control
+                            style={{
+                                width: '95%'
+                            }}
                             autoComplete="nope"
                             type="text"
                             name="address2"
@@ -161,6 +164,9 @@ const Register = () => {
                     </Form.Label>
                     <Col sm="8">
                         {user && registerUser && <Form.Control
+                            style={{
+                                width: '95%'
+                            }}
                             type="phone"
                             name="telephone"
                             onBlur={handleOnBlur}

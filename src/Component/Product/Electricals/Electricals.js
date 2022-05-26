@@ -114,7 +114,10 @@ const Electricals = () => {
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
-                                    <img src={img1} alt="" width='130px' fluid />
+                                    <img style={{
+                                        borderRadius: '50%',
+                                        margin: '10px '
+                                    }} src={img1} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
                                     }}>TELEVISIONS</h5>
@@ -126,7 +129,10 @@ const Electricals = () => {
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
-                                    <img src={img2} alt="" width='130px' fluid />
+                                    <img style={{
+                                        borderRadius: '50%',
+                                        margin: '10px '
+                                    }} src={img2} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
                                     }}>LAPTOPS & MACBOOKS</h5>
@@ -138,7 +144,10 @@ const Electricals = () => {
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
-                                    <img src={img3} alt="" width='130px' fluid />
+                                    <img style={{
+                                        borderRadius: '50%',
+                                        margin: '10px '
+                                    }} src={img3} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
                                     }}>IPADS & TABLETS</h5>
@@ -150,7 +159,10 @@ const Electricals = () => {
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
-                                    <img src={img4} alt="" width='130px' fluid />
+                                    <img style={{
+                                        borderRadius: '50%',
+                                        margin: '10px '
+                                    }} src={img4} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
                                     }}>WASHING MACHINES</h5>
@@ -163,7 +175,10 @@ const Electricals = () => {
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
-                                    <img src={img5} alt="" width='130px' fluid />
+                                    <img style={{
+                                        borderRadius: '50%',
+                                        margin: '10px '
+                                    }} src={img5} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
                                     }}>FRIDGE FREEZERS</h5>
@@ -174,7 +189,10 @@ const Electricals = () => {
                                     textDecoration: 'none',
                                     color: '#000'
                                 }}>
-                                    <img src={img6} alt="" width='130px' fluid />
+                                    <img style={{
+                                        borderRadius: '50%',
+                                        margin: '10px '
+                                    }} src={img6} alt="" width='130px' fluid />
                                     <h5 style={{
                                         fontSize: '18px'
                                     }}>MOBILE PHONES</h5>

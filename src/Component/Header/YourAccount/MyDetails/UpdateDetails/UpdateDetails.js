@@ -1,12 +1,16 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+import { Button, Col, Container, Form, Row, Spinner } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { useNavigate, useParams } from 'react-router-dom';
 import useAuth from '../../../../../hooks/useAuth';
 import Footer from '../../../../Footer/Footer';
 import Header from '../../../Header';
+import UpdateCountry from './UpdateCountry';
 import UpdatePhone from './UpdatePhone';
+import UpdatePostcode from './UpdatePostcode';
+import UpdateTelephone from './UpdateTelephone';
+import UpdateTownCity from './UpdateTownCity';
 
 
 const UpdateDetails = () => {
@@ -44,79 +48,115 @@ const UpdateDetails = () => {
         <div>
             <Header></Header>
             <Container>
-                <Row>
-                    {
+                <Row style={{
+                    margin: '50px 0'
+                }}>
+                    <h2>Update Your Details</h2>
+                    {loading ? <div><Spinner animation="grow" variant="info" />
+                        <Spinner animation="grow" variant="info" /></div> :
                         profile.map(update => <div>
                             <Col xs={6}>
-                                <Form onSubmit={handleUpdateDetails} style={{
+
+                                <div style={{
                                     textAlign: 'start'
                                 }} >
-                                    <Form.Group as={Row} className="mb-3" controlId="formHorizontalName">
-                                        <Form.Label column sm={4}>
-                                            Your Full Name
-                                        </Form.Label>
-                                        <Col sm={8}>
-                                            {user.displayName && <Form.Control type="name" defaultValue={user.displayName} required />}
+                                    <hr />
+                                    <Row>
+                                        <Col sm={4}>
+                                            <h6>Your Full Name: </h6>
                                         </Col>
-                                    </Form.Group>
-
-                                    <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
-                                        <Form.Label column sm={4}>
-                                            Your Email Address
-                                        </Form.Label>
-                                        <Col sm={8}>
-                                            {update.email && <Form.Control type="text" value={user.email} required />}
+                                        <Col sm={6}>
+                                            <p style={{
+                                                textTransform: 'uppercase',
+                                                fontWeight: '600'
+                                            }}>{user.displayName}</p>
                                         </Col>
-                                    </Form.Group>
-                                    <Form.Group as={Row} className="mb-3" controlId="formHorizontalTownCity">
-                                        <Form.Label column sm={4}>
-                                            Town/City:
-                                        </Form.Label>
-                                        <Col sm={8}>
-                                            <Form.Control type="text" placeholder="Town/City" required />
+                                    </Row>
+                                    <hr />
+                                    <Row>
+                                        <Col sm={4}>
+                                            <h6>Your Email Address: </h6>
                                         </Col>
-                                    </Form.Group>
-                                    <Form.Group as={Row} className="mb-3" controlId="formHorizontalCountry">
-                                        <Form.Label column sm={4}>
-                                            Country
-                                        </Form.Label>
-                                        <Col sm={8}>
-                                            <Form.Control type="country" placeholder="Country " required />
+                                        <Col sm={6}>
+                                            <p>{user.email}</p>
                                         </Col>
-                                    </Form.Group>
-                                    <Form.Group as={Row} className="mb-3" controlId="formHorizontalPostcode">
-                                        <Form.Label column sm={4}>
-                                            Postcode
-                                        </Form.Label>
-                                        <Col sm={8}>
-                                            <Form.Control type="text" placeholder="Postcode " required />
+                                    </Row>
+                                    <hr />
+                                    <Row>
+                                        <Col column sm={4}>
+                                            <h6>Town/City: </h6>
                                         </Col>
-                                    </Form.Group>
-                                    <Form.Group as={Row} className="mb-3" controlId="formHorizontal">
-                                        <Form.Label column sm={4}>
-                                            Telephone:
-                                        </Form.Label>
-                                        <Col sm={8}>
-                                            <Form.Control type="text" required placeholder="Telephone " />
+                                        <Col sm={6}>
+                                            <p style={{
+                                                textTransform: 'capitalize'
+                                            }}>{update.townCity}</p>
                                         </Col>
-                                    </Form.Group>
-                                    <Form.Group as={Row} className="mb-3" controlId="formHorizontalMobile">
-                                        <Form.Label column sm={3}>
-                                            Mobile:
-                                        </Form.Label>
-                                        <Col sm={7}>
-                                            <Form.Control type="text" placeholder="Phone " required />
+                                        <Col sm={2}>
+                                            <UpdateTownCity
+                                                update={update}
+                                            ></UpdateTownCity>
+                                        </Col>
+                                    </Row>
+                                    <hr />
+                                    <Row>
+                                        <Col column sm={4}>
+                                            <h6>Country: </h6>
+                                        </Col>
+                                        <Col sm={6}>
+                                            <p style={{
+                                                textTransform: 'capitalize'
+                                            }}>{update.country}</p>
+                                        </Col>
+                                        <Col sm={2}>
+                                            <UpdateCountry
+                                                update={update}
+                                            ></UpdateCountry>
+                                        </Col>
+                                    </Row>
+                                    <hr />
+                                    <Row>
+                                        <Col column sm={4}>
+                                            <h6>Postcode: </h6>
+                                        </Col>
+                                        <Col sm={6}>
+                                            <p>{update.postcode}</p>
+                                        </Col>
+                                        <Col sm={2}>
+                                            <UpdatePostcode
+                                                update={update}
+                                            ></UpdatePostcode>
+                                        </Col>
+                                    </Row>
+                                    <hr />
+                                    <Row>
+                                        <Col column sm={4}>
+                                            <h6>Telephone: </h6>
+                                        </Col>
+                                        <Col sm={6}>
+                                            <p>{update.telephone}</p>
+                                        </Col>
+                                        <Col sm={2}>
+                                            <UpdateTelephone
+                                                update={update}
+                                            ></UpdateTelephone>
+                                        </Col>
+                                    </Row>
+                                    <hr />
+                                    <Row>
+                                        <Col column sm={4}>
+                                            <h6> Mobile: </h6>
+                                        </Col>
+                                        <Col sm={6}>
+                                            <p>{update.phone}</p>
                                         </Col>
                                         <Col sm={2}>
                                             <UpdatePhone
                                                 update={update}
                                             ></UpdatePhone>
                                         </Col>
-                                    </Form.Group>
-                                    <Button variant="primary" type="submit" disabled>
-                                        Update
-                                    </Button>
-                                </Form>
+                                    </Row>
+                                    <hr />
+                                </div>
                             </Col>
                         </div>)
                     }

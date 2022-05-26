@@ -11,6 +11,7 @@ import useProduct from '../../../../../hooks/Product/useProduct';
 import useAuth from '../../../../../hooks/useAuth';
 import Footer from '../../../../Footer/Footer';
 import { loadStripe } from '@stripe/stripe-js';
+import Paypal from './Paypal/Paypal';
 
 
 const stripePromise = loadStripe('pk_test_51KUuQEJYFu4RGWvKjw2LK5rIC9EAnyTQHbmzGNgGnb0XcOvh36utplRWpUtsK2EJAJEw0YExvwQxLNSv7hY3qdPh00BNUN9m3S');
@@ -86,6 +87,14 @@ const ProceedToPayment = () => {
                 <Spinner animation="grow" variant="info" />
                 <Spinner animation="grow" variant="info" />
             </div> : <Button variant='outline-dark' data-bs-toggle="modal" data-bs-target="#exampleModal">Checkout</Button>}
+            <div style={{ margin: '20px 0' }}>
+                {profile.map(clientAddress =>
+                    <>
+                        <Paypal clientAddress={clientAddress} />
+                    </>
+                )
+                }
+            </div>
             <div className="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog">
                     <div className="modal-content">

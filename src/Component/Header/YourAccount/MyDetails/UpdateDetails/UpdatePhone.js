@@ -1,12 +1,9 @@
 import React, { useState } from 'react'
 import { Button, Modal } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
-import useAuth from '../../../../../hooks/useAuth';
 
 const UpdatePhone = ({ update }) => {
     const { _id, phone } = update
     console.log(_id)
-    const { user } = useAuth()
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -18,13 +15,8 @@ const UpdatePhone = ({ update }) => {
         const updatedPhone = { phone: updatePhone };
         setUsers(updatedPhone)
     }
-    const handleCountryChange = e => {
-        const updateCountry = e.target.value;
-        const updatedCountry = { country: updateCountry };
-        setUsers(updatedCountry)
-    }
     const handleUpdatePrice = e => {
-        const url = `https://arcane-temple-26692.herokuapp.com/users/${_id}`
+        const url = `https://arcane-temple-26692.herokuapp.com/phone/users/${_id}`
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -46,7 +38,7 @@ const UpdatePhone = ({ update }) => {
 
     return (
         <div>
-            <Button onClick={handleShow}>Update Phone</Button>
+            <Button onClick={handleShow} >Update</Button>
             <Modal
                 show={show} onHide={handleClose}
                 size="lg"
@@ -56,15 +48,12 @@ const UpdatePhone = ({ update }) => {
                 <Modal.Header closeButton>
                     <Modal.Title id="contained-modal-title-vcenter">
                         Update Phone <br />
-                        Name: {user.displayName} <br />
                         Phone: {phone} <br />
-                        id: {_id}
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <form onSubmit={handleUpdatePrice}>
                         <input onChange={handlePhoneChange} type="text" placeholder='Phone' />
-                        <input onChange={handleCountryChange} type="text" placeholder='Country' />
                         <input type="submit" value='Update' />
                     </form>
                 </Modal.Body>
