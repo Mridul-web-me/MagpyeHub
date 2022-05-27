@@ -185,7 +185,6 @@ const Register = () => {
                             required
                             type="phone"
                             name="phone"
-                            placeholder="Phone"
                             onBlur={handleOnBlur}
                         />}<span style={{ fontSize: '24px', color: 'red', margin: '5px' }}>*</span>
                     </Col>
@@ -203,7 +202,6 @@ const Register = () => {
                             required
                             type="password"
                             name="password1"
-                            placeholder="Password"
                             onBlur={handleOnBlur}
                         /><span style={{ fontSize: '24px', color: 'red', margin: '5px' }}>*</span>
                     </Col>
@@ -220,7 +218,6 @@ const Register = () => {
                             required
                             type="password"
                             name="password2"
-                            placeholder="Password"
                             onBlur={handleOnBlur}
                         /><span style={{ fontSize: '24px', color: 'red', margin: '5px' }}>*</span>
                     </Col>

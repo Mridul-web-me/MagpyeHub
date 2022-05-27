@@ -64,7 +64,7 @@ const BedSheets = (props) => {
                         textTransform: 'uppercase',
                         marginBottom: '20px'
                     }}>Bedding</h3>
-                    <Col md={3} xs={12}>
+                    <Col md={3} sm={12}>
                         <Accordion defaultActiveKey="0">
                             <Accordion.Item eventKey="0">
                                 <Accordion.Header>Price Range</Accordion.Header>
@@ -168,13 +168,13 @@ const BedSheets = (props) => {
                             </Accordion.Item>
                         </Accordion>
                     </Col>
-                    <Col md={9} xs={12}>
+                    <Col md={9} sm={12}>
                         {loading ? <div className='text-center' style={{ height: '40vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}> <Spinner animation="grow" variant="info" />
                             <Spinner animation="grow" variant="info" />
                             <Spinner animation="grow" variant="info" />
                         </div> : <div>
 
-                            {!filter.length ? <Row xs={1} md={4} className="g-4">
+                            {!filter.length ? <Row xs={1} sm={2} md={4} className="g-4">
                                 {
                                     products.filter(product => { return product.price > parseInt(price) })
                                         .map(product =>
@@ -190,7 +190,7 @@ const BedSheets = (props) => {
                                         )
                                 }
                             </Row> :
-                                <Row xs={1} md={4} className="g-4">
+                                <Row xs={1} md={4} sx={2} className="g-4">
                                     {
                                         filter.map(product =>
                                             <>

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './AllProduct.css'
 const AllProduct = (props) => {
 
-    const { _id, title, img, price, category } = props.product;
+    const { _id, title, img, price } = props.product;
 
 
     return (
