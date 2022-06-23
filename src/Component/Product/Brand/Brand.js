@@ -39,7 +39,7 @@ const Brand = () => {
             <Container fluid>
                 <Swiper style={{
                     height: '30%',
-                    margin: '20px 0'
+                    margin: '40px 0'
                 }} slidesPerView={1} spaceBetween={10}
                     autoplay={{
                         "delay": 1500,

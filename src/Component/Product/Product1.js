@@ -1,9 +1,9 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import group1 from '../../img/Group/Group 5.png'
-import group2 from '../../img/Group/Group 6.png'
-import group3 from '../../img/Group/Group 7.png'
+import group1 from '../../img/Group/Group 5.jpg'
+import group2 from '../../img/Group/Group 6.jpg'
+import group3 from '../../img/Group/Group 7.jpg'
 
 const Product1 = () => {
     return (

@@ -3,87 +3,100 @@ import { Card, Col, Container, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import './Product.css'
 
-import group1 from '../../img/Group/Group 5.png'
-import group2 from '../../img/Group/Group 6.png'
-import group3 from '../../img/Group/Group 7.png'
-import group4 from '../../img/Group/Group 8.png'
-import group5 from '../../img/Group/Group 9.png'
-import group6 from '../../img/Group/Group 10.png'
+import group1 from '../../img/Group/Group 5.jpg'
+import group2 from '../../img/Group/Group 6.jpg'
+import group3 from '../../img/Group/Group 7.jpg'
+import group4 from '../../img/Group/Group 8.jpg'
+import group5 from '../../img/Group/Group 9.jpg'
+import group6 from '../../img/Group/Group 10.jpg'
 import Product1 from './Product1'
 
 const Product = () => {
     return (
         <div className='product'>
             <Container fluid>
-                <Row xs={1} md={3} className="g-4">
+                <Row xs={1} md={3} className="g-4" style={{
+                    margin: '10px 0'
+                }}>
                     <Col>
-                        <Card>
+                    <Link to="/men"> <Card>
                             <Card.Img variant="top" src={group1} />
                             <div className='cardBody'>
                                 <Card.Body>
-                                    <Card.Title>6 home interiors trends set to be huge in 2022</Card.Title>
-                                    <Link to="">Read & Shop</Link>
+                                    <Card.Title>MAN</Card.Title>
+                                    
                                 </Card.Body>
                             </div>
-                        </Card>
+                        </Card></Link>
                     </Col>
                     <Col>
+                    <Link to="/women">
                         <Card>
                             <Card.Img variant="top" src={group2} />
                             <div className='cardBody'>
                                 <Card.Body>
-                                    <Card.Title>6 home interiors trends set to be huge in 2022</Card.Title>
-                                    <Link to="">Read & Shop</Link>
+                                    <Card.Title>WOMAN</Card.Title>
                                 </Card.Body>
                             </div>
-                        </Card>
+                        </Card></Link>
                     </Col>
                     <Col>
-                        <Card>
+                    <Link to="/BabyAndChild">
+                    <Card>
                             <Card.Img variant="top" src={group3} />
                             <div className='cardBody'>
                                 <Card.Body>
-                                    <Card.Title>6 home interiors trends set to be huge in 2022</Card.Title>
-                                    <Link to="">Read & Shop</Link>
+                                    <Card.Title>CHILD</Card.Title>
                                 </Card.Body>
                             </div>
                         </Card>
+                    </Link>
                     </Col>
                 </Row>
 
-                <Row xs={1} md={3} className="g-4">
+                <Row xs={1} md={3} className="g-4" style={{
+                    margin: '10px 0'
+                }}>
                     <Col>
-                        <Card>
+                    <Link to="/beauty">
+                    <Card>
                             <Card.Img variant="top" src={group4} />
                             <div className='cardBody'>
                                 <Card.Body>
-                                    <Card.Title>6 home interiors trends set to be huge in 2022</Card.Title>
-                                    <Link to="">Read & Shop</Link>
+                                    <Card.Title>BEAUTY</Card.Title>
+                                    
                                 </Card.Body>
                             </div>
                         </Card>
+                    </Link>
+                       
                     </Col>
                     <Col>
-                        <Card>
-                            <Card.Img variant="top" src={group1} />
+                    <Link to="/FurnitureAndLighting">
+                    <Card>
+                            <Card.Img variant="top" src={group5} />
                             <div className='cardBody'>
                                 <Card.Body>
-                                    <Card.Title>6 home interiors trends set to be huge in 2022</Card.Title>
-                                    <Link to="">Read & Shop</Link>
+                                    <Card.Title>FURNITURE</Card.Title>
+                                    
                                 </Card.Body>
                             </div>
                         </Card>
+                    </Link>
                     </Col>
                     <Col>
-                        <Card>
-                            <Card.Img variant="top" src={group2} />
+                    <Link to="/sportAndLeisure">
+                    <Card>
+                            <Card.Img variant="top" src={group6} />
                             <div className='cardBody'>
                                 <Card.Body>
-                                    <Card.Title>6 home interiors trends set to be huge in 2022</Card.Title>
-                                    <Link to="">Read & Shop</Link>
+                                    <Card.Title>SPORTS</Card.Title>
+                                    
                                 </Card.Body>
                             </div>
                         </Card>
+                    </Link>
+                        
                     </Col>
                 </Row>
             </Container>
