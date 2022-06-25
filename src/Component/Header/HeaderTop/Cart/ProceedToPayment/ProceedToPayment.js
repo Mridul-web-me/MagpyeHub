@@ -50,7 +50,7 @@ const ProceedToPayment = () => {
             margin: '50px 0'
         }}>
             <Row>
-                <Col xs={4}>
+                <Col md={4} sm={12}>
                     <h2>Delivery Address</h2>
 
 
@@ -64,7 +64,7 @@ const ProceedToPayment = () => {
                     )}
 
                 </Col>
-                <Col xs={4}>
+                <Col md={4} sm={12}>
                     <h2>Billing Address</h2>
                     {loading ? <div className='text-center' style={{ height: '40vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}> <Spinner animation="grow" variant="info" />
                         <Spinner animation="grow" variant="info" />
