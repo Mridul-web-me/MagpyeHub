@@ -1,7 +1,6 @@
 import React from 'react'
 import { Col, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
-import useProduct from '../../../../../hooks/Product/useProduct';
 
 const CartPaymentProduct = ({ cart }) => {
     // const { totalCartQuantity, total, carts, } = useProduct({});

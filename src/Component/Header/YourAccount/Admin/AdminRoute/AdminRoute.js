@@ -1,6 +1,5 @@
 import React from 'react'
-import { Spinner } from 'react-bootstrap';
-import { Route, Navigate, useLocation } from 'react-router-dom'
+import { Navigate, useLocation } from 'react-router-dom'
 import useAuth from '../../../../../hooks/useAuth';
 
 const AdminRoute = ({ children, ...rest }) => {

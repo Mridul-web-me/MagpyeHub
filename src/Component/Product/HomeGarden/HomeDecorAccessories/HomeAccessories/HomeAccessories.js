@@ -17,7 +17,7 @@ const HomeAccessories = () => {
     const [page, setPage] = useState(0);
     const [loading, setLoading] = useState(true)
     const size = 8;
-    const category = 'HomeAccessories'
+    const category = 'homeAccessories'
     useEffect(() => {
         fetch(`https://arcane-temple-26692.herokuapp.com/products?category=${category}&&page=${page}&&size=${size}`)
             .then(res => res.json())

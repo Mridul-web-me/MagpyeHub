@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import Footer from '../../../Footer/Footer';
 import Header from '../../Header';
-import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import useAuth from '../../../../hooks/useAuth';
 import SingleAddress from './SingleAddress/SingleAddress';

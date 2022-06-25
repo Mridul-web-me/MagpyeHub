@@ -108,14 +108,14 @@ const Cart = () => {
                             alignItem: 'end',
                             justifyContent: 'end'
                         }}>
-                            {/* <div>
+                            <div>
                                 {profile.map(clientAddress =>
                                     <>
                                         <Paypal clientAddress={clientAddress} />
                                     </>
                                 )
                                 }
-                            </div> */}
+                            </div>
                             <div>
                                 <Link to='/proceedToPayment'>
                                     <Button variant='success'>Proceed To Payment </Button>

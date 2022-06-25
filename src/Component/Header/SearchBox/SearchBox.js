@@ -1,8 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Container, Row } from 'react-bootstrap';
-import { Link, useLocation } from 'react-router-dom';
-import SearchResult from './SearchResult/SearchResult';
+import { Link } from 'react-router-dom';
 
 const SearchBox = () => {
     const [products, setProducts] = useState([])

@@ -1,6 +1,6 @@
 
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
-import React, { useRef } from 'react'
+import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { Button, Spinner } from 'react-bootstrap';
@@ -8,18 +8,13 @@ import { useForm } from 'react-hook-form';
 import useProduct from '../../../../../../hooks/Product/useProduct';
 import useAuth from '../../../../../../hooks/useAuth';
 import { clearTheCart } from '../../../../../../fakeDB';
-import { Link } from 'react-router-dom';
-import { PayPalButton } from 'react-paypal-button-v2'
-import Paypal from '../Paypal/Paypal';
-import { PayPalButtons, PayPalScriptProvider } from '@paypal/react-paypal-js';
 
 const Payment = ({ address: clientAddress }) => {
     const { total, carts, totalCartQuantity } = useProduct({});
-    const handleClose = () => setShow(false);
-    const [show, setShow] = useState(false);
+    // const handleClose = () => setShow(false);
+    // const [show, setShow] = useState(false);
     const stripe = useStripe();
     const elements = useElements();
-    const [orderID, setOrderID] = useState(false);
     const [error, setError] = useState('')
     const [clientSecret, setClientSecret] = useState('')
     const [success, setSuccess] = useState('')
@@ -27,7 +22,6 @@ const Payment = ({ address: clientAddress }) => {
     const { user } = useAuth()
     const { reset } = useForm();
     const { displayName, email, zip, state, city, phone, address, address1 } = clientAddress
-    const [errorMessage, setErrorMessage] = useState('')
 
     // console.log(carts)
 

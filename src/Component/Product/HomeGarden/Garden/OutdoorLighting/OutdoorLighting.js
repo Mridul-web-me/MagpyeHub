@@ -166,46 +166,44 @@ const OutdoorLighting = () => {
                         </Accordion>
                     </Col>
                     <Col md={9} xs={12}>
-                        {products.length ? <div>
-                            {loading ? <div className='text-center' style={{ height: '40vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}> <Spinner animation="grow" variant="info" />
-                                <Spinner animation="grow" variant="info" />
-                                <Spinner animation="grow" variant="info" />
-                            </div> : <div>
+                        {loading ? <div className='text-center' style={{ height: '40vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}> <Spinner animation="grow" variant="info" />
+                            <Spinner animation="grow" variant="info" />
+                            <Spinner animation="grow" variant="info" />
+                        </div> : <div>
 
-                                {!filter.length && products.length ? <Row xs={1} md={4} className="g-4">
+                            {!filter.length ? <Row xs={1} md={4} className="g-4">
+                                {
+                                    products.filter(product => { return product.price > parseInt(price) })
+                                        .map(product =>
+                                            <>
+                                                <AllProduct
+                                                    key={product._id}
+                                                    product={product}
+                                                    handleAddToCart={handleAddToCart}
+                                                // pageCount={pageCount}
+                                                ></AllProduct>
+                                            </>
+
+                                        )
+                                }
+                            </Row> :
+                                <Row xs={1} md={4} className="g-4">
                                     {
-                                        products.filter(product => { return product.price > parseInt(price) })
-                                            .map(product =>
-                                                <>
-                                                    <AllProduct
-                                                        key={product._id}
-                                                        product={product}
-                                                        handleAddToCart={handleAddToCart}
-                                                    // pageCount={pageCount}
-                                                    ></AllProduct>
-                                                </>
+                                        filter.map(product =>
+                                            <>
+                                                <AllProduct
+                                                    key={product._id}
+                                                    product={product}
+                                                    handleAddToCart={handleAddToCart}
+                                                // pageCount={pageCount}
+                                                ></AllProduct>
+                                            </>
 
-                                            )
+                                        )
                                     }
-                                </Row> :
-                                    <div >
-                                        <h2 style={{
-                                            display: 'flex',
-                                            justifyContent: 'center',
-                                            alignItems: 'center',
-                                            height: '50vh',
-                                            color: '#696969'
-                                        }}>No Product Available</h2>  </div>}
-                            </div>
-                            }
-                        </div> : <div >
-                            <h2 style={{
-                                display: 'flex',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                height: '50vh',
-                                color: '#696969'
-                            }}>No Product Available</h2>  </div>}
+                                </Row>}
+                        </div>
+                        }
                         <div className="pagination">
                             {
                                 [...Array(pageCount).keys()]

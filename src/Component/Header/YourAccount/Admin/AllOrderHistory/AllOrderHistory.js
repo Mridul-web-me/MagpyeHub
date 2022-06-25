@@ -1,9 +1,7 @@
-import axios from 'axios';
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { Col, Container, Row, Spinner } from 'react-bootstrap';
 import { Helmet } from 'react-helmet';
-import useAuth from '../../../../../hooks/useAuth';
 import Footer from '../../../../Footer/Footer';
 import Newsletter from '../../../../Newsletter/Newsletter';
 import PromoUnit from '../../../../PromoUnit/PromoUnit';
@@ -13,7 +11,6 @@ import OrderedProduct from './OrderedProduct/OrderedProduct';
 import './AllorderHistory.css'
 
 const AllOrderHistory = () => {
-    const { user } = useAuth()
     const [orders, setOrders] = useState([])
     const [loading, setLoading] = useState(true)
     useEffect(() => {

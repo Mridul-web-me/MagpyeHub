@@ -104,12 +104,11 @@ const Nav = () => {
                                                 <li><Link to="/homeAndGarden/gardenFurnitureSets">Garden Furniture Sets</Link></li>
                                                 <li><Link to="/homeAndGarden/gardenSeating">Garden Seating</Link></li>
                                                 <li><Link to="/homeAndGarden/gasBBQs">Gas BBQs</Link></li>
-                                                <li><Link to="/homeAndGarden/charcoalBBQs">Charcoal BBQs</Link></li>
                                                 <li><Link to="/homeAndGarden/pizzaOvens">Pizza Ovens</Link></li>
                                                 <li><Link to="/homeAndGarden/decorativeGardenAccessories"> Decorative Garden Accessories</Link></li>
                                                 <li><Link to="/homeAndGarden/outdoorlights"> Outdoor Lighting</Link></li>
                                                 <li><Link to="/homeAndGarden/parasolsAccessories"> Parasols & Accessories</Link></li>
-                                                <li><Link to="/homeAndGarden/shopGarden"> Shop Garden</Link></li>
+                                                <li><Link to="/HomeAndGarden"> Shop Garden</Link></li>
                                             </ul>
                                         </div>
                                     </div>

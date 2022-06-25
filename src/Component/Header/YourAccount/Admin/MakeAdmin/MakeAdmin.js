@@ -1,8 +1,5 @@
 import React, { useState } from 'react'
-// import { Link } from 'react-router-dom'
 import { Button, Container } from 'react-bootstrap'
-
-import Modal from 'react-bootstrap/Modal'
 import Header from '../../../Header'
 import PromoUnit from '../../../../PromoUnit/PromoUnit'
 import Newsletter from '../../../../Newsletter/Newsletter'

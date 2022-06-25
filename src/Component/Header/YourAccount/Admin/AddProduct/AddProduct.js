@@ -9,7 +9,7 @@ import toast from 'react-hot-toast';
 import { Helmet } from 'react-helmet';
 import "draft-js/dist/Draft.css";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
-import './Draft.css'
+
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 const AddProduct = () => {

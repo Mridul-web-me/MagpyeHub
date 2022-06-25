@@ -1,8 +1,5 @@
-import axios from 'axios';
+
 import React from 'react';
-import { Button, Col, Form, Row } from 'react-bootstrap';
-import { useForm } from 'react-hook-form';
-import useAuth from '../../../../../hooks/useAuth';
 
 const SingleAddress = ({ address }) => {
     const { displayName, country, postcode, townCity, telephone, phone } = address
@@ -24,13 +21,3 @@ const SingleAddress = ({ address }) => {
 };
 
 export default SingleAddress;
-
-
-
-                // <div>
-                //     <h2>{name}</h2>
-                //     <p>{country}</p>
-                //     <p>{townCity}</p>
-                //     <p>{postcode}</p>
-                //     <p>{phone}</p>
-                // </div> 

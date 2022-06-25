@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Accordion, Button, Col, Container, Row, Spinner, Table } from 'react-bootstrap'
+import { Accordion, Button, Col, Container, Row, Spinner } from 'react-bootstrap'
 import { Helmet } from 'react-helmet'
 import { Link } from 'react-router-dom'
 import useProduct from '../../../../../hooks/Product/useProduct'

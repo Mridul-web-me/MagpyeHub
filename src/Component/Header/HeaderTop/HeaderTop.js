@@ -1,6 +1,6 @@
 import React from 'react';
 import { Badge, Col, Container, Row } from 'react-bootstrap';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import useProduct from '../../../hooks/Product/useProduct';
 import useAuth from '../../../hooks/useAuth';
 import SearchBox from '../SearchBox/SearchBox';
