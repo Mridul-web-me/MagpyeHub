@@ -136,12 +136,10 @@ const PillowCases = () => {
                                         <Link onClick={() => { filterProduct('gardenFurnitureSets') }} to="">Garden Furniture Sets</Link> <br />
                                         <Link onClick={() => { filterProduct('gardenSeating') }} to="">Garden Seating</Link> <br />
                                         <Link onClick={() => { filterProduct('gasBBQs') }} to="">Gas BBQs</Link> <br />
-                                        <Link onClick={() => { filterProduct('charcoalBBQs') }} to="">Charcoal BBQs</Link> <br />
                                         <Link onClick={() => { filterProduct('pizzaOvens') }} to="">Pizza Ovens</Link> <br />
                                         <Link onClick={() => { filterProduct('decorativeGardenAccessories') }} to=""> Decorative Garden Accessories</Link> <br />
                                         <Link onClick={() => { filterProduct('ardenOutdoorlights') }} to=""> Outdoor Lighting</Link> <br />
                                         <Link onClick={() => { filterProduct('parasolsAccessories') }} to=""> Parasols & Accessories</Link> <br />
-                                        <Link onClick={() => { filterProduct('shopGarden') }} to=""> Shop Garden</Link> <br />
                                     </div>
                                 </Accordion.Body>
                             </Accordion.Item>

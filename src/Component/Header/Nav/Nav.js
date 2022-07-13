@@ -140,7 +140,7 @@ const Nav = () => {
                                                 <li><Link to="/women/skirts">Skirts</Link></li>
                                                 <li><Link to="/women/sportsClothes ">Sports & Clothes  </Link></li>
                                                 <li><Link to="/women/swimwearBeachwear ">Swimwear Beachwear  </Link></li>
-                                                <li><Link to="/women/women-Trousers">Trousers</Link></li>
+                                                <li><Link to="/women/womenTrousers">Trousers</Link></li>
                                                 <li><Link to="/women/leggings">Leggings</Link></li>
                                                 <li><Link to="/women/plusSize">Plus Size</Link></li>
                                             </ul>
@@ -160,7 +160,7 @@ const Nav = () => {
                                                 <li><Link to="/women/loungewear ">Loungewear</Link></li>
                                                 <li><Link to="/women/petite ">Petite</Link></li>
                                                 <li><Link to="/women/occasionwear ">Occasionwear</Link></li>
-                                                <li><Link to="/women/weddingBoutique ">Wedding</Link></li>
+                                                <li><Link to="/women/weddingBoutique ">Wedding Boutique</Link></li>
                                             </ul>
                                         </div>
                                         <div className="row">
@@ -201,22 +201,7 @@ const Nav = () => {
                                                 <li><Link to="/women/womenHats">Hats</Link></li>
                                                 <li><Link to="/women/womenWatches">Watches</Link></li>
                                                 <li><Link to="/women/womenHairAccessories">Hair Accessories</Link></li>
-                                                <li><Link to="/women/womenHatsGlovesScarves">Hats, Gloves & Scarves</Link></li>
-
-                                            </ul>
-                                        </div>
-                                        <div className="row" style={{
-                                            marginTop: '24px',
-                                            marginLeft: '0px'
-                                        }}>
-                                            <hr />
-                                            <ul className="mega-links">
                                                 <li><Link to="/women/womenOccasionHatsFascinators">Occasion Hats & Fascinators</Link></li>
-                                                <li><Link to="/women/womenFaceCoverings">Face Coverings</Link></li>
-                                                <li><Link to="/women/womenReadingGlassesGlassesCases">Reading Glasses & Glasses Cases</Link></li>
-                                                <li><Link to="/women/womenKeyrings">Keyrings</Link></li>
-                                                <li><Link to="/women/womenUmbrellas">Umbrellas</Link></li>
-                                                <li><Link to="/women/womenSuitcases">Suitcases</Link></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -257,7 +242,6 @@ const Nav = () => {
                                             <hr />
                                             <ul className="mega-links">
                                                 <li><Link to="/men/waistcoats">Waistcoats</Link></li>
-                                                <li><Link to="/men/menCashmere">Cashmere</Link></li>
                                                 <li><Link to="/men/menCoatsJackets">Coats & Jackets</Link></li>
                                                 <li><Link to="/men/menSweatshirtsHoodies">Sweatshirts & Hoodies</Link></li>
                                                 <li><Link to="/men/menJumpersCardigans">Jumpers & Cardigans</Link></li>

@@ -47,7 +47,7 @@ const JumpersKnitwear = () => {
         <div>
             <Helmet>
                 <title>
-                    JumpersKnitwear
+                    Jumpers & Knitwear
                 </title>
                 <meta name="description" content="This is Magpyehub Online Shop" />
             </Helmet>
@@ -60,7 +60,7 @@ const JumpersKnitwear = () => {
                         color: '#303030', fontSize: '26px',
                         textTransform: 'uppercase',
                         marginBottom: '20px'
-                    }}>JumpersKnitwear</h3>
+                    }}>Jumpers & Knitwear</h3>
                     <Col md={3} xs={12}>
                         <Accordion defaultActiveKey="0">
                             <Accordion.Item eventKey="0">
@@ -85,7 +85,6 @@ const JumpersKnitwear = () => {
                                         <Link onClick={() => { filterProduct('leggings') }} to="">Leggings</Link> <br />
                                         <Link onClick={() => { filterProduct('plusSize') }} to="">Plus Size</Link> <br />
                                         <Link onClick={() => { filterProduct('maternityClothes') }} to=" ">Maternity Clothes</Link> <br />
-                                        <Link onClick={() => { filterProduct('cashmere') }} to="">Cashmere</Link> <br />
                                         <Link onClick={() => { filterProduct('coatsJackets') }} to=" ">Coats & Jackets</Link> <br />
                                         <Link onClick={() => { filterProduct('jumpersKnitwear') }} to=" ">Jumpers & Knitwear</Link> <br />
                                         <Link onClick={() => { filterProduct('jumpsuits') }} to=" ">Jumpsuits</Link> <br />
@@ -116,9 +115,9 @@ const JumpersKnitwear = () => {
                                 <Accordion.Body>
                                     <div className="filterItem">
                                         <Link onClick={() => { filterProduct('brasSportsBras') }} to="">Bras & Sports Bras</Link> <br />
-                                        <Link onClick={() => { filterProduct('nightwear') }} to="">Nightwear</Link> <br />
+                                        <Link onClick={() => { filterProduct('Nightwear') }} to="">Nightwear</Link> <br />
                                         <Link onClick={() => { filterProduct('socks') }} to="">Socks</Link> <br />
-                                        <Link onClick={() => { filterProduct('knickers') }} to="">Knickers</Link> <br />
+                                        <Link onClick={() => { filterProduct('Knickers') }} to="">Knickers</Link> <br />
                                         <Link onClick={() => { filterProduct('tights') }} to="">Tights</Link> <br />
                                     </div>
                                 </Accordion.Body>
@@ -135,13 +134,7 @@ const JumpersKnitwear = () => {
                                         <Link onClick={() => { filterProduct('womenHats') }} to="">Hats</Link> <br />
                                         <Link onClick={() => { filterProduct('womenWatches') }} to="">Watches</Link> <br />
                                         <Link onClick={() => { filterProduct('womenHairAccessories') }} to="">Hair Accessories</Link> <br />
-                                        <Link onClick={() => { filterProduct('womenHatsGlovesScarves') }} to="">Hats, Gloves & Scarves</Link> <br />
                                         <Link onClick={() => { filterProduct('womenOccasionHatsFascinators') }} to="">Occasion Hats & Fascinators</Link> <br />
-                                        <Link onClick={() => { filterProduct('womenFaceCoverings') }} to="">Face Coverings</Link> <br />
-                                        <Link onClick={() => { filterProduct('womenReadingGlassesGlassesCases') }} to="">Reading Glasses & Glasses Cases</Link> <br />
-                                        <Link onClick={() => { filterProduct('womenKeyrings') }} to="">Keyrings</Link> <br />
-                                        <Link onClick={() => { filterProduct('womenUmbrellas') }} to="">Umbrellas</Link> <br />
-                                        <Link onClick={() => { filterProduct('womenSuitcases') }} to="">Suitcases</Link> <br />
                                     </div>
                                 </Accordion.Body>
                             </Accordion.Item>

@@ -208,12 +208,10 @@ import PicturesArtFrames from './Component/Product/HomeGarden/HomeDecorAccessori
 import CurtainPolesAccessories from './Component/Product/HomeGarden/CurtainsBlindsFloors/CurtainPolesAccessories/CurtainPolesAccessories';
 import Fabrics from './Component/Product/HomeGarden/CurtainsBlindsFloors/Fabrics/Fabrics';
 import GasBBQs from './Component/Product/HomeGarden/Garden/GasBBQs/GasBBQs';
-import CharcoalBBQs from './Component/Product/HomeGarden/Garden/CharcoalBBQs/CharcoalBBQs';
 import PizzaOvens from './Component/Product/HomeGarden/Garden/PizzaOvens/PizzaOvens';
 import DecorativeGardenAccessories from './Component/Product/HomeGarden/Garden/DecorativeGardenAccessories/DecorativeGardenAccessories';
 import ParasolsAccessories from './Component/Product/HomeGarden/Garden/ParasolsAccessories/ParasolsAccessories';
 import ShopGarden from './Component/Product/HomeGarden/Garden/ShopGarden/ShopGarden';
-import Cashmere from './Component/Product/Women/Clothing/Cashmere/Cashmere';
 import CoatsJackets from './Component/Product/Women/Clothing/CoatsJackets/CoatsJackets';
 import JumpersKnitwear from './Component/Product/Women/Clothing/JumpersKnitwear/JumpersKnitwear';
 import Jumpsuits from './Component/Product/Women/Clothing/Jumpsuits/Jumpsuits';
@@ -224,13 +222,7 @@ import Occasionwear from './Component/Product/Women/Clothing/Occasionwear/Occasi
 import WeddingBoutique from './Component/Product/Women/Clothing/WeddingBoutique/WeddingBoutique';
 import WomenBoots from './Component/Product/Women/Footwear/WomenBoots/WomenBoots';
 import WomenPumps from './Component/Product/Women/Footwear/WomenPumps/WomenPumps';
-import WomenHatsGlovesScarves from './Component/Product/Women/Accessories/WomenHatsGlovesScarves/WomenHatsGlovesScarves';
 import WomenOccasionHatsFascinators from './Component/Product/Women/Accessories/WomenOccasionHatsFascinators/WomenOccasionHatsFascinators';
-import WomenFaceCoverings from './Component/Product/Women/Accessories/WomenFaceCoverings/WomenFaceCoverings';
-import WomenReadingGlassesGlassesCases from './Component/Product/Women/Accessories/WomenReadingGlassesGlassesCases/WomenReadingGlassesGlassesCases';
-import WomenKeyrings from './Component/Product/Women/Accessories/WomenKeyrings/WomenKeyrings';
-import WomenUmbrellas from './Component/Product/Women/Accessories/WomenUmbrellas/WomenUmbrellas';
-import WomenSuitcases from './Component/Product/Women/Accessories/WomenSuitcases/WomenSuitcases';
 import MenCashmere from './Component/Product/Men/Clothing/MenCashmere/MenCashmere';
 import MenCoatsJackets from './Component/Product/Men/Clothing/MenCoatsJackets/MenCoatsJackets';
 import MenSweatshirtsHoodies from './Component/Product/Men/Clothing/MenSweatshirtsHoodies/MenSweatshirtsHoodies';
@@ -468,7 +460,6 @@ function App() {
             <Route path="/homeAndGarden/gardenFurnitureSets" element={<GardenFurnitureSets />} />
             <Route path="/homeAndGarden/gardenSeating" element={<GardenSeating />} />
             <Route path="/homeAndGarden/gasBBQs" element={<GasBBQs />} />
-            <Route path="/homeAndGarden/charcoalBBQs" element={<CharcoalBBQs />} />
             <Route path="/homeAndGarden/pizzaOvens" element={<PizzaOvens />} />
             <Route path="/homeAndGarden/outdoorlights" element={<OutdoorLighting />} />
             <Route path="/homeAndGarden/decorativeGardenAccessories" element={<DecorativeGardenAccessories />} />
@@ -489,7 +480,6 @@ function App() {
             <Route path="/women/leggings" element={<Leggings />} />
             <Route path="/women/plusSize" element={<PlusSize />} />
             <Route path="/women/maternityClothes" element={<MaternityClothes />} />
-            <Route path="/women/cashmere" element={<Cashmere />} />
             <Route path="/women/coatsJackets" element={<CoatsJackets />} />
             <Route path="/women/jumpersKnitwear" element={<JumpersKnitwear />} />
             <Route path="/women/jumpsuits" element={<Jumpsuits />} />
@@ -527,13 +517,7 @@ function App() {
             <Route path="/women/womenHats" element={<WomenHats />} />
             <Route path="/women/womenWatches" element={<WomenWatches />} />
             <Route path="/women/womenHairAccessories" element={<WomenHairAccessories />} />
-            <Route path="/women/womenHatsGlovesScarves" element={<WomenHatsGlovesScarves />} />
             <Route path="/women/womenOccasionHatsFascinators" element={<WomenOccasionHatsFascinators />} />
-            <Route path="/women/womenFaceCoverings" element={<WomenFaceCoverings />} />
-            <Route path="/women/womenReadingGlassesGlassesCases" element={<WomenReadingGlassesGlassesCases />} />
-            <Route path="/women/womenKeyrings" element={<WomenKeyrings />} />
-            <Route path="/women/womenUmbrellas" element={<WomenUmbrellas />} />
-            <Route path="/women/womenSuitcases" element={<WomenSuitcases />} />
 
             {/* MEN Clothing */}
 

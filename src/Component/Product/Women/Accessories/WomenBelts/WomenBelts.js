@@ -116,9 +116,9 @@ const WomenBelts = () => {
                                 <Accordion.Body>
                                     <div className="filterItem">
                                         <Link onClick={() => { filterProduct('brasSportsBras') }} to="">Bras & Sports Bras</Link> <br />
-                                        <Link onClick={() => { filterProduct('nightwear') }} to="">Nightwear</Link> <br />
+                                        <Link onClick={() => { filterProduct('Nightwear') }} to="">Nightwear</Link> <br />
                                         <Link onClick={() => { filterProduct('socks') }} to="">Socks</Link> <br />
-                                        <Link onClick={() => { filterProduct('knickers') }} to="">Knickers</Link> <br />
+                                        <Link onClick={() => { filterProduct('Knickers') }} to="">Knickers</Link> <br />
                                         <Link onClick={() => { filterProduct('tights') }} to="">Tights</Link> <br />
                                     </div>
                                 </Accordion.Body>
@@ -135,13 +135,7 @@ const WomenBelts = () => {
                                         <Link onClick={() => { filterProduct('womenHats') }} to="">Hats</Link> <br />
                                         <Link onClick={() => { filterProduct('womenWatches') }} to="">Watches</Link> <br />
                                         <Link onClick={() => { filterProduct('womenHairAccessories') }} to="">Hair Accessories</Link> <br />
-                                        <Link onClick={() => { filterProduct('womenHatsGlovesScarves') }} to="">Hats, Gloves & Scarves</Link> <br />
                                         <Link onClick={() => { filterProduct('womenOccasionHatsFascinators') }} to="">Occasion Hats & Fascinators</Link> <br />
-                                        <Link onClick={() => { filterProduct('womenFaceCoverings') }} to="">Face Coverings</Link> <br />
-                                        <Link onClick={() => { filterProduct('womenReadingGlassesGlassesCases') }} to="">Reading Glasses & Glasses Cases</Link> <br />
-                                        <Link onClick={() => { filterProduct('womenKeyrings') }} to="">Keyrings</Link> <br />
-                                        <Link onClick={() => { filterProduct('womenUmbrellas') }} to="">Umbrellas</Link> <br />
-                                        <Link onClick={() => { filterProduct('womenSuitcases') }} to="">Suitcases</Link> <br />
                                     </div>
                                 </Accordion.Body>
                             </Accordion.Item>
