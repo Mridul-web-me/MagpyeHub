@@ -262,7 +262,7 @@ const ManageProducts = () => {
                 <Accordion.Header>Accessories</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
-                    <Link onClick={() => { filterProduct('menMensBags') }} to="">Men's Bags</Link> <br />
+                    <Link onClick={() => { filterProduct('menBags') }} to="">Men's Bags</Link> <br />
                     <Link onClick={() => { filterProduct('menBelts') }} to="">Belts</Link> <br />
                     <Link onClick={() => { filterProduct('menHats') }} to="">Hats</Link> <br />
                     <Link onClick={() => { filterProduct('menWallets') }} to="">Wallets</Link> <br />

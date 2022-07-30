@@ -18,7 +18,7 @@ const PoloShirts = () => {
     const [page, setPage] = useState(0);
     const [loading, setLoading] = useState(true)
     const size = 8;
-    const category = 'poloShirts'
+    const category = 'poloshirts'
     useEffect(() => {
         fetch(`https://arcane-temple-26692.herokuapp.com/products?category=${category}&&page=${page}&&size=${size}`)
             .then(res => res.json())
@@ -88,7 +88,6 @@ const PoloShirts = () => {
                                         <Link onClick={() => { filterProduct('trousers') }} to="">Trousers</Link> <br />
                                         <Link onClick={() => { filterProduct('t-shirts') }} to="">T-Shirts</Link> <br />
                                         <Link onClick={() => { filterProduct('waistcoats') }} to="">Waistcoats</Link> <br />
-                                        <Link onClick={() => { filterProduct('menCashmere') }} to="">Cashmere</Link> <br />
                                         <Link onClick={() => { filterProduct('menCoatsJackets') }} to="">Coats & Jackets</Link> <br />
                                         <Link onClick={() => { filterProduct('menSweatshirtsHoodies') }} to="">Sweatshirts & Hoodies</Link> <br />
                                         <Link onClick={() => { filterProduct('menJumpersCardigans') }} to="">Jumpers & Cardigans</Link> <br />
