@@ -8,7 +8,7 @@ import Header from '../../../../Header/Header'
 import Newsletter from '../../../../Newsletter/Newsletter'
 import PromoUnit from '../../../../PromoUnit/PromoUnit'
 import AllProduct from '../../../AllProduct/AllProduct'
-const BackToSchoolShop = () => {
+const BoysTops = () => {
     const [price, setPrice] = useState(0)
     const [filter, setFilter] = useState([])
     const { AllProducts, handleAddToCart } = useProduct();
@@ -17,7 +17,7 @@ const BackToSchoolShop = () => {
     const [page, setPage] = useState(0);
     const [loading, setLoading] = useState(true)
     const size = 8;
-    const category = 'BackToSchoolShop'
+    const category = 'BoysTops'
     useEffect(() => {
         fetch(`https://arcane-temple-26692.herokuapp.com/products?category=${category}&&page=${page}&&size=${size}`)
             .then(res => res.json())
@@ -46,7 +46,7 @@ const BackToSchoolShop = () => {
     return (
         <div>
             <Helmet>
-                <title>Back To School Shop</title>
+                <title>Boys Tops</title>
                 <meta name="description" content="This is Magpyehub Online Shop" />
             </Helmet>
             <Header></Header>
@@ -87,7 +87,6 @@ const BackToSchoolShop = () => {
                                         <Link onClick={() => { filterProduct('feedingWeaning') }} to="">Feeding & Weaning</Link><br />
                                         <Link onClick={() => { filterProduct('nurseryFunitureFurnishings') }} to="">Nursery Funiture & Furnishings</Link><br />
                                         <Link onClick={() => { filterProduct('safetyHealthcare') }} to="">Safety & Healthcare</Link><br />
-                                        <Link onClick={() => { filterProduct('babyChecklist') }} to="">Baby Checklist</Link><br />
                                     </div>
                                 </Accordion.Body>
                             </Accordion.Item>
@@ -109,11 +108,10 @@ const BackToSchoolShop = () => {
                                         <Link onClick={() => { filterProduct('AllGirlsclothes') }} to="">All Girls clothes</Link><br />
                                         <Link onClick={() => { filterProduct('GirlsDresses') }} to="">Girls Dresses</Link><br />
                                         <Link onClick={() => { filterProduct('GirlsShoes') }} to="">Girls Shoes</Link><br />
-                                        <Link onClick={() => { filterProduct('GirlsPyjamas') }} to="">Girls Pyjamas</Link><br />
                                         <Link onClick={() => { filterProduct('AllBoysClothes') }} to="">All Boys Clothes</Link><br />
-                                        <Link onClick={() => { filterProduct('BoysPyjamas') }} to=" ">Boys Pyjamas </Link><br />
+                                        <Link onClick={() => { filterProduct('BoysShorts') }} to="">Boys Shorts </Link><br />
                                         <Link onClick={() => { filterProduct('BoysShoes') }} to="">Boys Shoes</Link><br />
-                                        <Link onClick={() => { filterProduct('BackToSchoolShop') }} to="">Back to School Shop</Link><br />
+                                        <Link onClick={() => { filterProduct('BoysTops') }} to="">Boys Tops </Link><br />
                                     </div>
                                 </Accordion.Body>
                             </Accordion.Item>
@@ -218,4 +216,4 @@ const BackToSchoolShop = () => {
     )
 }
 
-export default BackToSchoolShop
+export default BoysTops

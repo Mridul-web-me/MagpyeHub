@@ -87,7 +87,6 @@ const BabyToddlerclothes = () => {
                                         <Link onClick={() => { filterProduct('feedingWeaning') }} to="">Feeding & Weaning</Link><br />
                                         <Link onClick={() => { filterProduct('nurseryFunitureFurnishings') }} to="">Nursery Funiture & Furnishings</Link><br />
                                         <Link onClick={() => { filterProduct('safetyHealthcare') }} to="">Safety & Healthcare</Link><br />
-                                        <Link onClick={() => { filterProduct('babyChecklist') }} to="">Baby Checklist</Link><br />
                                     </div>
                                 </Accordion.Body>
                             </Accordion.Item>
@@ -109,11 +108,10 @@ const BabyToddlerclothes = () => {
                                         <Link onClick={() => { filterProduct('AllGirlsclothes') }} to="">All Girls clothes</Link><br />
                                         <Link onClick={() => { filterProduct('GirlsDresses') }} to="">Girls Dresses</Link><br />
                                         <Link onClick={() => { filterProduct('GirlsShoes') }} to="">Girls Shoes</Link><br />
-                                        <Link onClick={() => { filterProduct('GirlsPyjamas') }} to="">Girls Pyjamas</Link><br />
                                         <Link onClick={() => { filterProduct('AllBoysClothes') }} to="">All Boys Clothes</Link><br />
-                                        <Link onClick={() => { filterProduct('BoysPyjamas') }} to=" ">Boys Pyjamas </Link><br />
+                                        <Link onClick={() => { filterProduct('BoysShorts') }} to="">Boys Shorts </Link><br />
                                         <Link onClick={() => { filterProduct('BoysShoes') }} to="">Boys Shoes</Link><br />
-                                        <Link onClick={() => { filterProduct('BackToSchoolShop') }} to="">Back to School Shop</Link><br />
+                                        <Link onClick={() => { filterProduct('BoysTops') }} to="">Boys Tops </Link><br />
                                     </div>
                                 </Accordion.Body>
                             </Accordion.Item>

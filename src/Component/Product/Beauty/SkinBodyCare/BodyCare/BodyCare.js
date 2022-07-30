@@ -70,23 +70,7 @@ const BodyCare = () => {
                                     <p>Price: {price}</p>
                                 </Accordion.Body>
                             </Accordion.Item>
-                            <Accordion.Item eventKey="1">
-                                <Accordion.Header>Top Brands</Accordion.Header>
-                                <Accordion.Body>
-                                    <div className="filterItem">
-                                        <Link onClick={() => { filterProduct('theOrdinary') }} to="">The Ordinary</Link><br />
-                                        <Link onClick={() => { filterProduct('CHANEL') }} to="">CHANEL</Link><br />
-                                        <Link onClick={() => { filterProduct('CharlotteTilbury') }} to="">Charlotte Tilbury</Link><br />
-                                        <Link onClick={() => { filterProduct('Clarins') }} to="">Clarins</Link><br />
-                                        <Link onClick={() => { filterProduct('Clinique') }} to="">Clinique</Link><br />
-                                        <Link onClick={() => { filterProduct('DIOR') }} to="">DIOR</Link><br />
-                                        <Link onClick={() => { filterProduct('EstéeLauder') }} to="">Estée Lauder</Link><br />
-                                        <Link onClick={() => { filterProduct('BeautyGucci') }} to="">Gucci</Link><br />
-                                        <Link onClick={() => { filterProduct('JoMaloneLondon') }} to="">Jo Malone London</Link><br />
-                                        <Link onClick={() => { filterProduct('AToZBrands') }} to="">A-Z Brands</Link><br />
-                                    </div>
-                                </Accordion.Body>
-                            </Accordion.Item>
+
                             <Accordion.Item eventKey="2">
                                 <Accordion.Header>Makeup</Accordion.Header>
                                 <Accordion.Body>
@@ -152,7 +136,6 @@ const BodyCare = () => {
                                         <Link onClick={() => { filterProduct('VeganBeauty') }} to="">Vegan Beauty</Link><br />
                                         <Link onClick={() => { filterProduct('Wellness') }} to="">Wellness</Link><br />
                                         <Link onClick={() => { filterProduct('GiftSets') }} to="">Gift Sets</Link><br />
-                                        <Link onClick={() => { filterProduct('NewAndExclusiveClarinsExtraordinaire') }} to="">New & Exclusive: Clarins Eau Extraordinaire</Link><br />
                                     </div>
                                 </Accordion.Body>
                             </Accordion.Item>

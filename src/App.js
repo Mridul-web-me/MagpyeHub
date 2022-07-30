@@ -237,7 +237,6 @@ import MenJewellery from './Component/Product/Men/Accessories/MenJewellery/MenJe
 import MenSuitcases from './Component/Product/Men/Accessories/MenSuitcases/MenSuitcases';
 import SkinCareTreatments from './Component/Product/Beauty/SkinBodyCare/SkinCareTreatments/SkinCareTreatments';
 import SunCreamAfterSun from './Component/Product/Beauty/SkinBodyCare/SunCreamAfterSun/SunCreamAfterSun';
-import BeautyToolsTechnology from './Component/Product/Beauty/SkinBodyCare/BeautyToolsTechnology/BeautyToolsTechnology';
 import MenGrooming from './Component/Product/Beauty/SkinBodyCare/MenGrooming/MenGrooming';
 
 // BABY AND CHILD
@@ -252,7 +251,7 @@ import BathingChanging from './Component/Product/Baby&child/BabyHomeNursery/Bath
 import FeedingWeaning from './Component/Product/Baby&child/BabyHomeNursery/FeedingWeaning/FeedingWeaning';
 import NurseryFunitureFurnishings from './Component/Product/Baby&child/BabyHomeNursery/NurseryFunitureFurnishings/NurseryFunitureFurnishings';
 import SafetyHealthcare from './Component/Product/Baby&child/BabyHomeNursery/SafetyHealthcare/SafetyHealthcare';
-import BabyChecklist from './Component/Product/Baby&child/BabyHomeNursery/BabyChecklist/BabyChecklist';
+
 
 // Baby Clothes(0 - 4 years)
 
@@ -268,9 +267,9 @@ import GirlsDresses from './Component/Product/Baby&child/KidsClothingShoes/Girls
 import GirlsShoes from './Component/Product/Baby&child/KidsClothingShoes/GirlsShoes/GirlsShoes';
 import GirlsPyjamas from './Component/Product/Baby&child/KidsClothingShoes/GirlsPyjamas/GirlsPyjamas';
 import AllBoysClothes from './Component/Product/Baby&child/KidsClothingShoes/AllBoysClothes/AllBoysClothes';
-import BoysPyjamas from './Component/Product/Baby&child/KidsClothingShoes/BoysPyjamas/BoysPyjamas';
+import BoysShorts from './Component/Product/Baby&child/KidsClothingShoes/BoysShorts/BoysShorts';
 import BoysShoes from './Component/Product/Baby&child/KidsClothingShoes/BoysShoes/BoysShoes';
-import BackToSchoolShop from './Component/Product/Baby&child/KidsClothingShoes/BackToSchoolShop/BackToSchoolShop';
+import BoysTops from './Component/Product/Baby&child/KidsClothingShoes/BoysTops/BoysTops';
 
 // Kids Travel
 
@@ -610,7 +609,6 @@ function App() {
             <Route path="/beauty/handFootCare" element={<HandFootCare />} />
             <Route path="/beauty/skinCareTreatments" element={<SkinCareTreatments />} />
             <Route path="/beauty/sunCreamAfterSun" element={<SunCreamAfterSun />} />
-            <Route path="/beauty/beautyToolsTechnology" element={<BeautyToolsTechnology />} />
             <Route path="/beauty/menGrooming" element={<MenGrooming />} />
 
             {/* Hair Care & Styling */}
@@ -647,7 +645,6 @@ function App() {
             <Route path="/babyAndChild/feedingWeaning" element={<FeedingWeaning />} />
             <Route path="/babyAndChild/nurseryFunitureFurnishings" element={<NurseryFunitureFurnishings />} />
             <Route path="/babyAndChild/safetyHealthcare" element={<SafetyHealthcare />} />
-            <Route path="/babyAndChild/babyChecklist" element={<BabyChecklist />} />
 
             {/* Baby Clothes (0-4 years) */}
             <Route path="/babyAndChild/babyToddlerclothes" element={<BabyToddlerclothes />} />
@@ -661,9 +658,9 @@ function App() {
             <Route path="/babyAndChild/GirlsShoes" element={<GirlsShoes />} />
             <Route path="/babyAndChild/GirlsPyjamas" element={<GirlsPyjamas />} />
             <Route path="/babyAndChild/AllBoysClothes" element={<AllBoysClothes />} />
-            <Route path="/babyAndChild/BoysPyjamas" element={<BoysPyjamas />} />
+            <Route path="/babyAndChild/BoysShorts" element={<BoysShorts />} />
             <Route path="/babyAndChild/BoysShoes" element={<BoysShoes />} />
-            <Route path="/babyAndChild/BackToSchoolShop" element={<BackToSchoolShop />} />
+            <Route path="/babyAndChild/BoysTops" element={<BoysTops />} />
 
             {/* Kids Travel */}
 

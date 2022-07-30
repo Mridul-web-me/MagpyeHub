@@ -302,22 +302,6 @@ const Nav = () => {
                                 <div className="mega-box4">
                                     <div className="content">
                                         <div className="row">
-                                            <h5>Top Brands</h5>
-                                            <hr />
-                                            <ul className="mega-links">
-                                                <li><Link to="/beauty/theOrdinary">The Ordinary</Link></li>
-                                                <li><Link to="/beauty/CHANEL">CHANEL</Link></li>
-                                                <li><Link to="/beauty/CharlotteTilbury">Charlotte Tilbury</Link></li>
-                                                <li><Link to="/beauty/Clarins">Clarins</Link></li>
-                                                <li><Link to="/beauty/Clinique">Clinique</Link></li>
-                                                <li><Link to="/beauty/DIOR">DIOR</Link></li>
-                                                <li><Link to="/beauty/EstéeLauder">Estée Lauder</Link></li>
-                                                <li><Link to="/beauty/BeautyGucci">Gucci</Link></li>
-                                                <li><Link to="/beauty/JoMaloneLondon">Jo Malone London</Link></li>
-                                                <li><Link to="/beauty/AToZBrands">A-Z Brands</Link></li>
-                                            </ul>
-                                        </div>
-                                        <div className="row">
                                             <h5>Makeup</h5>
                                             <hr />
                                             <ul className="mega-links">
@@ -352,7 +336,6 @@ const Nav = () => {
                                                 <li><Link to="/beauty/handFootCare">Hand & Foot Care</Link></li>
                                                 <li><Link to="/beauty/skinCareTreatments">Skin Care & Treatments</Link></li>
                                                 <li><Link to="/beauty/sunCreamAfterSun">Sun Cream & After Sun</Link></li>
-                                                <li><Link to="/beauty/beautyToolsTechnology">Beauty Tools & Technology</Link></li>
                                                 <li><Link to="/beauty/menGrooming">Men's Grooming</Link></li>
                                             </ul>
                                         </div>
@@ -378,7 +361,6 @@ const Nav = () => {
                                                 <li><Link to="/beauty/VeganBeauty">Vegan Beauty</Link></li>
                                                 <li><Link to="/beauty/Wellness">Wellness</Link></li>
                                                 <li><Link to="/beauty/GiftSets">Gift Sets</Link></li>
-                                                <li><Link to="/beauty/NewAndExclusive">New & Exclusive: Clarins Eau Extraordinaire</Link></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -411,7 +393,6 @@ const Nav = () => {
                                                 <li><Link to="/babyAndChild/feedingWeaning">Feeding & Weaning</Link></li>
                                                 <li><Link to="/babyAndChild/nurseryFunitureFurnishings">Nursery Funiture & Furnishings</Link></li>
                                                 <li><Link to="/babyAndChild/safetyHealthcare">Safety & Healthcare</Link></li>
-                                                <li><Link to="/babyAndChild/babyChecklist">Baby Checklist</Link></li>
                                             </ul>
                                         </div>
                                         <div className="row">
@@ -431,11 +412,10 @@ const Nav = () => {
                                                 <li><Link to="/babyAndChild/AllGirlsclothes">All Girls clothes</Link></li>
                                                 <li><Link to="/babyAndChild/GirlsDresses">Girls Dresses</Link></li>
                                                 <li><Link to="/babyAndChild/GirlsShoes">Girls Shoes</Link></li>
-                                                <li><Link to="/babyAndChild/GirlsPyjamas">Girls Pyjamas</Link></li>
                                                 <li><Link to="/babyAndChild/AllBoysClothes">All Boys Clothes</Link></li>
-                                                <li><Link to="/babyAndChild/BoysPyjamas ">Boys Pyjamas </Link></li>
+                                                <li><Link to="/babyAndChild/BoysShorts ">Boys Shorts </Link></li>
                                                 <li><Link to="/babyAndChild/BoysShoes">Boys Shoes</Link></li>
-                                                <li><Link to="/babyAndChild/BackToSchoolShop">Back to School Shop</Link></li>
+                                                <li><Link to="/babyAndChild/BoysTops">Boys Tops</Link></li>
                                             </ul>
                                         </div>
                                         <div className="row">

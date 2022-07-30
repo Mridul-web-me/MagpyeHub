@@ -9,7 +9,7 @@ import './Paypal.css'
 const Paypal = ({ clientAddress }) => {
     const [orderID, setOrderID] = useState(false);
     const [success, setSuccess] = useState(false)
-    const { total, carts, totalCartQuantity } = useProduct({});
+    const { total, carts } = useProduct({});
     const [errorMessage, setErrorMessage] = useState('')
     const history = useNavigate()
     const { displayName, email, zip, state, city, phone, address, address1 } = clientAddress
@@ -22,7 +22,7 @@ const Paypal = ({ clientAddress }) => {
                     {
                         amount: {
                             value: total,
-                            currency_code: "US"
+                            currency_code: "GB"
                         },
                     },
                 ],
@@ -94,7 +94,7 @@ const Paypal = ({ clientAddress }) => {
         <div>
             <PayPalScriptProvider
                 options={{
-                    "client-id": "ARQ3UsdpGXygKUeUK_LieJ_WExezKx9xZdhUc6L038F_kqkgnxAwf4mRjTKHHc-DvCDY0c7B4SDW8_xA",
+                    "client-id": "ARQ3UsdpGXygKUeUK_LieJ_WExezKx9xZdhUc6L038F_kqkgnxAwf4mRjTKHHc-DvCDY0c7B4SDW8_xA&currency=GB",
                 }}
                 style={{
                     size: 'small',
