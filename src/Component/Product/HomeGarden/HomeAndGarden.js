@@ -246,6 +246,7 @@ const HomeAndGarden = () => {
                                     <h5>Accessories</h5>
                                 </Link>
                             </Col>
+
                         </Row>
                     </Col>
                 </Row>

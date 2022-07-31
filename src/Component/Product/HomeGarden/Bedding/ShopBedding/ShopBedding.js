@@ -1,229 +1,261 @@
-import React, { useEffect, useState } from 'react'
-import { Accordion, Button, Col, Container, Row, Spinner } from 'react-bootstrap'
-import useProduct from '../../../../../hooks/Product/useProduct'
+import React from 'react'
+import { Col, Container, Row } from 'react-bootstrap'
 import Footer from '../../../../Footer/Footer'
 import Header from '../../../../Header/Header'
-import AllProduct from '../../../AllProduct/AllProduct'
 import { Link } from 'react-router-dom'
 import Newsletter from '../../../../Newsletter/Newsletter'
 import PromoUnit from '../../../../PromoUnit/PromoUnit'
 import { Helmet } from 'react-helmet'
-
-
+import img1 from '../../../../../img/ShopBedding/1.webp'
+import img2 from '../../../../../img/ShopBedding/2.webp'
+import img3 from '../../../../../img/ShopBedding/3.webp'
+import img4 from '../../../../../img/ShopBedding/4.webp'
+import img5 from '../../../../../img/ShopBedding/5.webp'
+import img6 from '../../../../../img/ShopBedding/6.webp'
+import img7 from '../../../../../img/ShopBedding/7.webp'
+import img8 from '../../../../../img/ShopBedding/8.webp'
 const ShopBedding = () => {
-    const { AllProducts, handleAddToCart } = useProduct([]);
-    const [filter, setFilter] = useState([])
-    const [loading, setLoading] = useState(true);
-    const [products, setProducts] = useState([])
-    const [pageCount, setPageCount] = useState(0);
-    const [page, setPage] = useState(0);
-    const [price, setPrice] = useState(0);
-    const size = 8;
-
-    const category = 'shopBedding'
-    useEffect(() => {
-        fetch(`https://arcane-temple-26692.herokuapp.com/products?category=${category}&&page=${page}&&size=${size}`)
-            .then(res => res.json())
-            .then(data => {
-                setProducts(data.products)
-                const count = data.count;
-                const pageNumber = Math.ceil(count / size);
-                setPageCount(pageNumber)
-                console.log(data.products);
-                setLoading(false)
-            });
-    }, [page, category]);
-
-
-
-    const filterProduct = (catProduct) => {
-        const updatedProduct = AllProducts.filter((curElem) => {
-            return curElem.category === catProduct;
-        });
-        setFilter(updatedProduct);
-
-    };
-
-    const handleInput = (e) => {
-
-        setPrice(e.target.value);
-    }
 
     return (
-        <div>
+        <>
             <Helmet>
                 <title>Shop Bedding</title>
                 <meta name="description" content="This is Magpyehub Online Shop" />
             </Helmet>
             <Header></Header>
             <PromoUnit></PromoUnit>
-
-            <Container fluid>
+            <Container fluid >
                 <Row>
                     <h3 style={{
-                        textAlign: 'start',
-                        color: '#303030', fontSize: '26px',
+                        textAlign: 'center',
+                        color: '#303030', fontSize: '20px',
                         textTransform: 'uppercase',
                         marginBottom: '20px'
-                    }}>Shop Bedding</h3>
-                    <Col md={3} xs={12}>
-                        <Accordion defaultActiveKey="0">
-                            <Accordion.Item eventKey="0">
-                                <Accordion.Header>Price Range</Accordion.Header>
-                                <Accordion.Body>
-                                    <input type="range" onInput={handleInput} />
-                                    <p>Price: {price}</p>
-                                </Accordion.Body>
-                            </Accordion.Item>
-                            <Accordion.Item eventKey="1">
-                                <Accordion.Header>Home Furnishings & Accessories</Accordion.Header>
-                                <Accordion.Body>
-                                    <div className="filterItem">
-                                        <Link onClick={() => { filterProduct('duvetCovers') }} to="">Duvet Covers</Link> <br />
-                                        <Link onClick={() => { filterProduct('bedding') }} to="">Bed Sheets</Link> <br />
-                                        <Link onClick={() => { filterProduct('pillowCases') }} to="">Pillow Cases</Link> <br />
-                                        <Link onClick={() => { filterProduct('duvets') }} to="">Duvets</Link> <br />
-                                        <Link onClick={() => { filterProduct('pillows') }} to="">Pillows</Link> <br />
-                                        <Link onClick={() => { filterProduct('throwsBlanketsAndSpreads') }} to="">Throws & Blankets</Link> <br />
-                                        <Link onClick={() => { filterProduct('childrensBedding') }} to="">Children's Bedding</Link> <br />
-                                        <Link onClick={() => { filterProduct('shopBedding') }} to="">Shop Bedding</Link> <br />
-                                    </div>
-                                </Accordion.Body>
-                            </Accordion.Item>
-                            <Accordion.Item eventKey="2">
-                                <Accordion.Header>Cooking & Dining</Accordion.Header>
-                                <Accordion.Body>
-                                    <div className="filterItem">
-                                        <Link onClick={() => { filterProduct('cookwareBakeware') }} to="">Cookware & Bakeware</Link> <br />
-                                        <Link onClick={() => { filterProduct('tablewareAndcutlery') }} to="">Tableware & Cutlery</Link> <br />
-                                        <Link onClick={() => { filterProduct('glassesDrinkware') }} to="">Glasses & Drinkware</Link> <br />
-                                        <Link onClick={() => { filterProduct('potsPans') }} to="">Pots & Pans</Link> <br />
-                                        <Link onClick={() => { filterProduct('foodPreparation') }} to="">Food Preparation</Link> <br />
-                                        <Link onClick={() => { filterProduct('picnicware') }} to="">Picnicware</Link> <br />
-                                        <Link onClick={() => { filterProduct('kitchenUtensilsGadgets') }} to="">Kitchen Utensils & Gadgets</Link> <br />
-                                        <Link onClick={() => { filterProduct('kitchenBins') }} to="">Kitchen Bins</Link> <br />
-                                    </div>
-                                </Accordion.Body>
-                            </Accordion.Item>
-                            <Accordion.Item eventKey="3">
-                                <Accordion.Header>Home Décor & Accessories</Accordion.Header>
-                                <Accordion.Body>
-                                    <div className="filterItem">
-                                        <Link onClick={() => { filterProduct('homeAccessories') }} to="">Home Accessories</Link> <br />
-                                        <Link onClick={() => { filterProduct('cushions') }} to="">Cushions & Bean Bags</Link> <br />
-                                        <Link onClick={() => { filterProduct('candlesAndHomeFragrances') }} to="">Candles & Home Fragrance</Link> <br />
-                                        <Link onClick={() => { filterProduct('towels') }} to=""> Towels</Link> <br />
-                                        <Link onClick={() => { filterProduct('picturesArtFrames') }} to="">Pictures, Art & Frames</Link> <br />
-                                        <Link onClick={() => { filterProduct('mirrors') }} to=""> Mirrors</Link> <br />
-                                        <Link onClick={() => { filterProduct('rugs') }} to=""> Rugs</Link> <br />
-                                        <Link onClick={() => { filterProduct('storage') }} to=""> Storage</Link> <br />
-                                        <Link onClick={() => { filterProduct('wallpaperPaintDIY') }} to=""> Wallpaper, Paint & DIY</Link> <br />
-                                    </div>
-                                </Accordion.Body>
-                            </Accordion.Item>
-                            <Accordion.Item eventKey="4">
-                                <Accordion.Header>Curtains, Blinds & Floors</Accordion.Header>
-                                <Accordion.Body>
-                                    <div className="filterItem">
-                                        <Link onClick={() => { filterProduct('curtains') }} to="">Curtains</Link> <br />
-                                        <Link onClick={() => { filterProduct('madeToMeasureCurtains') }} to="">Made to Measure Curtains</Link> <br />
-                                        <Link onClick={() => { filterProduct('curtainPolesAccessories') }} to="">Curtain Poles & Accessories</Link> <br />
-                                        <Link onClick={() => { filterProduct('blinds') }} to=""> Blinds</Link> <br />
-                                        <Link onClick={() => { filterProduct('fabrics') }} to=""> Fabrics</Link> <br />
-                                        <Link onClick={() => { filterProduct('carpetsAndFlooring') }} to=""> Carpets & Flooring</Link> <br />
-                                    </div>
-                                </Accordion.Body>
-                            </Accordion.Item>
-                            <Accordion.Item eventKey="5">
-                                <Accordion.Header>Garden</Accordion.Header>
-                                <Accordion.Body>
-                                    <div className="filterItem">
-                                        <Link onClick={() => { filterProduct('gardenFurnitureSets') }} to="">Garden Furniture Sets</Link> <br />
-                                        <Link onClick={() => { filterProduct('gardenSeating') }} to="">Garden Seating</Link> <br />
-                                        <Link onClick={() => { filterProduct('gasBBQs') }} to="">Gas BBQs</Link> <br />
-                                        <Link onClick={() => { filterProduct('pizzaOvens') }} to="">Pizza Ovens</Link> <br />
-                                        <Link onClick={() => { filterProduct('decorativeGardenAccessories') }} to=""> Decorative Garden Accessories</Link> <br />
-                                        <Link onClick={() => { filterProduct('ardenOutdoorlights') }} to=""> Outdoor Lighting</Link> <br />
-                                        <Link onClick={() => { filterProduct('parasolsAccessories') }} to=""> Parasols & Accessories</Link> <br />
-                                    </div>
-                                </Accordion.Body>
-                            </Accordion.Item>
-                            <Accordion.Item eventKey="6">
-                                <Accordion.Header>Brand</Accordion.Header>
-                                <Accordion.Body>
-                                    <div className="filterItem">
-                                        <Link onClick={() => { filterProduct('aptamil') }} to="">Aptamil</Link><br />
-                                        <Link onClick={() => { filterProduct('babyClub') }} to="">Baby Club</Link><br />
-                                        <Link onClick={() => { filterProduct('britax') }} to="">Britax</Link><br />
-                                        <Link onClick={() => { filterProduct('fitFlop') }} to="">Fit Flop</Link><br />
-                                        <Link onClick={() => { filterProduct('gucci') }} to="">Gucci</Link><br />
-                                        <Link onClick={() => { filterProduct('hipp') }} to="">Hipp</Link><br />
-                                        <Link onClick={() => { filterProduct('jole') }} to="">Jole</Link><br />
-                                        <Link onClick={() => { filterProduct('levis') }} to="">Levis</Link><br />
-                                        <Link onClick={() => { filterProduct('maxiCosi') }} to="">Maxi Cosi</Link><br />
-                                        <Link onClick={() => { filterProduct('phaseEight') }} to="">Phase Eight</Link><br />
-                                        <Link onClick={() => { filterProduct('tedBaker') }} to="">Ted Baker</Link><br />
-                                    </div>
-                                </Accordion.Body>
-                            </Accordion.Item>
-                        </Accordion>
+                    }}>Bedding</h3>
+                    <hr />
+                    <Col md={2} xs={12}>
+                        <div className='mainRoute' style={{
+                            textAlign: 'start',
+                            padding: '10px 0'
+                        }} >
+                            <Link to="/home"> Homepage </Link> /
+                            <Link to="/HomeAndGarden"> Bedding </Link>
+                            <hr />
+                        </div>
+                        <h6 style={{ textAlign: 'start' }}>Bedding</h6>
+                        <div className="filterItem">
+                            <Link to="/homeAndGarden/duvetCovers">Duvet Covers</Link><br />
+                            <Link to="/homeAndGarden/bedding">Bed Sheets</Link><br />
+                            <Link to="/homeAndGarden/pillowCases">Pillow Cases</Link><br />
+                            <Link to="/homeAndGarden/duvets">Duvets</Link><br />
+                            <Link to="/homeAndGarden/pillows">Pillows</Link><br />
+                            <Link to="/homeAndGarden/throwsBlanketsAndSpreads">Throws & Blankets</Link><br />
+                            <Link to="/homeAndGarden/childrensBedding">Children's Bedding</Link><br />
+                            <Link to="/homeAndGarden/shopBedding">Shop Bedding</Link><br />
+                        </div>
+                        <hr />
+                        <h6 style={{ textAlign: 'start' }}>Cooking & Dining</h6>
+                        <div className="filterItem">
+                            <Link to="/homeAndGarden/cookwareBakeware">Cookware & Bakeware</Link><br />
+                            <Link to="/homeAndGarden/cutlery">Tableware & Cutlery</Link><br />
+                            <Link to="/homeAndGarden/glassesDrinkware">Glasses & Drinkware</Link><br />
+                            <Link to="/homeAndGarden/potsPans">Pots & Pans</Link><br />
+                            <Link to="/homeAndGarden/foodPreparation">Food Preparation</Link><br />
+                            <Link to="/homeAndGarden/picnicware">Picnicware</Link><br />
+                            <Link to="/homeAndGarden/kitchenUtensilsGadgets">Kitchen Utensils & Gadgets</Link><br />
+                            <Link to="/homeAndGarden/kitchenBins">Kitchen Bins</Link><br />
+                        </div>
+                        <hr />
+                        <h6 style={{ textAlign: 'start' }}>Home Décor & Accessories</h6>
+                        <div className="filterItem">
+                            <Link to="/homeAndGarden/homeAccessories">Home Accessories</Link><br />
+                            <Link to="/homeAndGarden/cushions">Cushions & Bean Bags</Link><br />
+                            <Link to="/homeAndGarden/candlesHomeFragrance">Candles & Home Fragrance</Link><br />
+                            <Link to="/homeAndGarden/towels"> Towels</Link><br />
+                            <Link to="/homeAndGarden/picturesArtFrames">Pictures, Art & Frames</Link><br />
+                            <Link to="/homeAndGarden/mirrors"> Mirrors</Link><br />
+                            <Link to="/homeAndGarden/rugs"> Rugs</Link><br />
+                            <Link to="/homeAndGarden/storage"> Storage</Link><br />
+                            <Link to="/homeAndGarden/wallpaperPaintDIY"> Wallpaper, Paint & DIY</Link><br />
+                        </div>
+                        <hr />
+                        <h6 style={{ textAlign: 'start' }}>Curtains, Blinds & Floors</h6>
+                        <div className="filterItem">
+                            <Link to="/homeAndGarden/curtains">Curtains</Link><br />
+                            <Link to="/homeAndGarden/madeToMeasureCurtains">Made to Measure Curtains</Link><br />
+                            <Link to="/homeAndGarden/curtainPolesAccessories">Curtain Poles & Accessories</Link><br />
+                            <Link to="/homeAndGarden/blinds"> Blinds</Link><br />
+                            <Link to="/homeAndGarden/fabrics"> Fabrics</Link><br />
+                            <Link to="/homeAndGarden/carpetsAndFlooring"> Carpets & Flooring</Link><br />
+                        </div>
+                        <hr />
+
+                        <h6 style={{ textAlign: 'start' }}>Garden</h6>
+                        <div className="filterItem">
+                            <Link to="/homeAndGarden/gardenFurnitureSets">Garden Furniture Sets</Link><br />
+                            <Link to="/homeAndGarden/gardenSeating">Garden Seating</Link><br />
+                            <Link to="/homeAndGarden/gasBBQs">Gas BBQs</Link><br />
+                            <Link to="/homeAndGarden/charcoalBBQs">Charcoal BBQs</Link><br />
+                            <Link to="/homeAndGarden/pizzaOvens">Pizza Ovens</Link><br />
+                            <Link to="/homeAndGarden/decorativeGardenAccessories"> Decorative Garden Accessories</Link><br />
+                            <Link to="/homeAndGarden/outdoorlights"> Outdoor Lighting</Link><br />
+                            <Link to="/homeAndGarden/parasolsAccessories"> Parasols & Accessories</Link><br />
+                            <Link to="/homeAndGarden/shopGarden"> Shop Garden</Link><br />
+                        </div>
+                        <hr />
+
+                        <h6 style={{ textAlign: 'start' }}>Brand</h6>
+
+                        <div className="filterItem">
+                            <Link to='/brand/aptamil'>Aptamil</Link><br />
+                            <Link to='/brand/babyClub'>Baby Club</Link><br />
+                            <Link to='/brand/britax'>Britax</Link><br />
+                            <Link to='/brand/fitFlop'>Fit Flop</Link><br />
+                            <Link to='/brand/gucci' >Gucci</Link><br />
+                            <Link to='/brand/hipp' >Hipp</Link><br />
+                            <Link to='/brand/jole' >Jole</Link><br />
+                            <Link to='/brand/levis'>Levis</Link><br />
+                            <Link to='/brand/maxiCosi'>Maxi Cosi</Link><br />
+                            <Link to='/brand/phaseEight'>Phase Eight</Link><br />
+                            <Link to='/brand/tedBaker'>Ted Baker</Link><br />
+                        </div>
                     </Col>
-                    <Col md={9} xs={12}>
-                        {loading ? <div className='text-center' style={{ height: '40vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}> <Spinner animation="grow" variant="info" />
-                            <Spinner animation="grow" variant="info" />
-                            <Spinner animation="grow" variant="info" />
-                        </div> : <div>
 
-                            {!filter.length ? <Row xs={1} md={4} className="g-4">
-                                {
-                                    products.filter(product => { return product.price > parseInt(price) })
-                                        .map(product =>
-                                            <>
-                                                <AllProduct
-                                                    key={product._id}
-                                                    product={product}
-                                                    handleAddToCart={handleAddToCart}
-                                                // pageCount={pageCount}
-                                                ></AllProduct>
-                                            </>
+                    <Col md={10} xs={12}>
+                        <Row md={12}>
+                            <Col md={2}>
+                                <Link to="/homeAndGarden/duvetCovers" style={{
+                                    textDecoration: 'none',
+                                    color: '#000'
+                                }}>
+                                    <img style={{
+                                        borderRadius: '50%',
+                                        margin: '10px '
+                                    }} src={img1} alt="" width='130px' fluid />
+                                    <h5 style={{
+                                        fontSize: '20px'
+                                    }}>Duvet Covers</h5>
+                                </Link>
 
-                                        )
-                                }
-                            </Row> :
-                                <Row xs={1} md={4} className="g-4">
-                                    {
-                                        filter.map(product =>
-                                            <>
-                                                <AllProduct
-                                                    key={product._id}
-                                                    product={product}
-                                                    handleAddToCart={handleAddToCart}
-                                                // pageCount={pageCount}
-                                                ></AllProduct>
-                                            </>
+                            </Col>
+                            <Col md={2}>
+                                <Link to="/homeAndGarden/bedding" style={{
+                                    textDecoration: 'none',
+                                    color: '#000'
+                                }}>
+                                    <img style={{
+                                        borderRadius: '50%',
+                                        margin: '10px '
+                                    }} src={img2} alt="" width='130px' fluid />
+                                    <h5 style={{
+                                        fontSize: '20px'
+                                    }}>
+                                        Sheets</h5>
+                                </Link>
 
-                                        )
-                                    }
-                                </Row>}
-                        </div>
-                        }
-                        <div className="pagination">
-                            {
-                                [...Array(pageCount).keys()]
-                                    .map(number => <Button
-                                        className={number === page ? 'selected' : ''}
-                                        variant="light"
-                                        key={number}
-                                        onClick={() => setPage(number)}
-                                    >{number + 1}</Button>)
-                            }
-                        </div>
+                            </Col>
+                            <Col md={2}>
+                                <Link to="/homeAndGarden/duvets" style={{
+                                    textDecoration: 'none',
+                                    color: '#000'
+                                }}>
+                                    <img style={{
+                                        borderRadius: '50%',
+                                        margin: '10px '
+                                    }} src={img3} alt="" width='130px' fluid />
+                                    <h5 style={{
+                                        fontSize: '20px'
+                                    }}>
+                                        Duvets</h5>
+                                </Link>
+
+                            </Col>
+                            <Col md={2}>
+                                <Link to="/homeAndGarden/pillows" style={{
+                                    textDecoration: 'none',
+                                    color: '#000'
+                                }}>
+                                    <img style={{
+                                        borderRadius: '50%',
+                                        margin: '10px '
+                                    }} src={img4} alt="" width='130px' fluid />
+                                    <h5 style={{
+                                        fontSize: '20px'
+                                    }}>
+                                        Pillows</h5>
+                                </Link>
+
+                            </Col>
+                            <Col md={2}>
+
+                                <Link to="/furnitureAndLighting/mattresses" style={{
+                                    textDecoration: 'none',
+                                    color: '#000'
+                                }}>
+                                    <img style={{
+                                        borderRadius: '50%',
+                                        margin: '10px '
+                                    }} src={img5} alt="" width='130px' fluid />
+                                    <h5 style={{
+                                        fontSize: '20px'
+                                    }}>Mattress</h5>
+                                </Link>
+                            </Col>
+                            <Col md={2}>
+                                <Link to="/homeAndGarden/childrensBedding" style={{
+                                    textDecoration: 'none',
+                                    color: '#000'
+                                }}>
+                                    <img style={{
+                                        borderRadius: '50%',
+                                        margin: '10px '
+                                    }} src={img6} alt="" width='130px' fluid />
+                                    <h5 style={{
+                                        fontSize: '20px'
+                                    }}>
+                                        Children's Bedding</h5>
+                                </Link>
+
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col md={6} xs={12}>
+                                <Link to="/homeAndGarden/duvets" style={{
+                                    textDecoration: 'none',
+                                    color: '#000'
+                                }}>
+                                    <img src={img7} alt="" className='img-fluid' />
+                                    <h3 style={{ fontWeight: 700, margin: '10px 0' }}>Don't forget your duvet</h3>
+                                    <h5 style={{ margin: '20px' }}>
+
+                                        Whether you find it hard to warm up at night, or you'd like to be a bit cooler, there's a tog rating and filling for you
+
+                                    </h5>
+                                    <h4><Link to="/homeAndGarden/duvets" style={{ color: 'black' }}>Shop Duvets</Link></h4>
+                                </Link>
+                            </Col>
+                            <Col md={6} xs={12}>
+                                <Link to="/homeAndGarden/bedding" style={{
+                                    textDecoration: 'none',
+                                    color: '#000'
+                                }}>
+                                    <img src={img8} alt="" className='img-fluid' />
+                                    <h3 style={{ fontWeight: 700, margin: '10px 0' }}>Treat yourself to hotel quality bed sheets</h3>
+                                    <h5 style={{ margin: '20px' }}>
+
+                                        Everyone loves that fresh sheet feeling, so why not make it even better with new super soft, high thread count linen
+
+                                    </h5>
+                                    <h4><Link to="/homeAndGarden/bedding" style={{ color: 'black' }}>Shop Bed Sheets</Link></h4>
+                                </Link>
+                            </Col>
+                        </Row>
                     </Col>
                 </Row>
             </Container>
             <Newsletter></Newsletter>
             <Footer></Footer>
-        </div>
+        </>
     )
 }
 

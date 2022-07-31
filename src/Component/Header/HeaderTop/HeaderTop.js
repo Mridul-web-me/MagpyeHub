@@ -31,11 +31,11 @@ const HeaderTop = () => {
                             </div>
                         </Col>
                         <Col xs={4} md={4}>
-                            <a href="/home" >
+                            <Link to="/home" >
                                 <img src={logo} style={{
                                     margin: '15px 0'
                                 }} alt="" className='img-fluid' width="200px" height="200px" />
-                            </a>
+                            </Link>
                         </Col>
                         <Col xs={4} md={4}>
                             <div className='cartMenu' style={{

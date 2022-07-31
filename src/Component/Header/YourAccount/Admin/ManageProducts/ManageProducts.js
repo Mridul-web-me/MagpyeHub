@@ -58,6 +58,7 @@ const ManageProducts = () => {
         <Row>
           <Col md={4}>
             <Accordion defaultActiveKey="0">
+              <h2>Home & Garden</h2>
               <Accordion.Item eventKey="1">
                 <Accordion.Header>Home Furnishings & Accessories</Accordion.Header>
                 <Accordion.Body>
@@ -126,12 +127,12 @@ const ManageProducts = () => {
                     <Link onClick={() => { filterProduct('gasBBQs') }} to="">Gas BBQs</Link> <br />
                     <Link onClick={() => { filterProduct('pizzaOvens') }} to="">Pizza Ovens</Link> <br />
                     <Link onClick={() => { filterProduct('decorativeGardenAccessories') }} to=""> Decorative Garden Accessories</Link> <br />
-                    <Link onClick={() => { filterProduct('outdoorlights') }} to=""> Outdoor Lighting</Link> <br />
+                    <Link onClick={() => { filterProduct('ardenOutdoorlights') }} to=""> Outdoor Lighting</Link> <br />
                     <Link onClick={() => { filterProduct('parasolsAccessories') }} to=""> Parasols & Accessories</Link> <br />
-                    <Link onClick={() => { filterProduct('shopGarden') }} to=""> Shop Garden</Link> <br />
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
+              <h2>Women</h2>
               <Accordion.Item eventKey="6">
                 <Accordion.Header>Clothing</Accordion.Header>
                 <Accordion.Body>
@@ -141,21 +142,20 @@ const ManageProducts = () => {
                     <Link onClick={() => { filterProduct('shirtsTops') }} to="">Shirts & Tops</Link> <br />
                     <Link onClick={() => { filterProduct('shorts') }} to="">Shorts</Link> <br />
                     <Link onClick={() => { filterProduct('skirts') }} to="">Skirts</Link> <br />
-                    <Link onClick={() => { filterProduct('sportsClothes') }} to="">Sports & Clothes  </Link> <br />
-                    <Link onClick={() => { filterProduct('swimwearBeachwear') }} to="">Swimwear Beachwear  </Link> <br />
+                    <Link onClick={() => { filterProduct('sportsClothes') }} to=" ">Sports & Clothes  </Link> <br />
+                    <Link onClick={() => { filterProduct('swimwearBeachwear') }} to=" ">Swimwear Beachwear  </Link> <br />
                     <Link onClick={() => { filterProduct('womenTrousers') }} to="">Trousers</Link> <br />
                     <Link onClick={() => { filterProduct('leggings') }} to="">Leggings</Link> <br />
                     <Link onClick={() => { filterProduct('plusSize') }} to="">Plus Size</Link> <br />
-                    <Link onClick={() => { filterProduct('maternityClothes') }} to="">Maternity Clothes</Link> <br />
-                    <Link onClick={() => { filterProduct('cashmere') }} to="">Cashmere</Link> <br />
-                    <Link onClick={() => { filterProduct('coatsJackets') }} to="">Coats & Jackets</Link> <br />
-                    <Link onClick={() => { filterProduct('jumpersKnitwear') }} to="">Jumpers & Knitwear</Link> <br />
-                    <Link onClick={() => { filterProduct('jumpsuits') }} to="">Jumpsuits</Link> <br />
+                    <Link onClick={() => { filterProduct('maternityClothes') }} to=" ">Maternity Clothes</Link> <br />
+                    <Link onClick={() => { filterProduct('coatsJackets') }} to=" ">Coats & Jackets</Link> <br />
+                    <Link onClick={() => { filterProduct('jumpersKnitwear') }} to=" ">Jumpers & Knitwear</Link> <br />
+                    <Link onClick={() => { filterProduct('jumpsuits') }} to=" ">Jumpsuits</Link> <br />
                     <Link onClick={() => { filterProduct('linen') }} to="">Linen</Link> <br />
-                    <Link onClick={() => { filterProduct('loungewear') }} to="">Loungewear</Link> <br />
-                    <Link onClick={() => { filterProduct('petite') }} to="">Petite</Link> <br />
-                    <Link onClick={() => { filterProduct('occasionwear') }} to="">Occasionwear</Link> <br />
-                    <Link onClick={() => { filterProduct('weddingBoutique') }} to="">Wedding</Link> <br />
+                    <Link onClick={() => { filterProduct('loungewear') }} to=" ">Loungewear</Link> <br />
+                    <Link onClick={() => { filterProduct('petite') }} to=" ">Petite</Link> <br />
+                    <Link onClick={() => { filterProduct('occasionwear') }} to=" ">Occasionwear</Link> <br />
+                    <Link onClick={() => { filterProduct('weddingBoutique') }} to=" ">Wedding</Link> <br />
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
@@ -197,17 +197,11 @@ const ManageProducts = () => {
                     <Link onClick={() => { filterProduct('womenHats') }} to="">Hats</Link> <br />
                     <Link onClick={() => { filterProduct('womenWatches') }} to="">Watches</Link> <br />
                     <Link onClick={() => { filterProduct('womenHairAccessories') }} to="">Hair Accessories</Link> <br />
-                    <Link onClick={() => { filterProduct('womenHatsGlovesScarves') }} to="">Hats, Gloves & Scarves</Link> <br />
                     <Link onClick={() => { filterProduct('womenOccasionHatsFascinators') }} to="">Occasion Hats & Fascinators</Link> <br />
-                    <Link onClick={() => { filterProduct('womenFaceCoverings') }} to="">Face Coverings</Link> <br />
-                    <Link onClick={() => { filterProduct('womenReadingGlassesGlassesCases') }} to="">Reading Glasses & Glasses Cases</Link> <br />
-                    <Link onClick={() => { filterProduct('womenKeyrings') }} to="">Keyrings</Link> <br />
-                    <Link onClick={() => { filterProduct('womenUmbrellas') }} to="">Umbrellas</Link> <br />
-                    <Link onClick={() => { filterProduct('womenSuitcases') }} to="">Suitcases</Link> <br />
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-
+              <h2>Men</h2>
               <Accordion.Item eventKey="10">
                 <Accordion.Header>Clothing</Accordion.Header>
                 <Accordion.Body>
@@ -223,7 +217,6 @@ const ManageProducts = () => {
                     <Link onClick={() => { filterProduct('trousers') }} to="">Trousers</Link> <br />
                     <Link onClick={() => { filterProduct('t-shirts') }} to="">T-Shirts</Link> <br />
                     <Link onClick={() => { filterProduct('waistcoats') }} to="">Waistcoats</Link> <br />
-                    <Link onClick={() => { filterProduct('menCashmere') }} to="">Cashmere</Link> <br />
                     <Link onClick={() => { filterProduct('menCoatsJackets') }} to="">Coats & Jackets</Link> <br />
                     <Link onClick={() => { filterProduct('menSweatshirtsHoodies') }} to="">Sweatshirts & Hoodies</Link> <br />
                     <Link onClick={() => { filterProduct('menJumpersCardigans') }} to="">Jumpers & Cardigans</Link> <br />
@@ -262,7 +255,7 @@ const ManageProducts = () => {
                 <Accordion.Header>Accessories</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
-                    <Link onClick={() => { filterProduct('menBags') }} to="">Men's Bags</Link> <br />
+                    <Link onClick={() => { filterProduct('menMensBags') }} to="">Men's Bags</Link> <br />
                     <Link onClick={() => { filterProduct('menBelts') }} to="">Belts</Link> <br />
                     <Link onClick={() => { filterProduct('menHats') }} to="">Hats</Link> <br />
                     <Link onClick={() => { filterProduct('menWallets') }} to="">Wallets</Link> <br />
@@ -273,24 +266,8 @@ const ManageProducts = () => {
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
+              <h4>Beauty</h4>
               <Accordion.Item eventKey="14">
-                <Accordion.Header>Top Brands</Accordion.Header>
-                <Accordion.Body>
-                  <div className="filterItem">
-                    <Link onClick={() => { filterProduct('theOrdinary') }} to="">The Ordinary</Link><br />
-                    <Link onClick={() => { filterProduct('CHANEL') }} to="">CHANEL</Link><br />
-                    <Link onClick={() => { filterProduct('CharlotteTilbury') }} to="">Charlotte Tilbury</Link><br />
-                    <Link onClick={() => { filterProduct('Clarins') }} to="">Clarins</Link><br />
-                    <Link onClick={() => { filterProduct('Clinique') }} to="">Clinique</Link><br />
-                    <Link onClick={() => { filterProduct('DIOR') }} to="">DIOR</Link><br />
-                    <Link onClick={() => { filterProduct('EstéeLauder') }} to="">Estée Lauder</Link><br />
-                    <Link onClick={() => { filterProduct('BeautyGucci') }} to="">Gucci</Link><br />
-                    <Link onClick={() => { filterProduct('JoMaloneLondon') }} to="">Jo Malone London</Link><br />
-                    <Link onClick={() => { filterProduct('AToZBrands') }} to="">A-Z Brands</Link><br />
-                  </div>
-                </Accordion.Body>
-              </Accordion.Item>
-              <Accordion.Item eventKey="15">
                 <Accordion.Header>Makeup</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
@@ -304,7 +281,7 @@ const ManageProducts = () => {
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="16">
+              <Accordion.Item eventKey="15">
                 <Accordion.Header>Fragrance</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
@@ -315,7 +292,7 @@ const ManageProducts = () => {
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="17">
+              <Accordion.Item eventKey="16">
                 <Accordion.Header>Skin & Body Care</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
@@ -332,7 +309,7 @@ const ManageProducts = () => {
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="18">
+              <Accordion.Item eventKey="17">
                 <Accordion.Header>Hair Care & Styling</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
@@ -346,7 +323,7 @@ const ManageProducts = () => {
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="19">
+              <Accordion.Item eventKey="18">
                 <Accordion.Header>Inspire Me</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
@@ -355,12 +332,11 @@ const ManageProducts = () => {
                     <Link onClick={() => { filterProduct('VeganBeauty') }} to="">Vegan Beauty</Link><br />
                     <Link onClick={() => { filterProduct('Wellness') }} to="">Wellness</Link><br />
                     <Link onClick={() => { filterProduct('GiftSets') }} to="">Gift Sets</Link><br />
-                    <Link onClick={() => { filterProduct('NewAndExclusiveClarinsExtraordinaire') }} to="">New & Exclusive: Clarins Eau Extraordinaire</Link><br />
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-
-              <Accordion.Item eventKey="20">
+              <h2>Baby & Child</h2>
+              <Accordion.Item eventKey="19">
                 <Accordion.Header>Baby Food & Milk</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
@@ -369,7 +345,7 @@ const ManageProducts = () => {
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="21">
+              <Accordion.Item eventKey="20">
                 <Accordion.Header>Baby Home & Nursery</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
@@ -378,11 +354,10 @@ const ManageProducts = () => {
                     <Link onClick={() => { filterProduct('feedingWeaning') }} to="">Feeding & Weaning</Link><br />
                     <Link onClick={() => { filterProduct('nurseryFunitureFurnishings') }} to="">Nursery Funiture & Furnishings</Link><br />
                     <Link onClick={() => { filterProduct('safetyHealthcare') }} to="">Safety & Healthcare</Link><br />
-                    <Link onClick={() => { filterProduct('babyChecklist') }} to="">Baby Checklist</Link><br />
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="22">
+              <Accordion.Item eventKey="21">
                 <Accordion.Header>Baby Clothes (0-4 years)</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
@@ -393,22 +368,21 @@ const ManageProducts = () => {
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="23">
+              <Accordion.Item eventKey="22">
                 <Accordion.Header>Kids Clothing & Shoes</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
                     <Link onClick={() => { filterProduct('AllGirlsclothes') }} to="">All Girls clothes</Link><br />
                     <Link onClick={() => { filterProduct('GirlsDresses') }} to="">Girls Dresses</Link><br />
                     <Link onClick={() => { filterProduct('GirlsShoes') }} to="">Girls Shoes</Link><br />
-                    <Link onClick={() => { filterProduct('GirlsPyjamas') }} to="">Girls Pyjamas</Link><br />
                     <Link onClick={() => { filterProduct('AllBoysClothes') }} to="">All Boys Clothes</Link><br />
-                    <Link onClick={() => { filterProduct('BoysPyjamas') }} to=" ">Boys Pyjamas </Link><br />
+                    <Link onClick={() => { filterProduct('BoysShorts') }} to="">Boys Shorts </Link><br />
                     <Link onClick={() => { filterProduct('BoysShoes') }} to="">Boys Shoes</Link><br />
-                    <Link onClick={() => { filterProduct('BackToSchoolShop') }} to="">Back to School Shop</Link><br />
+                    <Link onClick={() => { filterProduct('BoysTops') }} to="">Boys Tops </Link><br />
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="24">
+              <Accordion.Item eventKey="23">
                 <Accordion.Header>Kids Travel</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
@@ -418,7 +392,7 @@ const ManageProducts = () => {
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="25">
+              <Accordion.Item eventKey="24">
                 <Accordion.Header>Kids Toys & Gifts</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
@@ -430,8 +404,8 @@ const ManageProducts = () => {
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-
-              <Accordion.Item eventKey="26">
+              <h2>Furniture & Lighting</h2>
+              <Accordion.Item eventKey="25">
                 <Accordion.Header>Living Room Furniture</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
@@ -446,7 +420,7 @@ const ManageProducts = () => {
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="27">
+              <Accordion.Item eventKey="26">
                 <Accordion.Header>Bedroom Furniture</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
@@ -461,7 +435,7 @@ const ManageProducts = () => {
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="28">
+              <Accordion.Item eventKey="27">
                 <Accordion.Header>Dining Room Furniture</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
@@ -473,7 +447,7 @@ const ManageProducts = () => {
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="29">
+              <Accordion.Item eventKey="28">
                 <Accordion.Header>Home Office & Storage</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
@@ -484,7 +458,7 @@ const ManageProducts = () => {
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="30">
+              <Accordion.Item eventKey="29">
                 <Accordion.Header>Lighting</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
@@ -499,7 +473,7 @@ const ManageProducts = () => {
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="31">
+              <Accordion.Item eventKey="30">
                 <Accordion.Header>Inspire Me</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
@@ -509,8 +483,8 @@ const ManageProducts = () => {
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-
-              <Accordion.Item eventKey="32">
+              <h2>Electrical</h2>
+              <Accordion.Item eventKey="31">
                 <Accordion.Header>Television & Audio</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
@@ -523,7 +497,7 @@ const ManageProducts = () => {
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="33">
+              <Accordion.Item eventKey="32">
                 <Accordion.Header>Computing & Gaming</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
@@ -536,7 +510,7 @@ const ManageProducts = () => {
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="34">
+              <Accordion.Item eventKey="33">
                 <Accordion.Header>Home Appliances</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
@@ -548,7 +522,7 @@ const ManageProducts = () => {
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="35">
+              <Accordion.Item eventKey="34">
                 <Accordion.Header>Kitchen Appliances & Vacuums</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
@@ -561,7 +535,7 @@ const ManageProducts = () => {
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="36">
+              <Accordion.Item eventKey="35">
                 <Accordion.Header>Mobile, Cameras & Smart Tech</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
@@ -571,7 +545,8 @@ const ManageProducts = () => {
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="37">
+              <h2>Sports & Leisure</h2>
+              <Accordion.Item eventKey="36">
                 <Accordion.Header>Sportswear</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
@@ -582,7 +557,7 @@ const ManageProducts = () => {
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="38">
+              <Accordion.Item eventKey="37">
                 <Accordion.Header>Fitness</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
@@ -596,7 +571,7 @@ const ManageProducts = () => {
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="39">
+              <Accordion.Item eventKey="38">
                 <Accordion.Header>Equipment by Sport</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
@@ -608,7 +583,7 @@ const ManageProducts = () => {
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="40">
+              <Accordion.Item eventKey="39">
                 <Accordion.Header>Sports Brands</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
@@ -621,7 +596,7 @@ const ManageProducts = () => {
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="41">
+              <Accordion.Item eventKey="40">
                 <Accordion.Header>Hobbies & Crafts</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
@@ -635,7 +610,7 @@ const ManageProducts = () => {
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="42">
+              <Accordion.Item eventKey="41">
                 <Accordion.Header>Travel & Luggage</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
@@ -649,7 +624,8 @@ const ManageProducts = () => {
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="43">
+              <h2>Gift</h2>
+              <Accordion.Item eventKey="42">
                 <Accordion.Header>Gifts By Recipient</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
@@ -664,7 +640,7 @@ const ManageProducts = () => {
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="44">
+              <Accordion.Item eventKey="43">
                 <Accordion.Header>Gifts by Price</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
@@ -675,7 +651,7 @@ const ManageProducts = () => {
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="45">
+              <Accordion.Item eventKey="44">
                 <Accordion.Header>Shop by Occasion</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
@@ -686,7 +662,7 @@ const ManageProducts = () => {
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="46">
+              <Accordion.Item eventKey="45">
                 <Accordion.Header>Food & Drink Gifts</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
@@ -700,7 +676,7 @@ const ManageProducts = () => {
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="47">
+              <Accordion.Item eventKey="46">
                 <Accordion.Header>Popular Gifts</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
@@ -714,7 +690,7 @@ const ManageProducts = () => {
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="48">
+              <Accordion.Item eventKey="47">
                 <Accordion.Header>Gift Inspiration</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
@@ -723,21 +699,22 @@ const ManageProducts = () => {
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="49">
+              <h2>Brand</h2>
+              <Accordion.Item eventKey="48">
                 <Accordion.Header>Brand</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
                     <Link onClick={() => { filterProduct('aptamil') }} to="">Aptamil</Link><br />
-                    <Link onClick={() => { filterProduct('baby-club') }} to="">Baby Club</Link><br />
+                    <Link onClick={() => { filterProduct('babyClub') }} to="">Baby Club</Link><br />
                     <Link onClick={() => { filterProduct('britax') }} to="">Britax</Link><br />
-                    <Link onClick={() => { filterProduct('fit-flop') }} to="">Fit Flop</Link><br />
+                    <Link onClick={() => { filterProduct('fitFlop') }} to="">Fit Flop</Link><br />
                     <Link onClick={() => { filterProduct('gucci') }} to="">Gucci</Link><br />
                     <Link onClick={() => { filterProduct('hipp') }} to="">Hipp</Link><br />
                     <Link onClick={() => { filterProduct('jole') }} to="">Jole</Link><br />
                     <Link onClick={() => { filterProduct('levis') }} to="">Levis</Link><br />
-                    <Link onClick={() => { filterProduct('maxi-cosi') }} to="">Maxi Cosi</Link><br />
-                    <Link onClick={() => { filterProduct('phase-eight') }} to="">Phase Eight</Link><br />
-                    <Link onClick={() => { filterProduct('ted-baker') }} to="">Ted Baker</Link><br />
+                    <Link onClick={() => { filterProduct('maxiCosi') }} to="">Maxi Cosi</Link><br />
+                    <Link onClick={() => { filterProduct('phaseEight') }} to="">Phase Eight</Link><br />
+                    <Link onClick={() => { filterProduct('tedBaker') }} to="">Ted Baker</Link><br />
                   </div>
                 </Accordion.Body>
               </Accordion.Item>

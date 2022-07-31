@@ -85,7 +85,6 @@ const CabinetsSideboards = (props) => {
                                         <Link onClick={() => { filterProduct('cabinetsSideboards') }} to="">Cabinets & Sideboards</Link><br />
                                         <Link onClick={() => { filterProduct('consoleTables') }} to="">Console Tables</Link><br />
                                         <Link onClick={() => { filterProduct('sideTables') }} to="">Side Tables</Link><br />
-                                        <Link onClick={() => { filterProduct('shopLivingRoom') }} to="">Shop Living Room</Link><br />
                                     </div>
                                 </Accordion.Body>
                             </Accordion.Item>
@@ -100,7 +99,6 @@ const CabinetsSideboards = (props) => {
                                         <Link onClick={() => { filterProduct('dressingTables') }} to="">Dressing Tables</Link><br />
                                         <Link onClick={() => { filterProduct('wardrobes') }} to="">Wardrobes</Link><br />
                                         <Link onClick={() => { filterProduct('childrenBedroom') }} to="">Children's Bedroom</Link><br />
-                                        <Link onClick={() => { filterProduct('shopBedroom') }} to="">Shop Bedroom</Link><br />
                                     </div>
                                 </Accordion.Body>
                             </Accordion.Item>
@@ -112,7 +110,6 @@ const CabinetsSideboards = (props) => {
                                         <Link onClick={() => { filterProduct('DiningChairs') }} to="">Dining Chairs </Link><br />
                                         <Link onClick={() => { filterProduct('BarChairsStools') }} to="">Bar Chairs & Stools</Link><br />
                                         <Link onClick={() => { filterProduct('DiningBenches') }} to="">Dining Benches</Link><br />
-                                        <Link onClick={() => { filterProduct('ShopDiningRoom') }} to="">Shop Dining Room</Link><br />
                                     </div>
                                 </Accordion.Body>
                             </Accordion.Item>
@@ -123,7 +120,6 @@ const CabinetsSideboards = (props) => {
                                         <Link onClick={() => { filterProduct('OfficeDesks') }} to="">Office Desks</Link><br />
                                         <Link onClick={() => { filterProduct('OfficeChairs') }} to="">Office Chairs</Link><br />
                                         <Link onClick={() => { filterProduct('HomeStorage') }} to="">Home Storage</Link><br />
-                                        <Link onClick={() => { filterProduct('ShopHomeOffice') }} to="">Shop Home Office</Link><br />
                                     </div>
                                 </Accordion.Body>
                             </Accordion.Item>
@@ -138,7 +134,6 @@ const CabinetsSideboards = (props) => {
                                         <Link to="" onClick={() => { filterProduct('GardenOutdoorlights') }}>Garden & Outdoor lights</Link><br />
                                         <Link to="" onClick={() => { filterProduct('LightBulbs') }}>Light Bulbs</Link><br />
                                         <Link to="" onClick={() => { filterProduct('LampShades') }}>Lamp Shades</Link><br />
-                                        <Link to="" onClick={() => { filterProduct('ShopLighting') }}>Shop Lighting</Link><br />
                                     </div>
                                 </Accordion.Body>
                             </Accordion.Item>

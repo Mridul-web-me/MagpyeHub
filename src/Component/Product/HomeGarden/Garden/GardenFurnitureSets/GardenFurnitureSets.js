@@ -79,7 +79,6 @@ const GardenFurnitureSets = () => {
                                         <Link onClick={() => { filterProduct('pillows') }} to="">Pillows</Link> <br />
                                         <Link onClick={() => { filterProduct('throwsBlanketsAndSpreads') }} to="">Throws & Blankets</Link> <br />
                                         <Link onClick={() => { filterProduct('childrensBedding') }} to="">Children's Bedding</Link> <br />
-                                        <Link onClick={() => { filterProduct('shopBedding') }} to="">Shop Bedding</Link> <br />
                                     </div>
                                 </Accordion.Body>
                             </Accordion.Item>
