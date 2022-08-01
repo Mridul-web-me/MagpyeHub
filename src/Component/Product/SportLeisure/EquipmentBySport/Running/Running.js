@@ -112,7 +112,6 @@ const Running = () => {
                                 <Accordion.Header>Sports Brands</Accordion.Header>
                                 <Accordion.Body>
                                     <div className="filterItem">
-                                        <Link to="" onClick={() => { filterProduct('ExploreOurBrands') }}>Explore our Brands</Link><br />
                                         <Link to="" onClick={() => { filterProduct('Adidas') }}>Adidas</Link><br />
                                         <Link to="" onClick={() => { filterProduct('SweatyBetty') }}>Sweaty Betty</Link><br />
                                         <Link to="" onClick={() => { filterProduct('TheNorthFace') }}>The North Face</Link><br />

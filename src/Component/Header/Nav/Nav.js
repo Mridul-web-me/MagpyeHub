@@ -519,7 +519,7 @@ const Nav = () => {
                                             <ul className="mega-links">
                                                 <li><Link to="/furnitureAndLighting/gardenDiningSets">Garden Dining Sets</Link></li>
                                                 <li><Link to="/furnitureAndLighting/gardenLoungeSets">Garden Lounge Sets</Link></li>
-                                                <li><Link to="/furnitureAndLighting/newInLighting">New in: Lighting</Link></li>
+                                                <li><Link to="/furnitureAndLighting/ShopLighting">New in: Lighting</Link></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -641,7 +641,6 @@ const Nav = () => {
                                             <h5>Sports Brands</h5>
                                             <hr />
                                             <ul className="mega-links">
-                                                <li><Link to="/sportAndLeisure/ExploreOurBrands">Explore our Brands</Link></li>
                                                 <li><Link to="/sportAndLeisure/Adidas">Adidas</Link></li>
                                                 <li><Link to="/sportAndLeisure/SweatyBetty">Sweaty Betty</Link></li>
                                                 <li><Link to="/sportAndLeisure/TheNorthFace">The North Face</Link></li>
@@ -746,7 +745,7 @@ const Nav = () => {
                                                 <li><Link to="/gifts/CookingBaking">Cooking & Baking </Link></li>
                                                 <li><Link to="/gifts/Gardening">Gardening </Link></li>
                                                 <li><Link to="/gifts/GiftWrapPartyShop">Gift Wrap & Party Shop</Link></li>
-                                                <li><Link to="/gifts/GiftStationery">Stationery</Link></li>
+                                                <li><Link to="/sportAndLeisure/Stationery">Stationery</Link></li>
                                             </ul>
                                         </div>
                                     </div>

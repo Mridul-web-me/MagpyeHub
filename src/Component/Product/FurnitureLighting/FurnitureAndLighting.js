@@ -102,7 +102,7 @@ const FurnitureAndLighting = () => {
                         <div className="filterItem">
                             <Link to="/furnitureAndLighting/gardenDiningSets">Garden Dining Sets</Link><br />
                             <Link to="/furnitureAndLighting/gardenLoungeSets">Garden Lounge Sets</Link><br />
-                            <Link to="/furnitureAndLighting/newInLighting">New in: Lighting</Link><br />
+                            <Link to="/furnitureAndLighting/ShopLighting">New in: Lighting</Link><br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Brand</h6>

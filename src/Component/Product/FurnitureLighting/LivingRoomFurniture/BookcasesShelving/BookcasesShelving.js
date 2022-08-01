@@ -143,7 +143,7 @@ const BookcasesShelving = (props) => {
                                     <div className="filterItem">
                                         <Link to="" onClick={() => { filterProduct('gardenDiningSets') }}>Garden Dining Sets</Link><br />
                                         <Link to="" onClick={() => { filterProduct('gardenLoungeSets') }}>Garden Lounge Sets</Link><br />
-                                        <Link to="" onClick={() => { filterProduct('newInLighting') }}>New in: Lighting</Link><br />
+                                        <Link to="/furnitureAndLighting/ShopLighting">New in: Lighting</Link><br />
                                     </div>
                                 </Accordion.Body>
                             </Accordion.Item>

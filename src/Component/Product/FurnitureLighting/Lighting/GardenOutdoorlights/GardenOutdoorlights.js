@@ -20,7 +20,7 @@ const GardenOutdoorlights = (props) => {
     const [page, setPage] = useState(0);
     const [loading, setLoading] = useState(true)
     const size = 8;
-    const category = 'gardenOutdoorlights'
+    const category = 'GardenOutdoorlights'
     useEffect(() => {
         fetch(`https://arcane-temple-26692.herokuapp.com/products?category=${category}&&page=${page}&&size=${size}`)
             .then(res => res.json())
@@ -51,7 +51,7 @@ const GardenOutdoorlights = (props) => {
     return (
         <div>
             <Helmet>
-                <title>Garde Out Door Lights</title>
+                <title>Garden & Outdoor Lights</title>
                 <meta name="description" content="This is Magpyehub Online Shop" />
             </Helmet>
             <Header></Header>
@@ -64,7 +64,7 @@ const GardenOutdoorlights = (props) => {
                         color: '#303030', fontSize: '26px',
                         textTransform: 'uppercase',
                         marginBottom: '20px'
-                    }}>Garde Out Door Lights</h3>
+                    }}>Garden & Outdoor Lights</h3>
                     <Col md={3} xs={12}>
                         <Accordion defaultActiveKey="0">
                             <Accordion.Item eventKey="0">
@@ -143,7 +143,7 @@ const GardenOutdoorlights = (props) => {
                                     <div className="filterItem">
                                         <Link to="" onClick={() => { filterProduct('gardenDiningSets') }}>Garden Dining Sets</Link><br />
                                         <Link to="" onClick={() => { filterProduct('gardenLoungeSets') }}>Garden Lounge Sets</Link><br />
-                                        <Link to="" onClick={() => { filterProduct('newInLighting') }}>New in: Lighting</Link><br />
+                                        <Link to="/furnitureAndLighting/ShopLighting">New in: Lighting</Link><br />
                                     </div>
                                 </Accordion.Body>
                             </Accordion.Item>

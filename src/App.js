@@ -300,7 +300,6 @@ import Smartwatches from './Component/Product/SportLeisure/Fitness/Smartwatches/
 import ExerciseBikes from './Component/Product/SportLeisure/Fitness/ExerciseBikes/ExerciseBikes';
 import Treadmills from './Component/Product/SportLeisure/Fitness/Treadmills/Treadmills';
 import Weights from './Component/Product/SportLeisure/Fitness/Weights/Weights';
-import ExploreOurBrands from './Component/Product/SportLeisure/SportsBrands/ExploreOurBrands/ExploreOurBrands';
 import Adidas from './Component/Product/SportLeisure/SportsBrands/Adidas/Adidas';
 import SweatyBetty from './Component/Product/SportLeisure/SportsBrands/SweatyBetty/SweatyBetty';
 import TheNorthFace from './Component/Product/SportLeisure/SportsBrands/TheNorthFace/TheNorthFace';
@@ -353,7 +352,6 @@ import ViewAllGiftFoodDrink from './Component/Product/Gifts/FoodDrinkGifts/ViewA
 import GiftsForGinLovers from './Component/Product/Gifts/FoodDrinkGifts/GiftsForGinLovers/GiftsForGinLovers';
 import CakesBiscuits from './Component/Product/Gifts/FoodDrinkGifts/CakesBiscuits/CakesBiscuits';
 import SweetsFudge from './Component/Product/Gifts/FoodDrinkGifts/SweetsFudge/SweetsFudge';
-import GiftStationery from './Component/Product/Gifts/PopularGifts/GiftStationery/GiftStationery';
 import TheOrdinary from './Component/Product/Beauty/TopBrands/TheOrdinary/TheOrdinary';
 import CHANEL from './Component/Product/Beauty/TopBrands/CHANEL/CHANEL';
 import CharlotteTilbury from './Component/Product/Beauty/TopBrands/CharlotteTilbury/CharlotteTilbury';
@@ -375,7 +373,6 @@ import LampShades from './Component/Product/FurnitureLighting/Lighting/LampShade
 import ShopLighting from './Component/Product/FurnitureLighting/Lighting/ShopLighting/ShopLighting';
 import GardenDiningSets from './Component/Product/FurnitureLighting/InspireMe/GardenDiningSets/GardenDiningSets';
 import GardenLoungeSets from './Component/Product/FurnitureLighting/InspireMe/GardenLoungeSets/GardenLoungeSets';
-import NewInLighting from './Component/Product/FurnitureLighting/InspireMe/NewInLighting/NewInLighting';
 import ShopHomeOffice from './Component/Product/FurnitureLighting/HomeOfficeStorage/ShopHomeOffice/ShopHomeOffice';
 import ShopDiningRoom from './Component/Product/FurnitureLighting/DiningRoomFurniture/ShopDiningRoom/ShopDiningRoom';
 import DiningBenches from './Component/Product/FurnitureLighting/DiningRoomFurniture/DiningBenches/DiningBenches';
@@ -705,7 +702,6 @@ function App() {
 
             {/* Sports Brands */}
 
-            <Route path="/sportAndLeisure/ExploreOurBrands" element={<ExploreOurBrands />} />
             <Route path="/sportAndLeisure/Adidas" element={<Adidas />} />
             <Route path="/sportAndLeisure/SweatyBetty" element={<SweatyBetty />} />
             <Route path="/sportAndLeisure/TheNorthFace" element={<TheNorthFace />} />
@@ -785,7 +781,6 @@ function App() {
 
             <Route path="/furnitureAndLighting/gardenDiningSets" element={<GardenDiningSets />} />
             <Route path="/furnitureAndLighting/gardenLoungeSets" element={<GardenLoungeSets />} />
-            <Route path="/furnitureAndLighting/newInLighting" element={<NewInLighting />} />
 
 
             {/* Television & Audio */}
@@ -872,7 +867,6 @@ function App() {
             <Route path="/gifts/CookingBaking" element={<CookingBaking />} />
             <Route path="/gifts/Gardening" element={<Gardening />} />
             <Route path="/gifts/GiftWrapPartyShop" element={<GiftWrapPartyShop />} />
-            <Route path="/gifts/GiftStationery" element={<GiftStationery />} />
 
             {/* GIFT INSPIRATION */}
             <Route path="/gifts/LuxuryGifts" element={<LuxuryGifts />} />

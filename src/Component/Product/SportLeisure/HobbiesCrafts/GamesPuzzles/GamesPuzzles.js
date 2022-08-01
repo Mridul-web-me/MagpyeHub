@@ -61,7 +61,7 @@ const GamesPuzzles = () => {
                         color: '#303030', fontSize: '26px',
                         textTransform: 'uppercase',
                         marginBottom: '20px'
-                    }}>Games & uzzles</h3>
+                    }}>Games & Puzzles</h3>
                     <Col md={3} xs={12}>
                         <Accordion defaultActiveKey="0">
                             <Accordion.Item eventKey="0">
@@ -112,7 +112,6 @@ const GamesPuzzles = () => {
                                 <Accordion.Header>Sports Brands</Accordion.Header>
                                 <Accordion.Body>
                                     <div className="filterItem">
-                                        <Link to="" onClick={() => { filterProduct('ExploreOurBrands') }}>Explore our Brands</Link><br />
                                         <Link to="" onClick={() => { filterProduct('Adidas') }}>Adidas</Link><br />
                                         <Link to="" onClick={() => { filterProduct('SweatyBetty') }}>Sweaty Betty</Link><br />
                                         <Link to="" onClick={() => { filterProduct('TheNorthFace') }}>The North Face</Link><br />
