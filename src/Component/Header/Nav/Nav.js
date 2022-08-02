@@ -709,7 +709,6 @@ const Nav = () => {
                                                 <li><Link to="/gifts/GiftsUnder20">Gifts under £20</Link></li>
                                                 <li><Link to="/gifts/GiftsUnder50">Gifts under £50</Link></li>
                                                 <li><Link to="/gifts/GiftsUnder100">Gifts under £100</Link></li>
-                                                <li><Link to="/gifts/GiftCardsEGiftCards">Gift Cards & E-Gift Cards</Link></li>
                                             </ul>
                                         </div>
                                         <div className="row">

@@ -343,7 +343,6 @@ import GiftsForGrandparents from './Component/Product/Gifts/GiftsByRecipient/Gif
 import GiftsUnder20 from './Component/Product/Gifts/GiftsByPrice/GiftsUnder20/GiftsUnder20';
 import GiftsUnder50 from './Component/Product/Gifts/GiftsByPrice/GiftsUnder50/GiftsUnder50';
 import GiftsUnder100 from './Component/Product/Gifts/GiftsByPrice/GiftsUnder100/GiftsUnder100';
-import GiftCardsEGiftCards from './Component/Product/Gifts/GiftsByPrice/GiftCardsEGiftCards/GiftCardsEGiftCards';
 import Birthday from './Component/Product/Gifts/ShopByOccasion/Birthday/Birthday';
 import Wedding from './Component/Product/Gifts/ShopByOccasion/Wedding/Wedding';
 import NewHome from './Component/Product/Gifts/ShopByOccasion/NewHome/NewHome';
@@ -841,7 +840,6 @@ function App() {
             <Route path="/gifts/GiftsUnder20" element={<GiftsUnder20 />} />
             <Route path="/gifts/GiftsUnder50" element={<GiftsUnder50 />} />
             <Route path="/gifts/GiftsUnder100" element={<GiftsUnder100 />} />
-            <Route path="/gifts/GiftCardsEGiftCards" element={<GiftCardsEGiftCards />} />
 
             {/* Shop by Occasion */}
 
