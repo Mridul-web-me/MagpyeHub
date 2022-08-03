@@ -5,7 +5,7 @@ import logo from '../../img/logo.jpg'
 const About = () => {
     return (
         <div className='about'>
-            <div className="container-fluid">
+            <div className="container-fluid" >
                 <div className="row">
                     <div className="col-md-6" style={{
                         display: 'flex',

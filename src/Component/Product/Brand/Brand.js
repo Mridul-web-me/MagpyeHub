@@ -1,6 +1,6 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+// import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
@@ -15,16 +15,16 @@ import brand5 from '../../../img/Logo PNG/5.png'
 import brand6 from '../../../img/Logo PNG/6.png'
 import brand7 from '../../../img/Logo PNG/7.png'
 import brand8 from '../../../img/Logo PNG/8.png'
-import brand9 from '../../../img/Logo PNG/9.png'
-import brand10 from '../../../img/Logo PNG/10.png'
-import brand11 from '../../../img/Logo PNG/11.png'
+// import brand9 from '../../../img/Logo PNG/9.png'
+// import brand10 from '../../../img/Logo PNG/10.png'
+// import brand11 from '../../../img/Logo PNG/11.png'
 
 
 // import Swiper core and required modules
 import SwiperCore, {
     Autoplay
 } from 'swiper';
-import { Container } from "react-bootstrap";
+import { Card, Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 // install Swiper modules
@@ -36,8 +36,8 @@ const Brand = () => {
 
     return (
         <>
-            <Container fluid>
-                <Swiper style={{
+            <Container fluid style={{ background: '#fff' }}>
+                {/* <Swiper style={{
                     height: '30%',
                     margin: '40px 0'
                 }} slidesPerView={1} spaceBetween={10}
@@ -114,7 +114,67 @@ const Brand = () => {
                             <img src={brand11} alt="" />
                         </Link>
                     </SwiperSlide>
-                </Swiper>
+                </Swiper> */}
+                <Row xs={1} sm={2} md={4} className="g-4" style={{ margin: '10px 0' }}>
+                    <Col>
+                        <Card>
+                            <Link to="/brand/maxiCosi">
+                                <Card.Img variant="top" src={brand1} className="brandImage" />
+                            </Link>
+                        </Card>
+                    </Col>
+                    <Col>
+                        <Card>
+                            <Link to="/brand/britax">
+                                <Card.Img variant="top" src={brand2} className="brandImage" />
+                            </Link>
+                        </Card>
+                    </Col>
+                    <Col>
+                        <Card>
+                            <Link to="/brand/levis">
+                                <Card.Img variant="top" src={brand3} className="brandImage" />
+                            </Link>
+                        </Card>
+                    </Col>
+                    <Col>
+                        <Card>
+                            <Link to="/brand/aptamil">
+                                <Card.Img variant="top" src={brand4} className="brandImage" />
+                            </Link>
+                        </Card>
+                    </Col>
+                </Row>
+                <Row xs={1} sm={2} md={4} className="g-4" style={{ margin: '10px 0' }}>
+                    <Col>
+                        <Card>
+                            <Link to="/brand/babyClub">
+                                <Card.Img variant="top" src={brand5} className="brandImage" />
+                            </Link>
+                        </Card>
+                    </Col>
+                    <Col>
+                        <Card>
+                            <Link to="/brand/phaseEight">
+                                <Card.Img variant="top" src={brand6} className="brandImage" />
+                            </Link>
+                        </Card>
+                    </Col>
+                    <Col>
+                        <Card>
+                            <Link to="/brand/jole">
+                                <Card.Img variant="top" src={brand7} className="brandImage" />
+                            </Link>
+                        </Card>
+                    </Col>
+                    <Col>
+                        <Card>
+                            <Link to="/brand/fitflop">
+                                <Card.Img variant="top" src={brand8} className="brandImage" />
+                            </Link>
+                        </Card>
+                    </Col>
+                </Row>
                 <hr />
             </Container>
             <hr />

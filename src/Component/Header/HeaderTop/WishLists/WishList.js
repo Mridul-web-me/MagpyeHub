@@ -66,7 +66,7 @@ const WishList = ({ wishList }) => {
                     <Card.Img variant="top" src={img} height="300px" />
                     <Card.Body>
                         <Card.Title>{title}</Card.Title>
-                        <Card.Title>£ {price}</Card.Title>
+                        <Card.Title>$ {price}</Card.Title>
                         <Button style={{ width: '100%' }} className='addToCartButton' variant="light" type='button' onClick={() => { updateCart() }}>Add To Basket</Button>
                     </Card.Body>
                 </Card>

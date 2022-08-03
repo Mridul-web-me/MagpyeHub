@@ -10,7 +10,7 @@ const PromoUnit = () => {
                 <Row style={{ padding: '15px 0' }}>
                     <Col className='promoUnit1' md={12} xs={12} lg={3}>
                         <Link to="">
-                            <i className="fas fa-truck"></i> Free Delivery Over £49.95* <span>With 1 Hour Time Slot</span>
+                            <i className="fas fa-truck"></i> Free Delivery Over $49.95* <span>With 1 Hour Time Slot</span>
                         </Link>
                     </Col>
                     <Col className='promoUnit2' md={3} xs={12}>

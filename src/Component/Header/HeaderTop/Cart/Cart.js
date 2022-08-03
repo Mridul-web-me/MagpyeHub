@@ -98,7 +98,7 @@ const Cart = () => {
                                         <h5>SubTotal</h5>
                                     </Col>
                                     <Col xs={6} md={2}>
-                                        <h5>£ {total.toFixed(2)}</h5>
+                                        <h5>$ {total.toFixed(2)}</h5>
                                     </Col>
                                 </Row>
                             </div>

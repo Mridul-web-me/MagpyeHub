@@ -644,9 +644,9 @@ const ManageProducts = () => {
                 <Accordion.Header>Gifts by Price</Accordion.Header>
                 <Accordion.Body>
                   <div className="filterItem">
-                    <Link to="" onClick={() => { filterProduct('GiftsUnder20') }}>Gifts under £20</Link><br />
-                    <Link to="" onClick={() => { filterProduct('GiftsUnder50') }}>Gifts under £50</Link><br />
-                    <Link to="" onClick={() => { filterProduct('GiftsUnder100') }}>Gifts under £100</Link><br />
+                    <Link to="" onClick={() => { filterProduct('GiftsUnder20') }}>Gifts under $20</Link><br />
+                    <Link to="" onClick={() => { filterProduct('GiftsUnder50') }}>Gifts under $50</Link><br />
+                    <Link to="" onClick={() => { filterProduct('GiftsUnder100') }}>Gifts under $100</Link><br />
                     <Link to="" onClick={() => { filterProduct('GiftCardsEGiftCards') }}>Gift Cards & E-Gift Cards</Link><br />
                   </div>
                 </Accordion.Body>

@@ -19,13 +19,13 @@ const PaymentOptionDetails = () => {
                     <br /><br />
                     <strong>BAC’s Bank Transfer</strong> - Full payment for your order can be paid via BAC’s when the payment method ‘Cheque or BAC’s’ has been selected. Payment will need to be sent to our account using your order number as the payment reference.
                     <br /><br />
-                    <strong>PayPal Pay in 3</strong> – Make one payment of 33% of your order value when placing your order, then pay the rest in two interest-free monthly payments. This option is available on orders from £45 to £2000. You can easily apply for this option and a decision is made instantly.
+                    <strong>PayPal Pay in 3</strong> – Make one payment of 33% of your order value when placing your order, then pay the rest in two interest-free monthly payments. This option is available on orders from $45 to $2000. You can easily apply for this option and a decision is made instantly.
                     <br /><br />
                     <strong>Flexi-Pay</strong> – Recurring payments can be made to our account via BAC’s Bank Transfer, as and when you are able to. You can do this by placing your order as normal and selecting ‘Cheque or BAC’s as the payment method. We ask all of customers to pay a deposit of 20% of your total value, to secure your order.
                     <br /><br />
-                    The minimum order value to qualify for Flexi-Pay is £350.00.
+                    The minimum order value to qualify for Flexi-Pay is $350.00.
                     <br /><br />
-                    Once the deposit has been paid, you can pay the remaining balance in flexible instalments via BAC’s Bank Transfer, PayPal or alternatively, we can accept Credit/Debit card payments in store. All subsequent payments must be greater than £50.00.
+                    Once the deposit has been paid, you can pay the remaining balance in flexible instalments via BAC’s Bank Transfer, PayPal or alternatively, we can accept Credit/Debit card payments in store. All subsequent payments must be greater than $50.00.
                     <br /><br />
                     Once the full balance has been paid, please contact us and a member of our Sales Team will be able to schedule a delivery date for you.
                     <br /><br />

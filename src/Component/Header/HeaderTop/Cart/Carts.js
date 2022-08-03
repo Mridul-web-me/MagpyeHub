@@ -140,12 +140,12 @@ const Carts = ({ cart }) => {
                             alignItems: 'center',
                             margin: '20px 0'
                         }}>
-                            <p>£{price}</p>
+                            <p>${price}</p>
                         </Col>
                         <Col xs={6} md={4} className="subtotalAndRemove">
 
                             <i className="fa-solid fa-xmark"></i>
-                            <p> £{subtotalPrice.toFixed(2)}
+                            <p> ${subtotalPrice.toFixed(2)}
 
 
                                 <Button variant="light" onClick={handleShow}>

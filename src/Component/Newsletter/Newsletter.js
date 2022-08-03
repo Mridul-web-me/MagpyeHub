@@ -27,7 +27,7 @@ const Newsletter = () => {
                         <div className="newsletter-content">
                             <i className="fas fa-envelope"></i>
                             <h4>NEWSLETTER</h4>
-                            <form className='searchBox' onSubmit={handleSubmit((onSubmit))}>
+                            <form className='newsLetterBox' onSubmit={handleSubmit((onSubmit))}>
                                 <input className="form-control me-2" required  {...register("email")} placeholder="Email Address..." />
                                 <button style={{ display: 'contents' }}> <i className="fas fa-check" ></i></button>
 
@@ -38,11 +38,13 @@ const Newsletter = () => {
                     <div className="col-md-6">
                         <div className="newsletter-content2">
                             <h4>FOLLOW US</h4>
-                            <Link to="/"><i className="fab fa-facebook-f"></i></Link>
-                            <Link to="/"><i className="fab fa-twitter"></i></Link>
-                            <Link to="/"><i className="fab fa-instagram"></i></Link>
-                            <Link to="/"><i className="fab fa-pinterest-p"></i></Link>
-                            <Link to="/"><i className="fab fa-youtube"></i></Link>
+                            <div className='newsletterSocialIcon'>
+                                <Link to="/"><i className="fab fa-facebook-f"></i></Link>
+                                <Link to="/"><i className="fab fa-twitter"></i></Link>
+                                <Link to="/"><i className="fab fa-instagram"></i></Link>
+                                <Link to="/"><i className="fab fa-pinterest-p"></i></Link>
+                                <Link to="/"><i className="fab fa-youtube"></i></Link>
+                            </div>
                         </div>
                     </div>
                 </div>

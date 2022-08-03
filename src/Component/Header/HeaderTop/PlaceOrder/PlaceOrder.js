@@ -29,48 +29,6 @@ const PlaceOrder = () => {
 
     const { handleAddToCart, handleAddToWishList } = useProduct()
 
-    // const [thumbsSwiper, setThumbsSwiper] = useState(null);
-
-    // const image = product.img
-    // const img = {
-    //     width: 400,
-    //     height: 500,
-    //     zoomPosition: 'original',
-    //     zoomWidth: 500,
-    //     img: product.img
-    // };
-    // const img1 = {
-    //     width: 400, height: 500, zoomPosition:
-    //         'original', zoomWidth: 500, img: product.img1
-    // };
-    // const img2 = {
-    //     width: 400, height: 500, zoomPosition:
-    //         'original', zoomWidth: 500, img: product.img2
-    // };
-    // const img3 = {
-    //     width: 500, height: 500, zoomPosition:
-    //         'original', zoomWidth: 500, img: product.img3
-    // };
-    // document.getElementById("img").removeChild(img);
-
-
-    // const settings = {
-    //     customPaging: function (i) {
-    //         return (
-    //             <a>
-    //                 <img src={`${baseUrl} ${product.img + 1}`} />
-    //             </a>
-    //         );
-    //     },
-    //     dots: true,
-    //     dotsClass: "slick-dots slick-thumb",
-    //     infinite: true,
-    //     speed: 500,
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1
-    // };
-
-
     return (
         <div className='placeOrder'>
             <Header></Header>
@@ -131,13 +89,13 @@ const PlaceOrder = () => {
 
                         <h4 style={{ color: '#606060' }}>{product.title}</h4>
                         <h5 style={{ fontSize: '15px', color: '#606060' }}>Code: {product._id}</h5>
-                        <h5 style={{ fontSize: '36px', color: '#0091c0' }}> £{product.price}</h5>
+                        <h5 style={{ fontSize: '36px', color: '#0091c0' }}> ${product.price}</h5>
                         <Row>
                             <Col md={6} xs={12}>
-                                <Button style={{ width: '100%' }} className='addToCartButton' variant="light" type='button' onClick={() => handleAddToCart(product)}>Add To Basket</Button>
+                                <Button style={{ width: '100%', margin: '5px 0' }} className='addToCartButton' variant="light" type='button' onClick={() => handleAddToCart(product)}>Add To Basket</Button>
                             </Col>
                             <Col md={6} xs={12}>
-                                {<Button style={{ width: '100%' }} className='addToWishListButton' type='button' variant='light' onClick={() => handleAddToWishList(product)}> <span><i className="fas fa-heart"></i> </span> Add To Wish List</Button>}
+                                {<Button style={{ width: '100%', margin: '5px 0' }} className='addToWishListButton' type='button' variant='light' onClick={() => handleAddToWishList(product)}> <span><i className="fas fa-heart"></i> </span> Add To Wish List</Button>}
                             </Col>
                         </Row>
                         <div style={{
@@ -203,30 +161,25 @@ const PlaceOrder = () => {
                         </div>
                         <Row>
                             <Col md={6} xs={12}>
-                                <Button style={{ width: '100%' }} className='askAQuestion' variant="light" type='button' onClick={() => handleAddToCart(product)}>ASK A QUESTION</Button>
+                                <Button style={{ width: '100%', margin: '5px 0' }} className='askAQuestion' variant="light" type='button' >ASK A QUESTION</Button>
                             </Col>
                             <Col md={6} xs={12}>
-                                <Button style={{ width: '100%' }} className='emailFriend' type='button' variant='light'> EMAIL A FRIEND</Button>
+                                <Button style={{ width: '100%', margin: '5px 0' }} className='emailFriend' type='button' variant='light'> EMAIL A FRIEND</Button>
                             </Col>
                         </Row>
 
                     </Col>
-                    <div className="placeOrderSocialItem" style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        margin: '50px 0'
-                    }}>
-                        <h4>SHARE</h4>
-                        <div className='socialIcon'>
-                            <Link to="/"><i className="fab fa-facebook-f"></i></Link>
-                            <Link to="/"><i className="fab fa-twitter"></i></Link>
-                            <Link to="/"><i className="fab fa-instagram"></i></Link>
-                            <Link to="/"><i className="fab fa-pinterest-p"></i></Link>
-                            <Link to="/"><i className="fab fa-youtube"></i></Link>
-                        </div>
-
-                    </div>
                 </Row>
+                <div className="placeOrderSocialItem">
+                    <h4>SHARE</h4>
+                    <div className='socialIcon'>
+                        <Link to="/"><i className="fab fa-facebook-f"></i></Link>
+                        <Link to="/"><i className="fab fa-twitter"></i></Link>
+                        <Link to="/"><i className="fab fa-instagram"></i></Link>
+                        <Link to="/"><i className="fab fa-pinterest-p"></i></Link>
+                        <Link to="/"><i className="fab fa-youtube"></i></Link>
+                    </div>
+                </div>
             </Container>
             {/* <div style={{ width: '500px' }}>
                 <ReactImageMagnify {...{
@@ -276,7 +229,7 @@ const PlaceOrder = () => {
                             <p style={{ textAlign: 'justify', color: '#606060' }}> <span style={{
                                 textDecoration: 'underline'
                             }}>Payment</span> <br /> <br />
-                                All prices are shown in pounds sterling (£) and are inclusive of 20% VAT (where applicable). All prices at their current rates are correct at the time of listing. However, if a product is advertised at an incorrect price due to (a) typographical error or (b) supplier error, we reserve the right to refuse or cancel the order. In this instance, we will update you on your order status and provide a full refund, if required. <br /> <br />
+                                All prices are shown in pounds sterling ($) and are inclusive of 20% VAT (where applicable). All prices at their current rates are correct at the time of listing. However, if a product is advertised at an incorrect price due to (a) typographical error or (b) supplier error, we reserve the right to refuse or cancel the order. In this instance, we will update you on your order status and provide a full refund, if required. <br /> <br />
                                 For the majority of our products which are dispatched directly from our warehouse, the delivery fee is included in the order total at the payment page. However, for significantly larger goods such as furniture, they will be delivered directly to you from the manufacturer/suppliers, which may incur an additional charge at any point between order confirmation and despatch. We will notify you as soon as possible on such occasions.  <br />
                                 We accept online payment by Credit/Debit card (Visa, Mastercard & Maestro), PayPal or BACs. <br /> <br /> <span style={{
                                     textDecoration: 'underline'
@@ -291,12 +244,12 @@ const PlaceOrder = () => {
                                 Here at Magpiehub we offer Card Payments, Paypal, BAC's and we now offer 2 more Payment Options. <br /> <br /> <br />
                                 <strong>Option 1 - FlexiPay</strong>
                                 <br /> <br />
-                                When paying for your order in your basket, please select the 'Cheque/BACs' options on Payment Methods on the checkout page. Once complete, we ask of all customers to pay a 20% deposit, which will secure your order if the goods are in stock, if not they will be ordered in for you. The minimum order value to qualify for FlexiPay is <strong>£350.00</strong>. Please confirm with a member of our sales team when you'd like to receive your order. <br /> <br />
-                                Once the deposit has cleared, you can pay the remaining balance in flexible installments of your choice through Cheque/BACs or in-store, between the order confirmation and your due date. All subsequent payments must be greater than £50.00. Once the full balance has been paid, give us a call and we can schedule delivery for you. <br /> <br />
+                                When paying for your order in your basket, please select the 'Cheque/BACs' options on Payment Methods on the checkout page. Once complete, we ask of all customers to pay a 20% deposit, which will secure your order if the goods are in stock, if not they will be ordered in for you. The minimum order value to qualify for FlexiPay is <strong>$350.00</strong>. Please confirm with a member of our sales team when you'd like to receive your order. <br /> <br />
+                                Once the deposit has cleared, you can pay the remaining balance in flexible installments of your choice through Cheque/BACs or in-store, between the order confirmation and your due date. All subsequent payments must be greater than $50.00. Once the full balance has been paid, give us a call and we can schedule delivery for you. <br /> <br />
                                 Please note, this system excludes all sales items and cannot be used in conjunction with any promotional offers. It is also applied at the point of order, any reductions in price, sale or clearance discounts cannot be applied retrospectively. We will store your full order in our warehouse, free of charge until required.
                                 <br /> <br /> <br />
                                 <strong>Option 2 - PayPal Pay in 3 </strong> <br />
-                                Pay in 3 equal, interest-free payments, free of charge. Payments are automatically charged every 30 days. Perfect for spreading the cost over time without the hassle or the cost.  Please note the minimum basket value must be £35 or greater and the maximum basket size is less than £1200.
+                                Pay in 3 equal, interest-free payments, free of charge. Payments are automatically charged every 30 days. Perfect for spreading the cost over time without the hassle or the cost.  Please note the minimum basket value must be $35 or greater and the maximum basket size is less than $1200.
                                 <br /> <br /> <br />
                                 Please note these options will ONLY show at checkout if they are applicable to your order.
                             </p>

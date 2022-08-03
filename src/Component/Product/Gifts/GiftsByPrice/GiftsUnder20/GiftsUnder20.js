@@ -48,7 +48,7 @@ const GiftsUnder20 = () => {
     return (
         <div>
             <Helmet>
-                <title>Gifts under £20</title>
+                <title>Gifts under $20</title>
                 <meta name="description" content="This is Magpyehub Online Shop" />
             </Helmet>
             <Header></Header>
@@ -61,7 +61,7 @@ const GiftsUnder20 = () => {
                         color: '#303030', fontSize: '26px',
                         textTransform: 'uppercase',
                         marginBottom: '20px'
-                    }}>Gifts under £20</h3>
+                    }}>Gifts under $20</h3>
                     <Col md={3} xs={12}>
                         <Accordion defaultActiveKey="0">
                             <Accordion.Item eventKey="0">
@@ -90,9 +90,9 @@ const GiftsUnder20 = () => {
                                 <Accordion.Header>Gifts by Price</Accordion.Header>
                                 <Accordion.Body>
                                     <div className="filterItem">
-                                        <Link to="" onClick={() => { filterProduct('GiftsUnder20') }}>Gifts under £20</Link><br />
-                                        <Link to="" onClick={() => { filterProduct('GiftsUnder50') }}>Gifts under £50</Link><br />
-                                        <Link to="" onClick={() => { filterProduct('GiftsUnder100') }}>Gifts under £100</Link><br />
+                                        <Link to="" onClick={() => { filterProduct('GiftsUnder20') }}>Gifts under $20</Link><br />
+                                        <Link to="" onClick={() => { filterProduct('GiftsUnder50') }}>Gifts under $50</Link><br />
+                                        <Link to="" onClick={() => { filterProduct('GiftsUnder100') }}>Gifts under $100</Link><br />
                                     </div>
                                 </Accordion.Body>
                             </Accordion.Item>

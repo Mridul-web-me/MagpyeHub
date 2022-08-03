@@ -38,10 +38,10 @@ const CartPaymentProduct = ({ cart }) => {
                     </div>
                 </Col>
                 <Col xs={6} md={2}>
-                    <p>£{price}</p>
+                    <p>${price}</p>
                 </Col>
                 <Col xs={6} md={2}>
-                    <p> £{price * quantity}</p>
+                    <p> ${price * quantity}</p>
                 </Col>
             </Row>
         </div>

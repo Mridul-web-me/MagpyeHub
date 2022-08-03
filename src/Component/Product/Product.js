@@ -3,13 +3,13 @@ import { Card, Col, Container, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import './Product.css'
 
-import group1 from '../../img/Group/Group 5.jpg'
-import group2 from '../../img/Group/Group 6.jpg'
-import group3 from '../../img/Group/Group 7.jpg'
-import group4 from '../../img/Group/Group 8.jpg'
-import group5 from '../../img/Group/Group 9.jpg'
-import group6 from '../../img/Group/Group 10.jpg'
-import Product1 from './Product1'
+import group1 from '../../img/Group/group1.jpg'
+import group2 from '../../img/Group/group2.jpg'
+import group3 from '../../img/Group/group3.jpg'
+import group4 from '../../img/Group/group4.jpg'
+import group5 from '../../img/Group/group5.jpg'
+import group6 from '../../img/Group/group6.jpg'
+
 
 const Product = () => {
     return (
@@ -19,38 +19,38 @@ const Product = () => {
                     margin: '10px 0'
                 }}>
                     <Col>
-                    <Link to="/men"> <Card>
+                        <Link to="/men"> <Card>
                             <Card.Img variant="top" src={group1} />
                             <div className='cardBody'>
                                 <Card.Body>
-                                    <Card.Title>MAN</Card.Title>
-                                    
+                                    <Card.Title>MEN</Card.Title>
+
                                 </Card.Body>
                             </div>
                         </Card></Link>
                     </Col>
                     <Col>
-                    <Link to="/women">
-                        <Card>
-                            <Card.Img variant="top" src={group2} />
-                            <div className='cardBody'>
-                                <Card.Body>
-                                    <Card.Title>WOMAN</Card.Title>
-                                </Card.Body>
-                            </div>
-                        </Card></Link>
+                        <Link to="/women">
+                            <Card>
+                                <Card.Img variant="top" src={group2} />
+                                <div className='cardBody'>
+                                    <Card.Body>
+                                        <Card.Title>WOMEN</Card.Title>
+                                    </Card.Body>
+                                </div>
+                            </Card></Link>
                     </Col>
                     <Col>
-                    <Link to="/BabyAndChild">
-                    <Card>
-                            <Card.Img variant="top" src={group3} />
-                            <div className='cardBody'>
-                                <Card.Body>
-                                    <Card.Title>CHILD</Card.Title>
-                                </Card.Body>
-                            </div>
-                        </Card>
-                    </Link>
+                        <Link to="/BabyAndChild">
+                            <Card>
+                                <Card.Img variant="top" src={group3} />
+                                <div className='cardBody'>
+                                    <Card.Body>
+                                        <Card.Title>CHILD</Card.Title>
+                                    </Card.Body>
+                                </div>
+                            </Card>
+                        </Link>
                     </Col>
                 </Row>
 
@@ -58,45 +58,45 @@ const Product = () => {
                     margin: '10px 0'
                 }}>
                     <Col>
-                    <Link to="/beauty">
-                    <Card>
-                            <Card.Img variant="top" src={group4} />
-                            <div className='cardBody'>
-                                <Card.Body>
-                                    <Card.Title>BEAUTY</Card.Title>
-                                    
-                                </Card.Body>
-                            </div>
-                        </Card>
-                    </Link>
-                       
+                        <Link to="/beauty">
+                            <Card>
+                                <Card.Img variant="top" src={group4} />
+                                <div className='cardBody'>
+                                    <Card.Body>
+                                        <Card.Title>BEAUTY</Card.Title>
+
+                                    </Card.Body>
+                                </div>
+                            </Card>
+                        </Link>
+
                     </Col>
                     <Col>
-                    <Link to="/FurnitureAndLighting">
-                    <Card>
-                            <Card.Img variant="top" src={group5} />
-                            <div className='cardBody'>
-                                <Card.Body>
-                                    <Card.Title>FURNITURE</Card.Title>
-                                    
-                                </Card.Body>
-                            </div>
-                        </Card>
-                    </Link>
+                        <Link to="/FurnitureAndLighting">
+                            <Card>
+                                <Card.Img variant="top" src={group5} />
+                                <div className='cardBody'>
+                                    <Card.Body>
+                                        <Card.Title>FURNITURE</Card.Title>
+
+                                    </Card.Body>
+                                </div>
+                            </Card>
+                        </Link>
                     </Col>
                     <Col>
-                    <Link to="/sportAndLeisure">
-                    <Card>
-                            <Card.Img variant="top" src={group6} />
-                            <div className='cardBody'>
-                                <Card.Body>
-                                    <Card.Title>SPORTS</Card.Title>
-                                    
-                                </Card.Body>
-                            </div>
-                        </Card>
-                    </Link>
-                        
+                        <Link to="/sportAndLeisure">
+                            <Card>
+                                <Card.Img variant="top" src={group6} />
+                                <div className='cardBody'>
+                                    <Card.Body>
+                                        <Card.Title>SPORTS</Card.Title>
+
+                                    </Card.Body>
+                                </div>
+                            </Card>
+                        </Link>
+
                     </Col>
                 </Row>
             </Container>

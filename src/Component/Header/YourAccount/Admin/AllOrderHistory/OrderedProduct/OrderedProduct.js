@@ -48,7 +48,7 @@ const OrderedProduct = ({ product, orders }) => {
                         </Col>
                         <Col sm={12} xs={12} md={4} className="orderPrice">
                             <h5 className='priceTag'> Price: </h5>
-                            <p> £{product.price}</p>
+                            <p> ${product.price}</p>
                         </Col>
                         <Col sm={12} xs={12} md={4} className="orderStatus">
                             <h5 className='statusTag'> Status: </h5>

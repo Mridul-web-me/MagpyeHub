@@ -18,7 +18,7 @@ const FilterProduct = (props) => {
                             <Card.Title>{title}</Card.Title>
                         </Link>
                         <Card.Text>
-                            £ {price}
+                            $ {price}
                         </Card.Text>
                         <div className='groupButton'>
                             <div style={{

@@ -136,8 +136,8 @@ const Payment = ({ address: clientAddress }) => {
                                     justifyContent: 'space-between',
                                     alignItem: 'center'
                                 }}>
-                                    <p style={{ margin: '0 20px' }}>Product </p>
-                                    <p>£{product.price}</p>
+                                    <h6 style={{ margin: '0 20px' }}>{product.title} </h6>
+                                    <p>${product.price}</p>
                                 </div>
                             </div>)
                         }
@@ -147,7 +147,7 @@ const Payment = ({ address: clientAddress }) => {
                             alignItem: 'center'
                         }}>
                             <h5>Total Purchases</h5>
-                            <h5>£ {total}</h5>
+                            <h5>$ {total}</h5>
                         </div>
                         <div style={{
                             display: 'flex',
@@ -155,7 +155,7 @@ const Payment = ({ address: clientAddress }) => {
                             alignItem: 'center'
                         }}>
                             <h2>Total</h2>
-                            <h4>£ {total}</h4>
+                            <h4>$ {total}</h4>
                         </div>
                     </div>
                 </div>
@@ -179,7 +179,7 @@ const Payment = ({ address: clientAddress }) => {
                     />
                     {processing ? <div><Spinner animation="grow" variant="info" />
                         <Spinner animation="grow" variant="info" /></div> : <Button variant='outline-success' type="submit" disabled={!stripe || success}>
-                        Pay & Place Order £{total}
+                        Pay & Place Order ${total}
                     </Button>}
                 </form>
                 {

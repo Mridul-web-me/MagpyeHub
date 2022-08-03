@@ -8,7 +8,7 @@
   font-size: 16px;
   padding: 16px;
   border-radius: 50%;
-  margin: 0 20px;
+  margin: 5px 20px;
 }
 
 .placeOrderSocialItem i.fab.fa-facebook-f:hover {
@@ -153,4 +153,24 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.placeOrderSocialItem {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20px 0;
+}
+
+@media only screen and (max-width: 530px) {
+  .placeOrderSocialItem {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+
+  .socialIcon {
+    display: flex;
+    flex-direction: column;
+  }
 }

@@ -22,7 +22,7 @@ const Paypal = ({ clientAddress }) => {
                     {
                         amount: {
                             value: total,
-                            currency_code: "GB"
+                            currency_code: "USD"
                         },
                     },
                 ],
@@ -94,7 +94,7 @@ const Paypal = ({ clientAddress }) => {
         <div>
             <PayPalScriptProvider
                 options={{
-                    "client-id": "ARQ3UsdpGXygKUeUK_LieJ_WExezKx9xZdhUc6L038F_kqkgnxAwf4mRjTKHHc-DvCDY0c7B4SDW8_xA&currency=GB",
+                    "client-id": "ARQ3UsdpGXygKUeUK_LieJ_WExezKx9xZdhUc6L038F_kqkgnxAwf4mRjTKHHc-DvCDY0c7B4SDW8_xA",
                 }}
                 style={{
                     size: 'small',

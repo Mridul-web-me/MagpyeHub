@@ -55,9 +55,9 @@ const Gifts = () => {
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Gifts by Price</h6>
                         <div className="filterItem">
-                            <Link to="/gifts/GiftsUnder20">Gifts under £20</Link><br />
-                            <Link to="/gifts/GiftsUnder50">Gifts under £50</Link><br />
-                            <Link to="/gifts/GiftsUnder100">Gifts under £100</Link><br />
+                            <Link to="/gifts/GiftsUnder20">Gifts under $20</Link><br />
+                            <Link to="/gifts/GiftsUnder50">Gifts under $50</Link><br />
+                            <Link to="/gifts/GiftsUnder100">Gifts under $100</Link><br />
                             <Link to="/gifts/GiftCardsEGiftCards">Gift Cards & E-Gift Cards</Link><br />
                         </div>
                         <hr />
