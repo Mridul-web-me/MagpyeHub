@@ -58,7 +58,6 @@ const Gifts = () => {
                             <Link to="/gifts/GiftsUnder20">Gifts under $20</Link><br />
                             <Link to="/gifts/GiftsUnder50">Gifts under $50</Link><br />
                             <Link to="/gifts/GiftsUnder100">Gifts under $100</Link><br />
-                            <Link to="/gifts/GiftCardsEGiftCards">Gift Cards & E-Gift Cards</Link><br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Shop by Occasion</h6>
@@ -88,7 +87,7 @@ const Gifts = () => {
                             <Link to="/gifts/CookingBaking">Cooking & Baking </Link><br />
                             <Link to="/gifts/Gardening">Gardening </Link><br />
                             <Link to="/gifts/GiftWrapPartyShop">Gift Wrap & Party Shop</Link><br />
-                            <Link to="/gifts/GiftStationery">Stationery</Link><br />
+                            <Link to="/sportAndLeisure/Stationery">Stationery</Link><br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Brand</h6>

@@ -57,7 +57,6 @@ const BabyAndChild = () => {
                             <Link to="/babyAndChild/feedingWeaning">Feeding & Weaning</Link><br />
                             <Link to="/babyAndChild/nurseryFunitureFurnishings">Nursery Funiture & Furnishings</Link><br />
                             <Link to="/babyAndChild/safetyHealthcare">Safety & Healthcare</Link><br />
-                            <Link to="/babyAndChild/babyChecklist">Baby Checklist</Link><br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Baby Clothes (0-4 years)</h6>
@@ -70,14 +69,13 @@ const BabyAndChild = () => {
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Kids Clothing & Shoes</h6>
                         <div className="filterItem">
-                            <Link to="/babyAndChild/AllGirlsclothes">All Girls clothes</Link><br />
-                            <Link to="/babyAndChild/GirlsDresses">Girls Dresses</Link><br />
-                            <Link to="/babyAndChild/GirlsShoes">Girls Shoes</Link><br />
-                            <Link to="/babyAndChild/GirlsPyjamas">Girls Pyjamas</Link><br />
-                            <Link to="/babyAndChild/AllBoysClothes">All Boys Clothes</Link><br />
-                            <Link to="/babyAndChild/BoysPyjamas ">Boys Pyjamas </Link><br />
-                            <Link to="/babyAndChild/BoysShoes">Boys Shoes</Link><br />
-                            <Link to="/babyAndChild/BackToSchoolShop">Back to School Shop</Link><br />
+                            <li><Link to="/babyAndChild/AllGirlsclothes">All Girls clothes</Link></li>
+                            <li><Link to="/babyAndChild/GirlsDresses">Girls Dresses</Link></li>
+                            <li><Link to="/babyAndChild/GirlsShoes">Girls Shoes</Link></li>
+                            <li><Link to="/babyAndChild/AllBoysClothes">All Boys Clothes</Link></li>
+                            <li><Link to="/babyAndChild/BoysShorts ">Boys Shorts </Link></li>
+                            <li><Link to="/babyAndChild/BoysShoes">Boys Shoes</Link></li>
+                            <li><Link to="/babyAndChild/BoysTops">Boys Tops</Link></li>
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Kids Travel</h6>
@@ -205,19 +203,15 @@ const BabyAndChild = () => {
                         <Row style={{ margin: ' 50px 0' }}>
                             <Col md={6} xs={12}>
                                 <img src={img7} alt="" className='img-fluid' />
-                                <h5></h5>
                             </Col>
                             <Col md={6} xs={12}>
                                 <img src={img8} alt="" className='img-fluid' />
-                                <h5></h5>
                             </Col>
                             <Col md={6} xs={12}>
                                 <img src={img9} alt="" className='img-fluid' />
-                                <h5></h5>
                             </Col>
                             <Col md={6} xs={12}>
                                 <img src={img10} alt="" className='img-fluid' />
-                                <h5></h5>
                             </Col>
                         </Row>
                     </Col>

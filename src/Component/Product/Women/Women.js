@@ -45,26 +45,26 @@ const Women = () => {
                         </div>
                         <h6 style={{ textAlign: 'start' }}>Clothing</h6>
                         <div className="filterItem">
-                            <Link to="/women/dresses">Dresses</Link><br />
-                            <Link to="/women/jeans">Jeans</Link><br />
-                            <Link to="/women/shirtsTops">Shirts & Tops</Link><br />
-                            <Link to="/women/shorts">Shorts</Link><br />
-                            <Link to="/women/skirts">Skirts</Link><br />
-                            <Link to="/women/sportsClothes ">Sports & Clothes  </Link><br />
-                            <Link to="/women/swimwearBeachwear ">Swimwear Beachwear  </Link><br />
-                            <Link to="/women/women-Trousers">Trousers</Link><br />
-                            <Link to="/women/leggings">Leggings</Link><br />
-                            <Link to="/women/plusSize">Plus Size</Link><br />
-                            <Link to="/women/maternityClothes ">Maternity Clothes</Link><br />
-                            <Link to="/women/cashmere">Cashmere</Link><br />
-                            <Link to="/women/coatsJackets ">Coats & Jackets</Link><br />
-                            <Link to="/women/jumpersKnitwear ">Jumpers & Knitwear</Link><br />
-                            <Link to="/women/jumpsuits ">Jumpsuits</Link><br />
-                            <Link to="/women/linen">Linen</Link><br />
-                            <Link to="/women/loungewear ">Loungewear</Link><br />
-                            <Link to="/women/petite ">Petite</Link><br />
-                            <Link to="/women/occasionwear ">Occasionwear</Link><br />
-                            <Link to="/women/weddingBoutique ">Wedding</Link><br />
+                            <Link to="/women/dresses">Dresses</Link> <br />
+                            <Link to="/women/jeans">Jeans</Link> <br />
+                            <Link to="/women/shirtsTops">Shirts & Tops</Link> <br />
+                            <Link to="/women/shorts">Shorts</Link> <br />
+                            <Link to="/women/skirts">Skirts</Link> <br />
+                            <Link to="/women/sportsClothes ">Sports & Clothes  </Link> <br />
+                            <Link to="/women/swimwearBeachwear ">Swimwear Beachwear  </Link> <br />
+                            <Link to="/women/womenTrousers">Trousers</Link> <br />
+                            <Link to="/women/leggings">Leggings</Link> <br />
+                            <Link to="/women/plusSize">Plus Size</Link> <br />
+                            <Link to="/women/maternityClothes ">Maternity Clothes</Link> <br />
+                            <Link to="/women/cashmere">Cashmere</Link> <br />
+                            <Link to="/women/coatsJackets ">Coats & Jackets</Link> <br />
+                            <Link to="/women/jumpersKnitwear ">Jumpers & Knitwear</Link> <br />
+                            <Link to="/women/jumpsuits ">Jumpsuits</Link> <br />
+                            <Link to="/women/linen">Linen</Link> <br />
+                            <Link to="/women/loungewear ">Loungewear</Link> <br />
+                            <Link to="/women/petite ">Petite</Link> <br />
+                            <Link to="/women/occasionwear ">Occasionwear</Link> <br />
+                            <Link to="/women/weddingBoutique ">Wedding Boutique</Link> <br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Footwear</h6>
@@ -89,21 +89,15 @@ const Women = () => {
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Accessories</h6>
                         <div className="filterItem">
-                            <Link to="/women/womenHandbags">Handbags</Link><br />
-                            <Link to="/women/womenPurses">Purses</Link><br />
-                            <Link to="/women/womenBelts">Belts</Link><br />
-                            <Link to="/women/womenSunglasses">Sunglasses</Link><br />
-                            <Link to="/women/womenJewellery">Jewellery</Link><br />
-                            <Link to="/women/womenHats">Hats</Link><br />
-                            <Link to="/women/womenWatches">Watches</Link><br />
-                            <Link to="/women/womenHairAccessories">Hair Accessories</Link><br />
-                            <Link to="/women/womenHatsGlovesScarves">Hats, Gloves & Scarves</Link><br />
-                            <Link to="/women/womenOccasionHatsFascinators">Occasion Hats & Fascinators</Link><br />
-                            <Link to="/women/womenFaceCoverings">Face Coverings</Link><br />
-                            <Link to="/women/womenReadingGlassesGlassesCases">Reading Glasses & Glasses Cases</Link><br />
-                            <Link to="/women/womenKeyrings">Keyrings</Link><br />
-                            <Link to="/women/womenUmbrellas">Umbrellas</Link><br />
-                            <Link to="/women/womenSuitcases">Suitcases</Link><br />
+                            <Link to="/women/womenHandbags">Handbags</Link> <br />
+                            <Link to="/women/womenPurses">Purses</Link> <br />
+                            <Link to="/women/womenBelts">Belts</Link> <br />
+                            <Link to="/women/womenSunglasses">Sunglasses</Link> <br />
+                            <Link to="/women/womenJewellery">Jewellery</Link> <br />
+                            <Link to="/women/womenHats">Hats</Link> <br />
+                            <Link to="/women/womenWatches">Watches</Link> <br />
+                            <Link to="/women/womenHairAccessories">Hair Accessories</Link> <br />
+                            <Link to="/women/womenOccasionHatsFascinators">Occasion Hats & Fascinators</Link> <br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Brand</h6>

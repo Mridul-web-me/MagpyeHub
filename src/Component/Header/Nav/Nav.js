@@ -305,6 +305,19 @@ const Nav = () => {
                                             <h5>Makeup</h5>
                                             <hr />
                                             <ul className="mega-links">
+                                                <li> <Link to="/beauty/theOrdinary">The Ordinary</Link></li>
+                                                <li> <Link to="/beauty/CHANEL">CHANEL</Link></li>
+                                                <li> <Link to="/beauty/CharlotteTilbury">Charlotte Tilbury</Link></li>
+                                                <li> <Link to="/beauty/Clarins">Clarins</Link></li>
+                                                <li> <Link to="/beauty/Clinique">Clinique</Link></li>
+                                                <li> <Link to="/beauty/DIOR">DIOR</Link></li>
+                                                <li> <Link to="/beauty/JoMaloneLondon">Jo Malone London</Link></li>
+                                            </ul>
+                                        </div>
+                                        <div className="row">
+                                            <h5>Makeup</h5>
+                                            <hr />
+                                            <ul className="mega-links">
                                                 <li><Link to="/beauty/viewallMakeup">View all Makeup</Link></li>
                                                 <li><Link to="/beauty/foundations">Foundations</Link></li>
                                                 <li><Link to="/beauty/concealers">Concealers</Link></li>

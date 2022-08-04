@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { Container, Spinner, Row } from 'react-bootstrap';
+import { Container, Spinner } from 'react-bootstrap';
 import Slider from 'react-slick';
 import useProduct from '../../../hooks/Product/useProduct';
 import AllFavProduct from './AllFavProduct/AllFavProduct';
 import './FavouriteProduct.css';
 import "swiper/css/bundle";
-import img from '../../../img/favorit.jpg'
 
 const FavouriteProduct = () => {
 

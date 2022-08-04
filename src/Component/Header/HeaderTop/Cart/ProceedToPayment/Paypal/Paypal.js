@@ -114,12 +114,12 @@ const Paypal = ({ clientAddress }) => {
                 />
             </PayPalScriptProvider>
 
-            {
+            {/* {
                 success && <>
 
                     <Link to="/orderHistory"></Link>
                 </>
-            }
+            } */}
         </div>
     )
 }

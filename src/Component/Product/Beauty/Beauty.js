@@ -48,16 +48,13 @@ const Beauty = () => {
                         </div>
                         <h6 style={{ textAlign: 'start' }}>Top Brands</h6>
                         <div className="filterItem">
-                            <Link to="/beauty/theOrdinary">The Ordinary</Link><br />
-                            <Link to="/beauty/CHANEL">CHANEL</Link><br />
-                            <Link to="/beauty/CharlotteTilbury">Charlotte Tilbury</Link><br />
-                            <Link to="/beauty/Clarins">Clarins</Link><br />
-                            <Link to="/beauty/Clinique">Clinique</Link><br />
-                            <Link to="/beauty/DIOR">DIOR</Link><br />
-                            <Link to="/beauty/EstéeLauder">Estée Lauder</Link><br />
-                            <Link to="/beauty/BeautyGucci">Gucci</Link><br />
-                            <Link to="/beauty/JoMaloneLondon">Jo Malone London</Link><br />
-                            <Link to="/beauty/AToZBrands">A-Z Brands</Link><br />
+                            <Link to="/beauty/theOrdinary">The Ordinary</Link> <br />
+                            <Link to="/beauty/CHANEL">CHANEL</Link> <br />
+                            <Link to="/beauty/CharlotteTilbury">Charlotte Tilbury</Link> <br />
+                            <Link to="/beauty/Clarins">Clarins</Link> <br />
+                            <Link to="/beauty/Clinique">Clinique</Link> <br />
+                            <Link to="/beauty/DIOR">DIOR</Link> <br />
+                            <Link to="/beauty/JoMaloneLondon">Jo Malone London</Link> <br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Makeup</h6>
@@ -89,7 +86,6 @@ const Beauty = () => {
                             <Link to="/beauty/handFootCare">Hand & Foot Care</Link><br />
                             <Link to="/beauty/skinCareTreatments">Skin Care & Treatments</Link><br />
                             <Link to="/beauty/sunCreamAfterSun">Sun Cream & After Sun</Link><br />
-                            <Link to="/beauty/beautyToolsTechnology">Beauty Tools & Technology</Link><br />
                             <Link to="/beauty/menGrooming">Men's Grooming</Link><br />
                         </div>
                         <hr />
@@ -111,7 +107,6 @@ const Beauty = () => {
                             <Link to="/beauty/VeganBeauty">Vegan Beauty</Link><br />
                             <Link to="/beauty/Wellness">Wellness</Link><br />
                             <Link to="/beauty/GiftSets">Gift Sets</Link><br />
-                            <Link to="/beauty/NewAndExclusiveClarinsExtraordinaire">New & Exclusive: Clarins Eau Extraordinaire</Link><br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Brand</h6>

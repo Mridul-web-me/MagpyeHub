@@ -60,7 +60,7 @@ const HomeAndGarden = () => {
                         <h6 style={{ textAlign: 'start' }}>Cooking & Dining</h6>
                         <div className="filterItem">
                             <Link to="/homeAndGarden/cookwareBakeware">Cookware & Bakeware</Link><br />
-                            <Link to="/homeAndGarden/cutlery">Tableware & Cutlery</Link><br />
+                            <Link to="/homeAndGarden/tablewareAndcutlery">Tableware & Cutlery</Link><br />
                             <Link to="/homeAndGarden/glassesDrinkware">Glasses & Drinkware</Link><br />
                             <Link to="/homeAndGarden/potsPans">Pots & Pans</Link><br />
                             <Link to="/homeAndGarden/foodPreparation">Food Preparation</Link><br />
@@ -73,7 +73,7 @@ const HomeAndGarden = () => {
                         <div className="filterItem">
                             <Link to="/homeAndGarden/homeAccessories">Home Accessories</Link><br />
                             <Link to="/homeAndGarden/cushions">Cushions & Bean Bags</Link><br />
-                            <Link to="/homeAndGarden/candlesHomeFragrance">Candles & Home Fragrance</Link><br />
+                            <Link to="/homeAndGarden/candlesAndHomeFragrances">Candles & Home Fragrance</Link><br />
                             <Link to="/homeAndGarden/towels"> Towels</Link><br />
                             <Link to="/homeAndGarden/picturesArtFrames">Pictures, Art & Frames</Link><br />
                             <Link to="/homeAndGarden/mirrors"> Mirrors</Link><br />
@@ -98,12 +98,11 @@ const HomeAndGarden = () => {
                             <Link to="/homeAndGarden/gardenFurnitureSets">Garden Furniture Sets</Link><br />
                             <Link to="/homeAndGarden/gardenSeating">Garden Seating</Link><br />
                             <Link to="/homeAndGarden/gasBBQs">Gas BBQs</Link><br />
-                            <Link to="/homeAndGarden/charcoalBBQs">Charcoal BBQs</Link><br />
                             <Link to="/homeAndGarden/pizzaOvens">Pizza Ovens</Link><br />
                             <Link to="/homeAndGarden/decorativeGardenAccessories"> Decorative Garden Accessories</Link><br />
                             <Link to="/homeAndGarden/outdoorlights"> Outdoor Lighting</Link><br />
                             <Link to="/homeAndGarden/parasolsAccessories"> Parasols & Accessories</Link><br />
-                            <Link to="/homeAndGarden/shopGarden"> Shop Garden</Link><br />
+                            <Link to="/homeAndGarden"> Shop Garden</Link><br />
                         </div>
                         <hr />
 

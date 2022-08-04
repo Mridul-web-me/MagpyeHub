@@ -204,11 +204,9 @@ const Electricals = () => {
                         <Row>
                             <Col md={6} xs={12}>
                                 <img src={img8} alt="" className='img-fluid' />
-                                <h5></h5>
                             </Col>
                             <Col md={6} xs={12}>
                                 <img src={img9} alt="" className='img-fluid' />
-                                <h5></h5>
                             </Col>
                         </Row>
                     </Col>

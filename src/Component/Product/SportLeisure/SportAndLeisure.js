@@ -75,7 +75,6 @@ const SportAndLeisure = () => {
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Sports Brands</h6>
                         <div className="filterItem">
-                            <Link to="/sportAndLeisure/ExploreOurBrands">Explore our Brands</Link><br />
                             <Link to="/sportAndLeisure/Adidas">Adidas</Link><br />
                             <Link to="/sportAndLeisure/SweatyBetty">Sweaty Betty</Link><br />
                             <Link to="/sportAndLeisure/TheNorthFace">The North Face</Link><br />

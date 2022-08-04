@@ -8,6 +8,7 @@ import { useForm } from 'react-hook-form';
 import useProduct from '../../../../../../hooks/Product/useProduct';
 import useAuth from '../../../../../../hooks/useAuth';
 import { clearTheCart } from '../../../../../../fakeDB';
+import { Link } from 'react-router-dom';
 
 const Payment = ({ address: clientAddress }) => {
     const { total, carts, totalCartQuantity } = useProduct({});

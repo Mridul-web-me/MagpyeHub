@@ -47,25 +47,24 @@ const Men = () => {
                         </div>
                         <h6 style={{ textAlign: 'start' }}>Clothing</h6>
                         <div className="filterItem">
-                            <Link to="/men/blazers">Blazers</Link><br />
-                            <Link to="/men/MenJeans">Jeans</Link><br />
-                            <Link to="/men/poloshirts">Polo Shirts</Link><br />
-                            <Link to="/men/menShirts">Shirts</Link><br />
-                            <Link to="/men/menShorts">Shorts</Link><br />
-                            <Link to="/men/menSportsClothesGym">Sports Clothes/Gym</Link><br />
-                            <Link to="/men/suits">Suits</Link><br />
-                            <Link to="/men/swimwear">Swimwear</Link><br />
-                            <Link to="/men/trousers">Trousers</Link><br />
-                            <Link to="/men/t-shirts">T-Shirts</Link><br />
-                            <Link to="/men/waistcoats">Waistcoats</Link><br />
-                            <Link to="/men/menCashmere">Cashmere</Link><br />
-                            <Link to="/men/menCoatsJackets">Coats & Jackets</Link><br />
-                            <Link to="/men/menSweatshirtsHoodies">Sweatshirts & Hoodies</Link><br />
-                            <Link to="/men/menJumpersCardigans">Jumpers & Cardigans</Link><br />
-                            <Link to="/men/menLinen">Linen</Link><br />
-                            <Link to="/men/menLoungewear">Loungewear</Link><br />
-                            <Link to="/men/menWeddingShop">Wedding Shop</Link><br />
-                            <Link to="/men/menHolidaySummerShop">Holiday & Summer Shop</Link><br />
+                            <Link to="/men/blazers">Blazers</Link> <br />
+                            <Link to="/men/MenJeans">Jeans</Link> <br />
+                            <Link to="/men/poloshirts">Polo Shirts</Link> <br />
+                            <Link to="/men/menShirts">Shirts</Link> <br />
+                            <Link to="/men/menShorts">Shorts</Link> <br />
+                            <Link to="/men/menSportsClothesGym">Sports Clothes/Gym</Link> <br />
+                            <Link to="/men/suits">Suits</Link> <br />
+                            <Link to="/men/swimwear">Swimwear</Link> <br />
+                            <Link to="/men/trousers">Trousers</Link> <br />
+                            <Link to="/men/t-shirts">T-Shirts</Link> <br />
+                            <Link to="/men/waistcoats">Waistcoats</Link> <br />
+                            <Link to="/men/menCoatsJackets">Coats & Jackets</Link> <br />
+                            <Link to="/men/menSweatshirtsHoodies">Sweatshirts & Hoodies</Link> <br />
+                            <Link to="/men/menJumpersCardigans">Jumpers & Cardigans</Link> <br />
+                            <Link to="/men/menLinen">Linen</Link> <br />
+                            <Link to="/men/menLoungewear">Loungewear</Link> <br />
+                            <Link to="/men/menWeddingShop">Wedding Shop</Link> <br />
+                            <Link to="/men/menHolidaySummerShop">Holiday & Summer Shop</Link> <br />
                         </div>
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Nightwear, Underwear & Socks</h6>
@@ -88,7 +87,7 @@ const Men = () => {
                         <hr />
                         <h6 style={{ textAlign: 'start' }}>Accessories</h6>
                         <div className="filterItem">
-                            <Link to="/men/menMensBags">Men's Bags</Link><br />
+                            <Link to="/men/menBags">Men's Bags</Link><br />
                             <Link to="/men/menBelts">Belts</Link><br />
                             <Link to="/men/menHats">Hats</Link><br />
                             <Link to="/men/menWallets">Wallets</Link><br />
