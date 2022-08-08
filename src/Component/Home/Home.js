@@ -20,10 +20,10 @@ const Home = () => {
                 </title>
                 <meta name="description" content="This is Magpyehub Online Shop" />
             </Helmet>
+
             <Header></Header>
             <PromoUnit></PromoUnit>
             <Banner></Banner>
-            {/* <PaymentOption></PaymentOption> */}
             <Product></Product>
             <Brand></Brand>
             <FavouriteProduct></FavouriteProduct>

@@ -60,7 +60,7 @@ const ThrowsblanketsandSpreads = () => {
                         textTransform: 'uppercase',
                         marginBottom: '20px'
                     }}>Throws, blankets and Spreads</h3>
-                    <Col xs={3}>
+                    <Col md={3} xs={12}>
                         <Accordion defaultActiveKey="0">
                             <Accordion.Item eventKey="0">
                                 <Accordion.Header>Price Range</Accordion.Header>
@@ -165,48 +165,44 @@ const ThrowsblanketsandSpreads = () => {
                         </Accordion>
                     </Col>
                     <Col md={9} xs={12}>
-                        {products.length ? <div>
-                            {loading ? <div className='text-center' style={{ height: '40vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}> <Spinner animation="grow" variant="info" />
-                                <Spinner animation="grow" variant="info" />
-                                <Spinner animation="grow" variant="info" />
-                            </div> : <div>
-
-                                {!filter.length ? <Row xs={1} md={4} className="g-4">
-                                    {
-                                        products.filter(product => { return product.price > parseInt(price) })
-                                            .map(product =>
-                                                <>
-                                                    <AllProduct
-                                                        key={product._id}
-                                                        product={product}
-                                                        handleAddToCart={handleAddToCart}
-                                                    // pageCount={pageCount}
-                                                    ></AllProduct>
-                                                </>
-
-                                            )
-                                    }
-                                </Row> :
-                                    <Row xs={1} md={4} className="g-4">
-                                        {
-                                            filter.map(product =>
-                                                <>
-                                                    <AllProduct
-                                                        key={product._id}
-                                                        product={product}
-                                                        handleAddToCart={handleAddToCart}
-                                                    // pageCount={pageCount}
-                                                    ></AllProduct>
-                                                </>
-
-                                            )
-                                        }
-                                    </Row>}
-                            </div>
-                            }
+                        {loading ? <div className='text-center' style={{ height: '40vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}> <Spinner animation="grow" variant="info" />
+                            <Spinner animation="grow" variant="info" />
+                            <Spinner animation="grow" variant="info" />
                         </div> : <div>
-                            <h2>No Product Available</h2>  </div>}
 
+                            {!filter.length ? <Row xs={1} md={4} className="g-4">
+                                {
+                                    products.filter(product => { return product.price > parseInt(price) })
+                                        .map(product =>
+                                            <>
+                                                <AllProduct
+                                                    key={product._id}
+                                                    product={product}
+                                                    handleAddToCart={handleAddToCart}
+                                                // pageCount={pageCount}
+                                                ></AllProduct>
+                                            </>
+
+                                        )
+                                }
+                            </Row> :
+                                <Row xs={1} md={4} className="g-4">
+                                    {
+                                        filter.map(product =>
+                                            <>
+                                                <AllProduct
+                                                    key={product._id}
+                                                    product={product}
+                                                    handleAddToCart={handleAddToCart}
+                                                // pageCount={pageCount}
+                                                ></AllProduct>
+                                            </>
+
+                                        )
+                                    }
+                                </Row>}
+                        </div>
+                        }
                         <div className="pagination">
                             {
                                 [...Array(pageCount).keys()]
