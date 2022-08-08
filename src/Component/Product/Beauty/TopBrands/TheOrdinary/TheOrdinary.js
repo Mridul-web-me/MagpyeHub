@@ -69,7 +69,20 @@ const TheOrdinary = () => {
                                     <p>Price: {price}</p>
                                 </Accordion.Body>
                             </Accordion.Item>
-
+                            <Accordion.Item eventKey="1">
+                                <Accordion.Header>Top Brands</Accordion.Header>
+                                <Accordion.Body>
+                                    <div className="filterItem">
+                                        <Link onClick={() => { filterProduct('theOrdinary') }} to="">The Ordinary</Link> <br />
+                                        <Link onClick={() => { filterProduct('CHANEL') }} to="">CHANEL</Link> <br />
+                                        <Link onClick={() => { filterProduct('CharlotteTilbury') }} to="">Charlotte Tilbury</Link> <br />
+                                        <Link onClick={() => { filterProduct('Clarins') }} to="">Clarins</Link> <br />
+                                        <Link onClick={() => { filterProduct('Clinique') }} to="">Clinique</Link> <br />
+                                        <Link onClick={() => { filterProduct('DIOR') }} to="">DIOR</Link> <br />
+                                        <Link onClick={() => { filterProduct('JoMaloneLondon') }} to="">Jo Malone London</Link> <br />
+                                    </div>
+                                </Accordion.Body>
+                            </Accordion.Item>
                             <Accordion.Item eventKey="2">
                                 <Accordion.Header>Makeup</Accordion.Header>
                                 <Accordion.Body>

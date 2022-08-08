@@ -302,7 +302,7 @@ const Nav = () => {
                                 <div className="mega-box4">
                                     <div className="content">
                                         <div className="row">
-                                            <h5>Makeup</h5>
+                                            <h5>Top Brands</h5>
                                             <hr />
                                             <ul className="mega-links">
                                                 <li> <Link to="/beauty/theOrdinary">The Ordinary</Link></li>
