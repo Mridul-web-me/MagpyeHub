@@ -16,7 +16,7 @@ const UpdateCountry = ({ update }) => {
         setUsers(updatedCountry)
     }
     const handleUpdateCountry = e => {
-        const url = `https://arcane-temple-26692.herokuapp.com/country/users/${_id}`
+        const url = `https://magpyehub-server.onrender.com/country/users/${_id}`
         fetch(url, {
             method: 'PUT',
             headers: {

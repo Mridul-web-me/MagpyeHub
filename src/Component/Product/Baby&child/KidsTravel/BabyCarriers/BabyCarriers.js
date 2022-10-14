@@ -21,7 +21,7 @@ const BabyCarriers = () => {
     const size = 8;
     const category = 'babyCarriers'
     useEffect(() => {
-        fetch(`https://arcane-temple-26692.herokuapp.com/products?category=${category}&&page=${page}&&size=${size}`)
+        fetch(`https://magpyehub-server.onrender.com/products?category=${category}&&page=${page}&&size=${size}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products)

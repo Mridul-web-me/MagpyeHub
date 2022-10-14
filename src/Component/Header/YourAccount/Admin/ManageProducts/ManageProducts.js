@@ -12,7 +12,7 @@ const ManageProducts = () => {
   const [loading, setLoading] = useState(true)
   const [products, setProducts] = useState([])
   useEffect(() => {
-    fetch(`https://arcane-temple-26692.herokuapp.com/products`)
+    fetch(`https://magpyehub-server.onrender.com/products`)
       .then(res => res.json())
       .then(data => {
         setProducts(data.products)
@@ -30,7 +30,7 @@ const ManageProducts = () => {
   };
 
   const handleDelete = id => {
-    const url = `https://arcane-temple-26692.herokuapp.com/products/${id}`;
+    const url = `https://magpyehub-server.onrender.com/products/${id}`;
     fetch(url, {
       method: "DELETE"
     })

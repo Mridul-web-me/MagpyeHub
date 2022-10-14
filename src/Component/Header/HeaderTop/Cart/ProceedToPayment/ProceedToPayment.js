@@ -22,7 +22,7 @@ const ProceedToPayment = () => {
     const { total, } = useProduct({});
     const [profile, setProfile] = useState([])
     useEffect(() => {
-        axios.get(`https://arcane-temple-26692.herokuapp.com/users?email=${user.email}`, {
+        axios.get(`https://magpyehub-server.onrender.com/users?email=${user.email}`, {
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('idToken')}`
             }

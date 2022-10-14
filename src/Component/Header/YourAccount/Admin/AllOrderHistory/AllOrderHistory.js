@@ -14,7 +14,7 @@ const AllOrderHistory = () => {
     const [orders, setOrders] = useState([])
     const [loading, setLoading] = useState(true)
     useEffect(() => {
-        fetch('https://arcane-temple-26692.herokuapp.com/orders')
+        fetch('https://magpyehub-server.onrender.com/orders')
             .then(res => res.json())
             .then(data => {
                 setOrders(data)

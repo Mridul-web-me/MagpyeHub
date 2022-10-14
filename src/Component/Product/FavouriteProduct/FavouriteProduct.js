@@ -13,7 +13,7 @@ const FavouriteProduct = () => {
     const [products, setProducts] = useState([])
     const category = 'DeskTableLamps'
     useEffect(() => {
-        fetch(`https://arcane-temple-26692.herokuapp.com/products?category=${category}`)
+        fetch(`https://magpyehub-server.onrender.com/products?category=${category}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products)

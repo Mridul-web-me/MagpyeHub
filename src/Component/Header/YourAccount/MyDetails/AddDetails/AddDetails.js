@@ -13,7 +13,7 @@ const AddDetails = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        axios.post('https://arcane-temple-26692.herokuapp.com/users', data)
+        axios.post('https://magpyehub-server.onrender.com/users', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Address Added Successfully')

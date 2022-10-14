@@ -15,7 +15,7 @@ const MakeAdmin = () => {
     const handleAdminSubmit = e => {
         e.preventDefault()
         const user = { email }
-        fetch('https://arcane-temple-26692.herokuapp.com/users/admin', {
+        fetch('https://magpyehub-server.onrender.com/users/admin', {
             method: 'PUT',
             headers: {
                 // 'authorization': `Bearer ${token}`,

@@ -61,7 +61,7 @@ const AddProduct = () => {
 
 
             console.log("Blogdata", blogInfo)
-            axios.post('https://arcane-temple-26692.herokuapp.com/products', blogInfo)
+            axios.post('https://magpyehub-server.onrender.com/products', blogInfo)
                 .then(res => {
                     if (res.data.insertedId) {
                         alert('Product Added Successfully')
