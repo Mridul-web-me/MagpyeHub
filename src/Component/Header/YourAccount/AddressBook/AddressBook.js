@@ -14,7 +14,7 @@ const AddressBook = (props) => {
     const [profile, setProfile] = useState([])
     const [loading, setLoading] = useState(true)
     useEffect(() => {
-        axios.get(`https://arcane-temple-26692.herokuapp.com/users?email=${user.email}`, {
+        axios.get(`https://magpyehub-server.onrender.com/users?email=${user.email}`, {
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('idToken')}`
             }

@@ -62,7 +62,7 @@ const Paypal = ({ clientAddress }) => {
                 expense: data.expense
             }
 
-            fetch('https://arcane-temple-26692.herokuapp.com/orders', {
+            fetch('https://magpyehub-server.onrender.com/orders', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

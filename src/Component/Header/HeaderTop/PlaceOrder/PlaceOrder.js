@@ -19,7 +19,7 @@ const PlaceOrder = () => {
     const { productId } = useParams();
     const [product, setProduct] = useState({});
     useEffect(() => {
-        fetch(`https://arcane-temple-26692.herokuapp.com/products/${productId}`)
+        fetch(`https://magpyehub-server.onrender.com/products/${productId}`)
             .then(res => res.json())
             .then(data => {
                 setProduct(data)

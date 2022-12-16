@@ -13,7 +13,7 @@ const useProductFilter = () => {
     // const size = 5;
     useEffect(() => {
         // fetch('./ProductData.JSON')
-        fetch(`https://arcane-temple-26692.herokuapp.com/products`)
+        fetch(`https://magpyehub-server.onrender.com/products`)
             .then(res => res.json())
             .then(data => {
                 setAllProducts(data.products)

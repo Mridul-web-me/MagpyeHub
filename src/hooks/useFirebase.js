@@ -143,7 +143,7 @@ const useFirebase = () => {
     }
 
     useEffect(() => {
-        fetch(`https://arcane-temple-26692.herokuapp.com/users/${user.email}`)
+        fetch(`https://magpyehub-server.onrender.com/users/${user.email}`)
             .then(res => res.json())
             .then(data => {
 
@@ -153,7 +153,7 @@ const useFirebase = () => {
 
     const saveUser = (email, displayName, phone, address1, address2, townCity, country, postcode, telephone, method) => {
         const user = { email, displayName, phone, address1, address2, townCity, country, postcode, telephone };
-        fetch('https://arcane-temple-26692.herokuapp.com/users', {
+        fetch('https://magpyehub-server.onrender.com/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'

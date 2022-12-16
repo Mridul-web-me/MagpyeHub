@@ -16,7 +16,7 @@ const UpdatePrice = ({ product }) => {
         setOrder(updatedPrice)
     }
     const handleUpdatePrice = e => {
-        const url = `https://arcane-temple-26692.herokuapp.com/products/${_id}`
+        const url = `https://magpyehub-server.onrender.com/products/${_id}`
         fetch(url, {
             method: 'PUT',
             headers: {

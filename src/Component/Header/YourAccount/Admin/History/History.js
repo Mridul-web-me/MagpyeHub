@@ -16,7 +16,7 @@ const History = ({ orders }) => {
         setOrder(updatedStatus)
     }
     const handleUpdateStatus = e => {
-        const url = `https://arcane-temple-26692.herokuapp.com/orders/${_id}`
+        const url = `https://magpyehub-server.onrender.com/orders/${_id}`
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -37,7 +37,7 @@ const History = ({ orders }) => {
     }
 
     const handleDelete = _id => {
-        const url = `https://arcane-temple-26692.herokuapp.com/orders/${_id}`;
+        const url = `https://magpyehub-server.onrender.com/orders/${_id}`;
         fetch(url, {
             method: "DELETE"
         })

@@ -16,7 +16,7 @@ const UpdateTownCity = ({ update }) => {
         setUsers(updatedTownCity)
     }
     const handleUpdateTownCity = e => {
-        const url = `https://arcane-temple-26692.herokuapp.com/townCity/users/${_id}`
+        const url = `https://magpyehub-server.onrender.com/townCity/users/${_id}`
         fetch(url, {
             method: 'PUT',
             headers: {

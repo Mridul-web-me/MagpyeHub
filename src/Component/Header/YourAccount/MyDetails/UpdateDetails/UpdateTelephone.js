@@ -16,7 +16,7 @@ const UpdateTelephone = ({ update }) => {
         setUsers(updatedTelephone)
     }
     const handleUpdateTelephone = e => {
-        const url = `https://arcane-temple-26692.herokuapp.com/telephone/users/${_id}`
+        const url = `https://magpyehub-server.onrender.com/telephone/users/${_id}`
         fetch(url, {
             method: 'PUT',
             headers: {
