@@ -19,9 +19,9 @@ const MenWatches = () => {
     const size = 8;
     const category = 'menWatches'
     useEffect(() => {
-        // fetch(`http://localhost:5000/products/${category}`)
-        // fetch(`http://localhost:5000/products/category?category=${category}`)
-        fetch(`http://localhost:5000/products/${category}`)
+        // fetch(`https://magpyehub-server.onrender.com/products/${category}`)
+        // fetch(`https://magpyehub-server.onrender.com/products/category?category=${category}`)
+        fetch(`https://magpyehub-server.onrender.com/products/${category}`)
 
             .then(res => res.json())
             .then(data => {

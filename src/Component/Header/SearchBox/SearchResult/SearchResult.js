@@ -15,7 +15,7 @@ const SearchResult = () => {
     const [product, setProduct] = useState([]);
     const [loading, setLoading] = useState(true)
     useEffect(() => {
-        fetch(`http://localhost:5000/result?search=${searchText}`)
+        fetch(`https://magpyehub-server.onrender.com/result?search=${searchText}`)
             .then(res => res.json())
             .then(data => {
                 setProduct(data)

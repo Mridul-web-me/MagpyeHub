@@ -6,7 +6,7 @@ const SearchBox = () => {
     const [products, setProducts] = useState([])
     const [searchProducts, setSearchProducts] = useState('')
     useEffect(() => {
-        axios.get(`http://localhost:5000/products`)
+        axios.get(`https://magpyehub-server.onrender.com/products`)
             // .then(res => res.json())
             .then(data => setProducts(data.data))
     }, [searchProducts])
