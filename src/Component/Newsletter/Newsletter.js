@@ -10,7 +10,7 @@ const Newsletter = () => {
     const onSubmit = data => {
         // console.log(data);
         // console.log('clicked');
-        axios.post('https://magpyehub-server.onrender.com/newsLater', data)
+        axios.post('http://localhost:5000/newsLater', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Email Added Successfully')

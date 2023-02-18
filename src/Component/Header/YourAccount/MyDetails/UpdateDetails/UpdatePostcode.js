@@ -16,7 +16,7 @@ const UpdatePostcode = ({ update }) => {
         setUsers(updatedPostcode)
     }
     const handleUpdateTownCity = e => {
-        const url = `https://magpyehub-server.onrender.com/postcode/users/${_id}`
+        const url = `http://localhost:5000/postcode/users/${_id}`
         fetch(url, {
             method: 'PUT',
             headers: {

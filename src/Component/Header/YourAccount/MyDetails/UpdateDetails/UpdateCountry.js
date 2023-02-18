@@ -16,7 +16,7 @@ const UpdateCountry = ({ update }) => {
         setUsers(updatedCountry)
     }
     const handleUpdateCountry = e => {
-        const url = `https://magpyehub-server.onrender.com/country/users/${_id}`
+        const url = `http://localhost:5000/country/users/${_id}`
         fetch(url, {
             method: 'PUT',
             headers: {

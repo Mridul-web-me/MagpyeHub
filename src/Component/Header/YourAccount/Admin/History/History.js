@@ -16,7 +16,7 @@ const History = ({ orders }) => {
         setOrder(updatedStatus)
     }
     const handleUpdateStatus = e => {
-        const url = `https://magpyehub-server.onrender.com/orders/${_id}`
+        const url = `http://localhost:5000/orders/${_id}`
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -37,7 +37,7 @@ const History = ({ orders }) => {
     }
 
     const handleDelete = _id => {
-        const url = `https://magpyehub-server.onrender.com/orders/${_id}`;
+        const url = `http://localhost:5000/orders/${_id}`;
         fetch(url, {
             method: "DELETE"
         })

@@ -62,7 +62,7 @@ const Paypal = ({ clientAddress }) => {
                 expense: data.expense
             }
 
-            fetch('https://magpyehub-server.onrender.com/orders', {
+            fetch('http://localhost:5000/orders', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

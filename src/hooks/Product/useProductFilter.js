@@ -13,7 +13,7 @@ const useProductFilter = () => {
     // const size = 5;
     useEffect(() => {
         // fetch('./ProductData.JSON')
-        fetch(`https://magpyehub-server.onrender.com/products`)
+        fetch(`http://localhost:5000/products`)
             .then(res => res.json())
             .then(data => {
                 setAllProducts(data.products)

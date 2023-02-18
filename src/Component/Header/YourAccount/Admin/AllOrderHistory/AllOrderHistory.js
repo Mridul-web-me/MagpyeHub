@@ -14,7 +14,7 @@ const AllOrderHistory = () => {
     const [orders, setOrders] = useState([])
     const [loading, setLoading] = useState(true)
     useEffect(() => {
-        fetch('https://magpyehub-server.onrender.com/orders')
+        fetch('http://localhost:5000/orders')
             .then(res => res.json())
             .then(data => {
                 setOrders(data)

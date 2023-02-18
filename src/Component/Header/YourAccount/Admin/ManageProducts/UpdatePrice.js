@@ -16,7 +16,7 @@ const UpdatePrice = ({ product }) => {
         setOrder(updatedPrice)
     }
     const handleUpdatePrice = e => {
-        const url = `https://magpyehub-server.onrender.com/products/${_id}`
+        const url = `http://localhost:5000/products/${_id}`
         fetch(url, {
             method: 'PUT',
             headers: {

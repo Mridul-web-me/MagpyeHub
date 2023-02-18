@@ -6,7 +6,7 @@ const SearchBox = () => {
     const [products, setProducts] = useState([])
     const [searchProducts, setSearchProducts] = useState('')
     useEffect(() => {
-        axios.get(`https://magpyehub-server.onrender.com/products`)
+        axios.get(`http://localhost:5000/products`)
             // .then(res => res.json())
             .then(data => setProducts(data.data))
     }, [searchProducts])
@@ -22,7 +22,7 @@ const SearchBox = () => {
             <div>
                 <form className="d-flex searchBox" onSubmit={handleSearchField} required>
                     <input className="form-control" placeholder="Search for Product & Brand..." aria-label="Search" onChange={(e) => setSearchProducts(e.target.value)} />
-                    <Link to={`/${searchProducts}`}
+                    <Link to={`/search-result/search=${searchProducts}`}
                     >
                         <button type="submit" style={{
                             border: 'none',

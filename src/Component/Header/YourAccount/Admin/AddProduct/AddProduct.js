@@ -61,7 +61,7 @@ const AddProduct = () => {
 
 
             console.log("Blogdata", blogInfo)
-            axios.post('https://magpyehub-server.onrender.com/products', blogInfo)
+            axios.post('http://localhost:5000/products', blogInfo)
                 .then(res => {
                     if (res.data.insertedId) {
                         alert('Product Added Successfully')

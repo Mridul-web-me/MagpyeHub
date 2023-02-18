@@ -22,7 +22,7 @@ const HoldallsWeekendBags = (props) => {
     const size = 8;
     const category = 'HoldallsWeekendBags'
     useEffect(() => {
-        fetch(`https://magpyehub-server.onrender.com/products?category=${category}&&page=${page}&&size=${size}`)
+        fetch(`http://localhost:5000/products/${category}` )
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products)
@@ -37,7 +37,7 @@ const HoldallsWeekendBags = (props) => {
 
     const filterProduct = (catProduct) => {
         const updatedProduct = AllProducts.filter((curElem) => {
-            return curElem.category === catProduct;
+            return curElem.category  === catProduct;
         });
         setFilter(updatedProduct);
 

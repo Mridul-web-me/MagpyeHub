@@ -16,7 +16,7 @@ const UpdatePhone = ({ update }) => {
         setUsers(updatedPhone)
     }
     const handleUpdatePrice = e => {
-        const url = `https://magpyehub-server.onrender.com/phone/users/${_id}`
+        const url = `http://localhost:5000/phone/users/${_id}`
         fetch(url, {
             method: 'PUT',
             headers: {

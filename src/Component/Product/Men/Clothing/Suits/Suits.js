@@ -20,7 +20,7 @@ const Suits = () => {
     const size = 8;
     const category = 'suits'
     useEffect(() => {
-        fetch(`https://magpyehub-server.onrender.com/products?category=${category}&&page=${page}&&size=${size}`)
+        fetch(`http://localhost:5000/products/${category}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products)

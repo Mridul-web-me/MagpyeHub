@@ -15,7 +15,7 @@ const MakeAdmin = () => {
     const handleAdminSubmit = e => {
         e.preventDefault()
         const user = { email }
-        fetch('https://magpyehub-server.onrender.com/users/admin', {
+        fetch('http://localhost:5000/users/admin', {
             method: 'PUT',
             headers: {
                 // 'authorization': `Bearer ${token}`,

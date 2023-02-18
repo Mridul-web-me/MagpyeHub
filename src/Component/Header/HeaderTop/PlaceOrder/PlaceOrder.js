@@ -19,7 +19,7 @@ const PlaceOrder = () => {
     const { productId } = useParams();
     const [product, setProduct] = useState({});
     useEffect(() => {
-        fetch(`https://magpyehub-server.onrender.com/products/${productId}`)
+        fetch(`http://localhost:5000/productsDetails/${productId}`)
             .then(res => res.json())
             .then(data => {
                 setProduct(data)

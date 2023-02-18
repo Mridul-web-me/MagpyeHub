@@ -21,7 +21,7 @@ const UpdateDetails = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get(`https://magpyehub-server.onrender.com/users?email=${user.email}`, {
+        axios.get(`http://localhost:5000/users?email=${user.email}`, {
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('idToken')}`
             }

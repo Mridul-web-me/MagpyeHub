@@ -27,7 +27,7 @@ const Payment = ({ address: clientAddress }) => {
     // console.log(carts)
 
     useEffect(() => {
-        fetch('https://magpyehub-server.onrender.com/create-payment-intent', {
+        fetch('http://localhost:5000/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -105,7 +105,7 @@ const Payment = ({ address: clientAddress }) => {
             status: "Pending",
             expense: data.expense
         }
-        fetch('https://magpyehub-server.onrender.com/orders', {
+        fetch('http://localhost:5000/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
