@@ -65,7 +65,7 @@ const HeaderTop = () => {
                                     </Link>
                                 </div>
                                 <div>
-                                    <a href="/cart">
+                                    <Link to="/cart">
 
                                         <i className="fas fa-shopping-basket"></i>
                                         <Badge bg="secondary" className='fs-8' style={{
@@ -73,7 +73,7 @@ const HeaderTop = () => {
                                         }}>{totalCartQuantity}</Badge>
                                         <p>My Basket</p>
 
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </Col>

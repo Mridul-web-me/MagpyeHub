@@ -21,7 +21,7 @@ const DuvetCovers = () => {
     const size = 8;
     const category = 'duvetCovers'
     useEffect(() => {
-        fetch(`https://magpyehub-server.onrender.com/products?category=${category}&&page=${page}&&size=${size}`)
+        fetch(`https://magpyehub-server.onrender.com/products/${category}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products)
@@ -30,6 +30,7 @@ const DuvetCovers = () => {
                 setPageCount(pageNumber)
                 console.log(data.products);
                 setLoading(false)
+                
             });
     }, [category, page]);
 
@@ -205,7 +206,8 @@ const DuvetCovers = () => {
                         <div className="pagination">
                             {
                                 [...Array(pageCount).keys()]
-                                    .map(number => <Button
+                                    .map(number => 
+                                    <Button
                                         className={number === page ? 'selected' : ''}
                                         variant="light"
                                         key={number}

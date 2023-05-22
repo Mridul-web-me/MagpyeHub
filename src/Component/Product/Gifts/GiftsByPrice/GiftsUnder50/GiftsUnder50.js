@@ -19,7 +19,7 @@ const GiftsUnder50 = () => {
     const size = 8;
     const category = 'GiftsUnder50'
     useEffect(() => {
-        fetch(`https://magpyehub-server.onrender.com/products?category=${category}&&page=${page}&&size=${size}`)
+        fetch(`https://magpyehub-server.onrender.com/products/${category}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products)

@@ -21,7 +21,7 @@ const Strollers = () => {
     const size = 8;
     const category = 'strollers'
     useEffect(() => {
-        fetch(`https://magpyehub-server.onrender.com/products?category=${category}&&page=${page}&&size=${size}`)
+        fetch(`https://magpyehub-server.onrender.com/products/${category}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products)
