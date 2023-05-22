@@ -1,5 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// import 'react-loading-skeleton/dist/skeleton.css'
 import Home from './Component/Home/Home';
 import PillowCases from './Component/Product/HomeGarden/Bedding/PillowCases/PillowCases';
 import BedSheets from './Component/Product/HomeGarden/Bedding/BedSheets/BedSheets';
@@ -383,6 +384,7 @@ import TablewareAndcutlery from './Component/Product/HomeGarden/CookingDining/Ta
 import OutdoorLighting from './Component/Product/HomeGarden/Garden/OutdoorLighting/OutdoorLighting';
 import LuxuryGifts from './Component/Product/Gifts/GiftInspiration/LuxuryGifts/LuxuryGifts';
 import Techies from './Component/Product/Gifts/GiftInspiration/Techies/Techies';
+import NotFound from './Component/NotFound/NotFound';
 
 
 
@@ -895,7 +897,7 @@ function App() {
             <Route path="/addressBook" element={<AddressBook />} />
             <Route path="/myDetails" element={<MyDetails />} />
             <Route path="/myFiles" element={<MyFiles />} />
-            <Route path="/:searchText" element={<SearchResult />} />
+            <Route path="/search-result/search=:searchText" element={<SearchResult />} />
             <Route path="/orderHistory" element={<OrderHistory />} />
             <Route path="/allOrderHistory" element={<AdminRoute><AllOrderHistory /></AdminRoute>} />
             <Route path="/updateDetails/:profileId" element={<UpdateDetails />} />
@@ -913,6 +915,10 @@ function App() {
             <Route path="/brand/maxiCosi" element={<MaxiCosi />} />
             <Route path="/brand/phaseEight" element={<PhaseEight />} />
             <Route path="/brand/tedBaker" element={<TedBaker />} />
+
+
+            <Route path="*" element={<NotFound />} />
+
           </Routes>
         </Router>
       </AuthProvider>

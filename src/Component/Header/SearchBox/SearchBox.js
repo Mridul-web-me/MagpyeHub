@@ -22,7 +22,7 @@ const SearchBox = () => {
             <div>
                 <form className="d-flex searchBox" onSubmit={handleSearchField} required>
                     <input className="form-control" placeholder="Search for Product & Brand..." aria-label="Search" onChange={(e) => setSearchProducts(e.target.value)} />
-                    <Link to={`/${searchProducts}`}
+                    <Link to={`/search-result/search=${searchProducts}`}
                     >
                         <button type="submit" style={{
                             border: 'none',
